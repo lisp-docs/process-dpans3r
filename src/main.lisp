@@ -79,4 +79,12 @@
   (replace-bracket-close
    (replace-bracket-open given-string)))
 
-(setf *c2* (str:replace-using '("{" "\\{" "}" "\\}" "<" "\\<" ">" "\\>") *c2*))
+(defun replace-html-chars (given-string)
+  (str:replace-using
+   '("{" "\\{"
+     "}" "\\}"
+     "<" "\\<"
+     ">" "\\>")
+   given-string))
+
+

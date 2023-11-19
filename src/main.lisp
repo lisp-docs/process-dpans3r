@@ -62,3 +62,21 @@
   (merge-pathnames *md-dir* filename))
 
 (defvar *c2* (load-md-file (get-filepath "chap-2.md")))
+
+(defun save-file (filename string-data)
+  (str:to-file (get-filepath filename) string-data))
+
+(defun save-ch2 ()
+  (save-file "chap-2.md" *c2*))
+
+(defun replace-bracket-open (given-string)
+  (str:replace-all "{" "\\{" given-string))
+
+(defun replace-bracket-close (given-string)
+  (str:replace-all "}" "\\}" given-string))
+
+(defun replace-brackets (given-string)
+  (replace-bracket-close
+   (replace-bracket-open given-string)))
+
+(setf *c2* (str:replace-using '("{" "\\{" "}" "\\}" "<" "\\<" ">" "\\>") *c2*))

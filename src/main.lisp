@@ -41,14 +41,14 @@
     "Fri 12-Aug-1994 6:35pm EDT"))
 
 (defvar *headers-regex*
-  '( "\n\w+(\s+\w+)* [xvi]+\n"
-    "\n\w+(\s+\w+)* \\*\\*[xvi]+\\*\\*\n" 
+  '( "\\n\w+(\\s+\\w+)* [xvi]+\\n"
+    "\\n\\w+(\\s+\\w+)* \\*\\*[xvi]+\\*\\*\\s*" 
     "[xvi]+ Programming Language—Common Lisp"
     "\\*\\*[xvi]+\\*\\* Programming Language—Common Lisp"
-    "\n\w+(\s+\w+)* \d+(–\d+)*\n"
-    "\n\w+(\s+\w+)* \\*\\*\d+(–\d+)*\\*\\*\n"
-    "\d+(–\d+)* Programming Language—Common Lisp"
-    "\\*\\*\d+(–\d+)*\\*\\* Programming Language—Common Lisp"))
+    "\\n\\w+(\\s+\w+)* \\d+(–\\d+)*\\n"
+    "\\n\\w+(\\s+\\w+)* \\*\\*\\d+(–\\d+)*\\*\\*\\n"
+    "\\d+(–\\d+)* Programming Language—Common Lisp"
+    "\\*\\*\\d+(–\\d+)*\\*\\* Programming Language—Common Lisp"))
 
 
 ;(defvar *chapter-sections* "\\n\\d\\+.\\d+.*?\\n")
@@ -203,13 +203,15 @@
 	;; for curstr = (replace-all-occurences mystring regexp replacement) 
 	for curstr = (cl-ppcre:regex-replace-all regexp contents  "")
 	  then (cl-ppcre:regex-replace-all regexp curstr "")
+	;; do (format T "~A~%" regexp)
 	finally (return curstr)))
 
 (defun remove-headers (contents)
   ;; remove here all the extra titles, headers, and footers...
+  ;; TODO remove-regex-list not working
   (remove-strings
    (remove-regex-list contents *headers-regex*)
-   *headers-non-regex*))
+  *headers-non-regex*))
 
 (defun process-file (filepath)
   (let* ((chapter-contents (load-file filepath))

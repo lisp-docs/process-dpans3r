@@ -231,6 +231,28 @@
   (format T "~A~%" filepath)
   (format T "~A~%~%" (get-directory-for-chapter filepath)))
 
+(defun escape-file-html (filepath)
+  (str:to-file
+   filepath
+   (replace-html-chars (load-file filepath))))
+
+(defun remove-file-headers (filepath)
+  (str:to-file
+   filepath
+   (remove-headers (load-file filepath))))
+
+(defun modify-md-files-in-dir (dir-path modifier-function)
+  (mapcar modifier-function
+	  (remove-if-not
+	   (lambda (it)
+	     (search ".md" (namestring it)))
+	   (uiop:directory-files dir-path))))
+
+(defun remove-headers-of-md-files ()
+  (modify-md-files-in-dir *md-dir* #'remove-file-headers))
+
+(defun escape-md-files ()
+  (modify-md-files-in-dir *md-dir* #'escape-file-html))
 
 (defun process-files-in-dir (dir-path)
   (mapcar #'process-file

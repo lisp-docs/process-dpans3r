@@ -48,7 +48,9 @@
     "\\n\\w+(\\s+\w+)* \\d+(–\\d+)*\\n"
     "\\n\\w+(\\s+\\w+)* \\*\\*\\d+(–\\d+)*\\*\\*\\n"
     "\\d+(–\\d+)* Programming Language—Common Lisp"
-    "\\*\\*\\d+(–\\d+)*\\*\\* Programming Language—Common Lisp"))
+    "\\*\\*\\d+(–\\d+)*\\*\\* Programming Language—Common Lisp"
+    "\\w+(–\\d+)* Programming Language—Common Lisp"
+    "\\*\\*\\w+(–\\d+)*\\*\\* Programming Language—Common Lisp"))
 
 
 ;(defvar *chapter-sections* "\\n\\d\\+.\\d+.*?\\n")

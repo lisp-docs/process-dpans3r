@@ -51,4 +51,4 @@ The *packages* LISP, USER, and SYSTEM are no longer required. It is valid for *p
 
   
 
-**A–2** Programming Language—Common Lisp
+

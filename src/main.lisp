@@ -7,8 +7,8 @@
            :load-md-file
            :*curr-file*
            :*md-dir*
-           :*regex-strings*
-           :*non-regex-strings*
+           :*headers-regex*
+           :*headers-non-regex*
            :*c0*))
 (in-package :html-to-md)
 
@@ -35,14 +35,20 @@
 
 (uiop:directory-files *md-dir*)
 
-(defvar *non-regex-strings* 
-  '("Version 15.17R, X3J13/94-101R." "Fri 12-Aug-1994 6:35pm EDT"))
+(defvar *headers-non-regex*
+  '("Version 15.17R, X3J13/94-101R."
+    "**Programming Language—Common Lisp**"
+    "Fri 12-Aug-1994 6:35pm EDT"))
 
-(defvar *regex-strings* 
-  '( "\n\w+(\s+\w+)* [xvi]+\n" 
+(defvar *headers-regex*
+  '( "\n\w+(\s+\w+)* [xvi]+\n"
+    "\n\w+(\s+\w+)* \\*\\*[xvi]+\\*\\*\n" 
     "[xvi]+ Programming Language—Common Lisp"
+    "\\*\\*[xvi]+\\*\\* Programming Language—Common Lisp"
     "\n\w+(\s+\w+)* \d+(–\d+)*\n"
-    "\d+(–\d+)* Programming Language—Common Lisp"))
+    "\n\w+(\s+\w+)* \\*\\*\d+(–\d+)*\\*\\*\n"
+    "\d+(–\d+)* Programming Language—Common Lisp"
+    "\\*\\*\d+(–\d+)*\\*\\* Programming Language—Common Lisp"))
 
 
 ;(defvar *chapter-sections* "\\n\\d\\+.\\d+.*?\\n")
@@ -159,14 +165,60 @@
 
 ;; make output dir variable...
 
+;; TODO make function to create folder and save introduction file
+;; TODO then make function to process each of the chapter's section
+;; Will need to get subsections, if none, then create file and that's it
+;; If there are subsections, then will need to create a folder for each one
+;;   and again, similarly to the approach taken, will need to create an introduction
+;;   file, and then for each subsubsection create a file with those contents
+;; here will need to create the files with a "_" prefix
+
+(defun get-title-folder-name (title)
+  ;; convert from title name 2.1 Section Name to section-name
+  )
+
+(defun create-docusaurus-doc-section (label position contents)
+  ;; create folder
+  ;; create _intro.md
+  ;; create intro.md (which includes _intro) `import Intro from './_intro.md';`
+  ;; Make headings in intro.md with the label as `##` label on the top of the file
+  ;; Then call #`mapcar on the sections (cdr contents) assuming contents is a list
+  )
+
+(defun process-titles (contents)
+  (cl-ppcre:regex-replace-all
+   "[^\\n]\\*\\*\\d+(\\.\\d+)*(\\s*\\w)+\\*\\*"
+   contents
+   (concatenate 'string '(#\Newline) "\\&" '(#\Newline))))
+
+(defun remove-strings (contents string-list)
+  (loop for curr-string-to-replace in string-list
+	;; for curstr = (replace-all-occurences mystring regexp replacement) 
+	for curstr = (str:replace-all curr-string-to-replace "" contents)
+	  then (str:replace-all curr-string-to-replace "" curstr)
+	finally (return curstr)))
+
+(defun remove-regex-list (contents regex-list)
+  (loop for regexp in regex-list
+	;; for curstr = (replace-all-occurences mystring regexp replacement) 
+	for curstr = (cl-ppcre:regex-replace-all regexp contents  "")
+	  then (cl-ppcre:regex-replace-all regexp curstr "")
+	finally (return curstr)))
+
+(defun remove-headers (contents)
+  ;; remove here all the extra titles, headers, and footers...
+  (remove-strings
+   (remove-regex-list contents *headers-regex*)
+   *headers-non-regex*))
+
 (defun process-file (filepath)
   (let* ((chapter-contents (load-file filepath))
+	 (dir-path (get-directory-for-chapter filepath))
 	 (md-escaped-chapter (replace-html-chars chapter-contents))
-	 (processed-titles (cl-ppcre:regex-replace-all
-			    "[^\\n]\\*\\*\\d+(\\.\\d+)*(\\s*\\w)+\\*\\*"
-			    md-escaped-chapter
-			    (concatenate 'string '(#\Newline) "\\&" '(#\Newline))))
-	 (chapter-sections (get-chapter-sections md-escaped-chapter))))
+	 (processed-titles (process-titles md-escaped-chapter))
+	 (removed-headers (remove-headers processed-titles))
+	 (chapter-sections (get-chapter-sections md-escaped-chapter)))
+    (ensure-directories-exist dir-path))
   ;; i should search here for all subsection or section titles which are not in a new
   ;;   line, so anything that's [^\\n]\\*\\*\\d+(.\\d+)*(\\s*\\w)+\\*\\*
   ;; (cl-ppcre:all-matches "[^\\n]\\*\\*\\d+(\\.\\d+)*(\\s*\\w)+\\*\\*" *c2*)
@@ -177,8 +229,7 @@
   ;; save-file
 
   (format T "~A~%" filepath)
-  (format T "~A~%~%" (get-directory-for-chapter filepath))
-  (ensure-directories-exist (get-directory-for-chapter filepath)))
+  (format T "~A~%~%" (get-directory-for-chapter filepath)))
 
 
 (defun process-files-in-dir (dir-path)
@@ -189,5 +240,5 @@
 	   (uiop:directory-files dir-path))))
 
 ;;(process-files-in-dir *md-dir*)
-(format T "~A~%" *load-pathname*)
-(format T "~A~%" *load-truename*)
+;(format T "~A~%" *load-pathname*)
+;(format T "~A~%" *load-truename*)

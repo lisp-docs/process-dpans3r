@@ -47,6 +47,10 @@
     "\\*\\*[xvi]+\\*\\* Programming Language—Common Lisp"
     "\\n\\w+(\\s+\w+)* \\d+(–\\d+)*\\n"
     "\\n\\w+(\\s+\\w+)* \\*\\*\\d+(–\\d+)*\\*\\*\\n"
+    ;; this didn't catch what I wanted in the appendix
+    "\\n\\w+(\\s+\w+)* \\w+(–\\d+)*\\n"
+    ;; this didn't catch what I wanted in the appendix
+    "\\n\\w+(\\s+\\w+)* \\*\\*\\w+(–\\d+)*\\*\\*\\n"
     "\\d+(–\\d+)* Programming Language—Common Lisp"
     "\\*\\*\\d+(–\\d+)*\\*\\* Programming Language—Common Lisp"
     "\\w+(–\\d+)* Programming Language—Common Lisp"

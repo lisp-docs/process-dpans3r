@@ -28,7 +28,7 @@ Figure 18–1 lists some *defined names* that are applicable to *hash tables*. T
 
 – *Hash tables* are created by **make-hash-table**. **gethash** is used to look up a key and find the associated value. New entries are added to *hash tables* using **setf** with **gethash**. **remhash** is used to remove an entry. For example: 
 
-(setq a (make-hash-table)) *→* #<HASH-TABLE EQL 0/120 32536573> 
+(setq a (make-hash-table)) *→* #\<HASH-TABLE EQL 0/120 32536573\> 
 
 (setf (gethash ’color a) ’brown) *→* BROWN 
 
@@ -46,7 +46,7 @@ In this example, the symbols color and name are being used as keys, and the symb
 
 – The existence of an entry in the *hash table* can be determined from the *secondary value* returned by **gethash**. 
 
-|<p>**clrhash hash-table-p remhash gethash make-hash-table sxhash** </p><p>**hash-table-count maphash**</p>|
+|\<p\>**clrhash hash-table-p remhash gethash make-hash-table sxhash** \</p\>\<p\>**hash-table-count maphash**\</p\>|
 | :- |
 
 
@@ -64,7 +64,7 @@ The function supplied as the :test argument to **make-hash-table** specifies the
 
 An *object* is ‘visibly modified’ with regard to an equivalence test if there exists some set of *objects* (or potential *objects*) which are equivalent to the *object* before the modification but are no longer equivalent afterwards. 
 
-If an *object O*<sub>1</sub> is used as a key in a *hash table H* and is then visibly modified with regard to the equivalence test of *H*, then the consequences are unspecified if *O*<sub>1</sub>, or any *object O*<sub>2</sub> equivalent to *O*<sub>1</sub> under the equivalence test (either before or after the modification), is used as a key in further operations on *H*. The consequences of using *O*<sub>1</sub> as a key are unspecified even if *O*<sub>1</sub> is visibly 
+If an *object O*\<sub\>1\</sub\> is used as a key in a *hash table H* and is then visibly modified with regard to the equivalence test of *H*, then the consequences are unspecified if *O*\<sub\>1\</sub\>, or any *object O*\<sub\>2\</sub\> equivalent to *O*\<sub\>1\</sub\> under the equivalence test (either before or after the modification), is used as a key in further operations on *H*. The consequences of using *O*\<sub\>1\</sub\> as a key are unspecified even if *O*\<sub\>1\</sub\> is visibly 
 
 modified and then later modified again in such a way as to undo the visible modification. 
 
@@ -178,19 +178,19 @@ The *values* of *rehash-size* and *rehash-threshold* do not constrain the *imple
 
 **Examples:** 
 
-(setq table (make-hash-table)) *→* #<HASH-TABLE EQL 0/120 46142754> 
+(setq table (make-hash-table)) *→* #\<HASH-TABLE EQL 0/120 46142754\> 
 
 (setf (gethash "one" table) 1) *→* 1 
 
 (gethash "one" table) *→* NIL, *false* 
 
-(setq table (make-hash-table :test ’equal)) *→* #<HASH-TABLE EQUAL 0/139 46145547> (setf (gethash "one" table) 1) *→* 1 
+(setq table (make-hash-table :test ’equal)) *→* #\<HASH-TABLE EQUAL 0/139 46145547\> (setf (gethash "one" table) 1) *→* 1 
 
 (gethash "one" table) *→* 1, T 
 
 (make-hash-table :rehash-size 1.5 :rehash-threshold 0.7) 
 
-*→* #<HASH-TABLE EQL 0/120 46156620> 
+*→* #\<HASH-TABLE EQL 0/120 46156620\> 
 
 **See Also:** 
 
@@ -220,7 +220,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **Examples:** 
 
-(setq table (make-hash-table)) *→* #<HASH-TABLE EQL 0/120 32511220> 
+(setq table (make-hash-table)) *→* #\<HASH-TABLE EQL 0/120 32511220\> 
 
 (hash-table-p table) *→ true* 
 
@@ -250,7 +250,7 @@ Returns the number of entries in the *hash-table*. If *hash-table* has just been
 
 **Examples:** 
 
-(setq table (make-hash-table)) *→* #<HASH-TABLE EQL 0/120 32115135> 
+(setq table (make-hash-table)) *→* #\<HASH-TABLE EQL 0/120 32115135\> 
 
 (hash-table-count table) *→* 0 
 
@@ -316,7 +316,7 @@ Returns the current rehash size of *hash-table*, suitable for use in a call to *
 
 (setq table (make-hash-table :size 100 :rehash-size 1.4)) 
 
-*→* #<HASH-TABLE EQL 0/100 2556371> 
+*→* #\<HASH-TABLE EQL 0/100 2556371\> 
 
 (hash-table-rehash-size table) *→* 1.4 
 
@@ -360,7 +360,7 @@ Returns the current rehash threshold of *hash-table*, which is suitable for use 
 
 (setq table (make-hash-table :size 100 :rehash-threshold 0.5)) 
 
-*→* #<HASH-TABLE EQL 0/100 2562446> 
+*→* #\<HASH-TABLE EQL 0/100 2562446\> 
 
 (hash-table-rehash-threshold table) *→* 0.5 
 
@@ -462,7 +462,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **Examples:** 
 
-(setq table (make-hash-table)) *→* #<HASH-TABLE EQL 0/120 32206334> 
+(setq table (make-hash-table)) *→* #\<HASH-TABLE EQL 0/120 32206334\> 
 
 (gethash 1 table) *→* NIL, *false* 
 
@@ -534,7 +534,7 @@ Removes the entry for *key* in *hash-table*, if any. Returns *true* if there was
 
 **Examples:** 
 
-(setq table (make-hash-table)) *→* #<HASH-TABLE EQL 0/120 32115666> 
+(setq table (make-hash-table)) *→* #\<HASH-TABLE EQL 0/120 32115666\> 
 
 (setf (gethash 100 table) "C") *→* "C" 
 
@@ -578,7 +578,7 @@ The consequences are unspecified if any attempt is made to add or remove an entr
 
 **Examples:** 
 
-(setq table (make-hash-table)) *→* #<HASH-TABLE EQL 0/120 32304110> 
+(setq table (make-hash-table)) *→* #\<HASH-TABLE EQL 0/120 32304110\> 
 
 (dotimes (i 10) (setf (gethash i table) i)) *→* NIL 
 
@@ -638,7 +638,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **Syntax:** 
 
-**with-hash-table-iterator** (*name hash-table*) *{declaration}*\* *{form}*\* *→ {result}*\* 
+**with-hash-table-iterator** (*name hash-table*) *\{declaration\}*\* *\{form\}*\* *→ \{result\}*\* 
 
 **Arguments and Values:** 
 
@@ -760,7 +760,7 @@ Removes all entries from *hash-table*, and then returns that empty *hash table*.
 
 **Examples:** 
 
-(setq table (make-hash-table)) *→* #<HASH-TABLE EQL 0/120 32004073> 
+(setq table (make-hash-table)) *→* #\<HASH-TABLE EQL 0/120 32004073\> 
 
 (dotimes (i 100) (setf (gethash i table) (format nil "~R" i))) *→* NIL 
 
@@ -768,7 +768,7 @@ Removes all entries from *hash-table*, and then returns that empty *hash table*.
 
 (gethash 57 table) *→* "fifty-seven", *true* 
 
-(clrhash table) *→* #<HASH-TABLE EQL 0/120 32004073> 
+(clrhash table) *→* #\<HASH-TABLE EQL 0/120 32004073\> 
 
 (hash-table-count table) *→* 0 
 

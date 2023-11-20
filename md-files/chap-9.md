@@ -86,7 +86,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 Figure 9–3 shows *operators* that *read* the *value* of *condition slots*. 
 
-|<p>**arithmetic-error-operands simple-condition-format-arguments arithmetic-error-operation simple-condition-format-control cell-error-name stream-error-stream** </p><p>**file-error-pathname type-error-datum** </p><p>**package-error-package type-error-expected-type** </p><p>**print-not-readable-object unbound-slot-instance**</p>|
+|\<p\>**arithmetic-error-operands simple-condition-format-arguments arithmetic-error-operation simple-condition-format-control cell-error-name stream-error-stream** \</p\>\<p\>**file-error-pathname type-error-datum** \</p\>\<p\>**package-error-package type-error-expected-type** \</p\>\<p\>**print-not-readable-object unbound-slot-instance**\</p\>|
 | :- |
 
 
@@ -266,9 +266,9 @@ Fri 12-Aug-1994 6:35pm EDT
 
 *recent* active *applicable handler* for that *condition* is selected from this set. Given a *condition*, the order of recentness of active *applicable handlers* is defined by the following two rules: 
 
-1\. Each handler in a set of active handlers *H*<sub>1</sub> is more recent than every handler in a set *H*<sub>2</sub> if the handlers in *H*<sub>2</sub> were active when the handlers in *H*<sub>1</sub> were established. 
+1\. Each handler in a set of active handlers *H*\<sub\>1\</sub\> is more recent than every handler in a set *H*\<sub\>2\</sub\> if the handlers in *H*\<sub\>2\</sub\> were active when the handlers in *H*\<sub\>1\</sub\> were established. 
 
-2\. Let *h*<sub>1</sub> and *h*<sub>2</sub> be two applicable active handlers established by the same *form*. Then *h*<sub>1</sub> is more recent than *h*<sub>2</sub> if *h*<sub>1</sub> was defined to the left of *h*<sub>2</sub> in the *form* that established them. 
+2\. Let *h*\<sub\>1\</sub\> and *h*\<sub\>2\</sub\> be two applicable active handlers established by the same *form*. Then *h*\<sub\>1\</sub\> is more recent than *h*\<sub\>2\</sub\> if *h*\<sub\>1\</sub\> was defined to the left of *h*\<sub\>2\</sub\> in the *form* that established them. 
 
 Once a handler in a handler binding *form* (such as **handler-bind** or **handler-case**) has been selected, all handlers in that *form* become inactive for the remainder of the signaling process. While the selected *handler* runs, no other *handler* established by that *form* is active. That is, if the *handler* declines, no other handler established by that *form* will be considered for possible invocation. 
 
@@ -292,7 +292,7 @@ The *variable* **\*break-on-signals\*** can be used to cause the debugger to be 
 
 Figure 9–5 shows *defined names* relating to the *signaling* of *conditions*. 
 
-|<p>**\*break-on-signals\* error warn** </p><p>**cerror signal**</p>|
+|\<p\>**\*break-on-signals\* error warn** \</p\>\<p\>**cerror signal**\</p\>|
 | :- |
 
 
@@ -326,9 +326,9 @@ The *restarts established* by a **restart-bind** *form*, a **restart-case** *for
 
 *Restarts* of the same name can be ordered from least recent to most recent according to the following two rules: 
 
-1\. Each *restart* in a set of active restarts *R*<sub>1</sub> is more recent than every *restart* in a set *R*<sub>2</sub> if the *restarts* in *R*<sub>2</sub> were active when the *restarts* in *R*<sub>1</sub> were established. 
+1\. Each *restart* in a set of active restarts *R*\<sub\>1\</sub\> is more recent than every *restart* in a set *R*\<sub\>2\</sub\> if the *restarts* in *R*\<sub\>2\</sub\> were active when the *restarts* in *R*\<sub\>1\</sub\> were established. 
 
-2\. Let *r*<sub>1</sub> and *r*<sub>2</sub> be two active *restarts* with the same name established by the same *form*. Then *r*<sub>1</sub> is more recent than *r*<sub>2</sub> if *r*<sub>1</sub> was defined to the left of *r*<sub>2</sub> in the *form* that established them. 
+2\. Let *r*\<sub\>1\</sub\> and *r*\<sub\>2\</sub\> be two active *restarts* with the same name established by the same *form*. Then *r*\<sub\>1\</sub\> is more recent than *r*\<sub\>2\</sub\> if *r*\<sub\>1\</sub\> was defined to the left of *r*\<sub\>2\</sub\> in the *form* that established them. 
 
 **9–8** Programming Language—Common Lisp
 
@@ -354,7 +354,7 @@ Some *restarts* have functional interfaces, such as **abort**, **continue**, **m
 
 Figure 9–6 shows *defined names* relating to *restarts*. 
 
-|<p>**abort invoke-restart-interactively store-value compute-restarts muffle-warning use-value** </p><p>**continue restart-bind with-simple-restart find-restart restart-case** </p><p>**invoke-restart restart-name**</p>|
+|\<p\>**abort invoke-restart-interactively store-value compute-restarts muffle-warning use-value** \</p\>\<p\>**continue restart-bind with-simple-restart find-restart restart-case** \</p\>\<p\>**invoke-restart restart-name**\</p\>|
 | :- |
 
 
@@ -382,7 +382,7 @@ Active restarts associated with a particular *condition* can be detected by *cal
 
 Conditional signaling of *conditions* based on such things as key match, form evaluation, and *type* are handled by assertion *operators*. Figure 9–7 shows *operators* relating to assertions. 
 
-|<p>**assert check-type ecase** </p><p>**ccase ctypecase etypecase**</p>|
+|\<p\>**assert check-type ecase** \</p\>\<p\>**ccase ctypecase etypecase**\</p\>|
 | :- |
 
 
@@ -580,7 +580,7 @@ While some Common Lisp operations might signal *storage-condition* because they 
 
 **Syntax:** 
 
-**assert** *test-form* [(*{place}*\*) [*datum-form {argument-form}*\*]] 
+**assert** *test-form* [(*\{place\}*\*) [*datum-form \{argument-form\}*\*]] 
 
 *→* **nil** 
 
@@ -638,7 +638,7 @@ The *places* are *generalized references* to data upon which *test-form* depends
 
 *.* Correctable error in MATRIX-MULTIPLY: 
 
-*.* Cannot multiply #<ARRAY ...> by #<ARRAY ...>. 
+*.* Cannot multiply #\<ARRAY ...\> by #\<ARRAY ...\>. 
 
 *.* Restart options: 
 
@@ -646,7 +646,7 @@ The *places* are *generalized references* to data upon which *test-form* depends
 
 *.* 2: Top level. 
 
-*.* Debug> :continue 1 
+*.* Debug\> :continue 1 
 
 *.* Value for A: x 
 
@@ -682,7 +682,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 *.* 2: Top level. 
 
-*.* Debug> :continue 1 
+*.* Debug\> :continue 1 
 
 *.* Value for X: 7 
 
@@ -752,7 +752,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 *.* 1: Return to Lisp Toplevel. 
 
-*.* Debug> 
+*.* Debug\> 
 
 (setq a ’fred) 
 
@@ -766,7 +766,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 *.* 1: Return to Lisp Toplevel. 
 
-*.* Debug> :Continue 1 
+*.* Debug\> :Continue 1 
 
 *.* Return to Lisp Toplevel. 
 
@@ -790,7 +790,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 *.* 1: Return to Lisp Toplevel. 
 
-*.* Debug> :Continue 1 
+*.* Debug\> :Continue 1 
 
 *.* Return to Lisp Toplevel. 
 
@@ -880,7 +880,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 *.* 2: Top level. 
 
-*.* Debug> :continue 1 
+*.* Debug\> :continue 1 
 
 *→* 3.0 
 
@@ -916,7 +916,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 *.* 2: Top level. 
 
-*.* Debug> :continue 1 
+*.* Debug\> :continue 1 
 
 *.* Type a number: 1/2 
 
@@ -924,7 +924,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 (defun assure-large-number (n) 
 
-(loop (when (and (numberp n) (> n 73)) (return n)) 
+(loop (when (and (numberp n) (\> n 73)) (return n)) 
 
 (cerror "Enter a number~:[~; a bit larger than ~D~]." 
 
@@ -960,7 +960,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 *.* 2: Top level. 
 
-*.* Debug> :continue 1 
+*.* Debug\> :continue 1 
 
 *.* Type a large number: 88 
 
@@ -976,7 +976,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 *.* 2: Top level. 
 
-*.* Debug> :continue 1 
+*.* Debug\> :continue 1 
 
 *.* Type a large number: 259 
 
@@ -994,7 +994,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 (defun assure-large-number (n) 
 
-(loop (when (and (numberp n) (> n 73)) (return n)) 
+(loop (when (and (numberp n) (\> n 73)) (return n)) 
 
 (cerror "Enter a number~3\*~:[~; a bit larger than ~\*~D~]." 
 
@@ -1030,7 +1030,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 *.* 2: Top level. 
 
-*.* Debug> :continue 1 
+*.* Debug\> :continue 1 
 
 *.* Type a large number: 88 
 
@@ -1046,7 +1046,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 *.* 2: Top level. 
 
-*.* Debug> :continue 1 
+*.* Debug\> :continue 1 
 
 *.* Type a large number: 259 
 
@@ -1122,7 +1122,7 @@ The first time *place* is *evaluated*, it is *evaluated* by normal evaluation ru
 
 *.* 2: Return to Lisp Toplevel. 
 
-*.* Debug> :CONTINUE 1 
+*.* Debug\> :CONTINUE 1 
 
 *.* Use Value: #(SAM FRED HARRY) 
 
@@ -1130,7 +1130,7 @@ The first time *place* is *evaluated*, it is *evaluated* by normal evaluation ru
 
 aardvarks 
 
-*→* #<ARRAY-T-3 13571> 
+*→* #\<ARRAY-T-3 13571\> 
 
 (map ’list #’identity aardvarks) 
 
@@ -1158,7 +1158,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **check-type** 
 
-*.* Debug> :CONTINUE 2 
+*.* Debug\> :CONTINUE 2 
 
 (defmacro define-adder (name amount) 
 
@@ -1178,7 +1178,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 *.* 2: Top level. 
 
-*.* Debug> :Continue 1 
+*.* Debug\> :Continue 1 
 
 *.* Specify a value to use instead. 
 
@@ -1196,7 +1196,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 *.* 2: Top level. 
 
-*.* Debug> :Continue 1 
+*.* Debug\> :Continue 1 
 
 *.* Type a form to be evaluated and used instead: 5 
 
@@ -1436,7 +1436,7 @@ Version 15.17R, X3J13/94-101R.
 
 Fri 12-Aug-1994 6:35pm EDT 
 
-<b><sup>simple-condition-format-control, simple</sup> condition-format-arguments</b> <i>Function</i> 
+\<b\>\<sup\>simple-condition-format-control, simple\</sup\> condition-format-arguments\</b\> \<i\>Function\</i\> 
 
 **Syntax:** 
 
@@ -1466,7 +1466,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 :format-arguments ’(ho))) 
 
-*→* #<SIMPLE-CONDITION 26223553> 
+*→* #\<SIMPLE-CONDITION 26223553\> 
 
 (apply #’format nil (simple-condition-format-control foo) 
 
@@ -1552,7 +1552,7 @@ result))
 
 *.* 2: Abort to Lisp Toplevel. 
 
-*.* Debug> :continue 1 
+*.* Debug\> :continue 1 
 
 **9–30** Programming Language—Common Lisp
 
@@ -1632,7 +1632,7 @@ To continue, type :CONTINUE followed by an option number:
 
 1: Return to Lisp Toplevel. 
 
-Debug> 
+Debug\> 
 
 **Side Effects:** 
 
@@ -1686,7 +1686,7 @@ If the **continue** *restart* is used while in the debugger, **break** immediate
 
 *.* 2: Top level. 
 
-*.* Debug> :CONTINUE 1 
+*.* Debug\> :CONTINUE 1 
 
 *.* Return from BREAK. 
 
@@ -1854,7 +1854,7 @@ The **continue** *restart* can be used to continue with the normal *signaling* p
 
 (ignore-errors (error ’simple-error :format-control "Fooey!")) 
 
-*→* NIL, #<SIMPLE-ERROR 32207172> 
+*→* NIL, #\<SIMPLE-ERROR 32207172\> 
 
 (let ((\*break-on-signals\* ’error)) 
 
@@ -1870,11 +1870,11 @@ The **continue** *restart* can be used to continue with the normal *signaling* p
 
 *.* 2: Top level. 
 
-*.* Debug> :CONTINUE 1 
+*.* Debug\> :CONTINUE 1 
 
 *.* Continue to signal. 
 
-*→* NIL, #<SIMPLE-ERROR 32212257> 
+*→* NIL, #\<SIMPLE-ERROR 32212257\> 
 
 (let ((\*break-on-signals\* ’error)) 
 
@@ -1890,7 +1890,7 @@ The **continue** *restart* can be used to continue with the normal *signaling* p
 
 *.* 2: Top level. 
 
-*.* Debug> :CONTINUE 1 
+*.* Debug\> :CONTINUE 1 
 
 *.* Continue to signal. 
 
@@ -1900,7 +1900,7 @@ The **continue** *restart* can be used to continue with the normal *signaling* p
 
 *.* 1: Top level. 
 
-*.* Debug> :CONTINUE 1 
+*.* Debug\> :CONTINUE 1 
 
 *.* Top level. 
 
@@ -1926,7 +1926,7 @@ that suffices. Setting **\*break-on-signals\*** effectively violates the modular
 
 **Syntax:** 
 
-**handler-bind** (*{↓binding}*\*) *{form}*\* *→ {result}*\* 
+**handler-bind** (*\{↓binding\}*\*) *\{form\}*\* *→ \{result\}*\* 
 
 *binding::*=(*type handler*) 
 
@@ -2004,13 +2004,13 @@ Note that “Foo.” is not printed because the condition made by **signal** is 
 
 **Syntax:** 
 
-**handler-case** *expression* [[ *{↓error-clause}*\* *| ↓no-error-clause* ]] *→ {result}*\* 
+**handler-case** *expression* [[ *\{↓error-clause\}*\* *| ↓no-error-clause* ]] *→ \{result\}*\* 
 
 *clause::*=*↓error-clause | ↓no-error-clause* 
 
-*error-clause::*=(*typespec* ([*var*]) *{declaration}*\* *{form}*\*) 
+*error-clause::*=(*typespec* ([*var*]) *\{declaration\}*\* *\{form\}*\*) 
 
-*no-error-clause::*=(:no-error *lambda-list {declaration}*\* *{form}*\*) 
+*no-error-clause::*=(:no-error *lambda-list \{declaration\}*\* *\{form\}*\*) 
 
 **Arguments and Values:** 
 
@@ -2058,7 +2058,7 @@ If *var* is not needed, it can be omitted. That is, a *clause* such as:
 
 can be written (*typespec* () *form*). 
 
-If there are no *forms* in a selected *clause*, the case, and therefore **handler-case**, returns **nil**. If execution of *expression* returns normally and no *no-error-clause* exists, the values returned by *expression* are returned by **handler-case**. If execution of *expression* returns normally and a *no-error-clause* does exist, the values returned are used as arguments to the function described by constructing (lambda *lambda-list {form}*\*) from the *no-error-clause*, and the *values* of that function call are returned by **handler-case**. The handlers which were established around the *expression* are no longer active at the time of this call. 
+If there are no *forms* in a selected *clause*, the case, and therefore **handler-case**, returns **nil**. If execution of *expression* returns normally and no *no-error-clause* exists, the values returned by *expression* are returned by **handler-case**. If execution of *expression* returns normally and a *no-error-clause* does exist, the values returned are used as arguments to the function described by constructing (lambda *lambda-list \{form\}*\*) from the *no-error-clause*, and the *values* of that function call are returned by **handler-case**. The handlers which were established around the *expression* are no longer active at the time of this call. 
 
 Conditions **9–39**
 
@@ -2090,7 +2090,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 *→* ASSESS-CONDITION 
 
-(assess-condition (make-condition ’stream-error :stream \*terminal-io\*)) *→* "#<STREAM-ERROR 12352256> looks especially bad." 
+(assess-condition (make-condition ’stream-error :stream \*terminal-io\*)) *→* "#\<STREAM-ERROR 12352256\> looks especially bad." 
 
 (define-condition random-condition (condition) () 
 
@@ -2174,7 +2174,7 @@ is approximately equivalent to:
 
 **Syntax:** 
 
-**ignore-errors** *{form}*\* *→ {result}*\* 
+**ignore-errors** *\{form\}*\* *→ \{result\}*\* 
 
 **Arguments and Values:** 
 
@@ -2238,25 +2238,25 @@ Because the second return value is a *condition* in the exceptional case, it is 
 
 **Syntax:** 
 
-**define-condition** *name* (*{parent-type}*\*) (*{↓slot-spec}*\*) *{option}*\* 
+**define-condition** *name* (*\{parent-type\}*\*) (*\{↓slot-spec\}*\*) *\{option\}*\* 
 
 *→ name* 
 
 *slot-spec::*=*slot-name |* (*slot-name ↓slot-option*) 
 
-*slot-option::*=[[ *{*:reader *symbol}*\* *|* 
+*slot-option::*=[[ *\{*:reader *symbol\}*\* *|* 
 
-*{*:writer *↓function-name}*\* *|* 
+*\{*:writer *↓function-name\}*\* *|* 
 
-*{*:accessor *symbol}*\* *|* 
+*\{*:accessor *symbol\}*\* *|* 
 
-*{*:allocation *↓allocation-type} |* 
+*\{*:allocation *↓allocation-type\} |* 
 
-*{*:initarg *symbol}*\* *|* 
+*\{*:initarg *symbol\}*\* *|* 
 
-*{*:initform *form} |* 
+*\{*:initform *form\} |* 
 
-*{*:type *type-specifier}* ]] 
+*\{*:type *type-specifier\}* ]] 
 
 *option::*=[[(:default-initargs . *initarg-list*) *|* 
 
@@ -2272,7 +2272,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **define-condition** 
 
-*function-name::*=*{symbol |* (setf *symbol*)*}* 
+*function-name::*=*\{symbol |* (setf *symbol*)*\}* 
 
 *allocation-type::*=:instance *|* :class 
 
@@ -2518,7 +2518,7 @@ Note that since no :report clause was given, the information inherited from mach
 
 :flavor ’chocolate) 
 
-*→* #<ATE-TOO-MUCH-ICE-CREAM 32236101> 
+*→* #\<ATE-TOO-MUCH-ICE-CREAM 32236101\> 
 
 (format t "~A" \*) 
 
@@ -2564,7 +2564,7 @@ Constructs and returns a *condition* of type *type* using *slot-initializations*
 
 :format-arguments (list (incf \*oops-count\*)))) 
 
-*→* #<SIMPLE-ERROR 32245104> 
+*→* #\<SIMPLE-ERROR 32245104\> 
 
 (format t "~&~A~%" a) 
 
@@ -2580,7 +2580,7 @@ Constructs and returns a *condition* of type *type* using *slot-initializations*
 
 *.* 1: Return to Lisp Toplevel. 
 
-*.* Debug> 
+*.* Debug\> 
 
 **Affected By:** 
 
@@ -2650,7 +2650,7 @@ Implementations are permitted, but not required, to return *distinct lists* from
 
 (let ((n nil) (k (length restarts))) 
 
-(loop (when (and (typep n ’integer) (>= n 0) (< n k)) 
+(loop (when (and (typep n ’integer) (\>= n 0) (\< n k)) 
 
 (return t)) 
 
@@ -2748,7 +2748,7 @@ If *identifier* is a currently active restart, then it is returned. Otherwise, *
 
 (my-restart () nil)) 
 
-*.* #<RESTART 32307325> is named MY-RESTART 
+*.* #\<RESTART 32307325\> is named MY-RESTART 
 
 *→* NIL 
 
@@ -2778,7 +2778,7 @@ Although anonymous restarts have a name of **nil**, the consequences are unspeci
 
 **Syntax:** 
 
-**invoke-restart** *restart* &rest *arguments → {result}*\* 
+**invoke-restart** *restart* &rest *arguments → \{result\}*\* 
 
 Conditions **9–51**
 
@@ -2812,7 +2812,7 @@ Calls the *function* associated with *restart*, passing *arguments* to it. *Rest
 
 *.* 2: Return to Lisp Toplevel. 
 
-*.* Debug> (invoke-restart ’store-value 7) 
+*.* Debug\> (invoke-restart ’store-value 7) 
 
 *→* 10 
 
@@ -2850,7 +2850,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **Syntax:** 
 
-**invoke-restart-interactively** *restart → {result}*\* 
+**invoke-restart-interactively** *restart → \{result\}*\* 
 
 **Arguments and Values:** 
 
@@ -2882,7 +2882,7 @@ Once the arguments have been determined, **invoke-restart-interactively** execut
 
 *.* 2: Return to Lisp Toplevel. 
 
-*.* Debug> (invoke-restart-interactively ’store-value) 
+*.* Debug\> (invoke-restart-interactively ’store-value) 
 
 *.* Type a form to evaluate and use: 7 
 
@@ -2920,9 +2920,9 @@ If *restart* is not valid, an error of *type* **control-error** is signaled.
 
 **Syntax:** 
 
-**restart-bind** (*{*(*name function {↓key-val-pair}*\*)*}*) *{form}*\* 
+**restart-bind** (*\{*(*name function \{↓key-val-pair\}*\*)*\}*) *\{form\}*\* 
 
-*→ {result}*\* 
+*→ \{result\}*\* 
 
 *key-val-pair::*=:interactive-function *interactive-function |* 
 
@@ -3006,11 +3006,11 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **Syntax:** 
 
-**restart-case** *restartable-form {↓clause} → {result}*\* 
+**restart-case** *restartable-form \{↓clause\} → \{result\}*\* 
 
 *clause::*=(*case-name lambda-list* 
 
-[[ :interactive *interactive-expression |* :report *report-expression |* :test *test-expression* ]] *{declaration}*\* *{form}*\*) 
+[[ :interactive *interactive-expression |* :report *report-expression |* :test *test-expression* ]] *\{declaration\}*\* *\{form\}*\*) 
 
 **Arguments and Values:** 
 
@@ -3226,7 +3226,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 *.* 4: Return to Lisp Toplevel. 
 
-*.* Debug> :continue 1 
+*.* Debug\> :continue 1 
 
 *.* Use a new ice cream. 
 
@@ -3362,9 +3362,9 @@ collect (restart-name restart))
 
 **Syntax:** 
 
-**with-condition-restarts** *condition-form restarts-form {form}*\* 
+**with-condition-restarts** *condition-form restarts-form \{form\}*\* 
 
-*→ {result}*\* 
+*→ \{result\}*\* 
 
 **Arguments and Values:** 
 
@@ -3404,9 +3404,9 @@ Usually this *macro* is not used explicitly in code, since **restart-case** hand
 
 **Syntax:** 
 
-**with-simple-restart** (*name format-control {format-argument}*\*) *{form}*\* 
+**with-simple-restart** (*name format-control \{format-argument\}*\*) *\{form\}*\* 
 
-*→ {result}*\* 
+*→ \{result\}*\* 
 
 **Arguments and Values:** 
 
@@ -3472,7 +3472,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 (defun compute-fixnum-power-of-2 (x) 
 
-(with-simple-restart (nil "Give up on computing 2<i><sup>∧</sup></i>~D." x) 
+(with-simple-restart (nil "Give up on computing 2\<i\>\<sup\>∧\</sup\>\</i\>~D." x) 
 
 (let ((result 1)) 
 
@@ -3502,11 +3502,11 @@ COMPUTE-POWER-OF-2
 
 *.* To continue, type :CONTINUE followed by an option number. 
 
-<i>.</i> 1: Give up on computing 2<i><sup>∧</sup></i>10000. 
+\<i\>.\</i\> 1: Give up on computing 2\<i\>\<sup\>∧\</sup\>\</i\>10000. 
 
 *.* 2: Return to Lisp Toplevel 
 
-*.* Debug> :continue 1 
+*.* Debug\> :continue 1 
 
 *→* SOMETHING-BIG 
 
@@ -3660,7 +3660,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 *.* Warning: Situation #2. 
 
-*→* (#<SIMPLE-WARNING 42744421> #<SIMPLE-WARNING 42744365>) 
+*→* (#\<SIMPLE-WARNING 42744421\> #\<SIMPLE-WARNING 42744365\>) 
 
 (dolist (s saved) (format t "~&~A~%" s)) 
 
@@ -3732,7 +3732,7 @@ The **use-value** *restart* is generally used by *handlers* trying to recover fr
 
 Section 9.1.4.2 (Restarts), Section 9.1.4.2.2 (Interfaces to Restarts), **invoke-restart**, **use-value** (*function*), **store-value** (*function* and *restart*) 
 
-<b><sup>abort, continue, muffle-warning, store-value, use</sup> value</b> <i>Function</i> 
+\<b\>\<sup\>abort, continue, muffle-warning, store-value, use\</sup\> value\</b\> \<i\>Function\</i\> 
 
 **Syntax:** 
 
@@ -3808,7 +3808,7 @@ When *condition* is *non-nil*, only those *restarts* are considered that are eit
 
 *.* 2: Return to Lisp Toplevel. 
 
-*.* Debug> (continue) 
+*.* Debug\> (continue) 
 
 *.* Return sqrt(9) instead. 
 
@@ -3934,7 +3934,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 *.* 3: Return to Lisp Toplevel. 
 
-*.* Debug> (use-value 12) 
+*.* Debug\> (use-value 12) 
 
 *→* 12 
 
@@ -3950,7 +3950,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 *.* 3: Return to Lisp Toplevel. 
 
-*.* Debug> (store-value 24) 
+*.* Debug\> (store-value 24) 
 
 *→* 24 
 

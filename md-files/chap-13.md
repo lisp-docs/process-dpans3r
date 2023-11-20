@@ -28,7 +28,7 @@ The following figures contain lists of *defined names* applicable to *characters
 
 Figure 13–1 lists some *defined names* relating to *character attributes* and *character predicates*. 
 
-|<p>**alpha-char-p char-not-equal char**> </p><p>**alphanumericp char-not-greaterp char**>**=** </p><p>**both-case-p char-not-lessp digit-char-p** </p><p>**char-code-limit char/= graphic-char-p char-equal char**< **lower-case-p** </p><p>**char-greaterp char**<**= standard-char-p char-lessp char= upper-case-p**</p>|
+|\<p\>**alpha-char-p char-not-equal char**\> \</p\>\<p\>**alphanumericp char-not-greaterp char**\>**=** \</p\>\<p\>**both-case-p char-not-lessp digit-char-p** \</p\>\<p\>**char-code-limit char/= graphic-char-p char-equal char**\< **lower-case-p** \</p\>\<p\>**char-greaterp char**\<**= standard-char-p char-lessp char= upper-case-p**\</p\>|
 | :- |
 
 
@@ -36,7 +36,7 @@ Figure 13–1 lists some *defined names* relating to *character attributes* and 
 
 Figure 13–2 lists some *character* construction and conversion *defined names*. 
 
-|<p>**char-code char-name code-char** </p><p>**char-downcase char-upcase digit-char** </p><p>**char-int character name-char**</p>|
+|\<p\>**char-code char-name code-char** \</p\>\<p\>**char-downcase char-upcase digit-char** \</p\>\<p\>**char-int character name-char**\</p\>|
 | :- |
 
 
@@ -84,7 +84,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **13.1.4 Character Categories** 
 
-There are several (overlapping) categories of *characters* that have no formally associated *type* but that are nevertheless useful to name. They include *graphic characters*, *alphabetic*<sub>1</sub> *characters*, *characters* with *case* (*uppercase* and *lowercase characters*), *numeric characters*, *alphanumeric characters*, and *digits* (in a given *radix* ). 
+There are several (overlapping) categories of *characters* that have no formally associated *type* but that are nevertheless useful to name. They include *graphic characters*, *alphabetic*\<sub\>1\</sub\> *characters*, *characters* with *case* (*uppercase* and *lowercase characters*), *numeric characters*, *alphanumeric characters*, and *digits* (in a given *radix* ). 
 
 For each *implementation-defined attribute* of a *character* , the documentation for that *implementa tion* must specify whether *characters* that differ only in that *attribute* are permitted to differ in whether are not they are members of one of the aforementioned categories. 
 
@@ -104,17 +104,17 @@ Of the *standard characters*, *newline* is *non-graphic* and all others are *gra
 
 **13.1.4.2 Alphabetic Characters** 
 
-The *alphabetic*<sub>1</sub> *characters* are a subset of the *graphic characters*. Of the *standard characters*, only these are the *alphabetic*<sub>1</sub> *characters*: 
+The *alphabetic*\<sub\>1\</sub\> *characters* are a subset of the *graphic characters*. Of the *standard characters*, only these are the *alphabetic*\<sub\>1\</sub\> *characters*: 
 
 A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 
 
 a b c d e f g h i j k l m n o p q r s t u v w x y z 
 
-Any <i>implementation-defined character</i> that has <i>case</i> must be <i>alphabetic</i><sub>1</sub><sup>. For each <i>implementation</i></sup> defined graphic character</i> that has no <i>case</i>, it is <i>implementation-defined</i> whether that <i>character</i> is <i>alphabetic</i><sub>1</sub>. 
+Any \<i\>implementation-defined character\</i\> that has \<i\>case\</i\> must be \<i\>alphabetic\</i\>\<sub\>1\</sub\>\<sup\>. For each \<i\>implementation\</i\>\</sup\> defined graphic character\</i\> that has no \<i\>case\</i\>, it is \<i\>implementation-defined\</i\> whether that \<i\>character\</i\> is \<i\>alphabetic\</i\>\<sub\>1\</sub\>. 
 
 **13.1.4.3 Characters With Case** 
 
-The *characters* with *case* are a subset of the *alphabetic*<sub>1</sub> *characters*. A *character* with *case* has the property of being either *uppercase* or *lowercase*. Every *character* with *case* is in one-to-one correspondence with some other *character* with the opposite *case*. 
+The *characters* with *case* are a subset of the *alphabetic*\<sub\>1\</sub\> *characters*. A *character* with *case* has the property of being either *uppercase* or *lowercase*. Every *character* with *case* is in one-to-one correspondence with some other *character* with the opposite *case*. 
 
 Characters **13–3**
 
@@ -156,7 +156,7 @@ For each *implementation-defined graphic character* that has no *case*, the *imp
 
 **13.1.4.5 Alphanumeric Characters** 
 
-The set of *alphanumeric characters* is the union of the set of *alphabetic*<sub>1</sub> *characters* and the set of *numeric characters*. 
+The set of *alphanumeric characters* is the union of the set of *alphabetic*\<sub\>1\</sub\> *characters* and the set of *numeric characters*. 
 
 **13–4** Programming Language—Common Lisp
 
@@ -180,27 +180,27 @@ Two *characters* that are **eql**, **char=**, or **char-equal** are not necessar
 
 The total ordering on *characters* is guaranteed to have the following properties: 
 
-*•* If two *characters* have the same *implementation-defined attributes*, then their ordering by **char**< is consistent with the numerical ordering by the predicate < on their code *attributes*. 
+*•* If two *characters* have the same *implementation-defined attributes*, then their ordering by **char**\< is consistent with the numerical ordering by the predicate \< on their code *attributes*. 
 
 *•* If two *characters* differ in any *attribute*, then they are not **char=**. 
 
 *•* The total ordering is not necessarily the same as the total ordering on the *integers* produced by applying **char-int** to the *characters*. 
 
-*•* While *alphabetic*<sub>1</sub> *standard characters* of a given *case* must obey a partial ordering, they need not be contiguous; it is permissible for *uppercase* and *lowercase characters* to be interleaved. Thus (char<= #\a x #\z) is not a valid way of determining whether or not x is a *lowercase character* . 
+*•* While *alphabetic*\<sub\>1\</sub\> *standard characters* of a given *case* must obey a partial ordering, they need not be contiguous; it is permissible for *uppercase* and *lowercase characters* to be interleaved. Thus (char\<= #\a x #\z) is not a valid way of determining whether or not x is a *lowercase character* . 
 
 Of the *standard characters*, those which are *alphanumeric* obey the following partial ordering: 
 
-A<B<C<D<E<F<G<H<I<J<K<L<M<N<O<P<Q<R<S<T<U<V<W<X<Y<Z 
+A\<B\<C\<D\<E\<F\<G\<H\<I\<J\<K\<L\<M\<N\<O\<P\<Q\<R\<S\<T\<U\<V\<W\<X\<Y\<Z 
 
-a<b<c<d<e<f<g<h<i<j<k<l<m<n<o<p<q<r<s<t<u<v<w<x<y<z 
+a\<b\<c\<d\<e\<f\<g\<h\<i\<j\<k\<l\<m\<n\<o\<p\<q\<r\<s\<t\<u\<v\<w\<x\<y\<z 
 
-0<1<2<3<4<5<6<7<8<9 
+0\<1\<2\<3\<4\<5\<6\<7\<8\<9 
 
-either 9<A or Z<0 
+either 9\<A or Z\<0 
 
-either 9<a or z<0 
+either 9\<a or z\<0 
 
-This implies that, for *standard characters*, *alphabetic*<sub>1</sub> ordering holds within each *case* (*uppercase* and *lowercase*), and that the *numeric characters* as a group are not interleaved with *alphabetic characters*. However, the ordering or possible interleaving of *uppercase characters* and *lowercase characters* is *implementation-defined*. 
+This implies that, for *standard characters*, *alphabetic*\<sub\>1\</sub\> ordering holds within each *case* (*uppercase* and *lowercase*), and that the *numeric characters* as a group are not interleaved with *alphabetic characters*. However, the ordering or possible interleaving of *uppercase characters* and *lowercase characters* is *implementation-defined*. 
 
 Characters **13–5**
 
@@ -360,7 +360,7 @@ The *type* **extended-char** is equivalent to the *type* (and character (not bas
 
 **Notes:** 
 
-The *type* **extended-char** might have no *elements*<sub>4</sub> in *implementations* in which all *characters* are of *type* **base-char**. 
+The *type* **extended-char** might have no *elements*\<sub\>4\</sub\> in *implementations* in which all *characters* are of *type* **base-char**. 
 
 Characters **13–9**
 
@@ -368,35 +368,35 @@ Version 15.17R, X3J13/94-101R.
 
 Fri 12-Aug-1994 6:35pm EDT 
 
-**char=, char/=, char***<***, char***>***, char***<***=, char***>***=,** *. . .* 
+**char=, char/=, char***\<***, char***\>***, char***\<***=, char***\>***=,** *. . .* 
 
-<b>char=, char/=, char</b><i><</i><b>, char</b><i>></i><b>, char</b><i><</i><b>=, char</b><i>></i><b>=, <sup>char-equal, char-not-equal, char-lessp, char</sup> greaterp, char-not-greaterp, char-not-lessp</b> <i>Function</i> 
+\<b\>char=, char/=, char\</b\>\<i\>\<\</i\>\<b\>, char\</b\>\<i\>\>\</i\>\<b\>, char\</b\>\<i\>\<\</i\>\<b\>=, char\</b\>\<i\>\>\</i\>\<b\>=, \<sup\>char-equal, char-not-equal, char-lessp, char\</sup\> greaterp, char-not-greaterp, char-not-lessp\</b\> \<i\>Function\</i\> 
 
 **Syntax:** 
 
-**char**= &rest *characters*<sup>+</sup> *→ generalized-boolean* 
+**char**= &rest *characters*\<sup\>+\</sup\> *→ generalized-boolean* 
 
-**char***/* = &rest *characters*<sup>+</sup> *→ generalized-boolean* 
+**char***/* = &rest *characters*\<sup\>+\</sup\> *→ generalized-boolean* 
 
-**char**< &rest *characters*<sup>+</sup> *→ generalized-boolean* 
+**char**\< &rest *characters*\<sup\>+\</sup\> *→ generalized-boolean* 
 
-**char**> &rest *characters*<sup>+</sup> *→ generalized-boolean* 
+**char**\> &rest *characters*\<sup\>+\</sup\> *→ generalized-boolean* 
 
-**char**<= &rest *characters*<sup>+</sup> *→ generalized-boolean* 
+**char**\<= &rest *characters*\<sup\>+\</sup\> *→ generalized-boolean* 
 
-**char**>= &rest *characters*<sup>+</sup> *→ generalized-boolean* 
+**char**\>= &rest *characters*\<sup\>+\</sup\> *→ generalized-boolean* 
 
-**char-equal** &rest *characters*<sup>+</sup> *→ generalized-boolean* 
+**char-equal** &rest *characters*\<sup\>+\</sup\> *→ generalized-boolean* 
 
-**char-not-equal** &rest *characters*<sup>+</sup> *→ generalized-boolean* 
+**char-not-equal** &rest *characters*\<sup\>+\</sup\> *→ generalized-boolean* 
 
-**char-lessp** &rest *characters*<sup>+</sup> *→ generalized-boolean* 
+**char-lessp** &rest *characters*\<sup\>+\</sup\> *→ generalized-boolean* 
 
-**char-greaterp** &rest *characters*<sup>+</sup> *→ generalized-boolean* 
+**char-greaterp** &rest *characters*\<sup\>+\</sup\> *→ generalized-boolean* 
 
-**char-not-greaterp** &rest *characters*<sup>+</sup> *→ generalized-boolean* 
+**char-not-greaterp** &rest *characters*\<sup\>+\</sup\> *→ generalized-boolean* 
 
-**char-not-lessp** &rest *characters*<sup>+</sup> *→ generalized-boolean* 
+**char-not-lessp** &rest *characters*\<sup\>+\</sup\> *→ generalized-boolean* 
 
 **Arguments and Values:** 
 
@@ -412,23 +412,23 @@ These predicates compare *characters*.
 
 **char/=** returns *true* if all *characters* are different; otherwise, it returns *false*. 
 
-**char**< returns *true* if the *characters* are monotonically increasing; otherwise, it returns *false*. If two *characters* have *identical implementation-defined attributes*, then their ordering by **char**< is consistent with the numerical ordering by the predicate < on their *codes*. 
+**char**\< returns *true* if the *characters* are monotonically increasing; otherwise, it returns *false*. If two *characters* have *identical implementation-defined attributes*, then their ordering by **char**\< is consistent with the numerical ordering by the predicate \< on their *codes*. 
 
-**char**> returns *true* if the *characters* are monotonically decreasing; otherwise, it returns *false*. If two *characters* have *identical implementation-defined attributes*, then their ordering by **char**> is consistent with the numerical ordering by the predicate > on their *codes*. 
+**char**\> returns *true* if the *characters* are monotonically decreasing; otherwise, it returns *false*. If two *characters* have *identical implementation-defined attributes*, then their ordering by **char**\> is consistent with the numerical ordering by the predicate \> on their *codes*. 
 
-**char**<**=** returns *true* if the *characters* are monotonically nondecreasing; otherwise, it returns *false*. If two *characters* have *identical implementation-defined attributes*, then their ordering by **char**<**=** is consistent with the numerical ordering by the predicate <= on their *codes*. 
+**char**\<**=** returns *true* if the *characters* are monotonically nondecreasing; otherwise, it returns *false*. If two *characters* have *identical implementation-defined attributes*, then their ordering by **char**\<**=** is consistent with the numerical ordering by the predicate \<= on their *codes*. 
 
-**char**>**=** returns *true* if the *characters* are monotonically nonincreasing; otherwise, it returns *false*. **13–10** Programming Language—Common Lisp
+**char**\>**=** returns *true* if the *characters* are monotonically nonincreasing; otherwise, it returns *false*. **13–10** Programming Language—Common Lisp
 
 Version 15.17R, X3J13/94-101R. 
 
 Fri 12-Aug-1994 6:35pm EDT 
 
-**char=, char/=, char***<***, char***>***, char***<***=, char***>***=,** *. . .* 
+**char=, char/=, char***\<***, char***\>***, char***\<***=, char***\>***=,** *. . .* 
 
-If two *characters* have *identical implementation-defined attributes*, then their ordering by **char**>**=** is consistent with the numerical ordering by the predicate >= on their *codes*. 
+If two *characters* have *identical implementation-defined attributes*, then their ordering by **char**\>**=** is consistent with the numerical ordering by the predicate \>= on their *codes*. 
 
-**char-equal**, **char-not-equal**, **char-lessp**, **char-greaterp**, **char-not-greaterp**, and **char-not-lessp** are similar to **char=**, **char/=**, **char**<, **char**>, **char**<**=**, **char**>**=**, respectively, except that they ignore differences in *case* and might have an *implementation-defined* behavior for *non-simple characters*. For example, an *implementation* might define that **char-equal**, *etc.* ignore certain *implementation-defined attributes*. The effect, if any, of each *implementation-defined attribute* upon these functions must be specified as part of the definition of that *attribute*. 
+**char-equal**, **char-not-equal**, **char-lessp**, **char-greaterp**, **char-not-greaterp**, and **char-not-lessp** are similar to **char=**, **char/=**, **char**\<, **char**\>, **char**\<**=**, **char**\>**=**, respectively, except that they ignore differences in *case* and might have an *implementation-defined* behavior for *non-simple characters*. For example, an *implementation* might define that **char-equal**, *etc.* ignore certain *implementation-defined attributes*. The effect, if any, of each *implementation-defined attribute* upon these functions must be specified as part of the definition of that *attribute*. 
 
 **Examples:** 
 
@@ -462,41 +462,41 @@ If two *characters* have *identical implementation-defined attributes*, then the
 
 (char/= #\d #\c #\d) *→ false* 
 
-(char< #\d #\x) *→ true* 
+(char\< #\d #\x) *→ true* 
 
-(char<= #\d #\x) *→ true* 
+(char\<= #\d #\x) *→ true* 
 
-(char< #\d #\d) *→ false* 
+(char\< #\d #\d) *→ false* 
 
-(char<= #\d #\d) *→ true* 
+(char\<= #\d #\d) *→ true* 
 
-(char< #\a #\e #\y #\z) *→ true* 
+(char\< #\a #\e #\y #\z) *→ true* 
 
-(char<= #\a #\e #\y #\z) *→ true* 
+(char\<= #\a #\e #\y #\z) *→ true* 
 
-(char< #\a #\e #\e #\y) *→ false* 
+(char\< #\a #\e #\e #\y) *→ false* 
 
-(char<= #\a #\e #\e #\y) *→ true* 
+(char\<= #\a #\e #\e #\y) *→ true* 
 
-(char> #\e #\d) *→ true* 
+(char\> #\e #\d) *→ true* 
 
-(char>= #\e #\d) *→ true* 
+(char\>= #\e #\d) *→ true* 
 
-(char> #\d #\c #\b #\a) *→ true* 
+(char\> #\d #\c #\b #\a) *→ true* 
 
-(char>= #\d #\c #\b #\a) *→ true* 
+(char\>= #\d #\c #\b #\a) *→ true* 
 
-(char> #\d #\d #\c #\a) *→ false* 
+(char\> #\d #\d #\c #\a) *→ false* 
 
-(char>= #\d #\d #\c #\a) *→ true* 
+(char\>= #\d #\d #\c #\a) *→ true* 
 
-(char> #\e #\d #\b #\c #\a) *→ false* 
+(char\> #\e #\d #\b #\c #\a) *→ false* 
 
-(char>= #\e #\d #\b #\c #\a) *→ false* 
+(char\>= #\e #\d #\b #\c #\a) *→ false* 
 
-(char> #\z #\A) *→ implementation-dependent* 
+(char\> #\z #\A) *→ implementation-dependent* 
 
-(char> #\Z #\a) *→ implementation-dependent* 
+(char\> #\Z #\a) *→ implementation-dependent* 
 
 (char-equal #\A #\a) *→ true* 
 
@@ -510,7 +510,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 *→* (#\A #\a #\b #\B #\c #\C) 
 
-(stable-sort (list #\b #\A #\B #\a #\c #\C) #’char<) 
+(stable-sort (list #\b #\A #\B #\a #\c #\C) #’char\<) 
 
 *→* (#\A #\B #\C #\a #\b #\c) ;Implementation A 
 
@@ -536,7 +536,7 @@ If characters differ in their *code attribute* or any *implementation-defined at
 
 There is no requirement that (eq c1 c2) be true merely because (char= c1 c2) is *true*. While **eq** can distinguish two *characters* that **char=** does not, it is distinguishing them not as *characters*, but in some sense on the basis of a lower level implementation characteristic. If (eq c1 c2) is *true*, then (char= c1 c2) is also true. **eql** and **equal** compare *characters* in the same way that **char=** does. 
 
-The manner in which *case* is used by **char-equal**, **char-not-equal**, **char-lessp**, **char-greaterp**, **char-not-greaterp**, and **char-not-lessp** implies an ordering for *standard characters* such that A=a, B=b, and so on, up to Z=z, and furthermore either 9<A or Z<0. 
+The manner in which *case* is used by **char-equal**, **char-not-equal**, **char-lessp**, **char-greaterp**, **char-not-greaterp**, and **char-not-lessp** implies an ordering for *standard characters* such that A=a, B=b, and so on, up to Z=z, and furthermore either 9\<A or Z\<0. 
 
 **character** *Function* 
 
@@ -648,7 +648,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **Description:** 
 
-Returns *true* if *character* is an *alphabetic*<sub>1</sub> *character* ; otherwise, returns *false*. 
+Returns *true* if *character* is an *alphabetic*\<sub\>1\</sub\> *character* ; otherwise, returns *false*. 
 
 **Examples:** 
 
@@ -694,7 +694,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **Description:** 
 
-Returns *true* if *character* is an *alphabetic*<sub>1</sub> *character* or a *numeric character* ; otherwise, returns *false*. 
+Returns *true* if *character* is an *alphabetic*\<sub\>1\</sub\> *character* or a *numeric character* ; otherwise, returns *false*. 
 
 **Examples:** 
 
@@ -748,7 +748,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **Description:** 
 
-If *weight* is less than *radix*, **digit-char** returns a *character* which has that *weight* when considered as a digit in the specified radix. If the resulting *character* is to be an *alphabetic*<sub>1</sub> *character* , it will be an uppercase *character* . 
+If *weight* is less than *radix*, **digit-char** returns a *character* which has that *weight* when considered as a digit in the specified radix. If the resulting *character* is to be an *alphabetic*\<sub\>1\</sub\> *character* , it will be an uppercase *character* . 
 
 If *weight* is greater than or equal to *radix*, **digit-char** returns *false*. 
 
@@ -1228,21 +1228,21 @@ The *standard characters hNewlinei* and *hSpacei* have the respective names "New
 
 *→* NIL 
 
-<i><sup>or</sup>→</i> "LOWERCASE-a" 
+\<i\>\<sup\>or\</sup\>→\</i\> "LOWERCASE-a" 
 
-<i><sup>or</sup>→</i> "Small-A" 
+\<i\>\<sup\>or\</sup\>→\</i\> "Small-A" 
 
-<i><sup>or</sup>→</i> "LA01" 
+\<i\>\<sup\>or\</sup\>→\</i\> "LA01" 
 
 (char-name #\A) 
 
 *→* NIL 
 
-<i><sup>or</sup>→</i> "UPPERCASE-A" 
+\<i\>\<sup\>or\</sup\>→\</i\> "UPPERCASE-A" 
 
-<i><sup>or</sup>→</i> "Capital-A" 
+\<i\>\<sup\>or\</sup\>→\</i\> "Capital-A" 
 
-<i><sup>or</sup>→</i> "LA02" 
+\<i\>\<sup\>or\</sup\>→\</i\> "LA02" 
 
 ;; Even though its CHAR-NAME can vary, #\A prints as #\A 
 

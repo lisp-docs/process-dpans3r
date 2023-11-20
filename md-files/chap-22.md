@@ -46,7 +46,7 @@ When a function such as **print** produces a printed representation, it must cho
 
 A number of option variables, called *printer control variables*, are provided to permit control of individual aspects of the printed representation of *objects*. Figure 22–1 shows the *standardized printer control variables*; there might also be *implementation-defined printer control variables*. 
 
-|<p>**\*print-array\* \*print-gensym\* \*print-pprint-dispatch\* \*print-base\* \*print-length\* \*print-pretty\*** </p><p>**\*print-case\* \*print-level\* \*print-radix\*** </p><p>**\*print-circle\* \*print-lines\* \*print-readably\* \*print-escape\* \*print-miser-width\* \*print-right-margin\***</p>|
+|\<p\>**\*print-array\* \*print-gensym\* \*print-pprint-dispatch\* \*print-base\* \*print-length\* \*print-pretty\*** \</p\>\<p\>**\*print-case\* \*print-level\* \*print-radix\*** \</p\>\<p\>**\*print-circle\* \*print-lines\* \*print-readably\* \*print-escape\* \*print-miser-width\* \*print-right-margin\***\</p\>|
 | :- |
 
 
@@ -102,9 +102,9 @@ For related information about the syntax of an *integer* , see Section 2.3.2.1.1
 
 **\*print-radix\***. If the ratio is negative, a minus sign is printed before the numerator. For related information about the syntax of a *ratio*, see Section 2.3.2.1.2 (Syntax of a Ratio). **22.1.3.1.3 Printing Floats** 
 
-If the magnitude of the <i>float</i> is either zero or between 10<sup><i>−</i>3</sup>(inclusive) and 10<sup>7</sup>(exclusive), it is printed as the integer part of the number, then a decimal point, followed by the fractional part of the number; there is always at least one digit on each side of the decimal point. If the sign of the number (as determined by <b>float-sign</b>) is negative, then a minus sign is printed before the number. If the format of the number does not match that specified by <b>*read-default-float-format*</b>, then the <i>exponent marker</i> for that format and the digit 0 are also printed. For example, the base of the natural logarithms as a <i>short float</i> might be printed as 2.71828S0. 
+If the magnitude of the \<i\>float\</i\> is either zero or between 10\<sup\>\<i\>−\</i\>3\</sup\>(inclusive) and 10\<sup\>7\</sup\>(exclusive), it is printed as the integer part of the number, then a decimal point, followed by the fractional part of the number; there is always at least one digit on each side of the decimal point. If the sign of the number (as determined by \<b\>float-sign\</b\>) is negative, then a minus sign is printed before the number. If the format of the number does not match that specified by \<b\>*read-default-float-format*\</b\>, then the \<i\>exponent marker\</i\> for that format and the digit 0 are also printed. For example, the base of the natural logarithms as a \<i\>short float\</i\> might be printed as 2.71828S0. 
 
-For non-zero magnitudes outside of the range 10<sup><i>−</i>3</sup>to 10<sup>7</sup>, a <i>float</i> is printed in computerized scientific notation. The representation of the number is scaled to be between 1 (inclusive) and 10 (exclusive) and then printed, with one digit before the decimal point and at least one digit after the decimal point. Next the <i>exponent marker</i> for the format is printed, except that if the format of the number matches that specified by <b>*read-default-float-format*</b>, then the <i>exponent marker</i> E is used. Finally, the power of ten by which the fraction must be multiplied to equal the original number is printed as a decimal integer. For example, Avogadro’s number as a <i>short float</i> is printed as 6.02S23. 
+For non-zero magnitudes outside of the range 10\<sup\>\<i\>−\</i\>3\</sup\>to 10\<sup\>7\</sup\>, a \<i\>float\</i\> is printed in computerized scientific notation. The representation of the number is scaled to be between 1 (inclusive) and 10 (exclusive) and then printed, with one digit before the decimal point and at least one digit after the decimal point. Next the \<i\>exponent marker\</i\> for the format is printed, except that if the format of the number matches that specified by \<b\>*read-default-float-format*\</b\>, then the \<i\>exponent marker\</i\> E is used. Finally, the power of ten by which the fraction must be multiplied to equal the original number is printed as a decimal integer. For example, Avogadro’s number as a \<i\>short float\</i\> is printed as 6.02S23. 
 
 For related information about the syntax of a *float*, see Section 2.3.2.2 (Syntax of a Float). **22.1.3.1.4 Printing Complexes** 
 
@@ -126,7 +126,7 @@ The printed representation of a number must not contain *escape characters*; see
 
 When *printer escaping* is disabled, a *character* prints as itself; it is sent directly to the output *stream*. When *printer escaping* is enabled, then #\ syntax is used. 
 
-When the printer types out the name of a *character* , it uses the same table as the #\ *reader macro* would use; therefore any *character* name that is typed out is acceptable as input (in that *implementation*). If a *non-graphic character* has a *standardized name*<sub>5</sub>, that *name* is preferred over non-standard *names* for printing in #\ notation. For the *graphic standard characters*, the *character* itself is always used for printing in #\ notation—even if the *character* also has a *name*<sub>5</sub>. 
+When the printer types out the name of a *character* , it uses the same table as the #\ *reader macro* would use; therefore any *character* name that is typed out is acceptable as input (in that *implementation*). If a *non-graphic character* has a *standardized name*\<sub\>5\</sub\>, that *name* is preferred over non-standard *names* for printing in #\ notation. For the *graphic standard characters*, the *character* itself is always used for printing in #\ notation—even if the *character* also has a *name*\<sub\>5\</sub\>. 
 
 For details about the #\ *reader macro*, see Section 2.4.8.1 (Sharpsign Backslash). 
 
@@ -368,7 +368,7 @@ Wherever possible, list notation is preferred over dot notation. Therefore the f
 
 5\. A *right-parenthesis* is printed. 
 
-Actually, the above algorithm is only used when **\*print-pretty\*** is *false*. When **\*print-pretty\*** is *true* (or when **pprint** is used), additional *whitespace*<sub>1</sub> may replace the use of a single *space*, and a more elaborate algorithm with similar goals but more presentational flexibility is used; see Section 22.1.2 (Printer Dispatching). 
+Actually, the above algorithm is only used when **\*print-pretty\*** is *false*. When **\*print-pretty\*** is *true* (or when **pprint** is used), additional *whitespace*\<sub\>1\</sub\> may replace the use of a single *space*, and a more elaborate algorithm with similar goals but more presentational flexibility is used; see Section 22.1.2 (Printer Dispatching). 
 
 Although the two expressions below are equivalent, and the reader accepts either one and produces the same *cons*, the printer always prints such a *cons* in the second form. 
 
@@ -420,15 +420,15 @@ For information on how the *Lisp reader* parses *lists* and *conses*, see Sectio
 
 **22.1.3.6 Printing Bit Vectors** 
 
-A *bit vector* is printed as #\* followed by the bits of the *bit vector* in order. If **\*print-array\*** is *false*, then the *bit vector* is printed in a format (using #<) that is concise but not readable. Only the *active elements* of the *bit vector* are printed. 
+A *bit vector* is printed as #\* followed by the bits of the *bit vector* in order. If **\*print-array\*** is *false*, then the *bit vector* is printed in a format (using #\<) that is concise but not readable. Only the *active elements* of the *bit vector* are printed. 
 
 For information on *Lisp reader* parsing of *bit vectors*, see Section 2.4.8.4 (Sharpsign Asterisk). 
 
 **22.1.3.7 Printing Other Vectors** 
 
-If **\*print-array\*** is *true* and **\*print-readably\*** is *false*, any *vector* other than a *string* or *bit vector* is printed using general-vector syntax; this means that information about specialized vector representations does not appear. The printed representation of a zero-length *vector* is #(). The printed representation of a non-zero-length *vector* begins with #(. Following that, the first element of the *vector* is printed. If there are any other elements, they are printed in turn, with each such additional element preceded by a *space* if **\*print-pretty\*** is *false*, or *whitespace*<sub>1</sub> if **\*print-pretty\*** is *true*. A *right-parenthesis* after the last element terminates the printed representation of the *vector* . The printing of *vectors* is affected by **\*print-level\*** and **\*print-length\***. If the *vector* has a *fill pointer* , then only those elements below the *fill pointer* are printed. 
+If **\*print-array\*** is *true* and **\*print-readably\*** is *false*, any *vector* other than a *string* or *bit vector* is printed using general-vector syntax; this means that information about specialized vector representations does not appear. The printed representation of a zero-length *vector* is #(). The printed representation of a non-zero-length *vector* begins with #(. Following that, the first element of the *vector* is printed. If there are any other elements, they are printed in turn, with each such additional element preceded by a *space* if **\*print-pretty\*** is *false*, or *whitespace*\<sub\>1\</sub\> if **\*print-pretty\*** is *true*. A *right-parenthesis* after the last element terminates the printed representation of the *vector* . The printing of *vectors* is affected by **\*print-level\*** and **\*print-length\***. If the *vector* has a *fill pointer* , then only those elements below the *fill pointer* are printed. 
 
-If both **\*print-array\*** and **\*print-readably\*** are *false*, the *vector* is not printed as described above, but in a format (using #<) that is concise but not readable. 
+If both **\*print-array\*** and **\*print-readably\*** are *false*, the *vector* is not printed as described above, but in a format (using #\<) that is concise but not readable. 
 
 If **\*print-readably\*** is *true*, the *vector* prints in an *implementation-defined* manner; see the *variable* **\*print-readably\***. 
 
@@ -442,19 +442,19 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **22.1.3.8 Printing Other Arrays** 
 
-If **\*print-array\*** is *true* and **\*print-readably\*** is *false*, any *array* other than a *vector* is printed using #nA format. Let n be the *rank* of the *array*. Then # is printed, then n as a decimal integer, then A, then n open parentheses. Next the *elements* are scanned in row-major order, using **write** on each *element*, and separating *elements* from each other with *whitespace*<sub>1</sub>. The array’s dimensions are numbered 0 to n-1 from left to right, and are enumerated with the rightmost index changing fastest. Every time the index for dimension j is incremented, the following actions are taken: 
+If **\*print-array\*** is *true* and **\*print-readably\*** is *false*, any *array* other than a *vector* is printed using #nA format. Let n be the *rank* of the *array*. Then # is printed, then n as a decimal integer, then A, then n open parentheses. Next the *elements* are scanned in row-major order, using **write** on each *element*, and separating *elements* from each other with *whitespace*\<sub\>1\</sub\>. The array’s dimensions are numbered 0 to n-1 from left to right, and are enumerated with the rightmost index changing fastest. Every time the index for dimension j is incremented, the following actions are taken: 
 
-*•* If j < n-1, then a close parenthesis is printed. 
+*•* If j \< n-1, then a close parenthesis is printed. 
 
 *•* If incrementing the index for dimension j caused it to equal dimension j, that index is reset to zero and the index for dimension j-1 is incremented (thereby performing these three steps recursively), unless j=0, in which case the entire algorithm is terminated. If incrementing the index for dimension j did not cause it to equal dimension j, then a space is printed. 
 
-*•* If j < n-1, then an open parenthesis is printed. 
+*•* If j \< n-1, then an open parenthesis is printed. 
 
 This causes the contents to be printed in a format suitable for :initial-contents to **make-array**. The lists effectively printed by this procedure are subject to truncation by **\*print-level\*** and **\*print-length\***. 
 
 If the *array* is of a specialized *type*, containing bits or characters, then the innermost lists generated by the algorithm given above can instead be printed using bit-vector or string syntax, provided that these innermost lists would not be subject to truncation by **\*print-length\***. 
 
-If both **\*print-array\*** and **\*print-readably\*** are *false*, then the *array* is printed in a format (using #<) that is concise but not readable. 
+If both **\*print-array\*** and **\*print-readably\*** are *false*, then the *array* is printed in a format (using #\<) that is concise but not readable. 
 
 If **\*print-readably\*** is *true*, the *array* prints in an *implementation-defined* manner; see the *variable* **\*print-readably\***. In particular, this may be important for arrays having some dimension 0. 
 
@@ -468,13 +468,13 @@ For information on how the *Lisp reader* parses these “other *arrays*,” see 
 
 (\*print-array\* t)) 
 
-(dotimes (i 3) (dotimes (j 3) (setf (aref a i j) (format nil "<~D,~D>" i j)))) (print a) 
+(dotimes (i 3) (dotimes (j 3) (setf (aref a i j) (format nil "\<~D,~D\>" i j)))) (print a) 
 
 (print (make-array 9 :displaced-to a))) 
 
-*.* #2A(("<0,0>" "<0,1>" "<0,2>") 
+*.* #2A(("\<0,0\>" "\<0,1\>" "\<0,2\>") 
 
-*.* ("<1,0>" "<1,1>" "<1,2>") 
+*.* ("\<1,0\>" "\<1,1\>" "\<1,2\>") 
 
 **22–10** Programming Language—Common Lisp
 
@@ -482,11 +482,11 @@ Version 15.17R, X3J13/94-101R.
 
 Fri 12-Aug-1994 6:35pm EDT 
 
-*.* ("<2,0>" "<2,1>" "<2,2>")) 
+*.* ("\<2,0\>" "\<2,1\>" "\<2,2\>")) 
 
-*.* #("<0,0>" "<0,1>" "<0,2>" "<1,0>" "<1,1>" "<1,2>" "<2,0>" "<2,1>" "<2,2>") 
+*.* #("\<0,0\>" "\<0,1\>" "\<0,2\>" "\<1,0\>" "\<1,1\>" "\<1,2\>" "\<2,0\>" "\<2,1\>" "\<2,2\>") 
 
-*→* #<ARRAY 9 indirect 36363476> 
+*→* #\<ARRAY 9 indirect 36363476\> 
 
 **22.1.3.10 Printing Random States** 
 
@@ -508,7 +508,7 @@ When *printer escaping* is disabled, **write** writes a *pathname P* by writing 
 
 By default, a *structure* of type *S* is printed using #S syntax. This behavior can be customized by specifying a :print-function or :print-object option to the **defstruct** *form* that defines *S*, or by writing a **print-object** *method* that is *specialized* for *objects* of type *S*. 
 
-Different structures might print out in different ways; the default notation for structures is: #S(*structure-name {slot-key slot-value}*\*) 
+Different structures might print out in different ways; the default notation for structures is: #S(*structure-name \{slot-key slot-value\}*\*) 
 
 where #S indicates structure syntax, *structure-name* is a *structure name*, each *slot-key* is an initialization argument *name* for a *slot* in the *structure*, and each corresponding *slot-value* is a representation of the *object* in that *slot*. 
 
@@ -524,7 +524,7 @@ Other *objects* are printed in an *implementation-dependent* manner. It is not r
 
 For example, *hash tables*, *readtables*, *packages*, *streams*, and *functions* might not print *readably*. 
 
-A common notation to use in this circumstance is #<...>. Since #< is not readable by the *Lisp reader* , the precise format of the text which follows is not important, but a common format to use is that provided by the **print-unreadable-object** *macro*. 
+A common notation to use in this circumstance is #\<...\>. Since #\< is not readable by the *Lisp reader* , the precise format of the text which follows is not important, but a common format to use is that provided by the **print-unreadable-object** *macro*. 
 
 For information on how the *Lisp reader* treats this notation, see Section 2.4.8.20 (Sharpsign Less-Than-Sign). For information on how to notate *objects* that cannot be printed *readably*, see Section 2.4.8.6 (Sharpsign Dot). 
 
@@ -648,7 +648,7 @@ The *pretty printer* is driven entirely by dispatch based on the *value* of **\*
 
 The actions of the *pretty printer* when a piece of output is too large to fit in the space available can be precisely controlled. Three concepts underlie the way these operations work—*logical blocks*, *conditional newlines*, and *sections*. Before proceeding further, it is important to define these terms. 
 
-The first line of Figure 22–3 shows a schematic piece of output. Each of the characters in the output is represented by “-”. The positions of conditional newlines are indicated by digits. The beginnings and ends of logical blocks are indicated by “<” and “>” respectively. 
+The first line of Figure 22–3 shows a schematic piece of output. Each of the characters in the output is represented by “-”. The positions of conditional newlines are indicated by digits. The beginnings and ends of logical blocks are indicated by “\<” and “\>” respectively. 
 
 The output as a whole is a logical block and the outermost section. This section is indicated by the 0’s on the second line of Figure 1. Logical blocks nested within the output are specified by the macro **pprint-logical-block**. Conditional newline positions are specified by calls to **pprint-newline**. Each conditional newline defines two sections (one before it and one after it) and is associated with a third (the section immediately containing it). 
 
@@ -666,7 +666,7 @@ is not applicable, (b) the beginning of the immediately containing logical block
 
 The section immediately containing a conditional newline is the shortest section that contains the conditional newline in question. In Figure 22–3, the first conditional newline is immediately contained in the section marked with 0’s, the second and third conditional newlines are immediately contained in the section before the fourth conditional newline, and the fourth conditional newline is immediately contained in the section after the first conditional newline. 
 
-<-1–-<–<–2–-3->–4–>-> 
+\<-1–-\<–\<–2–-3-\>–4–\>-\> 
 
 000000000000000000000000000 
 
@@ -686,7 +686,7 @@ Whenever possible, the pretty printer displays the entire contents of a section 
 
 The primary interface to operations for dynamically determining the arrangement of output is provided through the functions and macros of the pretty printer. Figure 22–4 shows the defined names related to *pretty printing*. 
 
-|<p>**\*print-lines\* pprint-dispatch pprint-pop \*print-miser-width\* pprint-exit-if-list-exhausted pprint-tab \*print-pprint-dispatch\* pprint-fill pprint-tabular \*print-right-margin\* pprint-indent set-pprint-dispatch copy-pprint-dispatch pprint-linear write** </p><p>**format pprint-logical-block** </p><p>**formatter pprint-newline**</p>|
+|\<p\>**\*print-lines\* pprint-dispatch pprint-pop \*print-miser-width\* pprint-exit-if-list-exhausted pprint-tab \*print-pprint-dispatch\* pprint-fill pprint-tabular \*print-right-margin\* pprint-indent set-pprint-dispatch copy-pprint-dispatch pprint-linear write** \</p\>\<p\>**format pprint-logical-block** \</p\>\<p\>**formatter pprint-newline**\</p\>|
 | :- |
 
 
@@ -694,7 +694,7 @@ The primary interface to operations for dynamically determining the arrangement 
 
 Figure 22–5 identifies a set of *format directives* which serve as an alternate interface to the same pretty printing operations in a more textually compact form. 
 
-|<p>~I ~W ~<...~:> </p><p>~:T ~/.../ ~</p>|
+|\<p\>~I ~W ~\<...~:\> \</p\>\<p\>~:T ~/.../ ~\</p\>|
 | :- |
 
 
@@ -944,11 +944,11 @@ As examples of the convenience of specifying pretty printing with *format string
 
 (defun simple-pprint-defun (\*standard-output\* list) 
 
-(format T "~:<~W ~@ ~:I~W ~: ~W~1I ~ ~W~:>" list)) 
+(format T "~:\<~W ~@ ~:I~W ~: ~W~1I ~ ~W~:\>" list)) 
 
 (defun pprint-let (\*standard-output\* list) 
 
-(format T "~:<~W~<i><sup>∧</sup></i>~:<~@{~:<~@{~W~<i><sup>∧</sup></i>~ ~}~:>~<i><sup>∧</sup></i>~: ~}~:>~1I~@{~<i><sup>∧</sup></i>~ ~W~}~:>" list)) 
+(format T "~:\<~W~\<i\>\<sup\>∧\</sup\>\</i\>~:\<~@\{~:\<~@\{~W~\<i\>\<sup\>∧\</sup\>\</i\>~ ~\}~:\>~\<i\>\<sup\>∧\</sup\>\</i\>~: ~\}~:\>~1I~@\{~\<i\>\<sup\>∧\</sup\>\</i\>~ ~W~\}~:\>" list)) 
 
 In the following example, the first *form* restores **\*print-pprint-dispatch\*** to the equivalent of its initial value. The next two forms then set up a special way to pretty print ratios. Note that the more specific *type specifier* has to be associated with a higher priority. 
 
@@ -1020,7 +1020,7 @@ This final example shows how to define a pretty printing function for a user def
 
 #’(lambda (s f) 
 
-(funcall (formatter "~@<#<~;~W and ~2I~ ~/pprint-fill/~;>~:>") 
+(funcall (formatter "~@\<#\<~;~W and ~2I~ ~/pprint-fill/~;\>~:\>") 
 
 s (family-mom f) (family-kids f)))) 
 
@@ -1036,9 +1036,9 @@ The pretty printing function for the structure family specifies how to adjust th
 
 (PRINCIPAL-FAMILY 
 
-#<Lucy and 
+#\<Lucy and 
 
-Mark Bob . Dan>) 
+Mark Bob . Dan\>) 
 
 Note that a pretty printing function for a structure is different from the structure’s **print-object** *method*. While **print-object** *methods* are permanently associated with a structure, pretty printing functions are stored in *pprint dispatch tables* and can be rapidly changed to reflect different printing needs. If there is no pretty printing function for a structure in the current *pprint dispatch table*, its **print-object** *method* is used instead. 
 
@@ -1076,11 +1076,11 @@ A directive consists of a *tilde*, optional prefix parameters separated by comma
 
 In place of a prefix parameter to a directive, V (or v) can be used. In this case, **format** takes an argument from *args* as a parameter to the directive. The argument should be an *integer* or *character* . If the *arg* used by a V parameter is **nil**, the effect is as if the parameter had been 
 
-omitted. # can be used in place of a prefix parameter; it represents the number of *args* remaining to be processed. When used within a recursive format, in the context of ~? or ~{, the # prefix parameter represents the number of *format arguments* remaining within the recursive call. 
+omitted. # can be used in place of a prefix parameter; it represents the number of *args* remaining to be processed. When used within a recursive format, in the context of ~? or ~\{, the # prefix parameter represents the number of *format arguments* remaining within the recursive call. 
 
 Examples of *format strings*: 
 
-|<p>"~S" ;This is an S directive with no parameters or modifiers. "~3,-4:@s" ;This is an S directive with two parameters, 3 and -4, ; and both the *colon* and *at-sign* flags. </p><p>"~,+4S" ;Here the first prefix parameter is omitted and takes ; on its default value, while the second parameter is 4.</p>|
+|\<p\>"~S" ;This is an S directive with no parameters or modifiers. "~3,-4:@s" ;This is an S directive with two parameters, 3 and -4, ; and both the *colon* and *at-sign* flags. \</p\>\<p\>"~,+4S" ;Here the first prefix parameter is omitted and takes ; on its default value, while the second parameter is 4.\</p\>|
 | :-: |
 
 
@@ -1120,7 +1120,7 @@ The next *arg* should be a *character* ; it is printed according to the modifier
 
 *→* "Control-Space" 
 
-<i><sup>or</sup>→</i> "c-Space" 
+\<i\>\<sup\>or\</sup\>→\</i\> "c-Space" 
 
 ~:@C prints what ~:C would, and then if the *character* requires unusual shift keys on the keyboard to type it, this fact is mentioned. For example, 
 
@@ -1238,7 +1238,7 @@ The next *arg* is printed as a *float*.
 
 The full form is ~*w*,*d*,*k*,*overflowchar*,*padchar*F. The parameter *w* is the width of the field to be printed; *d* is the number of digits to print after the decimal point; *k* is a scale factor that defaults to zero. 
 
-Exactly <i>w</i> characters will be output. First, leading copies of the character <i>padchar</i> (which defaults to a space) are printed, if necessary, to pad the field on the left. If the <i>arg</i> is negative, then a minus sign is printed; if the <i>arg</i> is not negative, then a plus sign is printed if and only if the @ modifier was supplied. Then a sequence of digits, containing a single embedded decimal point, is printed; this represents the magnitude of the value of <i>arg</i> times 10<i><sup>k</sup></i>, rounded to <i>d</i> fractional digits. When rounding up and rounding down would produce printed values equidistant from the scaled value of <i>arg</i>, then the implementation is free to use either one. For example, printing the argument 6.375 using the format ~4,2F may correctly produce either 6.37 or 6.38. Leading zeros are not permitted, except that a single zero digit is output before the decimal point if the printed value is less than one, and this single zero digit is not output at all if <i>w</i>=<i>d</i>+1. 
+Exactly \<i\>w\</i\> characters will be output. First, leading copies of the character \<i\>padchar\</i\> (which defaults to a space) are printed, if necessary, to pad the field on the left. If the \<i\>arg\</i\> is negative, then a minus sign is printed; if the \<i\>arg\</i\> is not negative, then a plus sign is printed if and only if the @ modifier was supplied. Then a sequence of digits, containing a single embedded decimal point, is printed; this represents the magnitude of the value of \<i\>arg\</i\> times 10\<i\>\<sup\>k\</sup\>\</i\>, rounded to \<i\>d\</i\> fractional digits. When rounding up and rounding down would produce printed values equidistant from the scaled value of \<i\>arg\</i\>, then the implementation is free to use either one. For example, printing the argument 6.375 using the format ~4,2F may correctly produce either 6.37 or 6.38. Leading zeros are not permitted, except that a single zero digit is output before the decimal point if the printed value is less than one, and this single zero digit is not output at all if \<i\>w\</i\>=\<i\>d\</i\>+1. 
 
 If it is impossible to print the value in the required format in a field of width *w*, then one of two actions is taken. If the parameter *overflowchar* is supplied, then *w* copies of that parameter are printed instead of the scaled value of *arg*. If the *overflowchar* parameter is omitted, then the scaled value is printed using more than *w* characters, as many more as may be needed. 
 
@@ -1254,7 +1254,7 @@ If the parameter *d* is omitted, then there is no constraint on the number of di
 
 trailing zero digits may appear in the fraction, except that if the fraction to be printed is zero, then a single zero digit should appear after the decimal point if permitted by the width constraint. 
 
-If both <i>w</i> and <i>d</i> are omitted, then the effect is to print the value using ordinary free-format output; <b>prin1</b> uses this format for any number whose magnitude is either zero or between 10<sup><i>−</i>3</sup>(inclusive) and 10<sup>7</sup>(exclusive). 
+If both \<i\>w\</i\> and \<i\>d\</i\> are omitted, then the effect is to print the value using ordinary free-format output; \<b\>prin1\</b\> uses this format for any number whose magnitude is either zero or between 10\<sup\>\<i\>−\</i\>3\</sup\>(inclusive) and 10\<sup\>7\</sup\>(exclusive). 
 
 If *w* is omitted, then if the magnitude of *arg* is so large (or, if *d* is also omitted, so small) that more than 100 digits would have to be printed, then an implementation is free, at its discretion, to print the number using exponential notation instead, as if by the directive ~E (with all parameters to ~E defaulted, not taking their values from the ~F directive). 
 
@@ -1288,7 +1288,7 @@ If the parameter *d* is omitted, then there is no constraint on the number of di
 
 If the parameter *e* is omitted, then the exponent is printed using the smallest number of digits necessary to represent its value. 
 
-If all of <i>w</i>, <i>d</i>, and <i>e</i> are omitted, then the effect is to print the value using ordinary free-format exponential-notation output; <b>prin1</b> uses a similar format for any non-zero number whose magnitude is less than 10<sup><i>−</i>3</sup> or greater than or equal to 10<sup>7</sup>. The only difference is that the ~E directive always prints a plus or minus sign in front of the exponent, while <b>prin1</b> omits the plus sign if the exponent is non-negative. 
+If all of \<i\>w\</i\>, \<i\>d\</i\>, and \<i\>e\</i\> are omitted, then the effect is to print the value using ordinary free-format exponential-notation output; \<b\>prin1\</b\> uses a similar format for any non-zero number whose magnitude is less than 10\<sup\>\<i\>−\</i\>3\</sup\> or greater than or equal to 10\<sup\>7\</sup\>. The only difference is that the ~E directive always prints a plus or minus sign in front of the exponent, while \<b\>prin1\</b\> omits the plus sign if the exponent is non-negative. 
 
 If *arg* is a *rational* number, then it is coerced to be a *single float* and then printed. Alternatively, an implementation is permitted to process a *rational* number by any other method that has essentially the same behavior but avoids loss of precision or overflow because of the coercion. If *w* and *d* are unsupplied and the number has no exact decimal representation, for example 1/3, some precision cutoff must be chosen by the implementation since only a finite number of digits may be printed. 
 
@@ -1304,7 +1304,7 @@ Version 15.17R, X3J13/94-101R.
 
 Fri 12-Aug-1994 6:35pm EDT 
 
-The full form is ~<i>w</i>,<i>d</i>,<i>e</i>,<i>k</i>,<i>overflowchar</i>,<i>padchar</i>,<i>exponentchar</i>G. The format in which to print <i>arg</i> depends on the magnitude (absolute value) of the <i>arg</i>. Let <i>n</i> be an integer such that 10<sup><i>n−</i>1</sup> <i>≤ |arg|</i> < 10<i><sup>n</sup></i>. Let <i>ee</i> equal <i>e</i>+2, or 4 if <i>e</i> is omitted. Let <i>ww</i> equal <i>w−ee</i>, or <b>nil</b> if <i>w</i> is omitted. If <i>d</i> is omitted, first let <i>q</i> be the number of digits needed to print <i>arg</i> with no loss of information and without leading or trailing zeros; then let <i>d</i> equal (max <i>q</i> (min <i>n</i> 7)). Let <i>dd</i> equal <i>d−n</i>. 
+The full form is ~\<i\>w\</i\>,\<i\>d\</i\>,\<i\>e\</i\>,\<i\>k\</i\>,\<i\>overflowchar\</i\>,\<i\>padchar\</i\>,\<i\>exponentchar\</i\>G. The format in which to print \<i\>arg\</i\> depends on the magnitude (absolute value) of the \<i\>arg\</i\>. Let \<i\>n\</i\> be an integer such that 10\<sup\>\<i\>n−\</i\>1\</sup\> \<i\>≤ |arg|\</i\> \< 10\<i\>\<sup\>n\</sup\>\</i\>. Let \<i\>ee\</i\> equal \<i\>e\</i\>+2, or 4 if \<i\>e\</i\> is omitted. Let \<i\>ww\</i\> equal \<i\>w−ee\</i\>, or \<b\>nil\</b\> if \<i\>w\</i\> is omitted. If \<i\>d\</i\> is omitted, first let \<i\>q\</i\> be the number of digits needed to print \<i\>arg\</i\> with no loss of information and without leading or trailing zeros; then let \<i\>d\</i\> equal (max \<i\>q\</i\> (min \<i\>n\</i\> 7)). Let \<i\>dd\</i\> equal \<i\>d−n\</i\>. 
 
 If 0 *≤ dd ≤ d*, then *arg* is printed as if by the format directives 
 
@@ -1384,19 +1384,19 @@ Without any modifiers, ~ is the same as (pprint-newline :linear). ~@ is the same
 
 **22.3.5.2 Tilde Less-Than-Sign: Logical Block** 
 
-~<...~:> 
+~\<...~:\> 
 
-If ~:> is used to terminate a ~<...~>, the directive is equivalent to a call to **pprint-logical-block**. The argument corresponding to the ~<...~:> directive is treated in the same way as the *list* argument to **pprint-logical-block**, thereby providing automatic support for non-*list* arguments and the detection of circularity, sharing, and depth abbreviation. The portion of the *control-string* nested within the ~<...~:> specifies the :prefix (or :per-line-prefix), :suffix, and body of the **pprint-logical-block**. 
+If ~:\> is used to terminate a ~\<...~\>, the directive is equivalent to a call to **pprint-logical-block**. The argument corresponding to the ~\<...~:\> directive is treated in the same way as the *list* argument to **pprint-logical-block**, thereby providing automatic support for non-*list* arguments and the detection of circularity, sharing, and depth abbreviation. The portion of the *control-string* nested within the ~\<...~:\> specifies the :prefix (or :per-line-prefix), :suffix, and body of the **pprint-logical-block**. 
 
-The *control-string* portion enclosed by ~<...~:> can be divided into segments ~<*prefix*~;*body*~;*suffix*~:> by ~; directives. If the first section is terminated by ~@;, it speci fies a per-line prefix rather than a simple prefix. The *prefix* and *suffix* cannot contain format directives. An error is signaled if either the prefix or suffix fails to be a constant string or if the enclosed portion is divided into more than three segments. 
+The *control-string* portion enclosed by ~\<...~:\> can be divided into segments ~\<*prefix*~;*body*~;*suffix*~:\> by ~; directives. If the first section is terminated by ~@;, it speci fies a per-line prefix rather than a simple prefix. The *prefix* and *suffix* cannot contain format directives. An error is signaled if either the prefix or suffix fails to be a constant string or if the enclosed portion is divided into more than three segments. 
 
-If the enclosed portion is divided into only two segments, the *suffix* defaults to the null string. If the enclosed portion consists of only a single segment, both the *prefix* and the *suffix* default to the null string. If the *colon* modifier is used (*i.e.*, ~:<...~:>), the *prefix* and *suffix* default to "(" and ")" (respectively) instead of the null string. 
+If the enclosed portion is divided into only two segments, the *suffix* defaults to the null string. If the enclosed portion consists of only a single segment, both the *prefix* and the *suffix* default to the null string. If the *colon* modifier is used (*i.e.*, ~:\<...~:\>), the *prefix* and *suffix* default to "(" and ")" (respectively) instead of the null string. 
 
-The body segment can be any arbitrary <i>format string</i>. This <i>format string</i> is applied to the elements of the list corresponding to the ~<...~:> directive as a whole. Elements are extracted from this list using <b>pprint-pop</b>, thereby providing automatic support for malformed lists, and the detection of circularity, sharing, and length abbreviation. Within the body segment, ~<i><sup>∧</sup></i> acts like <b>pprint-exit-if-list-exhausted</b>. 
+The body segment can be any arbitrary \<i\>format string\</i\>. This \<i\>format string\</i\> is applied to the elements of the list corresponding to the ~\<...~:\> directive as a whole. Elements are extracted from this list using \<b\>pprint-pop\</b\>, thereby providing automatic support for malformed lists, and the detection of circularity, sharing, and length abbreviation. Within the body segment, ~\<i\>\<sup\>∧\</sup\>\</i\> acts like \<b\>pprint-exit-if-list-exhausted\</b\>. 
 
-~<...~:> supports a feature not supported by **pprint-logical-block**. If ~:@> is used to terminate the directive (*i.e.*, ~<...~:@>), then a fill-style conditional newline is automatically inserted after each group of blanks immediately contained in the body (except for blanks after a *hNewlinei* directive). This makes it easy to achieve the equivalent of paragraph filling. 
+~\<...~:\> supports a feature not supported by **pprint-logical-block**. If ~:@\> is used to terminate the directive (*i.e.*, ~\<...~:@\>), then a fill-style conditional newline is automatically inserted after each group of blanks immediately contained in the body (except for blanks after a *hNewlinei* directive). This makes it easy to achieve the equivalent of paragraph filling. 
 
-If the *at-sign* modifier is used with ~<...~:>, the entire remaining argument list is passed to the directive as its argument. All of the remaining arguments are always consumed by ~@<...~:>, even if they are not all used by the *format string* nested in the directive. Other than the difference in its argument, ~@<...~:> is exactly the same as ~<...~:> except that circularity detection is not applied if ~@<...~:> is encountered at top level in a *format string*. This ensures that circularity detection is applied only to data lists, not to *format argument lists*. 
+If the *at-sign* modifier is used with ~\<...~:\>, the entire remaining argument list is passed to the directive as its argument. All of the remaining arguments are always consumed by ~@\<...~:\>, even if they are not all used by the *format string* nested in the directive. Other than the difference in its argument, ~@\<...~:\> is exactly the same as ~\<...~:\> except that circularity detection is not applied if ~@\<...~:\> is encountered at top level in a *format string*. This ensures that circularity detection is applied only to data lists, not to *format argument lists*. 
 
 " . #*n*#" is printed if circularity or sharing has to be indicated for its argument as a whole. **22–32** Programming Language—Common Lisp
 
@@ -1404,7 +1404,7 @@ Version 15.17R, X3J13/94-101R.
 
 Fri 12-Aug-1994 6:35pm EDT 
 
-To a considerable extent, the basic form of the directive ~<...~> is incompatible with the dynamic control of the arrangement of output by ~W, ~ , ~<...~:>, ~I, and ~:T. As a result, an error is signaled if any of these directives is nested within ~<...~>. Beyond this, an error is also signaled if the ~<...~:;...~> form of ~<...~> is used in the same *format string* with ~W, ~ , ~<...~:>, ~I, or ~:T. 
+To a considerable extent, the basic form of the directive ~\<...~\> is incompatible with the dynamic control of the arrangement of output by ~W, ~ , ~\<...~:\>, ~I, and ~:T. As a result, an error is signaled if any of these directives is nested within ~\<...~\>. Beyond this, an error is also signaled if the ~\<...~:;...~\> form of ~\<...~\> is used in the same *format string* with ~W, ~ , ~\<...~:\>, ~I, or ~:T. 
 
 See also Section 22.3.6.2 (Tilde Less-Than-Sign: Justification). 
 
@@ -1448,7 +1448,7 @@ is the same as (pprint-tab :section-relative *n m*).
 
 **22.3.6.2 Tilde Less-Than-Sign: Justification** 
 
-~*mincol*,*colinc*,*minpad*,*padchar*<*str*~> 
+~*mincol*,*colinc*,*minpad*,*padchar*\<*str*~\> 
 
 This justifies the text produced by processing *str* within a field at least *mincol* columns wide. *str* may be divided up into segments with ~;, in which case the spacing is evenly divided between the text segments. 
 
@@ -1462,17 +1462,17 @@ Version 15.17R, X3J13/94-101R.
 
 Fri 12-Aug-1994 6:35pm EDT 
 
-The ~<i><sup>∧</sup></i> directive may be used to terminate processing of the clauses prematurely, in which case only the completely processed clauses are justified. 
+The ~\<i\>\<sup\>∧\</sup\>\</i\> directive may be used to terminate processing of the clauses prematurely, in which case only the completely processed clauses are justified. 
 
-If the first clause of a ~< is terminated with ~:; instead of ~;, then it is used in a special way. All of the clauses are processed (subject to ~<i><sup>∧</sup></i>, of course), but the first one is not used in performing the spacing and padding. When the padded result has been determined, then if it will fit on the current line of output, it is output, and the text for the first clause is discarded. If, however, the 
+If the first clause of a ~\< is terminated with ~:; instead of ~;, then it is used in a special way. All of the clauses are processed (subject to ~\<i\>\<sup\>∧\</sup\>\</i\>, of course), but the first one is not used in performing the spacing and padding. When the padded result has been determined, then if it will fit on the current line of output, it is output, and the text for the first clause is discarded. If, however, the 
 
 padded text will not fit on the current line, then the text segment for the first clause is output before the padded text. The first clause ought to contain a newline (such as a ~% directive). The first clause is always processed, and so any arguments it refers to will be used; the decision is whether to use the resulting segment of text, not whether to process the first clause. If the ~:; has a prefix parameter *n*, then the padded text must fit on the current line with *n* character positions to spare to avoid outputting the first clause’s text. For example, the control string 
 
-"~%;; ~{~<~%;; ~1:; ~S~>~<i><sup>∧</sup></i>,~}.~%" 
+"~%;; ~\{~\<~%;; ~1:; ~S~\>~\<i\>\<sup\>∧\</sup\>\</i\>,~\}.~%" 
 
 can be used to print a list of items separated by commas without breaking items over line boundaries, beginning each line with ;; . The prefix parameter 1 in ~1:; accounts for the width of the comma that will follow the justified item if it is not the last element in the list, or the period if it is. If ~:; has a second prefix parameter, then it is used as the width of the line, thus overriding the natural line width of the output stream. To make the preceding example use a line width of 50, one would write 
 
-"~%;; ~{~<~%;; ~1,50:; ~S~>~<i><sup>∧</sup></i>,~} .~%" 
+"~%;; ~\{~\<~%;; ~1,50:; ~S~\>~\<i\>\<sup\>∧\</sup\>\</i\>,~\} .~%" 
 
 If the second argument is not supplied, then **format** uses the line width of the *destination* output stream. If this cannot be determined (for example, when producing a *string* result), then **format** uses 72 as the line length. 
 
@@ -1480,7 +1480,7 @@ See also Section 22.3.5.2 (Tilde Less-Than-Sign: Logical Block).
 
 **22.3.6.3 Tilde Greater-Than-Sign: End of Justification** 
 
-~> terminates a ~<. The consequences of using it elsewhere are undefined. 
+~\> terminates a ~\<. The consequences of using it elsewhere are undefined. 
 
 **22.3.7 FORMAT Control-Flow Operations** 
 
@@ -1490,7 +1490,7 @@ The next *arg* is ignored. ~*n*\* ignores the next *n* arguments.
 
 ~:\* backs up in the list of arguments so that the argument last processed will be processed again. ~*n*:\* backs up *n* arguments. 
 
-When within a ~{ construct (see below), the ignoring (in either direction) is relative to the list of arguments being processed by the iteration. 
+When within a ~\{ construct (see below), the ignoring (in either direction) is relative to the list of arguments being processed by the iteration. 
 
 Printer **22–35**
 
@@ -1498,7 +1498,7 @@ Version 15.17R, X3J13/94-101R.
 
 Fri 12-Aug-1994 6:35pm EDT 
 
-~*n*@\* goes to the *n*th *arg*, where 0 means the first one; *n* defaults to 0, so ~@\* goes back to the first *arg*. Directives after a ~*n*@\* will take arguments in sequence beginning with the one gone to. When within a ~{ construct, the “goto” is relative to the list of arguments being processed by the iteration. 
+~*n*@\* goes to the *n*th *arg*, where 0 means the first one; *n* defaults to 0, so ~@\* goes back to the first *arg*. Directives after a ~*n*@\* will take arguments in sequence beginning with the one gone to. When within a ~\{ construct, the “goto” is relative to the list of arguments being processed by the iteration. 
 
 **22.3.7.2 Tilde Left-Bracket: Conditional Expression** 
 
@@ -1538,7 +1538,7 @@ The combination of ~[ and # is useful, for example, for dealing with English con
 
 (setq foo "Items:~#[ none~; ~S~; ~S and ~S~ 
 
-~:;~@{~#[~; and~] ~S~<i><sup>∧</sup></i>,~}~].") 
+~:;~@\{~#[~; and~] ~S~\<i\>\<sup\>∧\</sup\>\</i\>,~\}~].") 
 
 **22–36** Programming Language—Common Lisp
 
@@ -1560,37 +1560,37 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **22.3.7.4 Tilde Left-Brace: Iteration** 
 
-~{*str*~} 
+~\{*str*~\} 
 
-This is an iteration construct. The argument should be a <i>list</i>, which is used as a set of arguments as if for a recursive call to <b>format</b>. The <i>string str</i> is used repeatedly as the control string. Each iteration can absorb as many elements of the <i>list</i> as it likes as arguments; if <i>str</i> uses up two arguments by itself, then two elements of the <i>list</i> will get used up each time around the loop. If before any iteration step the <i>list</i> is empty, then the iteration is terminated. Also, if a prefix parameter <i>n</i> is given, then there will be at most <i>n</i> repetitions of processing of <i>str</i> . Finally, the ~<i><sup>∧</sup></i> directive can be used to terminate the iteration prematurely. 
+This is an iteration construct. The argument should be a \<i\>list\</i\>, which is used as a set of arguments as if for a recursive call to \<b\>format\</b\>. The \<i\>string str\</i\> is used repeatedly as the control string. Each iteration can absorb as many elements of the \<i\>list\</i\> as it likes as arguments; if \<i\>str\</i\> uses up two arguments by itself, then two elements of the \<i\>list\</i\> will get used up each time around the loop. If before any iteration step the \<i\>list\</i\> is empty, then the iteration is terminated. Also, if a prefix parameter \<i\>n\</i\> is given, then there will be at most \<i\>n\</i\> repetitions of processing of \<i\>str\</i\> . Finally, the ~\<i\>\<sup\>∧\</sup\>\</i\> directive can be used to terminate the iteration prematurely. 
 
 For example: 
 
-(format nil "The winners are:~{ ~S~}." 
+(format nil "The winners are:~\{ ~S~\}." 
 
 ’(fred harry jill)) 
 
 *→* "The winners are: FRED HARRY JILL." 
 
-(format nil "Pairs:~{ <~S,~S>~}." 
+(format nil "Pairs:~\{ \<~S,~S\>~\}." 
 
 ’(a 1 b 2 c 3)) 
 
-*→* "Pairs: <A,1> <B,2> <C,3>." 
+*→* "Pairs: \<A,1\> \<B,2\> \<C,3\>." 
 
-~:{*str*~} is similar, but the argument should be a *list* of sublists. At each repetition step, one sublist is used as the set of arguments for processing *str* ; on the next repetition, a new sublist is used, whether or not all of the last sublist had been processed. For example: 
+~:\{*str*~\} is similar, but the argument should be a *list* of sublists. At each repetition step, one sublist is used as the set of arguments for processing *str* ; on the next repetition, a new sublist is used, whether or not all of the last sublist had been processed. For example: 
 
-(format nil "Pairs:~:{ <~S,~S>~}." 
+(format nil "Pairs:~:\{ \<~S,~S\>~\}." 
 
 ’((a 1) (b 2) (c 3))) 
 
-*→* "Pairs: <A,1> <B,2> <C,3>." 
+*→* "Pairs: \<A,1\> \<B,2\> \<C,3\>." 
 
-~@{*str*~} is similar to ~{*str*~}, but instead of using one argument that is a list, all the remaining arguments are used as the list of arguments for the iteration. Example: 
+~@\{*str*~\} is similar to ~\{*str*~\}, but instead of using one argument that is a list, all the remaining arguments are used as the list of arguments for the iteration. Example: 
 
-(format nil "Pairs:~@{ <~S,~S>~}." ’a 1 ’b 2 ’c 3) 
+(format nil "Pairs:~@\{ \<~S,~S\>~\}." ’a 1 ’b 2 ’c 3) 
 
-*→* "Pairs: <A,1> <B,2> <C,3>." 
+*→* "Pairs: \<A,1\> \<B,2\> \<C,3\>." 
 
 If the iteration is terminated before all the remaining arguments are consumed, then any arguments not processed by the iteration remain to be processed by any directives following the iteration construct. 
 
@@ -1600,43 +1600,43 @@ Version 15.17R, X3J13/94-101R.
 
 Fri 12-Aug-1994 6:35pm EDT 
 
-~:@{*str*~} combines the features of ~:{*str*~} and ~@{*str*~}. All the remaining arguments are used, and each one must be a *list*. On each iteration, the next argument is used as a *list* of arguments to *str* . Example: 
+~:@\{*str*~\} combines the features of ~:\{*str*~\} and ~@\{*str*~\}. All the remaining arguments are used, and each one must be a *list*. On each iteration, the next argument is used as a *list* of arguments to *str* . Example: 
 
-(format nil "Pairs:~:@{ <~S,~S>~}." 
+(format nil "Pairs:~:@\{ \<~S,~S\>~\}." 
 
 ’(a 1) ’(b 2) ’(c 3)) 
 
-*→* "Pairs: <A,1> <B,2> <C,3>." 
+*→* "Pairs: \<A,1\> \<B,2\> \<C,3\>." 
 
-Terminating the repetition construct with ~:} instead of ~} forces *str* to be processed at least once, even if the initial list of arguments is null. However, this will not override an explicit prefix parameter of zero. 
+Terminating the repetition construct with ~:\} instead of ~\} forces *str* to be processed at least once, even if the initial list of arguments is null. However, this will not override an explicit prefix parameter of zero. 
 
 If *str* is empty, then an argument is used as *str* . It must be a *format control* and precede any arguments processed by the iteration. As an example, the following are equivalent: 
 
 (apply #’format stream string arguments) 
 
-*≡* (format stream "~1{~:}" string arguments) 
+*≡* (format stream "~1\{~:\}" string arguments) 
 
-This will use string as a formatting string. The ~1{ says it will be processed at most once, and the ~:} says it will be processed at least once. Therefore it is processed exactly once, using arguments as the arguments. This case may be handled more clearly by the ~? directive, but this general feature of ~{ is more powerful than ~?. 
+This will use string as a formatting string. The ~1\{ says it will be processed at most once, and the ~:\} says it will be processed at least once. Therefore it is processed exactly once, using arguments as the arguments. This case may be handled more clearly by the ~? directive, but this general feature of ~\{ is more powerful than ~?. 
 
 **22.3.7.5 Tilde Right-Brace: End of Iteration** 
 
-~} terminates a ~{. The consequences of using it elsewhere are undefined. 
+~\} terminates a ~\{. The consequences of using it elsewhere are undefined. 
 
 **22.3.7.6 Tilde Question-Mark: Recursive Processing** 
 
 The next *arg* must be a *format control*, and the one after it a *list*; both are consumed by the ~? directive. The two are processed as a *control-string*, with the elements of the *list* as the arguments. Once the recursive processing has been finished, the processing of the control string containing the ~? directive is resumed. Example: 
 
-(format nil "~? ~D" "<~A ~D>" ’("Foo" 5) 7) *→* "<Foo 5> 7" 
+(format nil "~? ~D" "\<~A ~D\>" ’("Foo" 5) 7) *→* "\<Foo 5\> 7" 
 
-(format nil "~? ~D" "<~A ~D>" ’("Foo" 5 14) 7) *→* "<Foo 5> 7" 
+(format nil "~? ~D" "\<~A ~D\>" ’("Foo" 5 14) 7) *→* "\<Foo 5\> 7" 
 
-Note that in the second example three arguments are supplied to the *format string* "<~A ~D>", but only two are processed and the third is therefore ignored. 
+Note that in the second example three arguments are supplied to the *format string* "\<~A ~D\>", but only two are processed and the third is therefore ignored. 
 
 With the @ modifier, only one *arg* is directly consumed. The *arg* must be a *string*; it is processed as part of the control string as if it had appeared in place of the ~@? construct, and any directives in the recursively processed control string may consume arguments of the control string containing the ~@? directive. Example: 
 
-(format nil "~@? ~D" "<~A ~D>" "Foo" 5 7) *→* "<Foo 5> 7" 
+(format nil "~@? ~D" "\<~A ~D\>" "Foo" 5 7) *→* "\<Foo 5\> 7" 
 
-(format nil "~@? ~D" "<~A ~D>" "Foo" 5 14 7) *→* "<Foo 5> 14" 
+(format nil "~@? ~D" "\<~A ~D\>" "Foo" 5 14 7) *→* "\<Foo 5\> 14" 
 
 **22–38** Programming Language—Common Lisp
 
@@ -1676,7 +1676,7 @@ When case conversions appear nested, the outer conversion dominates, as illustra
 
 *→* "How is bob smith?" 
 
-<i><sup>not</sup> →</i> "How is Bob Smith?" 
+\<i\>\<sup\>not\</sup\> →\</i\> "How is Bob Smith?" 
 
 **22.3.8.2 Tilde Right-Paren: End of Case Conversion** 
 
@@ -1706,19 +1706,19 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **22.3.9.1 Tilde Semicolon: Clause Separator** 
 
-This separates clauses in ~[ and ~< constructs. The consequences of using it elsewhere are undefined. 
+This separates clauses in ~[ and ~\< constructs. The consequences of using it elsewhere are undefined. 
 
 **22.3.9.2 Tilde Circumflex: Escape Upward** 
 
-~<i><sup>∧</sup></i> 
+~\<i\>\<sup\>∧\</sup\>\</i\> 
 
-This is an escape construct. If there are no more arguments remaining to be processed, then the immediately enclosing ~{ or ~< construct is terminated. If there is no such enclosing construct, then the entire formatting operation is terminated. In the ~< case, the formatting is performed, 
+This is an escape construct. If there are no more arguments remaining to be processed, then the immediately enclosing ~\{ or ~\< construct is terminated. If there is no such enclosing construct, then the entire formatting operation is terminated. In the ~\< case, the formatting is performed, 
 
-but no more segments are processed before doing the justification. ~<i><sup>∧</sup></i> may appear anywhere in a ~{ construct. 
+but no more segments are processed before doing the justification. ~\<i\>\<sup\>∧\</sup\>\</i\> may appear anywhere in a ~\{ construct. 
 
-(setq donestr "Done.~<i><sup>∧</sup></i> ~D warning~:P.~<i><sup>∧</sup></i> ~D error~:P.") 
+(setq donestr "Done.~\<i\>\<sup\>∧\</sup\>\</i\> ~D warning~:P.~\<i\>\<sup\>∧\</sup\>\</i\> ~D error~:P.") 
 
-<i>→</i> "Done.~<i><sup>∧</sup></i> ~D warning~:P.~<i><sup>∧</sup></i> ~D error~:P." 
+\<i\>→\</i\> "Done.~\<i\>\<sup\>∧\</sup\>\</i\> ~D warning~:P.~\<i\>\<sup\>∧\</sup\>\</i\> ~D error~:P." 
 
 (format nil donestr) *→* "Done." 
 
@@ -1726,13 +1726,13 @@ but no more segments are processed before doing the justification. ~<i><sup>∧<
 
 (format nil donestr 1 5) *→* "Done. 1 warning. 5 errors." 
 
-If a prefix parameter is given, then termination occurs if the parameter is zero. (Hence ~<i><sup>∧</sup></i> is equivalent to ~#<i><sup>∧</sup></i>.) If two parameters are given, termination occurs if they are equal. If three parameters are given, termination occurs if the first is less than or equal to the second and the second is less than or equal to the third. Of course, this is useless if all the prefix parameters are constants; at least one of them should be a # or a V parameter. 
+If a prefix parameter is given, then termination occurs if the parameter is zero. (Hence ~\<i\>\<sup\>∧\</sup\>\</i\> is equivalent to ~#\<i\>\<sup\>∧\</sup\>\</i\>.) If two parameters are given, termination occurs if they are equal. If three parameters are given, termination occurs if the first is less than or equal to the second and the second is less than or equal to the third. Of course, this is useless if all the prefix parameters are constants; at least one of them should be a # or a V parameter. 
 
-If ~<i><sup>∧</sup></i> is used within a ~:{ construct, then it terminates the current iteration step because in the standard case it tests for remaining arguments of the current step only; the next iteration step commences immediately. ~:<i><sup>∧</sup></i> is used to terminate the iteration process. ~:<i><sup>∧</sup></i> may be used only if the command it would terminate is ~:{ or ~:@{. The entire iteration process is terminated if and only if the sublist that is supplying the arguments for the current iteration step is the last sublist in the case of ~:{, or the last <b>format</b> argument in the case of ~:@{. ~:<i><sup>∧</sup></i> is not equivalent to ~#:<i><sup>∧</sup></i>; the latter terminates the entire iteration if and only if no arguments remain for the current iteration step. For example: 
+If ~\<i\>\<sup\>∧\</sup\>\</i\> is used within a ~:\{ construct, then it terminates the current iteration step because in the standard case it tests for remaining arguments of the current step only; the next iteration step commences immediately. ~:\<i\>\<sup\>∧\</sup\>\</i\> is used to terminate the iteration process. ~:\<i\>\<sup\>∧\</sup\>\</i\> may be used only if the command it would terminate is ~:\{ or ~:@\{. The entire iteration process is terminated if and only if the sublist that is supplying the arguments for the current iteration step is the last sublist in the case of ~:\{, or the last \<b\>format\</b\> argument in the case of ~:@\{. ~:\<i\>\<sup\>∧\</sup\>\</i\> is not equivalent to ~#:\<i\>\<sup\>∧\</sup\>\</i\>; the latter terminates the entire iteration if and only if no arguments remain for the current iteration step. For example: 
 
-(format nil "~:{~@?~:<i><sup>∧</sup></i>...~}" ’(("a") ("b"))) <i>→</i> "a...b" 
+(format nil "~:\{~@?~:\<i\>\<sup\>∧\</sup\>\</i\>...~\}" ’(("a") ("b"))) \<i\>→\</i\> "a...b" 
 
-If ~<i><sup>∧</sup></i> appears within a control string being processed under the control of a ~? directive, but not within any ~{ or ~< construct within that string, then the string being processed will be terminated, thereby ending processing of the ~? directive. Processing then continues within the string containing the ~? directive at the point following that directive. 
+If ~\<i\>\<sup\>∧\</sup\>\</i\> appears within a control string being processed under the control of a ~? directive, but not within any ~\{ or ~\< construct within that string, then the string being processed will be terminated, thereby ending processing of the ~? directive. Processing then continues within the string containing the ~? directive at the point following that directive. 
 
 **22–40** Programming Language—Common Lisp
 
@@ -1740,11 +1740,11 @@ Version 15.17R, X3J13/94-101R.
 
 Fri 12-Aug-1994 6:35pm EDT 
 
-If ~<i><sup>∧</sup></i> appears within a ~[ or ~( construct, then all the commands up to the ~<i><sup>∧</sup></i> are properly selected or case-converted, the ~[ or ~( processing is terminated, and the outward search continues for a ~{ or ~< construct to be terminated. For example: 
+If ~\<i\>\<sup\>∧\</sup\>\</i\> appears within a ~[ or ~( construct, then all the commands up to the ~\<i\>\<sup\>∧\</sup\>\</i\> are properly selected or case-converted, the ~[ or ~( processing is terminated, and the outward search continues for a ~\{ or ~\< construct to be terminated. For example: 
 
-(setq tellstr "~@(~@[~R~]~<i><sup>∧</sup></i> ~A!~)") 
+(setq tellstr "~@(~@[~R~]~\<i\>\<sup\>∧\</sup\>\</i\> ~A!~)") 
 
-<i>→</i> "~@(~@[~R~]~<i><sup>∧</sup></i> ~A!~)" 
+\<i\>→\</i\> "~@(~@[~R~]~\<i\>\<sup\>∧\</sup\>\</i\> ~A!~)" 
 
 (format nil tellstr 23) *→* "Twenty-three!" 
 
@@ -1752,23 +1752,23 @@ If ~<i><sup>∧</sup></i> appears within a ~[ or ~( construct, then all the comm
 
 (format nil tellstr 23 "losers") *→* "Twenty-three losers!" 
 
-Following are examples of the use of ~<i><sup>∧</sup></i> within a ~< construct. 
+Following are examples of the use of ~\<i\>\<sup\>∧\</sup\>\</i\> within a ~\< construct. 
 
-(format nil "~15<~S~;~<i><sup>∧</sup></i>~S~;~<i><sup>∧</sup></i>~S~>" ’foo) 
+(format nil "~15\<~S~;~\<i\>\<sup\>∧\</sup\>\</i\>~S~;~\<i\>\<sup\>∧\</sup\>\</i\>~S~\>" ’foo) 
 
 *→* " FOO" 
 
-(format nil "~15<~S~;~<i><sup>∧</sup></i>~S~;~<i><sup>∧</sup></i>~S~>" ’foo ’bar) 
+(format nil "~15\<~S~;~\<i\>\<sup\>∧\</sup\>\</i\>~S~;~\<i\>\<sup\>∧\</sup\>\</i\>~S~\>" ’foo ’bar) 
 
 *→* "FOO BAR" 
 
-(format nil "~15<~S~;~<i><sup>∧</sup></i>~S~;~<i><sup>∧</sup></i>~S~>" ’foo ’bar ’baz) 
+(format nil "~15\<~S~;~\<i\>\<sup\>∧\</sup\>\</i\>~S~;~\<i\>\<sup\>∧\</sup\>\</i\>~S~\>" ’foo ’bar ’baz) 
 
 *→* "FOO BAR BAZ" 
 
 **22.3.9.3 Tilde Newline: Ignored Newline** 
 
-*Tilde* immediately followed by a *newline* ignores the *newline* and any following non-newline *whitespace*<sub>1</sub> characters. With a :, the *newline* is ignored, but any following *whitespace*<sub>1</sub> is left in place. With an @, the *newline* is left in place, but any following *whitespace*<sub>1</sub> is ignored. For example: 
+*Tilde* immediately followed by a *newline* ignores the *newline* and any following non-newline *whitespace*\<sub\>1\</sub\> characters. With a :, the *newline* is ignored, but any following *whitespace*\<sub\>1\</sub\> is left in place. With an @, the *newline* is left in place, but any following *whitespace*\<sub\>1\</sub\> is ignored. For example: 
 
 (defun type-clash-error (fn nargs argnum right-type wrong-type) 
 
@@ -1966,19 +1966,19 @@ Scale factor 7: | 3141590.E-06|
 
 (foo 0.0314159) *→* " 3.14E-2|314.2$-04|0.314E-01| 3.14E-2" (foo 0.314159) *→* " 0.31 |0.314 |0.314 | 0.31 " (foo 3.14159) *→* " 3.1 | 3.14 | 3.14 | 3.1 " (foo 31.4159) *→* " 31. | 31.4 | 31.4 | 31. " (foo 314.159) *→* " 3.14E+2| 314. | 314. | 3.14E+2" (foo 3141.59) *→* " 3.14E+3|314.2$+01|0.314E+04| 3.14E+3" (foo 3141.59L0) *→* " 3.14L+3|314.2$+01|0.314L+04| 3.14L+3" (foo 3.14E12) *→* "\*\*\*\*\*\*\*\*\*|314.0$+10|0.314E+13| 3.14E+12" (foo 3.14L120) *→* "\*\*\*\*\*\*\*\*\*|?????????|%%%%%%%%%|3.14L+120" (foo 3.14L1200) *→* "\*\*\*\*\*\*\*\*\*|?????????|%%%%%%%%%|3.14L+1200" 
 
-(format nil "~10<foo~;bar~>") *→* "foo bar" 
+(format nil "~10\<foo~;bar~\>") *→* "foo bar" 
 
-(format nil "~10:<foo~;bar~>") *→* " foo bar" 
+(format nil "~10:\<foo~;bar~\>") *→* " foo bar" 
 
-(format nil "~10<foobar~>") *→* " foobar" 
+(format nil "~10\<foobar~\>") *→* " foobar" 
 
-(format nil "~10:<foobar~>") *→* " foobar" 
+(format nil "~10:\<foobar~\>") *→* " foobar" 
 
-(format nil "~10:@<foo~;bar~>") *→* " foo bar " 
+(format nil "~10:@\<foo~;bar~\>") *→* " foo bar " 
 
-(format nil "~10@<foobar~>") *→* "foobar " 
+(format nil "~10@\<foobar~\>") *→* "foobar " 
 
-(format nil "~10:@<foobar~>") *→* " foobar " 
+(format nil "~10:@\<foobar~\>") *→* " foobar " 
 
 (FORMAT NIL "Written to ~A." #P"foo.bin") 
 
@@ -1996,7 +1996,7 @@ Formatted output is performed not only by **format**, but by certain other funct
 
 Note that the meaning of **nil** and **t** as destinations to **format** are different than those of **nil** and **t** as *stream designators*. 
 
-The ~<i><sup>∧</sup></i> should appear only at the beginning of a ~< clause, because it aborts the entire clause in which it appears (as well as all following clauses). 
+The ~\<i\>\<sup\>∧\</sup\>\</i\> should appear only at the beginning of a ~\< clause, because it aborts the entire clause in which it appears (as well as all following clauses). 
 
 Printer **22–45**
 
@@ -2276,7 +2276,7 @@ Section 22.3.5.3 (Tilde I: Indent)
 
 **pprint-logical-block** (*stream-symbol object* &key *prefix per-line-prefix suffix*) 
 
-*{declaration}*\* *{form}*\* 
+*\{declaration\}*\* *\{form\}*\* 
 
 *→* **nil** 
 
@@ -2602,7 +2602,7 @@ In some implementations the *stream* argument passed to a **print-object** *meth
 
 **Syntax:** 
 
-**print-unreadable-object** (*object stream* &key *type identity*) *{form}*\* *→* **nil** 
+**print-unreadable-object** (*object stream* &key *type identity*) *\{form\}*\* *→* **nil** 
 
 **Arguments and Values:** 
 
@@ -2624,7 +2624,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **Description:** 
 
-Outputs a printed representation of *object* on *stream*, beginning with “#<” and ending with “>”. Everything output to *stream* by the body *forms* is enclosed in the the angle brackets. If *type* is *true*, the output from *forms* is preceded by a brief description of the *object*’s *type* and a space character. If *identity* is *true*, the output from *forms* is followed by a space character and a representation of the *object*’s identity, typically a storage address. 
+Outputs a printed representation of *object* on *stream*, beginning with “#\<” and ending with “\>”. Everything output to *stream* by the body *forms* is enclosed in the the angle brackets. If *type* is *true*, the output from *forms* is preceded by a brief description of the *object*’s *type* and a space character. If *identity* is *true*, the output from *forms* is followed by a space character and a representation of the *object*’s identity, typically a storage address. 
 
 If either *type* or *identity* is not supplied, its value is *false*. It is valid to omit the body *forms*. If *type* and *identity* are both true and there are no body *forms*, only one space character separates the type and the identity. 
 
@@ -2640,9 +2640,9 @@ If either *type* or *identity* is not supplied, its value is *false*. It is vali
 
 (prin1-to-string my-airplane) 
 
-*→* "#<Airplane NW0773 36000123135>" 
+*→* "#\<Airplane NW0773 36000123135\>" 
 
-<i><sup>or</sup>→</i> "#<FAA:AIRPLANE NW0773 17>" 
+\<i\>\<sup\>or\</sup\>→\</i\> "#\<FAA:AIRPLANE NW0773 17\>" 
 
 **Exceptional Situations:** 
 
@@ -2774,7 +2774,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 |**Parameter Corresponding Dynamic Variable**|
 | :- |
-|<p>*array* **\*print-array\*** </p><p>*base* **\*print-base\*** </p><p>*case* **\*print-case\*** </p><p>*circle* **\*print-circle\*** </p><p>*escape* **\*print-escape\*** </p><p>*gensym* **\*print-gensym\*** </p><p>*length* **\*print-length\*** </p><p>*level* **\*print-level\*** </p><p>*lines* **\*print-lines\*** </p><p>*miser-width* **\*print-miser-width\*** </p><p>*pprint-dispatch* **\*print-pprint-dispatch\*** </p><p>*pretty* **\*print-pretty\*** </p><p>*radix* **\*print-radix\*** </p><p>*readably* **\*print-readably\*** </p><p>*right-margin* **\*print-right-margin\***</p>|
+|\<p\>*array* **\*print-array\*** \</p\>\<p\>*base* **\*print-base\*** \</p\>\<p\>*case* **\*print-case\*** \</p\>\<p\>*circle* **\*print-circle\*** \</p\>\<p\>*escape* **\*print-escape\*** \</p\>\<p\>*gensym* **\*print-gensym\*** \</p\>\<p\>*length* **\*print-length\*** \</p\>\<p\>*level* **\*print-level\*** \</p\>\<p\>*lines* **\*print-lines\*** \</p\>\<p\>*miser-width* **\*print-miser-width\*** \</p\>\<p\>*pprint-dispatch* **\*print-pprint-dispatch\*** \</p\>\<p\>*pretty* **\*print-pretty\*** \</p\>\<p\>*radix* **\*print-radix\*** \</p\>\<p\>*readably* **\*print-readably\*** \</p\>\<p\>*right-margin* **\*print-right-margin\***\</p\>|
 
 
 **Figure 22–7. Argument correspondences for the WRITE function.** 
@@ -2927,11 +2927,11 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **Notes:** 
 
-(write-to-string *object {key argument}*\*) 
+(write-to-string *object \{key argument\}*\*) 
 
 *≡* (with-output-to-string (#1=#:string-stream) 
 
-(write object :stream #1# *{key argument}*\*)) 
+(write object :stream #1# *\{key argument\}*\*)) 
 
 (princ-to-string *object*) 
 
@@ -2957,7 +2957,7 @@ a *generalized boolean*.
 
 **Description:** 
 
-Controls the format in which *arrays* are printed. If it is *false*, the contents of *arrays* other than *strings* are never printed. Instead, *arrays* are printed in a concise form using #< that gives enough information for the user to be able to identify the *array*, but does not include the entire *array* contents. If it is *true*, non-*string arrays* are printed using #(...), #\*, or #nA syntax. 
+Controls the format in which *arrays* are printed. If it is *false*, the contents of *arrays* other than *strings* are never printed. Instead, *arrays* are printed in a concise form using #\< that gives enough information for the user to be able to identify the *array*, but does not include the entire *array* contents. If it is *true*, non-*string arrays* are printed using #(...), #\*, or #nA syntax. 
 
 **Affected By:** 
 
@@ -3483,9 +3483,9 @@ a *generalized boolean*.
 
 Controls whether the *Lisp printer* calls the *pretty printer* . 
 
-If it is *false*, the *pretty printer* is not used and a minimum of *whitespace*<sub>1</sub> is output when printing an expression. 
+If it is *false*, the *pretty printer* is not used and a minimum of *whitespace*\<sub\>1\</sub\> is output when printing an expression. 
 
-If it is *true*, the *pretty printer* is used, and the *Lisp printer* will endeavor to insert extra *whitespace*<sub>1</sub> where appropriate to make *expressions* more readable. 
+If it is *true*, the *pretty printer* is used, and the *Lisp printer* will endeavor to insert extra *whitespace*\<sub\>1\</sub\> where appropriate to make *expressions* more readable. 
 
 **\*print-pretty\*** has an effect even when the *value* of **\*print-escape\*** is *false*. 
 
@@ -3579,7 +3579,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **Description:** 
 
-If **\*print-readably\*** is *true*, some special rules for printing *objects* go into effect. Specifically, printing any *object O*<sub>1</sub> produces a printed representation that, when seen by the *Lisp reader* while the *standard readtable* is in effect, will produce an *object O*<sub>2</sub> that is *similar* to *O*<sub>1</sub>. The printed representation produced might or might not be the same as the printed representation produced when **\*print-readably\*** is *false*. If printing an *object readably* is not possible, an error of *type* **print-not-readable** is signaled rather than using a syntax (*e.g.*, the “#<” syntax) that would not be readable by the same *implementation*. If the *value* of some other *printer control variable* is such that these requirements would be violated, the *value* of that other *variable* is ignored. 
+If **\*print-readably\*** is *true*, some special rules for printing *objects* go into effect. Specifically, printing any *object O*\<sub\>1\</sub\> produces a printed representation that, when seen by the *Lisp reader* while the *standard readtable* is in effect, will produce an *object O*\<sub\>2\</sub\> that is *similar* to *O*\<sub\>1\</sub\>. The printed representation produced might or might not be the same as the printed representation produced when **\*print-readably\*** is *false*. If printing an *object readably* is not possible, an error of *type* **print-not-readable** is signaled rather than using a syntax (*e.g.*, the “#\<” syntax) that would not be readable by the same *implementation*. If the *value* of some other *printer control variable* is such that these requirements would be violated, the *value* of that other *variable* is ignored. 
 
 Specifically, if **\*print-readably\*** is *true*, printing proceeds as if **\*print-escape\***, **\*print-array\***, and **\*print-gensym\*** were also *true*, and as if **\*print-length\***, **\*print-level\***, and **\*print-lines\*** were *false*. 
 
@@ -3621,7 +3621,7 @@ If **\*read-eval\*** is *false* and **\*print-readably\*** is *true*, any such m
 
 ;; of three hypothetical implementations which follow. 
 
-(setq table (make-hash-table)) *→* #<HASH-TABLE EQL 0/120 32005763> 
+(setq table (make-hash-table)) *→* #\<HASH-TABLE EQL 0/120 32005763\> 
 
 Printer **22–77**
 
@@ -3637,7 +3637,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 (let ((\*print-readably\* t)) (print table)) 
 
-Error: Can’t print #<HASH-TABLE EQL 0/120 32005763> readably. 
+Error: Can’t print #\<HASH-TABLE EQL 0/120 32005763\> readably. 
 
 ;; Implementation B 
 
@@ -3649,7 +3649,7 @@ Error: Can’t print #<HASH-TABLE EQL 0/120 32005763> readably.
 
 *.* #S(HASH-TABLE :TEST EQL :SIZE 120 :CONTENTS (1 ONE 2 TWO)) 
 
-*→* #<HASH-TABLE EQL 0/120 32005763> 
+*→* #\<HASH-TABLE EQL 0/120 32005763\> 
 
 ;; Implementation C 
 
@@ -3671,7 +3671,7 @@ Error: Can’t print #<HASH-TABLE EQL 0/120 32005763> readably.
 
 *.* HASH-TABLE) 
 
-*→* #<HASH-TABLE EQL 0/120 32005763> 
+*→* #\<HASH-TABLE EQL 0/120 32005763\> 
 
 **See Also:** 
 

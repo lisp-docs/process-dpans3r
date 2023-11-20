@@ -28,14 +28,14 @@ Figure 5–1 contains examples of the use of **setf**. Note that the values retu
 
 |**Access function Update Function Update using setf**|
 | :- |
-|<p>x (setq x datum) (setf x datum) </p><p>(car x) (rplaca x datum) (setf (car x) datum) (symbol-value x) (set x datum) (setf (symbol-value x) datum)</p>|
+|\<p\>x (setq x datum) (setf x datum) \</p\>\<p\>(car x) (rplaca x datum) (setf (car x) datum) (symbol-value x) (set x datum) (setf (symbol-value x) datum)\</p\>|
 
 
 **Figure 5–1. Examples of setf** 
 
 Figure 5–2 shows *operators* relating to *places* and *generalized reference*. 
 
-|<p>**assert defsetf push** </p><p>**ccase get-setf-expansion remf** </p><p>**ctypecase getf rotatef decf incf setf** </p><p>**define-modify-macro pop shiftf define-setf-expander psetf**</p>|
+|\<p\>**assert defsetf push** \</p\>\<p\>**ccase get-setf-expansion remf** \</p\>\<p\>**ctypecase getf rotatef decf incf setf** \</p\>\<p\>**define-modify-macro pop shiftf define-setf-expander psetf**\</p\>|
 | :- |
 
 
@@ -147,7 +147,7 @@ Examples of the contents of the constituents of *setf expansions* follow.
 
 For a variable *x*: 
 
-|<p>() ;list of temporary variables </p><p>() ;list of value forms </p><p>(g0001) ;list of store variables </p><p>(setq *x* g0001) ;storing form </p><p>*x* ;accessing form</p>|
+|\<p\>() ;list of temporary variables \</p\>\<p\>() ;list of value forms \</p\>\<p\>(g0001) ;list of store variables \</p\>\<p\>(setq *x* g0001) ;storing form \</p\>\<p\>*x* ;accessing form\</p\>|
 | :- |
 
 
@@ -155,7 +155,7 @@ For a variable *x*:
 
 For (car *exp*): 
 
-|<p>(g0002) ;list of temporary variables (*exp*) ;list of value forms </p><p>(g0003) ;list of store variables </p><p>(progn (rplaca g0002 g0003) g0003) ;storing form </p><p>(car g0002) ;accessing form</p>|
+|\<p\>(g0002) ;list of temporary variables (*exp*) ;list of value forms \</p\>\<p\>(g0003) ;list of store variables \</p\>\<p\>(progn (rplaca g0002 g0003) g0003) ;storing form \</p\>\<p\>(car g0002) ;accessing form\</p\>|
 | :- |
 
 
@@ -163,7 +163,7 @@ For (car *exp*):
 
 For (subseq *seq s e*): 
 
-|<p>(g0004 g0005 g0006) ;list of temporary variables </p><p>(*seq s e*) ;list of value forms </p><p>(g0007) ;list of store variables </p><p>(progn (replace g0004 g0007 :start1 g0005 :end1 g0006) g0007) </p><p>;storing form </p><p>(subseq g0004 g0005 g0006) ; accessing form</p>|
+|\<p\>(g0004 g0005 g0006) ;list of temporary variables \</p\>\<p\>(*seq s e*) ;list of value forms \</p\>\<p\>(g0007) ;list of store variables \</p\>\<p\>(progn (replace g0004 g0007 :start1 g0005 :end1 g0006) g0007) \</p\>\<p\>;storing form \</p\>\<p\>(subseq g0004 g0005 g0006) ; accessing form\</p\>|
 | :- |
 
 
@@ -177,7 +177,7 @@ For (subseq *seq s e*):
 
 In some cases, if a *subform* of a *place* is itself a *place*, it is necessary to expand the *subform* in order to compute some of the values in the expansion of the outer *place*. For (ldb *bs* (car *exp*)): 
 
-|<p>(g0001 g0002) ;list of temporary variables </p><p>(*bs exp*) ;list of value forms </p><p>(g0003) ;list of store variables </p><p>(progn (rplaca g0002 (dpb g0003 g0001 (car g0002))) g0003) </p><p>;storing form </p><p>(ldb g0001 (car g0002)) ; accessing form</p>|
+|\<p\>(g0001 g0002) ;list of temporary variables \</p\>\<p\>(*bs exp*) ;list of value forms \</p\>\<p\>(g0003) ;list of store variables \</p\>\<p\>(progn (rplaca g0002 (dpb g0003 g0001 (car g0002))) g0003) \</p\>\<p\>;storing form \</p\>\<p\>(ldb g0001 (car g0002)) ; accessing form\</p\>|
 | :- |
 
 
@@ -203,7 +203,7 @@ Data and Control Flow **5–5**
 
 
 
-|<p>**aref cdadr get** </p><p>**bit cdar gethash** </p><p>**caaaar cddaar logical-pathname-translations caaadr cddadr macro-function** </p><p>**caaar cddar ninth** </p><p>**caadar cdddar nth** </p><p>**caaddr cddddr readtable-case** </p><p>**caadr cdddr rest** </p><p>**caar cddr row-major-aref** </p><p>**cadaar cdr sbit** </p><p>**cadadr char schar** </p><p>**cadar class-name second** </p><p>**caddar compiler-macro-function seventh** </p><p>**cadddr documentation sixth** </p><p>**caddr eighth slot-value** </p><p>**cadr elt subseq** </p><p>**car fdefinition svref** </p><p>**cdaaar fifth symbol-function** </p><p>**cdaadr fill-pointer symbol-plist** </p><p>**cdaar find-class symbol-value** </p><p>**cdadar first tenth** </p><p>**cdaddr fourth third**</p>|
+|\<p\>**aref cdadr get** \</p\>\<p\>**bit cdar gethash** \</p\>\<p\>**caaaar cddaar logical-pathname-translations caaadr cddadr macro-function** \</p\>\<p\>**caaar cddar ninth** \</p\>\<p\>**caadar cdddar nth** \</p\>\<p\>**caaddr cddddr readtable-case** \</p\>\<p\>**caadr cdddr rest** \</p\>\<p\>**caar cddr row-major-aref** \</p\>\<p\>**cadaar cdr sbit** \</p\>\<p\>**cadadr char schar** \</p\>\<p\>**cadar class-name second** \</p\>\<p\>**caddar compiler-macro-function seventh** \</p\>\<p\>**cadddr documentation sixth** \</p\>\<p\>**caddr eighth slot-value** \</p\>\<p\>**cadr elt subseq** \</p\>\<p\>**car fdefinition svref** \</p\>\<p\>**cdaaar fifth symbol-function** \</p\>\<p\>**cdaadr fill-pointer symbol-plist** \</p\>\<p\>**cdaar find-class symbol-value** \</p\>\<p\>**cdadar first tenth** \</p\>\<p\>**cdaddr fourth third**\</p\>|
 | :- |
 
 
@@ -223,7 +223,7 @@ In the case of **subseq**, the replacement value must be a *sequence* whose elem
 
 |**Function name Argument that is a** *place* **Update function used**|
 | :- |
-|<p>**ldb** second **dpb** </p><p>**mask-field** second **deposit-field** </p><p>**getf** first *implementation-dependent*</p>|
+|\<p\>**ldb** second **dpb** \</p\>\<p\>**mask-field** second **deposit-field** \</p\>\<p\>**getf** first *implementation-dependent*\</p\>|
 
 
 **Figure 5–8. Functions that setf can be used with—2** 
@@ -390,7 +390,7 @@ does the following:
 
 4\. The storing forms for each *place* are evaluated in left-to-right order. 
 
-The storing form in the *setf expansion* of **values** returns as *multiple values*<sub>2</sub> the values of the store variables in step 2. That is, the number of values returned is the same as the number of *place* forms. This may be more or fewer values than are produced by the *values-form*. 
+The storing form in the *setf expansion* of **values** returns as *multiple values*\<sub\>2\</sub\> the values of the store variables in step 2. That is, the number of values returned is the same as the number of *place* forms. This may be more or fewer values than are produced by the *values-form*. 
 
 **5.1.2.4 THE Forms as Places** 
 
@@ -412,11 +412,11 @@ Data and Control Flow **5–9**
 
 The following situations involving **setf** of **apply** must be supported: 
 
-*•* (setf (apply #’aref *array {subscript}*\* *more-subscripts*) *new-element*) 
+*•* (setf (apply #’aref *array \{subscript\}*\* *more-subscripts*) *new-element*) 
 
-*•* (setf (apply #’bit *array {subscript}*\* *more-subscripts*) *new-element*) 
+*•* (setf (apply #’bit *array \{subscript\}*\* *more-subscripts*) *new-element*) 
 
-*•* (setf (apply #’sbit *array {subscript}*\* *more-subscripts*) *new-element*) 
+*•* (setf (apply #’sbit *array \{subscript\}*\* *more-subscripts*) *new-element*) 
 
 In all three cases, the *element* of *array* designated by the concatenation of *subscripts* and *more-subscripts* (*i.e.*, the same *element* which would be *read* by the call to *apply* if it were not part of a **setf** *form*) is changed to have the *value* given by *new-element*. For these usages, the function name (**aref**, **bit**, or **sbit**) must refer to the global function definition, rather than a locally defined *function*. 
 
@@ -424,9 +424,9 @@ No other *standardized function* is required to be supported, but an *implementa
 
 If a user-defined *function* is used in this context, the following equivalence is true, except that care is taken to preserve proper left-to-right evaluation of argument *subforms*: 
 
-(setf (apply #’*name {arg}*\*) *val*) 
+(setf (apply #’*name \{arg\}*\*) *val*) 
 
-*≡* (apply #’(setf *name*) *val {arg}*\*) 
+*≡* (apply #’(setf *name*) *val \{arg\}*\*) 
 
 **5.1.2.6 Setf Expansions and Places** 
 
@@ -474,7 +474,7 @@ For each of the “read-modify-write” *operators* in Figure 5–9, and for any
 
 Specifically, each of these *operators* can be viewed as involving a *form* with the following general syntax: 
 
-(*operator {preceding-form}*\* *place {following-form}*\*) 
+(*operator \{preceding-form\}*\* *place \{following-form\}*\*) 
 
 The evaluation of each such *form* proceeds like this: 
 
@@ -496,7 +496,7 @@ Data and Control Flow **5–11**
 
 
 
-|<p>**decf pop pushnew** </p><p>**incf push remf**</p>|
+|\<p\>**decf pop pushnew** \</p\>\<p\>**incf push remf**\</p\>|
 | :- |
 
 
@@ -536,7 +536,7 @@ Data and Control Flow **5–13**
 
 **Syntax:** 
 
-**apply** *function* &rest *args*<sup>+</sup> *→ {result}*\* 
+**apply** *function* &rest *args*\<sup\>+\</sup\> *→ \{result\}*\* 
 
 **Arguments and Values:** 
 
@@ -558,7 +558,7 @@ When the *function* receives its arguments via **&rest**, it is permissible (but
 
 (apply f ’(1 2)) *→* 3 
 
-(setq f #’-) *→* #<FUNCTION -> 
+(setq f #’-) *→* #\<FUNCTION -\> 
 
 (apply f ’(1 2)) *→* -1 
 
@@ -602,7 +602,7 @@ When the *function* receives its arguments via **&rest**, it is permissible (but
 
 **Syntax:** 
 
-**defun** *function-name lambda-list* [[ *{declaration}*\* *| documentation* ]] *{form}*\* 
+**defun** *function-name lambda-list* [[ *\{declaration\}*\* *| documentation* ]] *\{form\}*\* 
 
 *→ function-name* 
 
@@ -632,9 +632,9 @@ Evaluating **defun** causes *function-name* to be a global name for the *functio
 
 (lambda *lambda-list* 
 
-[[ *{declaration}*\* *| documentation* ]] 
+[[ *\{declaration\}*\* *| documentation* ]] 
 
-(block *block-name {form}*\*)) 
+(block *block-name \{form\}*\*)) 
 
 processed in the *lexical environment* in which **defun** was executed. 
 
@@ -654,7 +654,7 @@ Data and Control Flow **5–15**
 
 (defun recur (x) 
 
-(when (> x 0) 
+(when (\> x 0) 
 
 (recur (1- x)))) *→* RECUR 
 
@@ -890,17 +890,17 @@ Data and Control Flow **5–19**
 
 **Syntax:** 
 
-**flet** (*{*(*function-name lambda-list* [[ *{local-declaration}*\* *| local-documentation* ]] *{local-form}*\*)*}*\*) *{declaration}*\* *{form}*\* 
+**flet** (*\{*(*function-name lambda-list* [[ *\{local-declaration\}*\* *| local-documentation* ]] *\{local-form\}*\*)*\}*\*) *\{declaration\}*\* *\{form\}*\* 
 
-*→ {result}*\* 
+*→ \{result\}*\* 
 
-**labels** (*{*(*function-name lambda-list* [[ *{local-declaration}*\* *| local-documentation* ]] *{local-form}*\*)*}*\*) *{declaration}*\* *{form}*\* 
+**labels** (*\{*(*function-name lambda-list* [[ *\{local-declaration\}*\* *| local-documentation* ]] *\{local-form\}*\*)*\}*\*) *\{declaration\}*\* *\{form\}*\* 
 
-*→ {result}*\* 
+*→ \{result\}*\* 
 
-**macrolet** (*{*(*name lambda-list* [[ *{local-declaration}*\* *| local-documentation* ]] *{local-form}*\*)*}*\*) *{declaration}*\* *{form}*\* 
+**macrolet** (*\{*(*name lambda-list* [[ *\{local-declaration\}*\* *| local-documentation* ]] *\{local-form\}*\*)*\}*\*) *\{declaration\}*\* *\{form\}*\* 
 
-*→ {result}*\* 
+*→ \{result\}*\* 
 
 **Arguments and Values:** 
 
@@ -1134,7 +1134,7 @@ Data and Control Flow **5–23**
 
 **Syntax:** 
 
-**funcall** *function* &rest *args → {result}*\* 
+**funcall** *function* &rest *args → \{result\}*\* 
 
 **Arguments and Values:** 
 
@@ -1280,11 +1280,11 @@ The following examples illustrate some possible return values, but are not inten
 
 *→* NIL, *false*, NIL 
 
-<i><sup>or</sup>→</i> NIL, <i>true</i>, NIL 
+\<i\>\<sup\>or\</sup\>→\</i\> NIL, \<i\>true\</i\>, NIL 
 
-<i><sup>or</sup>→</i> (LAMBDA (X) X), <i>true</i>, NIL 
+\<i\>\<sup\>or\</sup\>→\</i\> (LAMBDA (X) X), \<i\>true\</i\>, NIL 
 
-<i><sup>or</sup>→</i> (LAMBDA (X) X), <i>false</i>, NIL 
+\<i\>\<sup\>or\</sup\>→\</i\> (LAMBDA (X) X), \<i\>false\</i\>, NIL 
 
 **5–26** Programming Language—Common Lisp
 
@@ -1298,11 +1298,11 @@ The following examples illustrate some possible return values, but are not inten
 
 *→* NIL, *false*, NIL 
 
-<i><sup>or</sup>→</i> NIL, <i>true</i>, NIL 
+\<i\>\<sup\>or\</sup\>→\</i\> NIL, \<i\>true\</i\>, NIL 
 
-<i><sup>or</sup>→</i> (LAMBDA (X) X), <i>true</i>, NIL 
+\<i\>\<sup\>or\</sup\>→\</i\> (LAMBDA (X) X), \<i\>true\</i\>, NIL 
 
-<i><sup>or</sup>→</i> (LAMBDA (X) X), <i>false</i>, NIL 
+\<i\>\<sup\>or\</sup\>→\</i\> (LAMBDA (X) X), \<i\>false\</i\>, NIL 
 
 (function-lambda-expression 
 
@@ -1310,11 +1310,11 @@ The following examples illustrate some possible return values, but are not inten
 
 *→* NIL, *true*, NIL 
 
-<i><sup>or</sup>→</i> (LAMBDA () X), <i>true</i>, NIL 
+\<i\>\<sup\>or\</sup\>→\</i\> (LAMBDA () X), \<i\>true\</i\>, NIL 
 
-<i><sup>not</sup> →</i> NIL, <i>false</i>, NIL 
+\<i\>\<sup\>not\</sup\> →\</i\> NIL, \<i\>false\</i\>, NIL 
 
-<i><sup>not</sup> →</i> (LAMBDA () X), <i>false</i>, NIL 
+\<i\>\<sup\>not\</sup\> →\</i\> (LAMBDA () X), \<i\>false\</i\>, NIL 
 
 (flet ((foo (x) x)) 
 
@@ -1324,13 +1324,13 @@ The following examples illustrate some possible return values, but are not inten
 
 *→* NIL, *false*, NIL 
 
-<i><sup>or</sup>→</i> NIL, <i>true</i>, NIL 
+\<i\>\<sup\>or\</sup\>→\</i\> NIL, \<i\>true\</i\>, NIL 
 
-<i><sup>or</sup>→</i> (LAMBDA (X) (BLOCK FOO X)), <i>true</i>, NIL 
+\<i\>\<sup\>or\</sup\>→\</i\> (LAMBDA (X) (BLOCK FOO X)), \<i\>true\</i\>, NIL 
 
-<i><sup>or</sup>→</i> (LAMBDA (X) (BLOCK FOO X)), <i>false</i>, FOO 
+\<i\>\<sup\>or\</sup\>→\</i\> (LAMBDA (X) (BLOCK FOO X)), \<i\>false\</i\>, FOO 
 
-<i><sup>or</sup>→</i> (SI::BLOCK-LAMBDA FOO (X) X), <i>false</i>, FOO 
+\<i\>\<sup\>or\</sup\>→\</i\> (SI::BLOCK-LAMBDA FOO (X) X), \<i\>false\</i\>, FOO 
 
 (defun foo () 
 
@@ -1342,13 +1342,13 @@ The following examples illustrate some possible return values, but are not inten
 
 *→* NIL, *false*, NIL 
 
-<i><sup>or</sup>→</i> NIL, <i>true</i>, NIL 
+\<i\>\<sup\>or\</sup\>→\</i\> NIL, \<i\>true\</i\>, NIL 
 
-<i><sup>or</sup>→</i> (LAMBDA (X) (BLOCK BAR X)), <i>true</i>, NIL 
+\<i\>\<sup\>or\</sup\>→\</i\> (LAMBDA (X) (BLOCK BAR X)), \<i\>true\</i\>, NIL 
 
-<i><sup>or</sup>→</i> (LAMBDA (X) (BLOCK BAR X)), <i>true</i>, (:INTERNAL FOO 0 BAR) 
+\<i\>\<sup\>or\</sup\>→\</i\> (LAMBDA (X) (BLOCK BAR X)), \<i\>true\</i\>, (:INTERNAL FOO 0 BAR) 
 
-<i><sup>or</sup>→</i> (LAMBDA (X) (BLOCK BAR X)), <i>false</i>, "BAR in FOO" 
+\<i\>\<sup\>or\</sup\>→\</i\> (LAMBDA (X) (BLOCK BAR X)), \<i\>false\</i\>, "BAR in FOO" 
 
 **Notes:** 
 
@@ -1430,7 +1430,7 @@ Returns *true* if *object* is of *type* **compiled-function**; otherwise, return
 
 *→ false* 
 
-<i><sup>or</sup>→ true</i> 
+\<i\>\<sup\>or\</sup\>→ true\</i\> 
 
 (compiled-function-p ’f) *→ false* 
 
@@ -1448,7 +1448,7 @@ Returns *true* if *object* is of *type* **compiled-function**; otherwise, return
 
 *→ false* 
 
-<i><sup>or</sup>→ true</i> 
+\<i\>\<sup\>or\</sup\>→ true\</i\> 
 
 (compiled-function-p ’(lambda (x) x)) *→ false* 
 
@@ -1748,9 +1748,9 @@ The intent of the permission for additional side effects is to allow *implementa
 
 **Syntax:** 
 
-**destructuring-bind** *lambda-list expression {declaration}*\* *{form}*\* 
+**destructuring-bind** *lambda-list expression \{declaration\}*\* *\{form\}*\* 
 
-*→ {result}*\* 
+*→ \{result\}*\* 
 
 **Arguments and Values:** 
 
@@ -1796,9 +1796,9 @@ If the result of evaluating the *expression* does not match the destructuring pa
 
 **Syntax:** 
 
-**let** (*{var |* (*var* [*init-form*])*}*\*) *{declaration}*\* *{form}*\* *→ {result}*\* 
+**let** (*\{var |* (*var* [*init-form*])*\}*\*) *\{declaration\}*\* *\{form\}*\* *→ \{result\}*\* 
 
-**let\*** (*{var |* (*var* [*init-form*])*}*\*) *{declaration}*\* *{form}*\* *→ {result}*\* 
+**let\*** (*\{var |* (*var* [*init-form*])*\}*\*) *\{declaration\}*\* *\{form\}*\* *→ \{result\}*\* 
 
 **Arguments and Values:** 
 
@@ -1932,7 +1932,7 @@ is incorrect; although x is indeed set before it is used, and is set to a value 
 
 **Syntax:** 
 
-**progv** *symbols values {form}*\* *→ {result}*\* 
+**progv** *symbols values \{form\}*\* *→ \{result\}*\* 
 
 **Arguments and Values:** 
 
@@ -1984,7 +1984,7 @@ Among other things, **progv** is useful when writing interpreters for languages 
 
 **Syntax:** 
 
-**setq** *{↓pair}*\* *→ result* 
+**setq** *\{↓pair\}*\* *→ result* 
 
 *pair::*=*var form* 
 
@@ -2060,7 +2060,7 @@ The *primary value* of each *form* is assigned to the corresponding *var*.
 
 **Syntax:** 
 
-**psetq** *{↓pair}*\* *→* **nil** 
+**psetq** *\{↓pair\}*\* *→* **nil** 
 
 *pair::*=*var form* 
 
@@ -2152,7 +2152,7 @@ The values of *forms* are assigned to *vars*.
 
 **Syntax:** 
 
-**block** *name form*\* *→ {result}*\* 
+**block** *name form*\* *→ \{result\}*\* 
 
 Data and Control Flow **5–41**
 
@@ -2222,7 +2222,7 @@ x) *→* 2
 
 **Syntax:** 
 
-**catch** *tag {form}*\* *→ {result}*\* 
+**catch** *tag \{form\}*\* *→ \{result\}*\* 
 
 **Arguments and Values:** 
 
@@ -2358,7 +2358,7 @@ The following is in error because the **tagbody** is passed over before the **go
 
 **Description:** 
 
-Returns control and *multiple values*<sub>2</sub> from a lexically enclosing *block*. 
+Returns control and *multiple values*\<sub\>2\</sub\> from a lexically enclosing *block*. 
 
 A **block** *form* named *name* must lexically enclose the occurrence of **return-from**; any *values yielded* by the *evaluation* of *result* are immediately returned from the innermost such lexically enclosing *block*. 
 
@@ -2528,7 +2528,7 @@ Data and Control Flow **5–47**
 
 **Syntax:** 
 
-**tagbody** *{tag | statement}*\* *→* **nil** 
+**tagbody** *\{tag | statement\}*\* *→* **nil** 
 
 **Arguments and Values:** 
 
@@ -2628,7 +2628,7 @@ out
 
 The *macros* in Figure 5–10 have *implicit tagbodies*. 
 
-|<p>**do do-external-symbols dotimes do\* do-symbols prog** </p><p>**do-all-symbols dolist prog\***</p>|
+|\<p\>**do do-external-symbols dotimes do\* do-symbols prog** \</p\>\<p\>**do-all-symbols dolist prog\***\</p\>|
 | :- |
 
 
@@ -2728,7 +2728,7 @@ performed, and an error of *type* **control-error** is signaled. When the error 
 
 **Syntax:** 
 
-**unwind-protect** *protected-form {cleanup-form}*\* *→ {result}*\* 
+**unwind-protect** *protected-form \{cleanup-form\}*\* *→ \{result\}*\* 
 
 **Arguments and Values:** 
 
@@ -3036,7 +3036,7 @@ t *→* T
 
 (eq t ’t) *→ true* 
 
-(find-class ’t) *→* #<CLASS T 610703333> 
+(find-class ’t) *→* #\<CLASS T 610703333\> 
 
 (case ’a (a 1) (t 2)) *→* 1 
 
@@ -3078,7 +3078,7 @@ Returns *true* if its *arguments* are the same, identical *object*; otherwise, r
 
 *→ true* 
 
-<i><sup>or</sup>→ false</i> 
+\<i\>\<sup\>or\</sup\>→ false\</i\> 
 
 (eq 3 3.0) *→ false* 
 
@@ -3086,7 +3086,7 @@ Returns *true* if its *arguments* are the same, identical *object*; otherwise, r
 
 *→ true* 
 
-<i><sup>or</sup>→ false</i> 
+\<i\>\<sup\>or\</sup\>→ false\</i\> 
 
 **5–56** Programming Language—Common Lisp
 
@@ -3100,7 +3100,7 @@ Returns *true* if its *arguments* are the same, identical *object*; otherwise, r
 
 *→ true* 
 
-<i><sup>or</sup>→ false</i> 
+\<i\>\<sup\>or\</sup\>→ false\</i\> 
 
 (eq #c(3 -4.0) #c(3 -4)) *→ false* 
 
@@ -3112,7 +3112,7 @@ Returns *true* if its *arguments* are the same, identical *object*; otherwise, r
 
 *→ true* 
 
-<i><sup>or</sup>→ false</i> 
+\<i\>\<sup\>or\</sup\>→ false\</i\> 
 
 (progn (setq x (cons ’a ’b)) (eq x x)) *→ true* 
 
@@ -3122,7 +3122,7 @@ Returns *true* if its *arguments* are the same, identical *object*; otherwise, r
 
 *→ true* 
 
-<i><sup>or</sup>→ false</i> 
+\<i\>\<sup\>or\</sup\>→ false\</i\> 
 
 (let ((x "Foo")) (eq x x)) *→ true* 
 
@@ -3130,7 +3130,7 @@ Returns *true* if its *arguments* are the same, identical *object*; otherwise, r
 
 *→ true* 
 
-<i><sup>or</sup>→ false</i> 
+\<i\>\<sup\>or\</sup\>→ false\</i\> 
 
 (eq "Foo" (copy-seq "Foo")) *→ false* 
 
@@ -3142,7 +3142,7 @@ Returns *true* if its *arguments* are the same, identical *object*; otherwise, r
 
 *→ true* 
 
-<i><sup>or</sup>→ false</i> 
+\<i\>\<sup\>or\</sup\>→ false\</i\> 
 
 **See Also:** 
 
@@ -3162,7 +3162,7 @@ Data and Control Flow **5–57**
 
 
 
-|<p>**catch getf throw** </p><p>**get remf** </p><p>**get-properties remprop**</p>|
+|\<p\>**catch getf throw** \</p\>\<p\>**get remf** \</p\>\<p\>**get-properties remprop**\</p\>|
 | :- |
 
 
@@ -3226,7 +3226,7 @@ If an implementation supports positive and negative zeros as *distinct* values, 
 
 *→ true* 
 
-<i><sup>or</sup>→ false</i> 
+\<i\>\<sup\>or\</sup\>→ false\</i\> 
 
 (progn (setq x (cons ’a ’b)) (eql x x)) *→ true* 
 
@@ -3238,7 +3238,7 @@ If an implementation supports positive and negative zeros as *distinct* values, 
 
 *→ true* 
 
-<i><sup>or</sup>→ false</i> 
+\<i\>\<sup\>or\</sup\>→ false\</i\> 
 
 (eql "Foo" (copy-seq "Foo")) *→ false* 
 
@@ -3318,7 +3318,7 @@ Two other *objects* are **equal** only if they are **eq**.
 
 |**Type Behavior**|
 | :- |
-|<p>*number* uses **eql** </p><p>*character* uses **eql** </p><p>*cons* descends </p><p>*bit vector* descends </p><p>*string* descends </p><p>*pathname* “functionally equivalent” </p><p>*structure* uses **eq** </p><p>Other *array* uses **eq** </p><p>*hash table* uses **eq** </p><p>Other *object* uses **eq**</p>|
+|\<p\>*number* uses **eql** \</p\>\<p\>*character* uses **eql** \</p\>\<p\>*cons* descends \</p\>\<p\>*bit vector* descends \</p\>\<p\>*string* descends \</p\>\<p\>*pathname* “functionally equivalent” \</p\>\<p\>*structure* uses **eq** \</p\>\<p\>Other *array* uses **eq** \</p\>\<p\>*hash table* uses **eq** \</p\>\<p\>Other *object* uses **eq**\</p\>|
 
 
 **Figure 5–12. Summary and priorities of behavior of equal** 
@@ -3423,7 +3423,7 @@ If two *arrays* have the same number of dimensions, the dimensions match, and th
 
 *Structures* 
 
-If two *structures S*<sub>1</sub> and *S*<sub>2</sub> have the same *class* and the value of each *slot* in *S*<sub>1</sub> is the *same* under **equalp** as the value of the corresponding *slot* in *S*<sub>2</sub>. 
+If two *structures S*\<sub\>1\</sub\> and *S*\<sub\>2\</sub\> have the same *class* and the value of each *slot* in *S*\<sub\>1\</sub\> is the *same* under **equalp** as the value of the corresponding *slot* in *S*\<sub\>2\</sub\>. 
 
 *Hash Tables* 
 
@@ -3433,7 +3433,7 @@ If two *structures S*<sub>1</sub> and *S*<sub>2</sub> have the same *class* and 
 
 |**Type Behavior**|
 | :- |
-|<p>*number* uses **=** </p><p>*character* uses **char-equal** </p><p>*cons* descends </p><p>*bit vector* descends </p><p>*string* descends </p><p>*pathname* same as **equal** </p><p>*structure* descends, as described above </p><p>Other *array* descends </p><p>*hash table* descends, as described above </p><p>Other *object* uses **eq**</p>|
+|\<p\>*number* uses **=** \</p\>\<p\>*character* uses **char-equal** \</p\>\<p\>*cons* descends \</p\>\<p\>*bit vector* descends \</p\>\<p\>*string* descends \</p\>\<p\>*pathname* same as **equal** \</p\>\<p\>*structure* descends, as described above \</p\>\<p\>Other *array* descends \</p\>\<p\>*hash table* descends, as described above \</p\>\<p\>Other *object* uses **eq**\</p\>|
 
 
 **Figure 5–13. Summary and priorities of behavior of equalp** 
@@ -3644,13 +3644,13 @@ Note that since the “*xxx*-if-not” *functions* and the :test-not arguments h
 
 **Syntax:** 
 
-**every** *predicate* &rest *sequences*<sup>+</sup> *→ generalized-boolean* 
+**every** *predicate* &rest *sequences*\<sup\>+\</sup\> *→ generalized-boolean* 
 
-**some** *predicate* &rest *sequences*<sup>+</sup> *→ result* 
+**some** *predicate* &rest *sequences*\<sup\>+\</sup\> *→ result* 
 
-**notevery** *predicate* &rest *sequences*<sup>+</sup> *→ generalized-boolean* 
+**notevery** *predicate* &rest *sequences*\<sup\>+\</sup\> *→ generalized-boolean* 
 
-**notany** *predicate* &rest *sequences*<sup>+</sup> *→ generalized-boolean* 
+**notany** *predicate* &rest *sequences*\<sup\>+\</sup\> *→ generalized-boolean* 
 
 **Arguments and Values:** 
 
@@ -3686,9 +3686,9 @@ Data and Control Flow **5–67**
 
 (some #’= ’(1 2 3 4 5) ’(5 4 3 2 1)) *→ true* 
 
-(notevery #’< ’(1 2 3 4) ’(5 6 7 8) ’(9 10 11 12)) *→ false* 
+(notevery #’\< ’(1 2 3 4) ’(5 6 7 8) ’(9 10 11 12)) *→ false* 
 
-(notany #’> ’(1 2 3 4) ’(5 6 7 8) ’(9 10 11 12)) *→ true* 
+(notany #’\> ’(1 2 3 4) ’(5 6 7 8) ’(9 10 11 12)) *→ true* 
 
 **Exceptional Situations:** 
 
@@ -3702,15 +3702,15 @@ Other exceptional situations are possible, depending on the nature of the *predi
 
 **Notes:** 
 
-(notany *predicate {sequence}*\*) *≡* (not (some *predicate {sequence}*\*)) 
+(notany *predicate \{sequence\}*\*) *≡* (not (some *predicate \{sequence\}*\*)) 
 
-(notevery *predicate {sequence}*\*) *≡* (not (every *predicate {sequence}*\*)) 
+(notevery *predicate \{sequence\}*\*) *≡* (not (every *predicate \{sequence\}*\*)) 
 
 **and** *Macro* 
 
 **Syntax:** 
 
-**and** *{form}*\* *→ {result}*\* 
+**and** *\{form\}*\* *→ \{result\}*\* 
 
 **Arguments and Values:** 
 
@@ -3726,7 +3726,7 @@ If no *forms* are supplied, (and) returns **t**.
 
 **and** passes back multiple values from the last *subform* but not from subforms other than the last. **Examples:** 
 
-(if (and (>= n 0) 
+(if (and (\>= n 0) 
 
 **5–68** Programming Language—Common Lisp
 
@@ -3734,7 +3734,7 @@ If no *forms* are supplied, (and) returns **t**.
 
 
 
-(< n (length a-simple-vector)) 
+(\< n (length a-simple-vector)) 
 
 (eq (elt a-simple-vector n) ’foo)) 
 
@@ -3770,9 +3770,9 @@ The above expression prints Foo! if element n of a-simple-vector is the symbol f
 
 **Syntax:** 
 
-**cond** *{↓clause}*\* *→ {result}*\* 
+**cond** *\{↓clause\}*\* *→ \{result\}*\* 
 
-*clause::*=(*test-form {form}*\*) 
+*clause::*=(*test-form \{form\}*\*) 
 
 **Arguments and Values:** 
 
@@ -3834,7 +3834,7 @@ a *→* 3
 
 **Syntax:** 
 
-**if** *test-form then-form* [*else-form*] *→ {result}*\* 
+**if** *test-form then-form* [*else-form*] *→ \{result\}*\* 
 
 **Arguments and Values:** 
 
@@ -3898,7 +3898,7 @@ First *test-form* is evaluated. If the result is *true*, then *then-form* is sel
 
 **Syntax:** 
 
-**or** *{form}*\* *→ {results}*\* 
+**or** *\{form\}*\* *→ \{results\}*\* 
 
 **Arguments and Values:** 
 
@@ -3952,9 +3952,9 @@ temp3 *→* 30
 
 **Syntax:** 
 
-**when** *test-form {form}*\* *→ {result}*\* 
+**when** *test-form \{form\}*\* *→ \{result\}*\* 
 
-**unless** *test-form {form}*\* *→ {result}*\* 
+**unless** *test-form \{form\}*\* *→ \{result\}*\* 
 
 **Arguments and Values:** 
 
@@ -4036,19 +4036,19 @@ In an **unless** *form*, if the *test-form yields false*, the *forms* are *evalu
 
 **Notes:** 
 
-(when *test {form}*<sup>+</sup>) *≡* (and *test* (progn *{form}*<sup>+</sup>)) 
+(when *test \{form\}*\<sup\>+\</sup\>) *≡* (and *test* (progn *\{form\}*\<sup\>+\</sup\>)) 
 
-(when *test {form}*<sup>+</sup>) *≡* (cond (*test {form}*<sup>+</sup>)) 
+(when *test \{form\}*\<sup\>+\</sup\>) *≡* (cond (*test \{form\}*\<sup\>+\</sup\>)) 
 
-(when *test {form}*<sup>+</sup>) *≡* (if *test* (progn *{form}*<sup>+</sup>) nil) 
+(when *test \{form\}*\<sup\>+\</sup\>) *≡* (if *test* (progn *\{form\}*\<sup\>+\</sup\>) nil) 
 
-(when *test {form}*<sup>+</sup>) *≡* (unless (not *test*) *{form}*<sup>+</sup>) 
+(when *test \{form\}*\<sup\>+\</sup\>) *≡* (unless (not *test*) *\{form\}*\<sup\>+\</sup\>) 
 
-(unless *test {form}*<sup>+</sup>) *≡* (cond ((not *test*) *{form}*<sup>+</sup>)) 
+(unless *test \{form\}*\<sup\>+\</sup\>) *≡* (cond ((not *test*) *\{form\}*\<sup\>+\</sup\>)) 
 
-(unless *test {form}*<sup>+</sup>) *≡* (if *test* nil (progn *{form}*<sup>+</sup>)) 
+(unless *test \{form\}*\<sup\>+\</sup\>) *≡* (if *test* nil (progn *\{form\}*\<sup\>+\</sup\>)) 
 
-(unless *test {form}*<sup>+</sup>) *≡* (when (not *test*) *{form}*<sup>+</sup>) 
+(unless *test \{form\}*\<sup\>+\</sup\>) *≡* (when (not *test*) *\{form\}*\<sup\>+\</sup\>) 
 
 Data and Control Flow **5–73**
 
@@ -4060,15 +4060,15 @@ Data and Control Flow **5–73**
 
 **Syntax:** 
 
-**case** *keyform {↓normal-clause}*\* [*↓otherwise-clause*] *→ {result}*\* 
+**case** *keyform \{↓normal-clause\}*\* [*↓otherwise-clause*] *→ \{result\}*\* 
 
-**ccase** *keyplace {↓normal-clause}*\* *→ {result}*\* 
+**ccase** *keyplace \{↓normal-clause\}*\* *→ \{result\}*\* 
 
-**ecase** *keyform {↓normal-clause}*\* *→ {result}*\* 
+**ecase** *keyform \{↓normal-clause\}*\* *→ \{result\}*\* 
 
-*normal-clause::*=(*keys {form}*\*) 
+*normal-clause::*=(*keys \{form\}*\*) 
 
-*otherwise-clause::*=(*{otherwise | t} {form}*\*) 
+*otherwise-clause::*=(*\{otherwise | t\} \{form\}*\*) 
 
 *clause::*=*normal-clause | otherwise-clause* 
 
@@ -4182,7 +4182,7 @@ Data and Control Flow **5–75**
 
 *.* 2: Return to Lisp Toplevel. 
 
-*.* Debug> :CONTINUE 1 
+*.* Debug\> :CONTINUE 1 
 
 *.* Value to evaluate and use for X: ’IV 
 
@@ -4208,13 +4208,13 @@ The debugger might be entered. If the **store-value** *restart* is invoked, the 
 
 (case *test-key* 
 
-*{*((*{key}*\*) *{form}*\*)*}*\*) 
+*\{*((*\{key\}*\*) *\{form\}*\*)*\}*\*) 
 
 *≡* 
 
 (let ((#1=#:g0001 *test-key*)) 
 
-(cond *{*((member #1# ’(*{key}*\*)) *{form}*\*)*}*\*)) 
+(cond *\{*((member #1# ’(*\{key\}*\*)) *\{form\}*\*)*\}*\*)) 
 
 The specific error message used by **ecase** and **ccase** can vary between implementations. In situations where control of the specific wording of the error message is important, it is better to use **case** with an *otherwise-clause* that explicitly signals an error with an appropriate message. 
 
@@ -4222,9 +4222,9 @@ The specific error message used by **ecase** and **ccase** can vary between impl
 
 **Syntax:** 
 
-**typecase** *keyform {↓normal-clause}*\* [*↓otherwise-clause*] *→ {result}*\* 
+**typecase** *keyform \{↓normal-clause\}*\* [*↓otherwise-clause*] *→ \{result\}*\* 
 
-**ctypecase** *keyplace {↓normal-clause}*\* *→ {result}*\* 
+**ctypecase** *keyplace \{↓normal-clause\}*\* *→ \{result\}*\* 
 
 **5–76** Programming Language—Common Lisp
 
@@ -4234,11 +4234,11 @@ The specific error message used by **ecase** and **ccase** can vary between impl
 
 **typecase, ctypecase, etypecase** 
 
-**etypecase** *keyform {↓normal-clause}*\* *→ {result}*\* 
+**etypecase** *keyform \{↓normal-clause\}*\* *→ \{result\}*\* 
 
-*normal-clause::*=(*type {form}*\*) 
+*normal-clause::*=(*type \{form\}*\*) 
 
-*otherwise-clause::*=(*{otherwise | t} {form}*\*) 
+*otherwise-clause::*=(*\{otherwise | t\} \{form\}*\*) 
 
 *clause::*=*normal-clause | otherwise-clause* 
 

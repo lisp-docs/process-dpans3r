@@ -28,7 +28,7 @@ Figure 10–1 lists some *defined names* that are applicable to the *property li
 
 Figure 10–2 lists some *defined names* that are applicable to the creation of and inquiry about *symbols*. 
 
-|<p>**copy-symbol keywordp symbol-package gensym make-symbol symbol-value** </p><p>**gentemp symbol-name**</p>|
+|\<p\>**copy-symbol keywordp symbol-package gensym make-symbol symbol-value** \</p\>\<p\>**gentemp symbol-name**\</p\>|
 | :- |
 
 
@@ -186,7 +186,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **Description:** 
 
-Returns *true* if *object* is a *keyword* <sub>1</sub>; otherwise, returns *false*. 
+Returns *true* if *object* is a *keyword* \<sub\>1\</sub\>; otherwise, returns *false*. 
 
 **Examples:** 
 
@@ -290,7 +290,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **copy-symbol** returns a *fresh*, *uninterned symbol*, the *name* of which is **string=** to and possibly the *same* as the *name* of the given *symbol*. 
 
-If *copy-properties* is *false*, the *new-symbol* is neither *bound* nor *fbound* and has a *null property list*. If *copy-properties* is *true*, then the initial *value* of *new-symbol* is the *value* of *symbol*, the initial *function* definition of *new-symbol* is the *functional value* of *symbol*, and the *property list* of *new-symbol* is a *copy*<sub>2</sub> of the *property list* of *symbol*. 
+If *copy-properties* is *false*, the *new-symbol* is neither *bound* nor *fbound* and has a *null property list*. If *copy-properties* is *true*, then the initial *value* of *new-symbol* is the *value* of *symbol*, the initial *function* definition of *new-symbol* is the *functional value* of *symbol*, and the *property list* of *new-symbol* is a *copy*\<sub\>2\</sub\> of the *property list* of *symbol*. 
 
 **Examples:** 
 
@@ -330,7 +330,7 @@ If *copy-properties* is *false*, the *new-symbol* is neither *bound* nor *fbound
 
 (boundp fred-clone-1a) *→ false* 
 
-(setf (symbol-function fred) #’(lambda (x) x)) *→* #<FUNCTION anonymous> 
+(setf (symbol-function fred) #’(lambda (x) x)) *→* #\<FUNCTION anonymous\> 
 
 (fboundp fred) *→ true* 
 
@@ -556,13 +556,13 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **Examples:** 
 
-(symbol-function ’car) *→* #<FUNCTION CAR> 
+(symbol-function ’car) *→* #\<FUNCTION CAR\> 
 
 (symbol-function ’twice) is an error ;because TWICE isn’t defined. 
 
 (defun twice (n) (\* n 2)) *→* TWICE 
 
-(symbol-function ’twice) *→* #<FUNCTION TWICE> 
+(symbol-function ’twice) *→* #\<FUNCTION TWICE\> 
 
 (list (twice 3) 
 
@@ -584,7 +584,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 (setf (symbol-function ’twice) #’(lambda (x) (list x x))) 
 
-*→* #<FUNCTION anonymous> 
+*→* #\<FUNCTION anonymous\> 
 
 (list (twice 3) 
 
@@ -616,7 +616,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 nil)) *→* SYMBOL-FUNCTION-OR-NIL 
 
-(symbol-function-or-nil ’car) *→* #<FUNCTION CAR> 
+(symbol-function-or-nil ’car) *→* #\<FUNCTION CAR\> 
 
 (symbol-function-or-nil ’defun) *→* NIL 
 
@@ -704,35 +704,35 @@ Returns the *home package* of *symbol*.
 
 **Examples:** 
 
-(in-package "CL-USER") *→* #<PACKAGE "COMMON-LISP-USER"> 
+(in-package "CL-USER") *→* #\<PACKAGE "COMMON-LISP-USER"\> 
 
-(symbol-package ’car) *→* #<PACKAGE "COMMON-LISP"> 
+(symbol-package ’car) *→* #\<PACKAGE "COMMON-LISP"\> 
 
-(symbol-package ’bus) *→* #<PACKAGE "COMMON-LISP-USER"> 
+(symbol-package ’bus) *→* #\<PACKAGE "COMMON-LISP-USER"\> 
 
-(symbol-package :optional) *→* #<PACKAGE "KEYWORD"> 
+(symbol-package :optional) *→* #\<PACKAGE "KEYWORD"\> 
 
 ;; Gensyms are uninterned, so have no home package. 
 
 (symbol-package (gensym)) *→* NIL 
 
-(make-package ’pk1) *→* #<PACKAGE "PK1"> 
+(make-package ’pk1) *→* #\<PACKAGE "PK1"\> 
 
 (intern "SAMPLE1" "PK1") *→* PK1::SAMPLE1, NIL 
 
 (export (find-symbol "SAMPLE1" "PK1") "PK1") *→* T 
 
-(make-package ’pk2 :use ’(pk1)) *→* #<PACKAGE "PK2"> 
+(make-package ’pk2 :use ’(pk1)) *→* #\<PACKAGE "PK2"\> 
 
 (find-symbol "SAMPLE1" "PK2") *→* PK1:SAMPLE1, :INHERITED 
 
-(symbol-package ’pk1::sample1) *→* #<PACKAGE "PK1"> 
+(symbol-package ’pk1::sample1) *→* #\<PACKAGE "PK1"\> 
 
-(symbol-package ’pk2::sample1) *→* #<PACKAGE "PK1"> 
+(symbol-package ’pk2::sample1) *→* #\<PACKAGE "PK1"\> 
 
-(symbol-package ’pk1::sample2) *→* #<PACKAGE "PK1"> 
+(symbol-package ’pk1::sample2) *→* #\<PACKAGE "PK1"\> 
 
-(symbol-package ’pk2::sample2) *→* #<PACKAGE "PK2"> 
+(symbol-package ’pk2::sample2) *→* #\<PACKAGE "PK2"\> 
 
 ;; The next several forms create a scenario in which a symbol 
 
@@ -946,7 +946,7 @@ Should signal **unbound-variable** if *symbol* is *unbound* and an attempt is ma
 
 **Description:** 
 
-**get** finds a *property* on the *property list* <sub>2</sub> of *symbol* whose *property indicator* is *identical* to *indicator*, and returns its corresponding *property value*. If there are multiple *properties*<sub>1</sub> with that *property indicator* , **get** uses the first such *property*. If there is no *property* with that *property indicator* , *default* is returned. 
+**get** finds a *property* on the *property list* \<sub\>2\</sub\> of *symbol* whose *property indicator* is *identical* to *indicator*, and returns its corresponding *property value*. If there are multiple *properties*\<sub\>1\</sub\> with that *property indicator* , **get** uses the first such *property*. If there is no *property* with that *property indicator* , *default* is returned. 
 
 Symbols **10–17**
 
@@ -956,7 +956,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **get** 
 
-**setf** of **get** may be used to associate a new *object* with an existing indicator already on the *symbol*’s *property list*, or to create a new assocation if none exists. If there are multiple *properties*<sub>1</sub> with that *property indicator* , **setf** of **get** associates the *new-value* with the first such *property*. When a **get** *form* is used as a **setf** *place*, any *default* which is supplied is evaluated according to normal left-to-right evaluation rules, but its *value* is ignored. 
+**setf** of **get** may be used to associate a new *object* with an existing indicator already on the *symbol*’s *property list*, or to create a new assocation if none exists. If there are multiple *properties*\<sub\>1\</sub\> with that *property indicator* , **setf** of **get** associates the *new-value* with the first such *property*. When a **get** *form* is used as a **setf** *place*, any *default* which is supplied is evaluated according to normal left-to-right evaluation rules, but its *value* is ignored. 
 
 **Examples:** 
 
@@ -1054,7 +1054,7 @@ There is no way using **get** to distinguish an absent property from one whose v
 
 **Description:** 
 
-**remprop** removes from the *property list* <sub>2</sub> of *symbol* a *property*<sub>1</sub> with a *property indicator identical* to *indicator*. If there are multiple *properties*<sub>1</sub> with the *identical* key, **remprop** only removes the first such *property*. **remprop** returns *false* if no such *property* was found, or *true* if a property was found. 
+**remprop** removes from the *property list* \<sub\>2\</sub\> of *symbol* a *property*\<sub\>1\</sub\> with a *property indicator identical* to *indicator*. If there are multiple *properties*\<sub\>1\</sub\> with the *identical* key, **remprop** only removes the first such *property*. **remprop** returns *false* if no such *property* was found, or *true* if a property was found. 
 
 The *property indicator* and the corresponding *property value* are removed in an undefined order by destructively splicing the property list. The permissible side-effects correspond to those permitted for **remf**, such that: 
 

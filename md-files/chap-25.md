@@ -24,7 +24,7 @@ The top level loop is the Common Lisp mechanism by which the user normally inter
 
 The top level loop is not completely specified; thus the user interface is *implementation-defined*. The top level loop prints all values resulting from the evaluation of a *form*. Figure 25–1 lists variables that are maintained by the *Lisp read-eval-print loop*. 
 
-|<p>**\* + / -** </p><p>**\*\* ++ //** </p><p>**\*\*\* +++ ///**</p>|
+|\<p\>**\* + / -** \</p\>\<p\>**\*\* ++ //** \</p\>\<p\>**\*\*\* +++ ///**\</p\>|
 | :- |
 
 
@@ -34,7 +34,7 @@ The top level loop is not completely specified; thus the user interface is *impl
 
 Figure 25–2 shows *defined names* relating to debugging. 
 
-|<p>**\*debugger-hook\* documentation step** </p><p>**apropos dribble time** </p><p>**apropos-list ed trace** </p><p>**break inspect untrace describe invoke-debugger**</p>|
+|\<p\>**\*debugger-hook\* documentation step** \</p\>\<p\>**apropos dribble time** \</p\>\<p\>**apropos-list ed trace** \</p\>\<p\>**break inspect untrace describe invoke-debugger**\</p\>|
 | :- |
 
 
@@ -66,7 +66,7 @@ computer time (such as run time) and is precise to some *implementation-dependen
 
 Figure 25–4 shows *defined names* relating to *time*. 
 
-|<p>**decode-universal-time get-internal-run-time** </p><p>**encode-universal-time get-universal-time** </p><p>**get-decoded-time internal-time-units-per-second** </p><p>**get-internal-real-time sleep**</p>|
+|\<p\>**decode-universal-time get-internal-run-time** \</p\>\<p\>**encode-universal-time get-universal-time** \</p\>\<p\>**get-decoded-time internal-time-units-per-second** \</p\>\<p\>**get-internal-real-time sleep**\</p\>|
 | :- |
 
 
@@ -140,7 +140,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 Therefore the year 2000 will be a leap year. Because *universal time* must be a non-negative *integer* , times before the base time of midnight, January 1, 1900 GMT cannot be processed by Common Lisp. 
 
-|<p>**decode-universal-time get-universal-time** </p><p>**encode-universal-time**</p>|
+|\<p\>**decode-universal-time get-universal-time** \</p\>\<p\>**encode-universal-time**\</p\>|
 | :- |
 
 
@@ -152,7 +152,7 @@ Therefore the year 2000 will be a leap year. Because *universal time* must be a 
 
 Figure 25–7 shows *defined names* related to *internal time*. 
 
-|<p>**get-internal-real-time internal-time-units-per-second** </p><p>**get-internal-run-time**</p>|
+|\<p\>**get-internal-real-time internal-time-units-per-second** \</p\>\<p\>**get-internal-run-time**\</p\>|
 | :- |
 
 
@@ -366,7 +366,7 @@ Causes execution to cease and become dormant for approximately the seconds of re
 
 (now (progn (sleep 10) (get-universal-time)))) 
 
-(>= (- now then) 10)) 
+(\>= (- now then) 10)) 
 
 *→ true* 
 
@@ -524,11 +524,11 @@ s (type-of s) captain serial#)))
 
 :serial-number "NCC-1701-C") 
 
-*→* #<FEDERATION-STARSHIP 26312465> 
+*→* #\<FEDERATION-STARSHIP 26312465\> 
 
 (describe \*) 
 
-*.* #<FEDERATION-STARSHIP 26312465> is a spaceship of type FEDERATION-STARSHIP, *.* with Rachel Garrett at the helm and with serial number NCC-1701-C. 
+*.* #\<FEDERATION-STARSHIP 26312465\> is a spaceship of type FEDERATION-STARSHIP, *.* with Rachel Garrett at the helm and with serial number NCC-1701-C. 
 
 *→ hno valuesi* 
 
@@ -554,9 +554,9 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **Syntax:** 
 
-**trace** *{function-name}*\* *→ trace-result* 
+**trace** *\{function-name\}*\* *→ trace-result* 
 
-**untrace** *{function-name}*\* *→ untrace-result* 
+**untrace** *\{function-name\}*\* *→ untrace-result* 
 
 **Arguments and Values:** 
 
@@ -640,7 +640,7 @@ Although **trace** can be extended to permit non-standard options, *implementati
 
 **Syntax:** 
 
-**step** *form → {result}*\* 
+**step** *form → \{result\}*\* 
 
 **Arguments and Values:** 
 
@@ -674,7 +674,7 @@ It is technically permissible for a *conforming implementation* to take no actio
 
 **Syntax:** 
 
-**time** *form → {result}*\* 
+**time** *form → \{result\}*\* 
 
 **Arguments and Values:** 
 
@@ -1342,7 +1342,7 @@ Version 15.17R, X3J13/94-101R.
 
 Fri 12-Aug-1994 6:35pm EDT 
 
-<b><sup>lisp-implementation-type, lisp-implementation</sup> version</b> <i>Function</i> 
+\<b\>\<sup\>lisp-implementation-type, lisp-implementation\</sup\> version\</b\> \<i\>Function\</i\> 
 
 **Syntax:** 
 
@@ -1368,7 +1368,7 @@ If no appropriate and relevant result can be produced, **nil** is returned inste
 
 *→* "ACME Lisp" 
 
-<i><sup>or</sup>→</i> "Joe’s Common Lisp" 
+\<i\>\<sup\>or\</sup\>→\</i\> "Joe’s Common Lisp" 
 
 (lisp-implementation-version) 
 
@@ -1376,7 +1376,7 @@ If no appropriate and relevant result can be produced, **nil** is returned inste
 
 *→* "V2" 
 
-<i><sup>or</sup>→</i> "Release 17.3, ECO #6" 
+\<i\>\<sup\>or\</sup\>→\</i\> "Release 17.3, ECO #6" 
 
 **short-site-name, long-site-name** *Function* 
 
@@ -1406,13 +1406,13 @@ Fri 12-Aug-1994 6:35pm EDT
 
 *→* "MIT AI Lab" 
 
-<i><sup>or</sup>→</i> "CMU-CSD" 
+\<i\>\<sup\>or\</sup\>→\</i\> "CMU-CSD" 
 
 (long-site-name) 
 
 *→* "MIT Artificial Intelligence Laboratory" 
 
-<i><sup>or</sup>→</i> "CMU Computer Science Department" 
+\<i\>\<sup\>or\</sup\>→\</i\> "CMU Computer Science Department" 
 
 **Affected By:** 
 
@@ -1438,11 +1438,11 @@ Returns a *string* that identifies the particular instance of the computer hardw
 
 *→* "ACME.COM" 
 
-<i><sup>or</sup>→</i> "S/N 123231" 
+\<i\>\<sup\>or\</sup\>→\</i\> "S/N 123231" 
 
-<i><sup>or</sup>→</i> "18.26.0.179" 
+\<i\>\<sup\>or\</sup\>→\</i\> "18.26.0.179" 
 
-<i><sup>or</sup>→</i> "AA-00-04-00-A7-A4" 
+\<i\>\<sup\>or\</sup\>→\</i\> "AA-00-04-00-A7-A4" 
 
 **Affected By:** 
 
@@ -1478,7 +1478,7 @@ Returns a *string* that identifies the generic name of the computer hardware on 
 
 *→* "DEC PDP-10" 
 
-<i><sup>or</sup>→</i> "Symbolics LM-2" 
+\<i\>\<sup\>or\</sup\>→\</i\> "Symbolics LM-2" 
 
 **Affected By:** 
 

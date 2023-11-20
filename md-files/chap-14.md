@@ -20,7 +20,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 A *cons* is a compound data *object* having two components called the *car* and the *cdr* . 
 
-|<p>**car cons rplacd** </p><p>**cdr rplaca**</p>|
+|\<p\>**car cons rplacd** \</p\>\<p\>**cdr rplaca**\</p\>|
 | :- |
 
 
@@ -32,7 +32,7 @@ Depending on context, a group of connected *conses* can be viewed in a variety o
 
 A *tree* is a binary recursive data structure made up of *conses* and *atoms*: the *conses* are themselves also *trees* (sometimes called “subtrees” or “branches”), and the *atoms* are terminal nodes (sometimes called *leaves*). Typically, the *leaves* represent data while the branches establish some relationship among that data. 
 
-|<p>**caaaar caddar cdar nsubst** </p><p>**caaadr cadddr cddaar nsubst-if** </p><p>**caaar caddr cddadr nsubst-if-not caadar cadr cddar nthcdr** </p><p>**caaddr cdaaar cdddar sublis** </p><p>**caadr cdaadr cddddr subst** </p><p>**caar cdaar cdddr subst-if** </p><p>**cadaar cdadar cddr subst-if-not cadadr cdaddr copy-tree tree-equal cadar cdadr nsublis**</p>|
+|\<p\>**caaaar caddar cdar nsubst** \</p\>\<p\>**caaadr cadddr cddaar nsubst-if** \</p\>\<p\>**caaar caddr cddadr nsubst-if-not caadar cadr cddar nthcdr** \</p\>\<p\>**caaddr cdaaar cdddar sublis** \</p\>\<p\>**caadr cdaadr cddddr subst** \</p\>\<p\>**caar cdaar cdddr subst-if** \</p\>\<p\>**cadaar cdadar cddr subst-if-not cadadr cdaddr copy-tree tree-equal cadar cdadr nsublis**\</p\>|
 | :- |
 
 
@@ -60,7 +60,7 @@ A *dotted list* is a *list* that has a terminating *atom* that is not the *empty
 
 A *circular list* is a chain of *conses* that has no termination because some *cons* in the chain is the *cdr* of a later *cons*. 
 
-|<p>**append last nbutlast rest** </p><p>**butlast ldiff nconc revappend copy-alist list ninth second copy-list list\* nreconc seventh eighth list-length nth sixth endp make-list nthcdr tailp** </p><p>**fifth member pop tenth first member-if push third fourth member-if-not pushnew**</p>|
+|\<p\>**append last nbutlast rest** \</p\>\<p\>**butlast ldiff nconc revappend copy-alist list ninth second copy-list list\* nreconc seventh eighth list-length nth sixth endp make-list nthcdr tailp** \</p\>\<p\>**fifth member pop tenth first member-if push third fourth member-if-not pushnew**\</p\>|
 | :- |
 
 
@@ -70,7 +70,7 @@ A *circular list* is a chain of *conses* that has no termination because some *c
 
 An *association list* is a *list* of *conses* representing an association of *keys* with *values*, where the *car* of each *cons* is the *key* and the *cdr* is the *value* associated with that *key*. 
 
-|<p>**acons assoc-if pairlis rassoc-if** </p><p>**assoc assoc-if-not rassoc rassoc-if-not**</p>|
+|\<p\>**acons assoc-if pairlis rassoc-if** \</p\>\<p\>**assoc assoc-if-not rassoc rassoc-if-not**\</p\>|
 | :- |
 
 
@@ -86,7 +86,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 *Lists* are sometimes viewed as sets by considering their elements unordered and by assuming there is no duplication of elements. 
 
-|<p>**adjoin nset-difference set-difference union intersection nset-exclusive-or set-exclusive-or** </p><p>**nintersection nunion subsetp**</p>|
+|\<p\>**adjoin nset-difference set-difference union intersection nset-exclusive-or set-exclusive-or** \</p\>\<p\>**nintersection nunion subsetp**\</p\>|
 | :- |
 
 
@@ -486,7 +486,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 |**This** *place . . .* **Is equivalent to this** *place . . .*|
 | :- |
-|<p>(caar *x*) (car (car *x*)) </p><p>(cadr *x*) (car (cdr *x*)) </p><p>(cdar *x*) (cdr (car *x*)) </p><p>(cddr *x*) (cdr (cdr *x*)) </p><p>(caaar *x*) (car (car (car *x*))) </p><p>(caadr *x*) (car (car (cdr *x*))) </p><p>(cadar *x*) (car (cdr (car *x*))) </p><p>(caddr *x*) (car (cdr (cdr *x*))) </p><p>(cdaar *x*) (cdr (car (car *x*))) </p><p>(cdadr *x*) (cdr (car (cdr *x*))) </p><p>(cddar *x*) (cdr (cdr (car *x*))) </p><p>(cdddr *x*) (cdr (cdr (cdr *x*))) </p><p>(caaaar *x*) (car (car (car (car *x*)))) </p><p>(caaadr *x*) (car (car (car (cdr *x*)))) </p><p>(caadar *x*) (car (car (cdr (car *x*)))) </p><p>(caaddr *x*) (car (car (cdr (cdr *x*)))) </p><p>(cadaar *x*) (car (cdr (car (car *x*)))) </p><p>(cadadr *x*) (car (cdr (car (cdr *x*)))) </p><p>(caddar *x*) (car (cdr (cdr (car *x*)))) </p><p>(cadddr *x*) (car (cdr (cdr (cdr *x*)))) </p><p>(cdaaar *x*) (cdr (car (car (car *x*)))) </p><p>(cdaadr *x*) (cdr (car (car (cdr *x*)))) </p><p>(cdadar *x*) (cdr (car (cdr (car *x*)))) </p><p>(cdaddr *x*) (cdr (car (cdr (cdr *x*)))) </p><p>(cddaar *x*) (cdr (cdr (car (car *x*)))) </p><p>(cddadr *x*) (cdr (cdr (car (cdr *x*)))) </p><p>(cdddar *x*) (cdr (cdr (cdr (car *x*)))) </p><p>(cddddr *x*) (cdr (cdr (cdr (cdr *x*))))</p>|
+|\<p\>(caar *x*) (car (car *x*)) \</p\>\<p\>(cadr *x*) (car (cdr *x*)) \</p\>\<p\>(cdar *x*) (cdr (car *x*)) \</p\>\<p\>(cddr *x*) (cdr (cdr *x*)) \</p\>\<p\>(caaar *x*) (car (car (car *x*))) \</p\>\<p\>(caadr *x*) (car (car (cdr *x*))) \</p\>\<p\>(cadar *x*) (car (cdr (car *x*))) \</p\>\<p\>(caddr *x*) (car (cdr (cdr *x*))) \</p\>\<p\>(cdaar *x*) (cdr (car (car *x*))) \</p\>\<p\>(cdadr *x*) (cdr (car (cdr *x*))) \</p\>\<p\>(cddar *x*) (cdr (cdr (car *x*))) \</p\>\<p\>(cdddr *x*) (cdr (cdr (cdr *x*))) \</p\>\<p\>(caaaar *x*) (car (car (car (car *x*)))) \</p\>\<p\>(caaadr *x*) (car (car (car (cdr *x*)))) \</p\>\<p\>(caadar *x*) (car (car (cdr (car *x*)))) \</p\>\<p\>(caaddr *x*) (car (car (cdr (cdr *x*)))) \</p\>\<p\>(cadaar *x*) (car (cdr (car (car *x*)))) \</p\>\<p\>(cadadr *x*) (car (cdr (car (cdr *x*)))) \</p\>\<p\>(caddar *x*) (car (cdr (cdr (car *x*)))) \</p\>\<p\>(cadddr *x*) (car (cdr (cdr (cdr *x*)))) \</p\>\<p\>(cdaaar *x*) (cdr (car (car (car *x*)))) \</p\>\<p\>(cdaadr *x*) (cdr (car (car (cdr *x*)))) \</p\>\<p\>(cdadar *x*) (cdr (car (cdr (car *x*)))) \</p\>\<p\>(cdaddr *x*) (cdr (car (cdr (cdr *x*)))) \</p\>\<p\>(cddaar *x*) (cdr (cdr (car (car *x*)))) \</p\>\<p\>(cddadr *x*) (cdr (cdr (car (cdr *x*)))) \</p\>\<p\>(cdddar *x*) (cdr (cdr (cdr (car *x*)))) \</p\>\<p\>(cddddr *x*) (cdr (cdr (cdr (cdr *x*))))\</p\>|
 
 
 **Figure 14–6. CAR and CDR variants** 
@@ -691,7 +691,7 @@ tree2 *→* ("one" ("one" "two") (("one" "Two" "three")))
 
 tree1 
 
-:key #’(lambda (x) (or (atom x) (< (list-length x) 3)))) 
+:key #’(lambda (x) (or (atom x) (\< (list-length x) 3)))) 
 
 *→* ((QUOTE TEMP) (QUOTE TEMP) QUOTE TEMP) 
 
@@ -1003,7 +1003,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **list** &rest *objects → list* 
 
-**list\*** &rest *objects*<sup>+</sup> *→ result* 
+**list\*** &rest *objects*\<sup\>+\</sup\> *→ result* 
 
 **Arguments and Values:** 
 
@@ -1147,7 +1147,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 ;; That fact justifies this implementation.) 
 
-(when (and (eq fast slow) (> n 0)) (return nil)))) 
+(when (and (eq fast slow) (\> n 0)) (return nil)))) 
 
 **listp** *Function* 
 
@@ -1709,7 +1709,7 @@ lst *→* (A B C)
 
 **Description:** 
 
-**revappend** constructs a *copy*<sub>2</sub> of *list*, but with the *elements* in reverse order. It then appends (as if by **nconc**) the *tail* to that reversed list and returns the result. 
+**revappend** constructs a *copy*\<sub\>2\</sub\> of *list*, but with the *elements* in reverse order. It then appends (as if by **nconc**) the *tail* to that reversed list and returns the result. 
 
 **nreconc** reverses the order of *elements* in *list* (as if by **nreverse**). It then appends (as if by **nconc**) the *tail* to that reversed list and returns the result. 
 
@@ -1955,7 +1955,7 @@ The following code could be used to define **last**.
 
 ((atom l) r) 
 
-(if (>= i n) (pop r)))) 
+(if (\>= i n) (pop r)))) 
 
 **ldiff, tailp** *Function* 
 
@@ -1987,7 +1987,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 If *object* is the *same* as some *tail* of *list*, **tailp** returns *true*; otherwise, it returns *false*. 
 
-If *object* is the *same* as some *tail* of *list*, **ldiff** returns a *fresh list* of the *elements* of *list* that precede **object** in the *list structure* of *list*; otherwise, it returns a *copy*<sub>2</sub> of *list*. 
+If *object* is the *same* as some *tail* of *list*, **ldiff** returns a *fresh list* of the *elements* of *list* that precede **object** in the *list structure* of *list*; otherwise, it returns a *copy*\<sub\>2\</sub\> of *list*. 
 
 **Examples:** 
 
@@ -2277,15 +2277,15 @@ the value returned by **member** is *identical* to the portion of the *list* beg
 
 **Syntax:** 
 
-**mapc** *function* &rest *lists*<sup>+</sup> *→ list-1* 
+**mapc** *function* &rest *lists*\<sup\>+\</sup\> *→ list-1* 
 
-**mapcar** *function* &rest *lists*<sup>+</sup> *→ result-list* 
+**mapcar** *function* &rest *lists*\<sup\>+\</sup\> *→ result-list* 
 
-**mapcan** *function* &rest *lists*<sup>+</sup> *→ concatenated-results* 
+**mapcan** *function* &rest *lists*\<sup\>+\</sup\> *→ concatenated-results* 
 
-**mapl** *function* &rest *lists*<sup>+</sup> *→ list-1* 
+**mapl** *function* &rest *lists*\<sup\>+\</sup\> *→ list-1* 
 
-**maplist** *function* &rest *lists*<sup>+</sup> *→ result-list* 
+**maplist** *function* &rest *lists*\<sup\>+\</sup\> *→ result-list* 
 
 **14–40** Programming Language—Common Lisp
 
@@ -2295,7 +2295,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **mapc, mapcar, mapcan, mapl, maplist, mapcon** 
 
-**mapcon** *function* &rest *lists*<sup>+</sup> *→ concatenated-results* 
+**mapcon** *function* &rest *lists*\<sup\>+\</sup\> *→ concatenated-results* 
 
 **Arguments and Values:** 
 
@@ -2493,7 +2493,7 @@ For **assoc**, **assoc-if**, and **assoc-if-not**, if **nil** appears in *alist*
 
 (assoc-if #’evenp alist) *→* (2 . "two") 
 
-(assoc-if-not #’(lambda(x) (< x 3)) alist) *→* (3 . "three") 
+(assoc-if-not #’(lambda(x) (\< x 3)) alist) *→* (3 . "three") 
 
 (setq alist ’(("one" . 1)("two" . 2))) *→* (("one" . 1) ("two" . 2)) 
 
@@ -2819,9 +2819,9 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **Description:** 
 
-**getf** finds a *property* on the *plist* whose *property indicator* is *identical* to *indicator*, and returns its corresponding *property value*. If there are multiple *properties*<sub>1</sub> with that *property indicator* , **getf** uses the first such *property*. If there is no *property* with that *property indicator* , *default* is returned. 
+**getf** finds a *property* on the *plist* whose *property indicator* is *identical* to *indicator*, and returns its corresponding *property value*. If there are multiple *properties*\<sub\>1\</sub\> with that *property indicator* , **getf** uses the first such *property*. If there is no *property* with that *property indicator* , *default* is returned. 
 
-**setf** of **getf** may be used to associate a new *object* with an existing indicator in the *property list* held by *place*, or to create a new assocation if none exists. If there are multiple *properties*<sub>1</sub> with that *property indicator* , **setf** of **getf** associates the *new-value* with the first such *property*. When a **getf** *form* is used as a **setf** *place*, any *default* which is supplied is evaluated according to normal left-to-right evaluation rules, but its *value* is ignored. 
+**setf** of **getf** may be used to associate a new *object* with an existing indicator in the *property list* held by *place*, or to create a new assocation if none exists. If there are multiple *properties*\<sub\>1\</sub\> with that *property indicator* , **setf** of **getf** associates the *new-value* with the first such *property*. When a **getf** *form* is used as a **setf** *place*, any *default* which is supplied is evaluated according to normal left-to-right evaluation rules, but its *value* is ignored. 
 
 **setf** of **getf** is permitted to either *write* the *value* of *place* itself, or modify of any part, *car* or *cdr* , of the *list structure* held by *place*. 
 
@@ -2859,13 +2859,13 @@ bar
 
 *→* (C D E F) 
 
-<i><sup>or</sup>→</i> (C) 
+\<i\>\<sup\>or\</sup\>→\</i\> (C) 
 
-<i><sup>or</sup>→</i> (NIL) 
+\<i\>\<sup\>or\</sup\>→\</i\> (NIL) 
 
-<i><sup>or</sup>→</i> (C NIL) 
+\<i\>\<sup\>or\</sup\>→\</i\> (C NIL) 
 
-<i><sup>or</sup>→</i> (C D) 
+\<i\>\<sup\>or\</sup\>→\</i\> (C D) 
 
 **14–50** Programming Language—Common Lisp
 
@@ -2905,7 +2905,7 @@ plist) *→* (COUNT 1)
 
 **Description:** 
 
-**remf** removes from the *property list* stored in *place* a *property*<sub>1</sub> with a *property indicator identical* to *indicator*. If there are multiple *properties*<sub>1</sub> with the *identical* key, **remf** only removes the first such *property*. **remf** returns *false* if no such *property* was found, or *true* if a property was found. 
+**remf** removes from the *property list* stored in *place* a *property*\<sub\>1\</sub\> with a *property indicator identical* to *indicator*. If there are multiple *properties*\<sub\>1\</sub\> with the *identical* key, **remf** only removes the first such *property*. **remf** returns *false* if no such *property* was found, or *true* if a property was found. 
 
 The *property indicator* and the corresponding *property value* are removed in an undefined order by destructively splicing the property list. **remf** is permitted to either **setf** *place* or to **setf** any part, **car** or **cdr**, of the *list structure* held by that *place*. 
 
@@ -3471,15 +3471,15 @@ Fri 12-Aug-1994 6:35pm EDT
 
 *→* (A B C F D) 
 
-<i><sup>or</sup>→</i> (B C F A D) 
+\<i\>\<sup\>or\</sup\>→\</i\> (B C F A D) 
 
-<i><sup>or</sup>→</i> (D F A B C) 
+\<i\>\<sup\>or\</sup\>→\</i\> (D F A B C) 
 
 (union ’((x 5) (y 6)) ’((z 2) (x 4)) :key #’car) 
 
 *→* ((X 5) (Y 6) (Z 2)) 
 
-<i><sup>or</sup>→</i> ((X 4) (Y 6) (Z 2)) 
+\<i\>\<sup\>or\</sup\>→\</i\> ((X 4) (Y 6) (Z 2)) 
 
 (setq lst1 (list 1 2 ’(1 2) "a" "b") 
 
@@ -3491,7 +3491,7 @@ lst2 (list 2 3 ’(2 3) "B" "C"))
 
 *→* (1 (1 2) "a" "b" 2 3 (2 3) "B" "C") 
 
-<i><sup>or</sup>→</i> (1 2 (1 2) "a" "b" "C" "B" (2 3) 3) 
+\<i\>\<sup\>or\</sup\>→\</i\> (1 2 (1 2) "a" "b" "C" "B" (2 3) 3) 
 
 **Side Effects:** 
 

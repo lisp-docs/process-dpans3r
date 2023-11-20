@@ -40,7 +40,7 @@ The body of an extended **loop** *form* is divided into **loop** clauses, each w
 
 **6.1.1.2 Loop Keywords** 
 
-*Loop keywords* are not true *keywords*<sub>1</sub>; they are special *symbols*, recognized by *name* rather than *object* identity, that are meaningful only to the **loop** facility. A *loop keyword* is a *symbol* but is recognized by its *name* (not its identity), regardless of the *packages* in which it is *accessible*. 
+*Loop keywords* are not true *keywords*\<sub\>1\</sub\>; they are special *symbols*, recognized by *name* rather than *object* identity, that are meaningful only to the **loop** facility. A *loop keyword* is a *symbol* but is recognized by its *name* (not its identity), regardless of the *packages* in which it is *accessible*. 
 
 In general, *loop keywords* are not *external symbols* of the COMMON-LISP *package*, except in the coincidental situation that a *symbol* with the same name as a *loop keyword* was needed for some other purpose in Common Lisp. For example, there is a *symbol* in the COMMON-LISP *package* whose *name* is "UNLESS" but not one whose *name* is "UNTIL". 
 
@@ -98,7 +98,7 @@ initially clauses in the order they appear in the source.
 
 **Loop body** 
 
-The loop body contains those *forms* that are executed during iteration, including application-specific calculations, termination tests, and variable *stepping*<sub>1</sub>. 
+The loop body contains those *forms* that are executed during iteration, including application-specific calculations, termination tests, and variable *stepping*\<sub\>1\</sub\>. 
 
 **Loop epilogue** 
 
@@ -114,7 +114,7 @@ Loop clauses fall into one of the following categories:
 
 **6.1.1.5.1 Summary of Variable Initialization and Stepping Clauses** 
 
-The for and as constructs provide iteration control clauses that establish a variable to be initialized. for and as clauses can be combined with the loop keyword and to get *parallel* initialization and *stepping*<sub>1</sub>. Otherwise, the initialization and *stepping*<sub>1</sub> are *sequential*. 
+The for and as constructs provide iteration control clauses that establish a variable to be initialized. for and as clauses can be combined with the loop keyword and to get *parallel* initialization and *stepping*\<sub\>1\</sub\>. Otherwise, the initialization and *stepping*\<sub\>1\</sub\> are *sequential*. 
 
 The with construct is similar to a single **let** clause. with clauses can be combined using the *loop keyword* and to get *parallel* initialization. 
 
@@ -344,7 +344,7 @@ See Section 3.6 (Traversal Rules and Side Effects).
 
 **6.1.2.1 Iteration Control** 
 
-Iteration control clauses allow direction of **loop** iteration. The *loop keywords* for and as designate iteration control clauses. Iteration control clauses differ with respect to the specification of termination tests and to the initialization and *stepping*<sub>1</sub> of loop variables. Iteration clauses by themselves do not cause the Loop Facility to return values, but they can be used in conjunction with value-accumulation clauses to return values. 
+Iteration control clauses allow direction of **loop** iteration. The *loop keywords* for and as designate iteration control clauses. Iteration control clauses differ with respect to the specification of termination tests and to the initialization and *stepping*\<sub\>1\</sub\> of loop variables. Iteration clauses by themselves do not cause the Loop Facility to return values, but they can be used in conjunction with value-accumulation clauses to return values. 
 
 All variables are initialized in the loop prologue. A *variable binding* has *lexical scope* unless it is proclaimed **special**; thus, by default, the variable can be *accessed* only by *forms* that lie textually within the **loop**. Stepping assignments are made in the loop body before any other *forms* are evaluated in the body. 
 
@@ -352,7 +352,7 @@ The variable argument in iteration control clauses can be a destructuring list. 
 
 The iteration control clauses for, as, and repeat must precede any other loop clauses, except initially, with, and named, since they establish variable *bindings*. When iteration control clauses are used in a **loop**, the corresponding termination tests in the loop body are evaluated before any other loop body code is executed. 
 
-If multiple iteration clauses are used to control iteration, variable initialization and *stepping*<sub>1</sub> occur *sequentially* by default. The and construct can be used to connect two or more iteration clauses when *sequential binding* and *stepping*<sub>1</sub> are not necessary. The iteration behavior of clauses joined by and is analogous to the behavior of the macro **do** with respect to **do\***. 
+If multiple iteration clauses are used to control iteration, variable initialization and *stepping*\<sub\>1\</sub\> occur *sequentially* by default. The and construct can be used to connect two or more iteration clauses when *sequential binding* and *stepping*\<sub\>1\</sub\> are not necessary. The iteration behavior of clauses joined by and is analogous to the behavior of the macro **do** with respect to **do\***. 
 
 **6–8** Programming Language—Common Lisp
 
@@ -360,13 +360,13 @@ Version 15.17R, X3J13/94-101R.
 
 Fri 12-Aug-1994 6:35pm EDT 
 
-The for and as clauses iterate by using one or more local loop variables that are initialized to some value and that can be modified or *stepped* <sub>1</sub> after each iteration. For these clauses, iteration terminates when a local variable reaches some supplied value or when some other loop clause terminates iteration. At each iteration, variables can be *stepped* <sub>1</sub> by an increment or a decrement or can be assigned a new value by the evaluation of a *form*). Destructuring can be used to assign values to variables during iteration. 
+The for and as clauses iterate by using one or more local loop variables that are initialized to some value and that can be modified or *stepped* \<sub\>1\</sub\> after each iteration. For these clauses, iteration terminates when a local variable reaches some supplied value or when some other loop clause terminates iteration. At each iteration, variables can be *stepped* \<sub\>1\</sub\> by an increment or a decrement or can be assigned a new value by the evaluation of a *form*). Destructuring can be used to assign values to variables during iteration. 
 
 The for and as keywords are synonyms; they can be used interchangeably. There are seven syntactic formats for these constructs. In each syntactic format, the *type* of *var* can be supplied by the optional *type-spec* argument. If *var* is a destructuring list, the *type* supplied by the *type-spec* argument must appropriately match the elements of the list. By convention, for introduces new iterations and as introduces iterations that depend on a previous iteration specification. 
 
 **6.1.2.1.1 The for-as-arithmetic subclause** 
 
-In the *for-as-arithmetic* subclause, the for or as construct iterates from the value supplied by *form1* to the value supplied by *form2* in increments or decrements denoted by *form3*. Each expression is evaluated only once and must evaluate to a *number* . The variable *var* is bound to the value of *form1* in the first iteration and is *stepped* <sub>1</sub> by the value of *form3* in each succeeding iteration, or by 1 if *form3* is not provided. The following *loop keywords* serve as valid prepositions within this syntax. At least one of the prepositions must be used; and at most one from each line may be used in a single subclause. 
+In the *for-as-arithmetic* subclause, the for or as construct iterates from the value supplied by *form1* to the value supplied by *form2* in increments or decrements denoted by *form3*. Each expression is evaluated only once and must evaluate to a *number* . The variable *var* is bound to the value of *form1* in the first iteration and is *stepped* \<sub\>1\</sub\> by the value of *form3* in each succeeding iteration, or by 1 if *form3* is not provided. The following *loop keywords* serve as valid prepositions within this syntax. At least one of the prepositions must be used; and at most one from each line may be used in a single subclause. 
 
 from | downfrom | upfrom 
 
@@ -388,7 +388,7 @@ The descriptions of the prepositions follow:
 
 from 
 
-The *loop keyword* from specifies the value from which *stepping*<sub>1</sub> begins, as supplied by *form1*. *Stepping*<sub>1</sub> is incremental by default. If decremental *stepping*<sub>1</sub> is desired, the preposition downto or above must be used with *form2*. For incremental *stepping*<sub>1</sub>, the default from value is 0. 
+The *loop keyword* from specifies the value from which *stepping*\<sub\>1\</sub\> begins, as supplied by *form1*. *Stepping*\<sub\>1\</sub\> is incremental by default. If decremental *stepping*\<sub\>1\</sub\> is desired, the preposition downto or above must be used with *form2*. For incremental *stepping*\<sub\>1\</sub\>, the default from value is 0. 
 
 Iteration **6–9**
 
@@ -402,15 +402,15 @@ The *loop keyword* downfrom indicates that the variable *var* is decreased in de
 
 to 
 
-The *loop keyword* to marks the end value for *stepping*<sub>1</sub> supplied in *form2*. *Stepping*<sub>1</sub> is incremental by default. If decremental *stepping*<sub>1</sub> is desired, the preposition downfrom must be used with *form1*, or else the preposition downto or above should be used instead of to with *form2*. 
+The *loop keyword* to marks the end value for *stepping*\<sub\>1\</sub\> supplied in *form2*. *Stepping*\<sub\>1\</sub\> is incremental by default. If decremental *stepping*\<sub\>1\</sub\> is desired, the preposition downfrom must be used with *form1*, or else the preposition downto or above should be used instead of to with *form2*. 
 
 downto, upto 
 
-The *loop keyword* downto specifies decremental *stepping*; the *loop keyword* upto specifies incremental *stepping*. In both cases, the amount of change on each step is specified by *form3*, and the **loop** terminates when the variable *var* passes the value of *form2*. Since there is no default for *form1* in decremental *stepping*<sub>1</sub>, a *form1* value must be supplied (using from or downfrom) when downto is supplied. 
+The *loop keyword* downto specifies decremental *stepping*; the *loop keyword* upto specifies incremental *stepping*. In both cases, the amount of change on each step is specified by *form3*, and the **loop** terminates when the variable *var* passes the value of *form2*. Since there is no default for *form1* in decremental *stepping*\<sub\>1\</sub\>, a *form1* value must be supplied (using from or downfrom) when downto is supplied. 
 
 below, above 
 
-The *loop keywords* below and above are analogous to upto and downto respectively. These keywords stop iteration just before the value of the variable *var* reaches the value supplied by *form2*; the end value of *form2* is not included. Since there is no default for *form1* in decremental *stepping*<sub>1</sub>, a *form1* value must be supplied (using from or downfrom) when above is supplied. 
+The *loop keywords* below and above are analogous to upto and downto respectively. These keywords stop iteration just before the value of the variable *var* reaches the value supplied by *form2*; the end value of *form2* is not included. Since there is no default for *form1* in decremental *stepping*\<sub\>1\</sub\>, a *form1* value must be supplied (using from or downfrom) when above is supplied. 
 
 by 
 
@@ -614,7 +614,7 @@ These loop prepositions introduce *hash-table*.
 
 In effect 
 
-being *{*each *|* the*} {*hash-value *|* hash-values *|* hash-key *|* hash-keys*} {*in *|* of*}* 
+being *\{*each *|* the*\} \{*hash-value *|* hash-values *|* hash-key *|* hash-keys*\} \{*in *|* of*\}* 
 
 is a compound preposition. 
 
@@ -658,7 +658,7 @@ These loop prepositions introduce *package*.
 
 In effect 
 
-being *{*each *|* the*} {*symbol *|* symbols *|* present-symbol *|* present-symbols *|* external-symbol *|* external-symbols*} {*in *|* of*}* 
+being *\{*each *|* the*\} \{*symbol *|* symbols *|* present-symbol *|* present-symbols *|* external-symbol *|* external-symbols*\} \{*in *|* of*\}* 
 
 is a compound preposition. 
 
@@ -1072,13 +1072,13 @@ Fri 12-Aug-1994 6:35pm EDT
 
 (loop for i from 0 to 10 
 
-always (< i 11)) 
+always (\< i 11)) 
 
 *→* T 
 
 (loop for i from 0 to 10 
 
-never (> i 11)) 
+never (\> i 11)) 
 
 *→* T 
 
@@ -1088,7 +1088,7 @@ never (> i 11))
 
 (loop for i from 0 
 
-thereis (when (> i 10) i) ) 
+thereis (when (\> i 10) i) ) 
 
 *→* 11 
 
@@ -1096,7 +1096,7 @@ thereis (when (> i 10) i) )
 
 (loop for i from 0 to 10 
 
-always (< i 9) 
+always (\< i 9) 
 
 finally (print "you won’t see this")) 
 
@@ -1120,7 +1120,7 @@ finally (print "you won’t see this"))
 
 (loop for i from 1 to 10 
 
-thereis (> i 11) 
+thereis (\> i 11) 
 
 finally (prin1 ’got-here)) 
 
@@ -1190,7 +1190,7 @@ while stack))
 
 when (oddp i) collect i 
 
-while (< i 5)) 
+while (\< i 5)) 
 
 *→* (3 5) 
 
@@ -1294,7 +1294,7 @@ return i))
 
 (loop for i from 1 to 10 
 
-when (> i 5) 
+when (\> i 5) 
 
 collect i 
 
@@ -1306,7 +1306,7 @@ finally (prin1 ’got-here))
 
 ;; Return both the count of collected numbers and the numbers. (loop for i from 1 to 10 
 
-when (> i 5) 
+when (\> i 5) 
 
 collect i into number-list 
 
@@ -1446,9 +1446,9 @@ Fri 12-Aug-1994 6:35pm EDT
 
 (loop for i in ’(1 2 3 4 5 6) 
 
-when (and (> i 3) i) 
+when (and (\> i 3) i) 
 
-collect it) ; IT refers to (and (> i 3) i). 
+collect it) ; IT refers to (and (\> i 3) i). 
 
 *→* (4 5 6) 
 
@@ -1456,7 +1456,7 @@ collect it) ; IT refers to (and (> i 3) i).
 
 (loop for i in ’(1 2 3 4 5 6) 
 
-when (and (> i 3) i) 
+when (and (\> i 3) i) 
 
 return it) 
 
@@ -1466,7 +1466,7 @@ return it)
 
 (loop for i in ’(1 2 3 4 5 6) 
 
-thereis (and (> i 3) i)) 
+thereis (and (\> i 3) i)) 
 
 *→* 4 
 
@@ -1562,21 +1562,21 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **Syntax:** 
 
-**do** (*{var |* (*var* [*init-form* [*step-form*]])*}*\*) 
+**do** (*\{var |* (*var* [*init-form* [*step-form*]])*\}*\*) 
 
-(*end-test-form {result-form}*\*) 
+(*end-test-form \{result-form\}*\*) 
 
-*{declaration}*\* *{tag | statement}*\* 
+*\{declaration\}*\* *\{tag | statement\}*\* 
 
-*→ {result}*\* 
+*→ \{result\}*\* 
 
-**do\*** (*{var |* (*var* [*init-form* [*step-form*]])*}*\*) 
+**do\*** (*\{var |* (*var* [*init-form* [*step-form*]])*\}*\*) 
 
-(*end-test-form {result-form}*\*) 
+(*end-test-form \{result-form\}*\*) 
 
-*{declaration}*\* *{tag | statement}*\* 
+*\{declaration\}*\* *\{tag | statement\}*\* 
 
-*→ {result}*\* 
+*→ \{result\}*\* 
 
 **Arguments and Values:** 
 
@@ -1614,7 +1614,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 Before the first iteration, all the *init-forms* are evaluated, and each *var* is bound to the value of its respective *init-form*, if supplied. This is a *binding*, not an assignment; when the loop terminates, the old values of those variables will be restored. For **do**, all of the *init-forms* are evaluated before 
 
-any *var* is bound. The *init-forms* can refer to the *bindings* of the *vars* visible before beginning execution of **do**. For **do\***, the first *init-form* is evaluated, then the first *var* is bound to that value, then the second *init-form* is evaluated, then the second *var* is bound, and so on; in general, the *k*th *init-form* can refer to the new binding of the *j*th *var* if *j* < *k*, and otherwise to the old binding of the *j*th *var*. 
+any *var* is bound. The *init-forms* can refer to the *bindings* of the *vars* visible before beginning execution of **do**. For **do\***, the first *init-form* is evaluated, then the first *var* is bound to that value, then the second *init-form* is evaluated, then the second *var* is bound, and so on; in general, the *k*th *init-form* can refer to the new binding of the *j*th *var* if *j* \< *k*, and otherwise to the old binding of the *j*th *var*. 
 
 At the beginning of each iteration, after processing the variables, the *end-test-form* is evaluated. If the result is *false*, execution proceeds with the body of the **do** (or **do\***) form. If the result is *true*, the *result-forms* are evaluated in order as an *implicit progn*, and then **do** or **do\*** returns. 
 
@@ -1634,7 +1634,7 @@ An *implicit block* named **nil** surrounds the entire **do** (or **do\***) form
 
 (temp-two 0 (1- temp-two))) 
 
-((> (- temp-one temp-two) 5) temp-one)) *→* 4 
+((\> (- temp-one temp-two) 5) temp-one)) *→* 4 
 
 **6–32** Programming Language—Common Lisp
 
@@ -1796,9 +1796,9 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **Syntax:** 
 
-**dotimes** (*var count-form* [*result-form*]) *{declaration}*\* *{tag | statement}*\* 
+**dotimes** (*var count-form* [*result-form*]) *\{declaration\}*\* *\{tag | statement\}*\* 
 
-*→ {result}*\* 
+*→ \{result\}*\* 
 
 **Arguments and Values:** 
 
@@ -1920,9 +1920,9 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **Syntax:** 
 
-**dolist** (*var list-form* [*result-form*]) *{declaration}*\* *{tag | statement}*\* 
+**dolist** (*var list-form* [*result-form*]) *\{declaration\}*\* *\{tag | statement\}*\* 
 
-*→ {result}*\* 
+*→ \{result\}*\* 
 
 **Arguments and Values:** 
 
@@ -1988,25 +1988,25 @@ temp-two *→* 4
 
 The “simple” **loop** *form*: 
 
-**loop** *{compound-form}*\* *→ {result}*\* 
+**loop** *\{compound-form\}*\* *→ \{result\}*\* 
 
 The “extended” **loop** *form*: 
 
-**loop** [*↓name-clause*] *{↓variable-clause}*\* *{↓main-clause}*\* *→ {result}*\* 
+**loop** [*↓name-clause*] *\{↓variable-clause\}*\* *\{↓main-clause\}*\* *→ \{result\}*\* 
 
 *name-clause::*=named *name* 
 
 *variable-clause::*=*↓with-clause | ↓initial-final | ↓for-as-clause* 
 
-*with-clause::*=with *var1* [*type-spec*] [= *form1*] *{*and *var2* [*type-spec*] [= *form2*]*}*\* 
+*with-clause::*=with *var1* [*type-spec*] [= *form1*] *\{*and *var2* [*type-spec*] [= *form2*]*\}*\* 
 
-*main-clause::*=*↓unconditional | ↓accumulation | ↓conditional | ↓termination-test | ↓initial-final initial-final::*=initially *{compound-form}*<sup>+</sup>*|* finally *{compound-form}*<sup>+</sup> 
+*main-clause::*=*↓unconditional | ↓accumulation | ↓conditional | ↓termination-test | ↓initial-final initial-final::*=initially *\{compound-form\}*\<sup\>+\</sup\>*|* finally *\{compound-form\}*\<sup\>+\</sup\> 
 
-*unconditional::*=*{*do *|* doing*} {compound-form}*<sup>+</sup>*|* return *{form |* it*}* 
+*unconditional::*=*\{*do *|* doing*\} \{compound-form\}*\<sup\>+\</sup\>*|* return *\{form |* it*\}* 
 
 *accumulation::*=*↓list-accumulation | ↓numeric-accumulation* 
 
-*list-accumulation::*=*{*collect *|* collecting *|* append *|* appending *|* nconc *|* nconcing*} {form |* it*}* [into *simple-var*] 
+*list-accumulation::*=*\{*collect *|* collecting *|* append *|* appending *|* nconc *|* nconcing*\} \{form |* it*\}* [into *simple-var*] 
 
 **6–38** Programming Language—Common Lisp
 
@@ -2016,31 +2016,31 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **loop** 
 
-*numeric-accumulation::*=*{*count *|* counting *|* sum *|* summing *|* 
+*numeric-accumulation::*=*\{*count *|* counting *|* sum *|* summing *|* 
 
-maximize *|* maximizing *|* minimize *|* minimizing*} {form |* it*}* 
+maximize *|* maximizing *|* minimize *|* minimizing*\} \{form |* it*\}* 
 
 [into *simple-var*] [*type-spec*] 
 
-*conditional::*=*{*if *|* when *|* unless*} form ↓selectable-clause {*and *↓selectable-clause}*\* 
+*conditional::*=*\{*if *|* when *|* unless*\} form ↓selectable-clause \{*and *↓selectable-clause\}*\* 
 
-[else *↓selectable-clause {*and *↓selectable-clause}*\*] 
+[else *↓selectable-clause \{*and *↓selectable-clause\}*\*] 
 
 [end] 
 
 *selectable-clause::*=*↓unconditional | ↓accumulation | ↓conditional* 
 
-*termination-test::*=while *form |* until *form |* repeat *form |* always *form |* never *form |* thereis *form for-as-clause::*=*{*for *|* as*} ↓for-as-subclause {*and *↓for-as-subclause}*\* 
+*termination-test::*=while *form |* until *form |* repeat *form |* always *form |* never *form |* thereis *form for-as-clause::*=*\{*for *|* as*\} ↓for-as-subclause \{*and *↓for-as-subclause\}*\* 
 
 *for-as-subclause::*=*↓for-as-arithmetic | ↓for-as-in-list | ↓for-as-on-list | ↓for-as-equals-then | ↓for-as-across | ↓for-as-hash | ↓for-as-package* 
 
 *for-as-arithmetic::*=*var* [*type-spec*] *↓for-as-arithmetic-subclause* 
 
-*for-as-arithmetic-subclause::*=*↓arithmetic-up | ↓arithmetic-downto | ↓arithmetic-downfrom arithmetic-up::*=[[ *{*from *|* upfrom*} form1 | {*to *|* upto *|* below*} form2 |* by *form3* ]]<sup>+</sup> 
+*for-as-arithmetic-subclause::*=*↓arithmetic-up | ↓arithmetic-downto | ↓arithmetic-downfrom arithmetic-up::*=[[ *\{*from *|* upfrom*\} form1 | \{*to *|* upto *|* below*\} form2 |* by *form3* ]]\<sup\>+\</sup\> 
 
-*arithmetic-downto::*=[[ *{*from *form1}*<sup>1</sup>*| {{*downto *|* above*} form2}*<sup>1</sup>*|* by *form3* ]] 
+*arithmetic-downto::*=[[ *\{*from *form1\}*\<sup\>1\</sup\>*| \{\{*downto *|* above*\} form2\}*\<sup\>1\</sup\>*|* by *form3* ]] 
 
-*arithmetic-downfrom::*=[[ *{*downfrom *form1}*<sup>1</sup>*| {*to *|* downto *|* above*} form2 |* by *form3* ]] *for-as-in-list::*=*var* [*type-spec*] in *form1* [by *step-fun*] 
+*arithmetic-downfrom::*=[[ *\{*downfrom *form1\}*\<sup\>1\</sup\>*| \{*to *|* downto *|* above*\} form2 |* by *form3* ]] *for-as-in-list::*=*var* [*type-spec*] in *form1* [by *step-fun*] 
 
 *for-as-on-list::*=*var* [*type-spec*] on *form1* [by *step-fun*] 
 
@@ -2048,15 +2048,15 @@ maximize *|* maximizing *|* minimize *|* minimizing*} {form |* it*}*
 
 *for-as-across::*=*var* [*type-spec*] across *vector* 
 
-*for-as-hash::*=*var* [*type-spec*] being *{*each *|* the*}* 
+*for-as-hash::*=*var* [*type-spec*] being *\{*each *|* the*\}* 
 
-*{{*hash-key *|* hash-keys*} {*in *|* of*} hash-table* 
+*\{\{*hash-key *|* hash-keys*\} \{*in *|* of*\} hash-table* 
 
 [using (hash-value *other-var*)] *|* 
 
-*{*hash-value *|* hash-values*} {*in *|* of*} hash-table* 
+*\{*hash-value *|* hash-values*\} \{*in *|* of*\} hash-table* 
 
-[using (hash-key *other-var*)]*}* 
+[using (hash-key *other-var*)]*\}* 
 
 Iteration **6–39**
 
@@ -2066,15 +2066,15 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **loop** 
 
-*for-as-package::*=*var* [*type-spec*] being *{*each *|* the*}* 
+*for-as-package::*=*var* [*type-spec*] being *\{*each *|* the*\}* 
 
-*{*symbol *|* symbols *|* 
+*\{*symbol *|* symbols *|* 
 
 present-symbol *|* present-symbols *|* 
 
-external-symbol *|* external-symbols*}* 
+external-symbol *|* external-symbols*\}* 
 
-[*{*in *|* of*} package*] 
+[*\{*in *|* of*\} package*] 
 
 *type-spec::*=*↓simple-type-spec | ↓destructured-type-spec* 
 
@@ -2210,7 +2210,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 Except that **loop-finish** cannot be used within a simple **loop** *form*, a simple **loop** *form* is related to an extended **loop** *form* in the following way: 
 
-(loop *{compound-form}*\*) *≡* (loop do *{compound-form}*\*) 
+(loop *\{compound-form\}*\*) *≡* (loop do *\{compound-form\}*\*) 
 
 **loop-finish** *Local Macro* 
 

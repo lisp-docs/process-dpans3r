@@ -22,7 +22,7 @@ Syntax information for use by the *Lisp reader* is embodied in an *object* calle
 
 Figure 2–1 lists some *defined names* that are applicable to *readtables*. 
 
-|<p>**\*readtable\* readtable-case** </p><p>**copy-readtable readtablep** </p><p>**get-dispatch-macro-character set-dispatch-macro-character get-macro-character set-macro-character** </p><p>**make-dispatch-macro-character set-syntax-from-char**</p>|
+|\<p\>**\*readtable\* readtable-case** \</p\>\<p\>**copy-readtable readtablep** \</p\>\<p\>**get-dispatch-macro-character set-dispatch-macro-character get-macro-character set-macro-character** \</p\>\<p\>**make-dispatch-macro-character set-syntax-from-char**\</p\>|
 | :- |
 
 
@@ -30,7 +30,7 @@ Figure 2–1 lists some *defined names* that are applicable to *readtables*.
 
 **2.1.1.1 The Current Readtable** 
 
-Several *readtables* describing different syntaxes can exist, but at any given time only one, called the *current readtable*, affects the way in which *expressions*<sub>2</sub> are parsed into *objects* by the *Lisp reader* . The *current readtable* in a given *dynamic environment* is the *value* of **\*readtable\*** in that *environment*. To make a different *readtable* become the *current readtable*, **\*readtable\*** can be *assigned* or *bound*. 
+Several *readtables* describing different syntaxes can exist, but at any given time only one, called the *current readtable*, affects the way in which *expressions*\<sub\>2\</sub\> are parsed into *objects* by the *Lisp reader* . The *current readtable* in a given *dynamic environment* is the *value* of **\*readtable\*** in that *environment*. To make a different *readtable* become the *current readtable*, **\*readtable\*** can be *assigned* or *bound*. 
 
 **2.1.1.2 The Standard Readtable** 
 
@@ -82,7 +82,7 @@ The **standard-char** *repertoire* consists of the *non-graphic character newlin
 
 |**Graphic ID Glyph Description**|
 | :- |
-|<p>SP02 ! exclamation mark </p><p>SC03 $ dollar sign </p><p>SP04 " quotation mark, or double quote SP05 ’ apostrophe, or [single] quote </p><p>SP06 ( left parenthesis, or open parenthesis SP07 ) right parenthesis, or close parenthesis SP08 , comma </p><p>SP09 low line, or underscore </p><p>SP10 - hyphen, or minus [sign] </p><p>SP11 . full stop, period, or dot </p><p>SP12 / solidus, or slash </p><p>SP13 : colon </p><p>SP14 ; semicolon </p><p>SP15 ? question mark </p><p>SA01 + plus [sign] </p><p>SA03 < less-than [sign] </p><p>SA04 = equals [sign] </p><p>SA05 > greater-than [sign] </p><p>SM01 # number sign, or sharp[sign] </p><p>SM02 % percent [sign] </p><p>SM03 & ampersand </p><p>SM04 \* asterisk, or star </p><p>SM05 @ commercial at, or at-sign </p><p>SM06 [ left [square] bracket </p><p>SM07 \ reverse solidus, or backslash </p><p>SM08 ] right [square] bracket </p><p>SM11 { left curly bracket, or left brace </p><p>SM13 | vertical bar </p><p>SM14 } right curly bracket, or right brace SD13 ‘ grave accent, or backquote </p><p>SD15 <i><sup>∧</sup></i> circumflex accent </p><p>SD19 ~ tilde</p>|
+|\<p\>SP02 ! exclamation mark \</p\>\<p\>SC03 $ dollar sign \</p\>\<p\>SP04 " quotation mark, or double quote SP05 ’ apostrophe, or [single] quote \</p\>\<p\>SP06 ( left parenthesis, or open parenthesis SP07 ) right parenthesis, or close parenthesis SP08 , comma \</p\>\<p\>SP09 low line, or underscore \</p\>\<p\>SP10 - hyphen, or minus [sign] \</p\>\<p\>SP11 . full stop, period, or dot \</p\>\<p\>SP12 / solidus, or slash \</p\>\<p\>SP13 : colon \</p\>\<p\>SP14 ; semicolon \</p\>\<p\>SP15 ? question mark \</p\>\<p\>SA01 + plus [sign] \</p\>\<p\>SA03 \< less-than [sign] \</p\>\<p\>SA04 = equals [sign] \</p\>\<p\>SA05 \> greater-than [sign] \</p\>\<p\>SM01 # number sign, or sharp[sign] \</p\>\<p\>SM02 % percent [sign] \</p\>\<p\>SM03 & ampersand \</p\>\<p\>SM04 \* asterisk, or star \</p\>\<p\>SM05 @ commercial at, or at-sign \</p\>\<p\>SM06 [ left [square] bracket \</p\>\<p\>SM07 \ reverse solidus, or backslash \</p\>\<p\>SM08 ] right [square] bracket \</p\>\<p\>SM11 \{ left curly bracket, or left brace \</p\>\<p\>SM13 | vertical bar \</p\>\<p\>SM14 \} right curly bracket, or right brace SD13 ‘ grave accent, or backquote \</p\>\<p\>SD15 \<i\>\<sup\>∧\</sup\>\</i\> circumflex accent \</p\>\<p\>SD19 ~ tilde\</p\>|
 
 
 **Figure 2–5. Standard Character Subrepertoire (Part 3 of 3: Special Characters)** 
@@ -99,7 +99,7 @@ produces, and the *Lisp reader* has features that are not used by the *Lisp prin
 
 When the *Lisp reader* is invoked, it reads a single character from the *input stream* and dispatches according to the *syntax type* of that *character* . Every *character* that can appear in the *input stream* is of one of the *syntax types* shown in Figure 2–6. 
 
-|<p>*constituent macro character single escape* </p><p>*invalid multiple escape whitespace*<sub>2</sub></p>|
+|\<p\>*constituent macro character single escape* \</p\>\<p\>*invalid multiple escape whitespace*\<sub\>2\</sub\>\</p\>|
 | :- |
 
 
@@ -111,16 +111,16 @@ Figure 2–7 lists the *syntax type* of each *character* in *standard syntax* .
 
 |**character syntax type character syntax type**|
 | :- |
-|Backspace <i>constituent</i> 0–9 <i>constituent</i> Tab <i>whitespace</i><sub>2</sub> : <i>constituent</i> Newline <i>whitespace</i><sub>2</sub> ; <i>terminating macro char</i> Linefeed <i>whitespace</i><sub>2</sub> < <i>constituent</i> Page <i>whitespace</i><sub>2</sub> = <i>constituent</i> Return <i>whitespace</i><sub>2</sub> > <i>constituent</i> Space <i>whitespace</i><sub>2</sub> ? <i>constituent</i>* ! <i>constituent</i>* @ <i>constituent</i> " <i>terminating macro char</i> A–Z <i>constituent</i> # <i>non-terminating macro char</i> [ <i>constituent</i>* $ <i>constituent</i> \ <i>single escape</i> % <i>constituent</i> ] <i>constituent</i>* & <i>constituent <sup>∧</sup> constituent</i> ’ <i>terminating macro char constituent</i> ( <i>terminating macro char</i> ‘ <i>terminating macro char</i> ) <i>terminating macro char</i> a–z <i>constituent</i> * <i>constituent</i> { <i>constituent</i>* + <i>constituent</i> | <i>multiple escape</i> , <i>terminating macro char</i> } <i>constituent</i>* - <i>constituent</i> ~ <i>constituent</i> . <i>constituent</i> Rubout <i>constituent</i> / <i>constituent</i>|
+|Backspace \<i\>constituent\</i\> 0–9 \<i\>constituent\</i\> Tab \<i\>whitespace\</i\>\<sub\>2\</sub\> : \<i\>constituent\</i\> Newline \<i\>whitespace\</i\>\<sub\>2\</sub\> ; \<i\>terminating macro char\</i\> Linefeed \<i\>whitespace\</i\>\<sub\>2\</sub\> \< \<i\>constituent\</i\> Page \<i\>whitespace\</i\>\<sub\>2\</sub\> = \<i\>constituent\</i\> Return \<i\>whitespace\</i\>\<sub\>2\</sub\> \> \<i\>constituent\</i\> Space \<i\>whitespace\</i\>\<sub\>2\</sub\> ? \<i\>constituent\</i\>* ! \<i\>constituent\</i\>* @ \<i\>constituent\</i\> " \<i\>terminating macro char\</i\> A–Z \<i\>constituent\</i\> # \<i\>non-terminating macro char\</i\> [ \<i\>constituent\</i\>* $ \<i\>constituent\</i\> \ \<i\>single escape\</i\> % \<i\>constituent\</i\> ] \<i\>constituent\</i\>* & \<i\>constituent \<sup\>∧\</sup\> constituent\</i\> ’ \<i\>terminating macro char constituent\</i\> ( \<i\>terminating macro char\</i\> ‘ \<i\>terminating macro char\</i\> ) \<i\>terminating macro char\</i\> a–z \<i\>constituent\</i\> * \<i\>constituent\</i\> \{ \<i\>constituent\</i\>* + \<i\>constituent\</i\> | \<i\>multiple escape\</i\> , \<i\>terminating macro char\</i\> \} \<i\>constituent\</i\>* - \<i\>constituent\</i\> ~ \<i\>constituent\</i\> . \<i\>constituent\</i\> Rubout \<i\>constituent\</i\> / \<i\>constituent\</i\>|
 
 
 **Figure 2–7. Character Syntax Types in Standard Syntax**  
 
 
 
-The characters marked with an asterisk (\*) are initially *constituents*, but they are not used in any standard Common Lisp notations. These characters are explicitly reserved to the *programmer* . ~ is not used in Common Lisp, and reserved to implementors. $ and % are *alphabetic*<sub>2</sub> *characters*, but are not used in the names of any standard Common Lisp *defined names*. 
+The characters marked with an asterisk (\*) are initially *constituents*, but they are not used in any standard Common Lisp notations. These characters are explicitly reserved to the *programmer* . ~ is not used in Common Lisp, and reserved to implementors. $ and % are *alphabetic*\<sub\>2\</sub\> *characters*, but are not used in the names of any standard Common Lisp *defined names*. 
 
-*Whitespace*<sub>2</sub> characters serve as separators but are otherwise ignored. *Constituent* and *escape characters* are accumulated to make a *token*, which is then interpreted as a *number* or *symbol*. *Macro characters* trigger the invocation of *functions* (possibly user-supplied) that can perform arbitrary parsing actions. *Macro characters* are divided into two kinds, *terminating* and *non* 
+*Whitespace*\<sub\>2\</sub\> characters serve as separators but are otherwise ignored. *Constituent* and *escape characters* are accumulated to make a *token*, which is then interpreted as a *number* or *symbol*. *Macro characters* trigger the invocation of *functions* (possibly user-supplied) that can perform arbitrary parsing actions. *Macro characters* are divided into two kinds, *terminating* and *non* 
 
 *terminating*, depending on whether or not they terminate a *token*. The following are descriptions of each kind of *syntax type*. 
 
@@ -132,24 +132,24 @@ Letters in symbol names are sometimes converted to letters in the opposite *case
 
 **2.1.4.2 Constituent Traits** 
 
-Every *character* has one or more *constituent traits* that define how the *character* is to be interpreted by the *Lisp reader* when the *character* is a *constituent character* . These *constituent traits* are *alphabetic*<sub>2</sub>, digit, *package marker* , plus sign, minus sign, dot, decimal point, *ratio marker* , *exponent marker* , and *invalid*. Figure 2–8 shows the *constituent traits* of the *standard characters* and of certain *semi-standard characters*; no mechanism is provided for changing the *constituent trait* of a *character* . Any *character* with the alphadigit *constituent trait* in that figure is a digit if the *current input base* is greater than that character’s digit value, otherwise the *character* is *alphabetic*<sub>2</sub>. Any *character* quoted by a *single escape* is treated as an *alphabetic*<sub>2</sub> constituent, regardless of its normal syntax.  
+Every *character* has one or more *constituent traits* that define how the *character* is to be interpreted by the *Lisp reader* when the *character* is a *constituent character* . These *constituent traits* are *alphabetic*\<sub\>2\</sub\>, digit, *package marker* , plus sign, minus sign, dot, decimal point, *ratio marker* , *exponent marker* , and *invalid*. Figure 2–8 shows the *constituent traits* of the *standard characters* and of certain *semi-standard characters*; no mechanism is provided for changing the *constituent trait* of a *character* . Any *character* with the alphadigit *constituent trait* in that figure is a digit if the *current input base* is greater than that character’s digit value, otherwise the *character* is *alphabetic*\<sub\>2\</sub\>. Any *character* quoted by a *single escape* is treated as an *alphabetic*\<sub\>2\</sub\> constituent, regardless of its normal syntax.  
 
 
 
-|<p>**constituent traits constituent traits** </p><p>**character character**</p>|
+|\<p\>**constituent traits constituent traits** \</p\>\<p\>**character character**\</p\>|
 | :- |
-|<p>Backspace *invalid* { *alphabetic*<sub>2</sub> </p><p>Tab *invalid*\* } *alphabetic*<sub>2</sub> </p><p>Newline *invalid*\* + *alphabetic*<sub>2</sub>, plus sign Linefeed *invalid*\* - *alphabetic*<sub>2</sub>, minus sign Page *invalid*\* . *alphabetic*<sub>2</sub>, dot, decimal point Return *invalid*\* / *alphabetic*<sub>2</sub>, *ratio marker* Space *invalid*\* A, a alphadigit </p><p>! *alphabetic*<sub>2</sub> B, b alphadigit </p><p>" *alphabetic*<sub>2</sub>\* C, c alphadigit </p><p># *alphabetic*<sub>2</sub>\* D, d alphadigit, double-float *exponent marker* $ *alphabetic*<sub>2</sub> E, e alphadigit, float *exponent marker* % *alphabetic*<sub>2</sub> F, f alphadigit, single-float *exponent marker* & *alphabetic*<sub>2</sub> G, g alphadigit </p><p>’ *alphabetic*<sub>2</sub>\* H, h alphadigit </p><p>( *alphabetic*<sub>2</sub>\* I, i alphadigit </p><p>) *alphabetic*<sub>2</sub>\* J, j alphadigit </p><p>\* *alphabetic*<sub>2</sub> K, k alphadigit </p><p>, *alphabetic*<sub>2</sub>\* L, l alphadigit, long-float *exponent marker* 0-9 alphadigit M, m alphadigit </p><p>: *package marker* N, n alphadigit </p><p>; *alphabetic*<sub>2</sub>\* O, o alphadigit </p><p>< *alphabetic*<sub>2</sub> P, p alphadigit </p><p>= *alphabetic*<sub>2</sub> Q, q alphadigit </p><p>> *alphabetic*<sub>2</sub> R, r alphadigit </p><p>? *alphabetic*<sub>2</sub> S, s alphadigit, short-float *exponent marker* @ *alphabetic*<sub>2</sub> T, t alphadigit </p><p>[ *alphabetic*<sub>2</sub> U, u alphadigit </p><p>\ *alphabetic*<sub>2</sub>\* V, v alphadigit </p><p>] *alphabetic*<sub>2</sub> W, w alphadigit </p><p><i><sup>∧</sup> alphabetic</i><sub>2</sub> X, x alphadigit </p><p>*alphabetic*<sub>2</sub> Y, y alphadigit </p><p>‘ *alphabetic*<sub>2</sub>\* Z, z alphadigit </p><p>| *alphabetic*<sub>2</sub>\* Rubout *invalid* </p><p>~ *alphabetic*<sub>2</sub></p>|
+|\<p\>Backspace *invalid* \{ *alphabetic*\<sub\>2\</sub\> \</p\>\<p\>Tab *invalid*\* \} *alphabetic*\<sub\>2\</sub\> \</p\>\<p\>Newline *invalid*\* + *alphabetic*\<sub\>2\</sub\>, plus sign Linefeed *invalid*\* - *alphabetic*\<sub\>2\</sub\>, minus sign Page *invalid*\* . *alphabetic*\<sub\>2\</sub\>, dot, decimal point Return *invalid*\* / *alphabetic*\<sub\>2\</sub\>, *ratio marker* Space *invalid*\* A, a alphadigit \</p\>\<p\>! *alphabetic*\<sub\>2\</sub\> B, b alphadigit \</p\>\<p\>" *alphabetic*\<sub\>2\</sub\>\* C, c alphadigit \</p\>\<p\># *alphabetic*\<sub\>2\</sub\>\* D, d alphadigit, double-float *exponent marker* $ *alphabetic*\<sub\>2\</sub\> E, e alphadigit, float *exponent marker* % *alphabetic*\<sub\>2\</sub\> F, f alphadigit, single-float *exponent marker* & *alphabetic*\<sub\>2\</sub\> G, g alphadigit \</p\>\<p\>’ *alphabetic*\<sub\>2\</sub\>\* H, h alphadigit \</p\>\<p\>( *alphabetic*\<sub\>2\</sub\>\* I, i alphadigit \</p\>\<p\>) *alphabetic*\<sub\>2\</sub\>\* J, j alphadigit \</p\>\<p\>\* *alphabetic*\<sub\>2\</sub\> K, k alphadigit \</p\>\<p\>, *alphabetic*\<sub\>2\</sub\>\* L, l alphadigit, long-float *exponent marker* 0-9 alphadigit M, m alphadigit \</p\>\<p\>: *package marker* N, n alphadigit \</p\>\<p\>; *alphabetic*\<sub\>2\</sub\>\* O, o alphadigit \</p\>\<p\>\< *alphabetic*\<sub\>2\</sub\> P, p alphadigit \</p\>\<p\>= *alphabetic*\<sub\>2\</sub\> Q, q alphadigit \</p\>\<p\>\> *alphabetic*\<sub\>2\</sub\> R, r alphadigit \</p\>\<p\>? *alphabetic*\<sub\>2\</sub\> S, s alphadigit, short-float *exponent marker* @ *alphabetic*\<sub\>2\</sub\> T, t alphadigit \</p\>\<p\>[ *alphabetic*\<sub\>2\</sub\> U, u alphadigit \</p\>\<p\>\ *alphabetic*\<sub\>2\</sub\>\* V, v alphadigit \</p\>\<p\>] *alphabetic*\<sub\>2\</sub\> W, w alphadigit \</p\>\<p\>\<i\>\<sup\>∧\</sup\> alphabetic\</i\>\<sub\>2\</sub\> X, x alphadigit \</p\>\<p\>*alphabetic*\<sub\>2\</sub\> Y, y alphadigit \</p\>\<p\>‘ *alphabetic*\<sub\>2\</sub\>\* Z, z alphadigit \</p\>\<p\>| *alphabetic*\<sub\>2\</sub\>\* Rubout *invalid* \</p\>\<p\>~ *alphabetic*\<sub\>2\</sub\>\</p\>|
 
 
 **Figure 2–8. Constituent Traits of Standard Characters and Semi-Standard Characters** 
 
-The interpretations in this table apply only to *characters* whose *syntax type* is *constituent*. Entries marked with an asterisk (\*) are normally *shadowed* <sub>2</sub> because the indicated *characters* are of *syntax type whitespace*<sub>2</sub>, *macro character* , *single escape*, or *multiple escape*; these *constituent traits* apply to them only if their *syntax types* are changed to *constituent*.  
+The interpretations in this table apply only to *characters* whose *syntax type* is *constituent*. Entries marked with an asterisk (\*) are normally *shadowed* \<sub\>2\</sub\> because the indicated *characters* are of *syntax type whitespace*\<sub\>2\</sub\>, *macro character* , *single escape*, or *multiple escape*; these *constituent traits* apply to them only if their *syntax types* are changed to *constituent*.  
 
 
 
 **2.1.4.3 Invalid Characters** 
 
-*Characters* with the *constituent trait invalid* cannot ever appear in a *token* except under the control of a *single escape character* . If an *invalid character* is encountered while an *object* is being read, an error of *type* **reader-error** is signaled. If an *invalid character* is preceded by a *single escape character* , it is treated as an *alphabetic*<sub>2</sub> *constituent* instead. 
+*Characters* with the *constituent trait invalid* cannot ever appear in a *token* except under the control of a *single escape character* . If an *invalid character* is encountered while an *object* is being read, an error of *type* **reader-error** is signaled. If an *invalid character* is preceded by a *single escape character* , it is treated as an *alphabetic*\<sub\>2\</sub\> *constituent* instead. 
 
 **2.1.4.4 Macro Characters** 
 
@@ -161,7 +161,7 @@ Upon encountering a *macro character* , the *Lisp reader* calls its *reader macr
 
 A *macro character* is either *terminating* or *non-terminating*. The difference between *terminating* and *non-terminating macro characters* lies in what happens when such characters occur in the middle of a *token*. If a *non-terminating macro character* occurs in the middle of a *token*, the *function* associated with the *non-terminating macro character* is not called, and the *non terminating macro character* does not terminate the *token*’s name; it becomes part of the name as if the *macro character* were really a constituent character. A *terminating macro character* terminates any *token*, and its associated *reader macro function* is called no matter where the *character* appears. The only *non-terminating macro character* in *standard syntax* is *sharpsign*. 
 
-If a *character* is a *dispatching macro character C*<sub>1</sub>, its *reader macro function* is a *function* supplied by the *implementation*. This *function* reads decimal *digit characters* until a non-*digit C*<sub>2</sub> is read. If any *digits* were read, they are converted into a corresponding *integer* infix parameter *P*; otherwise, the infix parameter *P* is **nil**. The terminating non-*digit C*<sub>2</sub> is a *character* (sometimes called a “sub-character” to emphasize its subordinate role in the dispatching) that is looked up in the dispatch table associated with the *dispatching macro character C*<sub>1</sub>. The *reader macro function* associated with the sub-character *C*<sub>2</sub> is invoked with three arguments: the *stream*, the sub-character *C*<sub>2</sub>, and the infix parameter *P*. For more information about dispatch characters, see the *function* **set-dispatch-macro-character**. 
+If a *character* is a *dispatching macro character C*\<sub\>1\</sub\>, its *reader macro function* is a *function* supplied by the *implementation*. This *function* reads decimal *digit characters* until a non-*digit C*\<sub\>2\</sub\> is read. If any *digits* were read, they are converted into a corresponding *integer* infix parameter *P*; otherwise, the infix parameter *P* is **nil**. The terminating non-*digit C*\<sub\>2\</sub\> is a *character* (sometimes called a “sub-character” to emphasize its subordinate role in the dispatching) that is looked up in the dispatch table associated with the *dispatching macro character C*\<sub\>1\</sub\>. The *reader macro function* associated with the sub-character *C*\<sub\>2\</sub\> is invoked with three arguments: the *stream*, the sub-character *C*\<sub\>2\</sub\>, and the infix parameter *P*. For more information about dispatch characters, see the *function* **set-dispatch-macro-character**. 
 
 For information about the *macro characters* that are available in *standard syntax* , see Section 2.4 (Standard Macro Characters).  
 
@@ -169,7 +169,7 @@ For information about the *macro characters* that are available in *standard syn
 
 **2.1.4.5 Multiple Escape Characters** 
 
-A pair of *multiple escape characters* is used to indicate that an enclosed sequence of characters, including possible *macro characters* and *whitespace*<sub>2</sub> *characters*, are to be treated as *alphabetic*<sub>2</sub> *characters* with *case* preserved. Any *single escape* and *multiple escape characters* that are to appear in the sequence must be preceded by a *single escape character* . 
+A pair of *multiple escape characters* is used to indicate that an enclosed sequence of characters, including possible *macro characters* and *whitespace*\<sub\>2\</sub\> *characters*, are to be treated as *alphabetic*\<sub\>2\</sub\> *characters* with *case* preserved. Any *single escape* and *multiple escape characters* that are to appear in the sequence must be preceded by a *single escape character* . 
 
 *Vertical-bar* is a *multiple escape character* in *standard syntax* . 
 
@@ -189,7 +189,7 @@ A pair of *multiple escape characters* is used to indicate that an enclosed sequ
 
 **2.1.4.6 Single Escape Character** 
 
-A *single escape* is used to indicate that the next *character* is to be treated as an *alphabetic*<sub>2</sub> *character* with its *case* preserved, no matter what the *character* is or which *constituent traits* it has. 
+A *single escape* is used to indicate that the next *character* is to be treated as an *alphabetic*\<sub\>2\</sub\> *character* with its *case* preserved, no matter what the *character* is or which *constituent traits* it has. 
 
 *Backslash* is a *single escape character* in *standard syntax* . 
 
@@ -209,9 +209,9 @@ A *single escape* is used to indicate that the next *character* is to be treated
 
 **2.1.4.7 Whitespace Characters** 
 
-*Whitespace*<sub>2</sub> *characters* are used to separate *tokens*. 
+*Whitespace*\<sub\>2\</sub\> *characters* are used to separate *tokens*. 
 
-*Space* and *newline* are *whitespace*<sub>2</sub> *characters* in *standard syntax* .  
+*Space* and *newline* are *whitespace*\<sub\>2\</sub\> *characters* in *standard syntax* .  
 
 
 
@@ -243,7 +243,7 @@ The algorithm performed by the *Lisp reader* is as follows:
 
 2\. If *x* is an *invalid character* , an error of *type* **reader-error** is signaled. 
 
-3\. If *x* is a *whitespace*<sub>2</sub> *character* , then it is discarded and step 1 is re-entered. 
+3\. If *x* is a *whitespace*\<sub\>2\</sub\> *character* , then it is discarded and step 1 is re-entered. 
 
 4\. If *x* is a *terminating* or *non-terminating macro character* then its associated *reader macro function* is called with two *arguments*, the *input stream* and *x*. 
 
@@ -253,7 +253,7 @@ The *reader macro function* must not have any side effects other than on the *in
 
 The *reader macro function* may return zero values or one value. If one value is returned, then that value is returned as the result of the read operation; the algorithm is done. If zero values are returned, then step 1 is re-entered. 
 
-5\. If *x* is a *single escape character* then the next *character* , *y*, is read, or an error of *type* **end-of-file** is signaled if at the end of file. *y* is treated as if it is a *constituent* whose only *constituent trait* is *alphabetic*<sub>2</sub>. *y* is used to begin a *token*, and step 8 is entered. 
+5\. If *x* is a *single escape character* then the next *character* , *y*, is read, or an error of *type* **end-of-file** is signaled if at the end of file. *y* is treated as if it is a *constituent* whose only *constituent trait* is *alphabetic*\<sub\>2\</sub\>. *y* is used to begin a *token*, and step 8 is entered. 
 
 6\. If *x* is a *multiple escape character* then a *token* (initially containing no *characters*) is begun and step 9 is entered. 
 
@@ -279,7 +279,7 @@ Reader).
 
 – Step 8 is repeated. 
 
-*•* If *y* is a *single escape character* , then the next *character* , *z*, is read, or an error of *type* **end-of-file** is signaled if at end of file. *Z* is treated as if it is a *constituent* whose only *constituent trait* is *alphabetic*<sub>2</sub>. *Z* is appended to the *token* being built, and step 8 is repeated. 
+*•* If *y* is a *single escape character* , then the next *character* , *z*, is read, or an error of *type* **end-of-file** is signaled if at end of file. *Z* is treated as if it is a *constituent* whose only *constituent trait* is *alphabetic*\<sub\>2\</sub\>. *Z* is appended to the *token* being built, and step 8 is repeated. 
 
 *•* If *y* is a *multiple escape character* , then step 9 is entered. 
 
@@ -287,13 +287,13 @@ Reader).
 
 *•* If *y* is a *terminating macro character* , then it terminates the *token*. First the *character y* is unread (see **unread-char**), and then step 10 is entered. 
 
-*•* If *y* is a *whitespace*<sub>2</sub> *character* , then it terminates the *token*. First the *character y* is unread if appropriate (see **read-preserving-whitespace**), and then step 10 is entered. 
+*•* If *y* is a *whitespace*\<sub\>2\</sub\> *character* , then it terminates the *token*. First the *character y* is unread if appropriate (see **read-preserving-whitespace**), and then step 10 is entered. 
 
 9\. At this point a *token* is being accumulated, and an odd number of *multiple escape characters* have been encountered. If at end of file, an error of *type* **end-of-file** is signaled. Otherwise, a *character* , *y*, is read, and one of the following actions is performed according to its *syntax type*: 
 
-*•* If *y* is a *constituent*, macro, or *whitespace*<sub>2</sub> *character* , *y* is treated as a *constituent* whose only *constituent trait* is *alphabetic*<sub>2</sub>. *Y* is appended to the *token* being built, and step 9 is repeated. 
+*•* If *y* is a *constituent*, macro, or *whitespace*\<sub\>2\</sub\> *character* , *y* is treated as a *constituent* whose only *constituent trait* is *alphabetic*\<sub\>2\</sub\>. *Y* is appended to the *token* being built, and step 9 is repeated. 
 
-*•* If *y* is a *single escape character* , then the next *character* , *z*, is read, or an error of *type* **end-of-file** is signaled if at end of file. *Z* is treated as a *constituent* whose only *constituent trait* is *alphabetic*<sub>2</sub>. *Z* is appended to the *token* being built, and step 9 is repeated.  
+*•* If *y* is a *single escape character* , then the next *character* , *z*, is read, or an error of *type* **end-of-file** is signaled if at end of file. *Z* is treated as a *constituent* whose only *constituent trait* is *alphabetic*\<sub\>2\</sub\>. *Z* is appended to the *token* being built, and step 9 is repeated.  
 
 
 
@@ -311,7 +311,7 @@ Reader).
 
 When a *token* is read, it is interpreted as a *number* or *symbol*. The *token* is interpreted as a *number* if it satisfies the syntax for numbers specified in Figure 2–9. 
 
-|<p>*numeric-token* ::= *↓integer | ↓ratio | ↓float* </p><p>*integer* ::= [*sign*] *{decimal-digit}*<sup>+</sup>*decimal-point |* [*sign*] *{digit}*<sup>+</sup> </p><p>*ratio* ::= [*sign*] *{digit}*<sup>+</sup>*slash {digit}*<sup>+</sup> </p><p>*float* ::= [*sign*] *{decimal-digit}*\* *decimal-point {decimal-digit}*<sup>+</sup>[*↓exponent*] *|* [*sign*] *{decimal-digit}*<sup>+</sup>[*decimal-point {decimal-digit}*\*] *↓exponent* </p><p>*exponent* ::= *exponent-marker* [*sign*] *{digit}*<sup>+</sup> </p><p>*sign*—a *sign*. </p><p>*slash*—a *slash* </p><p>*decimal-point*—a *dot*. </p><p>*exponent-marker*—an *exponent marker* . </p><p>*decimal-digit*—a *digit* in *radix* 10. </p><p>*digit*—a *digit* in the *current input radix* .</p>|
+|\<p\>*numeric-token* ::= *↓integer | ↓ratio | ↓float* \</p\>\<p\>*integer* ::= [*sign*] *\{decimal-digit\}*\<sup\>+\</sup\>*decimal-point |* [*sign*] *\{digit\}*\<sup\>+\</sup\> \</p\>\<p\>*ratio* ::= [*sign*] *\{digit\}*\<sup\>+\</sup\>*slash \{digit\}*\<sup\>+\</sup\> \</p\>\<p\>*float* ::= [*sign*] *\{decimal-digit\}*\* *decimal-point \{decimal-digit\}*\<sup\>+\</sup\>[*↓exponent*] *|* [*sign*] *\{decimal-digit\}*\<sup\>+\</sup\>[*decimal-point \{decimal-digit\}*\*] *↓exponent* \</p\>\<p\>*exponent* ::= *exponent-marker* [*sign*] *\{digit\}*\<sup\>+\</sup\> \</p\>\<p\>*sign*—a *sign*. \</p\>\<p\>*slash*—a *slash* \</p\>\<p\>*decimal-point*—a *dot*. \</p\>\<p\>*exponent-marker*—an *exponent marker* . \</p\>\<p\>*decimal-digit*—a *digit* in *radix* 10. \</p\>\<p\>*digit*—a *digit* in the *current input radix* .\</p\>|
 | :- |
 
 
@@ -321,11 +321,11 @@ When a *token* is read, it is interpreted as a *number* or *symbol*. The *token*
 
 To allow implementors and future Common Lisp standards to extend the syntax of numbers, a syntax for *potential numbers* is defined that is more general than the syntax for numbers. A *token* is a *potential number* if it satisfies all of the following requirements: 
 
-1\. The <i>token</i> consists entirely of <i>digits</i>, <i>signs</i>, <i>ratio markers</i>, decimal points (.), extension characters (<i><sup>∧</sup></i> or ), and number markers. A number marker is a letter. Whether a letter may be treated as a number marker depends on context, but no letter that is adjacent to another letter may ever be treated as a number marker. <i>Exponent markers</i> are number markers. 
+1\. The \<i\>token\</i\> consists entirely of \<i\>digits\</i\>, \<i\>signs\</i\>, \<i\>ratio markers\</i\>, decimal points (.), extension characters (\<i\>\<sup\>∧\</sup\>\</i\> or ), and number markers. A number marker is a letter. Whether a letter may be treated as a number marker depends on context, but no letter that is adjacent to another letter may ever be treated as a number marker. \<i\>Exponent markers\</i\> are number markers. 
 
 2\. The *token* contains at least one digit. Letters may be considered to be digits, depending on the *current input base*, but only in *tokens* containing no decimal points. 
 
-3\. The <i>token</i> begins with a <i>digit</i>, <i>sign</i>, decimal point, or extension character, but not a <i>package marker</i> . The syntax involving a leading <i>package marker</i> followed by a <i>potential number</i> is not well-defined. The consequences of the use of notation such as :1, :1/2, and :2<i><sup>∧</sup></i>3 in a position where an expression appropriate for <b>read</b> is expected are unspecified.  
+3\. The \<i\>token\</i\> begins with a \<i\>digit\</i\>, \<i\>sign\</i\>, decimal point, or extension character, but not a \<i\>package marker\</i\> . The syntax involving a leading \<i\>package marker\</i\> followed by a \<i\>potential number\</i\> is not well-defined. The consequences of the use of notation such as :1, :1/2, and :2\<i\>\<sup\>∧\</sup\>\</i\>3 in a position where an expression appropriate for \<b\>read\</b\> is expected are unspecified.  
 
 
 
@@ -337,7 +337,7 @@ If there is an ambiguity as to whether a letter should be treated as a digit or 
 
 **2.3.1.1.1 Escape Characters and Potential Numbers** 
 
-A *potential number* cannot contain any *escape characters*. An *escape character* robs the following *character* of all syntactic qualities, forcing it to be strictly *alphabetic*<sub>2</sub> and therefore unsuitable for use in a *potential number* . For example, all of the following representations are interpreted as *symbols*, not *numbers*: 
+A *potential number* cannot contain any *escape characters*. An *escape character* robs the following *character* of all syntactic qualities, forcing it to be strictly *alphabetic*\<sub\>2\</sub\> and therefore unsuitable for use in a *potential number* . For example, all of the following representations are interpreted as *symbols*, not *numbers*: 
 
 \256 25\64 1.0\E6 |100| 3\.14159 |3/4| 3\/4 5|| 
 
@@ -347,7 +347,7 @@ In each case, removing the *escape character* (or *characters*) would cause the 
 
 As examples, the *tokens* in Figure 2–10 are *potential numbers*, but they are not actually numbers, and so are reserved *tokens*; a *conforming implementation* is permitted, but not required, to define their meaning. 
 
-|1b5000 777777q 1.7J -3/4+6.7J 12/25/83 27<i><sup>∧</sup></i>19 3<i><sup>∧</sup></i>4/5 6//7 3.1.2.6 <i><sup>∧</sup></i>-43<i><sup>∧</sup></i> 3.141 592 653 589 793 238 4 -3.7+2.6i-6.17j+19.6k|
+|1b5000 777777q 1.7J -3/4+6.7J 12/25/83 27\<i\>\<sup\>∧\</sup\>\</i\>19 3\<i\>\<sup\>∧\</sup\>\</i\>4/5 6//7 3.1.2.6 \<i\>\<sup\>∧\</sup\>\</i\>-43\<i\>\<sup\>∧\</sup\>\</i\> 3.141 592 653 589 793 238 4 -3.7+2.6i-6.17j+19.6k|
 | :- |
 
 
@@ -355,7 +355,7 @@ As examples, the *tokens* in Figure 2–10 are *potential numbers*, but they are
 
 The *tokens* in Figure 2–11 are not *potential numbers*; they are always treated as *symbols*: 
 
-|/ /5 + 1+ 1- foo+ ab.cd <i><sup>∧ ∧</sup></i>/-|
+|/ /5 + 1+ 1- foo+ ab.cd \<i\>\<sup\>∧ ∧\</sup\>\</i\>/-|
 | :- |
 
 
@@ -365,7 +365,7 @@ The *tokens* in Figure 2–11 are not *potential numbers*; they are always treat
 
 The *tokens* in Figure 2–12 are *potential numbers* if the *current input base* is 16, but they are always treated as *symbols* if the *current input base* is 10. 
 
-|bad-face 25-dec-83 a/b fad cafe f<i><sup>∧</sup></i>|
+|bad-face 25-dec-83 a/b fad cafe f\<i\>\<sup\>∧\</sup\>\</i\>|
 | :- |
 
 
@@ -393,7 +393,7 @@ For information on how *integers* are printed, see Section 22.1.3.1.1 (Printing 
 
 
 
-|<p>2/3 ;This is in canonical form </p><p>4/6 ;A non-canonical form for 2/3 </p><p>-17/23 ;A ratio preceded by a sign </p><p>-30517578125/32768 ;This is (*−*5*/*2)<sup>15</sup> </p><p>10/5 ;The canonical form for this is 2 </p><p>#o-101/75 ;Octal notation for *−*65*/*61 </p><p>#3r120/21 ;Ternary notation for 15*/*7 </p><p>#Xbc/ad ;Hexadecimal notation for 188*/*173 </p><p>#xFADED/FACADE ;Hexadecimal notation for 1027565*/*16435934</p>|
+|\<p\>2/3 ;This is in canonical form \</p\>\<p\>4/6 ;A non-canonical form for 2/3 \</p\>\<p\>-17/23 ;A ratio preceded by a sign \</p\>\<p\>-30517578125/32768 ;This is (*−*5*/*2)\<sup\>15\</sup\> \</p\>\<p\>10/5 ;The canonical form for this is 2 \</p\>\<p\>#o-101/75 ;Octal notation for *−*65*/*61 \</p\>\<p\>#3r120/21 ;Ternary notation for 15*/*7 \</p\>\<p\>#Xbc/ad ;Hexadecimal notation for 188*/*173 \</p\>\<p\>#xFADED/FACADE ;Hexadecimal notation for 1027565*/*16435934\</p\>|
 | :- |
 
 
@@ -413,7 +413,7 @@ Figure 2–14 contains examples of notations for *floats*:
 
 
 
-|<p>0\.0 ;Floating-point zero in default format </p><p>0E0 ;As input, this is also floating-point zero in default format. ;As output, this would appear as 0.0. </p><p>0e0 ;As input, this is also floating-point zero in default format. ;As output, this would appear as 0.0. </p><p>-.0 ;As input, this might be a zero or a minus zero, </p><p>; depending on whether the implementation supports </p><p>; a distinct minus zero. </p><p>;As output, 0.0 is zero and -0.0 is minus zero. </p><p>0\. ;On input, the integer zero—*not* a floating-point number! ;Whether this appears as 0 or 0. on output depends </p><p>;on the *value* of **\*print-radix\***. </p><p>0\.0s0 ;A floating-point zero in short format </p><p>0s0 ;As input, this is a floating-point zero in short format. ;As output, such a zero would appear as 0.0s0 </p><p>; (or as 0.0 if **short-float** was the default format). </p><p>6\.02E+23 ;Avogadro’s number, in default format </p><p>602E+21 ;Also Avogadro’s number, in default format</p>|
+|\<p\>0\.0 ;Floating-point zero in default format \</p\>\<p\>0E0 ;As input, this is also floating-point zero in default format. ;As output, this would appear as 0.0. \</p\>\<p\>0e0 ;As input, this is also floating-point zero in default format. ;As output, this would appear as 0.0. \</p\>\<p\>-.0 ;As input, this might be a zero or a minus zero, \</p\>\<p\>; depending on whether the implementation supports \</p\>\<p\>; a distinct minus zero. \</p\>\<p\>;As output, 0.0 is zero and -0.0 is minus zero. \</p\>\<p\>0\. ;On input, the integer zero—*not* a floating-point number! ;Whether this appears as 0 or 0. on output depends \</p\>\<p\>;on the *value* of **\*print-radix\***. \</p\>\<p\>0\.0s0 ;A floating-point zero in short format \</p\>\<p\>0s0 ;As input, this is a floating-point zero in short format. ;As output, such a zero would appear as 0.0s0 \</p\>\<p\>; (or as 0.0 if **short-float** was the default format). \</p\>\<p\>6\.02E+23 ;Avogadro’s number, in default format \</p\>\<p\>602E+21 ;Also Avogadro’s number, in default format\</p\>|
 | :- |
 
 
@@ -443,7 +443,7 @@ Any *token* that is not a *potential number* , does not contain a *package marke
 
 Examples of the printed representation of *symbols* are in Figure 2–15. For presentational simplicity, these examples assume that the *readtable case* of the *current readtable* is :upcase. 
 
-|<p>FROBBOZ The *symbol* whose *name* is FROBBOZ. </p><p>frobboz Another way to notate the same *symbol*. </p><p>fRObBoz Yet another way to notate it. </p><p>unwind-protect A *symbol* with a hyphen in its *name*. </p><p>+$ The *symbol* named +$. </p><p>1+ The *symbol* named 1+. </p><p>+1 This is the *integer* 1, not a *symbol*. </p><p>pascal style This *symbol* has an underscore in its *name*. </p><p>file.rel.43 This *symbol* has periods in its *name*. </p><p>\( The *symbol* whose *name* is (. </p><p>\+1 The *symbol* whose *name* is +1. </p><p>+\1 Also the *symbol* whose *name* is +1. </p><p>\frobboz The *symbol* whose *name* is fROBBOZ. </p><p>3\.14159265\s0 The *symbol* whose *name* is 3.14159265s0. </p><p>3\.14159265\S0 A different *symbol*, whose *name* is 3.14159265S0. 3.14159265s0 A possible *short float* approximation to *π*.</p>|
+|\<p\>FROBBOZ The *symbol* whose *name* is FROBBOZ. \</p\>\<p\>frobboz Another way to notate the same *symbol*. \</p\>\<p\>fRObBoz Yet another way to notate it. \</p\>\<p\>unwind-protect A *symbol* with a hyphen in its *name*. \</p\>\<p\>+$ The *symbol* named +$. \</p\>\<p\>1+ The *symbol* named 1+. \</p\>\<p\>+1 This is the *integer* 1, not a *symbol*. \</p\>\<p\>pascal style This *symbol* has an underscore in its *name*. \</p\>\<p\>file.rel.43 This *symbol* has periods in its *name*. \</p\>\<p\>\( The *symbol* whose *name* is (. \</p\>\<p\>\+1 The *symbol* whose *name* is +1. \</p\>\<p\>+\1 Also the *symbol* whose *name* is +1. \</p\>\<p\>\frobboz The *symbol* whose *name* is fROBBOZ. \</p\>\<p\>3\.14159265\s0 The *symbol* whose *name* is 3.14159265s0. \</p\>\<p\>3\.14159265\S0 A different *symbol*, whose *name* is 3.14159265S0. 3.14159265s0 A possible *short float* approximation to *π*.\</p\>|
 | :- |
 
 
@@ -453,7 +453,7 @@ Examples of the printed representation of *symbols* are in Figure 2–15. For pr
 
 
 
-|<p>APL\\360 The *symbol* whose *name* is APL\360. </p><p>apl\\360 Also the <i>symbol</i> whose <i>name</i> is APL\360. \(b<i><sup>∧</sup></i>2\)\ -\ 4*a*c The <i>name</i> is (B<i><sup>∧</sup></i>2) - 4*A*C. </p><p>Parentheses and two spaces in it. </p><p>\(\b<i><sup>∧</sup></i>2\)\ -\4*\a*\c The <i>name</i> is (b<i><sup>∧</sup></i>2) - 4*a*c. </p><p>Letters explicitly lowercase. </p><p>|"| The same as writing \". </p><p>|(b<i><sup>∧</sup></i>2) - 4*a*c| The <i>name</i> is (b<i><sup>∧</sup></i>2) - 4*a*c. </p><p>|frobboz| The *name* is frobboz, not FROBBOZ. </p><p>|APL\360| The *name* is APL360. </p><p>|APL\\360| The *name* is APL\360. </p><p>|apl\\360| The *name* is apl\360. </p><p>|\|\|| Same as \|\| —the *name* is ||. </p><p>|(B<i><sup>∧</sup></i>2) - 4*A*C| The <i>name</i> is (B<i><sup>∧</sup></i>2) - 4*A*C. </p><p>Parentheses and two spaces in it. </p><p>|(b<i><sup>∧</sup></i>2) - 4*a*c| The <i>name</i> is (b<i><sup>∧</sup></i>2) - 4*a*c.</p>|
+|\<p\>APL\\360 The *symbol* whose *name* is APL\360. \</p\>\<p\>apl\\360 Also the \<i\>symbol\</i\> whose \<i\>name\</i\> is APL\360. \(b\<i\>\<sup\>∧\</sup\>\</i\>2\)\ -\ 4*a*c The \<i\>name\</i\> is (B\<i\>\<sup\>∧\</sup\>\</i\>2) - 4*A*C. \</p\>\<p\>Parentheses and two spaces in it. \</p\>\<p\>\(\b\<i\>\<sup\>∧\</sup\>\</i\>2\)\ -\4*\a*\c The \<i\>name\</i\> is (b\<i\>\<sup\>∧\</sup\>\</i\>2) - 4*a*c. \</p\>\<p\>Letters explicitly lowercase. \</p\>\<p\>|"| The same as writing \". \</p\>\<p\>|(b\<i\>\<sup\>∧\</sup\>\</i\>2) - 4*a*c| The \<i\>name\</i\> is (b\<i\>\<sup\>∧\</sup\>\</i\>2) - 4*a*c. \</p\>\<p\>|frobboz| The *name* is frobboz, not FROBBOZ. \</p\>\<p\>|APL\360| The *name* is APL360. \</p\>\<p\>|APL\\360| The *name* is APL\360. \</p\>\<p\>|apl\\360| The *name* is apl\360. \</p\>\<p\>|\|\|| Same as \|\| —the *name* is ||. \</p\>\<p\>|(B\<i\>\<sup\>∧\</sup\>\</i\>2) - 4*A*C| The \<i\>name\</i\> is (B\<i\>\<sup\>∧\</sup\>\</i\>2) - 4*A*C. \</p\>\<p\>Parentheses and two spaces in it. \</p\>\<p\>|(b\<i\>\<sup\>∧\</sup\>\</i\>2) - 4*a*c| The \<i\>name\</i\> is (b\<i\>\<sup\>∧\</sup\>\</i\>2) - 4*a*c.\</p\>|
 | :- |
 
 
@@ -471,7 +471,7 @@ The valid patterns for *tokens* are summarized in Figure 2–17.
 
 
 
-|<p>*nnnnn* a *number* </p><p>*xxxxx* a *symbol* in the *current package* </p><p>:*xxxxx* a *symbol* in the the KEYWORD *package* </p><p>*ppppp*:*xxxxx* an *external symbol* in the *ppppp package* </p><p>*ppppp*::*xxxxx* a (possibly internal) *symbol* in the *ppppp package* :*nnnnn* undefined </p><p>*ppppp*:*nnnnn* undefined </p><p>*ppppp*::*nnnnn* undefined </p><p>::*aaaaa* undefined </p><p>*aaaaa*: undefined </p><p>*aaaaa*:*aaaaa*:*aaaaa* undefined</p>|
+|\<p\>*nnnnn* a *number* \</p\>\<p\>*xxxxx* a *symbol* in the *current package* \</p\>\<p\>:*xxxxx* a *symbol* in the the KEYWORD *package* \</p\>\<p\>*ppppp*:*xxxxx* an *external symbol* in the *ppppp package* \</p\>\<p\>*ppppp*::*xxxxx* a (possibly internal) *symbol* in the *ppppp package* :*nnnnn* undefined \</p\>\<p\>*ppppp*:*nnnnn* undefined \</p\>\<p\>*ppppp*::*nnnnn* undefined \</p\>\<p\>::*aaaaa* undefined \</p\>\<p\>*aaaaa*: undefined \</p\>\<p\>*aaaaa*:*aaaaa*:*aaaaa* undefined\</p\>|
 | :- |
 
 
@@ -543,11 +543,11 @@ The *left-parenthesis* initiates reading of a *list*. **read** is called recursi
 
 (a b c) 
 
-is read as a *list* of three *objects* (the *symbols* a, b, and c). The right parenthesis need not immediately follow the printed representation of the last *object*; *whitespace*<sub>2</sub> characters and comments may precede it. 
+is read as a *list* of three *objects* (the *symbols* a, b, and c). The right parenthesis need not immediately follow the printed representation of the last *object*; *whitespace*\<sub\>2\</sub\> characters and comments may precede it. 
 
 If no *objects* precede the right parenthesis, it reads as a *list* of zero *objects* (the *empty list*). 
 
-If a *token* that is just a dot not immediately preceded by an escape character is read after some *object* then exactly one more *object* must follow the dot, possibly preceded or followed by *whitespace*<sub>2</sub> or a comment, followed by the right parenthesis: 
+If a *token* that is just a dot not immediately preceded by an escape character is read after some *object* then exactly one more *object* must follow the dot, possibly preceded or followed by *whitespace*\<sub\>2\</sub\> or a comment, followed by the right parenthesis: 
 
 (a b c . d) 
 
@@ -637,7 +637,7 @@ Comments that begin with a quadruple *semicolon* are all aligned to the left mar
 
 ;; Now we can get down to some serious computation. 
 
-(cond ((< n 0) 
+(cond ((\< n 0) 
 
 ;; Hey, this is just supposed to be a simple example. 
 
@@ -645,7 +645,7 @@ Comments that begin with a quadruple *semicolon* are all aligned to the left mar
 
 (error "FIB got ~D as an argument." n)) 
 
-((< n 2) n) ;fib[0]=0 and fib[1]=1 
+((\< n 2) n) ;fib[0]=0 and fib[1]=1 
 
 ;; The cheap cases didn’t work. 
 
@@ -665,7 +665,7 @@ The *double-quote* is used to begin and end a *string*. When a *double-quote* is
 
 Examples of the use of the *double-quote* character are in Figure 2–18. 
 
-|<p>"Foo" ;A string with three characters in it "" ;An empty string </p><p>"\"APL\\360?\" he cried." ;A string with twenty characters </p><p>"|x| = |-x|" ;A ten-character string</p>|
+|\<p\>"Foo" ;A string with three characters in it "" ;An empty string \</p\>\<p\>"\"APL\\360?\" he cried." ;A string with twenty characters \</p\>\<p\>"|x| = |-x|" ;A ten-character string\</p\>|
 | :- |
 
 
@@ -731,7 +731,7 @@ Anywhere “,@” may be used, the syntax “,.” may be used instead to indica
 
 If the backquote syntax is nested, the innermost backquoted form should be expanded first. This means that if several commas occur in a row, the leftmost one belongs to the innermost *backquote*. 
 
-An *implementation* is free to interpret a backquoted *form F*<sub>1</sub> as any *form F*<sub>2</sub> that, when evaluated, will produce a result that is the *same* under **equal** as the result implied by the above definition, provided that the side-effect behavior of the substitute *form F*<sub>2</sub> is also consistent with the  
+An *implementation* is free to interpret a backquoted *form F*\<sub\>1\</sub\> as any *form F*\<sub\>2\</sub\> that, when evaluated, will produce a result that is the *same* under **equal** as the result implied by the above definition, provided that the side-effect behavior of the substitute *form F*\<sub\>2\</sub\> is also consistent with the  
 
 
 
@@ -785,7 +785,7 @@ The *reader macros* associated with the *dispatching macro character* # are desc
 
 |**dispatch char purpose dispatch char purpose**|
 | :- |
-|<p>Backspace signals error { undefined\* Tab signals error } undefined\* Newline signals error + read-time conditional Linefeed signals error - read-time conditional Page signals error . read-time evaluation Return signals error / undefined Space signals error A, a array </p><p>! undefined* B, b binary rational " undefined C, c complex number # reference to = label D, d undefined $ undefined E, e undefined % undefined F, f undefined & undefined G, g undefined ’ function abbreviation H, h undefined ( simple vector I, i undefined ) signals error J, j undefined * bit vector K, k undefined , undefined L, l undefined : uninterned symbol M, m undefined ; undefined N, n undefined < signals error O, o octal rational = labels following object P, p pathname > undefined Q, q undefined ? undefined* R, r radix-<i>n</i> rational @ undefined S, s structure [ undefined* T, t undefined \ character object U, u undefined ] undefined* V, v undefined <i><sup>∧</sup></i> undefined W, w undefined undefined X, x hexadecimal rational </p><p>‘ undefined Y, y undefined | balanced comment Z, z undefined ~ undefined Rubout undefined</p>|
+|\<p\>Backspace signals error \{ undefined\* Tab signals error \} undefined\* Newline signals error + read-time conditional Linefeed signals error - read-time conditional Page signals error . read-time evaluation Return signals error / undefined Space signals error A, a array \</p\>\<p\>! undefined* B, b binary rational " undefined C, c complex number # reference to = label D, d undefined $ undefined E, e undefined % undefined F, f undefined & undefined G, g undefined ’ function abbreviation H, h undefined ( simple vector I, i undefined ) signals error J, j undefined * bit vector K, k undefined , undefined L, l undefined : uninterned symbol M, m undefined ; undefined N, n undefined \< signals error O, o octal rational = labels following object P, p pathname \> undefined Q, q undefined ? undefined* R, r radix-\<i\>n\</i\> rational @ undefined S, s structure [ undefined* T, t undefined \ character object U, u undefined ] undefined* V, v undefined \<i\>\<sup\>∧\</sup\>\</i\> undefined W, w undefined undefined X, x hexadecimal rational \</p\>\<p\>‘ undefined Y, y undefined | balanced comment Z, z undefined ~ undefined Rubout undefined\</p\>|
 
 
 **Figure 2–19. Standard # Dispatching Macro Character Syntax** 
@@ -900,7 +900,7 @@ For an *object* that does not have a convenient printed representation, a *form*
 
 #B*rational* reads *rational* in binary (radix 2). For example, 
 
-#B1101 *≡* 13 ;1101<sub>2</sub> 
+#B1101 *≡* 13 ;1101\<sub\>2\</sub\> 
 
 #b101/11 *≡* 5/3 
 
@@ -914,7 +914,7 @@ The consequences are undefined if the token immediately following the #B does no
 
 #o777 *≡* 511 
 
-#o105 *≡* 69 ;105<sub>8</sub> 
+#o105 *≡* 69 ;105\<sub\>8\</sub\> 
 
 The consequences are undefined if the token immediately following the #O does not have the syntax of an octal (*i.e.*, radix 8) *rational*.  
 
@@ -926,7 +926,7 @@ The consequences are undefined if the token immediately following the #O does no
 
 #xF00 *≡* 3840 
 
-#x105 *≡* 261 ;105<sub>16</sub> 
+#x105 *≡* 261 ;105\<sub\>16\</sub\> 
 
 The consequences are undefined if the token immediately following the #X does not have the syntax of a hexadecimal (*i.e.*, radix 16) *rational*. 
 
@@ -940,7 +940,7 @@ For example, #3r102 is another way of writing 11 (decimal), and #11R32 is anothe
 
 Figure 2–20 contains examples of the use of #B, #O, #X, and #R. 
 
-|<p>#2r11010101 ;Another way of writing 213 decimal </p><p>#b11010101 ;Ditto </p><p>#b+11010101 ;Ditto </p><p>#o325 ;Ditto, in octal radix </p><p>#xD5 ;Ditto, in hexadecimal radix </p><p>#16r+D5 ;Ditto </p><p>#o-300 ;Decimal -192, written in base 8 </p><p>#3r-21010 ;Same thing in base 3 </p><p>#25R-7H ;Same thing in base 25 </p><p>#xACCEDED ;181202413, in hexadecimal radix</p>|
+|\<p\>#2r11010101 ;Another way of writing 213 decimal \</p\>\<p\>#b11010101 ;Ditto \</p\>\<p\>#b+11010101 ;Ditto \</p\>\<p\>#o325 ;Ditto, in octal radix \</p\>\<p\>#xD5 ;Ditto, in hexadecimal radix \</p\>\<p\>#16r+D5 ;Ditto \</p\>\<p\>#o-300 ;Decimal -192, written in base 8 \</p\>\<p\>#3r-21010 ;Same thing in base 3 \</p\>\<p\>#25R-7H ;Same thing in base 25 \</p\>\<p\>#xACCEDED ;181202413, in hexadecimal radix\</p\>|
 | :- |
 
 
@@ -958,7 +958,7 @@ The consequences are undefined if the token immediately following the #*n*R does
 
 Figure 2–21 contains examples of the use of #C. 
 
-|<p>#C(3.0s1 2.0s-1) ;A *complex* with *small float* parts. </p><p>#C(5 -3) ;A “Gaussian integer” </p><p>#C(5/3 7.0) ;Will be converted internally to #C(1.66666 7.0) #C(0 1) ;The imaginary unit; that is, i.</p>|
+|\<p\>#C(3.0s1 2.0s-1) ;A *complex* with *small float* parts. \</p\>\<p\>#C(5 -3) ;A “Gaussian integer” \</p\>\<p\>#C(5/3 7.0) ;Will be converted internally to #C(1.66666 7.0) #C(0 1) ;The imaginary unit; that is, i.\</p\>|
 | :- |
 
 
@@ -1048,7 +1048,7 @@ A reference #*n*# may only occur after a label #*n*=; forward references are not
 
 **2.4.8.17 Sharpsign Plus** 
 
-#+ provides a read-time conditionalization facility; the syntax is #+*test expression*. If the *feature expression test* succeeds, then this textual notation represents an *object* whose printed representation is *expression*. If the *feature expression test* fails, then this textual notation is treated as *whitespace*<sub>2</sub>; that is, it is as if the “#+ *test expression*” did not appear and only a *space* appeared in its place. 
+#+ provides a read-time conditionalization facility; the syntax is #+*test expression*. If the *feature expression test* succeeds, then this textual notation represents an *object* whose printed representation is *expression*. If the *feature expression test* fails, then this textual notation is treated as *whitespace*\<sub\>2\</sub\>; that is, it is as if the “#+ *test expression*” did not appear and only a *space* appeared in its place. 
 
 For a detailed description of success and failure in *feature expressions*, see Section 24.1.2.1 (Feature Expressions). 
 
@@ -1186,11 +1186,11 @@ Such code is equivalent to:
 
 **2.4.8.20 Sharpsign Less-Than-Sign** 
 
-#< is not valid reader syntax. The *Lisp reader* will signal an error of *type* **reader-error** on encountering #<. This syntax is typically used in the printed representation of *objects* that cannot be read back in. 
+#\< is not valid reader syntax. The *Lisp reader* will signal an error of *type* **reader-error** on encountering #\<. This syntax is typically used in the printed representation of *objects* that cannot be read back in. 
 
 **2.4.8.21 Sharpsign Whitespace** 
 
-\# followed immediately by *whitespace*<sub>1</sub> is not valid reader syntax. The *Lisp reader* will signal an error of *type* **reader-error** if it encounters the reader macro notation #*hNewlinei* or #*hSpacei*.  
+\# followed immediately by *whitespace*\<sub\>1\</sub\> is not valid reader syntax. The *Lisp reader* will signal an error of *type* **reader-error** if it encounters the reader macro notation #*hNewlinei* or #*hSpacei*.  
 
 
 
@@ -1202,4 +1202,4 @@ The *Lisp reader* will signal an error of *type* **reader-error** upon encounter
 
 **2.4.9 Re-Reading Abbreviated Expressions** 
 
-Note that the *Lisp reader* will generally signal an error of *type* **reader-error** when reading an *expression*<sub>2</sub> that has been abbreviated because of length or level limits (see **\*print-level\***, **\*print-length\***, and **\*print-lines\***) due to restrictions on “..”, “...”, “#” followed by *whitespace*<sub>1</sub>, and “#)”. 
+Note that the *Lisp reader* will generally signal an error of *type* **reader-error** when reading an *expression*\<sub\>2\</sub\> that has been abbreviated because of length or level limits (see **\*print-level\***, **\*print-length\***, and **\*print-lines\***) due to restrictions on “..”, “...”, “#” followed by *whitespace*\<sub\>1\</sub\>, and “#)”. 

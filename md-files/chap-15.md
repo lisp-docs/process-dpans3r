@@ -78,7 +78,7 @@ The phrasing “an *array specialized* to *type hhtypeii*” is sometimes used t
 
 Figure 15–1 lists some *defined names* that are applicable to *array* creation, *access*, and information operations. 
 
-|<p>**adjust-array array-has-fill-pointer-p make-array** </p><p>**adjustable-array-p array-in-bounds-p svref** </p><p>**aref array-rank upgraded-array-element-type array-dimension array-rank-limit upgraded-complex-part-type array-dimension-limit array-row-major-index vector** </p><p>**array-dimensions array-total-size vector-pop** </p><p>**array-displacement array-total-size-limit vector-push** </p><p>**array-element-type fill-pointer vector-push-extend**</p>|
+|\<p\>**adjust-array array-has-fill-pointer-p make-array** \</p\>\<p\>**adjustable-array-p array-in-bounds-p svref** \</p\>\<p\>**aref array-rank upgraded-array-element-type array-dimension array-rank-limit upgraded-complex-part-type array-dimension-limit array-row-major-index vector** \</p\>\<p\>**array-dimensions array-total-size vector-pop** \</p\>\<p\>**array-displacement array-total-size-limit vector-push** \</p\>\<p\>**array-element-type fill-pointer vector-push-extend**\</p\>|
 | :- |
 
 
@@ -92,13 +92,13 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **15.1.2.1 Array Upgrading** 
 
-The *upgraded array element type* of a *type T*<sub>1</sub> is a *type T*<sub>2</sub> that is a *supertype* of *T*<sub>1</sub> and that is used instead of *T*<sub>1</sub> whenever *T*<sub>1</sub> is used as an *array element type* for object creation or type discrimination. 
+The *upgraded array element type* of a *type T*\<sub\>1\</sub\> is a *type T*\<sub\>2\</sub\> that is a *supertype* of *T*\<sub\>1\</sub\> and that is used instead of *T*\<sub\>1\</sub\> whenever *T*\<sub\>1\</sub\> is used as an *array element type* for object creation or type discrimination. 
 
 During creation of an *array*, the *element type* that was requested is called the *expressed array element type*. The *upgraded array element type* of the *expressed array element type* becomes the *actual array element type* of the *array* that is created. 
 
-<i>Type upgrading</i> implies a movement upwards in the type hierarchy lattice. A <i>type</i> is always a <i>subtype</i> of its <i>upgraded array element type</i>. Also, if a <i>type T<sub>x</sub></i> is a <i>subtype</i> of another <i>type T<sub>y</sub></i>, then the <i>upgraded array element type</i> of <i>T<sub>x</sub></i> must be a <i>subtype</i> of the <i>upgraded array element type</i> of <i>T<sub>y</sub></i>. Two <i>disjoint types</i> can be <i>upgraded</i> to the same <i>type</i>. 
+\<i\>Type upgrading\</i\> implies a movement upwards in the type hierarchy lattice. A \<i\>type\</i\> is always a \<i\>subtype\</i\> of its \<i\>upgraded array element type\</i\>. Also, if a \<i\>type T\<sub\>x\</sub\>\</i\> is a \<i\>subtype\</i\> of another \<i\>type T\<sub\>y\</sub\>\</i\>, then the \<i\>upgraded array element type\</i\> of \<i\>T\<sub\>x\</sub\>\</i\> must be a \<i\>subtype\</i\> of the \<i\>upgraded array element type\</i\> of \<i\>T\<sub\>y\</sub\>\</i\>. Two \<i\>disjoint types\</i\> can be \<i\>upgraded\</i\> to the same \<i\>type\</i\>. 
 
-The *upgraded array element type T*<sub>2</sub> of a *type T*<sub>1</sub> is a function only of *T*<sub>1</sub> itself; that is, it is independent of any other property of the *array* for which *T*<sub>2</sub> will be used, such as *rank*, *adjustability*, *fill pointers*, or displacement. The *function* **upgraded-array-element-type** can be used by *conforming programs* to predict how the *implementation* will *upgrade* a given *type*. 
+The *upgraded array element type T*\<sub\>2\</sub\> of a *type T*\<sub\>1\</sub\> is a function only of *T*\<sub\>1\</sub\> itself; that is, it is independent of any other property of the *array* for which *T*\<sub\>2\</sub\> will be used, such as *rank*, *adjustability*, *fill pointers*, or displacement. The *function* **upgraded-array-element-type** can be used by *conforming programs* to predict how the *implementation* will *upgrade* a given *type*. 
 
 **15.1.2.2 Required Kinds of Specialized Arrays** 
 
@@ -106,7 +106,7 @@ The *upgraded array element type T*<sub>2</sub> of a *type T*<sub>1</sub> is a f
 
 *Strings* are *specialized arrays* and might logically have been included in this chapter. However, for purposes of readability most information about *strings* does not appear in this chapter; see instead Chapter 16 (Strings). 
 
-|<p>**char string-equal string-upcase make-string string-greaterp string**/= </p><p>**nstring-capitalize string-left-trim string**< </p><p>**nstring-downcase string-lessp string**<= </p><p>**nstring-upcase string-not-equal string**= </p><p>**schar string-not-greaterp string**> </p><p>**string string-not-lessp string**>= </p><p>**string-capitalize string-right-trim** </p><p>**string-downcase string-trim**</p>|
+|\<p\>**char string-equal string-upcase make-string string-greaterp string**/= \</p\>\<p\>**nstring-capitalize string-left-trim string**\< \</p\>\<p\>**nstring-downcase string-lessp string**\<= \</p\>\<p\>**nstring-upcase string-not-equal string**= \</p\>\<p\>**schar string-not-greaterp string**\> \</p\>\<p\>**string string-not-lessp string**\>= \</p\>\<p\>**string-capitalize string-right-trim** \</p\>\<p\>**string-downcase string-trim**\</p\>|
 | :- |
 
 
@@ -120,7 +120,7 @@ Version 15.17R, X3J13/94-101R.
 
 Fri 12-Aug-1994 6:35pm EDT 
 
-|<p>**bit bit-ior bit-orc2** </p><p>**bit-and bit-nand bit-xor** </p><p>**bit-andc1 bit-nor sbit** </p><p>**bit-andc2 bit-not** </p><p>**bit-eqv bit-orc1**</p>|
+|\<p\>**bit bit-ior bit-orc2** \</p\>\<p\>**bit-and bit-nand bit-xor** \</p\>\<p\>**bit-andc1 bit-nor sbit** \</p\>\<p\>**bit-andc2 bit-not** \</p\>\<p\>**bit-eqv bit-orc1**\</p\>|
 | :- |
 
 
@@ -140,7 +140,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **Description:** 
 
-An <i>array</i> contains <i>objects</i> arranged according to a Cartesian coordinate system. An <i>array</i> provides mappings from a set of <i>fixnums {i</i><sub>0</sub><i>, i</i><sub>1</sub><i>, . . . , i<sub>r−</sub></i>1</sub><i>}</i> to corresponding <i>elements</i> of the <i>array</i>, where 0 <i>≤ i<sub>j</sub></i> < <i>d<sub>j</sub></i> , <i>r</i> is the rank of the array, and <i>d<sub>j</sub></i> is the size of <i>dimension j</i> of the array. 
+An \<i\>array\</i\> contains \<i\>objects\</i\> arranged according to a Cartesian coordinate system. An \<i\>array\</i\> provides mappings from a set of \<i\>fixnums \{i\</i\>\<sub\>0\</sub\>\<i\>, i\</i\>\<sub\>1\</sub\>\<i\>, . . . , i\<sub\>r−\</sub\>\</i\>1\</sub\>\<i\>\}\</i\> to corresponding \<i\>elements\</i\> of the \<i\>array\</i\>, where 0 \<i\>≤ i\<sub\>j\</sub\>\</i\> \< \<i\>d\<sub\>j\</sub\>\</i\> , \<i\>r\</i\> is the rank of the array, and \<i\>d\<sub\>j\</sub\>\</i\> is the size of \<i\>dimension j\</i\> of the array. 
 
 When an *array* is created, the program requesting its creation may declare that all *elements* are of a particular *type*, called the *expressed array element type*. The implementation is permitted to *upgrade* this type in order to produce the *actual array element type*, which is the *element type* for the *array* is actually *specialized*. See the *function* **upgraded-array-element-type**. 
 
@@ -150,9 +150,9 @@ Specializing.
 
 **Compound Type Specifier Syntax:** 
 
-(array [*{element-type |* **\****}* [*dimension-spec*]]) 
+(array [*\{element-type |* **\****\}* [*dimension-spec*]]) 
 
-*dimension-spec::*=*rank |* **\*** *|* (*{dimension |* **\****}*\*) 
+*dimension-spec::*=*rank |* **\*** *|* (*\{dimension |* **\****\}*\*) 
 
 **Compound Type Specifier Arguments:** 
 
@@ -204,9 +204,9 @@ Specializing.
 
 **Compound Type Specifier Syntax:** 
 
-(simple-array [*{element-type |* **\****}* [*dimension-spec*]]) 
+(simple-array [*\{element-type |* **\****\}* [*dimension-spec*]]) 
 
-*dimension-spec::*=*rank |* **\*** *|* (*{dimension |* **\****}*\*) 
+*dimension-spec::*=*rank |* **\*** *|* (*\{dimension |* **\****\}*\*) 
 
 **Compound Type Specifier Arguments:** 
 
@@ -250,7 +250,7 @@ Specializing.
 
 **Compound Type Specifier Syntax:** 
 
-(vector [*{element-type |* **\****}* [*{size |* **\****}*]]) 
+(vector [*\{element-type |* **\****\}* [*\{size |* **\****\}*]]) 
 
 **Compound Type Specifier Arguments:** 
 
@@ -514,7 +514,7 @@ The following is an example of making a *displaced array*.
 
 (setq a (make-array ’(4 3))) 
 
-*→* #<ARRAY 4x3 simple 32546632> 
+*→* #\<ARRAY 4x3 simple 32546632\> 
 
 (dotimes (i 4) 
 
@@ -534,7 +534,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 :displaced-index-offset 2)) 
 
-*→* #<ARRAY 8 indirect 32550757> 
+*→* #\<ARRAY 8 indirect 32550757\> 
 
 (dotimes (i 8) 
 
@@ -562,21 +562,21 @@ The last example depends on the fact that *arrays* are, in effect, stored in row
 
 (setq a1 (make-array 50)) 
 
-*→* #<ARRAY 50 simple 32562043> 
+*→* #\<ARRAY 50 simple 32562043\> 
 
 (setq b1 (make-array 20 :displaced-to a1 :displaced-index-offset 10)) 
 
-*→* #<ARRAY 20 indirect 32563346> 
+*→* #\<ARRAY 20 indirect 32563346\> 
 
 (length b1) *→* 20 
 
 (setq a2 (make-array 50 :fill-pointer 10)) 
 
-*→* #<ARRAY 50 fill-pointer 10 46100216> 
+*→* #\<ARRAY 50 fill-pointer 10 46100216\> 
 
 (setq b2 (make-array 20 :displaced-to a2 :displaced-index-offset 10)) 
 
-*→* #<ARRAY 20 indirect 46104010> 
+*→* #\<ARRAY 20 indirect 46104010\> 
 
 (length a2) *→* 10 
 
@@ -584,13 +584,13 @@ The last example depends on the fact that *arrays* are, in effect, stored in row
 
 (setq a3 (make-array 50 :fill-pointer 10)) 
 
-*→* #<ARRAY 50 fill-pointer 10 46105663> 
+*→* #\<ARRAY 50 fill-pointer 10 46105663\> 
 
 (setq b3 (make-array 20 :displaced-to a3 :displaced-index-offset 10 
 
 :fill-pointer 5)) 
 
-*→* #<ARRAY 20 indirect, fill-pointer 5 46107432> 
+*→* #\<ARRAY 20 indirect, fill-pointer 5 46107432\> 
 
 (length a3) *→* 10 
 
@@ -910,7 +910,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **Description:** 
 
-**array-dimension** returns the *axis-number dimension*<sub>1</sub> of *array*. (Any *fill pointer* is ignored.) **Examples:** 
+**array-dimension** returns the *axis-number dimension*\<sub\>1\</sub\> of *array*. (Any *fill pointer* is ignored.) **Examples:** 
 
 (array-dimension (make-array 4) 0) *→* 4 
 
@@ -1086,23 +1086,23 @@ If **array-displacement** is called on an *array* for which a *non-nil object* w
 
 **Examples:** 
 
-(setq a1 (make-array 5)) *→* #<ARRAY 5 simple 46115576> 
+(setq a1 (make-array 5)) *→* #\<ARRAY 5 simple 46115576\> 
 
 (setq a2 (make-array 4 :displaced-to a1 
 
 :displaced-index-offset 1)) 
 
-*→* #<ARRAY 4 indirect 46117134> 
+*→* #\<ARRAY 4 indirect 46117134\> 
 
 (array-displacement a2) 
 
-*→* #<ARRAY 5 simple 46115576>, 1 
+*→* #\<ARRAY 5 simple 46115576\>, 1 
 
 (setq a3 (make-array 2 :displaced-to a2 
 
 :displaced-index-offset 2)) 
 
-*→* #<ARRAY 2 indirect 46122527> 
+*→* #\<ARRAY 2 indirect 46122527\> 
 
 **15–22** Programming Language—Common Lisp
 
@@ -1112,7 +1112,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 (array-displacement a3) 
 
-*→* #<ARRAY 4 indirect 46117134>, 2 
+*→* #\<ARRAY 4 indirect 46117134\>, 2 
 
 **Exceptional Situations:** 
 
@@ -1164,7 +1164,7 @@ Returns *true* if the *subscripts* are all in bounds for *array*; otherwise retu
 
 *≡* (and (not (some #’minusp (list subscripts))) 
 
-(every #’< (list subscripts) (array-dimensions array))) 
+(every #’\< (list subscripts) (array-dimensions array))) 
 
 Arrays **15–23**
 
@@ -1678,13 +1678,13 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **vector** is analogous to **list**. 
 
-(vector a<sub>1</sub> a<sub>2</sub> ... a<i><sub>n</sub></i>) 
+(vector a\<sub\>1\</sub\> a\<sub\>2\</sub\> ... a\<i\>\<sub\>n\</sub\>\</i\>) 
 
 *≡* (make-array (list *n*) :element-type t 
 
 :initial-contents 
 
-(list a<sub>1</sub> a<sub>2</sub> ... a<i><sub>n</sub></i>)) 
+(list a\<sub\>1\</sub\> a\<sub\>2\</sub\> ... a\<i\>\<sub\>n\</sub\>\</i\>)) 
 
 **vector-pop** *Function* 
 
@@ -1766,11 +1766,11 @@ If the *fill pointer* is zero, **vector-pop** signals an error of *type* **error
 
 **Description:** 
 
-**vector-push** and **vector-push-extend** store *new-element* in *vector*. **vector-push** attempts to store *new-element* in the element of *vector* designated by the *fill pointer* , and to increase the *fill pointer* by one. If the (>= (fill-pointer *vector*) (array-dimension *vector* 0)), neither *vector* nor its *fill pointer* are affected. Otherwise, the store and increment take place and **vector-push** returns the former value of the *fill pointer* which is one less than the one it leaves in *vector*. 
+**vector-push** and **vector-push-extend** store *new-element* in *vector*. **vector-push** attempts to store *new-element* in the element of *vector* designated by the *fill pointer* , and to increase the *fill pointer* by one. If the (\>= (fill-pointer *vector*) (array-dimension *vector* 0)), neither *vector* nor its *fill pointer* are affected. Otherwise, the store and increment take place and **vector-push** returns the former value of the *fill pointer* which is one less than the one it leaves in *vector*. 
 
 **vector-push-extend** is just like **vector-push** except that if the *fill pointer* gets too large, *vector* is extended using **adjust-array** so that it can contain more elements. *Extension* is the minimum number of elements to be added to *vector* if it must be extended. 
 
-**vector-push** and **vector-push-extend** return the index of *new-element* in *vector*. If (>= (fill-pointer *vector*) (array-dimension *vector* 0)), **vector-push** returns **nil**. 
+**vector-push** and **vector-push-extend** return the index of *new-element* in *vector*. If (\>= (fill-pointer *vector*) (array-dimension *vector* 0)), **vector-push** returns **nil**. 
 
 **Examples:** 
 
@@ -1930,7 +1930,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **bit** and **sbit**, unlike **char** and **schar**, allow the first argument to be an *array* of any *rank*. 
 
-<b><sup>bit-and, bit-andc1, bit-andc2, bit-eqv, bit-ior, bit</sup> nand, bit-nor, bit-not, bit-orc1, bit-orc2, bit-xor</b> <i>Function</i> 
+\<b\>\<sup\>bit-and, bit-andc1, bit-andc2, bit-eqv, bit-ior, bit\</sup\> nand, bit-nor, bit-not, bit-orc1, bit-orc2, bit-xor\</b\> \<i\>Function\</i\> 
 
 **Syntax:** 
 
@@ -1984,7 +1984,7 @@ Figure 15–4 indicates the logical operation performed by each of the *function
 
 |**Function Operation**|
 | :- |
-|<p>**bit-and** and </p><p>**bit-eqv** equivalence (exclusive nor) </p><p>**bit-not** complement </p><p>**bit-ior** inclusive or </p><p>**bit-xor** exclusive or </p><p>**bit-nand** complement of *bit-array1* and *bit-array2* </p><p>**bit-nor** complement of *bit-array1* or *bit-array2* </p><p>**bit-andc1** and complement of *bit-array1* with *bit-array2* </p><p>**bit-andc2** and *bit-array1* with complement of *bit-array2* </p><p>**bit-orc1** or complement of *bit-array1* with *bit-array2* </p><p>**bit-orc2** or *bit-array1* with complement of *bit-array2*</p>|
+|\<p\>**bit-and** and \</p\>\<p\>**bit-eqv** equivalence (exclusive nor) \</p\>\<p\>**bit-not** complement \</p\>\<p\>**bit-ior** inclusive or \</p\>\<p\>**bit-xor** exclusive or \</p\>\<p\>**bit-nand** complement of *bit-array1* and *bit-array2* \</p\>\<p\>**bit-nor** complement of *bit-array1* or *bit-array2* \</p\>\<p\>**bit-andc1** and complement of *bit-array1* with *bit-array2* \</p\>\<p\>**bit-andc2** and *bit-array1* with complement of *bit-array2* \</p\>\<p\>**bit-orc1** or complement of *bit-array1* with *bit-array2* \</p\>\<p\>**bit-orc2** or *bit-array1* with complement of *bit-array2*\</p\>|
 
 
 **Figure 15–4. Bit-wise Logical Operations on Bit Arrays** 

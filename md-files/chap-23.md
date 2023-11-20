@@ -106,7 +106,7 @@ READTABLE-CASE Input Symbol-name
 
 *Eof-error-p* in input function calls controls what happens if input is from a file (or any other input source that has a definite end) and the end of the file is reached. If *eof-error-p* is *true* (the default), an error of *type* **end-of-file** is signaled at end of file. If it is *false*, then no error is signaled, and instead the function returns *eof-value*. 
 
-Functions such as **read** that read the representation of an *object* rather than a single character always signals an error, regardless of *eof-error-p*, if the file ends in the middle of an object representation. For example, if a file does not contain enough right parentheses to balance the left parentheses in it, **read** signals an error. If a file ends in a *symbol* or a *number* immediately followed by end-of-file, **read** reads the *symbol* or *number* successfully and when called again will act according to *eof-error-p*. Similarly, the *function* **read-line** successfully reads the last line of a file even if that line is terminated by end-of-file rather than the newline character. Ignorable text, such as lines containing only *whitespace*<sub>2</sub> or comments, are not considered to begin an *object*; if **read** begins to read an *expression* but sees only such ignorable text, it does not consider the file to end in the middle of an *object*. Thus an *eof-error-p* argument controls what happens when the file ends between *objects*. 
+Functions such as **read** that read the representation of an *object* rather than a single character always signals an error, regardless of *eof-error-p*, if the file ends in the middle of an object representation. For example, if a file does not contain enough right parentheses to balance the left parentheses in it, **read** signals an error. If a file ends in a *symbol* or a *number* immediately followed by end-of-file, **read** reads the *symbol* or *number* successfully and when called again will act according to *eof-error-p*. Similarly, the *function* **read-line** successfully reads the last line of a file even if that line is terminated by end-of-file rather than the newline character. Ignorable text, such as lines containing only *whitespace*\<sub\>2\</sub\> or comments, are not considered to begin an *object*; if **read** begins to read an *expression* but sees only such ignorable text, it does not consider the file to end in the middle of an *object*. Thus an *eof-error-p* argument controls what happens when the file ends between *objects*. 
 
 **23–2** Programming Language—Common Lisp
 
@@ -142,7 +142,7 @@ then each call to the *single-quote reader macro function* would establish indep
 
 (list ’quote (read stream t nil t)))) 
 
-2\. A recursive call does not alter whether the reading process is to preserve *whitespace*<sub>2</sub> or not (as determined by whether the outermost call was to **read** or **read-preserving-whitespace**). Suppose again that *single-quote* were to be defined as shown above in the incorrect definition. Then a call to **read-preserving-whitespace** that read the expression ’foo*hSpacei* would fail to preserve the space character following the symbol foo because the *single-quote reader macro function* calls **read**, not **read-preserving-whitespace**, to read the following expression (in this case foo). The correct definition, which passes the value *true* for *recursive-p* to **read**, allows the outermost call to determine whether *whitespace*<sub>2</sub> is preserved. 
+2\. A recursive call does not alter whether the reading process is to preserve *whitespace*\<sub\>2\</sub\> or not (as determined by whether the outermost call was to **read** or **read-preserving-whitespace**). Suppose again that *single-quote* were to be defined as shown above in the incorrect definition. Then a call to **read-preserving-whitespace** that read the expression ’foo*hSpacei* would fail to preserve the space character following the symbol foo because the *single-quote reader macro function* calls **read**, not **read-preserving-whitespace**, to read the following expression (in this case foo). The correct definition, which passes the value *true* for *recursive-p* to **read**, allows the outermost call to determine whether *whitespace*\<sub\>2\</sub\> is preserved. 
 
 3\. When end-of-file is encountered and the *eof-error-p* argument is not **nil**, the kind of error that is signaled may depend on the value of *recursive-p*. If *recursive-p* is *true*, then the end-of-file is deemed to have occurred within the middle of a printed representation; if *recursive-p* is *false*, then the end-of-file may be deemed to have occurred between *objects* rather than within the middle of one. 
 
@@ -198,7 +198,7 @@ If *to-readtable* is **nil**, a new *readtable* is created and returned. Otherwi
 
 zvar *→* 123 
 
-(copy-readtable table2 \*readtable\*) *→* #<READTABLE 614000277> 
+(copy-readtable table2 \*readtable\*) *→* #\<READTABLE 614000277\> 
 
 **23–4** Programming Language—Common Lisp
 
@@ -208,11 +208,11 @@ Fri 12-Aug-1994 6:35pm EDT
 
 zvar *→* VAR 
 
-(setq \*readtable\* (copy-readtable)) *→* #<READTABLE 46210223> 
+(setq \*readtable\* (copy-readtable)) *→* #\<READTABLE 46210223\> 
 
 zvar *→* VAR 
 
-(setq \*readtable\* (copy-readtable nil)) *→* #<READTABLE 46302670> 
+(setq \*readtable\* (copy-readtable nil)) *→* #\<READTABLE 46302670\> 
 
 zvar *→* 123 
 
@@ -264,11 +264,11 @@ If *non-terminating-p* is *true*, the *dispatching macro character* is made a *n
 
 **Examples:** 
 
-(get-macro-character #\{) *→* NIL, *false* 
+(get-macro-character #\\{) *→* NIL, *false* 
 
-(make-dispatch-macro-character #\{) *→* T 
+(make-dispatch-macro-character #\\{) *→* T 
 
-(not (get-macro-character #\{)) *→ false* 
+(not (get-macro-character #\\{)) *→ false* 
 
 The *readtable* is altered. 
 
@@ -304,7 +304,7 @@ The *readtable* is altered.
 
 **read** parses the printed representation of an *object* from *input-stream* and builds such an *object*. 
 
-**read-preserving-whitespace** is like **read** but preserves any *whitespace*<sub>2</sub> *character* that delimits the printed representation of the *object*. **read-preserving-whitespace** is exactly like **read** when the *recursive-p argument* to **read-preserving-whitespace** is *true*. 
+**read-preserving-whitespace** is like **read** but preserves any *whitespace*\<sub\>2\</sub\> *character* that delimits the printed representation of the *object*. **read-preserving-whitespace** is exactly like **read** when the *recursive-p argument* to **read-preserving-whitespace** is *true*. 
 
 **23–6** Programming Language—Common Lisp
 
@@ -314,9 +314,9 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **read, read-preserving-whitespace** 
 
-When **\*read-suppress\*** is *false*, **read** throws away the delimiting *character* required by certain printed representations if it is a *whitespace*<sub>2</sub> *character* ; but **read** preserves the character (using **unread-char**) if it is syntactically meaningful, because it could be the start of the next expression. 
+When **\*read-suppress\*** is *false*, **read** throws away the delimiting *character* required by certain printed representations if it is a *whitespace*\<sub\>2\</sub\> *character* ; but **read** preserves the character (using **unread-char**) if it is syntactically meaningful, because it could be the start of the next expression. 
 
-If a file ends in a *symbol* or a *number* immediately followed by an *end of file*<sub>1</sub>, **read** reads the *symbol* or *number* successfully; when called again, it sees the *end of file*<sub>1</sub> and only then acts according to *eof-error-p*. If a file contains ignorable text at the end, such as blank lines and comments, **read** does not consider it to end in the middle of an *object*. 
+If a file ends in a *symbol* or a *number* immediately followed by an *end of file*\<sub\>1\</sub\>, **read** reads the *symbol* or *number* successfully; when called again, it sees the *end of file*\<sub\>1\</sub\> and only then acts according to *eof-error-p*. If a file contains ignorable text at the end, such as blank lines and comments, **read** does not consider it to end in the middle of an *object*. 
 
 If *recursive-p* is *true*, the call to **read** is expected to be made from within some function that itself has been called from **read** or from a similar input function, rather than from the top level. 
 
@@ -334,17 +334,17 @@ Both functions return the *object* read from *input-stream*. *Eof-value* is retu
 
 (defun skip-then-read-char (s c n) 
 
-(if (char= c #\{) (read s t nil t) (read-preserving-whitespace s)) 
+(if (char= c #\\{) (read s t nil t) (read-preserving-whitespace s)) 
 
 (read-char-no-hang s)) *→* SKIP-THEN-READ-CHAR 
 
 (let ((\*readtable\* (copy-readtable nil))) 
 
-(set-dispatch-macro-character #\# #\{ #’skip-then-read-char) 
+(set-dispatch-macro-character #\# #\\{ #’skip-then-read-char) 
 
-(set-dispatch-macro-character #\# #\} #’skip-then-read-char) 
+(set-dispatch-macro-character #\# #\\} #’skip-then-read-char) 
 
-(with-input-from-string (is "#{123 x #}123 y") 
+(with-input-from-string (is "#\{123 x #\}123 y") 
 
 (format t "~S ~S" (read is) (read is)))) *→* #\x, #\Space, NIL 
 
@@ -384,7 +384,7 @@ However, if **read** had been used instead of **read-preserving-whitespace**, th
 
 (zyedh (path usr games zork usr games boggle)) 
 
-There are times when *whitespace*<sub>2</sub> <sup>should be discarded. If a command interpreter takes single</sup> character commands, but occasionally reads an *object* then if the *whitespace*<sub>2</sub> after a *symbol* is not discarded it might be interpreted as a command some time later after the *symbol* had been read. 
+There are times when *whitespace*\<sub\>2\</sub\> \<sup\>should be discarded. If a command interpreter takes single\</sup\> character commands, but occasionally reads an *object* then if the *whitespace*\<sub\>2\</sub\> after a *symbol* is not discarded it might be interpreted as a command some time later after the *symbol* had been read. 
 
 **Affected By:** 
 
@@ -426,27 +426,27 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **Description:** 
 
-**read-delimited-list** reads *objects* from *input-stream* until the next character after an *object*’s representation (ignoring *whitespace*<sub>2</sub> characters and comments) is *char*. 
+**read-delimited-list** reads *objects* from *input-stream* until the next character after an *object*’s representation (ignoring *whitespace*\<sub\>2\</sub\> characters and comments) is *char*. 
 
-**read-delimited-list** looks ahead at each step for the next non-*whitespace*<sub>2</sub> *character* and peeks at it as if with **peek-char**. If it is *char*, then the *character* is consumed and the *list* of *objects* is returned. If it is a *constituent* or *escape character* , then **read** is used to read an *object*, which is added to the end of the *list*. If it is a *macro character* , its *reader macro function* is called; if the function returns a *value*, that *value* is added to the *list*. The peek-ahead process is then repeated. 
+**read-delimited-list** looks ahead at each step for the next non-*whitespace*\<sub\>2\</sub\> *character* and peeks at it as if with **peek-char**. If it is *char*, then the *character* is consumed and the *list* of *objects* is returned. If it is a *constituent* or *escape character* , then **read** is used to read an *object*, which is added to the end of the *list*. If it is a *macro character* , its *reader macro function* is called; if the function returns a *value*, that *value* is added to the *list*. The peek-ahead process is then repeated. 
 
 If *recursive-p* is *true*, this call is expected to be embedded in a higher-level call to **read** or a similar function. 
 
 It is an error to reach end-of-file during the operation of **read-delimited-list**. 
 
-The consequences are undefined if *char* has a *syntax type* of *whitespace*<sub>2</sub> in the *current readtable*. **Examples:** 
+The consequences are undefined if *char* has a *syntax type* of *whitespace*\<sub\>2\</sub\> in the *current readtable*. **Examples:** 
 
 (read-delimited-list #\]) 1 2 3 4 5 6 ] 
 
 *→* (1 2 3 4 5 6) 
 
-Suppose you wanted #{*a b c . . . z*} to read as a list of all pairs of the elements *a*, *b*, *c*, *. . .*, *z*, for example. 
+Suppose you wanted #\{*a b c . . . z*\} to read as a list of all pairs of the elements *a*, *b*, *c*, *. . .*, *z*, for example. 
 
-#{p q z a} reads as ((p q) (p z) (p a) (q z) (q a) (z a)) 
+#\{p q z a\} reads as ((p q) (p z) (p a) (q z) (q a) (z a)) 
 
-This can be done by specifying a macro-character definition for #{ that does two things: reads in all the items up to the }, and constructs the pairs. **read-delimited-list** performs the first task. 
+This can be done by specifying a macro-character definition for #\{ that does two things: reads in all the items up to the \}, and constructs the pairs. **read-delimited-list** performs the first task. 
 
-(defun |#{-reader| (stream char arg) 
+(defun |#\{-reader| (stream char arg) 
 
 (declare (ignore char arg)) 
 
@@ -454,21 +454,21 @@ This can be done by specifying a macro-character definition for #{ that does two
 
 (mapcar #’(lambda (y) (list (car x) y)) (cdr x))) 
 
-(read-delimited-list #\} stream t))) *→* |#{-reader| 
+(read-delimited-list #\\} stream t))) *→* |#\{-reader| 
 
-(set-dispatch-macro-character #\# #\{ #’|#{-reader|) *→* T 
+(set-dispatch-macro-character #\# #\\{ #’|#\{-reader|) *→* T 
 
-(set-macro-character #\} (get-macro-character #\) **nil**)) 
+(set-macro-character #\\} (get-macro-character #\) **nil**)) 
 
 Note that *true* is supplied for the *recursive-p* argument. 
 
-It is necessary here to give a definition to the character } as well to prevent it from being a constituent. If the line 
+It is necessary here to give a definition to the character \} as well to prevent it from being a constituent. If the line 
 
-(set-macro-character #\} (get-macro-character #\) **nil**)) 
+(set-macro-character #\\} (get-macro-character #\) **nil**)) 
 
-shown above were not included, then the } in 
+shown above were not included, then the \} in 
 
-#{ p q z a} 
+#\{ p q z a\} 
 
 Reader **23–9**
 
@@ -476,9 +476,9 @@ Version 15.17R, X3J13/94-101R.
 
 Fri 12-Aug-1994 6:35pm EDT 
 
-would be considered a constituent character, part of the symbol named a}. This could be corrected by putting a space before the }, but it is better to call **set-macro-character**. 
+would be considered a constituent character, part of the symbol named a\}. This could be corrected by putting a space before the \}, but it is better to call **set-macro-character**. 
 
-Giving } the same definition as the standard definition of the character ) has the twin benefit of making it terminate tokens for use with **read-delimited-list** and also making it invalid for use in any other context. Attempting to read a stray } will signal an error. 
+Giving \} the same definition as the standard definition of the character ) has the twin benefit of making it terminate tokens for use with **read-delimited-list** and also making it invalid for use in any other context. Attempting to read a stray \} will signal an error. 
 
 **Affected By:** 
 
@@ -528,7 +528,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 Parses the printed representation of an *object* from the subsequence of *string bounded* by *start* and *end*, as if **read** had been called on an *input stream* containing those same *characters*. 
 
-If *preserve-whitespace* is *true*, the operation will preserve *whitespace*<sub>2</sub> as **read-preserving-whitespace** would do. 
+If *preserve-whitespace* is *true*, the operation will preserve *whitespace*\<sub\>2\</sub\> as **read-preserving-whitespace** would do. 
 
 If an *object* is successfully parsed, the *primary value*, *object*, is the *object* that was parsed. If *eof-error-p* is *false* and if the end of the *substring* is reached, *eof-value* is returned. 
 
@@ -628,7 +628,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **set-dispatch-macro-character,** *. . .* 
 
-<b><sup>set-dispatch-macro-character, get-dispatch-macro</sup> character</b> <i>Function</i> 
+\<b\>\<sup\>set-dispatch-macro-character, get-dispatch-macro\</sup\> character\</b\> \<i\>Function\</i\> 
 
 **Syntax:** 
 
@@ -662,17 +662,17 @@ For more information about how the *new-function* is invoked, see Section 2.1.4.
 
 **Examples:** 
 
-(get-dispatch-macro-character #\# #\{) *→* NIL 
+(get-dispatch-macro-character #\# #\\{) *→* NIL 
 
-(set-dispatch-macro-character #\# #\{ ;dispatch on #{ 
+(set-dispatch-macro-character #\# #\\{ ;dispatch on #\{ 
 
 #’(lambda(s c n) 
 
-(let ((list (read s nil (values) t))) ;list is object after #n{ 
+(let ((list (read s nil (values) t))) ;list is object after #n\{ 
 
 (when (consp list) ;return nth element of list 
 
-(unless (and n (< 0 n (length list))) (setq n 0)) 
+(unless (and n (\< 0 n (length list))) (setq n 0)) 
 
 (setq list (nth n list))) 
 
@@ -684,11 +684,11 @@ Fri 12-Aug-1994 6:35pm EDT
 
 list))) *→* T 
 
-#{(1 2 3 4) *→* 1 
+#\{(1 2 3 4) *→* 1 
 
-#3{(0 1 2 3) *→* 3 
+#3\{(0 1 2 3) *→* 3 
 
-#{123 *→* 123 
+#\{123 *→* 123 
 
 If it is desired that #$*foo* : as if it were (dollars *foo*). 
 
@@ -760,7 +760,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **Examples:** 
 
-(get-macro-character #\{) *→* NIL, *false* 
+(get-macro-character #\\{) *→* NIL, *false* 
 
 (not (get-macro-character #\;)) *→ false* 
 
@@ -830,7 +830,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **set-syntax-from-char** copies the *syntax types* of *from-char*. If *from-char* is a *macro character* , its *reader macro function* is copied also. If the character is a *dispatching macro character* , its entire dispatch table of *reader macro functions* is copied. The *constituent traits* of *from-char* are not copied. 
 
-A macro definition from a character such as " can be copied to another character; the standard definition for " looks for another character that is the same as the character that invoked it. The definition of ( can not be meaningfully copied to {, on the other hand. The result is that *lists* are of the form {a b c), not {a b c}, because the definition always looks for a closing parenthesis, not a closing brace. 
+A macro definition from a character such as " can be copied to another character; the standard definition for " looks for another character that is the same as the character that invoked it. The definition of ( can not be meaningfully copied to \{, on the other hand. The result is that *lists* are of the form \{a b c), not \{a b c\}, because the definition always looks for a closing parenthesis, not a closing brace. 
 
 **Examples:** 
 
@@ -856,13 +856,13 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **Notes:** 
 
-The *constituent traits* of a *character* are “hard wired” into the parser for extended *tokens*. For example, if the definition of S is copied to \*, then \* will become a *constituent* that is *alphabetic*<sub>2</sub> but that cannot be used as a *short float exponent marker* . For further information, see Section 2.1.4.2 (Constituent Traits). 
+The *constituent traits* of a *character* are “hard wired” into the parser for extended *tokens*. For example, if the definition of S is copied to \*, then \* will become a *constituent* that is *alphabetic*\<sub\>2\</sub\> but that cannot be used as a *short float exponent marker* . For further information, see Section 2.1.4.2 (Constituent Traits). 
 
 **with-standard-io-syntax** *Macro* 
 
 **Syntax:** 
 
-**with-standard-io-syntax** *{form}*\* *→ {result}*\* 
+**with-standard-io-syntax** *\{form\}*\* *→ \{result\}*\* 
 
 **Arguments and Values:** 
 
@@ -882,7 +882,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 |**Variable Value**|
 | :- |
-|<p>**\*package\*** The CL-USER *package* </p><p>**\*print-array\* t** </p><p>**\*print-base\*** 10 </p><p>**\*print-case\*** :upcase </p><p>**\*print-circle\* nil** </p><p>**\*print-escape\* t** </p><p>**\*print-gensym\* t** </p><p>**\*print-length\* nil** </p><p>**\*print-level\* nil** </p><p>**\*print-lines\* nil** </p><p>**\*print-miser-width\* nil** </p><p>**\*print-pprint-dispatch\*** The *standard pprint dispatch table* **\*print-pretty\* nil** </p><p>**\*print-radix\* nil** </p><p>**\*print-readably\* t** </p><p>**\*print-right-margin\* nil** </p><p>**\*read-base\*** 10 </p><p>**\*read-default-float-format\* single-float** </p><p>**\*read-eval\* t** </p><p>**\*read-suppress\* nil** </p><p>**\*readtable\*** The *standard readtable*</p>|
+|\<p\>**\*package\*** The CL-USER *package* \</p\>\<p\>**\*print-array\* t** \</p\>\<p\>**\*print-base\*** 10 \</p\>\<p\>**\*print-case\*** :upcase \</p\>\<p\>**\*print-circle\* nil** \</p\>\<p\>**\*print-escape\* t** \</p\>\<p\>**\*print-gensym\* t** \</p\>\<p\>**\*print-length\* nil** \</p\>\<p\>**\*print-level\* nil** \</p\>\<p\>**\*print-lines\* nil** \</p\>\<p\>**\*print-miser-width\* nil** \</p\>\<p\>**\*print-pprint-dispatch\*** The *standard pprint dispatch table* **\*print-pretty\* nil** \</p\>\<p\>**\*print-radix\* nil** \</p\>\<p\>**\*print-readably\* t** \</p\>\<p\>**\*print-right-margin\* nil** \</p\>\<p\>**\*read-base\*** 10 \</p\>\<p\>**\*read-default-float-format\* single-float** \</p\>\<p\>**\*read-eval\* t** \</p\>\<p\>**\*read-suppress\* nil** \</p\>\<p\>**\*readtable\*** The *standard readtable*\</p\>|
 
 
 **Figure 23–1. Values of standard control variables** 
@@ -1031,7 +1031,7 @@ This variable is intended primarily to support the operation of the read-time co
 
 If it is *false*, the *Lisp reader* operates normally. 
 
-If the *value* of **\*read-suppress\*** is *true*, **read**, **read-preserving-whitespace**, **read-delimited-list**, and **read-from-string** all return a *primary value* of **nil** when they complete successfully; however, they continue to parse the representation of an *object* in the normal way, in order to skip over the *object*, and continue to indicate *end of file* in the normal way. Except as noted below, any *standardized reader macro*<sub>2</sub> that is defined to *read* <sub>2</sub> a following *object* or *token* will do so, but not signal an error if the *object* read is not of an appropriate type or syntax. The *standard syntax* and its associated *reader macros* will not construct any new *objects* (*e.g.*, when reading the representation of a *symbol*, no *symbol* will be constructed or interned). 
+If the *value* of **\*read-suppress\*** is *true*, **read**, **read-preserving-whitespace**, **read-delimited-list**, and **read-from-string** all return a *primary value* of **nil** when they complete successfully; however, they continue to parse the representation of an *object* in the normal way, in order to skip over the *object*, and continue to indicate *end of file* in the normal way. Except as noted below, any *standardized reader macro*\<sub\>2\</sub\> that is defined to *read* \<sub\>2\</sub\> a following *object* or *token* will do so, but not signal an error if the *object* read is not of an appropriate type or syntax. The *standard syntax* and its associated *reader macros* will not construct any new *objects* (*e.g.*, when reading the representation of a *symbol*, no *symbol* will be constructed or interned). 
 
 Extended tokens 
 
@@ -1043,7 +1043,7 @@ Dispatching macro characters (including *sharpsign*)
 
 #= 
 
-The #= notation is totally ignored. It does not read a following *object*. It produces no *object*, but is treated as *whitespace*<sub>2</sub>. 
+The #= notation is totally ignored. It does not read a following *object*. It produces no *object*, but is treated as *whitespace*\<sub\>2\</sub\>. 
 
 Reader **23–21**
 
@@ -1055,7 +1055,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 The ## notation always produces **nil**. 
 
-No matter what the *value* of **\*read-suppress\***, parentheses still continue to delimit and construct *lists*; the #( notation continues to delimit *vectors*; and comments, *strings*, and the *single-quote* and *backquote* notations continue to be interpreted properly. Such situations as ’), #<, #), and #*hSpacei* continue to signal errors. 
+No matter what the *value* of **\*read-suppress\***, parentheses still continue to delimit and construct *lists*; the #( notation continues to delimit *vectors*; and comments, *strings*, and the *single-quote* and *backquote* notations continue to be interpreted properly. Such situations as ’), #\<, #), and #*hSpacei* continue to signal errors. 
 
 **Examples:** 
 
@@ -1109,11 +1109,11 @@ Fri 12-Aug-1994 6:35pm EDT
 
 zvar *→* 123 
 
-(setq \*readtable\* table2) *→* #<READTABLE> 
+(setq \*readtable\* table2) *→* #\<READTABLE\> 
 
 zvar *→* VAR 
 
-(setq \*readtable\* (copy-readtable nil)) *→* #<READTABLE> 
+(setq \*readtable\* (copy-readtable nil)) *→* #\<READTABLE\> 
 
 zvar *→* 123 
 

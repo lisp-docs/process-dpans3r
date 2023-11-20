@@ -52,13 +52,13 @@ Version 15.17R, X3J13/94-101R.
 
 Fri 12-Aug-1994 6:35pm EDT 
 
-Subscript notation, as in “<i>something<sub>n</sub></i>” means that the <i>n</i>th definition of “<i>something</i>” is intended. This notation is used only in situations where the context might be insufficient to disambiguate. 
+Subscript notation, as in “\<i\>something\<sub\>n\</sub\>\</i\>” means that the \<i\>n\</i\>th definition of “\<i\>something\</i\>” is intended. This notation is used only in situations where the context might be insufficient to disambiguate. 
 
 The following are abbreviations used in the glossary: 
 
 |**Abbreviation** |**Meaning**|
 | :-: | :- |
-|<p>*adj.* </p><p>*adv.* </p><p>*ANSI* </p><p>*Comp.* </p><p>*Idiom.* </p><p>*IEEE* </p><p>*ISO* </p><p>*Math.* </p><p>*Trad.* </p><p>*n.* </p><p>*v.* </p><p>*v.t.* </p>|<p>adjective </p><p>adverb </p><p>compatible with one or more ANSI standards computers </p><p>idiomatic </p><p>compatible with one or more IEEE standards compatible with one or more ISO standards mathematics </p><p>traditional </p><p>noun </p><p>verb </p><p>transitive verb</p>|
+|\<p\>*adj.* \</p\>\<p\>*adv.* \</p\>\<p\>*ANSI* \</p\>\<p\>*Comp.* \</p\>\<p\>*Idiom.* \</p\>\<p\>*IEEE* \</p\>\<p\>*ISO* \</p\>\<p\>*Math.* \</p\>\<p\>*Trad.* \</p\>\<p\>*n.* \</p\>\<p\>*v.* \</p\>\<p\>*v.t.* \</p\>|\<p\>adjective \</p\>\<p\>adverb \</p\>\<p\>compatible with one or more ANSI standards computers \</p\>\<p\>idiomatic \</p\>\<p\>compatible with one or more IEEE standards compatible with one or more ISO standards mathematics \</p\>\<p\>traditional \</p\>\<p\>noun \</p\>\<p\>verb \</p\>\<p\>transitive verb\</p\>|
 
 
 **Non-alphabetic** 
@@ -69,7 +69,7 @@ The following are abbreviations used in the glossary:
 
 **absolute** *adj.* 1. (of a *time*) representing a specific point in time. 2. (of a *pathname*) representing a specific position in a directory hierarchy. See *relative*. 
 
-**access** *n.*, *v.t.* 1. *v.t.* (a *place*, or *array*) to *read* <sub>1</sub> or *write*<sub>1</sub> the *value* of the *place* or an *element* of the *array*. 2. *n.* (of a *place*) an attempt to *access*<sub>1</sub> the *value* of the *place*. 
+**access** *n.*, *v.t.* 1. *v.t.* (a *place*, or *array*) to *read* \<sub\>1\</sub\> or *write*\<sub\>1\</sub\> the *value* of the *place* or an *element* of the *array*. 2. *n.* (of a *place*) an attempt to *access*\<sub\>1\</sub\> the *value* of the *place*. 
 
 **accessibility** *n.* the state of being *accessible*. 
 
@@ -107,9 +107,9 @@ characteristics by direct modification. A *conforming program* may depend on an 
 
 **alist** [ **—a list** ], *n.* an *association list*. 
 
-<b>alphabetic</b> <i>n.</i>, <i>adj.</i> 1. <i>adj.</i> (of a <i>character</i> ) being one of the <i>standard characters</i> A through Z or a through z, or being any <i>implementation-defined</i> character that has <i>case</i>, or being some other <i>graphic character</i> defined by the <i>implementation</i> to be <i>alphabetic</i><sub>1</sub>. 2. a. <i>n.</i> one of several possible <i>constituent traits</i> of a <i>character</i> . For details, see Section 2.1.4.1 (Constituent Characters) and Section 2.2 (Reader Algorithm). b. <i>adj.</i> (of a <i>character</i> ) being a <i>character</i> that has <i>syntax type constituent</i> in the <i>current readtable</i> and that has the <i>constituent trait alphabetic</i><sub>2<i>a</i></sub>. See Figure 2–8. 
+\<b\>alphabetic\</b\> \<i\>n.\</i\>, \<i\>adj.\</i\> 1. \<i\>adj.\</i\> (of a \<i\>character\</i\> ) being one of the \<i\>standard characters\</i\> A through Z or a through z, or being any \<i\>implementation-defined\</i\> character that has \<i\>case\</i\>, or being some other \<i\>graphic character\</i\> defined by the \<i\>implementation\</i\> to be \<i\>alphabetic\</i\>\<sub\>1\</sub\>. 2. a. \<i\>n.\</i\> one of several possible \<i\>constituent traits\</i\> of a \<i\>character\</i\> . For details, see Section 2.1.4.1 (Constituent Characters) and Section 2.2 (Reader Algorithm). b. \<i\>adj.\</i\> (of a \<i\>character\</i\> ) being a \<i\>character\</i\> that has \<i\>syntax type constituent\</i\> in the \<i\>current readtable\</i\> and that has the \<i\>constituent trait alphabetic\</i\>\<sub\>2\<i\>a\</i\>\</sub\>. See Figure 2–8. 
 
-**alphanumeric** *adj.* (of a *character* ) being either an *alphabetic*<sub>1</sub> *character* or a *numeric* character. 
+**alphanumeric** *adj.* (of a *character* ) being either an *alphabetic*\<sub\>1\</sub\> *character* or a *numeric* character. 
 
 Glossary **26–3**
 
@@ -169,7 +169,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **atomic type specifier** *n.* a *type specifier* that is *atomic*. For every *atomic type specifier* , *x*, there is an equivalent *compound type specifier* with no arguments supplied, (*x*). 
 
-**attribute** *n.* (of a *character* ) a program-visible aspect of the *character* . The only *standardized attribute* of a *character* is its *code*<sub>2</sub>, but *implementations* are permitted to have additional *implementation-defined attributes*. See Section 13.1.3 (Character Attributes). “An implementation that support fonts might make font information an attribute of a character, while others might represent font information separately from characters.” 
+**attribute** *n.* (of a *character* ) a program-visible aspect of the *character* . The only *standardized attribute* of a *character* is its *code*\<sub\>2\</sub\>, but *implementations* are permitted to have additional *implementation-defined attributes*. See Section 13.1.3 (Character Attributes). “An implementation that support fonts might make font information an attribute of a character, while others might represent font information separately from characters.” 
 
 **aux variable** *n.* a *variable* that occurs in the part of a *lambda list* that was introduced by **&aux**. Unlike all other *variables* introduced by a *lambda-list*, *aux variables* are not *parameters*. 
 
@@ -231,17 +231,17 @@ Fri 12-Aug-1994 6:35pm EDT
 
 symbol **t** (representing *true*), or the symbol **nil** (representing *false*). See *generalized boolean*. 
 
-**boolean equivalent** *n.* (of an *object O*<sub>1</sub>) any *object O*<sub>2</sub> that has the same truth value as *O*<sub>1</sub> when both *O*<sub>1</sub> and *O*<sub>2</sub> are viewed as *generalized booleans*. 
+**boolean equivalent** *n.* (of an *object O*\<sub\>1\</sub\>) any *object O*\<sub\>2\</sub\> that has the same truth value as *O*\<sub\>1\</sub\> when both *O*\<sub\>1\</sub\> and *O*\<sub\>2\</sub\> are viewed as *generalized booleans*. 
 
-**bound** *adj.*, *v.t.* 1. *adj.* having an associated denotation in a *binding*. “The variables named by a **let** are bound within its body.” See *unbound*. 2. *adj.* having a local *binding* which *shadows*<sub>2</sub> another. “The variable **\*print-escape\*** is bound while in the **princ** function.” 3. *v.t.* the past tense of *bind*. 
+**bound** *adj.*, *v.t.* 1. *adj.* having an associated denotation in a *binding*. “The variables named by a **let** are bound within its body.” See *unbound*. 2. *adj.* having a local *binding* which *shadows*\<sub\>2\</sub\> another. “The variable **\*print-escape\*** is bound while in the **princ** function.” 3. *v.t.* the past tense of *bind*. 
 
 **bound declaration** *n.* a *declaration* that refers to or is associated with a *variable* or *function* and that appears within the *special form* that *establishes* the *variable* or *function*, but before the body of that *special form* (specifically, at the head of that *form*’s body). (If a *bound declaration* refers to a *function binding* or a *lexical variable binding*, the *scope* of the *declaration* is exactly the *scope* of that *binding*. If the 
 
 *declaration* refers to a *dynamic variable binding*, the *scope* of the *declaration* is what the *scope* of the *binding* would have been if it were lexical rather than dynamic.) 
 
-<b>bounded</b> <i>adj.</i> (of a <i>sequence S</i>, by an ordered pair of <i>bounding indices i<sub>start</sub></i> and <i>i<sub>end</sub></i>) restricted to a subrange of the <i>elements</i> of <i>S</i> that includes each <i>element</i> beginning with (and including) the one indexed by <i>i<sub>start</sub></i> and continuing up to (but not including) the one indexed by <i>i<sub>end</sub></i>. 
+\<b\>bounded\</b\> \<i\>adj.\</i\> (of a \<i\>sequence S\</i\>, by an ordered pair of \<i\>bounding indices i\<sub\>start\</sub\>\</i\> and \<i\>i\<sub\>end\</sub\>\</i\>) restricted to a subrange of the \<i\>elements\</i\> of \<i\>S\</i\> that includes each \<i\>element\</i\> beginning with (and including) the one indexed by \<i\>i\<sub\>start\</sub\>\</i\> and continuing up to (but not including) the one indexed by \<i\>i\<sub\>end\</sub\>\</i\>. 
 
-<b>bounding index</b> <i>n.</i> (of a <i>sequence</i> with <i>length n</i>) either of a conceptual pair of <i>integers</i>, <i>i<sub>start</sub></i> and <i>i<sub>end</sub></i>, respectively called the “lower bounding index” and “upper 
+\<b\>bounding index\</b\> \<i\>n.\</i\> (of a \<i\>sequence\</i\> with \<i\>length n\</i\>) either of a conceptual pair of \<i\>integers\</i\>, \<i\>i\<sub\>start\</sub\>\</i\> and \<i\>i\<sub\>end\</sub\>\</i\>, respectively called the “lower bounding index” and “upper 
 
 Glossary **26–7**
 
@@ -249,7 +249,7 @@ Version 15.17R, X3J13/94-101R.
 
 Fri 12-Aug-1994 6:35pm EDT 
 
-bounding index”, such that 0 <i>≤ i<sub>start</sub> ≤ i<sub>end</sub> ≤ n</i>, and which therefore delimit a subrange of the <i>sequence bounded</i> by <i>i<sub>start</sub></i> and <i>i<sub>end</sub></i>. 
+bounding index”, such that 0 \<i\>≤ i\<sub\>start\</sub\> ≤ i\<sub\>end\</sub\> ≤ n\</i\>, and which therefore delimit a subrange of the \<i\>sequence bounded\</i\> by \<i\>i\<sub\>start\</sub\>\</i\> and \<i\>i\<sub\>end\</sub\>\</i\>. 
 
 **bounding index designator** (for a *sequence*) one of two *objects* that, taken together as an ordered pair, behave as a *designator* for *bounding indices* of the *sequence*; that is, they denote *bounding indices* of the *sequence*, and are either: an *integer* (denoting 
 
@@ -285,7 +285,7 @@ Version 15.17R, X3J13/94-101R.
 
 Fri 12-Aug-1994 6:35pm EDT 
 
-**car** *n.* 1. a. (of a *cons*) the component of a *cons* corresponding to the first *argument* to **cons**; the other component is the *cdr* . “The function **rplaca** modifies the car of a cons.” b. (of a *list*) the first *element* of the *list*, or **nil** if the *list* is the *empty list*. 2. the *object* that is held in the *car* <sub>1</sub>. “The function **car** returns the car of a cons.” 
+**car** *n.* 1. a. (of a *cons*) the component of a *cons* corresponding to the first *argument* to **cons**; the other component is the *cdr* . “The function **rplaca** modifies the car of a cons.” b. (of a *list*) the first *element* of the *list*, or **nil** if the *list* is the *empty list*. 2. the *object* that is held in the *car* \<sub\>1\</sub\>. “The function **car** returns the car of a cons.” 
 
 **case** *n.* (of a *character* ) the property of being either *uppercase* or *lowercase*. Not all *characters* have *case*. “The characters #\A and #\a have case, but the character #\$ has no case.” See Section 13.1.4.3 (Characters With Case) and the *function* **both-case-p**. 
 
@@ -295,11 +295,11 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **catch** *n.* an *exit point* which is *established* by a **catch** *form* within the *dynamic scope* of its body, which is named by a *catch tag*, and to which control and *values* may be *thrown*. 
 
-**catch tag** *n.* an *object* which names an *active catch*. (If more than one *catch* is active with the same *catch tag*, it is only possible to *throw* to the innermost such *catch* because the outer one is *shadowed* <sub>2</sub>.) 
+**catch tag** *n.* an *object* which names an *active catch*. (If more than one *catch* is active with the same *catch tag*, it is only possible to *throw* to the innermost such *catch* because the outer one is *shadowed* \<sub\>2\</sub\>.) 
 
 **cddr** [ **k\_ud***  **d*** **r** ] or [ **k***  **d\_ud*** **r** ], *n.* (of an *object*) the *cdr* of the *cdr* of that *object*. 
 
-**cdr** [ **k\_u d*** **r** ], *n.* 1. a. (of a *cons*) the component of a *cons* corresponding to the second *argument* to **cons**; the other component is the *car* . “The function **rplacd** modifies the cdr of a cons.” b. (of a *list L*<sub>1</sub>) either the *list L*<sub>2</sub> that contains the *elements* of *L*<sub>1</sub> that follow after the first, or else **nil** if *L*<sub>1</sub> is the *empty list*. 2. the *object* that is held in the *cdr* <sub>1</sub>. “The function **cdr** returns the cdr of a cons.” 
+**cdr** [ **k\_u d*** **r** ], *n.* 1. a. (of a *cons*) the component of a *cons* corresponding to the second *argument* to **cons**; the other component is the *car* . “The function **rplacd** modifies the cdr of a cons.” b. (of a *list L*\<sub\>1\</sub\>) either the *list L*\<sub\>2\</sub\> that contains the *elements* of *L*\<sub\>1\</sub\> that follow after the first, or else **nil** if *L*\<sub\>1\</sub\> is the *empty list*. 2. the *object* that is held in the *cdr* \<sub\>1\</sub\>. “The function **cdr** returns the cdr of a cons.” 
 
 **cell** *n. Trad.* (of an *object*) a conceptual *slot* of that *object*. The *dynamic variable* and global *function bindings* of a *symbol* are sometimes referred to as its *value cell* and *function cell*, respectively. 
 
@@ -307,7 +307,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **character code** *n.* 1. one of possibly several *attributes* of a *character* . 2. a 
 
-non-negative *integer* less than the *value* of **char-code-limit** that is suitable for use as a *character code*<sub>1</sub>. 
+non-negative *integer* less than the *value* of **char-code-limit** that is suitable for use as a *character code*\<sub\>1\</sub\>. 
 
 Glossary **26–9**
 
@@ -319,7 +319,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **circular** *adj.* 1. (of a *list*) a *circular list*. 2. (of an arbitrary *object*) having a 
 
-*component*, *element*, *constituent*<sub>2</sub>, or *subexpression* (as appropriate to the context) that is the *object* itself. 
+*component*, *element*, *constituent*\<sub\>2\</sub\>, or *subexpression* (as appropriate to the context) that is the *object* itself. 
 
 **circular list** *n.* a chain of *conses* that has no termination because some *cons* in the chain is the *cdr* of a later *cons*. 
 
@@ -359,7 +359,7 @@ rather than a *complex*—see Section 12.1.5.3 (Rule of Canonical Representation
 
 **compilation** *n.* the process of *compiling code* by the *compiler* . 
 
-**compilation environment** *n.* 1. An *environment* that represents information known by the *compiler* about a *form* that is being *compiled*. See Section 3.2.1 (Compiler Terminology). 2. An *object* that represents the *compilation environment* <sub>1</sub> and that is used as a second argument to a *macro function* (which supplies a *value* for any **&environment** *parameter* in the *macro function*’s definition). 
+**compilation environment** *n.* 1. An *environment* that represents information known by the *compiler* about a *form* that is being *compiled*. See Section 3.2.1 (Compiler Terminology). 2. An *object* that represents the *compilation environment* \<sub\>1\</sub\> and that is used as a second argument to a *macro function* (which supplies a *value* for any **&environment** *parameter* in the *macro function*’s definition). 
 
 **compilation unit** *n.* an interval during which a single unit of compilation is occurring. See the *macro* **with-compilation-unit**. 
 
@@ -463,11 +463,11 @@ provided that no extension interferes with the correct function of any *conformi
 
 **constant variable** *n.* a *variable*, the *value* of which can never change; that 
 
-is, a *keyword* <sub>1</sub> or a *named constant*. “The symbols **t**, **nil**, :direction, and 
+is, a *keyword* \<sub\>1\</sub\> or a *named constant*. “The symbols **t**, **nil**, :direction, and 
 
 **most-positive-fixnum** are constant variables.” 
 
-<b>constituent</b> <i>n.</i>, <i>adj.</i> 1. a. <i>n.</i> the <i>syntax type</i> of a <i>character</i> that is part of a <i>token</i>. For details, see Section 2.1.4.1 (Constituent Characters). b. <i>adj.</i> (of a <i>character</i> ) having the <i>constituent</i><sub>1<i>a</i></sub> syntax type</i><sub>2</sub>. c. <i>n.</i> a <i>constituent</i><sub>1<i>b</i></sub> character</i> . 2. <i>n.</i> (of a <i>composite stream</i>) one of possibly several <i>objects</i> that collectively comprise the source or sink of that <i>stream</i>. 
+\<b\>constituent\</b\> \<i\>n.\</i\>, \<i\>adj.\</i\> 1. a. \<i\>n.\</i\> the \<i\>syntax type\</i\> of a \<i\>character\</i\> that is part of a \<i\>token\</i\>. For details, see Section 2.1.4.1 (Constituent Characters). b. \<i\>adj.\</i\> (of a \<i\>character\</i\> ) having the \<i\>constituent\</i\>\<sub\>1\<i\>a\</i\>\</sub\> syntax type\</i\>\<sub\>2\</sub\>. c. \<i\>n.\</i\> a \<i\>constituent\</i\>\<sub\>1\<i\>b\</i\>\</sub\> character\</i\> . 2. \<i\>n.\</i\> (of a \<i\>composite stream\</i\>) one of possibly several \<i\>objects\</i\> that collectively comprise the source or sink of that \<i\>stream\</i\>. 
 
 **constituent trait** *n.* (of a *character* ) one of several classifications of a *constituent character* in a *readtable*. See Section 2.1.4.1 (Constituent Characters). 
 
@@ -487,13 +487,13 @@ arithmetic on mixed *types* of *numbers*) produce a result whose *type* is contr
 
 **control form** *n.* 1. a *form* that establishes one or more places to which control can be transferred. 2. a *form* that transfers control. 
 
-<b>copy</b> <i>n.</i> 1. (of a <i>cons C</i>) a <i>fresh cons</i> with the <i>same car</i> and <i>cdr</i> as <i>C</i>. 2. (of a <i>list L</i>) a <i>fresh list</i> with the <i>same elements</i> as <i>L</i>. (Only the <i>list structure</i> is <i>fresh</i>; the <i>elements</i> are the <i>same</i>.) See the <i>function</i> <b>copy-list</b>. 3. (of an <i>association list A</i> with <i>elements A<sub>i</sub></i>) a <i>fresh list B</i> with <i>elements B<sub>i</sub></i>, each of which is <b>nil</b> if <i>A<sub>i</sub></i>is <b>nil</b>, or else a <i>copy</i> of the <i>cons A<sub>i</sub></i>. See the <i>function</i> <b>copy-alist</b>. 4. (of a <i>tree T</i>) a <i>fresh tree</i> with the <i>same</i> 
+\<b\>copy\</b\> \<i\>n.\</i\> 1. (of a \<i\>cons C\</i\>) a \<i\>fresh cons\</i\> with the \<i\>same car\</i\> and \<i\>cdr\</i\> as \<i\>C\</i\>. 2. (of a \<i\>list L\</i\>) a \<i\>fresh list\</i\> with the \<i\>same elements\</i\> as \<i\>L\</i\>. (Only the \<i\>list structure\</i\> is \<i\>fresh\</i\>; the \<i\>elements\</i\> are the \<i\>same\</i\>.) See the \<i\>function\</i\> \<b\>copy-list\</b\>. 3. (of an \<i\>association list A\</i\> with \<i\>elements A\<sub\>i\</sub\>\</i\>) a \<i\>fresh list B\</i\> with \<i\>elements B\<sub\>i\</sub\>\</i\>, each of which is \<b\>nil\</b\> if \<i\>A\<sub\>i\</sub\>\</i\>is \<b\>nil\</b\>, or else a \<i\>copy\</i\> of the \<i\>cons A\<sub\>i\</sub\>\</i\>. See the \<i\>function\</i\> \<b\>copy-alist\</b\>. 4. (of a \<i\>tree T\</i\>) a \<i\>fresh tree\</i\> with the \<i\>same\</i\> 
 
 *leaves* as *T*. See the *function* **copy-tree**. 5. (of a *random state R*) a *fresh random state* that, if used as an argument to to the *function* **random** would produce the same series of “random” values as *R* would produce. 6. (of a *structure S*) a *fresh structure* that has the same *type* as *S*, and that has slot values, each of which is the *same* as the corresponding slot value of *S*. (Note that since the difference between a *cons*, a *list*, and a *tree* is a matter of “view” or “intention,” there can be no general-purpose *function* which, based solely on the *type* of an *object*, can determine which of these distinct meanings is intended. The distinction rests solely on the basis of the text description within this document. For example, phrases like “a *copy* of the given *list*” or “copy of the *list x*” imply the second definition.) 
 
 **correctable** *adj.* (of an *error* ) 1. (by a *restart* other than **abort** that has been 
 
-associated with the *error* ) capable of being corrected by invoking that *restart*. “The function **cerror** signals an error that is correctable by the **continue** *restart*.” (Note that correctability is not a property of an *error object*, but rather a property of the *dynamic environment* that is in effect when the *error* is *signaled*. Specifically, the *restart* is “associated with” the *error condition object*. See Section 9.1.4.2.4 (Associating a Restart with a Condition).) 2. (when no specific *restart* is mentioned) *correctable*<sub>1</sub> by at least one *restart*. “**import** signals a correctable error of *type* **package-error** if any of the imported symbols has the same name as some distinct symbol already accessible in the package.” 
+associated with the *error* ) capable of being corrected by invoking that *restart*. “The function **cerror** signals an error that is correctable by the **continue** *restart*.” (Note that correctability is not a property of an *error object*, but rather a property of the *dynamic environment* that is in effect when the *error* is *signaled*. Specifically, the *restart* is “associated with” the *error condition object*. See Section 9.1.4.2.4 (Associating a Restart with a Condition).) 2. (when no specific *restart* is mentioned) *correctable*\<sub\>1\</sub\> by at least one *restart*. “**import** signals a correctable error of *type* **package-error** if any of the imported symbols has the same name as some distinct symbol already accessible in the package.” 
 
 **current input base** *n.* (in a *dynamic environment*) the *radix* that is the *value* of **\*read-base\*** in that *environment*, and that is the default *radix* employed by the *Lisp reader* and its related *functions*. 
 
@@ -513,7 +513,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **current random state** *n.* (in a *dynamic environment*) the *random state* that is the *value* of **\*random-state\*** in that *environment*, and that is the default *random state* employed by **random**. 
 
-**current readtable** *n.* (in a *dynamic environment*) the *readtable* that is the *value* of **\*readtable\*** in that *environment*, and that affects the way in which *expressions*<sub>2</sub> are parsed into *objects* by the *Lisp reader* . 
+**current readtable** *n.* (in a *dynamic environment*) the *readtable* that is the *value* of **\*readtable\*** in that *environment*, and that affects the way in which *expressions*\<sub\>2\</sub\> are parsed into *objects* by the *Lisp reader* . 
 
 **D** 
 
@@ -541,7 +541,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **decoded time** *n. absolute time*, represented as an ordered series of nine *objects* which, taken together, form a description of a point in calendar time, accurate to the nearest second (except that *leap seconds* are ignored). See Section 25.1.4.1 (Decoded Time). 
 
-**default method** *n.* a *method* having no *parameter specializers* other than the *class* **t**. Such a *method* is always an *applicable method* but might be *shadowed* <sub>2</sub> by a more specific *method*. 
+**default method** *n.* a *method* having no *parameter specializers* other than the *class* **t**. Such a *method* is always an *applicable method* but might be *shadowed* \<sub\>2\</sub\> by a more specific *method*. 
 
 **defaulted initialization argument list** *n.* a *list* of alternating initialization 
 
@@ -601,9 +601,9 @@ already occurred; that is, that the *parameter* is already of the denoted *type*
 
 **direct instance** *n.* (of a *class C*) an *object* whose *class* is *C* itself, rather than some *subclass* of *C*. “The function **make-instance** always returns a direct instance of the class which is (or is named by) its first argument.” 
 
-**direct subclass** *n.* (of a *class C*<sub>1</sub>) a *class C*<sub>2</sub>, such that *C*<sub>1</sub> is a *direct superclass* of *C*<sub>2</sub>. 
+**direct subclass** *n.* (of a *class C*\<sub\>1\</sub\>) a *class C*\<sub\>2\</sub\>, such that *C*\<sub\>1\</sub\> is a *direct superclass* of *C*\<sub\>2\</sub\>. 
 
-**direct superclass** *n.* (of a *class C*<sub>1</sub>) a *class C*<sub>2</sub> which was explicitly designated as a *superclass* of *C*<sub>1</sub> in the definition of *C*<sub>1</sub>. 
+**direct superclass** *n.* (of a *class C*\<sub\>1\</sub\>) a *class C*\<sub\>2\</sub\> which was explicitly designated as a *superclass* of *C*\<sub\>1\</sub\> in the definition of *C*\<sub\>1\</sub\>. 
 
 **disestablish** *v.t.* to withdraw the *establishment* of an *object*, a *binding*, an *exit point*, a *tag*, a *handler* , a *restart*, or an *environment*. 
 
@@ -671,7 +671,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **empty type** *n.* the *type* that contains no *elements*, and that is a *subtype* of all *types* (including itself). See *nil*. 
 
-**end of file** *n.* 1. the point in an *input stream* beyond which there is no further data. Whether or not there is such a point on an *interactive stream* is *implementation defined*. 2. a *situation* that occurs upon an attempt to obtain data from an *input stream* that is at the *end of file*<sub>1</sub>. 
+**end of file** *n.* 1. the point in an *input stream* beyond which there is no further data. Whether or not there is such a point on an *interactive stream* is *implementation defined*. 2. a *situation* that occurs upon an attempt to obtain data from an *input stream* that is at the *end of file*\<sub\>1\</sub\>. 
 
 **26–20** Programming Language—Common Lisp
 
@@ -681,7 +681,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **environment** *n.* 1. a set of *bindings*. See Section 3.1.1 (Introduction to Environments). 2. an *environment object*. “**macroexpand** takes an optional environment argument.” 
 
-**environment object** *n.* an *object* representing a set of *lexical bindings*, used in the processing of a *form* to provide meanings for *names* within that *form*. “**macroexpand** takes an optional environment argument.” (The *object* **nil** when used as an *environment object* denotes the *null lexical environment*; the *values* of *environment parameters* to *macro functions* are *objects* of *implementation-dependent* nature which represent the *environment*<sub>1</sub> in which the corresponding *macro form* is to be expanded.) See Section 3.1.1.4 (Environment Objects). 
+**environment object** *n.* an *object* representing a set of *lexical bindings*, used in the processing of a *form* to provide meanings for *names* within that *form*. “**macroexpand** takes an optional environment argument.” (The *object* **nil** when used as an *environment object* denotes the *null lexical environment*; the *values* of *environment parameters* to *macro functions* are *objects* of *implementation-dependent* nature which represent the *environment*\<sub\>1\</sub\> in which the corresponding *macro form* is to be expanded.) See Section 3.1.1.4 (Environment Objects). 
 
 **environment parameter** *n.* A *parameter* in a *defining form f* for which there is no corresponding *argument*; instead, this *parameter* receives as its value an *environment object* which corresponds to the *lexical environment* in which the *defining form f* appeared. 
 
@@ -725,7 +725,7 @@ number is to be represented as a double float.”
 
 |**Marker Meaning**|
 | :- |
-|<p>D or d **double-float** </p><p>E or e **float** (see **\*read-default-float-format\***) </p><p>F or f **single-float** </p><p>L or l **long-float** </p><p>S or s **short-float**</p>|
+|\<p\>D or d **double-float** \</p\>\<p\>E or e **float** (see **\*read-default-float-format\***) \</p\>\<p\>F or f **single-float** \</p\>\<p\>L or l **long-float** \</p\>\<p\>S or s **short-float**\</p\>|
 
 
 **Figure 26–1. Exponent Markers** 
@@ -780,7 +780,7 @@ determines one of possibly several *implementation-dependent* ways in which *cha
 
 *implementation* to be an *external file format designator* (denoting an *implementation defined external file format*), or some other *object* defined by the *implementation* to be an *external file format* (denoting itself). 
 
-**external symbol** *n.* (of a *package*) a *symbol* that is part of the ‘external interface’ to the *package* and that are *inherited* <sub>3</sub> by any other *package* that *uses* the *package*. When using the *Lisp reader* , if a *package prefix* is used, the *name* of an *external symbol* is separated from the *package name* by a single *package marker* while the *name* of an *internal symbol* is separated from the *package name* by a double *package marker* ; see Section 2.3.4 (Symbols as Tokens). 
+**external symbol** *n.* (of a *package*) a *symbol* that is part of the ‘external interface’ to the *package* and that are *inherited* \<sub\>3\</sub\> by any other *package* that *uses* the *package*. When using the *Lisp reader* , if a *package prefix* is used, the *name* of an *external symbol* is separated from the *package name* by a single *package marker* while the *name* of an *internal symbol* is separated from the *package name* by a double *package marker* ; see Section 2.3.4 (Symbols as Tokens). 
 
 **externalizable object** *n.* an *object* that can be used as a *literal object* in *code* to be processed by the *file compiler* . 
 
@@ -792,7 +792,7 @@ determines one of possibly several *implementation-dependent* ways in which *cha
 
 there is a such a definition of a *setf expander F*, the *function* (setf *F*) can be *fbound* if and only if, by design or coincidence, a function binding for (setf *F*) has been independently established.) See the *functions* **fboundp** and **symbol-function**. 
 
-**feature** *n.* 1. an aspect or attribute of Common Lisp, of the *implementation*, or of the *environment*. 2. a *symbol* that names a *feature*<sub>1</sub>. See Section 24.1.2 (Features). “The :ansi-cl feature is present in all conforming implementations.” 
+**feature** *n.* 1. an aspect or attribute of Common Lisp, of the *implementation*, or of the *environment*. 2. a *symbol* that names a *feature*\<sub\>1\</sub\>. See Section 24.1.2 (Features). “The :ansi-cl feature is present in all conforming implementations.” 
 
 **26–24** Programming Language—Common Lisp
 
@@ -836,7 +836,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **float** *n.* an *object* of *type* **float**. 
 
-**for-value** *adj.* (of a *reference* to a *binding*) being a *reference* that *reads*<sub>1</sub> the *value* of the *binding*. 
+**for-value** *adj.* (of a *reference* to a *binding*) being a *reference* that *reads*\<sub\>1\</sub\> the *value* of the *binding*. 
 
 **form** *n.* 1. any *object* meant to be *evaluated*. 2. a *symbol*, a *compound form*, or a *self-evaluating object*. 3. (for an *operator* , as in “*hhoperator ii form*”) a *compound form* having that *operator* as its first element. “A **quote** form is a constant form.” 
 
@@ -852,7 +852,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **format directive** *n.* 1. a sequence of *characters* in a *format string* which is introduced by a *tilde*, and which is specially interpreted by *code* which processes *format strings* to mean that some special operation should be performed, possibly involving data supplied by the *format arguments* that accompanied the *format string*. See the 
 
-*function* **format**. “In "~D base 10 = ~8R", the character sequences ‘~D’ and ‘~8R’ are format directives.” 2. the conceptual category of all *format directives*<sub>1</sub> which use the same dispatch character. “Both "~3d" and "~3,’0D" are valid uses of the ‘~D’ format directive.” 
+*function* **format**. “In "~D base 10 = ~8R", the character sequences ‘~D’ and ‘~8R’ are format directives.” 2. the conceptual category of all *format directives*\<sub\>1\</sub\> which use the same dispatch character. “Both "~3d" and "~3,’0D" are valid uses of the ‘~D’ format directive.” 
 
 **format string** *n.* a *string* which can contain both ordinary text and *format directives*, and which is used in conjunction with *format arguments* to describe how text output should be formatted by certain functions, such as **format**. 
 
@@ -968,7 +968,7 @@ Version 15.17R, X3J13/94-101R.
 
 Fri 12-Aug-1994 6:35pm EDT 
 
-|<p>\*debug-io\* \*error-io\* query-io\* </p><p>\*standard-input\* \*standard-output\* \*trace-output\*</p>|
+|\<p\>\*debug-io\* \*error-io\* query-io\* \</p\>\<p\>\*standard-input\* \*standard-output\* \*trace-output\*\</p\>|
 | :- |
 
 
@@ -1024,7 +1024,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **indicator** *n.* a *property indicator* . 
 
-**indirect instance** *n.* (of a *class C*<sub>1</sub>) an *object* of *class C*<sub>2</sub>, where *C*<sub>2</sub> is a *subclass* of *C*<sub>1</sub>. “An integer is an indirect instance of the class **number**.” 
+**indirect instance** *n.* (of a *class C*\<sub\>1\</sub\>) an *object* of *class C*\<sub\>2\</sub\>, where *C*\<sub\>2\</sub\> is a *subclass* of *C*\<sub\>1\</sub\>. “An integer is an indirect instance of the class **number**.” 
 
 **inherit** *v.t.* 1. to receive or acquire a quality, trait, or characteristic; to gain access to a feature defined elsewhere. 2. (a *class*) to acquire the structure and behavior defined by a *superclass*. 3. (a *package*) to make *symbols exported* by another *package accessible* by using **use-package**. 
 
@@ -1060,7 +1060,7 @@ querying. See Section 21.1.1.1.3 (Interactive Streams).
 
 **internal time unit** *n.* a unit of time equal to 1*/n* of a second, for some *implementation defined integer* value of *n*. See the *variable* **internal-time-units-per-second**. 
 
-**interned** *adj. Trad.* 1. (of a *symbol*) *accessible*<sub>3</sub> in any *package*. 2. (of a *symbol* in a specific *package*) *present* in that *package*. 
+**interned** *adj. Trad.* 1. (of a *symbol*) *accessible*\<sub\>3\</sub\> in any *package*. 2. (of a *symbol* in a specific *package*) *present* in that *package*. 
 
 **interpreted function** *n.* a *function* that is not a *compiled function*. (It is possible for there to be a *conforming implementation* which has no *interpreted functions*, but a *conforming program* must not assume that all *functions* are *compiled functions*.) 
 
@@ -1068,7 +1068,7 @@ querying. See Section 21.1.1.1.3 (Interactive Streams).
 
 **interval designator** *n.* (of *type T*) an ordered pair of *objects* that describe a *subtype* of *T* by delimiting an interval on the real number line. See Section 12.1.6 (Interval Designators). 
 
-**invalid** *n.*, *adj.* 1. *n.* a possible *constituent trait* of a *character* which if present signifies that the *character* cannot ever appear in a *token* except under the control of a *single escape character* . For details, see Section 2.1.4.1 (Constituent Characters). 2. *adj.* (of a *character* ) being a *character* that has *syntax type constituent* in the *current readtable* and that has the *constituent trait invalid* <sub>1</sub>. See Figure 2–8. 
+**invalid** *n.*, *adj.* 1. *n.* a possible *constituent trait* of a *character* which if present signifies that the *character* cannot ever appear in a *token* except under the control of a *single escape character* . For details, see Section 2.1.4.1 (Constituent Characters). 2. *adj.* (of a *character* ) being a *character* that has *syntax type constituent* in the *current readtable* and that has the *constituent trait invalid* \<sub\>1\</sub\>. See Figure 2–8. 
 
 **iteration form** *n.* a *compound form* whose *operator* is named in Figure 26–3, or a *compound form* that has an *implementation-defined operator* and that is defined by the *implementation* to be an *iteration form*. 
 
@@ -1078,7 +1078,7 @@ Version 15.17R, X3J13/94-101R.
 
 Fri 12-Aug-1994 6:35pm EDT 
 
-|<p>**do do-external-symbols dotimes do\* do-symbols loop** </p><p>**do-all-symbols dolist**</p>|
+|\<p\>**do do-external-symbols dotimes do\* do-symbols loop** \</p\>\<p\>**do-all-symbols dolist**\</p\>|
 | :- |
 
 
@@ -1118,7 +1118,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **lambda variable** *n.* a *formal parameter* , used to emphasize the *variable*’s relation to the *lambda list* that *established* it. 
 
-**leaf** *n.* 1. an *atom* in a *tree*<sub>1</sub>. 2. a terminal node of a *tree*<sub>2</sub>. 
+**leaf** *n.* 1. an *atom* in a *tree*\<sub\>1\</sub\>. 2. a terminal node of a *tree*\<sub\>2\</sub\>. 
 
 **leap seconds** *n.* additional one-second intervals of time that are occasionally inserted into the true calendar by official timekeepers as a correction similar to “leap years.” All Common Lisp *time* representations ignore *leap seconds*; every day is assumed to be exactly 86400 seconds long. 
 
@@ -1156,7 +1156,7 @@ area that permits the sharing of some but not all *objects* are considered to be
 
 **Lisp printer** *n. Trad.* the procedure that prints the character representation of an *object* onto a *stream*. (This procedure is implemented by the *function* **write**.) 
 
-**Lisp read-eval-print loop** *n. Trad.* an endless loop that *reads*<sub>2</sub> a *form*, *evaluates* it, and prints (*i.e.*, *writes*<sub>2</sub>) the results. In many *implementations*, the default mode of interaction with Common Lisp during program development is through such a loop. 
+**Lisp read-eval-print loop** *n. Trad.* an endless loop that *reads*\<sub\>2\</sub\> a *form*, *evaluates* it, and prints (*i.e.*, *writes*\<sub\>2\</sub\>) the results. In many *implementations*, the default mode of interaction with Common Lisp during program development is through such a loop. 
 
 **Lisp reader** *n. Trad.* the procedure that parses character representations of *objects* from a *stream*, producing *objects*. (This procedure is implemented by the *function* **read**.) 
 
@@ -1164,7 +1164,7 @@ area that permits the sharing of some but not all *objects* are considered to be
 
 **list designator** *n.* a *designator* for a *list* of *objects*; that is, an *object* that denotes a *list* and that is one of: a *non-nil atom* (denoting a *singleton list* whose *element* is that *non-nil atom*) or a *proper list* (denoting itself). 
 
-<b>list structure</b> <i>n.</i> (of a <i>list</i>) the set of <i>conses</i> that make up the <i>list</i>. Note that while the <i>car</i> <sub>1<i>b</i></sub> component of each such <i>cons</i> is part of the <i>list structure</i>, the <i>objects</i> that are <i>elements</i> of the <i>list</i> (<i>i.e.</i>, the <i>objects</i> that are the <i>cars</i><sub>2</sub> of each <i>cons</i> in the <i>list</i>) are not themselves part of its <i>list structure</i>, even if they are <i>conses</i>, except in the (<i>circular</i> <sub>2</sub>) case where the <i>list</i> actually contains one of its <i>tails</i> as an <i>element</i>. (The <i>list structure</i> of a <i>list</i> is sometimes redundantly referred to as its “top-level list structure” in order to emphasize that any <i>conses</i> that are <i>elements</i> of the <i>list</i> are not involved.) 
+\<b\>list structure\</b\> \<i\>n.\</i\> (of a \<i\>list\</i\>) the set of \<i\>conses\</i\> that make up the \<i\>list\</i\>. Note that while the \<i\>car\</i\> \<sub\>1\<i\>b\</i\>\</sub\> component of each such \<i\>cons\</i\> is part of the \<i\>list structure\</i\>, the \<i\>objects\</i\> that are \<i\>elements\</i\> of the \<i\>list\</i\> (\<i\>i.e.\</i\>, the \<i\>objects\</i\> that are the \<i\>cars\</i\>\<sub\>2\</sub\> of each \<i\>cons\</i\> in the \<i\>list\</i\>) are not themselves part of its \<i\>list structure\</i\>, even if they are \<i\>conses\</i\>, except in the (\<i\>circular\</i\> \<sub\>2\</sub\>) case where the \<i\>list\</i\> actually contains one of its \<i\>tails\</i\> as an \<i\>element\</i\>. (The \<i\>list structure\</i\> of a \<i\>list\</i\> is sometimes redundantly referred to as its “top-level list structure” in order to emphasize that any \<i\>conses\</i\> that are \<i\>elements\</i\> of the \<i\>list\</i\> are not involved.) 
 
 **literal** *adj.* (of an *object*) referenced directly in a program rather than being computed by the program; that is, appearing as data in a **quote** *form*, or, if the *object* is a *self evaluating object*, appearing as unquoted data. “In the form (cons "one" ’("two")), the expressions "one", ("two"), and "two" are literal objects.” 
 
@@ -1216,7 +1216,7 @@ is defined by the *implementation* to be *lowercase*. See Section 13.1.4.3 (Char
 
 **macro** *n.* 1. a *macro form* 2. a *macro function*. 3. a *macro name*. 
 
-**macro character** *n.* a *character* which, when encountered by the *Lisp reader* in its main dispatch loop, introduces a *reader macro*<sub>1</sub>. (*Macro characters* have nothing to do with *macros*.) 
+**macro character** *n.* a *character* which, when encountered by the *Lisp reader* in its main dispatch loop, introduces a *reader macro*\<sub\>1\</sub\>. (*Macro characters* have nothing to do with *macros*.) 
 
 **macro expansion** *n.* 1. the process of translating a *macro form* into another *form*. 2. the *form* resulting from this process. 
 
@@ -1246,7 +1246,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **method** *n.* an *object* that is part of a *generic function* and which provides information about how that *generic function* should behave when its *arguments* are *objects* of certain *classes* or with certain identities. 
 
-**method combination** *n.* 1. generally, the composition of a set of *methods* to produce an *effective method* for a *generic function*. 2. an object of *type* **method-combination**, which represents the details of how the *method combination*<sub>1</sub> for one or more specific *generic functions* is to be performed. 
+**method combination** *n.* 1. generally, the composition of a set of *methods* to produce an *effective method* for a *generic function*. 2. an object of *type* **method-combination**, which represents the details of how the *method combination*\<sub\>1\</sub\> for one or more specific *generic functions* is to be performed. 
 
 **method-defining form** *n.* a *form* that defines a *method* for a *generic function*, whether explicitly or implicitly. See Section 7.6.1 (Introduction to Generic Functions). 
 
@@ -1264,7 +1264,7 @@ purpose, but which deviates in syntax or functionality from the definition of an
 
 *disestablished*) more recently than any other of its kind. 
 
-**multiple escape** *n.*, *adj.* 1. *n.* the *syntax type* of a *character* that is used in pairs to indicate that the enclosed *characters* are to be treated as *alphabetic*<sub>2</sub> *characters* with their *case* preserved. For details, see Section 2.1.4.5 (Multiple Escape Characters). 2. *adj.* (of a *character* ) having the *multiple escape syntax type*. 3. *n.* a *multiple escape*<sub>2</sub> *character* . (In the *standard readtable*, *vertical-bar* is a *multiple escape character* .) 
+**multiple escape** *n.*, *adj.* 1. *n.* the *syntax type* of a *character* that is used in pairs to indicate that the enclosed *characters* are to be treated as *alphabetic*\<sub\>2\</sub\> *characters* with their *case* preserved. For details, see Section 2.1.4.5 (Multiple Escape Characters). 2. *adj.* (of a *character* ) having the *multiple escape syntax type*. 3. *n.* a *multiple escape*\<sub\>2\</sub\> *character* . (In the *standard readtable*, *vertical-bar* is a *multiple escape character* .) 
 
 **multiple values** *n.* 1. more than one *value*. “The function **truncate** returns multiple values.” 2. a variable number of *values*, possibly including zero or one. “The function **values** returns multiple values.” 3. a fixed number of values other than one. “The macro **multiple-value-bind** is among the few operators in Common Lisp which can detect and manipulate multiple values.” 
 
@@ -1344,7 +1344,7 @@ constituent *character* when it appears in the middle of an extended token. See 
 
 “normalized” as described by *IEEE Standard for Binary Floating-Point Arithmetic*. See *denormalized*. 
 
-**null** *adj.*, *n.* 1. *adj.* a. (of a *list*) having no *elements*: empty. See *empty list*. b. (of a *string*) having a *length* of zero. (It is common, both within this document and in observed spoken behavior, to refer to an empty string by an apparent definite reference, as in “the *null string*” even though no attempt is made to *intern*<sub>2</sub> null strings. The phrase “a *null string*” is technically more correct, but is generally considered awkward by most Lisp programmers. As such, the phrase “the *null string*” should be treated as an indefinite reference in all cases except for anaphoric references.) c. (of an *implementation-defined attribute* of a *character* ) An *object* to which the value of that *attribute* defaults if no specific value was requested. 2. *n.* an *object* of *type* **null** (the only such *object* being **nil**). 
+**null** *adj.*, *n.* 1. *adj.* a. (of a *list*) having no *elements*: empty. See *empty list*. b. (of a *string*) having a *length* of zero. (It is common, both within this document and in observed spoken behavior, to refer to an empty string by an apparent definite reference, as in “the *null string*” even though no attempt is made to *intern*\<sub\>2\</sub\> null strings. The phrase “a *null string*” is technically more correct, but is generally considered awkward by most Lisp programmers. As such, the phrase “the *null string*” should be treated as an indefinite reference in all cases except for anaphoric references.) c. (of an *implementation-defined attribute* of a *character* ) An *object* to which the value of that *attribute* defaults if no specific value was requested. 2. *n.* an *object* of *type* **null** (the only such *object* being **nil**). 
 
 **null lexical environment** *n.* the *lexical environment* which has no *bindings*. 
 
@@ -1368,9 +1368,9 @@ Fri 12-Aug-1994 6:35pm EDT
 
 object-traversing operations.” 
 
-**open** *adj.*, *v.t.* (a *file*) 1. *v.t.* to create and return a *stream* to the *file*. 2. *adj.* (of a *stream*) having been *opened* <sub>1</sub>, but not yet *closed*. 
+**open** *adj.*, *v.t.* (a *file*) 1. *v.t.* to create and return a *stream* to the *file*. 2. *adj.* (of a *stream*) having been *opened* \<sub\>1\</sub\>, but not yet *closed*. 
 
-**operator** *n.* 1. a *function*, *macro*, or *special operator* . 2. a *symbol* that names such a *function*, *macro*, or *special operator* . 3. (in a **function** *special form*) the *cadr* of the **function** *special form*, which might be either an *operator* <sub>2</sub> or a *lambda expression*. 4. (of a *compound form*) the *car* of the *compound form*, which might be either an *operator* <sub>2</sub> or a *lambda expression*, and which is never (setf *symbol*). 
+**operator** *n.* 1. a *function*, *macro*, or *special operator* . 2. a *symbol* that names such a *function*, *macro*, or *special operator* . 3. (in a **function** *special form*) the *cadr* of the **function** *special form*, which might be either an *operator* \<sub\>2\</sub\> or a *lambda expression*. 4. (of a *compound form*) the *car* of the *compound form*, which might be either an *operator* \<sub\>2\</sub\> or a *lambda expression*, and which is never (setf *symbol*). 
 
 **optimize quality** *n.* one of several aspects of a program that might be optimizable by certain compilers. Since optimizing one such quality might conflict with optimizing another, relative priorities for qualities can be established in an **optimize** *declaration*. The *standardized optimize qualities* are compilation-speed (speed of the compilation process), debug (ease of debugging), safety (run-time error checking), space (both code size and run-time space), and speed (of the object code). *Implementations* may define additional *optimize qualities*. 
 
@@ -1386,9 +1386,9 @@ Version 15.17R, X3J13/94-101R.
 
 Fri 12-Aug-1994 6:35pm EDT 
 
-**otherwise inaccessible part** *n.* (of an *object*, *O*<sub>1</sub>) an *object*, *O*<sub>2</sub>, which would 
+**otherwise inaccessible part** *n.* (of an *object*, *O*\<sub\>1\</sub\>) an *object*, *O*\<sub\>2\</sub\>, which would 
 
-be made *inaccessible* if *O*<sub>1</sub> were made *inaccessible*. (Every *object* is an *otherwise inaccessible part* of itself.) 
+be made *inaccessible* if *O*\<sub\>1\</sub\> were made *inaccessible*. (Every *object* is an *otherwise inaccessible part* of itself.) 
 
 **output** *adj.* (of a *stream*) supporting output operations (*i.e.*, being a “data sink”). An *output stream* might also be an *input stream*, in which case it is sometimes called a *bidirectional stream*. See the *function* **output-stream-p**. 
 
@@ -1440,13 +1440,13 @@ data flow by a *format directive* due to a prefix notation within the *format st
 
 **place** *n.* 1. a *form* which is suitable for use as a *generalized reference*. 2. the 
 
-conceptual location referred to by such a *place*<sub>1</sub>. 
+conceptual location referred to by such a *place*\<sub\>1\</sub\>. 
 
 **plist** [ **p—e list** ] *n.* a *property list*. 
 
 **portable** *adj.* (of *code*) required to produce equivalent results and observable side effects in all *conforming implementations*. 
 
-**potential copy** *n.* (of an *object O*<sub>1</sub> subject to constriants) an *object O*<sub>2</sub> that if the specified constraints are satisfied by *O*<sub>1</sub> without any modification might or might not be *identical* to *O*<sub>1</sub>, or else that must be a *fresh object* that resembles a *copy* of *O*<sub>1</sub> except that it has been modified as necessary to satisfy the constraints. 
+**potential copy** *n.* (of an *object O*\<sub\>1\</sub\> subject to constriants) an *object O*\<sub\>2\</sub\> that if the specified constraints are satisfied by *O*\<sub\>1\</sub\> without any modification might or might not be *identical* to *O*\<sub\>1\</sub\>, or else that must be a *fresh object* that resembles a *copy* of *O*\<sub\>1\</sub\> except that it has been modified as necessary to satisfy the constraints. 
 
 **potential number** *n.* A textual notation that might be parsed by the *Lisp reader* in some *conforming implementation* as a *number* but is not required to be parsed as a *number* . No *object* is a *potential number*—either an *object* is a *number* or it is not. See Section 2.3.1.1 (Potential Numbers as Tokens). 
 
@@ -1476,7 +1476,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **principal** *adj.* (of a value returned by a Common Lisp *function* that implements a mathematically irrational or transcendental function defined in the complex domain) of possibly many (sometimes an infinite number of) correct values for the mathematical function, being the particular *value* which the corresponding Common Lisp *function* has been defined to return. 
 
-**print name** *n. Trad.* (usually of a *symbol*) a *name*<sub>3</sub>. 
+**print name** *n. Trad.* (usually of a *symbol*) a *name*\<sub\>3\</sub\>. 
 
 **printer control variable** *n.* a *variable* whose specific purpose is to control some action of the *Lisp printer* ; that is, one of the *variables* in Figure 22–1, or else some *implementation-defined variable* which is defined by the *implementation* to be a *printer control variable*. 
 
@@ -1570,19 +1570,19 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **read** *v.t.* 1. (a *binding* or *slot* or component) to obtain the *value* of the *binding* or *slot*. 2. (an *object* from a *stream*) to parse an *object* from its representation on the *stream*. 
 
-**readably** *adv.* (of a manner of printing an *object O*<sub>1</sub>) in such a way as to permit the *Lisp Reader* to later *parse* the printed output into an *object O*<sub>2</sub> that is *similar* to *O*<sub>1</sub>. 
+**readably** *adv.* (of a manner of printing an *object O*\<sub\>1\</sub\>) in such a way as to permit the *Lisp Reader* to later *parse* the printed output into an *object O*\<sub\>2\</sub\> that is *similar* to *O*\<sub\>1\</sub\>. 
 
-**reader** *n.* 1. a *function* that *reads*<sub>1</sub> a *variable* or *slot*. 2. the *Lisp reader* . 
+**reader** *n.* 1. a *function* that *reads*\<sub\>1\</sub\> a *variable* or *slot*. 2. the *Lisp reader* . 
 
 **reader macro** *n.* 1. a textual notation introduced by dispatch on one or two 
 
-*characters* that defines special-purpose syntax for use by the *Lisp reader* , and that is implemented by a *reader macro function*. See Section 2.2 (Reader Algorithm). 2. the *character* or *characters* that introduce a *reader macro*<sub>1</sub>; that is, a *macro character* or the conceptual pairing of a *dispatching macro character* and the *character* that follows 
+*characters* that defines special-purpose syntax for use by the *Lisp reader* , and that is implemented by a *reader macro function*. See Section 2.2 (Reader Algorithm). 2. the *character* or *characters* that introduce a *reader macro*\<sub\>1\</sub\>; that is, a *macro character* or the conceptual pairing of a *dispatching macro character* and the *character* that follows 
 
 it. (A *reader macro* is not a kind of *macro*.) 
 
 **reader macro function** *n.* a *function designator* that denotes a *function* 
 
-that implements a *reader macro*<sub>2</sub>. See the *functions* **set-macro-character** and 
+that implements a *reader macro*\<sub\>2\</sub\>. See the *functions* **set-macro-character** and 
 
 **set-dispatch-macro-character**. 
 
@@ -1634,7 +1634,7 @@ Repertoires).
 
 The primary purpose of a *restart function* is to provide an alternate interface. By convention, a *restart function* usually has the same name as the *restart* which it invokes. Figure 26–4 shows a list of the *standardized restart functions*. 
 
-|<p>**abort muffle-warning use-value** </p><p>**continue store-value**</p>|
+|\<p\>**abort muffle-warning use-value** \</p\>\<p\>**continue store-value**\</p\>|
 | :- |
 
 
@@ -1648,7 +1648,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **return** *v.t.* (of *values*) 1. (from a *block*) to transfer control and *values* from the *block*; that is, to cause the *block* to *yield* the *values* immediately without doing any further evaluation of the *forms* in its body. 2. (from a *form*) to *yield* the *values*. 
 
-**return value** *n. Trad.* a *value*<sub>1</sub> 
+**return value** *n. Trad.* a *value*\<sub\>1\</sub\> 
 
 **right-parenthesis** *n.* the *standard character* “)”, that is variously called “right 
 
@@ -1666,7 +1666,7 @@ parenthesis” or “close parenthesis” See Figure 2–5.
 
 **safe** *adj.* 1. (of *code*) processed in a *lexical environment* where the the highest **safety** level (3) was in effect. See **optimize**. 2. (of a *call*) a *safe call*. 
 
-**safe call** *n.* a *call* in which the *call*, the *function* being *called*, and the point of *functional evaluation* are all *safe*<sub>1</sub> *code*. For more detailed information, see Section 3.5.1.1 (Safe and Unsafe Calls). 
+**safe call** *n.* a *call* in which the *call*, the *function* being *called*, and the point of *functional evaluation* are all *safe*\<sub\>1\</sub\> *code*. For more detailed information, see Section 3.5.1.1 (Safe and Unsafe Calls). 
 
 **same** *adj.* 1. (of *objects* under a specified *predicate*) indistinguishable by that 
 
@@ -1726,7 +1726,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **setf expander** *n.* a function used by **setf** to compute the *setf expansion* of a *place*. 
 
-**setf expansion** *n.* a set of five *expressions*<sub>1</sub> that, taken together, describe how to store into a *place* and which *subforms* of the macro call associated with the *place* are evaluated. See Section 5.1.1.2 (Setf Expansions). 
+**setf expansion** *n.* a set of five *expressions*\<sub\>1\</sub\> that, taken together, describe how to store into a *place* and which *subforms* of the macro call associated with the *place* are evaluated. See Section 5.1.1.2 (Setf Expansions). 
 
 **setf function** *n.* a *function* whose *name* is (setf *symbol*). 
 
@@ -1738,7 +1738,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **shadowing symbols list** *n.* (of a *package*) a *list*, associated with the *package*, of *symbols* that are to be exempted from ‘symbol conflict errors’ detected when packages are *used*. See the *function* **package-shadowing-symbols**. 
 
-**shared slot** *n.* (of a *class*) a *slot accessible* in more than one *instance* of a *class*; specifically, such a *slot* is *accessible* in all *direct instances* of the *class* and in those *indirect instances* whose *class* does not *shadow*<sub>1</sub> the *slot*. 
+**shared slot** *n.* (of a *class*) a *slot accessible* in more than one *instance* of a *class*; specifically, such a *slot* is *accessible* in all *direct instances* of the *class* and in those *indirect instances* whose *class* does not *shadow*\<sub\>1\</sub\> the *slot*. 
 
 **sharpsign** *n.* the *standard character* that is variously called “number sign,” “sharp,” or “sharp sign” (#). See Figure 2–5. 
 
@@ -1780,7 +1780,7 @@ required *arguments*, and which also describes the *argument* conventions for it
 
 **simple vector** *n.* a *vector* of *type* **simple-vector**, sometimes called a “*simple general vector* .” Not all *vectors* that are *simple* are *simple vectors*—only those that have *element type* **t**. 
 
-**single escape** *n.*, *adj.* 1. *n.* the *syntax type* of a *character* that indicates that the next *character* is to be treated as an *alphabetic*<sub>2</sub> *character* with its *case* preserved. For details, see Section 2.1.4.6 (Single Escape Character). 2. *adj.* (of a *character* ) having the *single escape syntax type*. 3. *n.* a *single escape*<sub>2</sub> *character* . (In the *standard* 
+**single escape** *n.*, *adj.* 1. *n.* the *syntax type* of a *character* that indicates that the next *character* is to be treated as an *alphabetic*\<sub\>2\</sub\> *character* with its *case* preserved. For details, see Section 2.1.4.6 (Single Escape Character). 2. *adj.* (of a *character* ) having the *single escape syntax type*. 3. *n.* a *single escape*\<sub\>2\</sub\> *character* . (In the *standard* 
 
 *readtable*, *slash* is the only *single escape*.) 
 
@@ -1822,7 +1822,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **specialized lambda list** *n.* an *extended lambda list* used in *forms* that *establish method* definitions, such as **defmethod**. See Section 3.4.3 (Specialized Lambda Lists). 
 
-<b>spreadable argument list designator</b> <i>n.</i> a <i>designator</i> for a <i>list</i> of <i>objects</i>; that is, an <i>object</i> that denotes a <i>list</i> and that is a <i>non-null list L</i>1 of length <i>n</i>, whose last element is a <i>list L</i>2 of length <i>m</i> (denoting a list <i>L</i>3 of length <i>m</i> + <i>n −</i> 1 whose <i>elements</i> are <i>L</i>1<i><sub>i</sub></i> for <i>i</i> < <i>n −</i> 1 followed by <i>L</i>2<i><sub>j</sub></i> for <i>j</i> < <i>m</i>). “The list (1 2 (3 4 5)) is a spreadable argument list designator for the list (1 2 3 4 5).” 
+\<b\>spreadable argument list designator\</b\> \<i\>n.\</i\> a \<i\>designator\</i\> for a \<i\>list\</i\> of \<i\>objects\</i\>; that is, an \<i\>object\</i\> that denotes a \<i\>list\</i\> and that is a \<i\>non-null list L\</i\>1 of length \<i\>n\</i\>, whose last element is a \<i\>list L\</i\>2 of length \<i\>m\</i\> (denoting a list \<i\>L\</i\>3 of length \<i\>m\</i\> + \<i\>n −\</i\> 1 whose \<i\>elements\</i\> are \<i\>L\</i\>1\<i\>\<sub\>i\</sub\>\</i\> for \<i\>i\</i\> \< \<i\>n −\</i\> 1 followed by \<i\>L\</i\>2\<i\>\<sub\>j\</sub\>\</i\> for \<i\>j\</i\> \< \<i\>m\</i\>). “The list (1 2 (3 4 5)) is a spreadable argument list designator for the list (1 2 3 4 5).” 
 
 Glossary **26–53**
 
@@ -2020,17 +2020,17 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **tree** *n.* 1. a binary recursive data structure made up of *conses* and *atoms*: the *conses* are themselves also *trees* (sometimes called “subtrees” or “branches”), and the *atoms* are terminal nodes (sometimes called *leaves*). Typically, the *leaves* represent data while the branches establish some relationship among that data. 2. in general, any recursive data structure that has some notion of “branches” and *leaves*. 
 
-<b>tree structure</b> <i>n.</i> (of a <i>tree</i><sub>1</sub>) the set of <i>conses</i> that make up the <i>tree</i>. Note that while the <i>car</i> <sub>1<i>b</i></sub> component of each such <i>cons</i> is part of the <i>tree structure</i>, the <i>objects</i> that are the <i>cars</i><sub>2</sub> of each <i>cons</i> in the <i>tree</i> are not themselves part of its <i>tree structure</i> unless they are also <i>conses</i>. 
+\<b\>tree structure\</b\> \<i\>n.\</i\> (of a \<i\>tree\</i\>\<sub\>1\</sub\>) the set of \<i\>conses\</i\> that make up the \<i\>tree\</i\>. Note that while the \<i\>car\</i\> \<sub\>1\<i\>b\</i\>\</sub\> component of each such \<i\>cons\</i\> is part of the \<i\>tree structure\</i\>, the \<i\>objects\</i\> that are the \<i\>cars\</i\>\<sub\>2\</sub\> of each \<i\>cons\</i\> in the \<i\>tree\</i\> are not themselves part of its \<i\>tree structure\</i\> unless they are also \<i\>conses\</i\>. 
 
-**true** *n.* any *object* that is not *false* and that is used to represent the success of a *predicate* test. See *t*<sub>1</sub>. 
+**true** *n.* any *object* that is not *false* and that is used to represent the success of a *predicate* test. See *t*\<sub\>1\</sub\>. 
 
-**truename** *n.* 1. the canonical *filename* of a *file* in the *file system*. See Section 20.1.3 (Truenames). 2. a *pathname* representing a *truename*<sub>1</sub>. 
+**truename** *n.* 1. the canonical *filename* of a *file* in the *file system*. See Section 20.1.3 (Truenames). 2. a *pathname* representing a *truename*\<sub\>1\</sub\>. 
 
 **two-way stream** *n.* a *stream* of *type* **two-way-stream**, which is a *bidirectional* 
 
 *composite stream* that receives its input from an associated *input stream* and sends its output to an associated *output stream*. 
 
-<b>type</b> <i>n.</i> 1. a set of <i>objects</i>, usually with common structure, behavior, or purpose. (Note that the expression “<i>X</i> is of type <i>S<sub>a</sub></i>” naturally implies that “<i>X</i> is of type <i>S<sub>b</sub></i>” if <i>S<sub>a</sub></i> is a <i>subtype</i> of <i>S<sub>b</sub></i>.) 2. (immediately following the name of a <i>type</i>) a <i>subtype</i> of that <i>type</i>. “The type <b>vector</b> is an array type.” 
+\<b\>type\</b\> \<i\>n.\</i\> 1. a set of \<i\>objects\</i\>, usually with common structure, behavior, or purpose. (Note that the expression “\<i\>X\</i\> is of type \<i\>S\<sub\>a\</sub\>\</i\>” naturally implies that “\<i\>X\</i\> is of type \<i\>S\<sub\>b\</sub\>\</i\>” if \<i\>S\<sub\>a\</sub\>\</i\> is a \<i\>subtype\</i\> of \<i\>S\<sub\>b\</sub\>\</i\>.) 2. (immediately following the name of a \<i\>type\</i\>) a \<i\>subtype\</i\> of that \<i\>type\</i\>. “The type \<b\>vector\</b\> is an array type.” 
 
 **type declaration** *n.* a *declaration* that asserts that every reference to a specified *binding* within the scope of the *declaration* results in some *object* of the specified *type*. 
 
@@ -2060,7 +2060,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **unintern** *v.t.* (a *symbol* in a *package*) to make the *symbol* not be *present* in that *package*. (The *symbol* might continue to be *accessible* by inheritance.) 
 
-**uninterned** *adj.* (of a *symbol*) not *accessible* in any *package*; *i.e.*, not *interned* <sub>1</sub>. 
+**uninterned** *adj.* (of a *symbol*) not *accessible* in any *package*; *i.e.*, not *interned* \<sub\>1\</sub\>. 
 
 **universal time** *n. time*, represented as a non-negative *integer* number of seconds. *Absolute universal time* is measured as an offset from the beginning of the year 1900 (ignoring *leap seconds*). See Section 25.1.4.2 (Universal Time). 
 
@@ -2094,7 +2094,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **uppercase** *adj.* (of a *character* ) being among *standard characters* corresponding to the capital letters A through Z, or being some other *implementation-defined character* that is defined by the *implementation* to be *uppercase*. See Section 13.1.4.3 (Characters With Case). 
 
-**use** *v.t.* (a *package P*<sub>1</sub>) to *inherit* the *external symbols* of *P*<sub>1</sub>. (If a package *P*<sub>2</sub> uses *P*<sub>1</sub>, the *external symbols* of *P*<sub>1</sub> become *internal symbols* of *P*<sub>2</sub> unless they are explicitly *exported*.) “The package CL-USER uses the package CL.” 
+**use** *v.t.* (a *package P*\<sub\>1\</sub\>) to *inherit* the *external symbols* of *P*\<sub\>1\</sub\>. (If a package *P*\<sub\>2\</sub\> uses *P*\<sub\>1\</sub\>, the *external symbols* of *P*\<sub\>1\</sub\> become *internal symbols* of *P*\<sub\>2\</sub\> unless they are explicitly *exported*.) “The package CL-USER uses the package CL.” 
 
 **use list** *n.* (of a *package*) a (possibly empty) *list* associated with each *package* which determines what other *packages* are currently being *used* by that *package*. 
 
@@ -2106,9 +2106,9 @@ Fri 12-Aug-1994 6:35pm EDT
 
 Such a *fixnum* must be greater than or equal to zero, and less than the *value* of **array-dimension-limit**. When multiple *array dimensions* are to be used together to specify a multi-dimensional *array*, there is also an implied constraint that the product of all of the *dimensions* be less than the *value* of **array-total-size-limit**. 
 
-**valid array index** *n.* (of an *array*) a *fixnum* suitable for use as one of possibly several indices needed to name an *element* of the *array* according to a multi-dimensional Cartesian coordinate system. Such a *fixnum* must be greater than or equal to zero, and must be less than the corresponding *dimension*<sub>1</sub> of the *array*. (Unless otherwise explicitly specified, the phrase “a *list* of *valid array indices*” further implies that the *length* of the *list* must be the same as the *rank* of the *array*.) “For a 2 by 3 array, valid array indices for the first dimension are 0 and 1, and valid array indices for the second dimension are 0, 1 and 2.” 
+**valid array index** *n.* (of an *array*) a *fixnum* suitable for use as one of possibly several indices needed to name an *element* of the *array* according to a multi-dimensional Cartesian coordinate system. Such a *fixnum* must be greater than or equal to zero, and must be less than the corresponding *dimension*\<sub\>1\</sub\> of the *array*. (Unless otherwise explicitly specified, the phrase “a *list* of *valid array indices*” further implies that the *length* of the *list* must be the same as the *rank* of the *array*.) “For a 2 by 3 array, valid array indices for the first dimension are 0 and 1, and valid array indices for the second dimension are 0, 1 and 2.” 
 
-**valid array row-major index** *n.* (of an *array*, which might have any number of *dimensions*<sub>2</sub>) a single *fixnum* suitable for use in naming any *element* of the *array*, by viewing the array’s storage as a linear series of *elements* in row-major order. Such a *fixnum* must be greater than or equal to zero, and less than the *array total size* of the *array*. 
+**valid array row-major index** *n.* (of an *array*, which might have any number of *dimensions*\<sub\>2\</sub\>) a single *fixnum* suitable for use in naming any *element* of the *array*, by viewing the array’s storage as a linear series of *elements* in row-major order. Such a *fixnum* must be greater than or equal to zero, and less than the *array total size* of the *array*. 
 
 **valid fill pointer** *n.* (of an *array*) a *fixnum* suitable for use as a *fill pointer* for the *array*. Such a *fixnum* must be greater than or equal to zero, and less than or equal to the *array total size* of the *array*. 
 
@@ -2158,9 +2158,9 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **W** 
 
-<b>whitespace</b> <i>n.</i> 1. one or more <i>characters</i> that are either the <i>graphic character</i> #\Space or else <i>non-graphic</i> characters such as #\Newline that only move the print position. 2. a. <i>n.</i> the <i>syntax type</i> of a <i>character</i> that is a <i>token</i> separator. For details, see Section 2.1.4.7 (Whitespace Characters). b. <i>adj.</i> (of a <i>character</i> ) having the <i>whitespace</i><sub>2<i>a</i></sub></i> 
+\<b\>whitespace\</b\> \<i\>n.\</i\> 1. one or more \<i\>characters\</i\> that are either the \<i\>graphic character\</i\> #\Space or else \<i\>non-graphic\</i\> characters such as #\Newline that only move the print position. 2. a. \<i\>n.\</i\> the \<i\>syntax type\</i\> of a \<i\>character\</i\> that is a \<i\>token\</i\> separator. For details, see Section 2.1.4.7 (Whitespace Characters). b. \<i\>adj.\</i\> (of a \<i\>character\</i\> ) having the \<i\>whitespace\</i\>\<sub\>2\<i\>a\</i\>\</sub\>\</i\> 
 
-<i>syntax type</i><sub>2</sub>. c. <i>n.</i> a <i>whitespace</i><sub>2<i>b</i></sub> character</i> . 
+\<i\>syntax type\</i\>\<sub\>2\</sub\>. c. \<i\>n.\</i\> a \<i\>whitespace\</i\>\<sub\>2\<i\>b\</i\>\</sub\> character\</i\> . 
 
 **wild** *adj.* 1. (of a *namestring*) using an *implementation-defined* syntax for naming files, which might “match” any of possibly several possible *filenames*, and which can therefore be used to refer to the aggregate of the *files* named by those *filenames*. 2. (of a *pathname*) a structured representation of a name which might “match” any of 
 
@@ -2168,7 +2168,7 @@ possibly several *pathnames*, and which can therefore be used to refer to the ag
 
 **write** *v.t.* 1. (a *binding* or *slot* or component) to change the *value* of the *binding* or *slot*. 2. (an *object* to a *stream*) to output a representation of the *object* to the *stream*. 
 
-**writer** *n.* a *function* that *writes*<sub>1</sub> a *variable* or *slot*. 
+**writer** *n.* a *function* that *writes*\<sub\>1\</sub\> a *variable* or *slot*. 
 
 **Y** 
 

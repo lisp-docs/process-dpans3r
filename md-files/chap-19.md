@@ -54,7 +54,7 @@ The time at which this mapping and associated error signaling occurs is *impleme
 
 Figure 19–1 lists some *defined names* that are applicable to *pathnames*. 
 
-|<p>**\*default-pathname-defaults\* namestring pathname-name directory-namestring open pathname-type enough-namestring parse-namestring pathname-version file-namestring pathname pathnamep file-string-length pathname-device translate-pathname host-namestring pathname-directory truename** </p><p>**make-pathname pathname-host user-homedir-pathname merge-pathnames pathname-match-p wild-pathname-p**</p>|
+|\<p\>**\*default-pathname-defaults\* namestring pathname-name directory-namestring open pathname-type enough-namestring parse-namestring pathname-version file-namestring pathname pathnamep file-string-length pathname-device translate-pathname host-namestring pathname-directory truename** \</p\>\<p\>**make-pathname pathname-host user-homedir-pathname merge-pathnames pathname-match-p wild-pathname-p**\</p\>|
 | :- |
 
 
@@ -116,13 +116,13 @@ Fri 12-Aug-1994 6:35pm EDT
 
 *Strings* in *pathname* component values never contain special *characters* that represent separation between *pathname* fields, such as *slash* in Unix *filenames*. Whether separator *characters* are permitted as part of a *string* in a *pathname* component is *implementation-defined*; however, if the *implementation* does permit it, it must arrange to properly “quote” the character for the *file system* when constructing a *namestring*. For example, 
 
-;; In a TOPS-20 implementation, which uses <i><sup>∧</sup></i>V to quote 
+;; In a TOPS-20 implementation, which uses \<i\>\<sup\>∧\</sup\>\</i\>V to quote 
 
-(NAMESTRING (MAKE-PATHNAME :HOST "OZ" :NAME "<TEST>")) 
+(NAMESTRING (MAKE-PATHNAME :HOST "OZ" :NAME "\<TEST\>")) 
 
-<i>→</i> #P"OZ:PS:<i><sup>∧</sup></i>V<TEST<i><sup>∧</sup></i>V>" 
+\<i\>→\</i\> #P"OZ:PS:\<i\>\<sup\>∧\</sup\>\</i\>V\<TEST\<i\>\<sup\>∧\</sup\>\</i\>V\>" 
 
-<i><sup>not</sup> →</i> #P"OZ:PS:<TEST>" 
+\<i\>\<sup\>not\</sup\> →\</i\> #P"OZ:PS:\<TEST\>" 
 
 **19.2.2.1.2 Case in Pathname Components** 
 
@@ -190,9 +190,9 @@ If :unspecific is the value of a *pathname* component, the component is consider
 
 Whether a value of :unspecific is permitted for any component on any given *file system* accessible to the *implementation* is *implementation-defined*. A *conforming program* must never unconditionally use a :unspecific as the value of a *pathname* component because such a value is not guaranteed to be permissible in all implementations. However, a *conforming program* can, if it is careful, successfully manipulate user-supplied data which contains or refers to non-portable *pathname* components. And certainly a *conforming program* should be prepared for the possibility that any components of a *pathname* could be :unspecific. 
 
-When *reading*<sub>1</sub> the value of any *pathname* component, *conforming programs* should be prepared for the value to be :unspecific. 
+When *reading*\<sub\>1\</sub\> the value of any *pathname* component, *conforming programs* should be prepared for the value to be :unspecific. 
 
-When *writing*<sub>1</sub> the value of any *pathname* component, the consequences are undefined if :unspecific is given for a *pathname* in a *file system* for which it does not make sense. 
+When *writing*\<sub\>1\</sub\> the value of any *pathname* component, the consequences are undefined if :unspecific is given for a *pathname* in a *file system* for which it does not make sense. 
 
 **19.2.2.2.3.1 Relation between component values NIL and :UNSPECIFIC** 
 
@@ -218,7 +218,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **19.2.2.4 Restrictions on Examining Pathname Components** 
 
-The space of possible *objects* that a *conforming program* must be prepared to *read* <sub>1</sub> as the value of a *pathname* component is substantially larger than the space of possible *objects* that a *conforming program* is permitted to *write*<sub>1</sub> into such a component. 
+The space of possible *objects* that a *conforming program* must be prepared to *read* \<sub\>1\</sub\> as the value of a *pathname* component is substantially larger than the space of possible *objects* that a *conforming program* is permitted to *write*\<sub\>1\</sub\> into such a component. 
 
 While the values discussed in the subsections of this section, in Section 19.2.2.2 (Special Pathname Component Values), and in Section 19.2.2.3 (Restrictions on Wildcard Pathnames) apply to values that might be seen when reading the component values, substantially more restrictive rules apply to constructing pathnames; see Section 19.2.2.5 (Restrictions on Constructing Pathnames). 
 
@@ -228,7 +228,7 @@ When examining *pathname* components, *conforming programs* should be aware of t
 
 **19.2.2.4.2 Restrictions on Examining a Pathname Device Component** The device might be a *string*, :wild, :unspecific, or **nil**. 
 
-Note that :wild might result from an attempt to *read* <sub>1</sub> the *pathname* component, even though portable programs are restricted from *writing*<sub>1</sub> such a component value; see Section 19.2.2.3 (Restrictions on Wildcard Pathnames) and Section 19.2.2.5 (Restrictions on Constructing Pathnames). 
+Note that :wild might result from an attempt to *read* \<sub\>1\</sub\> the *pathname* component, even though portable programs are restricted from *writing*\<sub\>1\</sub\> such a component value; see Section 19.2.2.3 (Restrictions on Wildcard Pathnames) and Section 19.2.2.5 (Restrictions on Constructing Pathnames). 
 
 **19.2.2.4.3 Restrictions on Examining a Pathname Directory Component** The directory might be a *string*, :wild, :unspecific, or **nil**. 
 
@@ -258,7 +258,7 @@ Supplying any non-*string*, including any of the *symbols* listed below, to a fi
 
 |**Symbol Meaning**|
 | :- |
-|<p>:wild Wildcard match of one level of directory structure :wild-inferiors Wildcard match of any number of directory levels :up Go upward in directory structure (semantic) </p><p>:back Go upward in directory structure (syntactic)</p>|
+|\<p\>:wild Wildcard match of one level of directory structure :wild-inferiors Wildcard match of any number of directory levels :up Go upward in directory structure (semantic) \</p\>\<p\>:back Go upward in directory structure (syntactic)\</p\>|
 
 
 **Figure 19–3. Special Markers In Directory Component** 
@@ -387,7 +387,7 @@ The syntax of a *logical pathname namestring* is as follows. (Note that unlike m
 
 *logical-pathname::*=[*↓host host-marker*] 
 
-[*↓relative-directory-marker*] *{↓directory directory-marker}*\* 
+[*↓relative-directory-marker*] *\{↓directory directory-marker\}*\* 
 
 [*↓name*] [*type-marker ↓type* [*version-marker ↓version*]] 
 
@@ -575,25 +575,25 @@ If the *pathspec designator* is a *file stream* created by opening a *logical pa
 
 *→* #P"CHOCOLATE:TEST" ; with case canonicalization (e.g., VMS) 
 
-<i><sup>or</sup>→</i> #P"VANILLA:test" ; without case canonicalization (e.g., Unix) 
+\<i\>\<sup\>or\</sup\>→\</i\> #P"VANILLA:test" ; without case canonicalization (e.g., Unix) 
 
-<i><sup>or</sup>→</i> #P"test" 
+\<i\>\<sup\>or\</sup\>→\</i\> #P"test" 
 
-<i><sup>or</sup>→</i> #S(PATHNAME :HOST "STRAWBERRY" :NAME "TEST") 
+\<i\>\<sup\>or\</sup\>→\</i\> #S(PATHNAME :HOST "STRAWBERRY" :NAME "TEST") 
 
-<i><sup>or</sup>→</i> #S(PATHNAME :HOST "BELGIAN-CHOCOLATE" :NAME "test") 
+\<i\>\<sup\>or\</sup\>→\</i\> #S(PATHNAME :HOST "BELGIAN-CHOCOLATE" :NAME "test") 
 
 (setq p2 (pathname "test")) 
 
 *→* #P"CHOCOLATE:TEST" 
 
-<i><sup>or</sup>→</i> #P"VANILLA:test" 
+\<i\>\<sup\>or\</sup\>→\</i\> #P"VANILLA:test" 
 
-<i><sup>or</sup>→</i> #P"test" 
+\<i\>\<sup\>or\</sup\>→\</i\> #P"test" 
 
-<i><sup>or</sup>→</i> #S(PATHNAME :HOST "STRAWBERRY" :NAME "TEST") 
+\<i\>\<sup\>or\</sup\>→\</i\> #S(PATHNAME :HOST "STRAWBERRY" :NAME "TEST") 
 
-<i><sup>or</sup>→</i> #S(PATHNAME :HOST "BELGIAN-CHOCOLATE" :NAME "test") 
+\<i\>\<sup\>or\</sup\>→\</i\> #S(PATHNAME :HOST "BELGIAN-CHOCOLATE" :NAME "test") 
 
 (pathnamep p1) *→ true* 
 
@@ -603,13 +603,13 @@ If the *pathspec designator* is a *file stream* created by opening a *logical pa
 
 *→ true* 
 
-<i><sup>or</sup>→ false</i> 
+\<i\>\<sup\>or\</sup\>→ false\</i\> 
 
 (with-open-file (stream "test" :direction :output) 
 
 (pathname stream)) 
 
-*→* #P"ORANGE-CHOCOLATE:>Gus>test.lisp.newest" 
+*→* #P"ORANGE-CHOCOLATE:\>Gus\>test.lisp.newest" 
 
 **See Also:** 
 
@@ -723,13 +723,13 @@ If the *directory* is a *string*, it should be the name of a top level directory
 
 :name "CHESS" :type "DB")))) 
 
-*.* #P"MY-LISPM:>public>games>chess.db" 
+*.* #P"MY-LISPM:\>public\>games\>chess.db" 
 
 *.* #P"MY-VAX:SYS$DISK:[PUBLIC.GAMES]CHESS.DB" 
 
 *.* #P"MY-UNIX:/public/games/chess.db" 
 
-*.* #P"MY-LISPM:>public>games>chess.db" 
+*.* #P"MY-LISPM:\>public\>games\>chess.db" 
 
 *.* #P"MY-VAX:SYS$DISK:[PUBLIC.GAMES]CHESS.DB" 
 
@@ -801,7 +801,7 @@ Version 15.17R, X3J13/94-101R.
 
 Fri 12-Aug-1994 6:35pm EDT 
 
-<b><sup>pathname-host, pathname-device, pathname</sup> directory, pathname-name, pathname-type, pathname-version</b> <i>Function</i> 
+\<b\>\<sup\>pathname-host, pathname-device, pathname\</sup\> directory, pathname-name, pathname-type, pathname-version\</b\> \<i\>Function\</i\> 
 
 **Syntax:** 
 
@@ -955,19 +955,19 @@ Fri 12-Aug-1994 6:35pm EDT
 
 ;; Symbolics LMFS 
 
-(pathname-directory (parse-namestring ">foo>\*\*>bar>baz.lisp")) 
+(pathname-directory (parse-namestring "\>foo\>\*\*\>bar\>baz.lisp")) 
 
 *→* (:ABSOLUTE "foo" :WILD-INFERIORS "bar") 
 
-(pathname-directory (parse-namestring ">foo>\*>bar>baz.lisp")) 
+(pathname-directory (parse-namestring "\>foo\>\*\>bar\>baz.lisp")) 
 
 *→* (:ABSOLUTE "foo" :WILD "bar") 
 
-(pathname-directory (parse-namestring ">foo>\*>bar>baz.lisp") :case :common) 
+(pathname-directory (parse-namestring "\>foo\>\*\>bar\>baz.lisp") :case :common) 
 
 *→* (:ABSOLUTE "FOO" :WILD "BAR") 
 
-(pathname-device (parse-namestring ">foo>baz.lisp")) *→* :UNSPECIFIC 
+(pathname-device (parse-namestring "\>foo\>baz.lisp")) *→* :UNSPECIFIC 
 
 **Affected By:** 
 
@@ -1085,7 +1085,7 @@ When setting the translations list, each *from-wildcard* can be a *logical pathn
 
 (setf (logical-pathname-translations "foo") 
 
-’(("\*\*;\*.\*.\*" "MY-LISPM:>library>foo>\*\*>"))) 
+’(("\*\*;\*.\*.\*" "MY-LISPM:\>library\>foo\>\*\*\>"))) 
 
 ;;;Sample use of that logical pathname. The return value 
 
@@ -1093,7 +1093,7 @@ When setting the translations list, each *from-wildcard* can be a *logical pathn
 
 (translate-logical-pathname "foo:bar;baz;mum.quux.3") 
 
-*→* #P"MY-LISPM:>library>foo>bar>baz>mum.quux.3" 
+*→* #P"MY-LISPM:\>library\>foo\>bar\>baz\>mum.quux.3" 
 
 ;;;A more complex example, dividing the files among two file servers 
 
@@ -1347,17 +1347,17 @@ a *pathname*, used as the default whenever a *function* needs a default *pathnam
 
 ;; implementations and host file system types, it is not possible to provide a ;; general-purpose, conforming example. 
 
-\*default-pathname-defaults\* *→* #P"PS:<FRED>" 
+\*default-pathname-defaults\* *→* #P"PS:\<FRED\>" 
 
 (merge-pathnames (make-pathname :name "CALENDAR")) 
 
-*→* #P"PS:<FRED>CALENDAR" 
+*→* #P"PS:\<FRED\>CALENDAR" 
 
-(let ((\*default-pathname-defaults\* (pathname "<MARY>"))) 
+(let ((\*default-pathname-defaults\* (pathname "\<MARY\>"))) 
 
 (merge-pathnames (make-pathname :name "CALENDAR"))) 
 
-*→* #P"<MARY>CALENDAR" 
+*→* #P"\<MARY\>CALENDAR" 
 
 **Affected By:** 
 
@@ -1583,7 +1583,7 @@ If *thing* contains an explicit host name and no explicit device name, then it i
 
 :TYPE NIL :VERSION NIL), 4 
 
-(setq s (open *xxx*)) *→* #<Input File Stream...> 
+(setq s (open *xxx*)) *→* #\<Input File Stream...\> 
 
 (parse-namestring s) 
 
@@ -1601,7 +1601,7 @@ If *thing* contains an explicit host name and no explicit device name, then it i
 
 **Exceptional Situations:** 
 
-If *junk-allowed* is *false*, an error of *type* **parse-error** is signaled if *thing* does not consist entirely of the representation of a *pathname*, possibly surrounded on either side by *whitespace*<sub>1</sub> characters if that is appropriate to the cultural conventions of the implementation. 
+If *junk-allowed* is *false*, an error of *type* **parse-error** is signaled if *thing* does not consist entirely of the representation of a *pathname*, possibly surrounded on either side by *whitespace*\<sub\>1\</sub\> characters if that is appropriate to the cultural conventions of the implementation. 
 
 If *host* is supplied and not **nil**, and *thing* contains a manifest host name, an error of *type* **error** is signaled if the hosts do not match. 
 
@@ -1657,7 +1657,7 @@ If *field-key* is not supplied or **nil**, **wild-pathname-p** returns true if *
 
 (wild-pathname-p (make-pathname :name :wild) :type) *→ false* 
 
-(wild-pathname-p (pathname "s:>foo>\*\*>")) *→ true* ;Lispm 
+(wild-pathname-p (pathname "s:\>foo\>\*\*\>")) *→ true* ;Lispm 
 
 (wild-pathname-p (pathname :name "F\*O")) *→ true* ;Most places 
 
@@ -1815,7 +1815,7 @@ There are no specified keyword arguments for **translate-pathname**, but impleme
 
 *→* "foobar" 
 
-<i><sup>or</sup>→</i> "bar" 
+\<i\>\<sup\>or\</sup\>→\</i\> "bar" 
 
 (pathname-name (translate-pathname "foobar" "\*" "foo\*")) *→* "foofoobar" 
 
@@ -1969,9 +1969,9 @@ both of them are removed. This removal of redundant :back *keywords* is repeated
 
 (merge-pathnames "CMUC::FORMAT" 
 
-"CMUC::PS:<LISPIO>.FASL") 
+"CMUC::PS:\<LISPIO\>.FASL") 
 
-*→* #P"CMUC::PS:<LISPIO>FORMAT.FASL.0" 
+*→* #P"CMUC::PS:\<LISPIO\>FORMAT.FASL.0" 
 
 **See Also:** 
 

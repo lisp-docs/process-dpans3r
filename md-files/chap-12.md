@@ -24,7 +24,7 @@ Common Lisp provides a large variety of operations related to *numbers*. This se
 
 Figure 12–1 shows *operators* relating to arithmetic operations. 
 
-|<p>**\* 1+ gcd** </p><p>**+ 1- incf** </p><p>**- conjugate lcm** </p><p>**/ decf**</p>|
+|\<p\>**\* 1+ gcd** \</p\>\<p\>**+ 1- incf** \</p\>\<p\>**- conjugate lcm** \</p\>\<p\>**/ decf**\</p\>|
 | :- |
 
 
@@ -32,13 +32,13 @@ Figure 12–1 shows *operators* relating to arithmetic operations.
 
 Figure 12–2 shows *defined names* relating to exponential, logarithmic, and trigonometric operations. 
 
-|<p>**abs cos signum** </p><p>**acos cosh sin** </p><p>**acosh exp sinh** </p><p>**asin expt sqrt** </p><p>**asinh isqrt tan** </p><p>**atan log tanh** </p><p>**atanh phase** </p><p>**cis pi**</p>|
+|\<p\>**abs cos signum** \</p\>\<p\>**acos cosh sin** \</p\>\<p\>**acosh exp sinh** \</p\>\<p\>**asin expt sqrt** \</p\>\<p\>**asinh isqrt tan** \</p\>\<p\>**atan log tanh** \</p\>\<p\>**atanh phase** \</p\>\<p\>**cis pi**\</p\>|
 | :- |
 
 
 **Figure 12–2. Defined names relating to Exponentials, Logarithms, and Trigonometry.** Figure 12–3 shows *operators* relating to numeric comparison and predication. 
 
-|<p>**/=** >**= oddp** </p><p>< **evenp plusp** </p><p><**= max zerop** </p><p>**= min** </p><p>> **minusp**</p>|
+|\<p\>**/=** \>**= oddp** \</p\>\<p\>\< **evenp plusp** \</p\>\<p\>\<**= max zerop** \</p\>\<p\>**= min** \</p\>\<p\>\> **minusp**\</p\>|
 | :- |
 
 
@@ -52,7 +52,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 Figure 12–4 shows *defined names* relating to numeric type manipulation and coercion. 
 
-|<p>**ceiling float-radix rational** </p><p>**complex float-sign rationalize decode-float floor realpart** </p><p>**denominator fround rem** </p><p>**fceiling ftruncate round** </p><p>**ffloor imagpart scale-float float integer-decode-float truncate** </p><p>**float-digits mod** </p><p>**float-precision numerator**</p>|
+|\<p\>**ceiling float-radix rational** \</p\>\<p\>**complex float-sign rationalize decode-float floor realpart** \</p\>\<p\>**denominator fround rem** \</p\>\<p\>**fceiling ftruncate round** \</p\>\<p\>**ffloor imagpart scale-float float integer-decode-float truncate** \</p\>\<p\>**float-digits mod** \</p\>\<p\>**float-precision numerator**\</p\>|
 | :- |
 
 
@@ -104,7 +104,7 @@ Logical operations require *integers* as arguments; an error of *type* **type-er
 
 Figure 12–5 shows *defined names* relating to logical operations on numbers. 
 
-|<p>**ash boole-ior logbitp** </p><p>**boole boole-nand logcount** </p><p>**boole-1 boole-nor logeqv** </p><p>**boole-2 boole-orc1 logior** </p><p>**boole-and boole-orc2 lognand** </p><p>**boole-andc1 boole-set lognor** </p><p>**boole-andc2 boole-xor lognot** </p><p>**boole-c1 integer-length logorc1** </p><p>**boole-c2 logand logorc2** </p><p>**boole-clr logandc1 logtest** </p><p>**boole-eqv logandc2 logxor**</p>|
+|\<p\>**ash boole-ior logbitp** \</p\>\<p\>**boole boole-nand logcount** \</p\>\<p\>**boole-1 boole-nor logeqv** \</p\>\<p\>**boole-2 boole-orc1 logior** \</p\>\<p\>**boole-and boole-orc2 lognand** \</p\>\<p\>**boole-andc1 boole-set lognor** \</p\>\<p\>**boole-andc2 boole-xor lognot** \</p\>\<p\>**boole-c1 integer-length logorc1** \</p\>\<p\>**boole-c2 logand logorc2** \</p\>\<p\>**boole-clr logandc1 logtest** \</p\>\<p\>**boole-eqv logandc2 logxor**\</p\>|
 | :- |
 
 
@@ -122,7 +122,7 @@ The byte-manipulation *functions* use *objects* called *byte specifiers* to desi
 
 Figure 12–6 shows *defined names* relating to manipulating *bytes* of *numbers*. 
 
-|<p>**byte deposit-field ldb-test** </p><p>**byte-position dpb mask-field** </p><p>**byte-size ldb**</p>|
+|\<p\>**byte deposit-field ldb-test** \</p\>\<p\>**byte-position dpb mask-field** \</p\>\<p\>**byte-size ldb**\</p\>|
 | :- |
 
 
@@ -130,7 +130,7 @@ Figure 12–6 shows *defined names* relating to manipulating *bytes* of *numbers
 
 **12.1.2 Implementation-Dependent Numeric Constants** Figure 12–7 shows *defined names* relating to *implementation-dependent* details about *numbers*. 
 
-|<p>**double-float-epsilon most-negative-fixnum** </p><p>**double-float-negative-epsilon most-negative-long-float** </p><p>**least-negative-double-float most-negative-short-float** </p><p>**least-negative-long-float most-negative-single-float** </p><p>**least-negative-short-float most-positive-double-float** </p><p>**least-negative-single-float most-positive-fixnum** </p><p>**least-positive-double-float most-positive-long-float** </p><p>**least-positive-long-float most-positive-short-float** </p><p>**least-positive-short-float most-positive-single-float** </p><p>**least-positive-single-float short-float-epsilon** </p><p>**long-float-epsilon short-float-negative-epsilon long-float-negative-epsilon single-float-epsilon** </p><p>**most-negative-double-float single-float-negative-epsilon**</p>|
+|\<p\>**double-float-epsilon most-negative-fixnum** \</p\>\<p\>**double-float-negative-epsilon most-negative-long-float** \</p\>\<p\>**least-negative-double-float most-negative-short-float** \</p\>\<p\>**least-negative-long-float most-negative-single-float** \</p\>\<p\>**least-negative-short-float most-positive-double-float** \</p\>\<p\>**least-negative-single-float most-positive-fixnum** \</p\>\<p\>**least-positive-double-float most-positive-long-float** \</p\>\<p\>**least-positive-long-float most-positive-short-float** \</p\>\<p\>**least-positive-short-float most-positive-single-float** \</p\>\<p\>**least-positive-single-float short-float-epsilon** \</p\>\<p\>**long-float-epsilon short-float-negative-epsilon long-float-negative-epsilon single-float-epsilon** \</p\>\<p\>**most-negative-double-float single-float-negative-epsilon**\</p\>|
 | :- |
 
 
@@ -178,7 +178,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 |**Function Sample Results**|
 | :- |
-|<p>**abs** (abs #c(3 4)) *→* 5 *or* 5.0 </p><p>**acos** (acos 1) *→* 0 *or* 0.0 </p><p>**acosh** (acosh 1) *→* 0 *or* 0.0 </p><p>**asin** (asin 0) *→* 0 *or* 0.0 </p><p>**asinh** (asinh 0) *→* 0 *or* 0.0 </p><p>**atan** (atan 0) *→* 0 *or* 0.0 </p><p>**atanh** (atanh 0) *→* 0 *or* 0.0 </p><p>**cis** (cis 0) *→* 1 *or* #c(1.0 0.0) </p><p>**cos** (cos 0) *→* 1 *or* 1.0 </p><p>**cosh** (cosh 0) *→* 1 *or* 1.0 </p><p>**exp** (exp 0) *→* 1 *or* 1.0 </p><p>**expt** (expt 8 1/3) *→* 2 *or* 2.0 </p><p>**log** (log 1) *→* 0 *or* 0.0 </p><p>(log 8 2) *→* 3 *or* 3.0 </p><p>**phase** (phase 7) *→* 0 *or* 0.0 </p><p>**signum** (signum #c(3 4)) *→* #c(3/5 4/5) *or* #c(0.6 0.8) **sin** (sin 0) *→* 0 *or* 0.0 </p><p>**sinh** (sinh 0) *→* 0 *or* 0.0 </p><p>**sqrt** (sqrt 4) *→* 2 *or* 2.0 </p><p>(sqrt 9/16) *→* 3/4 *or* 0.75 </p><p>**tan** (tan 0) *→* 0 *or* 0.0 </p><p>**tanh** (tanh 0) *→* 0 *or* 0.0</p>|
+|\<p\>**abs** (abs #c(3 4)) *→* 5 *or* 5.0 \</p\>\<p\>**acos** (acos 1) *→* 0 *or* 0.0 \</p\>\<p\>**acosh** (acosh 1) *→* 0 *or* 0.0 \</p\>\<p\>**asin** (asin 0) *→* 0 *or* 0.0 \</p\>\<p\>**asinh** (asinh 0) *→* 0 *or* 0.0 \</p\>\<p\>**atan** (atan 0) *→* 0 *or* 0.0 \</p\>\<p\>**atanh** (atanh 0) *→* 0 *or* 0.0 \</p\>\<p\>**cis** (cis 0) *→* 1 *or* #c(1.0 0.0) \</p\>\<p\>**cos** (cos 0) *→* 1 *or* 1.0 \</p\>\<p\>**cosh** (cosh 0) *→* 1 *or* 1.0 \</p\>\<p\>**exp** (exp 0) *→* 1 *or* 1.0 \</p\>\<p\>**expt** (expt 8 1/3) *→* 2 *or* 2.0 \</p\>\<p\>**log** (log 1) *→* 0 *or* 0.0 \</p\>\<p\>(log 8 2) *→* 3 *or* 3.0 \</p\>\<p\>**phase** (phase 7) *→* 0 *or* 0.0 \</p\>\<p\>**signum** (signum #c(3 4)) *→* #c(3/5 4/5) *or* #c(0.6 0.8) **sin** (sin 0) *→* 0 *or* 0.0 \</p\>\<p\>**sinh** (sinh 0) *→* 0 *or* 0.0 \</p\>\<p\>**sqrt** (sqrt 4) *→* 2 *or* 2.0 \</p\>\<p\>(sqrt 9/16) *→* 3/4 *or* 0.75 \</p\>\<p\>**tan** (tan 0) *→* 0 *or* 0.0 \</p\>\<p\>**tanh** (tanh 0) *→* 0 *or* 0.0\</p\>|
 
 
 **Figure 12–8. Functions Affected by Rule of Float Substitutability** 
@@ -225,11 +225,11 @@ Fri 12-Aug-1994 6:35pm EDT
 
 ;;; in which 5/7 is rounded upwards by FLOAT. 
 
-(< 5/7 (float 5/7)) *→ true* 
+(\< 5/7 (float 5/7)) *→ true* 
 
-(< 5/7 (rational (float 5/7))) *→ true* 
+(\< 5/7 (rational (float 5/7))) *→ true* 
 
-(< (float 5/7) (float 5/7)) *→ false* 
+(\< (float 5/7) (float 5/7)) *→ false* 
 
 **12.1.4.2 Rule of Float Approximation** 
 
@@ -309,15 +309,15 @@ Positive
 
 Imaginary Axis 
 
-<sup>..</sup>. 
+\<sup\>..\</sup\>. 
 
-<sub>II</sub><sup>..</sup>. I 
+\<sub\>II\</sub\>\<sup\>..\</sup\>. I 
 
 Negative Real Axis *· · · · · · · · · · · · · · · · · ·* Positive Real Axis 
 
-<sub>III</sub><sup>..</sup>. IV 
+\<sub\>III\</sub\>\<sup\>..\</sup\>. IV 
 
-<sup>..</sup>. 
+\<sup\>..\</sup\>. 
 
 Negative 
 
@@ -367,7 +367,7 @@ This denotes the absence of an upper bound on the interval.
 
 Figure 12–11 lists some *defined names* that are applicable to *random states*. 
 
-|<p>**\*random-state\* random** </p><p>**make-random-state random-state-p**</p>|
+|\<p\>**\*random-state\* random** \</p\>\<p\>**make-random-state random-state-p**\</p\>|
 | :- |
 
 
@@ -447,7 +447,7 @@ For every *float*, *n*, there is a *complex* which represents the same mathemati
 
 **Description:** 
 
-The *type* **real** includes all *numbers* that represent mathematical real numbers, though there are mathematical real numbers (*e.g.*, irrational numbers) that do not have an exact representation in Common Lisp. Only *reals* can be ordered using the <, >, <**=**, and >**=** functions. 
+The *type* **real** includes all *numbers* that represent mathematical real numbers, though there are mathematical real numbers (*e.g.*, irrational numbers) that do not have an exact representation in Common Lisp. Only *reals* can be ordered using the \<, \>, \<**=**, and \>**=** functions. 
 
 The *types* **rational** and **float** are *disjoint subtypes* of *type* **real**. 
 
@@ -481,7 +481,7 @@ This denotes the *reals* on the interval described by *lower-limit* and *upper-l
 
 **Description:** 
 
-A <i>float</i> is a mathematical rational (but <i>not</i> a Common Lisp <i>rational</i>) of the form <i>s · f · b<sup>e−p</sup></i>, where <i>s</i> is +1 or <i>−</i>1, the <i>sign</i>; <i>b</i> is an <i>integer</i> greater than 1, the <i>base</i> or <i>radix</i> of the representation; <i>p</i> is a positive <i>integer</i> , the <i>precision</i> (in base-<i>b</i> digits) of the <i>float</i>; <i>f</i> is a positive <i>integer</i> between <i>b<sup>p−</sup></i>1</sup> and <i>b<sup>p</sup> −</i> 1 (inclusive), the significand; and <i>e</i> is an <i>integer</i> , the exponent. The value of <i>p</i> and the 
+A \<i\>float\</i\> is a mathematical rational (but \<i\>not\</i\> a Common Lisp \<i\>rational\</i\>) of the form \<i\>s · f · b\<sup\>e−p\</sup\>\</i\>, where \<i\>s\</i\> is +1 or \<i\>−\</i\>1, the \<i\>sign\</i\>; \<i\>b\</i\> is an \<i\>integer\</i\> greater than 1, the \<i\>base\</i\> or \<i\>radix\</i\> of the representation; \<i\>p\</i\> is a positive \<i\>integer\</i\> , the \<i\>precision\</i\> (in base-\<i\>b\</i\> digits) of the \<i\>float\</i\>; \<i\>f\</i\> is a positive \<i\>integer\</i\> between \<i\>b\<sup\>p−\</sup\>\</i\>1\</sup\> and \<i\>b\<sup\>p\</sup\> −\</i\> 1 (inclusive), the significand; and \<i\>e\</i\> is an \<i\>integer\</i\> , the exponent. The value of \<i\>p\</i\> and the 
 
 range of *e* depends on the implementation and on the type of *float* within that implementation. In addition, there is a floating-point zero; depending on the implementation, there can also be a “minus zero”. If there is no minus zero, then 0*.*0 and *−*0*.*0 are both interpreted as simply a floating-point zero. (= 0.0 -0.0) is always true. If there is a minus zero, (eql -0.0 0.0) is *false*, otherwise it is *true*. 
 
@@ -531,11 +531,11 @@ Note that all mathematical integers are representable not only as Common Lisp *r
 
 **Description:** 
 
-For the four defined *subtypes* of *type* **float**, it is true that intermediate between the *type* **short-float** and the *type* **long-float** are the *type* **single-float** and the *type* **double-float**. The precise definition of these categories is *implementation-defined*. The precision (measured in “bits”, computed as *p* log<sub>2</sub>*b*) and the exponent size (also measured in “bits,” computed as log<sub>2</sub>(*n* + 1), where *n* is the maximum exponent value) is recommended to be at least as great as the values in Figure 12–12. Each of the defined *subtypes* of *type* **float** might or might not have a minus zero. 
+For the four defined *subtypes* of *type* **float**, it is true that intermediate between the *type* **short-float** and the *type* **long-float** are the *type* **single-float** and the *type* **double-float**. The precise definition of these categories is *implementation-defined*. The precision (measured in “bits”, computed as *p* log\<sub\>2\</sub\>*b*) and the exponent size (also measured in “bits,” computed as log\<sub\>2\</sub\>(*n* + 1), where *n* is the maximum exponent value) is recommended to be at least as great as the values in Figure 12–12. Each of the defined *subtypes* of *type* **float** might or might not have a minus zero. 
 
 |**Format Minimum Precision Minimum Exponent Size**|
 | :- |
-|<p>Short 13 bits 5 bits </p><p>Single 24 bits 8 bits </p><p>Double 50 bits 8 bits </p><p>Long 50 bits 8 bits</p>|
+|\<p\>Short 13 bits 5 bits \</p\>\<p\>Single 24 bits 8 bits \</p\>\<p\>Double 50 bits 8 bits \</p\>\<p\>Long 50 bits 8 bits\</p\>|
 
 
 **Figure 12–12. Recommended Minimum Floating-Point Precision and Exponent Size** 
@@ -706,7 +706,7 @@ Abbreviating.
 
 **Compound Type Specifier Description:** 
 
-This denotes the set of <i>integers</i> that can be represented in two’s-complement form in a <i>byte</i> of <i>s</i> bits. This is equivalent to (integer <i>−</i>2<sup><i>s−</i>1</sup> 2<sup><i>s−</i>1</sup> <i>−</i> 1). The type <b>signed-byte</b> or the type (signed-byte *) is the same as the <i>type</i> <b>integer</b>. 
+This denotes the set of \<i\>integers\</i\> that can be represented in two’s-complement form in a \<i\>byte\</i\> of \<i\>s\</i\> bits. This is equivalent to (integer \<i\>−\</i\>2\<sup\>\<i\>s−\</i\>1\</sup\> 2\<sup\>\<i\>s−\</i\>1\</sup\> \<i\>−\</i\> 1). The type \<b\>signed-byte\</b\> or the type (signed-byte *) is the same as the \<i\>type\</i\> \<b\>integer\</b\>. 
 
 **unsigned-byte** *Type* 
 
@@ -732,7 +732,7 @@ Abbreviating.
 
 **Compound Type Specifier Description:** 
 
-This denotes the set of non-negative <i>integers</i> that can be represented in a byte of size <i>s</i> (bits). This is equivalent to (mod <i>m</i>) for <i>m</i> = 2<i><sup>s</sup></i>, or to (integer 0 <i>n</i>) for <i>n</i> = 2<i><sup>s</sup> −</i>1. The <i>type</i> <b>unsigned-byte</b> or the type (unsigned-byte *) is the same as the type (integer 0 *), the set of non-negative <i>integers</i>. 
+This denotes the set of non-negative \<i\>integers\</i\> that can be represented in a byte of size \<i\>s\</i\> (bits). This is equivalent to (mod \<i\>m\</i\>) for \<i\>m\</i\> = 2\<i\>\<sup\>s\</sup\>\</i\>, or to (integer 0 \<i\>n\</i\>) for \<i\>n\</i\> = 2\<i\>\<sup\>s\</sup\> −\</i\>1. The \<i\>type\</i\> \<b\>unsigned-byte\</b\> or the type (unsigned-byte *) is the same as the type (integer 0 *), the set of non-negative \<i\>integers\</i\>. 
 
 **Notes:** 
 
@@ -802,31 +802,31 @@ Fri 12-Aug-1994 6:35pm EDT
 
 The *type* **bignum** is defined to be exactly (and integer (not fixnum)). 
 
-**=, /=,** *<***,** *>***,** *<***=,** *>***=** *Function* 
+**=, /=,** *\<***,** *\>***,** *\<***=,** *\>***=** *Function* 
 
 **Syntax:** 
 
-**=** &rest *numbers*<sup>+</sup> *→ generalized-boolean* 
+**=** &rest *numbers*\<sup\>+\</sup\> *→ generalized-boolean* 
 
-**/=** &rest *numbers*<sup>+</sup> *→ generalized-boolean* 
+**/=** &rest *numbers*\<sup\>+\</sup\> *→ generalized-boolean* 
 
-< &rest *numbers*<sup>+</sup> *→ generalized-boolean* 
+\< &rest *numbers*\<sup\>+\</sup\> *→ generalized-boolean* 
 
-\> &rest *numbers*<sup>+</sup> *→ generalized-boolean* 
+\\> &rest *numbers*\<sup\>+\</sup\> *→ generalized-boolean* 
 
-<**=** &rest *numbers*<sup>+</sup> *→ generalized-boolean* 
+\<**=** &rest *numbers*\<sup\>+\</sup\> *→ generalized-boolean* 
 
-\>**=** &rest *numbers*<sup>+</sup> *→ generalized-boolean* 
+\\>**=** &rest *numbers*\<sup\>+\</sup\> *→ generalized-boolean* 
 
 **Arguments and Values:** 
 
-*number*—for <, >, <**=**, >**=**: a *real*; for **=**, **/=**: a *number* . 
+*number*—for \<, \>, \<**=**, \>**=**: a *real*; for **=**, **/=**: a *number* . 
 
 *generalized-boolean*—a *generalized boolean*. 
 
 **Description:** 
 
-**=**, **/=**, <, >, <**=**, and >**=** perform arithmetic comparisons on their arguments as follows: **=** 
+**=**, **/=**, \<, \>, \<**=**, and \>**=** perform arithmetic comparisons on their arguments as follows: **=** 
 
 The value of **=** is *true* if all *numbers* are the same in value; otherwise it is *false*. Two *complexes* are considered equal by **=** if their real and imaginary parts are equal according to **=**. 
 
@@ -838,25 +838,25 @@ Version 15.17R, X3J13/94-101R.
 
 Fri 12-Aug-1994 6:35pm EDT 
 
-**=, /=,** *<***,** *>***,** *<***=,** *>***=** 
+**=, /=,** *\<***,** *\>***,** *\<***=,** *\>***=** 
 
-< 
+\< 
 
-The value of < is *true* if the *numbers* are in monotonically increasing order; otherwise it is *false*. 
+The value of \< is *true* if the *numbers* are in monotonically increasing order; otherwise it is *false*. 
 
-\> 
+\\> 
 
-The value of > is *true* if the *numbers* are in monotonically decreasing order; otherwise it is *false*. 
+The value of \> is *true* if the *numbers* are in monotonically decreasing order; otherwise it is *false*. 
 
-<**=** 
+\<**=** 
 
-The value of <**=** is *true* if the *numbers* are in monotonically nondecreasing order; otherwise it is *false*. 
+The value of \<**=** is *true* if the *numbers* are in monotonically nondecreasing order; otherwise it is *false*. 
 
-\>**=** 
+\\>**=** 
 
-The value of >**=** is *true* if the *numbers* are in monotonically nonincreasing order; otherwise it is *false*. 
+The value of \>**=** is *true* if the *numbers* are in monotonically nonincreasing order; otherwise it is *false*. 
 
-**=**, **/=**, <, >, <**=**, and >**=** perform necessary type conversions. 
+**=**, **/=**, \<, \>, \<**=**, and \>**=** perform necessary type conversions. 
 
 **Examples:** 
 
@@ -868,11 +868,11 @@ Version 15.17R, X3J13/94-101R.
 
 Fri 12-Aug-1994 6:35pm EDT 
 
-|<p>(= 3 3) is *true*. (/= 3 3) is *false*. </p><p>(= 3 5) is *false*. (/= 3 5) is *true*. </p><p>(= 3 3 3 3) is *true*. (/= 3 3 3 3) is *false*. </p><p>(= 3 3 5 3) is *false*. (/= 3 3 5 3) is *false*. </p><p>(= 3 6 5 2) is *false*. (/= 3 6 5 2) is *true*. </p><p>(= 3 2 3) is *false*. (/= 3 2 3) is *false*. </p><p>(< 3 5) is *true*. (<= 3 5) is *true*. </p><p>(< 3 -5) is *false*. (<= 3 -5) is *false*. </p><p>(< 3 3) is *false*. (<= 3 3) is *true*. </p><p>(< 0 3 4 6 7) is *true*. (<= 0 3 4 6 7) is *true*. </p><p>(< 0 3 4 4 6) is *false*. (<= 0 3 4 4 6) is *true*. </p><p>(> 4 3) is *true*. (>= 4 3) is *true*. </p><p>(> 4 3 2 1 0) is *true*. (>= 4 3 2 1 0) is *true*. </p><p>(> 4 3 3 2 0) is *false*. (>= 4 3 3 2 0) is *true*. </p><p>(> 4 3 1 2 0) is *false*. (>= 4 3 1 2 0) is *false*. </p><p>(= 3) is *true*. (/= 3) is *true*. </p><p>(< 3) is *true*. (<= 3) is *true*. </p><p>(= 3.0 #c(3.0 0.0)) is *true*. (/= 3.0 #c(3.0 1.0)) is *true*. </p><p>(= 3 3.0) is *true*. (= 3.0s0 3.0d0) is *true*. </p><p>(= 0.0 -0.0) is *true*. (= 5/2 2.5) is *true*. </p><p>(> 0.0 -0.0) is *false*. (= 0 -0.0) is *true*. </p><p>(<= 0 x 9) is *true* if x is between 0 and 9, inclusive </p><p>(< 0.0 x 1.0) is *true* if x is between 0.0 and 1.0, exclusive </p><p>(< -1 j (length v)) is *true* if j is a *valid array index* for a *vector* v</p>|
+|\<p\>(= 3 3) is *true*. (/= 3 3) is *false*. \</p\>\<p\>(= 3 5) is *false*. (/= 3 5) is *true*. \</p\>\<p\>(= 3 3 3 3) is *true*. (/= 3 3 3 3) is *false*. \</p\>\<p\>(= 3 3 5 3) is *false*. (/= 3 3 5 3) is *false*. \</p\>\<p\>(= 3 6 5 2) is *false*. (/= 3 6 5 2) is *true*. \</p\>\<p\>(= 3 2 3) is *false*. (/= 3 2 3) is *false*. \</p\>\<p\>(\< 3 5) is *true*. (\<= 3 5) is *true*. \</p\>\<p\>(\< 3 -5) is *false*. (\<= 3 -5) is *false*. \</p\>\<p\>(\< 3 3) is *false*. (\<= 3 3) is *true*. \</p\>\<p\>(\< 0 3 4 6 7) is *true*. (\<= 0 3 4 6 7) is *true*. \</p\>\<p\>(\< 0 3 4 4 6) is *false*. (\<= 0 3 4 4 6) is *true*. \</p\>\<p\>(\> 4 3) is *true*. (\>= 4 3) is *true*. \</p\>\<p\>(\> 4 3 2 1 0) is *true*. (\>= 4 3 2 1 0) is *true*. \</p\>\<p\>(\> 4 3 3 2 0) is *false*. (\>= 4 3 3 2 0) is *true*. \</p\>\<p\>(\> 4 3 1 2 0) is *false*. (\>= 4 3 1 2 0) is *false*. \</p\>\<p\>(= 3) is *true*. (/= 3) is *true*. \</p\>\<p\>(\< 3) is *true*. (\<= 3) is *true*. \</p\>\<p\>(= 3.0 #c(3.0 0.0)) is *true*. (/= 3.0 #c(3.0 1.0)) is *true*. \</p\>\<p\>(= 3 3.0) is *true*. (= 3.0s0 3.0d0) is *true*. \</p\>\<p\>(= 0.0 -0.0) is *true*. (= 5/2 2.5) is *true*. \</p\>\<p\>(\> 0.0 -0.0) is *false*. (= 0 -0.0) is *true*. \</p\>\<p\>(\<= 0 x 9) is *true* if x is between 0 and 9, inclusive \</p\>\<p\>(\< 0.0 x 1.0) is *true* if x is between 0.0 and 1.0, exclusive \</p\>\<p\>(\< -1 j (length v)) is *true* if j is a *valid array index* for a *vector* v\</p\>|
 | :- |
 
 
-**Figure 12–13. Uses of /=, =,** <**,** >**,** <**=, and** >**=** 
+**Figure 12–13. Uses of /=, =,** \<**,** \>**,** \<**=, and** \>**=** 
 
 **Exceptional Situations:** 
 
@@ -886,7 +886,7 @@ Might signal **type-error** if some *argument* is not a *real*. Might signal **a
 
 **Syntax:** 
 
-**max** &rest *reals*<sup>+</sup> *→ max-real* 
+**max** &rest *reals*\<sup\>+\</sup\> *→ max-real* 
 
 **12–22** Programming Language—Common Lisp
 
@@ -896,7 +896,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **max, min** 
 
-**min** &rest *reals*<sup>+</sup> *→ min-real* 
+**min** &rest *reals*\<sup\>+\</sup\> *→ min-real* 
 
 **Arguments and Values:** 
 
@@ -938,19 +938,19 @@ For **max**, the implementation has the choice of returning the largest argument
 
 *→* 2 
 
-<i><sup>or</sup>→</i> 2.0 
+\<i\>\<sup\>or\</sup\>→\</i\> 2.0 
 
 (max 3.0 7 1) 
 
 *→* 7 
 
-<i><sup>or</sup>→</i> 7.0 
+\<i\>\<sup\>or\</sup\>→\</i\> 7.0 
 
 (min 3.0 7 1) 
 
 *→* 1 
 
-<i><sup>or</sup>→</i> 1.0 
+\<i\>\<sup\>or\</sup\>→\</i\> 1.0 
 
 (max 1.0s0 7.0d0) *→* 7.0d0 
 
@@ -964,21 +964,21 @@ Fri 12-Aug-1994 6:35pm EDT
 
 *→* 1.0s0 
 
-<i><sup>or</sup>→</i> 1.0d0 
+\<i\>\<sup\>or\</sup\>→\</i\> 1.0d0 
 
 (max 3 1 1.0s0 1.0d0) 
 
 *→* 3 
 
-<i><sup>or</sup>→</i> 3.0d0 
+\<i\>\<sup\>or\</sup\>→\</i\> 3.0d0 
 
 (min 3 1 1.0s0 1.0d0) 
 
 *→* 1 
 
-<i><sup>or</sup>→</i> 1.0s0 
+\<i\>\<sup\>or\</sup\>→\</i\> 1.0s0 
 
-<i><sup>or</sup>→</i> 1.0d0 
+\<i\>\<sup\>or\</sup\>→\</i\> 1.0d0 
 
 **Exceptional Situations:** 
 
@@ -1134,7 +1134,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **floor, ffloor, ceiling, fceiling, truncate, ftruncate,** *. . .* 
 
-has the form *integer*+<sup>1</sup><sub>2</sub>), then the *quotient* has been rounded to the even (divisible by two) integer. 
+has the form *integer*+\<sup\>1\</sup\>\<sub\>2\</sub\>), then the *quotient* has been rounded to the even (divisible by two) integer. 
 
 All of these functions perform type conversion operations on *numbers*. 
 
@@ -1284,9 +1284,9 @@ Fri 12-Aug-1994 6:35pm EDT
 
 The arc sine, arc cosine, and arc tangent (with only *number1* supplied) functions can be defined mathematically for *number* or *number1* specified as *x* as in Figure 12–14. 
 
-|<b><sup>Function Definition</sup></b><i>√</i> |
+|\<b\>\<sup\>Function Definition\</sup\>\</b\>\<i\>√\</i\> |
 | :- |
-|<p>Arc sine *−i* log *ix* +1 *− x*<sup>2</sup> </p><p>Arc cosine (*π/*2) *−* arcsin *x* </p><p><sub>Arc tangent <i>−i</i> log (1 + <i>ix</i>)</sub><sup>p</sup>1<i>/</i>(1 + <i>x</i><sup>2</sup><sub>)</sub> </p>|
+|\<p\>Arc sine *−i* log *ix* +1 *− x*\<sup\>2\</sup\> \</p\>\<p\>Arc cosine (*π/*2) *−* arcsin *x* \</p\>\<p\>\<sub\>Arc tangent \<i\>−i\</i\> log (1 + \<i\>ix\</i\>)\</sub\>\<sup\>p\</sup\>1\<i\>/\</i\>(1 + \<i\>x\</i\>\<sup\>2\</sup\>\<sub\>)\</sub\> \</p\>|
 
 
 **Figure 12–14. Mathematical definition of arc sine, arc cosine, and arc tangent** 
@@ -1311,11 +1311,11 @@ Fri 12-Aug-1994 6:35pm EDT
 
 arcsin *z* = *−i* log 
 
-<sub><i>iz</i> +</sub><sup>p</sup>1 <i>− z</i><sup>2</sup>  
+\<sub\>\<i\>iz\</i\> +\</sub\>\<sup\>p\</sup\>1 \<i\>− z\</i\>\<sup\>2\</sup\>  
 
 The branch cut for the arc sine function is in two pieces: one along the negative real axis to the left of *−*1 (inclusive), continuous with quadrant II, and one along the positive real axis to the right of 1 (inclusive), continuous with quadrant IV. The range is that strip of the complex plane containing numbers whose real part is between *−π/*2 and *π/*2. A number with real part equal to *−π/*2 is in the range if and only if its imaginary part is non-negative; a number with real part equal to *π/*2 is in the range if and only if its imaginary part is non-positive. 
 
-The following definition for arc cosine determines the range and branch cuts: <sub>arccos <i>z</i> =</sub><i><sup>π</sup></i><sub>2</sub><i>−</i> arcsin <i>z</i> 
+The following definition for arc cosine determines the range and branch cuts: \<sub\>arccos \<i\>z\</i\> =\</sub\>\<i\>\<sup\>π\</sup\>\</i\>\<sub\>2\</sub\>\<i\>−\</i\> arcsin \<i\>z\</i\> 
 
 or, which are equivalent, 
 
@@ -1323,9 +1323,9 @@ or, which are equivalent,
 
 arccos *z* = *−i* log 
 
-<sub><i>z</i> + <i>i</i></sub><sup>p</sup>1 <i>− z</i><sup>2</sup>  
+\<sub\>\<i\>z\</i\> + \<i\>i\</i\>\</sub\>\<sup\>p\</sup\>1 \<i\>− z\</i\>\<sup\>2\</sup\>  
 
-<sub>arccos <i>z</i> =2 log</sub> <sup>p</sup><sub>(1 + <i>z</i>)<i>/</i>2 + <i>i</i></sub><sup>p</sup><sub>(1 <i>− z</i>)<i>/</i>2</sub>  
+\<sub\>arccos \<i\>z\</i\> =2 log\</sub\> \<sup\>p\</sup\>\<sub\>(1 + \<i\>z\</i\>)\<i\>/\</i\>2 + \<i\>i\</i\>\</sub\>\<sup\>p\</sup\>\<sub\>(1 \<i\>− z\</i\>)\<i\>/\</i\>2\</sub\>  
 
 *i* 
 
@@ -1333,7 +1333,7 @@ The branch cut for the arc cosine function is in two pieces: one along the negat
 
 The following definition for (one-argument) arc tangent determines the range and branch cuts: 
 
-arctan <i>z</i> =<sup>log (1 + <i>iz</i>) <i>−</i> log (1 <i>− iz</i>)</sup> 
+arctan \<i\>z\</i\> =\<sup\>log (1 + \<i\>iz\</i\>) \<i\>−\</i\> log (1 \<i\>− iz\</i\>)\</sup\> 
 
 2*i* 
 
@@ -1353,7 +1353,7 @@ For **atan**, the signs of *number1* (indicated as *x*) and *number2* (indicated
 
 |*y* **Condition** *x* **Condition Cartesian locus Range of result**|
 | :- |
-|<p>*y* = 0 *x* > 0 Positive x-axis 0 </p><p>\* *y* = +0 *x* > 0 Positive x-axis +0 </p><p>\* *y* = *−*0 *x* > 0 Positive x-axis *−*0 </p><p>*y* > 0 *x* > 0 Quadrant I 0 < result < *π/*2 *y* > 0 *x* = 0 Positive y-axis *π/*2 </p><p>*y* > 0 *x* < 0 Quadrant II *π/*2 < result < *π y* = 0 *x* < 0 Negative x-axis *π* </p><p>\* *y* = +0 *x* < 0 Negative x-axis +*π* </p><p>\* *y* = *−*0 *x* < 0 Negative x-axis *−π* </p><p>*y* < 0 *x* < 0 Quadrant III *−π* < result < *−π/*2 *y* < 0 *x* = 0 Negative y-axis *−π/*2 </p><p>*y* < 0 *x* > 0 Quadrant IV *−π/*2 < result < 0 *y* = 0 *x* = 0 Origin undefined consequences \* *y* = +0 *x* = +0 Origin +0 </p><p>\* *y* = *−*0 *x* = +0 Origin *−*0 </p><p>\* *y* = +0 *x* = *−*0 Origin +*π* </p><p>\* *y* = *−*0 *x* = *−*0 Origin *−π*</p>|
+|\<p\>*y* = 0 *x* \> 0 Positive x-axis 0 \</p\>\<p\>\* *y* = +0 *x* \> 0 Positive x-axis +0 \</p\>\<p\>\* *y* = *−*0 *x* \> 0 Positive x-axis *−*0 \</p\>\<p\>*y* \> 0 *x* \> 0 Quadrant I 0 \< result \< *π/*2 *y* \> 0 *x* = 0 Positive y-axis *π/*2 \</p\>\<p\>*y* \> 0 *x* \< 0 Quadrant II *π/*2 \< result \< *π y* = 0 *x* \< 0 Negative x-axis *π* \</p\>\<p\>\* *y* = +0 *x* \< 0 Negative x-axis +*π* \</p\>\<p\>\* *y* = *−*0 *x* \< 0 Negative x-axis *−π* \</p\>\<p\>*y* \< 0 *x* \< 0 Quadrant III *−π* \< result \< *−π/*2 *y* \< 0 *x* = 0 Negative y-axis *−π/*2 \</p\>\<p\>*y* \< 0 *x* \> 0 Quadrant IV *−π/*2 \< result \< 0 *y* = 0 *x* = 0 Origin undefined consequences \* *y* = +0 *x* = +0 Origin +0 \</p\>\<p\>\* *y* = *−*0 *x* = +0 Origin *−*0 \</p\>\<p\>\* *y* = +0 *x* = *−*0 Origin +*π* \</p\>\<p\>\* *y* = *−*0 *x* = *−*0 Origin *−π*\</p\>|
 
 
 **Figure 12–15. Quadrant information for arc tangent** 
@@ -1460,7 +1460,7 @@ These functions compute the hyperbolic sine, cosine, tangent, arc sine, arc cosi
 
 |**Function Definition**|
 | :- |
-|<p>Hyperbolic sine (<i>e<sup>x</sup> − e<sup>−x</sup></i>)<i>/</i>2 </p><p>Hyperbolic cosine (<i>e<sup>x</sup></i> + <i>e<sup>−x</sup></i>)<i>/</i>2 </p><p>Hyperbolic tangent (<i>e<sup>x</sup> − e<sup>−x</sup></i>)<i>/</i>(<i>e<sup>x</sup></i> + <i>e<sup>−x</sup></i>) </p><p><sub>Hyperbolic arc sine log (<i>x</i> +</sub><i><sup>√</sup></i>1 + <i>x</i><s><sup>2</sup></s>) </p><p><sub>Hyperbolic arc cosine 2 log (</sub><sup>p</sup><sub>(<i>x</i> + 1)<i>/</i>2 +</sub> <sup>p</sup>(<i>x −</i> 1)<i>/</i>2) </p><p>Hyperbolic arc tangent (log (1 + *x*) *−* log (1 *− x*))*/*2</p>|
+|\<p\>Hyperbolic sine (\<i\>e\<sup\>x\</sup\> − e\<sup\>−x\</sup\>\</i\>)\<i\>/\</i\>2 \</p\>\<p\>Hyperbolic cosine (\<i\>e\<sup\>x\</sup\>\</i\> + \<i\>e\<sup\>−x\</sup\>\</i\>)\<i\>/\</i\>2 \</p\>\<p\>Hyperbolic tangent (\<i\>e\<sup\>x\</sup\> − e\<sup\>−x\</sup\>\</i\>)\<i\>/\</i\>(\<i\>e\<sup\>x\</sup\>\</i\> + \<i\>e\<sup\>−x\</sup\>\</i\>) \</p\>\<p\>\<sub\>Hyperbolic arc sine log (\<i\>x\</i\> +\</sub\>\<i\>\<sup\>√\</sup\>\</i\>1 + \<i\>x\</i\>\<s\>\<sup\>2\</sup\>\</s\>) \</p\>\<p\>\<sub\>Hyperbolic arc cosine 2 log (\</sub\>\<sup\>p\</sup\>\<sub\>(\<i\>x\</i\> + 1)\<i\>/\</i\>2 +\</sub\> \<sup\>p\</sup\>(\<i\>x −\</i\> 1)\<i\>/\</i\>2) \</p\>\<p\>Hyperbolic arc tangent (log (1 + *x*) *−* log (1 *− x*))*/*2\</p\>|
 
 
 **Figure 12–16. Mathematical definitions for hyperbolic functions** 
@@ -1469,7 +1469,7 @@ The following definition for the inverse hyperbolic cosine determines the range 
 
 arccosh *z* = 2 log 
 
-` `<sup>p</sup><sub>(<i>z</i> + 1)<i>/</i>2 +</sub> <sup>p</sup><sub>(<i>z −</i> 1)<i>/</i>2</sub></sup> <i>.</i> 
+` `\<sup\>p\</sup\>\<sub\>(\<i\>z\</i\> + 1)\<i\>/\</i\>2 +\</sub\> \<sup\>p\</sup\>\<sub\>(\<i\>z −\</i\> 1)\<i\>/\</i\>2\</sub\>\</sup\> \<i\>.\</i\> 
 
 The branch cut for the inverse hyperbolic cosine function lies along the real axis to the left of 1 (inclusive), extending indefinitely along the negative real axis, continuous with quadrant II and (between 0 and 1) with quadrant I. The range is that half-strip of the complex plane containing 
 
@@ -1489,13 +1489,13 @@ The following definition for the inverse hyperbolic sine determines the range an
 
 arcsinh *z* = log 
 
-<sub><i>z</i> +</sub><sup>p</sup>1 + <i>z</i><sup>2</sup> <i>.</i> 
+\<sub\>\<i\>z\</i\> +\</sub\>\<sup\>p\</sup\>1 + \<i\>z\</i\>\<sup\>2\</sup\> \<i\>.\</i\> 
 
 The branch cut for the inverse hyperbolic sine function is in two pieces: one along the positive imaginary axis above *i* (inclusive), continuous with quadrant I, and one along the negative imaginary axis below *−i* (inclusive), continuous with quadrant III. The range is that strip of the complex plane containing numbers whose imaginary part is between *−π/*2 and *π/*2. A number with imaginary part equal to *−π/*2 is in the range if and only if its real part is non-positive; a number with imaginary part equal to *π/*2 is in the range if and only if its imaginary part is non-negative. 
 
-The following definition for the inverse hyperbolic tangent determines the range and branch cuts: arctanh <i>z</i> =<sup>log (1 + <i>z</i>) <i>−</i> log (1 <i>− z</i>)</sup> 
+The following definition for the inverse hyperbolic tangent determines the range and branch cuts: arctanh \<i\>z\</i\> =\<sup\>log (1 + \<i\>z\</i\>) \<i\>−\</i\> log (1 \<i\>− z\</i\>)\</sup\> 
 
-<sub>2</sub>*.* 
+\<sub\>2\</sub\>*.* 
 
 Note that: 
 
@@ -1607,7 +1607,7 @@ Section 12.1.1 (Numeric Operations), Section 12.1.3 (Rational Computations), Sec
 
 *− number → negation* 
 
-*− minuend* &rest *subtrahends*<sup>+</sup> *→ difference* 
+*− minuend* &rest *subtrahends*\<sup\>+\</sup\> *→ difference* 
 
 **Arguments and Values:** 
 
@@ -1659,7 +1659,7 @@ Section 12.1.1 (Numeric Operations), Section 12.1.3 (Rational Computations), Sec
 
 **/** *number → reciprocal* 
 
-**/** *numerator* &rest *denominators*<sup>+</sup> *→ quotient* 
+**/** *numerator* &rest *denominators*\<sup\>+\</sup\> *→ quotient* 
 
 **Arguments and Values:** 
 
@@ -1889,7 +1889,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 The result of **expt** can be a *complex* , even when neither argument is a *complex* , if *base-number* is negative and *power-number* is not an *integer* . The result is always the *principal complex value*. For example, (expt -8 1/3) is not permitted to return -2, even though -2 is one of the cube roots of -8. The *principal* cube root is a *complex* approximately equal to #C(1.0 1.73205), not -2. 
 
-<b>expt</b> is defined as <i>b<sup>x</sup> = e<sup>xlogb</sup></i>. This defines the <i>principal values</i> precisely. The range of <b>expt</b> is the entire complex plane. Regarded as a function of <i>x</i>, with <i>b</i> fixed, there is no branch cut. Regarded as a function of <i>b</i>, with <i>x</i> fixed, there is in general a branch cut along the negative real axis, continuous with quadrant II. The domain excludes the origin. By definition, 0<sup>0</sup>=1. If <i>b</i>=0 and the real part of <i>x</i> is strictly positive, then <i>b<sup>x</sup></i>=0. For all other values of <i>x</i>, 0<i><sup>x</sup></i>is an error. 
+\<b\>expt\</b\> is defined as \<i\>b\<sup\>x\</sup\> = e\<sup\>xlogb\</sup\>\</i\>. This defines the \<i\>principal values\</i\> precisely. The range of \<b\>expt\</b\> is the entire complex plane. Regarded as a function of \<i\>x\</i\>, with \<i\>b\</i\> fixed, there is no branch cut. Regarded as a function of \<i\>b\</i\>, with \<i\>x\</i\> fixed, there is in general a branch cut along the negative real axis, continuous with quadrant II. The domain excludes the origin. By definition, 0\<sup\>0\</sup\>=1. If \<i\>b\</i\>=0 and the real part of \<i\>x\</i\> is strictly positive, then \<i\>b\<sup\>x\</sup\>\</i\>=0. For all other values of \<i\>x\</i\>, 0\<i\>\<sup\>x\</sup\>\</i\>is an error. 
 
 Numbers **12–41**
 
@@ -2181,7 +2181,7 @@ This defines the *principal values* precisely. The range of the two-argument log
 
 *→* #C(-1.0 0.0) 
 
-<i><sup>or</sup>→</i> #C(-1 0) 
+\<i\>\<sup\>or\</sup\>→\</i\> #C(-1 0) 
 
 (log 8.0 2) *→* 3.0 
 
@@ -2383,7 +2383,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 *→* 5 
 
-<i><sup>or</sup>→</i> 5.0 
+\<i\>\<sup\>or\</sup\>→\</i\> 5.0 
 
 (isqrt 25) *→* 5 
 
@@ -2445,7 +2445,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 Creates a *fresh object* of *type* **random-state** suitable for use as the *value* of **\*random-state\***. 
 
-If *state* is a *random state object*, the *new-state* is a *copy*<sub>5</sub> of that *object*. If *state* is **nil**, the *new-state* is a *copy*<sub>5</sub> of the *current random state*. If *state* is **t**, the *new-state* is a *fresh random state object* that has been randomly initialized by some means. 
+If *state* is a *random state object*, the *new-state* is a *copy*\<sub\>5\</sub\> of that *object*. If *state* is **nil**, the *new-state* is a *copy*\<sub\>5\</sub\> of the *current random state*. If *state* is **t**, the *new-state* is a *fresh random state object* that has been randomly initialized by some means. 
 
 **Examples:** 
 
@@ -2525,7 +2525,7 @@ An approximately uniform choice distribution is used. If *limit* is an *integer*
 
 **Examples:** 
 
-(<= 0 (random 1000) 1000) *→ true* 
+(\<= 0 (random 1000) 1000) *→ true* 
 
 (let ((state1 (make-random-state)) 
 
@@ -2701,7 +2701,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **Description:** 
 
-<b>cis</b> returns the value of <i>e<sup>i· radians</sup></i> , which is a <i>complex</i> in which the real part is equal to the cosine of <i>radians</i>, and the imaginary part is equal to the sine of <i>radians</i>. 
+\<b\>cis\</b\> returns the value of \<i\>e\<sup\>i· radians\</sup\>\</i\> , which is a \<i\>complex\</i\> in which the real part is equal to the cosine of \<i\>radians\</i\>, and the imaginary part is equal to the sine of \<i\>radians\</i\>. 
 
 **Examples:** 
 
@@ -3157,7 +3157,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **ash** shifts *integer* arithmetically left by *count* bit positions if *count* is positive, or right *count* bit positions if *count* is negative. The shifted value of the same sign as *integer* is returned. 
 
-Mathematically speaking, <b>ash</b> performs the computation floor(<i>integer·</i>2<i><sup>count</sup></i>). Logically, <b>ash</b> moves all of the bits in <i>integer</i> to the left, adding zero-bits at the right, or moves them to the right, discarding bits. 
+Mathematically speaking, \<b\>ash\</b\> performs the computation floor(\<i\>integer·\</i\>2\<i\>\<sup\>count\</sup\>\</i\>). Logically, \<b\>ash\</b\> moves all of the bits in \<i\>integer\</i\> to the left, adding zero-bits at the right, or moves them to the right, discarding bits. 
 
 **ash** is defined to behave as if *integer* were represented in two’s complement form, regardless of how *integers* are represented internally. 
 
@@ -3179,7 +3179,7 @@ Should signal an error of *type* **type-error** if *integer* is not an *integer*
 
 (logbitp *j* (ash *n k*)) 
 
-*≡* (and (>= *j k*) (logbitp (- *j k*) *n*)) 
+*≡* (and (\>= *j k*) (logbitp (- *j k*) *n*)) 
 
 **12–64** Programming Language—Common Lisp
 
@@ -3317,11 +3317,11 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **parse-integer** parses an *integer* in the specified *radix* from the substring of *string* delimited by *start* and *end*. 
 
-**parse-integer** expects an optional sign (+ or -) followed by a a non-empty sequence of digits to be interpreted in the specified *radix*. Optional leading and trailing *whitespace*<sub>1</sub> is ignored. 
+**parse-integer** expects an optional sign (+ or -) followed by a a non-empty sequence of digits to be interpreted in the specified *radix*. Optional leading and trailing *whitespace*\<sub\>1\</sub\> is ignored. 
 
 **parse-integer** does not recognize the syntactic radix-specifier prefixes #O, #B, #X, and #*n*R, nor does it recognize a trailing decimal point. 
 
-If *junk-allowed* is *false*, an error of *type* **parse-error** is signaled if substring does not consist entirely of the representation of a signed *integer* , possibly surrounded on either side by *whitespace*<sub>1</sub> *characters*. 
+If *junk-allowed* is *false*, an error of *type* **parse-error** is signaled if substring does not consist entirely of the representation of a signed *integer* , possibly surrounded on either side by *whitespace*\<sub\>1\</sub\> *characters*. 
 
 The first *value* returned is either the *integer* that was parsed, or else **nil** if no syntactically correct *integer* was seen but *junk-allowed* was *true*. 
 
@@ -3337,7 +3337,7 @@ The second *value* is either the index into the *string* of the delimiter that t
 
 **Exceptional Situations:** 
 
-If *junk-allowed* is *false*, an error is signaled if substring does not consist entirely of the representation of an *integer* , possibly surrounded on either side by *whitespace*<sub>1</sub> characters. 
+If *junk-allowed* is *false*, an error is signaled if substring does not consist entirely of the representation of an *integer* , possibly surrounded on either side by *whitespace*\<sub\>1\</sub\> characters. 
 
 **boole** *Function* 
 
@@ -3373,7 +3373,7 @@ The operation to be performed and the return value are determined by *op*.
 
 |**Op Result**|
 | :- |
-|<p>**boole-1** *integer-1* </p><p>**boole-2** *integer-2* </p><p>**boole-andc1** and complement of *integer-1* with *integer-2* </p><p>**boole-andc2** and *integer-1* with complement of *integer-2* </p><p>**boole-and** and </p><p>**boole-c1** complement of *integer-1* </p><p>**boole-c2** complement of *integer-2* </p><p>**boole-clr** always 0 (all zero bits) </p><p>**boole-eqv** equivalence (exclusive nor) </p><p>**boole-ior** inclusive or </p><p>**boole-nand** not-and </p><p>**boole-nor** not-or </p><p>**boole-orc1** or complement of *integer-1* with *integer-2* </p><p>**boole-orc2** or *integer-1* with complement of *integer-2* </p><p>**boole-set** always -1 (all one bits) </p><p>**boole-xor** exclusive or</p>|
+|\<p\>**boole-1** *integer-1* \</p\>\<p\>**boole-2** *integer-2* \</p\>\<p\>**boole-andc1** and complement of *integer-1* with *integer-2* \</p\>\<p\>**boole-andc2** and *integer-1* with complement of *integer-2* \</p\>\<p\>**boole-and** and \</p\>\<p\>**boole-c1** complement of *integer-1* \</p\>\<p\>**boole-c2** complement of *integer-2* \</p\>\<p\>**boole-clr** always 0 (all zero bits) \</p\>\<p\>**boole-eqv** equivalence (exclusive nor) \</p\>\<p\>**boole-ior** inclusive or \</p\>\<p\>**boole-nand** not-and \</p\>\<p\>**boole-nor** not-or \</p\>\<p\>**boole-orc1** or complement of *integer-1* with *integer-2* \</p\>\<p\>**boole-orc2** or *integer-1* with complement of *integer-2* \</p\>\<p\>**boole-set** always -1 (all one bits) \</p\>\<p\>**boole-xor** exclusive or\</p\>|
 
 
 **Figure 12–17. Bit-Wise Logical Operations** 
@@ -3392,7 +3392,7 @@ The operation to be performed and the return value are determined by *op*.
 
 (progn 
 
-(format t "~&Results of (BOOLE <op> #b0011 #b0101) ...~ 
+(format t "~&Results of (BOOLE \<op\> #b0011 #b0101) ...~ 
 
 ~%–-Op–––-Decimal––-Binary––Bits–-~%") 
 
@@ -3418,7 +3418,7 @@ boole-orc1 boole-orc2 boole-set boole-xor))
 
 symbol result (logand result #b1111))))) 
 
-*.* Results of (BOOLE <op> #b0011 #b0101) ... 
+*.* Results of (BOOLE \<op\> #b0011 #b0101) ... 
 
 *.* –-Op–––-Decimal––-Binary––Bits–- 
 
@@ -3474,7 +3474,7 @@ In general,
 
 ;; The order of the values in this ‘table’ are such that 
 
-;; (logand (boole (elt boole-n-vector n) #b0101 #b0011) #b1111) => n 
+;; (logand (boole (elt boole-n-vector n) #b0101 #b0011) #b1111) =\> n 
 
 (defconstant boole-n-vector 
 
@@ -3514,7 +3514,7 @@ boole-c2 boole-orc2 boole-nand boole-set))
 
 *→* (0 1 2 3 4 5 6 7 -8 -7 -6 -5 -4 -3 -2 -1) 
 
-<b><sup>boole-1, boole-2, boole-and, boole-andc1, boole</sup> andc2, boole-c1, boole-c2, boole-clr, boole-eqv, boole-ior, boole-nand, boole-nor, boole-orc1, boole-orc2, boole-set, boole-xor</b> <i>Constant Variable</i> 
+\<b\>\<sup\>boole-1, boole-2, boole-and, boole-andc1, boole\</sup\> andc2, boole-c1, boole-c2, boole-clr, boole-eqv, boole-ior, boole-nand, boole-nor, boole-orc1, boole-orc2, boole-set, boole-xor\</b\> \<i\>Constant Variable\</i\> 
 
 **Constant Value:** 
 
@@ -3598,7 +3598,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 |**Function Identity Operation performed**|
 | :- |
-|<p>**logandc1** — and complement of *integer-1* with *integer-2* **logandc2** — and *integer-1* with complement of *integer-2* **logand** -1 and </p><p>**logeqv** -1 equivalence (exclusive nor) </p><p>**logior** 0 inclusive or </p><p>**lognand** — complement of *integer-1* and *integer-2* **lognor** — complement of *integer-1* or *integer-2* **lognot** — complement </p><p>**logorc1** — or complement of *integer-1* with *integer-2* **logorc2** — or *integer-1* with complement of *integer-2* **logxor** 0 exclusive or</p>|
+|\<p\>**logandc1** — and complement of *integer-1* with *integer-2* **logandc2** — and *integer-1* with complement of *integer-2* **logand** -1 and \</p\>\<p\>**logeqv** -1 equivalence (exclusive nor) \</p\>\<p\>**logior** 0 inclusive or \</p\>\<p\>**lognand** — complement of *integer-1* and *integer-2* **lognor** — complement of *integer-1* or *integer-2* **lognot** — complement \</p\>\<p\>**logorc1** — or complement of *integer-1* with *integer-2* **logorc2** — or *integer-1* with complement of *integer-2* **logxor** 0 exclusive or\</p\>|
 
 
 **Figure 12–18. Bit-wise Logical Operations on Integers** 
@@ -3725,7 +3725,7 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **Description:** 
 
-<b>logbitp</b> is used to test the value of a particular bit in <i>integer</i>, that is treated as if it were binary. The value of <b>logbitp</b> is <i>true</i> if the bit in <i>integer</i> whose index is <i>index</i> (that is, its weight is 2<i><sup>index</sup></i> ) is a one-bit; otherwise it is <i>false</i>. 
+\<b\>logbitp\</b\> is used to test the value of a particular bit in \<i\>integer\</i\>, that is treated as if it were binary. The value of \<b\>logbitp\</b\> is \<i\>true\</i\> if the bit in \<i\>integer\</i\> whose index is \<i\>index\</i\> (that is, its weight is 2\<i\>\<sup\>index\</sup\>\</i\> ) is a one-bit; otherwise it is \<i\>false\</i\>. 
 
 Negative *integers* are treated as if they were in two’s-complement notation. 
 
@@ -3871,7 +3871,7 @@ Should signal an error of *type* **type-error** if *integer-1* is not an *intege
 
 **Description:** 
 
-<b>byte</b> returns a <i>byte specifier</i> that indicates a <i>byte</i> of width <i>size</i> and whose bits have weights 2<sup><i>position</i>+<i>size−</i>1</sup>through 2<i><sup>position</sup></i>, and whose representation is <i>implementation-dependent</i>. 
+\<b\>byte\</b\> returns a \<i\>byte specifier\</i\> that indicates a \<i\>byte\</i\> of width \<i\>size\</i\> and whose bits have weights 2\<sup\>\<i\>position\</i\>+\<i\>size−\</i\>1\</sup\>through 2\<i\>\<sup\>position\</sup\>\</i\>, and whose representation is \<i\>implementation-dependent\</i\>. 
 
 **byte-size** returns the number of bits specified by *bytespec*. 
 
@@ -3879,7 +3879,7 @@ Should signal an error of *type* **type-error** if *integer-1* is not an *intege
 
 **Examples:** 
 
-(setq b (byte 100 200)) *→* #<BYTE-SPECIFIER size 100 position 200> 
+(setq b (byte 100 200)) *→* #\<BYTE-SPECIFIER size 100 position 200\> 
 
 (byte-size b) *→* 100 
 
@@ -3943,7 +3943,7 @@ Replaces a field of bits within *integer*; specifically, returns an *integer* th
 
 (logbitp *j* (deposit-field *m* (byte *s p*) *n*)) 
 
-*≡* (if (and (>= *j p*) (< *j* (+ *p s*))) 
+*≡* (if (and (\>= *j p*) (\< *j* (+ *p s*))) 
 
 (logbitp *j m*) 
 
@@ -3999,7 +3999,7 @@ Let s be the size specified by *bytespec*; then the low s bits of *newbyte* appe
 
 (logbitp *j* (dpb *m* (byte *s p*) *n*)) 
 
-*≡* (if (and (>= *j p*) (< *j* (+ *p s*))) 
+*≡* (if (and (\>= *j p*) (\< *j* (+ *p s*))) 
 
 (logbitp (- *j p*) *m*) 
 

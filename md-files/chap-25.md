@@ -1,20 +1,17 @@
-﻿Version 15.17R, X3J13/94-101R. 
+﻿ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
-**Programming Language—Common Lisp** 
+ 
 
 **25. Environment** 
+  
 
-Environment **i**
 
-Version 15.17R, X3J13/94-101R. Fri 12-Aug-1994 6:35pm EDT 
 
-**ii** Programming Language—Common Lisp
+ 
 
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **25.1 The External Environment** 
 
@@ -48,9 +45,9 @@ Figure 25–3 shows *defined names* relating to environment inquiry.
 
 Environment **25–1**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 |**\*features\* machine-instance short-site-name lisp-implementation-type machine-type software-type lisp-implementation-version machine-version software-version long-site-name room**|
 | :- |
@@ -88,11 +85,11 @@ An *integer* between 0 and 59, inclusive.
 
 An *integer* between 0 and 23, inclusive. 
 
-**25–2** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Date** 
 
@@ -134,9 +131,9 @@ time 00:00:01 on January 1, 1976 GMT. Recall that the year 1900 was not a leap y
 
 Environment **25–3**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 Therefore the year 2000 will be a leap year. Because *universal time* must be a non-negative *integer* , times before the base time of midnight, January 1, 1900 GMT cannot be processed by Common Lisp. 
 
@@ -168,11 +165,11 @@ One function, **sleep**, takes its argument as a non-negative *real* number of s
 
 **Figure 25–8. Defined names involving time in Seconds.** 
 
-**25–4** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **decode-universal-time** *Function* 
 
@@ -230,9 +227,9 @@ If *time-zone* is not supplied, it defaults to the current time zone adjusted fo
 
 Environment **25–5**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **encode-universal-time** *function* 
 
@@ -284,11 +281,11 @@ Fri 12-Aug-1994 6:35pm EDT
 
 *second*, *minute*, *hour*, *date*, *month*, *year*, *day*, *daylight-p*, *zone*—a *decoded time*. 
 
-**25–6** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Description:** 
 
@@ -344,9 +341,9 @@ No *implementation* is required to have a way to verify that the time returned i
 
 Environment **25–7**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Description:** 
 
@@ -400,11 +397,11 @@ Should signal an error of *type* **type-error** if *seconds* is not a non-negati
 
 **Description:** 
 
-These functions search for *interned symbols* whose *names* contain the substring *string*. **25–8** Programming Language—Common Lisp
+These functions search for *interned symbols* whose *names* contain the substring *string*. 
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 For **apropos**, as each such *symbol* is found, its name is printed on *standard output*. In addition, if such a *symbol* is defined as a *function* or *dynamic variable*, information about those definitions might also be printed. 
 
@@ -444,9 +441,9 @@ For example, **describe** of a *symbol* might show the *symbol*’s value, its d
 
 Environment **25–9**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 The actual act of describing the object is implemented by **describe-object**. **describe** exists as an interface primarily to manage argument defaulting (including conversion of arguments **t** and **nil** into *stream objects*) and to inhibit any return values from **describe-object**. 
 
@@ -488,11 +485,11 @@ Each implementation is required to provide a *method* on the *class* **standard-
 
 *Methods* on **describe-object** can recursively call **describe**. Indentation, depth limits, and circularity detection are all taken care of automatically, provided that each *method* handles exactly one level of structure and calls **describe** recursively if there are more structural levels. The consequences are undefined if this rule is not obeyed. 
 
-**25–10** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 In some implementations the *stream* argument passed to a **describe-object** method is not the original *stream*, but is an intermediate *stream* that implements parts of **describe**. *Methods* should therefore not depend on the identity of this *stream*. 
 
@@ -544,9 +541,9 @@ The reason for making the return values for **describe-object** unspecified is t
 
 Environment **25–11**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **trace, untrace** 
 
@@ -604,11 +601,11 @@ If a *function* to be traced has been open-coded (*e.g.*, because it was declare
 
 *.* | 2 Exit FACT 2 
 
-**25–12** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 *.* 1 Exit FACT 6 
 
@@ -654,9 +651,9 @@ Although **trace** can be extended to permit non-standard options, *implementati
 
 Environment **25–13**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **step** evaluates *form* in the current *environment*. A call to **step** can be compiled, but it is acceptable for an implementation to interactively step through only those parts of the computation that are interpreted. 
 
@@ -694,11 +691,11 @@ The accuracy of the results depends, among other things, on the accuracy of the 
 
 The magnitude of the results may depend on the hardware, the operating system, the lisp implementation, and the state of the global environment. Some specific issues which frequently affect the outcome are hardware speed, nature of the scheduler (if any), number of competing processes (if any), system paging, whether the call is interpreted or compiled, whether functions called are compiled, the kind of garbage collector involved and whether it runs, whether internal data structures (e.g., hash tables) are implicitly reorganized, *etc.* 
 
-**25–14** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **See Also:** 
 
@@ -746,9 +743,9 @@ These units form the basis of the Internal Time format representation.
 
 Time of day (*i.e.*, the passage of time). The time base affects the result magnitude. Environment **25–15**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **See Also:** 
 
@@ -780,11 +777,11 @@ The *implementation*, the time of day (*i.e.*, the passage of time).
 
 Depending on the *implementation*, paging time and garbage collection time might be included in this measurement. Also, in a multitasking environment, it might not be possible to show the time for just the running process, so in some *implementations*, time taken by other processes during the same time interval might be included in this measurement as well. 
 
-**25–16** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **disassemble** *Function* 
 
@@ -832,9 +829,9 @@ Should signal an error of *type* **type-error** if *fn* is not an *extended func
 
 Environment **25–17**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **documentation, (setf documentation)** 
 
@@ -886,11 +883,11 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **(setf documentation)** *new-value* (*x* **method-combination**) (*doc-type* (eql ’method-combination)) **(setf documentation)** *new-value* (*x* **symbol**) (*doc-type* (eql ’method-combination)) **Methods:** 
 
-**25–18** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **documentation, (setf documentation)** 
 
@@ -948,9 +945,9 @@ Fri 12-Aug-1994 6:35pm EDT
 
 Environment **25–19**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **documentation, (setf documentation)** 
 
@@ -994,11 +991,11 @@ Returns a *documentation string* specialized on the *class* of the argument *x* 
 
 **type** 
 
-**25–20** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 If *x* is a *symbol*, returns the *documentation string* of the *class* whose *name* is the *symbol x*, if there is such a *class*. Otherwise, it returns the *documentation string* of the *type* which is the *type specifier symbol x*. 
 
@@ -1036,9 +1033,9 @@ Output to *standard output*.
 
 Environment **25–21**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Affected By:** 
 
@@ -1074,11 +1071,11 @@ An error of *type* **file-error** might be signaled if *x* is a *designator* for
 
 **See Also:** 
 
-**pathname**, **logical-pathname**, **compile-file**, **load**, Section 19.1.2 (Pathnames as Filenames) **25–22** Programming Language—Common Lisp
+**pathname**, **logical-pathname**, **compile-file**, **load**, Section 19.1.2 (Pathnames as Filenames) 
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **inspect** *Function* 
 
@@ -1126,9 +1123,9 @@ Implementations are encouraged to respond to the typing of ? or a “help key”
 
 Environment **25–23**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Description:** 
 
@@ -1170,11 +1167,11 @@ a *form*.
 
 *implementation-dependent*. 
 
-**25–24** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Description:** 
 
@@ -1232,9 +1229,9 @@ The *value* of **+** is the last *form* that was *evaluated*, the *value* of **+
 
 Environment **25–25**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Affected By:** 
 
@@ -1286,11 +1283,11 @@ The *values* of **\***, **\*\***, and **\*\*\*** are updated immediately prior t
 
 *Lisp read-eval-print loop*. 
 
-**25–26** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **See Also:** 
 
@@ -1338,9 +1335,9 @@ The *values* of **/**, **//**, and **///** are updated immediately prior to prin
 
 Environment **25–27**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 \<b\>\<sup\>lisp-implementation-type, lisp-implementation\</sup\> version\</b\> \<i\>Function\</i\> 
 
@@ -1386,11 +1383,11 @@ If no appropriate and relevant result can be produced, **nil** is returned inste
 
 **long-site-name** *hno argumentsi → description* 
 
-**25–28** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Arguments and Values:** 
 
@@ -1450,9 +1447,9 @@ The machine instance, and the *implementation*.
 
 Environment **25–29**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **See Also:** 
 
@@ -1502,11 +1499,11 @@ The machine type. The implementation.
 
 Returns a *string* that identifies the version of the computer hardware on which Common Lisp is running, or **nil** if no such value can be computed. 
 
-**25–30** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Examples:** 
 
@@ -1554,9 +1551,9 @@ This information should be of use to maintainers of the *implementation*.
 
 Environment **25–31**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **user-homedir-pathname** 
 
@@ -1590,4 +1587,4 @@ If it is impossible to determine the user’s home directory on *host*, then **n
 
 The host computer’s file system, and the *implementation*. 
 
-**25–32** Programming Language—Common Lisp
+

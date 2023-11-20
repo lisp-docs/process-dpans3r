@@ -1,20 +1,17 @@
-﻿Version 15.17R, X3J13/94-101R. 
+﻿ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
-**Programming Language—Common Lisp** 
+ 
 
 **20. Files** 
+  
 
-Files **i**
 
-Version 15.17R, X3J13/94-101R. Fri 12-Aug-1994 6:35pm EDT 
 
-**ii** Programming Language—Common Lisp
+ 
 
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **20.1 File System Concepts** 
 
@@ -52,9 +49,9 @@ Of these, the *functions* in Figure 20–2 treat *open* and *closed streams* dif
 
 Files **20–1**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 Since treatment of *open streams* by the *file system* may vary considerably between *implementations*, however, a *closed stream* might be the most reliable kind of *argument* for some of these functions—in particular, those in Figure 20–3. For example, in some *file systems*, *open files* are written under temporary names and not renamed until *closed* and/or are held invisible until *closed*. In general, any code that is intended to be portable should use such *functions* carefully. 
 
@@ -82,11 +79,11 @@ If a *file* is a symbolic link to another *file* (in a *file system* permitting 
 
 In the case of a *file* still being created (that is, of an *output stream* open to such a *file*), the exact *truename* of the file might not be known until the *stream* is closed. In this case, the *function* **truename** might return different values for such a *stream* before and after it was closed. In fact, before it is closed, the name returned might not even be a valid name in the *file system*—for example, while a file is being written, it might have version :newest and might only take on a specific numeric value later when the file is closed even in a *file system* where all files have numeric versions. 
 
-**20–2** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **directory** *Function* 
 
@@ -136,9 +133,9 @@ Common Lisp specifies “&key” in the argument list to **directory** even thou
 
 Files **20–3**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 *truename*—a *physical pathname* or **nil**. 
 
@@ -184,11 +181,11 @@ Tests whether the directories containing the specified *file* actually exist, an
 
 If the containing directories do not exist and if *verbose* is *true*, then the *implementation* is permitted (but not required) to perform output to *standard output* saying what directories were created. If the containing directories exist, or if *verbose* is *false*, this function performs no output. 
 
-**20–4** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 The *primary value* is the given *pathspec* so that this operation can be straightforwardly composed with other file manipulation expressions. The *secondary value*, *created*, is *true* if any directories were created. 
 
@@ -234,9 +231,9 @@ If the directory creation attempt is not successful, an error of *type* **file-e
 
 Files **20–5**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 (truename stream))) 
 
@@ -298,11 +295,11 @@ An error of *type* **file-error** is signaled if *pathname* is *wild*.
 
 *author*—a *string* or **nil**. 
 
-**20–6** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Description:** 
 
@@ -360,9 +357,9 @@ Please leave lots of toys.~2%Love, Sue~
 
 Files **20–7**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 ~2%attachments: milk, cookies~%") 
 
@@ -414,11 +411,11 @@ Section 25.1.4.2 (Universal Time), Section 19.1.2 (Pathnames as Filenames)
 
 It is an error to specify a filename containing a *wild* component, for *filespec* to contain a **nil** component where the file system does not permit a **nil** component, or for the result of defaulting missing components of *new-name* from *filespec* to contain a **nil** component where the file system does not permit a **nil** component. 
 
-If *new-name* is a *logical pathname*, **rename-file** returns a *logical pathname* as its *primary value*. **20–8** Programming Language—Common Lisp
+If *new-name* is a *logical pathname*, **rename-file** returns a *logical pathname* as its *primary value*. 
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **rename-file** returns three values if successful. The *primary value*, *defaulted-new-name*, is the resulting name which is composed of *new-name* with any missing components filled in by performing a **merge-pathnames** operation using *filespec* as the defaults. The *secondary value*, *old-truename*, is the *truename* of the *file* before it was renamed. The *tertiary value*, *new-truename*, is the *truename* of the *file* after it was renamed. 
 
@@ -474,9 +471,9 @@ If the *filespec designator* is an open *stream*, then *filespec* and the file a
 
 Files **20–9**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 might be immediate or delayed until *filespec* is explicitly closed, depending on the requirements of the file system. 
 
@@ -526,11 +523,11 @@ An error of *type* **file-error** might be signaled if *filespec* is *wild*.
 
 The *type* **file-error** consists of error conditions that occur during an attempt to open or close a file, or during some low-level transactions with a file system. The “offending pathname” is initialized by the :pathname initialization argument to **make-condition**, and is *accessed* by the *function* **file-error-pathname**. 
 
-**20–10** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **See Also:** 
 
@@ -560,8 +557,8 @@ Returns the “offending pathname” of a *condition* of *type* **file-error**.
 
 Files **20–11**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
-**20–12** Programming Language—Common Lisp
+

@@ -1,20 +1,17 @@
-﻿Version 15.17R, X3J13/94-101R. 
+﻿ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
-**Programming Language—Common Lisp** 
+ 
 
 **18. Hash Tables** 
+  
 
-Hash Tables **i**
 
-Version 15.17R, X3J13/94-101R. Fri 12-Aug-1994 6:35pm EDT 
 
-**ii** Programming Language—Common Lisp
+ 
 
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **18.1 Hash Table Concepts** 
 
@@ -54,9 +51,9 @@ In this example, the symbols color and name are being used as keys, and the symb
 
 Hash Tables **18–1**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **18.1.2 Modifying Hash Table Keys** 
 
@@ -90,11 +87,11 @@ For a *vector* of *type* **bit-vector** or of *type* **string**, any visible cha
 
 As a consequence of the behavior for **equalp**, the rules for visible modification of *objects* not explicitly mentioned in this section are inherited from those in Section 18.1.2.2 (Visible Modification of Objects with respect to EQUAL). 
 
-**18–2** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **18.1.2.3.1 Visible Modification of Structures with respect to EQUALP** 
 
@@ -118,9 +115,9 @@ Note that the visibility of modifications to the keys depends on the equivalence
 
 Hash Tables **18–3**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **hash-table** *System Class* 
 
@@ -162,11 +159,11 @@ Creates and returns a new *hash table*.
 
 *size* is a hint to the *implementation* about how much initial space to allocate in the *hash-table*. This information, taken together with the *rehash-threshold*, controls the approximate number of entries which it should be possible to insert before the table has to grow. The actual size might be 
 
-**18–4** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 rounded up from *size* to the next ‘good’ size; for example, some *implementations* might round to the next prime number. 
 
@@ -214,9 +211,9 @@ Returns *true* if *object* is of *type* **hash-table**; otherwise, returns *fals
 
 Hash Tables **18–5**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Examples:** 
 
@@ -270,11 +267,11 @@ Returns the number of entries in the *hash-table*. If *hash-table* has just been
 
 **hash-table-size** 
 
-**18–6** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Notes:** 
 
@@ -334,9 +331,9 @@ If the hash table was created with an *integer* rehash size, the result is an *i
 
 Hash Tables **18–7**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 is a *float*, indicating that the rate of growth of the *hash-table* when rehashed is intended to be multiplicative. However, this value is only advice to the *implementation*; the actual amount by which the *hash-table* will grow upon rehash is *implementation-dependent*. 
 
@@ -372,11 +369,11 @@ Should signal an error of *type* **type-error** if *hash-table* is not a *hash t
 
 **make-hash-table**, **hash-table-rehash-size** 
 
-**18–8** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **hash-table-size** *Function* 
 
@@ -428,9 +425,9 @@ Should signal an error of *type* **type-error** if *hash-table* is not a *hash t
 
 Hash Tables **18–9**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **gethash** *Accessor* 
 
@@ -488,11 +485,11 @@ Fri 12-Aug-1994 6:35pm EDT
 
 (gethash ’foo \*counters\* 0) *→* 0, *false* 
 
-**18–10** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 (defmacro how-many (obj) ‘(values (gethash ,obj \*counters\* 0))) *→* HOW-MANY 
 
@@ -552,9 +549,9 @@ The *hash-table* is modified.
 
 Hash Tables **18–11**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **maphash** 
 
@@ -624,11 +621,11 @@ table) *→* NIL
 
 None, other than any which might be done by the *function*. 
 
-**18–12** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **See Also:** 
 
@@ -676,9 +673,9 @@ The following function should return **t** on any *hash table*, and signal an er
 
 Hash Tables **18–13**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 (defun test-hash-table-iterator (hash-table) 
 
@@ -748,11 +745,11 @@ Section 3.6 (Traversal Rules and Side Effects)
 
 *hash-table*—a *hash table*. 
 
-**18–14** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Description:** 
 
@@ -804,9 +801,9 @@ The manner in which the hash code is computed is *implementation-dependent*, but
 
 Hash Tables **18–15**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **sxhash** 
 
@@ -838,4 +835,4 @@ For *objects* of *types* that **equal** compares with **eq**, item 3 requires th
 
 Although *similarity* is defined for *symbols* in terms of both the *symbol*’s *name* and the *packages* in which the *symbol* is *accessible*, item 3 disallows using *package* information to compute the hash code, since changes to the package status of a symbol are not visible to *equal*. 
 
-**18–16** Programming Language—Common Lisp
+

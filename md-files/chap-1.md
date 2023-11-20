@@ -2,7 +2,7 @@
 
 
 
-**Programming Language—Common Lisp** 
+ 
 
 **1. Introduction**   
 

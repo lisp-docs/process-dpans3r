@@ -1,20 +1,17 @@
-﻿Version 15.17R, X3J13/94-101R. 
+﻿ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
-**Programming Language—Common Lisp** 
+ 
 
 **21. Streams** 
+  
 
-Streams **i**
 
-Version 15.17R, X3J13/94-101R. Fri 12-Aug-1994 6:35pm EDT 
 
-**ii** Programming Language—Common Lisp
+ 
 
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **21.1 Stream Concepts** 
 
@@ -48,9 +45,9 @@ Figure 21–2 shows *operators* relating to *input streams*.
 
 Streams **21–1**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 Figure 21–3 shows *operators* relating to *output streams*. 
 
@@ -88,11 +85,11 @@ An *interactive stream* is one on which it makes sense to perform interactive qu
 
 The precise meaning of an *interactive stream* is *implementation-defined*, and may depend on the underlying operating system. Some examples of the things that an *implementation* might choose to use as identifying characteristics of an *interactive stream* include: 
 
-**21–2** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 *•* The *stream* is connected to a person (or equivalent) in such a way that the program can prompt for information and expect to receive different input depending on the prompt. 
 
@@ -118,9 +115,9 @@ The *class* **stream** has a number of *subclasses* defined by this specificatio
 
 Streams **21–3**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 |**Class Related Operators**|
 | :- |
@@ -144,11 +141,11 @@ Certain *stream variables* are defined by this specification to be the proper so
 
 Note that, by convention, *standardized stream variables* have names ending in “-input\*” if they must be *input streams*, ending in “-output\*” if they must be *output streams*, or ending in “-io\*” if they must be *bidirectional streams*. 
 
-**21–4** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 User programs may *assign* or *bind* any *standardized stream variable* except **\*terminal-io\***. **21.1.3 Stream Arguments to Standardized Functions** The *operators* in Figure 21–7 accept *stream arguments* that might be either *open* or *closed streams*. 
 
@@ -168,9 +165,9 @@ The *operators* in Figure 21–8 accept *stream arguments* that must be *open st
 
 Streams **21–5**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **21.1.4 Restrictions on Composite Streams** 
 
@@ -178,11 +175,11 @@ The consequences are undefined if any *component* of a *composite stream* is *cl
 
 The consequences are undefined if the *synonym stream symbol* is not *bound* to an *open stream* from the time of the *synonym stream*’s creation until the time it is *closed*. 
 
-**21–6** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **stream** *System Class* 
 
@@ -220,9 +217,9 @@ Some output operations (*e.g.*, **fresh-line**) return *values* based on the sta
 
 Streams **21–7**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 *•* The functions **file-length**, **file-position**, **file-string-length**, and **stream-external-format** return the value from the last component stream; if there are no component 
 
@@ -254,11 +251,11 @@ A *concatenated stream* is an *input stream* which is a *composite stream* of ze
 
 Input from a *concatenated stream* is taken from the first of the associated *input streams* until it reaches *end of file*\<sub\>1\</sub\>; then that *stream* is discarded, and subsequent input is taken from the next *input stream*, and so on. An *end of file* on the associated *input streams* is always managed invisibly by the *concatenated stream*—the only time a client of a *concatenated stream* sees an *end of file* is 
 
-**21–8** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 when an attempt is made to obtain data from the *concatenated stream* but it has no remaining *input streams* from which to obtain such data. 
 
@@ -298,9 +295,9 @@ An *object* of *type* **file-stream** is a *stream* the direct source or sink of
 
 Streams **21–9**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **string-stream** *System Class* 
 
@@ -332,11 +329,11 @@ Any operations on a *synonym stream* will be performed on the *stream* that is t
 
 **make-synonym-stream**, **synonym-stream-symbol** 
 
-**21–10** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **two-way-stream** *System Class* 
 
@@ -386,9 +383,9 @@ Should signal an error of *type* **type-error** if *stream* is not a *stream*.
 
 Streams **21–11**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **interactive-stream-p** *Function* 
 
@@ -448,11 +445,11 @@ Section 21.1 (Stream Concepts)
 
 Returns *true* if *stream* is an *open stream*; otherwise, returns *false*. 
 
-**21–12** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 *Streams* are open until they have been explicitly closed with **close**, or until they are implicitly closed due to exit from a **with-output-to-string**, **with-open-file**, **with-input-from-string**, or **with-open-stream** *form*. 
 
@@ -502,9 +499,9 @@ Should signal an error of *type* **type-error** if *stream* is not a *stream*.
 
 Streams **21–13**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 (stream-element-type s)) 
 
@@ -554,11 +551,11 @@ Returns *true* if *object* is of *type* **stream**; otherwise, returns *false*.
 
 (streamp *object*) *≡* (typep *object* ’stream) 
 
-**21–14** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **read-byte** *Function* 
 
@@ -618,9 +615,9 @@ If there are no *bytes* remaining in the *stream* and *eof-error-p* is *true*, a
 
 Streams **21–15**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **write-byte** *Function* 
 
@@ -666,11 +663,11 @@ Might signal an error of *type* **type-error** if *byte* is not an *integer* of 
 
 **read-byte**, **write-char**, **write-sequence** 
 
-**21–16** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **peek-char** 
 
@@ -716,9 +713,9 @@ When *input-stream* is an *echo stream*, characters that are only peeked at are 
 
 Streams **21–17**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 (peek-char #\4 input-stream) 
 
@@ -766,11 +763,11 @@ If *recursive-p* is *true*, this call is expected to be embedded in a higher-lev
 
 If an *end of file*\<sub\>2\</sub\> occurs and *eof-error-p* is *false*, *eof-value* is returned. 
 
-**21–18** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Examples:** 
 
@@ -826,9 +823,9 @@ The corresponding output function is **write-char**.
 
 Streams **21–19**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 If *recursive-p* is *true*, this call is expected to be embedded in a higher-level call to **read** or a similar *function* used by the *Lisp reader* . 
 
@@ -888,11 +885,11 @@ If an *end of file*\<sub\>2\</sub\> occurs when *eof-error-p* is *true*, an erro
 
 **read-char-no-hang** is exactly like **read-char**, except that if it would be necessary to wait in order to get a character (as from a keyboard), **nil** is immediately returned without waiting. 
 
-**21–20** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **terpri, fresh-line** 
 
@@ -960,9 +957,9 @@ None.
 
 Streams **21–21**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Notes:** 
 
@@ -1008,11 +1005,11 @@ Invoking **peek-char** or **read-char** commits all previous characters. The con
 
 *→* NIL 
 
-**21–22** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Affected By:** 
 
@@ -1074,9 +1071,9 @@ The *output-stream* is modified.
 
 Streams **21–23**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **read-line** 
 
@@ -1134,11 +1131,11 @@ line2"
 
 *→* NIL, *true* 
 
-**21–24** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Affected By:** 
 
@@ -1198,9 +1195,9 @@ nil)
 
 Streams **21–25**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 *.* \*test2 
 
@@ -1250,11 +1247,11 @@ Destructively modifies *sequence* by replacing the *elements* of *sequence bound
 
 *Sequence* is destructively modified by copying successive *elements* into it from *stream*. If the *end of file* for *stream* is reached before copying all *elements* of the subsequence, then the extra *elements* near the end of *sequence* are not updated. 
 
-**21–26** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 *Position* is the index of the first *element* of *sequence* that was not updated, which might be less than *end* because the *end of file* was reached. 
 
@@ -1300,9 +1297,9 @@ Section 3.2.1 (Compiler Terminology), **write-sequence**, **read-line**
 
 Streams **21–27**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Examples:** 
 
@@ -1350,11 +1347,11 @@ For a binary file, the length is measured in units of the *element type* of the 
 
 (with-open-file (s "decimal-digits.text" 
 
-**21–28** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 :direction :output :if-exists :error) 
 
@@ -1410,9 +1407,9 @@ For a character file, performing a single **read-char** or **write-char** operat
 
 Streams **21–29**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **file-position** 
 
@@ -1490,11 +1487,11 @@ When the *position-spec* argument is supplied, the *file position* in the *strea
 
 The value returned by **file-position** increases monotonically as input or output operations are performed. 
 
-**21–30** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Exceptional Situations:** 
 
@@ -1530,9 +1527,9 @@ The returned value corresponds to the current state of *stream* at the time of t
 
 Streams **21–31**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **open** 
 
@@ -1572,11 +1569,11 @@ If *direction* is :input or :probe, or if *if-exists* is not :new-version and th
 
 An implementation is required to recognize all of the **open** keyword options and to do something reasonable in the context of the host operating system. For example, if a file system does not support distinct file versions and does not distinguish the notions of deletion and expunging, :new-version might be treated the same as :rename or :supersede, and :rename-and-delete might be treated the same as :supersede. 
 
-**21–32** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **open** 
 
@@ -1630,9 +1627,9 @@ expunged, and then a new file is created.
 
 Streams **21–33**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **open** 
 
@@ -1690,11 +1687,11 @@ No file or *stream* is created; instead, **nil** is returned to indicate failure
 
 This option selects an *external file format* for the *file*: The only *standardized* value for this option is :default, although *implementations* are permitted to define additional *external file formats* and *implementation-dependent* values returned by **stream-external-format** can also be used by *conforming programs*. 
 
-**21–34** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **open** 
 
@@ -1744,9 +1741,9 @@ The various *file systems* in existence today have widely differing capabilities
 
 Streams **21–35**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 deviate slightly from the semantics specified here without being disqualified for consideration as a *conforming implementation*. If it is utterly impossible for an *implementation* to handle some option in a manner similar to what is specified here, it may simply signal an error. 
 
@@ -1784,11 +1781,11 @@ Returns an *external file format designator* for the *stream*.
 
 (with-open-file (stream "test" :direction :output) 
 
-**21–36** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 (stream-external-format stream)) 
 
@@ -1844,9 +1841,9 @@ When control leaves the body, either normally or abnormally (such as by use of *
 
 Streams **21–37**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **with-open-file** 
 
@@ -1912,11 +1909,11 @@ The host computer’s file system.
 
 See the *function* **open**. 
 
-**21–38** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **See Also:** 
 
@@ -1950,9 +1947,9 @@ For a *stream* created with **make-string-output-stream**, the result of **get-o
 
 Streams **21–39**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Examples:** 
 
@@ -2004,11 +2001,11 @@ The consequences are undefined if an attempt is made to *assign* the the *variab
 
 (+ (read s) (read s) (read s))) *→* 6 
 
-**21–40** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Side Effects:** 
 
@@ -2056,9 +2053,9 @@ Returns *true* if there is a character immediately available from *input-stream*
 
 Streams **21–41**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **clear-input** 
 
@@ -2130,11 +2127,11 @@ If **clear-input** does not make sense for *input-stream*, then **clear-input** 
 
 *.* \> 20 ; Some implementations won’t echo typeahead here. 
 
-**21–42** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 *.* » 30 
 
@@ -2184,9 +2181,9 @@ If any of these operations does not make sense for *output-stream*, then it does
 
 Streams **21–43**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Examples:** 
 
@@ -2238,11 +2235,11 @@ These functions ask a question and parse a response from the user. They return *
 
 **y-or-n-p** is for asking the user a question whose answer is either “yes” or “no.” It is intended that the reply require the user to answer a yes-or-no question with a single character. **yes-or-no-p** is also for asking the user a question whose answer is either “Yes” or “No.” It is intended that the reply require the user to take more action than just a single keystroke, such as typing the full word yes or no followed by a newline. 
 
-**21–44** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **y-or-n-p** types out a message (if supplied), reads an answer in some *implementation-dependent* manner (intended to be short and simple, such as reading a single character such as Y or N). **yes-or-no-p** types out a message (if supplied), attracts the user’s attention (for example, by ringing the terminal’s bell), and reads an answer in some *implementation-dependent* manner (intended to be multiple characters, such as YES or NO). 
 
@@ -2290,9 +2287,9 @@ Output to and input from *query I/O* will occur.
 
 Streams **21–45**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **make-synonym-stream** *Function* 
 
@@ -2354,11 +2351,11 @@ Section 21.1 (Stream Concepts)
 
 *symbol*—a *symbol*. 
 
-**21–46** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Description:** 
 
@@ -2414,9 +2411,9 @@ b-stream (make-string-output-stream)) *→* #\<String Output Stream\>
 
 Streams **21–47**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 (get-output-stream-string b-stream) *→* "this will go to both streams" 
 
@@ -2464,11 +2461,11 @@ what-is-read *→* INPUT...
 
 Should signal an error of *type* **type-error** if *input-stream* is not an *input stream*. Should signal an error of *type* **type-error** if *output-stream* is not an *output stream*. 
 
-**21–48** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 \<b\>\<sup\>two-way-stream-input-stream, two-way-stream\</sup\> output-stream\</b\> \<i\>Function\</i\> 
 
@@ -2512,9 +2509,9 @@ Fri 12-Aug-1994 6:35pm EDT
 
 Streams **21–49**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **make-echo-stream** *Function* 
 
@@ -2568,11 +2565,11 @@ out))
 
 *streams*—a *list* of *input streams*. 
 
-**21–50** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Description:** 
 
@@ -2610,9 +2607,9 @@ Should signal **type-error** if any argument is not an *input stream*.
 
 Streams **21–51**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **get-output-stream-string** *Function* 
 
@@ -2656,11 +2653,11 @@ The consequences are undefined if *string-output-stream* is a *stream* that was 
 
 **make-string-output-stream** 
 
-**21–52** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **make-string-input-stream** *Function* 
 
@@ -2712,9 +2709,9 @@ Returns an *input string stream*. This *stream* will supply, in order, the *char
 
 Streams **21–53**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Description:** 
 
@@ -2768,11 +2765,11 @@ None..
 
 Creates an *input string stream*, provides an opportunity to perform operations on the *stream* (returning zero or more *values*), and then closes the *string stream*. 
 
-**21–54** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 *String* is evaluated first, and *var* is bound to a character *input string stream* that supplies *characters* from the subsequence of the resulting *string bounded* by *start* and *end*. The body is executed as an *implicit progn*. 
 
@@ -2822,9 +2819,9 @@ The *value* of the *place* named by *index*, if any, is modified.
 
 Streams **21–55**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **with-output-to-string** 
 
@@ -2876,11 +2873,11 @@ The *string* is modified.
 
 **Exceptional Situations:** 
 
-**21–56** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 The consequences are undefined if destructive modifications are performed directly on the *string* during the *dynamic extent* of the call. 
 
@@ -2918,9 +2915,9 @@ The *value* of **\*trace-output\***, called *trace output*, is the *stream* on w
 
 Streams **21–57**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 *∗***debug-io***∗***,** *∗***error-output***∗***,** *∗***query-io***∗***,** *. . .* 
 
@@ -2990,11 +2987,11 @@ out
 
 The intent of the constraints on the initial *value* of the *I/O customization variables* is to ensure that it is always safe to *bind* or *assign* such a *variable* to the *value* of another *I/O customization* 
 
-**21–58** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 *variable*, without unduly restricting *implementation* flexibility. 
 
@@ -3030,9 +3027,9 @@ The effect of changing the *value* of **\*terminal-io\***, either by *binding* o
 
 Streams **21–59**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 *.* FOOBAR 
 
@@ -3086,11 +3083,11 @@ Returns the offending *stream* of a *condition* of *type* **stream-error**.
 
 (handler-case (read s) 
 
-**21–60** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 (end-of-file (c) 
 
@@ -3118,8 +3115,8 @@ The *type* **end-of-file** consists of error conditions related to read operatio
 
 Streams **21–61**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
-**21–62** Programming Language—Common Lisp
+

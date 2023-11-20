@@ -2,7 +2,7 @@
 
 
 
-**Programming Language—Common Lisp** 
+ 
 
 **3. Evaluation and Compilation**   
 
@@ -961,7 +961,7 @@ Both **compile** and **compile-file** are permitted (but not required) to *estab
 
 Both **compile** and **compile-file** return three values, the second two indicating whether the source code being compiled contained errors and whether style warnings were issued. 
 
-Some warnings might be deferred until the end of compilation. See **with-compilation-unit**. **3–28** Programming Language—Common Lisp
+Some warnings might be deferred until the end of compilation. See **with-compilation-unit**. 
 
 
 
@@ -2998,7 +2998,7 @@ T
 
 **Description:** 
 
-Determines whether *symbol* has a function definition as a macro in the specified *environment*. **3–72** Programming Language—Common Lisp
+Determines whether *symbol* has a function definition as a macro in the specified *environment*. 
 
 
 

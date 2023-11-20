@@ -1,20 +1,17 @@
-﻿Version 15.17R, X3J13/94-101R. 
+﻿ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
-**Programming Language—Common Lisp** 
+ 
 
 **A. Appendix** 
+  
 
-Appendix **i**
 
-Version 15.17R, X3J13/94-101R. Fri 12-Aug-1994 6:35pm EDT 
 
-**ii** Programming Language—Common Lisp
+ 
 
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **A.1 Removed Language Features** 
 
@@ -52,6 +49,6 @@ The “#,” *reader macro* in *standard syntax* was removed.
 
 The *packages* LISP, USER, and SYSTEM are no longer required. It is valid for *packages* with one or more of these names to be provided by a *conforming implementation* as extensions. Appendix **A–1**
 
-Version 15.17R, X3J13/94-101R. Fri 12-Aug-1994 6:35pm EDT 
+  
 
 **A–2** Programming Language—Common Lisp

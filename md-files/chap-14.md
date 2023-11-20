@@ -1,20 +1,17 @@
-﻿Version 15.17R, X3J13/94-101R. 
+﻿ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
-**Programming Language—Common Lisp** 
+ 
 
 **14. Conses** 
+  
 
-Conses **i**
 
-Version 15.17R, X3J13/94-101R. Fri 12-Aug-1994 6:35pm EDT 
 
-**ii** Programming Language—Common Lisp
+ 
 
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **14.1 Cons Concepts** 
 
@@ -44,9 +41,9 @@ Except as explicitly stated otherwise, for any *standardized function* that take
 
 Conses **14–1**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **14.1.2 Conses as Lists** 
 
@@ -76,11 +73,11 @@ An *association list* is a *list* of *conses* representing an association of *ke
 
 **Figure 14–4. Some defined names related to assocation lists.** 
 
-**14–2** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **14.1.2.2 Lists as Sets** 
 
@@ -100,9 +97,9 @@ Except as explicitly specified otherwise, for any *standardized function* that t
 
 Conses **14–3**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **list** *System Class* 
 
@@ -138,11 +135,11 @@ The only *object* of *type* **null** is **nil**, which represents the *empty lis
 
 Section 2.3.4 (Symbols as Tokens), Section 2.4.1 (Left-Parenthesis), Section 22.1.3.3 (Printing Symbols) 
 
-**14–4** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **cons** *System Class* 
 
@@ -188,9 +185,9 @@ It is equivalent to (not cons).
 
 Conses **14–5**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **cons** *Function* 
 
@@ -248,11 +245,11 @@ If *object-2* is a *list*, **cons** can be thought of as producing a new *list* 
 
 *generalized-boolean*—a *generalized boolean*. 
 
-**14–6** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Description:** 
 
@@ -306,9 +303,9 @@ Returns *true* if *object* is of *type* **atom**; otherwise, returns *false*.
 
 Conses **14–7**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Notes:** 
 
@@ -362,11 +359,11 @@ The *cons* is modified.
 
 Should signal an error of *type* **type-error** if *cons* is not a *cons*. 
 
-**14–8** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **car, cdr, caar, cadr, cdar, cddr, caaar, caadr, cadar,** *. . .* 
 
@@ -448,9 +445,9 @@ Fri 12-Aug-1994 6:35pm EDT
 
 Conses **14–9**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **car, cdr, caar, cadr, cdar, cddr, caaar, caadr, cadar,** *. . .* 
 
@@ -476,11 +473,11 @@ If *x* is a *cons*, **cdr** returns the *cdr* of that *cons*. If *x* is **nil**,
 
 *Functions* are provided which perform compositions of up to four **car** and **cdr** operations. Their *names* consist of a C, followed by two, three, or four occurrences of A or D, and finally an R. The series of A’s and D’s in each *function*’s *name* is chosen to identify the series of **car** and **cdr** operations that is performed by the function. The order in which the A’s and D’s appear is the inverse of the order in which the corresponding operations are performed. Figure 14–6 defines the relationships precisely. 
 
-**14–10** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **car, cdr, caar, cadr, cdar, cddr, caaar, caadr, cadar,** *. . .* 
 
@@ -505,9 +502,9 @@ The argument *x* is permitted to be a *dotted list* or a *circular list*.
 
 Conses **14–11**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 (cadr ’(1 2)) *→* 2 
 
@@ -559,11 +556,11 @@ If *tree* is not a *cons*, it is returned; otherwise, the result is a new *cons*
 
 (setq object (list (cons 1 "one") 
 
-**14–12** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 (cons 2 (list ’a ’b ’c)))) 
 
@@ -625,9 +622,9 @@ copy-as-tree *→* ((1 . "one") (2 A B C))
 
 Conses **14–13**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **sublis, nsublis** 
 
@@ -695,11 +692,11 @@ tree1
 
 *→* ((QUOTE TEMP) (QUOTE TEMP) QUOTE TEMP) 
 
-**14–14** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Side Effects:** 
 
@@ -751,9 +748,9 @@ Because the side-effecting variants (*e.g.*, **nsublis**) potentially change the
 
 Conses **14–15**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **subst, subst-if, subst-if-not, nsubst, nsubst-if,** *. . .* 
 
@@ -803,11 +800,11 @@ For **nsubst**, **nsubst-if**, and **nsubst-if-not** the original *tree* is modi
 
 ’((old . spice) ((old . shoes) old . pair) (old . pair)) 
 
-**14–16** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 :test #’equal) 
 
@@ -867,9 +864,9 @@ tree
 
 Conses **14–17**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **tree-equal** 
 
@@ -925,11 +922,11 @@ The consequences are undefined if both *tree-1* and *tree-2* are circular.
 
 The :test-not parameter is deprecated. 
 
-**14–18** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **copy-list** *Function* 
 
@@ -991,9 +988,9 @@ The copy created is **equal** to *list*, but not **eq**.
 
 Conses **14–19**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **list, list***∗* 
 
@@ -1053,11 +1050,11 @@ If **list\*** receives only one *object*, that *object* is returned, regardless 
 
 **cons** 
 
-**14–20** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Notes:** 
 
@@ -1121,9 +1118,9 @@ Should signal an error of *type* **type-error** if *list* is not a *proper list*
 
 Conses **14–21**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 (slow x (cdr slow))) ;Slow pointer: leaps by 1. 
 
@@ -1185,11 +1182,11 @@ If *object* is a *cons*, **listp** does not check whether *object* is a *proper 
 
 (listp *object*) *≡* (typep *object* ’list) *≡* (typep *object* ’(or cons null)) 
 
-**14–22** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **make-list** *Function* 
 
@@ -1243,9 +1240,9 @@ Should signal an error of *type* **type-error** if *size* is not a non-negative 
 
 Conses **14–23**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Description:** 
 
@@ -1299,11 +1296,11 @@ except that the *subforms* of *place* are evaluated only once, and *item* is eva
 
 **pop** *reads* the *value* of *place*, remembers the *car* of the *list* which was retrieved, *writes* the *cdr* of the *list* back into the *place*, and finally *yields* the *car* of the originally retrieved *list*. 
 
-**14–24** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 For information about the *evaluation* of *subforms* of *place*, see Section 5.1.1.1 (Evaluation of Subforms to Places). 
 
@@ -1369,9 +1366,9 @@ except that the latter would evaluate any *subforms* of *place* three times, whi
 
 Conses **14–25**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **first, second, third, fourth, fifth, sixth, seventh,** *. . .* 
 
@@ -1437,11 +1434,11 @@ The ordinal numbering used here is one-origin, as opposed to the zero-origin num
 
 (fifth x) *≡* (nth 4 x) 
 
-**14–26** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **nth** *Accessor* 
 
@@ -1489,9 +1486,9 @@ Fri 12-Aug-1994 6:35pm EDT
 
 Conses **14–27**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **endp** *Function* 
 
@@ -1537,11 +1534,11 @@ The purpose of **endp** is to test for the end of *proper list*. Since **endp** 
 
 *boolean*—a *boolean*. 
 
-**14–28** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Description:** 
 
@@ -1595,9 +1592,9 @@ Returns a *list* that is the concatenation of *lists*. If no *lists* are supplie
 
 Conses **14–29**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Examples:** 
 
@@ -1659,11 +1656,11 @@ The *lists* are modified rather than copied.
 
 *list*—each must be a *proper list* except the last, which may be any *object*. 
 
-**14–30** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 *result*—an *object*. This will be a *list* unless the last *list* was not a *list* and all preceding *lists* were *null*. 
 
@@ -1717,9 +1714,9 @@ The resulting *list* shares *list structure* with *tail*.
 
 Conses **14–31**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **revappend, nreconc** 
 
@@ -1787,11 +1784,11 @@ Although it might be implemented differently, **nreconc** is constrained to have
 
 The following functional equivalences are true, although good *implementations* will typically use a faster algorithm for achieving the same effect: 
 
-**14–32** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 (revappend *list tail*) *≡* (nconc (reverse *list*) *tail*) 
 
@@ -1855,9 +1852,9 @@ foo *→* (A B C)
 
 Conses **14–33**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 (nbutlast (list ’a)) *→* NIL 
 
@@ -1913,11 +1910,11 @@ If *n* is zero, the atom that terminates *list* is returned. If *n* is greater t
 
 (last ’(a b c) 1) *→* (C) 
 
-**14–34** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 (last ’(a b c) 2) *→* (B C) 
 
@@ -1977,9 +1974,9 @@ The following code could be used to define **last**.
 
 Conses **14–35**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **ldiff, tailp** 
 
@@ -2057,11 +2054,11 @@ Neither **ldiff** nor **tailp** modifies either of its *arguments*.
 
 **Exceptional Situations:** 
 
-Should be prepared to signal an error of *type* **type-error** if *list* is not a *proper list* or a *dotted list*. **14–36** Programming Language—Common Lisp
+Should be prepared to signal an error of *type* **type-error** if *list* is not a *proper list* or a *dotted list*. 
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **See Also:** 
 
@@ -2117,9 +2114,9 @@ and **ldiff** could be defined by:
 
 Returns the *tail* of *list* that would be obtained by calling **cdr** *n* times in succession. Conses **14–37**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Examples:** 
 
@@ -2177,11 +2174,11 @@ For *n* being an integer greater than 1, the error checking done by (nthcdr *n l
 
 (rest ’(1 2)) *→* (2) 
 
-**14–38** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 (rest ’(1 . 2)) *→* 2 
 
@@ -2231,9 +2228,9 @@ If some element *satisfies the test*, the tail of *list* beginning with this ele
 
 Conses **14–39**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Examples:** 
 
@@ -2287,11 +2284,11 @@ the value returned by **member** is *identical* to the portion of the *list* beg
 
 **maplist** *function* &rest *lists*\<sup\>+\</sup\> *→ result-list* 
 
-**14–40** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **mapc, mapcar, mapcan, mapl, maplist, mapcon** 
 
@@ -2337,9 +2334,9 @@ and similarly for the relationship between **mapcan** and **mapcar**.
 
 Conses **14–41**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 (mapcar #’cons ’(a b c) ’(1 2 3)) *→* ((A . 1) (B . 2) (C . 3)) 
 
@@ -2397,11 +2394,11 @@ Should be prepared to signal an error of *type* **type-error** if any *list* is 
 
 **dolist**, **map**, Section 3.6 (Traversal Rules and Side Effects) 
 
-**14–42** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **acons** *Function* 
 
@@ -2455,9 +2452,9 @@ alist *→* NIL
 
 Conses **14–43**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **assoc, assoc-if, assoc-if-not** 
 
@@ -2519,11 +2516,11 @@ For **assoc**, **assoc-if**, and **assoc-if-not**, if **nil** appears in *alist*
 
 :key #’(lambda (x) (char x 0))) *→* ("2" . 2) 
 
-**14–44** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Exceptional Situations:** 
 
@@ -2573,9 +2570,9 @@ The *list structure* of *alist* is copied, and the *elements* of *alist* which a
 
 Conses **14–45**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 \*alist\* *→* ((1 . "one") (2 . "two")) 
 
@@ -2633,11 +2630,11 @@ might be
 
 or 
 
-**14–46** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 ((two . 2) (one . 1) (three . 3) (four . 19)) 
 
@@ -2687,9 +2684,9 @@ Should be prepared to signal an error of *type* **type-error** if *keys* and *da
 
 Conses **14–47**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Description:** 
 
@@ -2745,11 +2742,11 @@ are equivalent in meaning, except when the item is **nil** and **nil** appears i
 
 **Arguments and Values:** 
 
-**14–48** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 *plist*—a *property list*. 
 
@@ -2803,9 +2800,9 @@ x *→* (PROP1 VAL1)
 
 Conses **14–49**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **getf** 
 
@@ -2867,11 +2864,11 @@ bar
 
 \<i\>\<sup\>or\</sup\>→\</i\> (C D) 
 
-**14–50** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **See Also:** 
 
@@ -2913,9 +2910,9 @@ For information about the *evaluation* of *subforms* of *place*, see Section 5.1
 
 Conses **14–51**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Examples:** 
 
@@ -2961,11 +2958,11 @@ The property list stored in *place* is modified.
 
 The intersection operation is described as follows. For all possible ordered pairs consisting of one *element* from *list-1* and one *element* from *list-2*, :test or :test-not are used to determine whether they *satisfy the test*. The first argument to the :test or :test-not function is an element of *list-1*; the second argument is an element of *list-2*. If :test or :test-not is not supplied, **eql** is used. It is an error if :test and :test-not are supplied in the same function call. 
 
-**14–52** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **intersection, nintersection** 
 
@@ -3027,9 +3024,9 @@ The :test-not parameter is deprecated.
 
 Since the **nintersection** side effect is not required, it should not be used in for-effect-only positions Conses **14–53**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 in portable code. 
 
@@ -3081,11 +3078,11 @@ Should be prepared to signal an error of *type* **type-error** if *list* is not 
 
 **pushnew**, Section 3.6 (Traversal Rules and Side Effects) 
 
-**14–54** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Notes:** 
 
@@ -3129,9 +3126,9 @@ For information about the *evaluation* of *subforms* of *place*, see Section 5.1
 
 Conses **14–55**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 It is *implementation-dependent* whether or not **pushnew** actually executes the storing form for its *place* in the situation where the *item* is already a member of the *list* held by *place*. 
 
@@ -3187,11 +3184,11 @@ except that the *subforms* of place are evaluated only once, and item is evaluat
 
 *test*—a *designator* for a *function* of two *arguments* that returns a *generalized boolean*. *test-not*—a *designator* for a *function* of two *arguments* that returns a *generalized boolean*. 
 
-**14–56** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **set-difference, nset-difference** 
 
@@ -3257,9 +3254,9 @@ lst2 *→* (("c" . "a") ("e" . "b") ("d" . "a"))
 
 Conses **14–57**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Side Effects:** 
 
@@ -3303,11 +3300,11 @@ For all possible ordered pairs consisting of one element from *list-1* and one e
 
 If :key is supplied, it is used to extract the part to be tested from the *list-1* or *list-2* element. The first argument to the :test or :test-not function is the part of an element of *list-1* extracted by the :key function (if supplied); the second argument is the part of an element of *list-2* extracted by the :key function (if supplied). If :key is not supplied or **nil**, the *list-1* or *list-2* element is used. 
 
-**14–58** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 The result contains precisely those elements of *list-1* and *list-2* that appear in no matching pair. The result *list* of **set-exclusive-or** might share storage with one of *list-1* or *list-2*. 
 
@@ -3367,9 +3364,9 @@ Since the **nset-exclusive-or** side effect is not required, it should not be us
 
 Conses **14–59**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Arguments and Values:** 
 
@@ -3417,11 +3414,11 @@ Section 3.6 (Traversal Rules and Side Effects)
 
 The :test-not parameter is deprecated. 
 
-**14–60** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **union, nunion** 
 
@@ -3459,9 +3456,9 @@ The order of elements in the result do not have to reflect the ordering of *list
 
 Conses **14–61**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **union, nunion** 
 
@@ -3511,4 +3508,4 @@ The :test-not parameter is deprecated.
 
 Since the **nunion** side effect is not required, it should not be used in for-effect-only positions in portable code. 
 
-**14–62** Programming Language—Common Lisp
+

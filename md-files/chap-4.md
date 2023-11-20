@@ -2,7 +2,7 @@
 
 
 
-**Programming Language—Common Lisp** 
+ 
 
 **4. Types and Classes**   
 

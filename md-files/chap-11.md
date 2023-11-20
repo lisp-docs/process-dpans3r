@@ -1,20 +1,17 @@
-﻿Version 15.17R, X3J13/94-101R. 
+﻿ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
-**Programming Language—Common Lisp** 
+ 
 
 **11. Packages** 
+  
 
-Packages **i**
 
-Version 15.17R, X3J13/94-101R. Fri 12-Aug-1994 6:35pm EDT 
 
-**ii** Programming Language—Common Lisp
+ 
 
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **11.1 Package Concepts** 
 
@@ -42,9 +39,9 @@ removes a *package*’s current *name* and *nicknames* and replaces them with ne
 
 Packages **11–1**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **11.1.1.2.1 Internal and External Symbols** 
 
@@ -72,11 +69,11 @@ A *symbol* is *shadowed* \<sub\>3\</sub\> by another *symbol* in some *package* 
 
 – The second mechanism for making *symbols* from one *package accessible* in another is provided by **use-package**. All of the *external symbols* of the used *package* are inherited 
 
-**11–2** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 by the using *package*. The *function* **unuse-package** undoes the effects of a previous **use-package**. 
 
@@ -112,9 +109,9 @@ The following rules apply to name conflicts:
 
 Packages **11–3**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 given a *list* of *symbols*, aborting from a name conflict caused by the second *symbol* in the *list* might still export the first *symbol* in the *list*. However, a name-conflict error caused by **export** of a single *symbol* will be signaled before that *symbol*’s *accessibility* in any *package* is changed. 
 
@@ -143,11 +140,11 @@ The COMMON-LISP *package* has as *external symbols* those symbols enumerated in 
 
 For example, the symbol HELP cannot be an *external symbol* of the COMMON-LISP *package* because it is not mentioned in Section 1.9 (Symbols in the COMMON-LISP Package). In contrast, the *symbol* 
 
-**11–4** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **variable** must be an *external symbol* of the COMMON-LISP *package* even though it has no definition because it is listed in that section (to support its use as a valid second *argument* to the *function* **documentation**). 
 
@@ -177,9 +174,9 @@ Except where explicitly allowed, the consequences are undefined if any of the fo
 
 Packages **11–5**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 9\. Tracing it (via **trace**). 
 
@@ -215,11 +212,11 @@ If an *external symbol* of the COMMON-LISP *package* is not defined as a *standa
 
 If an *external symbol* of the COMMON-LISP *package* is not defined as a *standardized function*, *macro*, or *special operator* , it is allowed to lexically *bind* its *setf function name* as a *function*, and to declare the **ftype** of that *binding*. 
 
-**11–6** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **11.1.2.2 The COMMON-LISP-USER Package** 
 
@@ -251,9 +248,9 @@ It is recommended, but not required, that the documentation for a *conforming im
 
 Packages **11–7**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **package** *System Class* 
 
@@ -289,11 +286,11 @@ If any of the *symbols* is already *accessible* as an *external symbol* of *pack
 
 **export** makes each *symbol accessible* to all the *packages* that use *package*. All of these *packages* are checked for name conflicts: (export *s p*) does (find-symbol (symbol-name *s*) *q*) for each package *q* in (package-used-by-list *p*). Note that in the usual case of an **export** during the initial definition of a *package*, the result of **package-used-by-list** is **nil** and the name-conflict checking takes negligible time. When multiple changes are to be made, for example when **export** is given a *list* of *symbols*, it is permissible for the implementation to process each change separately, so that aborting from a name conflict caused by any but the first *symbol* in the *list* does not unexport the first *symbol* in the *list*. However, aborting from a name-conflict error caused by **export** of one of *symbols* does not leave that *symbol accessible* to some *packages* and *inaccessible* to others; with respect to each of *symbols* processed, **export** behaves as if it were as an atomic operation. 
 
-**11–8** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 A name conflict in **export** between one of *symbols* being exported and a *symbol* already *present* in a *package* that would inherit the newly-exported *symbol* may be resolved in favor of the exported *symbol* by uninterning the other one, or in favor of the already-present *symbol* by making it a shadowing symbol. 
 
@@ -345,9 +342,9 @@ If any of the *symbols* is not *accessible* at all in *package*, an error of *ty
 
 Packages **11–9**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **find-symbol** 
 
@@ -415,11 +412,11 @@ If the *symbol* is inherited by *package* through **use-package**, but is not *p
 
 **intern**, **find-all-symbols** 
 
-**11–10** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Notes:** 
 
@@ -461,9 +458,9 @@ The set of *packages* created by the *implementation*.
 
 Packages **11–11**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **find-all-symbols** *Function* 
 
@@ -519,11 +516,11 @@ Fri 12-Aug-1994 6:35pm EDT
 
 *package*—a *package designator* . The default is the *current package*. 
 
-**11–12** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Description:** 
 
@@ -563,9 +560,9 @@ Current state of the package system.
 
 Packages **11–13**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **list-all-packages** *Function* 
 
@@ -615,11 +612,11 @@ Replaces the name and nicknames of *package*. The old name and all of the old ni
 
 The consequences are undefined if *new-name* or any *new-nickname* conflicts with any existing package names. 
 
-**11–14** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Examples:** 
 
@@ -679,9 +676,9 @@ Specifically, *package* is searched for *symbols* with the *names* supplied by *
 
 Packages **11–15**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 (shadow ’TEST (find-package ’test-1)) *→* T 
 
@@ -731,11 +728,11 @@ If a *symbol* with a name in *symbol-names* already exists in *package*, but by 
 
 **shadowing-import** inserts each of *symbols* into *package* as an internal symbol, regardless of whether another *symbol* of the same name is shadowed by this action. If a different *symbol* of the same name is already *present* in *package*, that *symbol* is first *uninterned* from *package*. The new *symbol* is added to *package*’s shadowing-symbols list. 
 
-**11–16** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **shadowing-import** does name-conflict checking to the extent that it checks whether a distinct existing *symbol* with the same name is *accessible*; if so, it is shadowed by the new *symbol*, which implies that it must be uninterned if it was *present* in *package*. 
 
@@ -785,9 +782,9 @@ Current state of the package system.
 
 Packages **11–17**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **delete-package** 
 
@@ -847,11 +844,11 @@ After this operation completes, the *home package* of any *symbol* whose *home p
 
 (package-use-list \*baz-package\*) *→* (#\<PACKAGE "BAR"\>) 
 
-**11–18** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **delete-package** 
 
@@ -919,9 +916,9 @@ If the *package designator* is a *name* that does not currently name a *package*
 
 If *package* is used by other *packages*, a *correctable* error of *type* **package-error** is signaled. Packages **11–19**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 If correction is attempted, **unuse-package** is effectively called to remove any dependencies, causing *package*’s *external symbols* to cease being *accessible* to those *packages* that use *package*. **delete-package** then deletes *package* just as it would have had there been no *packages* that used it. 
 
@@ -971,11 +968,11 @@ The consequences are unspecified if *packages* denoted by *use* do not exist.
 
 A *correctable* error is signaled if the *package-name* or any of the *nicknames* is already the *name* or *nickname* of an existing *package*. 
 
-**11–20** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **See Also:** 
 
@@ -1017,9 +1014,9 @@ It is unspecified whether *symbols* inherited from multiple *packages* are retur
 
 *Symbol-types* controls which *symbols* that are *accessible* in a *package* are returned as follows: Packages **11–21**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **with-package-iterator** 
 
@@ -1065,11 +1062,11 @@ It is unspecified what happens if any of the implicit interior state of an itera
 
 Any number of invocations of **with-package-iterator** can be nested, and the body of the innermost one can invoke all of the locally *established macros*, provided all those *macros* have distinct names. 
 
-**11–22** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **with-package-iterator** 
 
@@ -1151,9 +1148,9 @@ The following function prints out every *present symbol* (possibly more than onc
 
 The consequences are undefined if the local function named *name established* by Packages **11–23**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **with-package-iterator** is called after it has returned *false* as its *primary value*. 
 
@@ -1207,11 +1204,11 @@ Current state of the package system.
 
 If **unexport** is given a *symbol* not *accessible* in *package* at all, an error of *type* **package-error** is signaled. 
 
-The consequences are undefined if *package* is the KEYWORD *package* or the COMMON-LISP *package*. **11–24** Programming Language—Common Lisp
+The consequences are undefined if *package* is the KEYWORD *package* or the COMMON-LISP *package*. 
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **See Also:** 
 
@@ -1261,9 +1258,9 @@ Current state of the package system.
 
 Packages **11–25**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Exceptional Situations:** 
 
@@ -1303,11 +1300,11 @@ An error of *type* **package-error** is signaled if the specified *package* does
 
 **\*package\*** 
 
-**11–26** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **unuse-package** *Function* 
 
@@ -1355,9 +1352,9 @@ Current state of the package system.
 
 Packages **11–27**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **use-package** *Function* 
 
@@ -1405,11 +1402,11 @@ The *use list* of *package* may be modified.
 
 It is permissible for a *package P*\<sub\>1\</sub\> to *use* a *package P*\<sub\>2\</sub\> even if *P*\<sub\>2\</sub\> already uses *P*\<sub\>1\</sub\>. The using of *packages* is not transitive, so no problem results from the apparent circularity. 
 
-**11–28** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **defpackage** 
 
@@ -1465,9 +1462,9 @@ The arguments to :nicknames set the *package*’s nicknames to the supplied name
 
 The argument to :documentation specifies a *documentation string*; it is attached as a Packages **11–29**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **defpackage** 
 
@@ -1501,11 +1498,11 @@ The *symbols* named by the argument *symbol-names* are found or created in the *
 
 The argument to the :size option declares the approximate number of *symbols* expected in the *package*. This is an efficiency hint only and might be ignored by an implementation. 
 
-**11–30** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **defpackage** 
 
@@ -1565,9 +1562,9 @@ An error of *type* **program-error** should be signaled if :size or :documentati
 
 Packages **11–31**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **defpackage** 
 
@@ -1611,11 +1608,11 @@ The macroexpansion of **defpackage** could usefully canonicalize the names into 
 
 Frequently additional *implementation-dependent* options take the form of a *keyword* standing by itself as an abbreviation for a list (keyword T); this syntax should be properly reported as an 
 
-**11–32** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 unrecognized option in implementations that do not support it. 
 
@@ -1663,9 +1660,9 @@ unrecognized option in implementations that do not support it.
 
 Packages **11–33**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **do-symbols, do-external-symbols, do-all-symbols** 
 
@@ -1725,11 +1722,11 @@ lst)
 
 \<i\>\<sup\>or\</sup\>→\</i\> (TEMP:BOLD TEMP::SHY) 
 
-**11–34** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **See Also:** 
 
@@ -1775,9 +1772,9 @@ No pre-existing *symbol* was found, so one was created.
 
 Packages **11–35**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 It is *implementation-dependent* whether the *string* that becomes the new *symbol*’s *name* is the given *string* or a copy of it. Once a *string* has been given as the *string argument* to *intern* in this situation where a new *symbol* is created, the consequences are undefined if a subsequent attempt is made to alter that *string*. 
 
@@ -1829,11 +1826,11 @@ It is *implementation-dependent* whether the *string* that becomes the new *symb
 
 (defvar \*foo-package\* (make-package "FOO")) 
 
-**11–36** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 (rename-package "FOO" "FOO0") 
 
@@ -1871,9 +1868,9 @@ Should signal an error of *type* **type-error** if *package* is not a *package d
 
 Packages **11–37**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **package-shadowing-symbols** *Function* 
 
@@ -1929,11 +1926,11 @@ Whether the list of *symbols* is *fresh* is *implementation-dependent*.
 
 *use-list*—a *list* of *package objects*. 
 
-**11–38** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Description:** 
 
@@ -1989,9 +1986,9 @@ Should signal an error of *type* **type-error** if *package* is not a *package*.
 
 Packages **11–39**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **packagep** *Function* 
 
@@ -2045,11 +2042,11 @@ Whatever *package object* is currently the *value* of **\*package\*** is referre
 
 (list 
 
-**11–40** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 (symbol-package 
 
@@ -2099,9 +2096,9 @@ The *type* **package-error** consists of *error conditions* related to operation
 
 Packages **11–41**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **package-error-package** 
 
@@ -2133,4 +2130,4 @@ Returns a *designator* for the offending *package* in the *situation* represente
 
 **package-error** 
 
-**11–42** Programming Language—Common Lisp
+

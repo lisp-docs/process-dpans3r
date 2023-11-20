@@ -1,20 +1,17 @@
-﻿Version 15.17R, X3J13/94-101R. 
+﻿ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
-**Programming Language—Common Lisp** 
+ 
 
 **8. Structures** 
+  
 
-Structures **i**
 
-Version 15.17R, X3J13/94-101R. Fri 12-Aug-1994 6:35pm EDT 
 
-**ii** Programming Language—Common Lisp
+ 
 
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **defstruct** *Macro* 
 
@@ -74,9 +71,9 @@ Fri 12-Aug-1994 6:35pm EDT
 
 Structures **8–1**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **defstruct** 
 
@@ -126,11 +123,11 @@ Fri 12-Aug-1994 6:35pm EDT
 
 If *documentation* is supplied, it is attached to *structure-name* as a *documentation string* of kind **structure**, and unless :type is used, the *documentation* is also attached to *structure-name* as a 
 
-**8–2** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **defstruct** 
 
@@ -168,9 +165,9 @@ For example, if the form (gensym) were used as an initialization form, either in
 
 Structures **8–3**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **defstruct** 
 
@@ -210,11 +207,11 @@ This provides for automatic prefixing of names of *reader* (or *access*) functio
 
 :conc-name supplies an alternate prefix to be used. If a hyphen is to be used as a separator, it must be supplied as part of the prefix. If :conc-name is **nil** or no argument is supplied, then no prefix is used; then the names of the *reader* functions are the same as the slot names. If a *non-nil* prefix is given, the name of the *reader function* for each slot is 
 
-**8–4** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **defstruct** 
 
@@ -250,9 +247,9 @@ It is permissible to use the :constructor option more than once, so that you can
 
 Structures **8–5**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **defstruct** 
 
@@ -288,11 +285,11 @@ helmet-size
 
 :include causes the structure being defined to have the same slots as the included structure. This is done in such a way that the *reader* functions for the included structure also work on the structure being defined. In this example, an astronaut therefore has five slots: the three defined in person and the two defined in astronaut itself. The *reader* functions defined by the person structure can be applied to instances of the astronaut structure, and they work correctly. Moreover, astronaut has its own *reader* functions for components 
 
-**8–6** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **defstruct** 
 
@@ -336,9 +333,9 @@ Each *slot-description* must have a *slot-name* that is the same as that of some
 
 Structures **8–7**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **defstruct** 
 
@@ -400,11 +397,11 @@ operand-2) *→* BINOP
 
 would result in the following behavior for make-binop: 
 
-**8–8** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **defstruct** 
 
@@ -458,9 +455,9 @@ It is just like the function list except that it takes keyword arguments and per
 
 Structures **8–9**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **defstruct** 
 
@@ -494,11 +491,11 @@ The structure has the same layout as before except that the structure name binop
 
 The name binop is still not a valid *type specifier* recognizable to **typep**, but at least there is a way of distinguishing binop structures from other similarly defined structures. 
 
-**8–10** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **defstruct** 
 
@@ -540,9 +537,9 @@ Specifying (:print-object *printer-name*) is equivalent to specifying:
 
 Structures **8–11**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **defstruct** 
 
@@ -588,11 +585,11 @@ structure is :named, and the *car* if it is not :named.
 
 Specifying this option has the effect of forcing a specific representation and of forcing the components to be stored in the order specified in **defstruct** in corresponding successive elements of the specified representation. It also prevents the structure name from becoming 
 
-**8–12** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **defstruct** 
 
@@ -638,9 +635,9 @@ A constructor function with the name make-*structure-name* is defined. This func
 
 Structures **8–13**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **defstruct** 
 
@@ -678,11 +675,11 @@ This declares that every ship is an *object* with five named components. The eva
 
 (setq ship2 (make-ship)) 
 
-sets ship2 to a newly created ship *object*. One can supply the initial values of any desired **8–14** Programming Language—Common Lisp
+sets ship2 to a newly created ship *object*. One can supply the initial values of any desired 
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **defstruct** 
 
@@ -760,9 +757,9 @@ population
 
 Structures **8–15**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **defstruct** 
 
@@ -846,11 +843,11 @@ load-limit
 
 ;;; Example 4 
 
-**8–16** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 ;;; use of BOA constructors 
 
@@ -912,9 +909,9 @@ The mechanism by which **defstruct** arranges for slot accessors to be usable wi
 
 Structures **8–17**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **copy-structure** 
 
@@ -936,4 +933,4 @@ the :copier option to **defstruct**
 
 **Notes:** 
 
-The *copy* is the *same* as the given *structure* under **equalp**, but not under **equal**. **8–18** Programming Language—Common Lisp
+The *copy* is the *same* as the given *structure* under **equalp**, but not under **equal**. 

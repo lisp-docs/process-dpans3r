@@ -1,20 +1,17 @@
-﻿Version 15.17R, X3J13/94-101R. 
+﻿ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
-**Programming Language—Common Lisp** 
+ 
 
 **19. Filenames** 
+  
 
-Filenames **i**
 
-Version 15.17R, X3J13/94-101R. Fri 12-Aug-1994 6:35pm EDT 
 
-**ii** Programming Language—Common Lisp
+ 
 
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **19.1 Overview of Filenames** 
 
@@ -42,9 +39,9 @@ Some *file systems* naturally use a structural model for their *filenames*, whil
 
 Filenames **19–1**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 Every *pathname* has six components: a host, a device, a directory, a name, a type, and a version. By naming *files* with *pathnames*, Common Lisp programs can work in essentially the same way even in *file systems* that seem superficially quite different. For a detailed description of these components, see Section 19.2.1 (Pathname Components). 
 
@@ -66,11 +63,11 @@ Parsing is the operation used to convert a *namestring* into a *pathname*. Excep
 
 A *conforming implementation* is free to accommodate other *file system* features in its *pathname* representation and provides a parser that can process such specifications in *namestrings*. *Conforming programs* must not depend on any such features, since those features will not be portable. 
 
-**19–2** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **19.2 Pathnames** 
 
@@ -106,9 +103,9 @@ The version is either a positive *integer* or a *symbol* from the following list
 
 **19.2.2 Interpreting Pathname Component Values** Filenames **19–3**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **19.2.2.1 Strings in Component Values** 
 
@@ -140,11 +137,11 @@ For the functions in Figure 19–2, a value of :local for the :case argument (th
 
 If the *file system* supports both *cases*, *strings* given or received as *pathname* component values under this protocol are to be used exactly as written. If the file system only supports one *case*, the *strings* will be translated to that *case*. 
 
-**19–4** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **19.2.2.1.2.2 Common Case in Pathname Components** 
 
@@ -180,9 +177,9 @@ If :wild is used as the value of the directory component in the construction of 
 
 Filenames **19–5**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **19.2.2.2.3 :UNSPECIFIC as a Component Value** 
 
@@ -210,11 +207,11 @@ Wildcard *pathnames* can be used with **directory** but not with **open**, and r
 
 *•* Any *object*, representing an *implementation-dependent* wildcard pattern. 
 
-**19–6** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **19.2.2.4 Restrictions on Examining Pathname Components** 
 
@@ -246,9 +243,9 @@ Each remaining element of the *list* is a *string* or a *symbol*.
 
 Filenames **19–7**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 Each *string* names a single level of directory structure. The *strings* should contain only the directory names themselves—no punctuation characters. 
 
@@ -279,11 +276,11 @@ Syntactic vs Semantic
 
 nates (:absolute "A" "B" "Q") while (:absolute "X" "Y" "Z" :back "Q") designates (:absolute "X" "Y" "Q") 
 
-**19–8** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **19.2.2.4.3.1 Directory Components in Non-Hierarchical File Systems** 
 
@@ -311,9 +308,9 @@ It is suggested, but not required, that implementations do the following:
 
 Filenames **19–9**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **19.2.2.5 Restrictions on Constructing Pathnames** 
 
@@ -339,11 +336,11 @@ If a component’s value is **nil**, that component is considered to be unfilled
 
 Except as explicitly specified otherwise, for functions that manipulate or inquire about *files* in the *file system*, the pathname argument to such a function is merged with **\*default-pathname-defaults\*** before accessing the *file system* (as if by **merge-pathnames**). 
 
-**19–10** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **19.2.3.1 Examples of Merging Pathnames** 
 
@@ -375,9 +372,9 @@ Although the following examples are possible to execute only in *implementations
 
 Filenames **19–11**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **19.3 Logical Pathnames** 
 
@@ -421,11 +418,11 @@ The syntax of a *logical pathname namestring* is as follows. (Note that unlike m
 
 *pos-int*—a positive *integer* . 
 
-**19–12** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **19.3.1.1 Additional Information about Parsing Logical Pathname Namestrings** 
 
@@ -463,9 +460,9 @@ Each *asterisk* in a *wildcard-word* matches a sequence of zero or more characte
 
 When parsing *words* and *wildcard-words*, lowercase letters are translated to uppercase. Filenames **19–13**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **19.3.1.1.8 Other Syntax in a Logical Pathname Namestring** 
 
@@ -481,11 +478,11 @@ The device component of a *logical pathname* is always :unspecific; no other com
 
 **19.3.2.2 Null Strings as Components of a Logical Pathname** The null string, "", is not a valid value for any component of a *logical pathname*. 
 
-**19–14** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **pathname** *System Class* 
 
@@ -531,9 +528,9 @@ Returns the *pathname* denoted by *pathspec*.
 
 Filenames **19–15**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **pathname** 
 
@@ -613,11 +610,11 @@ If the *pathspec designator* is a *file stream* created by opening a *logical pa
 
 **See Also:** 
 
-**pathname**, **logical-pathname**, Section 20.1 (File System Concepts), Section 19.1.2 (Pathnames as **19–16** Programming Language—Common Lisp
+**pathname**, **logical-pathname**, Section 20.1 (File System Concepts), Section 19.1.2 (Pathnames as 
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 Filenames) 
 
@@ -659,9 +656,9 @@ The resulting *pathname* is a *logical pathname* if and only its host component 
 
 Filenames **19–17**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **make-pathname** 
 
@@ -733,11 +730,11 @@ If the *directory* is a *string*, it should be the name of a top level directory
 
 *.* #P"MY-VAX:SYS$DISK:[PUBLIC.GAMES]CHESS.DB" 
 
-**19–18** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 *.* #P"MY-UNIX:/PUBLIC/GAMES/CHESS.DB" 
 
@@ -797,9 +794,9 @@ Returns *true* if *object* is of *type* **pathname**; otherwise, returns *false*
 
 Filenames **19–19**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 \<b\>\<sup\>pathname-host, pathname-device, pathname\</sup\> directory, pathname-name, pathname-type, pathname-version\</b\> \<i\>Function\</i\> 
 
@@ -843,11 +840,11 @@ If the *pathname designator* is a *pathname*, it represents the name used to ope
 
 If *case* is supplied, it is treated as described in Section 19.2.2.1.2 (Case in Pathname Components). **Examples:** 
 
-**19–20** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **pathname-host, pathname-device,** *. . .* 
 
@@ -937,9 +934,9 @@ Fri 12-Aug-1994 6:35pm EDT
 
 Filenames **19–21**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 (PATHNAME-DIRECTORY (PARSE-NAMESTRING "/foo/BAR/../Mum/baz") :case :common) 
 
@@ -997,11 +994,11 @@ Should signal an error of *type* **type-error** if its first argument is not a *
 
 Searches for and loads the definition of a *logical host* named *host*, if it is not already defined. The specific nature of the search is *implementation-defined*. 
 
-**19–22** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 If the *host* is already defined, no attempt to find or load a definition is attempted, and *false* is returned. If the *host* is not already defined, but a definition is successfully found and loaded, *true* is returned. Otherwise, an error is signaled. 
 
@@ -1055,9 +1052,9 @@ If no definition is found, an error of *type* **error** is signaled.
 
 Filenames **19–23**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **logical-pathname-translations** 
 
@@ -1115,11 +1112,11 @@ When setting the translations list, each *from-wildcard* can be a *logical pathn
 
 ("EXPERIMENTAL;\*.\*.\*" "MY-UNIX:/usr/Joe/development/prog/") 
 
-**19–24** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **logical-pathname-translations** 
 
@@ -1187,9 +1184,9 @@ Fri 12-Aug-1994 6:35pm EDT
 
 Filenames **19–25**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **logical-pathname-translations** 
 
@@ -1271,11 +1268,11 @@ l)
 
 l)))) 
 
-**19–26** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 ;;;Sample use of that logical pathname. The return value 
 
@@ -1323,9 +1320,9 @@ Signals an error of *type* **type-error** if *pathspec* isn’t supplied correct
 
 **logical-pathname**, **translate-logical-pathname**, Section 19.3 (Logical Pathnames) Filenames **19–27**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 *∗***default-pathname-defaults***∗ Variable* 
 
@@ -1377,11 +1374,11 @@ The *implementation*.
 
 **enough-namestring** *pathname* &optional *defaults → namestring* 
 
-**19–28** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **namestring, file-namestring, directory-namestring,** *. . .* 
 
@@ -1441,9 +1438,9 @@ It is not necessarily possible to construct a valid *namestring* by concatenatin
 
 Filenames **19–29**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 (namestring 
 
@@ -1511,11 +1508,11 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **\*default-pathname-defaults\***. 
 
-**19–30** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **parse-namestring** 
 
@@ -1557,9 +1554,9 @@ If *junk-allowed* is *true*, then the *primary value* is the *pathname* parsed o
 
 In either case, the *secondary value* is the index into *thing* of the delimiter that terminated the Filenames **19–31**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 parse, or the index beyond the substring if the parse terminated at the end of the substring (as will always be the case if *junk-allowed* is *false*). 
 
@@ -1611,11 +1608,11 @@ If *thing* is a *logical pathname* namestring and if the host portion of the nam
 
 **pathname**, **logical-pathname**, Section 20.1 (File System Concepts), Section 19.2.2.2.3 (:UNSPE CIFIC as a Component Value), Section 19.1.2 (Pathnames as Filenames) 
 
-**19–32** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **wild-pathname-p** 
 
@@ -1673,9 +1670,9 @@ If *pathname* is not a *pathname*, a *string*, or a *stream associated with a fi
 
 Not all implementations support wildcards in all fields. See Section 19.2.2.2.2 (:WILD as a Filenames **19–33**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 Component Value) and Section 19.2.2.3 (Restrictions on Wildcard Pathnames). 
 
@@ -1707,11 +1704,11 @@ If *pathname* or *wildcard* is not a *pathname*, *string*, or *stream associated
 
 **directory**, **pathname**, **logical-pathname**, Section 20.1 (File System Concepts), Section 19.1.2 (Pathnames as Filenames) 
 
-**19–34** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **translate-logical-pathname** 
 
@@ -1753,9 +1750,9 @@ If no translation matches, an error of *type* **file-error** is signaled.
 
 Filenames **19–35**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **See Also:** 
 
@@ -1791,11 +1788,11 @@ During the copying of a portion of *source* into the resulting *pathname*, addit
 
 It is valid for *source* to be a wild *pathname*; in general this will produce a wild result. It is valid for *from-wildcard* and/or *to-wildcard* to be non-wild *pathnames*. 
 
-**19–36** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **translate-pathname** 
 
@@ -1877,9 +1874,9 @@ There are no specified keyword arguments for **translate-pathname**, but impleme
 
 Filenames **19–37**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 ;Renames /usr/joe/veg-recipes.text to /usr/jim/cookbook/joe’s-veg-rec.text 
 
@@ -1919,11 +1916,11 @@ The following is an implementation guideline. One file system performs this oper
 
 *merged-pathname*—a *pathname*. 
 
-**19–38** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **merge-pathnames** 
 
@@ -1955,9 +1952,9 @@ If *pathname* is a *pathname* it represents the name used to open the file. This
 
 except that if the resulting *list* contains a *string* or :wild immediately followed by :back, Filenames **19–39**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **merge-pathnames** 
 
@@ -1981,4 +1978,4 @@ both of them are removed. This removal of redundant :back *keywords* is repeated
 
 The net effect is that if just a name is supplied, the host, device, directory, and type will come from *default-pathname*, but the version will come from *default-version*. If nothing or just a directory is supplied, the name, type, and version will come from *default-pathname* together. 
 
-**19–40** Programming Language—Common Lisp
+

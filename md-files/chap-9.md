@@ -1,20 +1,17 @@
-﻿Version 15.17R, X3J13/94-101R. 
+﻿ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
-**Programming Language—Common Lisp** 
+ 
 
 **9. Conditions** 
+  
 
-Conditions **i**
 
-Version 15.17R, X3J13/94-101R. Fri 12-Aug-1994 6:35pm EDT 
 
-**ii** Programming Language—Common Lisp
+ 
 
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **9.1 Condition System Concepts** 
 
@@ -42,9 +39,9 @@ It can *handle* the *condition* by performing a non-local transfer of control. T
 
 Conditions **9–1**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Defer** 
 
@@ -78,11 +75,11 @@ Figure 9–2 shows *operators* that define *condition types* and creating *condi
 
 **Figure 9–2. Operators that define and create conditions.** 
 
-**9–2** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 Figure 9–3 shows *operators* that *read* the *value* of *condition slots*. 
 
@@ -116,9 +113,9 @@ The denoted *condition* is the result of
 
 Conditions **9–3**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 *•* If the *datum* is a *format control . . .* 
 
@@ -160,11 +157,11 @@ When **\*print-escape\*** is *true*, the *object* should print in an abbreviated
 
 No *function* is provided for directly *accessing* or invoking *condition reporters*. 
 
-**9–4** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **9.1.3.1 Recommended Style in Condition Reporting** 
 
@@ -206,9 +203,9 @@ If the calling routine conventionally inserts some additional prefix (such as �
 
 Conditions **9–5**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 be added to each subsequent line of the output, so that the left edge of the message output by the *condition reporter* will still be properly aligned. 
 
@@ -258,11 +255,11 @@ Each *handler* is associated with a *type specifier* that must designate a *subt
 
 *Active handlers* can be *established* within the dynamic scope of other *active handlers*. At any point during program execution, there is a set of *active handlers*. When a *condition* is signaled, the *most* 
 
-**9–6** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 *recent* active *applicable handler* for that *condition* is selected from this set. Given a *condition*, the order of recentness of active *applicable handlers* is defined by the following two rules: 
 
@@ -300,9 +297,9 @@ Figure 9–5 shows *defined names* relating to the *signaling* of *conditions*.
 
 Conditions **9–7**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **9.1.4.1.1 Resignaling a Condition** 
 
@@ -330,11 +327,11 @@ The *restarts established* by a **restart-bind** *form*, a **restart-case** *for
 
 2\. Let *r*\<sub\>1\</sub\> and *r*\<sub\>2\</sub\> be two active *restarts* with the same name established by the same *form*. Then *r*\<sub\>1\</sub\> is more recent than *r*\<sub\>2\</sub\> if *r*\<sub\>1\</sub\> was defined to the left of *r*\<sub\>2\</sub\> in the *form* that established them. 
 
-**9–8** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 If a *restart* is invoked but does not transfer control, the values resulting from the *restart* function are returned by the function that invoked the restart, either **invoke-restart** or **invoke-restart-interactively**. 
 
@@ -366,9 +363,9 @@ Each *restart* has an associated test, which is a function of one argument (a *c
 
 Conditions **9–9**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **9.1.4.2.4 Associating a Restart with a Condition** 
 
@@ -392,11 +389,11 @@ Conditional signaling of *conditions* based on such things as key match, form ev
 
 For a background reference to the abstract concepts detailed in this section, see *Exceptional Situations in Lisp*. The details of that paper are not binding on this document, but may be helpful in establishing a conceptual basis for understanding this material. 
 
-**9–10** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **condition** *Condition Type* 
 
@@ -434,9 +431,9 @@ The *type* **warning** consists of all types of warnings.
 
 Conditions **9–11**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **See Also:** 
 
@@ -480,11 +477,11 @@ All *conditions* serious enough to require interactive intervention if not handl
 
 Signaling a *serious condition* does not itself force entry into the debugger. However, except in the unusual situation where the programmer can assure that no harm will come from failing to *handle* 
 
-**9–12** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 a *serious condition*, such a *condition* is usually signaled with **error** rather than **signal** in order to assure that the program does not continue without *handling* the *condition*. (And conversely, it is conventional to use **signal** rather than **error** to signal conditions which are not *serious conditions*, since normally the failure to handle a non-serious condition is not reason enough for the debugger to be entered.) 
 
@@ -514,9 +511,9 @@ The *type* **cell-error** consists of error conditions that occur during a locat
 
 Conditions **9–13**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **cell-error-name** *Function* 
 
@@ -554,11 +551,11 @@ The *type* **parse-error** consists of error conditions that are related to pars
 
 **parse-namestring**, **reader-error** 
 
-**9–14** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **storage-condition** *Condition Type* 
 
@@ -598,9 +595,9 @@ While some Common Lisp operations might signal *storage-condition* because they 
 
 Conditions **9–15**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **assert** 
 
@@ -668,11 +665,11 @@ The *places* are *generalized references* to data upon which *test-form* depends
 
 *→* 8 
 
-**9–16** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 (double-safely t) 
 
@@ -730,9 +727,9 @@ If the *condition* is not handled, (invoke-debugger *condition*) is done. As a c
 
 Conditions **9–17**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **error** 
 
@@ -808,11 +805,11 @@ Signals an error of *type* **type-error** if *datum* and *arguments* are not *de
 
 **See Also:** 
 
-**cerror**, **signal**, **format**, **ignore-errors**, **\*break-on-signals\***, **handler-bind**, Section 9.1 (Condition **9–18** Programming Language—Common Lisp
+**cerror**, **signal**, **format**, **ignore-errors**, **\*break-on-signals\***, **handler-bind**, Section 9.1 (Condition 
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 System Concepts) 
 
@@ -858,9 +855,9 @@ If *datum* is a *condition*, *arguments* can be supplied, but are used only in c
 
 Conditions **9–19**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **cerror** 
 
@@ -938,11 +935,11 @@ Fri 12-Aug-1994 6:35pm EDT
 
 (fresh-line))) 
 
-**9–20** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **cerror** 
 
@@ -1024,9 +1021,9 @@ Fri 12-Aug-1994 6:35pm EDT
 
 Conditions **9–21**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 *.* 2: Top level. 
 
@@ -1086,11 +1083,11 @@ If *datum* is a *condition type* rather than a *string*, the **format** directiv
 
 *string*—a *string*; evaluated. 
 
-**9–22** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **check-type** 
 
@@ -1152,9 +1149,9 @@ aardvarks
 
 Conditions **9–23**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **check-type** 
 
@@ -1222,11 +1219,11 @@ Section 9.1 (Condition System Concepts)
 
 (check-type *place typespec*) 
 
-**9–24** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 *≡* (assert (typep *place* ’*typespec*) (*place*) 
 
@@ -1264,9 +1261,9 @@ The *function* **invalid-method-error** is called automatically when a *method* 
 
 Whether **invalid-method-error** returns to its caller or exits via **throw** is *implementation-dependent*. Conditions **9–25**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Side Effects:** 
 
@@ -1312,11 +1309,11 @@ The debugger might be entered.
 
 **define-method-combination** 
 
-**9–26** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **signal** 
 
@@ -1396,9 +1393,9 @@ The debugger might be entered due to **\*break-on-signals\***.
 
 Conditions **9–27**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 Handlers for the condition being signaled might transfer control. 
 
@@ -1430,11 +1427,11 @@ The *type* **simple-condition** represents *conditions* that are signaled by **s
 
 **simple-condition-format-control**, **simple-condition-format-arguments** 
 
-**9–28** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 \<b\>\<sup\>simple-condition-format-control, simple\</sup\> condition-format-arguments\</b\> \<i\>Function\</i\> 
 
@@ -1490,9 +1487,9 @@ Fri 12-Aug-1994 6:35pm EDT
 
 Conditions **9–29**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **warn** 
 
@@ -1554,11 +1551,11 @@ result))
 
 *.* Debug\> :continue 1 
 
-**9–30** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 *.* Warning: You’re using very big numbers. 
 
@@ -1596,9 +1593,9 @@ The *type* **simple-warning** represents *conditions* that are signaled by **war
 
 Conditions **9–31**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **invoke-debugger** *Function* 
 
@@ -1646,11 +1643,11 @@ Debug\>
 
 **error**, **break** 
 
-**9–32** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **break** 
 
@@ -1710,9 +1707,9 @@ The debugger is entered.
 
 Conditions **9–33**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 The user interface aspects of **break** and **cerror** are permitted to vary more widely, in order to accomodate the interface needs of the *implementation*. For example, it is permissible for a *Lisp read-eval-print loop* to be entered by **break** rather than the conventional debugger. 
 
@@ -1766,11 +1763,11 @@ When the *value* of **\*debugger-hook\*** is *non-nil*, it is called prior to no
 
 (setq i (read)) 
 
-**9–34** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 (fresh-line)) 
 
@@ -1836,9 +1833,9 @@ a *type specifier* .
 
 Conditions **9–35**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 *∗***break-on-signals***∗* 
 
@@ -1912,11 +1909,11 @@ The **continue** *restart* can be used to continue with the normal *signaling* p
 
 **\*break-on-signals\*** is intended primarily for use in debugging code that does signaling. When setting **\*break-on-signals\***, the user is encouraged to choose the most restrictive specification 
 
-**9–36** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 that suffices. Setting **\*break-on-signals\*** effectively violates the modular handling of *condition* signaling. In practice, the complete effect of setting **\*break-on-signals\*** might be unpredictable in some cases since the user might not be aware of the variety or number of calls to **signal** that are used in code called only incidentally. 
 
@@ -1958,9 +1955,9 @@ In the following code, if an unbound variable error is signaled in the body (and
 
 Conditions **9–37**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 (handler-bind ((unbound-variable #’(lambda ...)) 
 
@@ -2018,11 +2015,11 @@ Note that “Foo.” is not printed because the condition made by **signal** is 
 
 *typespec*—a *type specifier* . 
 
-**9–38** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **handler-case** 
 
@@ -2062,9 +2059,9 @@ If there are no *forms* in a selected *clause*, the case, and therefore **handle
 
 Conditions **9–39**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **handler-case** 
 
@@ -2144,11 +2141,11 @@ is approximately equivalent to:
 
 (handler-case form 
 
-**9–40** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 (*type1 (var1)* . *body1*) 
 
@@ -2208,9 +2205,9 @@ win))
 
 Conditions **9–41**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 (load-init-file "no-such-program") 
 
@@ -2264,11 +2261,11 @@ Because the second return value is a *condition* in the exceptional case, it is 
 
 (:report *report-name*) ]] 
 
-**9–42** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **define-condition** 
 
@@ -2318,9 +2315,9 @@ Fri 12-Aug-1994 6:35pm EDT
 
 Conditions **9–43**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **define-condition** 
 
@@ -2356,11 +2353,11 @@ No implementation is permitted to extend the syntax of **define-condition** to a
 
 The :initarg slot option declares an initialization argument named by its *symbol* argument and specifies that this initialization argument initializes the given *slot*. If the initialization 
 
-**9–44** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **define-condition** 
 
@@ -2402,9 +2399,9 @@ The consequences are unspecifed if an attempt is made to *read* a *slot* that ha
 
 The consequences are unspecified if an attempt is made to assign the *slots* by using **setf**. Conditions **9–45**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **define-condition** 
 
@@ -2468,11 +2465,11 @@ This defines a still more specific condition, built upon machine-not-available-e
 
 (machine-not-available-error) 
 
-**9–46** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 ((machine-name :initform "mc.lcs.mit.edu"))) 
 
@@ -2546,9 +2543,9 @@ Note that since no :report clause was given, the information inherited from mach
 
 Conditions **9–47**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Description:** 
 
@@ -2602,11 +2599,11 @@ An *object* of *type* **restart** represents a *function* that can be called to 
 
 An *implementation* is free to implement a *restart* in whatever manner is most convenient; a *restart* has only *dynamic extent* relative to the scope of the binding *form* which *establishes* it. 
 
-**9–48** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **compute-restarts** 
 
@@ -2664,9 +2661,9 @@ Implementations are permitted, but not required, to return *distinct lists* from
 
 Conditions **9–49**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 (restart-case (invoke-a-restart) 
 
@@ -2728,11 +2725,11 @@ restart
 
 **Description:** 
 
-**find-restart** searches for a particular *restart* in the current *dynamic environment*. **9–50** Programming Language—Common Lisp
+**find-restart** searches for a particular *restart* in the current *dynamic environment*. 
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 When *condition* is *non-nil*, only those *restarts* are considered that are either explicitly associated with that *condition*, or not associated with any *condition*; that is, the excluded *restarts* are those that are associated with a non-empty set of *conditions* of which the given *condition* is not an *element*. If *condition* is **nil**, all *restarts* are considered. 
 
@@ -2782,9 +2779,9 @@ Although anonymous restarts have a name of **nil**, the consequences are unspeci
 
 Conditions **9–51**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Arguments and Values:** 
 
@@ -2838,11 +2835,11 @@ The most common use for **invoke-restart** is in a *handler* . It might be used 
 
 *Restart functions* call **invoke-restart**, not vice versa. That is, *invoke-restart* provides primitive functionality, and *restart functions* are non-essential “syntactic sugar.” 
 
-**9–52** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **invoke-restart-interactively** 
 
@@ -2900,9 +2897,9 @@ A non-local transfer of control might be done by the restart.
 
 Conditions **9–53**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Exceptional Situations:** 
 
@@ -2952,11 +2949,11 @@ If *restart* is not valid, an error of *type* **control-error** is signaled.
 
 If a *name* is **nil**, it indicates an anonymous restart; if a *name* is a *non-nil symbol*, it indicates a named restart. 
 
-**9–54** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **restart-bind** 
 
@@ -2990,9 +2987,9 @@ In the case of interactive invocation, the result is dependent on the value of :
 
 Conditions **9–55**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **See Also:** 
 
@@ -3036,11 +3033,11 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **restart-case** evaluates *restartable-form* in a *dynamic environment* where the clauses have special meanings as points to which control may be transferred. If *restartable-form* finishes executing and returns any values, all values returned are returned by **restart-case** and processing has completed. While *restartable-form* is executing, any code may transfer control to one of the clauses (see 
 
-**9–56** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **restart-case** 
 
@@ -3076,9 +3073,9 @@ If a named restart is asked to report but no report information has been supplie
 
 Conditions **9–57**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **restart-case** 
 
@@ -3144,11 +3141,11 @@ If the *restartable-form* is a *list* whose *car* is any of the *symbols* **sign
 
 (defun all-start-with-same-letter (symbol1 symbol2 symbol3) 
 
-**9–58** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **restart-case** 
 
@@ -3170,9 +3167,9 @@ Fri 12-Aug-1994 6:35pm EDT
 
 Conditions **9–59**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **restart-case** 
 
@@ -3248,11 +3245,11 @@ Fri 12-Aug-1994 6:35pm EDT
 
 is essentially equivalent to 
 
-**9–60** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 (block #1=#:g0001 
 
@@ -3318,9 +3315,9 @@ Unnamed restarts are generally only useful interactively and an interactive opti
 
 Conditions **9–61**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Arguments and Values:** 
 
@@ -3380,11 +3377,11 @@ collect (restart-name restart))
 
 *results*—the *values* returned by *forms*. 
 
-**9–62** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Description:** 
 
@@ -3432,9 +3429,9 @@ The *format-control* and *format-arguments* are used report the *restart*.
 
 Conditions **9–63**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **with-simple-restart** 
 
@@ -3516,11 +3513,11 @@ COMPUTE-POWER-OF-2
 
 **Notes:** 
 
-**with-simple-restart** is shorthand for one of the most common uses of **restart-case**. **9–64** Programming Language—Common Lisp
+**with-simple-restart** is shorthand for one of the most common uses of **restart-case**. 
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **with-simple-restart** could be defined by: 
 
@@ -3560,9 +3557,9 @@ Section 9.1.4.2 (Restarts), Section 9.1.4.2.2 (Interfaces to Restarts), **invoke
 
 Conditions **9–65**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **continue** *Restart* 
 
@@ -3618,11 +3615,11 @@ This *restart* is established by **warn** so that *handlers* of **warning** *con
 
 (let ((r (find-restart ’muffle-warning c))) 
 
-**9–66** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 (when r 
 
@@ -3696,9 +3693,9 @@ The **store-value** *restart* is generally used by *handlers* trying to recover 
 
 Conditions **9–67**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 (type-error-expected-type c)))) 
 
@@ -3746,11 +3743,11 @@ Section 9.1.4.2 (Restarts), Section 9.1.4.2.2 (Interfaces to Restarts), **invoke
 
 **use-value** *value* &optional *condition →* **nil** 
 
-**9–68** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **abort, continue, muffle-warning, store-value, use-value** 
 
@@ -3816,9 +3813,9 @@ When *condition* is *non-nil*, only those *restarts* are considered that are eit
 
 Conditions **9–69**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **abort, continue, muffle-warning, store-value, use-value** 
 
@@ -3902,11 +3899,11 @@ Fri 12-Aug-1994 6:35pm EDT
 
 value) 
 
-**9–70** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **abort, continue, muffle-warning, store-value, use-value** 
 
@@ -3986,9 +3983,9 @@ A transfer of control may occur if an appropriate *restart* is available, or (in
 
 Each of these functions can be affected by the presence of a *restart* having the same name. Conditions **9–71**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **abort, continue, muffle-warning, store-value, use-value** 
 
@@ -4008,4 +4005,4 @@ If an appropriate **abort** *restart* is not available for the *function* **abor
 
 (continue) *≡* (let ((r (find-restart ’continue))) (if r (invoke-restart r))) (use-value *x*) *≡* (let ((r (find-restart ’use-value))) (if r (invoke-restart r *x*))) (store-value x) *≡* (let ((r (find-restart ’store-value))) (if r (invoke-restart r *x*))) 
 
-No functions defined in this specification are required to provide a **use-value** *restart*. **9–72** Programming Language—Common Lisp
+No functions defined in this specification are required to provide a **use-value** *restart*. 

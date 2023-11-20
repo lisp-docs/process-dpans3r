@@ -1,20 +1,17 @@
-﻿Version 15.17R, X3J13/94-101R. 
+﻿ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
-**Programming Language—Common Lisp** 
+ 
 
 **15. Arrays** 
+  
 
-Arrays **i**
 
-Version 15.17R, X3J13/94-101R. Fri 12-Aug-1994 6:35pm EDT 
 
-**ii** Programming Language—Common Lisp
+ 
 
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **15.1 Array Concepts** 
 
@@ -48,9 +45,9 @@ An *array* of *rank* one (*i.e.*, a one-dimensional *array*) is called a *vector
 
 Arrays **15–1**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **15.1.1.3.1.1 Fill Pointers** 
 
@@ -84,11 +81,11 @@ Figure 15–1 lists some *defined names* that are applicable to *array* creation
 
 **Figure 15–1. General Purpose Array-Related Defined Names** 
 
-**15–2** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **15.1.2.1 Array Upgrading** 
 
@@ -116,9 +113,9 @@ The *upgraded array element type T*\<sub\>2\</sub\> of a *type T*\<sub\>1\</sub\
 
 Arrays **15–3**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 |\<p\>**bit bit-ior bit-orc2** \</p\>\<p\>**bit-and bit-nand bit-xor** \</p\>\<p\>**bit-andc1 bit-nor sbit** \</p\>\<p\>**bit-andc2 bit-not** \</p\>\<p\>**bit-eqv bit-orc1**\</p\>|
 | :- |
@@ -126,11 +123,11 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **Figure 15–3. Operators that Manipulate Bit Arrays** 
 
-**15–4** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **array** *System Class* 
 
@@ -172,9 +169,9 @@ If the *dimension-spec* is a *rank*, the set includes only those *arrays* having
 
 Arrays **15–5**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **See Also:** 
 
@@ -216,11 +213,11 @@ Specializing.
 
 *rank*—a non-negative *fixnum*. 
 
-**15–6** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Compound Type Specifier Description:** 
 
@@ -266,9 +263,9 @@ If *element-type* is the *symbol* **\***, *vectors* are not excluded on the basi
 
 Arrays **15–7**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 If a *size* is specified, the set includes only those *vectors* whose only *dimension* is *size*. If the *symbol* **\*** is specified instead of a *size*, the set is not restricted on the basis of *dimension*. 
 
@@ -314,11 +311,11 @@ Specializing.
 
 This is the same as (simple-array t (*size*)). 
 
-**15–8** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **bit-vector** *System Class* 
 
@@ -372,9 +369,9 @@ Abbreviating.
 
 Arrays **15–9**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Compound Type Specifier Arguments:** 
 
@@ -424,11 +421,11 @@ This denotes the same type as the *type* (simple-array bit (*size*)); that is, t
 
 *new-array*—an *array*. 
 
-**15–10** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **make-array** 
 
@@ -466,9 +463,9 @@ The *displaced-index-offset* is made to be the index offset of the *array*. When
 
 Arrays **15–11**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **make-array** 
 
@@ -524,11 +521,11 @@ The following is an example of making a *displaced array*.
 
 *→* NIL 
 
-**15–12** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 (setq b (make-array 8 :displaced-to a 
 
@@ -606,9 +603,9 @@ There is no specified way to create an *array* for which **adjustable-array-p** 
 
 Arrays **15–13**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **adjust-array** 
 
@@ -658,11 +655,11 @@ Fri 12-Aug-1994 6:35pm EDT
 
 *Element-type* specifies the *type* of the *elements* of the resulting *array*. If *element-type* is supplied, the consequences are unspecified if the *upgraded array element type* of *element-type* is not the same as the *actual array element type* of *array*. 
 
-**15–14** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **adjust-array** 
 
@@ -702,9 +699,9 @@ A gets a new “data region,” and contents of B are copied into it as appropri
 
 Arrays **15–15**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **adjust-array** 
 
@@ -754,11 +751,11 @@ Note that if an *array A* is displaced to another *array B*, and *B* is displace
 
 (NIL NIL NIL NIL NIL NIL)) 
 
-**15–16** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 (array-dimensions beta) *→* (4 6) 
 
@@ -818,9 +815,9 @@ Returns true if and only if **adjust-array** could return a *value* which is *id
 
 Arrays **15–17**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 :adjustable t 
 
@@ -876,11 +873,11 @@ If the variable foo names a 3-by-5 array, then the first index could be 0, 1, or
 
 1 2) *→* 1 
 
-**15–18** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 (setq gamma ’(0 2)) 
 
@@ -930,9 +927,9 @@ None.
 
 Arrays **15–19**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **array-dimensions** *Function* 
 
@@ -982,11 +979,11 @@ Should signal an error of *type* **type-error** if its argument is not an *array
 
 Returns a *type specifier* which represents the *actual array element type* of the array, which is the set of *objects* that such an *array* can hold. (Because of *array upgrading*, this *type specifier* can in some cases denote a *supertype* of the *expressed array element type* of the *array*.) 
 
-**15–20** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Examples:** 
 
@@ -1048,9 +1045,9 @@ Returns *true* if *array* has a *fill pointer* ; otherwise returns *false*.
 
 Arrays **15–21**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Exceptional Situations:** 
 
@@ -1104,11 +1101,11 @@ If **array-displacement** is called on an *array* for which a *non-nil object* w
 
 *→* #\<ARRAY 2 indirect 46122527\> 
 
-**15–22** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 (array-displacement a3) 
 
@@ -1168,9 +1165,9 @@ Returns *true* if the *subscripts* are all in bounds for *array*; otherwise retu
 
 Arrays **15–23**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **array-rank** *Function* 
 
@@ -1220,11 +1217,11 @@ Should signal an error of *type* **type-error** if its argument is not an *array
 
 *index*—a *valid array row-major index* for the *array*. 
 
-**15–24** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Description:** 
 
@@ -1282,9 +1279,9 @@ Returns the *array total size* of the *array*.
 
 Arrays **15–25**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Examples:** 
 
@@ -1344,11 +1341,11 @@ Returns *true* if *object* is of *type* **array**; otherwise, returns *false*.
 
 (arrayp #\*1011) *→ true* 
 
-**15–26** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 (arrayp "hi") *→ true* 
 
@@ -1406,9 +1403,9 @@ a *→* #(0 1 4 9 NIL NIL NIL NIL)
 
 Should signal an error of *type* **type-error** if *vector* is not a *vector* with a *fill pointer* . Arrays **15–27**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **See Also:** 
 
@@ -1460,11 +1457,11 @@ index)
 
 (row-major-aref array (array-row-major-index array i1 i2)) 
 
-**15–28** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **upgraded-array-element-type** *Function* 
 
@@ -1506,9 +1503,9 @@ Except for storage allocation consequences and dealing correctly with the option
 
 Arrays **15–29**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **array-dimension-limit** *Constant Variable* 
 
@@ -1554,11 +1551,11 @@ The actual limit on the *array total size* imposed by the *implementation* might
 
 **make-array**, **array-element-type** 
 
-**15–30** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **simple-vector-p** *Function* 
 
@@ -1608,9 +1605,9 @@ Returns *true* if *object* is of *type* **simple-vector**; otherwise, returns *f
 
 Arrays **15–31**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 *element*, *new-element*—an *object* (whose *type* is a *subtype* of the *array element type* of the *simple-vector*). 
 
@@ -1664,11 +1661,11 @@ Creates a *fresh simple general vector* whose size corresponds to the number of 
 
 (length v) *→* 3 
 
-**15–32** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **See Also:** 
 
@@ -1730,9 +1727,9 @@ The value of the *fill pointer* .
 
 Arrays **15–33**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Exceptional Situations:** 
 
@@ -1780,11 +1777,11 @@ If the *fill pointer* is zero, **vector-pop** signals an error of *type* **error
 
 :fill-pointer 2 
 
-**15–34** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 :initial-element ’first-one))) *→* 2 
 
@@ -1848,9 +1845,9 @@ Returns *true* if *object* is of *type* **vector**; otherwise, returns *false*.
 
 Arrays **15–35**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Examples:** 
 
@@ -1912,11 +1909,11 @@ These *functions* ignore the *fill pointer* when *accessing elements*.
 
 (setf (sbit ba 5) 1) *→* 1 
 
-**15–36** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 (sbit ba 5) *→* 1 
 
@@ -1972,9 +1969,9 @@ These functions perform bit-wise logical operations on *bit-array1* and *bit-arr
 
 Arrays **15–37**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 In the case of **bit-not**, an *array* of *rank* and *dimensions* matching *bit-array* is returned that contains a copy of *bit-array* with all the bits inverted. 
 
@@ -2019,11 +2016,11 @@ Figure 15–4 indicates the logical operation performed by each of the *function
 
 **lognot**, **logand** 
 
-**15–38** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **bit-vector-p** *Function* 
 
@@ -2079,9 +2076,9 @@ Returns *true* if *object* is of *type* **simple-bit-vector**; otherwise, return
 
 Arrays **15–39**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **simple-bit-vector-p** 
 
@@ -2097,4 +2094,4 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **Notes:** 
 
-(simple-bit-vector-p *object*) *≡* (typep *object* ’simple-bit-vector) **15–40** Programming Language—Common Lisp
+(simple-bit-vector-p *object*) *≡* (typep *object* ’simple-bit-vector) 

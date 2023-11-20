@@ -1,20 +1,17 @@
-﻿Version 15.17R, X3J13/94-101R. 
+﻿ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
-**Programming Language—Common Lisp** 
+ 
 
 **12. Numbers** 
+  
 
-Numbers **i**
 
-Version 15.17R, X3J13/94-101R. Fri 12-Aug-1994 6:35pm EDT 
 
-**ii** Programming Language—Common Lisp
+ 
 
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **12.1 Number Concepts** 
 
@@ -46,9 +43,9 @@ Figure 12–2 shows *defined names* relating to exponential, logarithmic, and tr
 
 Numbers **12–1**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 Figure 12–4 shows *defined names* relating to numeric type manipulation and coercion. 
 
@@ -78,11 +75,11 @@ Another *conforming implementation* might process the *arguments* from right to 
 
 A third *conforming implementation* might first scan all the *arguments*, process all the *rationals* first to keep that part of the computation exact, then find an *argument* of the largest floating-point 
 
-**12–2** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 format among all the *arguments* and add that, and then add in all other *arguments*, converting each in turn (all in a perhaps misguided attempt to make the computation as accurate as possible). 
 
@@ -112,9 +109,9 @@ Figure 12–5 shows *defined names* relating to logical operations on numbers.
 
 Numbers **12–3**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **12.1.1.3.2 Byte Operations on Integers** 
 
@@ -140,11 +137,11 @@ Figure 12–6 shows *defined names* relating to manipulating *bytes* of *numbers
 
 The rules in this section apply to *rational* computations. 
 
-**12–4** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **12.1.3.1 Rule of Unbounded Rational Precision** 
 
@@ -172,9 +169,9 @@ Float substitutability applies neither to the rational *functions* **+**, **-**,
 
 Numbers **12–5**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 |**Function Sample Results**|
 | :- |
@@ -193,11 +190,11 @@ When *rationals* and *floats* are combined by a numerical function, the *rationa
 
 When *rationals* and *floats* are compared by a numerical function, the *function* **rational** is effectively called to convert the *float* to a *rational* and then an exact comparison is performed. In the case of *complex* numbers, the real and imaginary parts are effectively handled individually. 
 
-**12–6** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **12.1.4.1.1 Examples of Rule of Float and Rational Contagion** 
 
@@ -245,9 +242,9 @@ The result of a numerical function is a *float* of the largest format among all 
 
 Numbers **12–7**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **12.1.5 Complex Computations** 
 
@@ -285,11 +282,11 @@ If the result of any computation would be a *complex* number whose real part is 
 
 (typep #c(0 0) ’(complex (eql 0))) *→ false* 
 
-**12–8** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **12.1.5.4 Principal Values and Branch Cuts** 
 
@@ -331,9 +328,9 @@ The *compound type specifier* form of the numeric *type specifiers* permit the u
 
 Numbers **12–9**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 The first of the two *interval designators* for *type T* can be any of the following: 
 
@@ -373,11 +370,11 @@ Figure 12–11 lists some *defined names* that are applicable to *random states*
 
 **Figure 12–11. Random-state defined names** 
 
-**12–10** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **number** *System Class* 
 
@@ -415,9 +412,9 @@ Specializing.
 
 Numbers **12–11**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Compound Type Specifier Arguments:** 
 
@@ -459,11 +456,11 @@ Abbreviating.
 
 (real [*lower-limit* [*upper-limit*]]) 
 
-**12–12** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Compound Type Specifier Arguments:** 
 
@@ -505,9 +502,9 @@ This denotes the *floats* on the interval described by *lower-limit* and *upper-
 
 Numbers **12–13**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **See Also:** 
 
@@ -546,11 +543,11 @@ There can be fewer than four internal representations for *floats*. If there are
 
 – Two internal representations can be arranged in either of the following ways: 
 
-**12–14** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 *•* Two *types* are provided: **single-float** and **short-float**. An *object* is simultaneously of *types* **single-float**, **double-float**, and **long-float**. 
 
@@ -592,9 +589,9 @@ Each of these denotes the set of *floats* of the indicated *type* that are on th
 
 Numbers **12–15**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **rational** *System Class* 
 
@@ -636,11 +633,11 @@ A *ratio* is a *number* representing the mathematical ratio of two non-zero inte
 
 **See Also:** 
 
-Figure 2–9, Section 2.3.2 (Constructing Numbers from Tokens), Section 22.1.3.1.2 (Printing Ratios) **12–16** Programming Language—Common Lisp
+Figure 2–9, Section 2.3.2 (Constructing Numbers from Tokens), Section 22.1.3.1.2 (Printing Ratios) 
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **integer** *System Class* 
 
@@ -688,9 +685,9 @@ The atomic *type specifier* **signed-byte** denotes the same type as is denoted 
 
 Numbers **12–17**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Compound Type Specifier Kind:** 
 
@@ -738,11 +735,11 @@ This denotes the set of non-negative \<i\>integers\</i\> that can be represented
 
 The *type* (unsigned-byte 1) is also called **bit**. 
 
-**12–18** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **mod** *Type Specifier* 
 
@@ -788,9 +785,9 @@ A *fixnum* is an *integer* whose value is between **most-negative-fixnum** and *
 
 Numbers **12–19**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **bignum** *Type* 
 
@@ -832,11 +829,11 @@ The value of **=** is *true* if all *numbers* are the same in value; otherwise i
 
 **/=** 
 
-The value of **/=** is *true* if no two *numbers* are the same in value; otherwise it is *false*. **12–20** Programming Language—Common Lisp
+The value of **/=** is *true* if no two *numbers* are the same in value; otherwise it is *false*. 
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **=, /=,** *\<***,** *\>***,** *\<***=,** *\>***=** 
 
@@ -864,9 +861,9 @@ The uses of these functions are illustrated in Figure 12–13.
 
 Numbers **12–21**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 |\<p\>(= 3 3) is *true*. (/= 3 3) is *false*. \</p\>\<p\>(= 3 5) is *false*. (/= 3 5) is *true*. \</p\>\<p\>(= 3 3 3 3) is *true*. (/= 3 3 3 3) is *false*. \</p\>\<p\>(= 3 3 5 3) is *false*. (/= 3 3 5 3) is *false*. \</p\>\<p\>(= 3 6 5 2) is *false*. (/= 3 6 5 2) is *true*. \</p\>\<p\>(= 3 2 3) is *false*. (/= 3 2 3) is *false*. \</p\>\<p\>(\< 3 5) is *true*. (\<= 3 5) is *true*. \</p\>\<p\>(\< 3 -5) is *false*. (\<= 3 -5) is *false*. \</p\>\<p\>(\< 3 3) is *false*. (\<= 3 3) is *true*. \</p\>\<p\>(\< 0 3 4 6 7) is *true*. (\<= 0 3 4 6 7) is *true*. \</p\>\<p\>(\< 0 3 4 4 6) is *false*. (\<= 0 3 4 4 6) is *true*. \</p\>\<p\>(\> 4 3) is *true*. (\>= 4 3) is *true*. \</p\>\<p\>(\> 4 3 2 1 0) is *true*. (\>= 4 3 2 1 0) is *true*. \</p\>\<p\>(\> 4 3 3 2 0) is *false*. (\>= 4 3 3 2 0) is *true*. \</p\>\<p\>(\> 4 3 1 2 0) is *false*. (\>= 4 3 1 2 0) is *false*. \</p\>\<p\>(= 3) is *true*. (/= 3) is *true*. \</p\>\<p\>(\< 3) is *true*. (\<= 3) is *true*. \</p\>\<p\>(= 3.0 #c(3.0 0.0)) is *true*. (/= 3.0 #c(3.0 1.0)) is *true*. \</p\>\<p\>(= 3 3.0) is *true*. (= 3.0s0 3.0d0) is *true*. \</p\>\<p\>(= 0.0 -0.0) is *true*. (= 5/2 2.5) is *true*. \</p\>\<p\>(\> 0.0 -0.0) is *false*. (= 0 -0.0) is *true*. \</p\>\<p\>(\<= 0 x 9) is *true* if x is between 0 and 9, inclusive \</p\>\<p\>(\< 0.0 x 1.0) is *true* if x is between 0.0 and 1.0, exclusive \</p\>\<p\>(\< -1 j (length v)) is *true* if j is a *valid array index* for a *vector* v\</p\>|
 | :- |
@@ -888,11 +885,11 @@ Might signal **type-error** if some *argument* is not a *real*. Might signal **a
 
 **max** &rest *reals*\<sup\>+\</sup\> *→ max-real* 
 
-**12–22** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **max, min** 
 
@@ -956,9 +953,9 @@ For **max**, the implementation has the choice of returning the largest argument
 
 Numbers **12–23**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 (min 1.0s0 7.0d0) 
 
@@ -1018,11 +1015,11 @@ Regardless of whether an *implementation* provides distinct representations for 
 
 Should signal an error of *type* **type-error** if *real* is not a *real*. 
 
-**12–24** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **zerop** *Function* 
 
@@ -1078,9 +1075,9 @@ Should signal an error of *type* **type-error** if *number* is not a *number* .
 
 Numbers **12–25**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **floor, ffloor, ceiling, fceiling, truncate, ftruncate,** *. . .* 
 
@@ -1126,11 +1123,11 @@ The *quotient* always represents a mathematical integer. When more than one math
 
 **round** and **fround** produce a *quotient* that has been rounded to the nearest mathematical integer; if the mathematical quotient is exactly halfway between two integers, (that is, it 
 
-**12–26** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **floor, ffloor, ceiling, fceiling, truncate, ftruncate,** *. . .* 
 
@@ -1202,9 +1199,9 @@ When only *number* is given, the two results are exact; the mathematical sum of 
 
 Numbers **12–27**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 but they return different remainders as the second value. For example: 
 
@@ -1250,11 +1247,11 @@ Should signal an error of *type* **type-error** if *radians* is not a *number* .
 
 **asin**, **acos**, **atan**, Section 12.1.3.3 (Rule of Float Substitutability) 
 
-**12–28** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **asin, acos, atan** 
 
@@ -1301,9 +1298,9 @@ The following definition for arc sine determines the range and branch cuts:
 
 Numbers **12–29**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **asin, acos, atan** 
 
@@ -1341,11 +1338,11 @@ Beware of simplifying this formula; “obvious” simplifications are likely to 
 
 II, and one along the negative imaginary axis below *−i* (exclusive), continuous with quadrant IV. The points *i* and *−i* are excluded from the domain. The range is that strip of the complex plane containing numbers whose real part is between *−π/*2 and *π/*2. A number with real part equal to *−π/*2 is in the range if and only if its imaginary part is strictly positive; a number with real part equal to *π/*2 is in the range if and only if its imaginary part is strictly negative. Thus the range of 
 
-arc tangent is identical to that of arc sine with the points *−π/*2 and *π/*2 excluded. **12–30** Programming Language—Common Lisp
+arc tangent is identical to that of arc sine with the points *−π/*2 and *π/*2 excluded. 
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **asin, acos, atan** 
 
@@ -1380,9 +1377,9 @@ For **atan**, the signs of *number1* (indicated as *x*) and *number2* (indicated
 
 Numbers **12–31**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Notes:** 
 
@@ -1424,11 +1421,11 @@ pi *→* 3.141592653589793L0
 
 An approximation to *π* in some other precision can be obtained by writing (float pi x), where x is a *float* of the desired precision, or by writing (coerce pi *type*), where *type* is the desired type, such as **short-float**. 
 
-**12–32** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **sinh, cosh, tanh, asinh, acosh, atanh** 
 
@@ -1477,9 +1474,9 @@ numbers whose real part is non-negative and whose imaginary part is between *−
 
 Numbers **12–33**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **sinh, cosh, tanh, asinh, acosh, atanh** 
 
@@ -1521,11 +1518,11 @@ Should signal an error of *type* **type-error** if *number* is not a *number* . 
 
 The result of **acosh** may be a *complex* even if *number* is not a *complex* ; this occurs when *number* is less than one. Also, the result of **atanh** may be a *complex* even if *number* is not a *complex* ; this occurs when the absolute value of *number* is greater than one. 
 
-**12–34** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 The branch cut formulae are mathematically correct, assuming completely accurate computation. Implementors should consult a good text on numerical analysis. The formulae given above are not necessarily the simplest ones for real-valued computations; they are chosen to define the branch cuts in desirable ways for the complex case. 
 
@@ -1563,9 +1560,9 @@ Section 12.1.1 (Numeric Operations), Section 12.1.3 (Rational Computations), Sec
 
 Numbers **12–35**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **+** *Function* 
 
@@ -1619,11 +1616,11 @@ Section 12.1.1 (Numeric Operations), Section 12.1.3 (Rational Computations), Sec
 
 The *function* **-** performs arithmetic subtraction and negation. 
 
-**12–36** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 If only one *number* is supplied, the negation of that *number* is returned. 
 
@@ -1677,9 +1674,9 @@ If at least one *denominator* is supplied, the *function* **/** divides the *num
 
 If each *argument* is either an *integer* or a *ratio*, and the result is not an *integer* , then it is a *ratio*. Numbers **12–37**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 The *function* **/** performs necessary type conversions. 
 
@@ -1733,11 +1730,11 @@ Might signal **type-error** if some *argument* is not a *number* . Might signal 
 
 **1+** returns a *number* that is one more than its argument *number*. **1-** returns a *number* that is one less than its argument *number*. 
 
-**12–38** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Examples:** 
 
@@ -1791,9 +1788,9 @@ If *number* is a *complex* , the result is a positive *real* with the same magni
 
 Numbers **12–39**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 (abs 12/13) *→* 12/13 
 
@@ -1849,11 +1846,11 @@ An implementation should not use this formula directly for all *complexes* but s
 
 Should signal an error of *type* **type-error** if *integer* is not an *integer* . 
 
-**12–40** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Notes:** 
 
@@ -1893,9 +1890,9 @@ The result of **expt** can be a *complex* , even when neither argument is a *com
 
 Numbers **12–41**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 When *power-number* is an *integer* 0, then the result is always the value one in the *type* of *base-number*, even if the *base-number* is zero (of any *type*). That is: 
 
@@ -1949,11 +1946,11 @@ Note that by the following logic, (sqrt (expt *x* 3)) is not equivalent to (expt
 
 *integer*—an *integer* . 
 
-**12–42** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 *greatest-common-denominator*—a non-negative *integer* . 
 
@@ -2013,9 +2010,9 @@ For three or more arguments,
 
 Numbers **12–43**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Description:** 
 
@@ -2075,11 +2072,11 @@ n *→* 1.5
 
 If no *integer* is supplied, the *integer* 1 is returned. 
 
-**12–44** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 If only one *integer* is supplied, the absolute value of that *integer* is returned. 
 
@@ -2137,9 +2134,9 @@ Should signal **type-error** if any argument is not an *integer* .
 
 Numbers **12–45**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **log** 
 
@@ -2193,11 +2190,11 @@ or approximately 3.0 (unlikely)
 
 The implementation. 
 
-**12–46** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **See Also:** 
 
@@ -2259,9 +2256,9 @@ Fri 12-Aug-1994 6:35pm EDT
 
 Numbers **12–47**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **See Also:** 
 
@@ -2313,11 +2310,11 @@ If *number* is a *float*, the result is a *float*. If *number* is a *rational*, 
 
 (eql (signum -0.0) -0.0) *→ true* 
 
-**12–48** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **See Also:** 
 
@@ -2365,9 +2362,9 @@ The branch cut for square root lies along the negative real axis, continuous wit
 
 Numbers **12–49**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 (isqrt 9) *→* 3 
 
@@ -2423,11 +2420,11 @@ A *random state object* contains state information used by the pseudo-random num
 
 **\*random-state\***, **random**, Section 22.1.3.10 (Printing Random States) 
 
-**12–50** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **make-random-state** *Function* 
 
@@ -2493,9 +2490,9 @@ Should signal an error of *type* **type-error** if *state* is not a *random stat
 
 Numbers **12–51**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Notes:** 
 
@@ -2547,11 +2544,11 @@ Should signal an error of *type* **type-error** if *limit* is not a positive *in
 
 **Notes:** 
 
-See *Common Lisp: The Language* for information about generating random numbers. **12–52** Programming Language—Common Lisp
+See *Common Lisp: The Language* for information about generating random numbers. 
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **random-state-p** *Function* 
 
@@ -2601,9 +2598,9 @@ The *current random state*, which is used, for example, by the *function* **rand
 
 Numbers **12–53**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Examples:** 
 
@@ -2665,11 +2662,11 @@ The *implementation*.
 
 Returns *true* if *object* is of *type* **number**; otherwise, returns *false*. 
 
-**12–54** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Examples:** 
 
@@ -2713,9 +2710,9 @@ Section 12.1.3.3 (Rule of Float Substitutability)
 
 Numbers **12–55**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **complex** *Function* 
 
@@ -2757,11 +2754,11 @@ Type upgrading implies a movement upwards in the type hierarchy lattice. In the 
 
 **realpart**, **imagpart**, Section 2.4.8.11 (Sharpsign C) 
 
-**12–56** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **complexp** *Function* 
 
@@ -2809,9 +2806,9 @@ Returns *true* if *object* is of *type* **complex**; otherwise, returns *false*.
 
 Returns the complex conjugate of *number*. The conjugate of a *real* number is itself. Numbers **12–57**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Examples:** 
 
@@ -2861,11 +2858,11 @@ The mathematical definition of **phase** is as follows:
 
 (phase 1) *→* 0.0s0 
 
-**12–58** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 (phase 0) *→* 0.0s0 
 
@@ -2919,9 +2916,9 @@ Should signal an error of *type* **type-error** if *number* is not a *number* .
 
 Numbers **12–59**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **upgraded-complex-part-type** *Function* 
 
@@ -2971,11 +2968,11 @@ Returns *true* if *object* is of *type* **real**; otherwise, returns *false*.
 
 (realp 12) *→ true* 
 
-**12–60** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 (realp #c(5/3 7.2)) *→ false* 
 
@@ -3031,9 +3028,9 @@ If *rational* is an *integer* , **numerator** returns *rational* and **denominat
 
 Numbers **12–61**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Notes:** 
 
@@ -3081,11 +3078,11 @@ The *implementation*.
 
 **Exceptional Situations:** 
 
-Should signal an error of *type* **type-error** if *number* is not a *real*. Might signal **arithmetic-error**. **12–62** Programming Language—Common Lisp
+Should signal an error of *type* **type-error** if *number* is not a *real*. Might signal **arithmetic-error**. 
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Notes:** 
 
@@ -3133,9 +3130,9 @@ Returns *true* if *object* is of *type* **rational**; otherwise, returns *false*
 
 Numbers **12–63**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **ash** *Function* 
 
@@ -3181,11 +3178,11 @@ Should signal an error of *type* **type-error** if *integer* is not an *integer*
 
 *≡* (and (\>= *j k*) (logbitp (- *j k*) *n*)) 
 
-**12–64** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **integer-length** 
 
@@ -3253,9 +3250,9 @@ If *integer* is non-negative, then its value can be represented in unsigned bina
 
 Numbers **12–65**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **integerp** *Function* 
 
@@ -3303,11 +3300,11 @@ Returns *true* if *object* is of *type* **integer**; otherwise, returns *false*.
 
 *junk-allowed*—a *generalized boolean*. The default is *false*. 
 
-**12–66** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 *integer*—an *integer* or *false*. 
 
@@ -3353,9 +3350,9 @@ If *junk-allowed* is *false*, an error is signaled if substring does not consist
 
 Numbers **12–67**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **boole** 
 
@@ -3402,11 +3399,11 @@ boole-andc2 boole-c1 boole-c2 boole-clr
 
 boole-eqv boole-ior boole-nand boole-nor 
 
-**12–68** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **boole** 
 
@@ -3486,9 +3483,9 @@ boole-nor boole-eqv boole-c1 boole-orc1
 
 Numbers **12–69**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 boole-c2 boole-orc2 boole-nand boole-set)) 
 
@@ -3536,11 +3533,11 @@ Each of these *constants* has a *value* which is one of the sixteen possible *bi
 
 **boole** 
 
-**12–70** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **logand, logandc1, logandc2, logeqv, logior, lognand,** *. . .* 
 
@@ -3590,9 +3587,9 @@ Figure 12–18 lists the meaning of each of the *functions*. Where an ‘identit
 
 Numbers **12–71**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **logand, logandc1, logandc2, logeqv, logior, lognand,** *. . .* 
 
@@ -3655,11 +3652,11 @@ m x y)))
 
 *.* m = #o007750 
 
-**12–72** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 *.* x = #o452576 
 
@@ -3719,9 +3716,9 @@ Because the following functions are not associative, they take exactly two argum
 
 Numbers **12–73**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Description:** 
 
@@ -3775,11 +3772,11 @@ Computes and returns the number of bits in the two’s-complement binary represe
 
 (logcount 7) *→* 3 
 
-**12–74** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 (logcount 13) *→* 3 ;Two’s-complement binary: ...0001101 
 
@@ -3837,9 +3834,9 @@ Negative *integer-1* and *integer-2* are treated as if they were represented in 
 
 Numbers **12–75**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 (logtest -2 -1) *→ true* 
 
@@ -3889,11 +3886,11 @@ Should signal an error of *type* **type-error** if *integer-1* is not an *intege
 
 **ldb**, **dpb** 
 
-**12–76** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Notes:** 
 
@@ -3951,9 +3948,9 @@ Replaces a field of bits within *integer*; specifically, returns an *integer* th
 
 Numbers **12–77**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **deposit-field** is to **mask-field** as **dpb** is to **ldb**. 
 
@@ -4007,4 +4004,4 @@ Let s be the size specified by *bytespec*; then the low s bits of *newbyte* appe
 
 In general, 
 
-**12–78** Programming Language—Common Lisp
+

@@ -1,20 +1,17 @@
-﻿Version 15.17R, X3J13/94-101R. 
+﻿ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
-**Programming Language—Common Lisp** 
+ 
 
 **24. System Construction** 
+  
 
-System Construction **i**
 
-Version 15.17R, X3J13/94-101R. Fri 12-Aug-1994 6:35pm EDT 
 
-**ii** Programming Language—Common Lisp
+ 
 
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **24.1 System Construction Concepts** 
 
@@ -52,9 +49,9 @@ An **and** *feature expression* succeeds if all of its argument *feature-conditi
 
 System Construction **24–1**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 (or *\{feature-conditional\}*\*) 
 
@@ -70,11 +67,11 @@ For example, suppose that in *implementation* A, the *features* spice and perq a
 
 **Figure 24–1. Features examples** 
 
-**24–2** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **compile-file** *Function* 
 
@@ -118,9 +115,9 @@ If *print* is *true*, information about *top level forms* in the file being comp
 
 The *external-format* specifies the *external file format* to be used when opening the *file*; see the System Construction **24–3**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **compile-file** 
 
@@ -158,11 +155,11 @@ An error of *type* **file-error** might be signaled if (wild-pathname-p *input-f
 
 If either the attempt to open the *source file* for input or the attempt to open the *compiled file* for output fails, an error of *type* **file-error** is signaled. 
 
-**24–4** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **See Also:** 
 
@@ -202,9 +199,9 @@ An error of *type* **file-error** might be signaled if either *input-file* or *o
 
 System Construction **24–5**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **compile-file**, **pathname**, **logical-pathname**, Section 20.1 (File System Concepts), Section 19.1.2 (Pathnames as Filenames) 
 
@@ -244,11 +241,11 @@ If *filespec* is a *stream*, **load** determines what kind of *stream* it is and
 
 **load** sequentially executes each *form* it encounters in the *file* named by *filespec*. If the *file* is a *source file* and the *implementation* chooses to perform *implicit compilation*, **load** must recognize *top level forms* as described in Section 3.2.3.1 (Processing of Top Level Forms) and arrange for each *top level form* to be executed before beginning *implicit compilation* of the next. (Note, however, that processing of **eval-when** *forms* by **load** is controlled by the :execute situation.) 
 
-**24–6** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **load** 
 
@@ -302,9 +299,9 @@ a *→* 888
 
 System Construction **24–7**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 ;––[Begin file SETUP]–– 
 
@@ -358,11 +355,11 @@ An error of *type* **file-error** might be signaled if (wild-pathname-p *filespe
 
 *results*—the *values* returned by the *forms*. 
 
-**24–8** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Description:** 
 
@@ -400,9 +397,9 @@ Note however that if the implementation does not normally defer any warnings, us
 
 System Construction **24–9**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 *∗***features***∗* 
 
@@ -440,11 +437,11 @@ If present, indicates that the implementation conforms to some particular workin
 
 discourage them from introducing the :draft-ansi-cl and :ansi-cl *features* prematurely.) :draft-ansi-cl 
 
-**24–10** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 *∗***features***∗* 
 
@@ -476,9 +473,9 @@ It is generally considered wise for an *implementation* to include one or more *
 
 System Construction **24–11**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 mechanism is designated for deciding who has the right to use which *symbol* for what reason, a conservative strategy is to prefer names derived from one’s own company or product name, since those names are often trademarked and are hence less likely to be used unwittingly by another *implementation*. 
 
@@ -510,11 +507,11 @@ The *file system*.
 
 **compile-file** 
 
-**24–12** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 *∗***load-pathname***∗***,** *∗***load-truename***∗ Variable* 
 
@@ -564,9 +561,9 @@ The *value* of **\*compile-print\*** is the default value of the :print *argumen
 
 System Construction **24–13**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 *∗***load-print***∗***,** *∗***load-verbose***∗ Variable* 
 
@@ -612,11 +609,11 @@ The *value* of **\*modules\*** is a list of names of the modules that have been 
 
 The variable **\*modules\*** is deprecated. 
 
-**24–14** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **provide, require** 
 
@@ -670,9 +667,9 @@ Both functions use **string=** to test for the presence of a *module-name*.
 
 System Construction **24–15**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **provide, require** 
 
@@ -706,4 +703,4 @@ The functions **provide** and **require** are deprecated.
 
 If a module consists of a single *package*, it is customary for the package and module names to be the same. 
 
-**24–16** Programming Language—Common Lisp
+

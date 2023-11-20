@@ -1,20 +1,17 @@
-﻿Version 15.17R, X3J13/94-101R. 
+﻿ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
-**Programming Language—Common Lisp** 
+ 
 
 **16. Strings** 
+  
 
-Strings **i**
 
-Version 15.17R, X3J13/94-101R. Fri 12-Aug-1994 6:35pm EDT 
 
-**ii** Programming Language—Common Lisp
+ 
 
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **16.1 String Concepts** 
 
@@ -32,9 +29,9 @@ However, the consequences are undefined if a *character* is inserted into a *str
 
 Strings **16–1**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **string** *System Class* 
 
@@ -82,11 +79,11 @@ Abbreviating.
 
 (base-string [*size*]) 
 
-**16–2** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Compound Type Specifier Arguments:** 
 
@@ -122,9 +119,9 @@ This denotes the union of all *types* (simple-array *c* (*size*)) for all *subty
 
 Strings **16–3**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **simple-base-string** *Type* 
 
@@ -178,11 +175,11 @@ Returns *true* if *object* is of *type* **simple-string**; otherwise, returns *f
 
 :fill-pointer t)) *→ false* 
 
-**16–4** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Notes:** 
 
@@ -248,9 +245,9 @@ my-filled-string *→* "AAACBD"
 
 Strings **16–5**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **See Also:** 
 
@@ -304,11 +301,11 @@ In the case where a conversion is defined neither by this specification nor by t
 
 **coerce** can be used to convert a *sequence* of *characters* to a *string*. 
 
-**16–6** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **prin1-to-string**, **princ-to-string**, **write-to-string**, or **format** (with a first argument of **nil**) can be used to get a *string* representation of a *number* or any other *object*. 
 
@@ -350,9 +347,9 @@ Fri 12-Aug-1994 6:35pm EDT
 
 Strings **16–7**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **string-upcase, string-downcase, string-capitalize,** *. . .* 
 
@@ -408,11 +405,11 @@ str *→* "0123AbcD890a"
 
 **char-upcase**, **char-downcase** 
 
-**16–8** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Notes:** 
 
@@ -468,9 +465,9 @@ All of these *functions* observe the *fill pointer* .
 
 Strings **16–9**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Affected By:** 
 
@@ -514,11 +511,11 @@ The *implementation*.
 
 These functions perform lexicographic comparisons on *string1* and *string2*. **string=** and **string-equal** are called equality functions; the others are called inequality functions. The 
 
-**16–10** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **string=, string/=, string***\<***, string***\>***, string***\<***=,** *. . .* 
 
@@ -562,9 +559,9 @@ The comparison has one of the following results:
 
 **string**\<**=** is *true* if substring1 is less than or equal to substring2; otherwise it is *false*. Strings **16–11**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **string**\>**=** 
 
@@ -622,11 +619,11 @@ Fri 12-Aug-1994 6:35pm EDT
 
 Returns *true* if *object* is of *type* **string**; otherwise, returns *false*. 
 
-**16–12** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Examples:** 
 
@@ -676,8 +673,8 @@ The *implementation*.
 
 Strings **16–13**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
-**16–14** Programming Language—Common Lisp
+

@@ -1,20 +1,17 @@
-﻿Version 15.17R, X3J13/94-101R. 
+﻿ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
-**Programming Language—Common Lisp** 
+ 
 
 **22. Printer** 
+  
 
-Printer **i**
 
-Version 15.17R, X3J13/94-101R. Fri 12-Aug-1994 6:35pm EDT 
 
-**ii** Programming Language—Common Lisp
+ 
 
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **22.1 The Lisp Printer** 
 
@@ -54,9 +51,9 @@ A number of option variables, called *printer control variables*, are provided t
 
 Printer **22–1**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 In addition to the *printer control variables*, the following additional *defined names* relate to or affect the behavior of the *Lisp printer* : 
 
@@ -86,11 +83,11 @@ Otherwise (if the *value* of **\*print-pretty\*** is *false*), the object’s **
 
 This section describes the default behavior of **print-object** methods for the *standardized types*. **22.1.3.1 Printing Numbers** 
 
-**22–2** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **22.1.3.1.1 Printing Integers** 
 
@@ -114,9 +111,9 @@ For related information about the syntax of a *complex* , see Section 2.3.2.3 (S
 
 Printer **22–3**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **22.1.3.1.5 Note about Printing Numbers** 
 
@@ -144,11 +141,11 @@ For additional restrictions concerning characters with nonstandard *syntax types
 
 For information about how the *Lisp reader* parses *symbols*, see Section 2.3.4 (Symbols as Tokens) and Section 2.4.8.5 (Sharpsign Colon). 
 
-**nil** might be printed as () when **\*print-pretty\*** is *true* and *printer escaping* is enabled. **22–4** Programming Language—Common Lisp
+**nil** might be printed as () when **\*print-pretty\*** is *true* and *printer escaping* is enabled. 
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **22.1.3.3.1 Package Prefixes for Symbols** 
 
@@ -190,9 +187,9 @@ When the *readtable case* is :upcase, *uppercase characters* are printed in the 
 
 Printer **22–5**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 :downcase 
 
@@ -250,11 +247,11 @@ When the *readtable case* is :invert, no *alphabetic characters* need be escaped
 
 (format t "~&:~A~15T:~A~29T~A~42T~A" 
 
-**22–6** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 (string-upcase readtable-case) 
 
@@ -344,9 +341,9 @@ READTABLE-CASE \*PRINT-CASE\* Symbol-name Output
 
 Printer **22–7**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **22.1.3.4 Printing Strings** 
 
@@ -386,11 +383,11 @@ The printing of *conses* is affected by **\*print-level\***, **\*print-length\**
 
 (a .b) ;A list of two elements a and .b 
 
-**22–8** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 (a b . c) ;A dotted list of a and b with c at the end; two conses 
 
@@ -436,9 +433,9 @@ For information on how the *Lisp reader* parses these “other *vectors*,” see
 
 Printer **22–9**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **22.1.3.8 Printing Other Arrays** 
 
@@ -476,11 +473,11 @@ For information on how the *Lisp reader* parses these “other *arrays*,” see 
 
 *.* ("\<1,0\>" "\<1,1\>" "\<1,2\>") 
 
-**22–10** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 *.* ("\<2,0\>" "\<2,1\>" "\<2,2\>")) 
 
@@ -514,9 +511,9 @@ where #S indicates structure syntax, *structure-name* is a *structure name*, eac
 
 For information on how the *Lisp reader* parses *structures*, see Section 2.4.8.13 (Sharpsign S). Printer **22–11**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **22.1.3.13 Printing Other Objects** 
 
@@ -580,11 +577,11 @@ For information on how the *Lisp reader* treats this notation, see Section 2.4.8
 
 *.* #\a #\a a #\a 
 
-**22–12** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 *.* #\a #\a a a 
 
@@ -628,9 +625,9 @@ Fri 12-Aug-1994 6:35pm EDT
 
 Printer **22–13**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **22.2 The Lisp Pretty Printer** 
 
@@ -656,11 +653,11 @@ The section after a conditional newline consists of: all the output up to, but n
 
 The section before a conditional newline consists of: all the output back to, but not including, (a) the previous conditional newline that is immediately contained in the same logical block; or if (a) 
 
-**22–14** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 is not applicable, (b) the beginning of the immediately containing logical block. The last four lines in Figure 1 indicate the sections before and after the four conditional newlines. 
 
@@ -702,9 +699,9 @@ Figure 22–5 identifies a set of *format directives* which serve as an alternat
 
 Printer **22–15**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **22.2.1.3 Compiling Format Strings** 
 
@@ -736,11 +733,11 @@ As an example of the interaction of logical blocks, conditional newlines, and in
 
 (write (first list)) 
 
-**22–16** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 (write-char #\Space) 
 
@@ -802,9 +799,9 @@ As an example of a per-line prefix, consider that evaluating the following produ
 
 Printer **22–17**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 ;;; (X Y) 
 
@@ -866,11 +863,11 @@ Suppose that one evaluates the following with **\*print-level\*** being 4, and *
 
 (setq x (sqrt z)) #1#)) 
 
-If the line length is greater than or equal to 77, the output produced appears on one line. However, **22–18** Programming Language—Common Lisp
+If the line length is greater than or equal to 77, the output produced appears on one line. However, 
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 if the line length is 76, line breaks are inserted at the linear-style conditional newlines separating the forms in the body and the output below is produced. Note that, the degenerate binding pair x is printed readably even though it fails to be a list; a depth abbreviation marker is printed in place of (g 3); the binding pair (z . 2) is printed readably even though it is not a proper list; and appropriate circularity markers are printed. 
 
@@ -930,9 +927,9 @@ Evaluating the following with a line length of 15 produces the output shown.
 
 Printer **22–19**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 #(12 34 567 8 
 
@@ -988,11 +985,11 @@ The following two *forms* illustrate the definition of pretty printing functions
 
 (pprint-fill s list)))) 
 
-**22–20** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 (set-pprint-dispatch ’(cons (member my-let)) 
 
@@ -1044,19 +1041,19 @@ Note that a pretty printing function for a structure is different from the struc
 
 Printer **22–21**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **22.2.3 Notes about the Pretty Printer’s Background** 
 
 For a background reference to the abstract concepts detailed in this section, see *XP: A Common Lisp Pretty Printing System*. The details of that paper are not binding on this document, but may be helpful in establishing a conceptual basis for understanding this material. 
 
-**22–22** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **22.3 Formatted Output** 
 
@@ -1088,9 +1085,9 @@ Examples of *format strings*:
 
 **format** sends the output to *destination*. If *destination* is **nil**, **format** creates and returns a *string* Printer **22–23**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 containing the output from *control-string*. If *destination* is *non-nil*, it must be a *string* with a *fill pointer* , a *stream*, or the symbol **t**. If *destination* is a *string* with a *fill pointer* , the output is added to the end of the *string*. If *destination* is a *stream*, the output is sent to that *stream*. If *destination* is **t**, the output is sent to *standard output*. 
 
@@ -1128,11 +1125,11 @@ The next *arg* should be a *character* ; it is printed according to the modifier
 
 This is the format used for telling the user about a key he is expected to type, in prompts, for instance. The precise output may depend not only on the implementation, but on the particular I/O devices in use. 
 
-**22–24** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 ~@C prints the *character* in a way that the *Lisp reader* can understand, using #\ syntax. ~@C binds **\*print-escape\*** to **t**. 
 
@@ -1168,9 +1165,9 @@ If no prefix parameters are given to ~R, then a different interpretation is give
 
 Printer **22–25**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 *•* ~:@R prints *arg* as an old Roman numeral: IIII. 
 
@@ -1212,11 +1209,11 @@ This is just like ~D but prints in binary radix (radix 2) instead of decimal. Th
 
 ~B binds **\*print-escape\*** to *false*, **\*print-radix\*** to *false*, **\*print-base\*** to 2, and **\*print-readably\*** to *false*. 
 
-**22–26** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **22.3.2.4 Tilde O: Octal** 
 
@@ -1246,9 +1243,9 @@ If the *w* parameter is omitted, then the field is of variable width. In effect,
 
 Printer **22–27**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 If the parameter *d* is omitted, then there is no constraint on the number of digits to appear after the decimal point. A value is chosen for *d* in such a way that as many digits as possible may be printed subject to the width constraint imposed by the parameter *w* and the constraint that no 
 
@@ -1272,11 +1269,11 @@ The full form is ~*w*,*d*,*e*,*k*,*overflowchar*,*padchar*,*exponentchar*E. The 
 
 Exactly *w* characters will be output. First, leading copies of the character *padchar* (which defaults to a space) are printed, if necessary, to pad the field on the left. If the *arg* is negative, then a minus sign is printed; if the *arg* is not negative, then a plus sign is printed if and only if the @ modifier was supplied. Then a sequence of digits containing a single embedded decimal point is printed. The form of this sequence of digits depends on the scale factor *k*. If *k* is zero, then *d* digits are printed after the decimal point, and a single zero digit appears before the decimal point if the total field width will permit it. If *k* is positive, then it must be strictly less than *d*+2; *k* significant digits are printed before the decimal point, and *d−k*+1 digits are printed after the decimal point. If *k* is negative, then it must be strictly greater than *−d*; a single zero digit appears before the decimal point if the total field width will permit it, and after the decimal point are printed first *−k* zeros and then *d*+*k* significant digits. The printed fraction must be properly rounded. When rounding up and rounding down would produce printed values equidistant from the scaled value of *arg*, then the implementation is free to use either one. For example, printing the argument 637.5 using the format ~8,2E may correctly produce either 6.37E+2 or 6.38E+2. 
 
-**22–28** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 Following the digit sequence, the exponent is printed. First the character parameter *exponentchar* is printed; if this parameter is omitted, then the *exponent marker* that **prin1** would use is printed, as determined from the type of the *float* and the current value of **\*read-default-float-format\***. Next, either a plus sign or a minus sign is printed, followed by *e* digits representing the power of ten by which the printed fraction must be multiplied to properly represent the rounded value of *arg*. 
 
@@ -1300,9 +1297,9 @@ If *arg* is a *complex* number or some non-numeric *object*, then it is printed 
 
 The next *arg* is printed as a *float* in either fixed-format or exponential notation as appropriate. Printer **22–29**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 The full form is ~\<i\>w\</i\>,\<i\>d\</i\>,\<i\>e\</i\>,\<i\>k\</i\>,\<i\>overflowchar\</i\>,\<i\>padchar\</i\>,\<i\>exponentchar\</i\>G. The format in which to print \<i\>arg\</i\> depends on the magnitude (absolute value) of the \<i\>arg\</i\>. Let \<i\>n\</i\> be an integer such that 10\<sup\>\<i\>n−\</i\>1\</sup\> \<i\>≤ |arg|\</i\> \< 10\<i\>\<sup\>n\</sup\>\</i\>. Let \<i\>ee\</i\> equal \<i\>e\</i\>+2, or 4 if \<i\>e\</i\> is omitted. Let \<i\>ww\</i\> equal \<i\>w−ee\</i\>, or \<b\>nil\</b\> if \<i\>w\</i\> is omitted. If \<i\>d\</i\> is omitted, first let \<i\>q\</i\> be the number of digits needed to print \<i\>arg\</i\> with no loss of information and without leading or trailing zeros; then let \<i\>d\</i\> equal (max \<i\>q\</i\> (min \<i\>n\</i\> 7)). Let \<i\>dd\</i\> equal \<i\>d−n\</i\>. 
 
@@ -1334,11 +1331,11 @@ If *arg* is a *rational* number, then it is coerced to be a *single float* and t
 
 If *arg* is a *complex* number or some non-numeric *object*, then it is printed using the format directive ~*w*D, thereby printing it in decimal radix and a minimum field width of *w*. 
 
-**22–30** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 ~$ binds **\*print-escape\*** to *false* and **\*print-readably\*** to *false*. 
 
@@ -1374,9 +1371,9 @@ The following constructs provide access to the *pretty printer* :
 
 Printer **22–31**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **22.3.5.1 Tilde Underscore: Conditional Newline** 
 
@@ -1398,11 +1395,11 @@ The body segment can be any arbitrary \<i\>format string\</i\>. This \<i\>format
 
 If the *at-sign* modifier is used with ~\<...~:\>, the entire remaining argument list is passed to the directive as its argument. All of the remaining arguments are always consumed by ~@\<...~:\>, even if they are not all used by the *format string* nested in the directive. Other than the difference in its argument, ~@\<...~:\> is exactly the same as ~\<...~:\> except that circularity detection is not applied if ~@\<...~:\> is encountered at top level in a *format string*. This ensures that circularity detection is applied only to data lists, not to *format argument lists*. 
 
-" . #*n*#" is printed if circularity or sharing has to be indicated for its argument as a whole. **22–32** Programming Language—Common Lisp
+" . #*n*#" is printed if circularity or sharing has to be indicated for its argument as a whole. 
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 To a considerable extent, the basic form of the directive ~\<...~\> is incompatible with the dynamic control of the arrangement of output by ~W, ~ , ~\<...~:\>, ~I, and ~:T. As a result, an error is signaled if any of these directives is nested within ~\<...~\>. Beyond this, an error is also signaled if the ~\<...~:;...~\> form of ~\<...~\> is used in the same *format string* with ~W, ~ , ~\<...~:\>, ~I, or ~:T. 
 
@@ -1430,9 +1427,9 @@ The three *functions* **pprint-linear**, **pprint-fill**, and **pprint-tabular**
 
 Printer **22–33**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **22.3.6.1 Tilde T: Tabulate** 
 
@@ -1456,11 +1453,11 @@ With no modifiers, the leftmost text segment is left justified in the field, and
 
 Note that *str* may include **format** directives. All the clauses in *str* are processed in order; it is the resulting pieces of text that are justified. 
 
-**22–34** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 The ~\<i\>\<sup\>∧\</sup\>\</i\> directive may be used to terminate processing of the clauses prematurely, in which case only the completely processed clauses are justified. 
 
@@ -1494,9 +1491,9 @@ When within a ~\{ construct (see below), the ignoring (in either direction) is r
 
 Printer **22–35**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 ~*n*@\* goes to the *n*th *arg*, where 0 means the first one; *n* defaults to 0, so ~@\* goes back to the first *arg*. Directives after a ~*n*@\* will take arguments in sequence beginning with the one gone to. When within a ~\{ construct, the “goto” is relative to the list of arguments being processed by the iteration. 
 
@@ -1540,11 +1537,11 @@ The combination of ~[ and # is useful, for example, for dealing with English con
 
 ~:;~@\{~#[~; and~] ~S~\<i\>\<sup\>∧\</sup\>\</i\>,~\}~].") 
 
-**22–36** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 (format nil foo) *→* "Items: none." 
 
@@ -1596,9 +1593,9 @@ If the iteration is terminated before all the remaining arguments are consumed, 
 
 Printer **22–37**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 ~:@\{*str*~\} combines the features of ~:\{*str*~\} and ~@\{*str*~\}. All the remaining arguments are used, and each one must be a *list*. On each iteration, the next argument is used as a *list* of arguments to *str* . Example: 
 
@@ -1638,11 +1635,11 @@ With the @ modifier, only one *arg* is directly consumed. The *arg* must be a *s
 
 (format nil "~@? ~D" "\<~A ~D\>" "Foo" 5 14 7) *→* "\<Foo 5\> 14" 
 
-**22–38** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **22.3.8 FORMAT Miscellaneous Operations** 
 
@@ -1696,9 +1693,9 @@ If *arg* is not **eql** to the integer 1, a lowercase s is printed; if *arg* is 
 
 Printer **22–39**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 (format nil "~D tr~:@P/~D win~:P" 1 3) *→* "1 try/3 wins" 
 
@@ -1734,11 +1731,11 @@ If ~\<i\>\<sup\>∧\</sup\>\</i\> is used within a ~:\{ construct, then it termi
 
 If ~\<i\>\<sup\>∧\</sup\>\</i\> appears within a control string being processed under the control of a ~? directive, but not within any ~\{ or ~\< construct within that string, then the string being processed will be terminated, thereby ending processing of the ~? directive. Processing then continues within the string containing the ~? directive at the point following that directive. 
 
-**22–40** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 If ~\<i\>\<sup\>∧\</sup\>\</i\> appears within a ~[ or ~( construct, then all the commands up to the ~\<i\>\<sup\>∧\</sup\>\</i\> are properly selected or case-converted, the ~[ or ~( processing is terminated, and the outward search continues for a ~\{ or ~\< construct to be terminated. For example: 
 
@@ -1802,9 +1799,9 @@ Note that in this example newlines appear in the output only as specified by the
 
 Printer **22–41**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **22.3.10 Additional Information about FORMAT Operations** 
 
@@ -1836,11 +1833,11 @@ The consequences are undefined if a format directive is given more parameters th
 
 The consequences are undefined if *colon* or *at-sign* modifiers are given to a directive in a combination not specifically described here as being meaningful. 
 
-**22–42** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **22.3.11 Examples of FORMAT** 
 
@@ -1926,9 +1923,9 @@ As an example of the effects of varying the scale factor, the code
 
 Printer **22–43**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 (- k 5) (- k 5) 3.14159)) 
 
@@ -1984,11 +1981,11 @@ Scale factor 7: | 3141590.E-06|
 
 *→* "Written to foo.bin." 
 
-**22–44** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **22.3.12 Notes about FORMAT** 
 
@@ -2000,9 +1997,9 @@ The ~\<i\>\<sup\>∧\</sup\>\</i\> should appear only at the beginning of a ~\< 
 
 Printer **22–45**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **copy-pprint-dispatch** *Function* 
 
@@ -2056,11 +2053,11 @@ where *arguments-tail* is either the tail of *arguments* which has as its *car* 
 
 *→* (C) 
 
-**22–46** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 (format t (formatter "~&~A~A") ’a ’b ’c) 
 
@@ -2106,9 +2103,9 @@ The state of the *table*.
 
 Should signal an error of *type* **type-error** if *table* is neither a *pprint-dispatch-table* nor **nil**. Printer **22–47**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Notes:** 
 
@@ -2138,11 +2135,11 @@ An error is signaled (at macro expansion time or at run time) if **pprint-exit-i
 
 **pprint-logical-block**, **pprint-pop**. 
 
-**22–48** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **pprint-fill, pprint-linear, pprint-tabular** 
 
@@ -2188,9 +2185,9 @@ Evaluating the following with a line length of 25 produces the output shown.
 
 Printer **22–49**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 (pprint-tabular \*standard-output\* ’(elm main maple center) nil nil 8)) 
 
@@ -2248,11 +2245,11 @@ Note that it would have been inconvenient to specify this function using **forma
 
 *stream*—an *output stream designator* . The default is *standard output*. 
 
-**22–50** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Description:** 
 
@@ -2296,9 +2293,9 @@ Section 22.3.5.3 (Tilde I: Indent)
 
 Printer **22–51**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **pprint-logical-block** 
 
@@ -2328,11 +2325,11 @@ The **pprint-logical-block** *macro* may be used regardless of the *value* of **
 
 **\*print-circle\***, **\*print-level\***. 
 
-**22–52** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Exceptional Situations:** 
 
@@ -2372,9 +2369,9 @@ If *stream* is a *pretty printing stream* and the *value* of **\*print-pretty\**
 
 *Kind* specifies the style of conditional newline. This *parameter* is treated as follows: Printer **22–53**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **pprint-newline** 
 
@@ -2398,11 +2395,11 @@ When a line break is inserted by any type of conditional newline, any blanks tha
 
 There are a variety of ways unconditional newlines can be introduced into the output (*i.e.*, via **terpri** or by printing a string containing a newline character). As with mandatory conditional newlines, this prevents any of the containing *sections* from being printed on one line. In general, when an unconditional newline is encountered, it is printed out without suppression of the preceding blanks and without any indentation following it. However, if a per-line prefix has been specified (see **pprint-logical-block**), this prefix will always be printed no matter how a newline originates. 
 
-**22–54** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Examples:** 
 
@@ -2446,9 +2443,9 @@ Each time **pprint-pop** is called, it pops the next value off the *list* passed
 
 Printer **22–55**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 *•* If **\*print-circle\*** is *non-nil*, and the remaining list is a circular (or shared) reference, then “. ” is printed followed by an appropriate “#*n*#” marker. (This catches instances of *cdr* circularity and sharing in lists.) 
 
@@ -2484,11 +2481,11 @@ It is frequently a good idea to call **pprint-exit-if-list-exhausted** before ca
 
 **pprint-tab** *kind colnum colinc* &optional *stream →* **nil** 
 
-**22–56** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Arguments and Values:** 
 
@@ -2536,9 +2533,9 @@ An error is signaled if *kind* is not one of :line, :section, :line-relative, or
 
 Printer **22–57**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **print-object** 
 
@@ -2572,11 +2569,11 @@ The *method* may wish to perform specialized line breaking or other output condi
 
 The printer takes care of **\*print-level\*** automatically, provided that each *method* handles exactly one level of structure and calls **write** (or an equivalent *function*) recursively if there are more structural levels. The printer’s decision of whether an *object* has components (and 
 
-**22–58** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 therefore should not be printed when the printing depth is not less than **\*print-level\***) is *implementation-dependent*. In some implementations its **print-object** *method* is not called; in others the *method* is called, and the determination that the *object* has components is based on what it tries to write to the *stream*. 
 
@@ -2614,9 +2611,9 @@ In some implementations the *stream* argument passed to a **print-object** *meth
 
 Printer **22–59**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 *identity*—a *generalized boolean*; evaluated. 
 
@@ -2662,11 +2659,11 @@ If **\*print-readably\*** is *true*, **print-unreadable-object** signals an erro
 
 *priority*—a *real*. The default is 0. 
 
-*table*—a *pprint dispatch table*. The default is the *value* of **\*print-pprint-dispatch\***. **22–60** Programming Language—Common Lisp
+*table*—a *pprint dispatch table*. The default is the *value* of **\*print-pprint-dispatch\***. 
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Description:** 
 
@@ -2710,9 +2707,9 @@ This signifies that the corresponding object must be a cons cell whose *car* mat
 
 Printer **22–61**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **write, prin1, print, pprint, princ** 
 
@@ -2764,11 +2761,11 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **write** is the general entry point to the *Lisp printer* . For each explicitly supplied *keyword parameter* named in Figure 22–7, the corresponding *printer control variable* is dynamically bound to its *value* while printing goes on; for each *keyword parameter* in Figure 22–7 that is not explicitly supplied, the value of the corresponding *printer control variable* is the same as it was at the time **write** was invoked. Once the appropriate *bindings* are *established*, the *object* is output by the *Lisp printer* . 
 
-**22–62** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **write, prin1, print, pprint, princ** 
 
@@ -2797,9 +2794,9 @@ Fri 12-Aug-1994 6:35pm EDT
 
 Printer **22–63**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **See Also:** 
 
@@ -2855,11 +2852,11 @@ The *functions* **prin1** and **print** do not bind **\*print-readably\***.
 
 *base*—a *radix* . 
 
-**22–64** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **write-to-string, prin1-to-string, princ-to-string** 
 
@@ -2911,9 +2908,9 @@ The meanings and defaults for the keyword arguments to **write-to-string** are t
 
 Printer **22–65**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 (princ-to-string "abc") *→* "abc" 
 
@@ -2963,11 +2960,11 @@ Controls the format in which *arrays* are printed. If it is *false*, the content
 
 The *implementation*. 
 
-**22–66** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **See Also:** 
 
@@ -3027,9 +3024,9 @@ If the *value* of **\*print-radix\*** is *true*, the printer will print a radix 
 
 Printer **22–67**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 (let ((\*print-radix\* t) ;print the integer 10 and 
 
@@ -3093,11 +3090,11 @@ The *value* of **\*print-case\*** controls the case (upper, lower, or mixed) in 
 
 ;; many valid ways in which escaping might appear. 
 
-**22–68** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 (test-print-case) ;Implementation A 
 
@@ -3151,9 +3148,9 @@ If *true*, a user-defined **print-object** *method* can print *objects* to the s
 
 Printer **22–69**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 #*n*# syntax. If a user-defined **print-object** *method* prints to a *stream* other than the one that was supplied, then circularity detection starts over for that *stream*. 
 
@@ -3205,11 +3202,11 @@ For more specific details of how the *value* of **\*print-escape\*** affects the
 
 (let ((\*print-escape\* t)) (write #\a)) 
 
-**22–70** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 *.* #\a 
 
@@ -3261,9 +3258,9 @@ Controls whether the prefix “#:” is printed before *apparently uninterned sy
 
 Printer **22–71**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 *∗***print-level***∗***,** *∗***print-length***∗* 
 
@@ -3321,11 +3318,11 @@ to be recursively printed has components and is at a level equal to or greater t
 
 (let ((\*print-length\* i)) 
 
-**22–72** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 (format t "~&~D – ~S~%" i a))) 
 
@@ -3399,9 +3396,9 @@ a non-negative *integer* , or **nil**.
 
 Printer **22–73**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Description:** 
 
@@ -3441,11 +3438,11 @@ a non-negative *integer* , or **nil**.
 
 If it is not **nil**, the *pretty printer* switches to a compact style of output (called miser style) whenever the width available for printing a substructure is less than or equal to this many *ems*. 
 
-**22–74** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 *∗***print-pprint-dispatch***∗ Variable* 
 
@@ -3491,9 +3488,9 @@ If it is *true*, the *pretty printer* is used, and the *Lisp printer* will endea
 
 Printer **22–75**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Examples:** 
 
@@ -3565,11 +3562,11 @@ Fri 12-Aug-1994 6:35pm EDT
 
 a *generalized boolean*. 
 
-**22–76** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 *∗***print-readably***∗* 
 
@@ -3625,9 +3622,9 @@ If **\*read-eval\*** is *false* and **\*print-readably\*** is *true*, any such m
 
 Printer **22–77**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 (setf (gethash table 1) ’one) *→* ONE 
 
@@ -3691,4 +3688,4 @@ a non-negative *integer* , or **nil**.
 
 **nil**. 
 
-**22–78** Programming Language—Common Lisp
+

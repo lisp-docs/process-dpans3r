@@ -2,15 +2,10 @@
 
 
 
-**Programming Language—Common Lisp** 
+ 
 
 **5. Data and Control Flow** 
-
-Data and Control Flow **i**
-
-
-
-**ii** Programming Language—Common Lisp
+
 
 
 
@@ -81,7 +76,7 @@ the *subforms* of place1 and value1 are evaluated, the location specified by pla
 
 (push (progn (princ "1") ’ref-1) 
 
-**5–2** Programming Language—Common Lisp
+
 
 
 
@@ -169,7 +164,7 @@ For (subseq *seq s e*):
 
 **Figure 5–5. Sample Setf Expansion of a SUBSEQ Form** 
 
-**5–4** Programming Language—Common Lisp
+
 
 
 
@@ -215,7 +210,7 @@ In the case of **subseq**, the replacement value must be a *sequence* whose elem
 
 *•* A function call form whose first element is the name of any one of the functions in Figure 5–8, provided that the supplied argument to that function is in turn a *place* form; in this case the new *place* has stored back into it the result of applying the supplied “update” function. 
 
-**5–6** Programming Language—Common Lisp
+
 
 
 
@@ -360,7 +355,7 @@ s *→* ((A 1 B 6 C 3))
 
 ;;; Note that the (setq r nil) does not affect the actions of 
 
-**5–8** Programming Language—Common Lisp
+
 
 
 
@@ -440,7 +435,7 @@ A *macro form* can be used as a *place*, in which case Common Lisp expands the *
 
 A reference to a *symbol* that has been *established* as a *symbol macro* can be used as a *place*. In this case, **setf** expands the reference and then analyzes the resulting *form*. 
 
-**5–10** Programming Language—Common Lisp
+
 
 
 
@@ -502,7 +497,7 @@ Data and Control Flow **5–11**
 
 **Figure 5–9. Read-Modify-Write Macros** 
 
-**5–12** Programming Language—Common Lisp
+
 
 
 
@@ -588,7 +583,7 @@ When the *function* receives its arguments via **&rest**, it is permissible (but
 
 (foo 4 :initial-contents ’(a b c d) :double t) 
 
-**5–14** Programming Language—Common Lisp
+
 
 
 
@@ -708,7 +703,7 @@ Data and Control Flow **5–15**
 
 **Notes:** 
 
-**return-from** can be used to return prematurely from a *function* defined by **defun**. **5–16** Programming Language—Common Lisp
+**return-from** can be used to return prematurely from a *function* defined by **defun**. 
 
 
 
@@ -826,7 +821,7 @@ Should signal an error of *type* **type-error** if *name* is not a *function nam
 
 **symbol-function**, **fmakunbound**, **fdefinition** 
 
-**5–18** Programming Language—Common Lisp
+
 
 
 
@@ -928,7 +923,7 @@ The body forms (but not the *lambda list*) of each *function* created by **flet*
 
 The scope of the *declarations* between the list of local function/macro definitions and the body *forms* in **flet** and **labels** does not include the bodies of the locally defined *functions*, except that 
 
-**5–20** Programming Language—Common Lisp
+
 
 
 
@@ -1048,7 +1043,7 @@ after macro expansion. The occurrences of x and flag legitimately refer to the p
 
 (macroexpand form env))) *→* MLETS 
 
-**5–22** Programming Language—Common Lisp
+
 
 
 
@@ -1186,7 +1181,7 @@ An error of *type* **undefined-function** should be signaled if *function* is a 
 
 *≡* (apply *function* (list *arg1 arg2* ...)) 
 
-The difference between **funcall** and an ordinary function call is that in the former case the *function* **5–24** Programming Language—Common Lisp
+The difference between **funcall** and an ordinary function call is that in the former case the *function* 
 
 
 
@@ -1286,7 +1281,7 @@ The following examples illustrate some possible return values, but are not inten
 
 \<i\>\<sup\>or\</sup\>→\</i\> (LAMBDA (X) X), \<i\>false\</i\>, NIL 
 
-**5–26** Programming Language—Common Lisp
+
 
 
 
@@ -1416,7 +1411,7 @@ Returns *true* if *object* is of *type* **function**; otherwise, returns *false*
 
 Returns *true* if *object* is of *type* **compiled-function**; otherwise, returns *false*. 
 
-**5–28** Programming Language—Common Lisp
+
 
 
 
@@ -1510,7 +1505,7 @@ A positive *integer* that is the upper exclusive bound on the number of *paramet
 
 **Notes:** 
 
-Implementors are encouraged to make the *value* of **lambda-parameters-limit** as large as possible. **5–30** Programming Language—Common Lisp
+Implementors are encouraged to make the *value* of **lambda-parameters-limit** as large as possible. 
 
 
 
@@ -1600,7 +1595,7 @@ If *documentation* is supplied, it is attached to *name* as a *documentation str
 
 **defparameter** and **defvar** normally appear as a *top level form*, but it is meaningful for them to appear as *non-top-level forms*. However, the compile-time side effects described below only take place when they appear as *top level forms*. 
 
-**5–32** Programming Language—Common Lisp
+
 
 
 
@@ -1718,7 +1713,7 @@ The intent of the permission for additional side effects is to allow *implementa
 
 ’,name)) 
 
-**5–34** Programming Language—Common Lisp
+
 
 
 
@@ -1842,7 +1837,7 @@ The form
 
 *formn*) 
 
-**5–36** Programming Language—Common Lisp
+
 
 
 
@@ -1966,7 +1961,7 @@ Assuming \*x\* is not globally special,
 
 (list \*x\* (symbol-value ’\*x\*)))) *→* (3 4) 
 
-**5–38** Programming Language—Common Lisp
+
 
 
 
@@ -2082,7 +2077,7 @@ This is just like **setq**, except that the assignments happen “in parallel.�
 
 If any *var* refers to a *binding* made by **symbol-macrolet**, then that *var* is treated as if **psetf** (not **psetq**) had been used. 
 
-**5–40** Programming Language—Common Lisp
+
 
 
 
@@ -2210,7 +2205,7 @@ x) *→* 2
 
 **Notes:** 
 
-**5–42** Programming Language—Common Lisp
+
 
 
 
@@ -2318,7 +2313,7 @@ The transfer of control initiated by **go** is performed as described in Section
 
 lp (incf val 4)) *→* NIL 
 
-**5–44** Programming Language—Common Lisp
+
 
 
 
@@ -2466,7 +2461,7 @@ The following has undefined consequences because the **block** *form* exits norm
 
 (funcall (block nil #’(lambda () (return-from nil)))) is an error. 
 
-**5–46** Programming Language—Common Lisp
+
 
 
 
@@ -2578,7 +2573,7 @@ point-b
 
 (incf val 08)) 
 
-**5–48** Programming Language—Common Lisp
+
 
 
 
@@ -2708,7 +2703,7 @@ The following prints “The inner catch returns :SECOND-THROW” and then return
 
 **Exceptional Situations:** 
 
-If there is no outstanding *catch tag* that matches the throw tag, no unwinding of the stack is **5–50** Programming Language—Common Lisp
+If there is no outstanding *catch tag* that matches the throw tag, no unwinding of the stack is 
 
 
 
@@ -2834,7 +2829,7 @@ If an exit occurs before completion of **incf**, the **decf** *form* is executed
 
 (unwind-protect (return-from a 1) 
 
-**5–52** Programming Language—Common Lisp
+
 
 
 
@@ -2968,7 +2963,7 @@ nil *→* NIL
 
 **t** 
 
-**5–54** Programming Language—Common Lisp
+
 
 
 
@@ -3088,7 +3083,7 @@ Returns *true* if its *arguments* are the same, identical *object*; otherwise, r
 
 \<i\>\<sup\>or\</sup\>→ false\</i\> 
 
-**5–56** Programming Language—Common Lisp
+
 
 
 
@@ -3214,7 +3209,7 @@ If an implementation supports positive and negative zeros as *distinct* values, 
 
 (eql (cons ’a ’b) (cons ’a ’c)) *→ false* 
 
-**5–58** Programming Language—Common Lisp
+
 
 
 
@@ -3308,7 +3303,7 @@ Two other *objects* are **equal** only if they are **eq**.
 
 **equal** does not descend any *objects* other than the ones explicitly specified above. Figure 5–12 summarizes the information given in the previous list. In addition, the figure specifies the priority of the behavior of **equal**, with upper entries taking priority over lower ones. 
 
-**5–60** Programming Language—Common Lisp
+
 
 
 
@@ -3413,7 +3408,7 @@ If the two *cars* in the *conses* are **equalp** and the two *cdrs* in the *cons
 
 If two *arrays* have the same number of dimensions, the dimensions match, and the corresponding *active elements* are **equalp**. The *types* for which the *arrays* are *specialized* need not match; for example, a *string* and a general *array* that happens to contain the same *characters* are **equalp**. Because **equalp** performs *element*-by-*element* comparisons of *strings* and ignores the *case* of *characters*, *case* distinctions are ignored when **equalp** compares *strings*. 
 
-**5–62** Programming Language—Common Lisp
+
 
 
 
@@ -3528,7 +3523,7 @@ Returns its argument *object*.
 
 (eql x (identity x)) returns *true* for all possible values of *x*, but (eq x (identity x)) might return *false* when *x* is a *number* or *character* . 
 
-**5–64** Programming Language—Common Lisp
+
 
 
 
@@ -3632,7 +3627,7 @@ Note that since the “*xxx*-if-not” *functions* and the :test-not arguments h
 
 #’(lambda (&rest arguments) object)) 
 
-**5–66** Programming Language—Common Lisp
+
 
 
 
@@ -3728,7 +3723,7 @@ If no *forms* are supplied, (and) returns **t**.
 
 (if (and (\>= n 0) 
 
-**5–68** Programming Language—Common Lisp
+
 
 
 
@@ -3846,7 +3841,7 @@ a *→* 3
 
 *results*—if the *test-form yielded true*, the *values* returned by the *then-form*; otherwise, the *values* returned by the *else-form*. 
 
-**5–70** Programming Language—Common Lisp
+
 
 
 
@@ -3970,7 +3965,7 @@ temp3 *→* 30
 
 In a **when** *form*, if the *test-form yields true*, the *forms* are *evaluated* in order from left to right and the *values* returned by the *forms* are returned from the **when** *form*. Otherwise, if the *test-form yields false*, the *forms* are not *evaluated*, and the **when** *form* returns **nil**. 
 
-**5–72** Programming Language—Common Lisp
+
 
 
 
@@ -4096,7 +4091,7 @@ Each of the *normal-clauses* is then considered in turn. If the *test-key* is th
 
 These *macros* differ only in their *behavior* when no *normal-clause* matches; specifically: **case** 
 
-If no *normal-clause* matches, and there is an *otherwise-clause*, then that *otherwise-clause* **5–74** Programming Language—Common Lisp
+If no *normal-clause* matches, and there is an *otherwise-clause*, then that *otherwise-clause* 
 
 
 
@@ -4226,7 +4221,7 @@ The specific error message used by **ecase** and **ccase** can vary between impl
 
 **ctypecase** *keyplace \{↓normal-clause\}*\* *→ \{result\}*\* 
 
-**5–76** Programming Language—Common Lisp
+
 
 
 
@@ -4350,4 +4345,4 @@ x (typecase x
 
 *.* 1: Specify a value to use instead. 
 
-**5–78** Programming Language—Common Lisp
+

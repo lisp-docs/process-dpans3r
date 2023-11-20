@@ -1,20 +1,17 @@
-﻿Version 15.17R, X3J13/94-101R. 
+﻿ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
-**Programming Language—Common Lisp** 
+ 
 
 **26. Glossary** 
+  
 
-Glossary **i**
 
-Version 15.17R, X3J13/94-101R. Fri 12-Aug-1994 6:35pm EDT 
 
-**ii** Programming Language—Common Lisp
+ 
 
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **26.1 Glossary** 
 
@@ -48,9 +45,9 @@ When an ambiguity arises, the longest matching substring has precedence. For exa
 
 Glossary **26–1**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 Subscript notation, as in “\<i\>something\<sub\>n\</sub\>\</i\>” means that the \<i\>n\</i\>th definition of “\<i\>something\</i\>” is intended. This notation is used only in situations where the context might be insufficient to disambiguate. 
 
@@ -77,11 +74,11 @@ The following are abbreviations used in the glossary:
 
 **accessor** *n.* an *operator* that performs an *access*. See *reader* and *writer* . 
 
-**26–2** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **active** *adj.* 1. (of a *handler* , a *restart*, or a *catch tag*) having been *established* but not yet *disestablished*. 2. (of an *element* of an *array*) having an index that is greater than or equal to zero, but less than the *fill pointer* (if any). For an *array* that has no *fill pointer* , all *elements* are considered *active*. 
 
@@ -113,9 +110,9 @@ characteristics by direct modification. A *conforming program* may depend on an 
 
 Glossary **26–3**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **ampersand** *n.* the *standard character* that is called “ampersand” (&). See Figure 2–5. 
 
@@ -145,11 +142,11 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **array** *n.* an *object* of *type* **array**, which serves as a container for other *objects* arranged in a Cartesian coordinate system. 
 
-**26–4** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **array element type** *n.* (of an *array*) 1. a *type* associated with the *array*, and of which all *elements* of the *array* are constrained to be members. 2. the *actual array element type* of the *array*. 3. the *expressed array element type* of the *array*. 
 
@@ -177,9 +174,9 @@ Fri 12-Aug-1994 6:35pm EDT
 
 Glossary **26–5**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **B** 
 
@@ -213,11 +210,11 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **bit-wise logical operation specifier** *n.* an *object* which names one of the sixteen possible bit-wise logical operations that can be performed by the **boole** function, and which is the *value* of exactly one of the *constant variables* **boole-clr**, **boole-set**, **boole-1**, **boole-2**, **boole-c1**, **boole-c2**, **boole-and**, **boole-ior**, **boole-xor**, **boole-eqv**, **boole-nand**, **boole-nor**, **boole-andc1**, **boole-andc2**, **boole-orc1**, or **boole-orc2**. 
 
-**26–6** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **block** *n.* a named lexical *exit point*, *established* explicitly by **block** or implicitly by *operators* such as **loop**, **do** and **prog**, to which control and values may be transfered by using a **return-from** *form* with the name of the *block*. 
 
@@ -245,9 +242,9 @@ symbol **t** (representing *true*), or the symbol **nil** (representing *false*)
 
 Glossary **26–7**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 bounding index”, such that 0 \<i\>≤ i\<sub\>start\</sub\> ≤ i\<sub\>end\</sub\> ≤ n\</i\>, and which therefore delimit a subrange of the \<i\>sequence bounded\</i\> by \<i\>i\<sub\>start\</sub\>\</i\> and \<i\>i\<sub\>end\</sub\>\</i\>. 
 
@@ -279,11 +276,11 @@ itself) and **nil** (denoting the *length* of the *sequence*), or two *integers*
 
 initialization form for the slot that was specified in the **defclass** form for the new class.” 
 
-**26–8** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **car** *n.* 1. a. (of a *cons*) the component of a *cons* corresponding to the first *argument* to **cons**; the other component is the *cdr* . “The function **rplaca** modifies the car of a cons.” b. (of a *list*) the first *element* of the *list*, or **nil** if the *list* is the *empty list*. 2. the *object* that is held in the *car* \<sub\>1\</sub\>. “The function **car** returns the car of a cons.” 
 
@@ -311,9 +308,9 @@ non-negative *integer* less than the *value* of **char-code-limit** that is suit
 
 Glossary **26–9**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **character designator** *n.* a *designator* for a *character* ; that is, an *object* that denotes a *character* and that is one of: a *designator* for a *string* of *length* one (denoting the *character* that is its only *element*), or a *character* (denoting itself). 
 
@@ -341,11 +338,11 @@ class **number**.” (Note that the phrase “the *class* foo” is often substi
 
 Terminology). 
 
-**26–10** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **code** *n.* 1. *Trad.* any representation of actions to be performed, whether conceptual or as an actual *object*, such as *forms*, *lambda expressions*, *objects* of *type function*, text in a *source file*, or instruction sequences in a *compiled file*. This is a generic term; the specific nature of the representation depends on its context. 2. (of a *character* ) a *character code*. 
 
@@ -373,9 +370,9 @@ optimizing one or more qualities of the code, such as run-time speed of *executi
 
 Glossary **26–11**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **compiled file** *n.* a *file* which represents the results of *compiling* the *forms* which appeared in a corresponding *source file*, and which can be *loaded*. See the *function* **compile-file**. 
 
@@ -405,11 +402,11 @@ which might perform some additional optimizations. (Unlike a *macro*, a *compile
 
 **complex rational** *n.* an *object* of *type* **complex** which has a *complex part type* that is a *subtype* of **rational**. A *complex rational* is a *complex* , but it is not a *rational*. No *complex rational* has an imaginary part of zero because such a number is always represented by Common Lisp as an *object* of *type* **rational**; see Section 12.1.5.3 (Rule of Canonical Representation for Complex Rationals). 
 
-**26–12** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **complex single float** *n.* an *object* of *type* **complex** which has a *complex part type* that is a *subtype* of **single-float**. A *complex single float* is a *complex* , but it is not a *single float*. 
 
@@ -441,9 +438,9 @@ requirements of this specification. See Section 1.5 (Conformance).
 
 Glossary **26–13**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 provided that no extension interferes with the correct function of any *conforming program*. 
 
@@ -473,11 +470,11 @@ is, a *keyword* \<sub\>1\</sub\> or a *named constant*. “The symbols **t**, **
 
 **constructed stream** *n.* a *stream* whose source or sink is a Lisp *object*. Note that since a *stream* is another Lisp *object*, *composite streams* are considered *constructed streams*. “A string stream is a constructed stream.” 
 
-**26–14** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **contagion** *n.* a process whereby operations on *objects* of differing *types* (*e.g.*, 
 
@@ -501,9 +498,9 @@ associated with the *error* ) capable of being corrected by invoking that *resta
 
 **current output base** *n.* (in a *dynamic environment*) the *radix* that is the *value* of Glossary **26–15**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **\*print-base\*** in that *environment*, and that is the default *radix* employed by the *Lisp printer* and its related *functions*. 
 
@@ -531,11 +528,11 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **declare** *v.* to *establish* a *declaration*. See **declare**, **declaim**, or **proclaim**. 
 
-**26–16** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **decline** *v.* (of a *handler* ) to return normally without having *handled* the *condition* being *signaled*, permitting the signaling process to continue as if the *handler* had not been present. 
 
@@ -573,9 +570,9 @@ be represented instead as 1.0e-10 or 0.1e-9. By their nature, *denormalized floa
 
 Glossary **26–17**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **derived type** *n.* a *type specifier* which is defined in terms of an expansion into 
 
@@ -609,11 +606,11 @@ already occurred; that is, that the *parameter* is already of the denoted *type*
 
 **disjoint** *n.* (of *types*) having no *elements* in common. 
 
-**26–18** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **dispatching macro character** *n.* a *macro character* that has an associated table that specifies the *function* to be called for each *character* that is seen following the *dispatching macro character* . See the *function* **make-dispatch-macro-character**. 
 
@@ -645,9 +642,9 @@ with *dynamic extent*. A *dynamic environment* contains, among other things: *ex
 
 Glossary **26–19**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **dynamic variable** *n.* a *variable* the *binding* for which is in the *dynamic environment*. See **special**. 
 
@@ -673,11 +670,11 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **end of file** *n.* 1. the point in an *input stream* beyond which there is no further data. Whether or not there is such a point on an *interactive stream* is *implementation defined*. 2. a *situation* that occurs upon an attempt to obtain data from an *input stream* that is at the *end of file*\<sub\>1\</sub\>. 
 
-**26–20** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **environment** *n.* 1. a set of *bindings*. See Section 3.1.1 (Introduction to Environments). 2. an *environment object*. “**macroexpand** takes an optional environment argument.” 
 
@@ -703,9 +700,9 @@ Fri 12-Aug-1994 6:35pm EDT
 
 Glossary **26–21**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **execute** *v.t. Trad.* (*code*) to perform the imperative actions represented by the *code*. **execution time** *n.* the duration of time that *compiled code* is being *executed*. 
 
@@ -732,11 +729,11 @@ number is to be represented as a double float.”
 
 **export** *v.t.* (a *symbol* in a *package*) to add the *symbol* to the list of *external symbols* of the *package*. 
 
-**26–22** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **exported** *adj.* (of a *symbol* in a *package*) being an *external symbol* of the *package*. 
 
@@ -760,9 +757,9 @@ Fri 12-Aug-1994 6:35pm EDT
 
 Glossary **26–23**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 purpose, but offering additional syntax or functionality not available in an *ordinary lambda list*. “**defmacro** uses extended lambda lists.” 
 
@@ -794,11 +791,11 @@ there is a such a definition of a *setf expander F*, the *function* (setf *F*) c
 
 **feature** *n.* 1. an aspect or attribute of Common Lisp, of the *implementation*, or of the *environment*. 2. a *symbol* that names a *feature*\<sub\>1\</sub\>. See Section 24.1.2 (Features). “The :ansi-cl feature is present in all conforming implementations.” 
 
-**26–24** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **feature expression** *n.* A boolean combination of *features* used by the #+ and #- *reader macros* in order to direct conditional *reading* of *expressions* by the *Lisp reader* . See Section 24.1.2.1 (Feature Expressions). 
 
@@ -828,9 +825,9 @@ following the last *element* of the *stream*), or a *file position* (denoting it
 
 Glossary **26–25**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **fixnum** *n.* an *integer* of *type* **fixnum**. 
 
@@ -860,11 +857,11 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **fresh** *adj.* 1. (of an *object yielded* by a *function*) having been newly-allocated by that *function*. (The caller of a *function* that returns a *fresh object* may freely modify the *object* without fear that such modification will compromise the future correct behavior of that *function*.) 2. (of a *binding* for a *name*) newly-allocated; not shared with other *bindings* for that *name*. 
 
-**26–26** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **freshline** *n.* a conceptual operation on a *stream*, implemented by the *function* 
 
@@ -894,9 +891,9 @@ its *function block name* is the *symbol* that is the *cadr* of the *function na
 
 Glossary **26–27**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 contents of the *function cell* named *N* in *environment E*. 2. (of an *fbound symbol S*) the contents of the *symbol*’s *function cell*; that is, the *value* of the *binding* named *S* in the *function namespace* of the *global environment*. (A *name* that is a *macro name* in the *global environment* or is a *special operator* might or might not be *fbound*. But if *S* is such a *name* and is *fbound*, the specific nature of its *functional value* is *implementation-dependent*; in particular, it might or might not be a *function*.) 
 
@@ -926,11 +923,11 @@ represents *false* and all other *objects* represent *true*. See *boolean*.
 
 **gensym** *n. Trad.* an *uninterned symbol*. See the *function* **gensym**. 
 
-**26–28** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **global declaration** *n.* a *form* that makes certain kinds of information about code globally available; that is, a **proclaim** *form* or a **declaim** *form*. 
 
@@ -964,9 +961,9 @@ Fri 12-Aug-1994 6:35pm EDT
 
 Glossary **26–29**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 |\<p\>\*debug-io\* \*error-io\* query-io\* \</p\>\<p\>\*standard-input\* \*standard-output\* \*trace-output\*\</p\>|
 | :- |
@@ -1006,11 +1003,11 @@ Lisp which has been deliberately left unspecified, that might be defined in some
 
 **implicit progn** *n.* an ordered set of adjacent *forms* appearing in another *form*, and defined by their context in that *form* to be executed as if within a **progn**. 
 
-**26–30** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **implicit tagbody** *n.* an ordered set of adjacent *forms* and/or *tags* appearing in another *form*, and defined by their context in that *form* to be executed as if within a **tagbody**. 
 
@@ -1042,9 +1039,9 @@ Fri 12-Aug-1994 6:35pm EDT
 
 Glossary **26–31**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **interactive stream** *n.* a *stream* on which it makes sense to perform interactive 
 
@@ -1072,11 +1069,11 @@ querying. See Section 21.1.1.1.3 (Interactive Streams).
 
 **iteration form** *n.* a *compound form* whose *operator* is named in Figure 26–3, or a *compound form* that has an *implementation-defined operator* and that is defined by the *implementation* to be an *iteration form*. 
 
-**26–32** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 |\<p\>**do do-external-symbols dotimes do\* do-symbols loop** \</p\>\<p\>**do-all-symbols dolist**\</p\>|
 | :- |
@@ -1110,9 +1107,9 @@ any *symbol*, usually but not necessarily in the KEYWORD *package*, that is used
 
 Glossary **26–33**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **lambda list keyword** *n.* a *symbol* whose *name* begins with *ampersand* and that is specially recognized in a *lambda list*. Note that no *standardized lambda list keyword* is in the KEYWORD *package*. 
 
@@ -1144,11 +1141,11 @@ establishing *form*. “The names of parameters to a function normally are lexic
 
 **Lisp image** *n.* a running instantiation of a Common Lisp *implementation*. A *Lisp image* is characterized by a single address space in which any *object* can directly refer to any another in conformance with this specification, and by a single, common, *global environment*. (External operating systems sometimes call this a “core image,” “fork,” “incarnation,” “job,” or “process.” Note however, that the issue of a “process” in such 
 
-**26–34** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 an operating system is technically orthogonal to the issue of a *Lisp image* being defined here. Depending on the operating system, a single “process” might have multiple *Lisp images*, and multiple “processes” might reside in a single *Lisp image*. Hence, it is the idea of a fully shared address space for direct reference among all *objects* which is the defining characteristic. Note, too, that two “processes” which have a communication 
 
@@ -1174,9 +1171,9 @@ area that permits the sharing of some but not all *objects* are considered to be
 
 Glossary **26–35**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **load time value** *n.* an *object* referred to in *code* by a **load-time-value** *form*. The *value* of such a *form* is some specific *object* which can only be computed in the 
 
@@ -1204,11 +1201,11 @@ run-time *environment*. In the case of *file compilation*, the *value* is comput
 
 **lowercase** *adj.* (of a *character* ) being among *standard characters* corresponding to the small letters a through z, or being some other *implementation-defined character* that 
 
-**26–36** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 is defined by the *implementation* to be *lowercase*. See Section 13.1.4.3 (Characters With Case). 
 
@@ -1240,9 +1237,9 @@ abstraction, information hiding, or syntactic convenience); that is, either a *c
 
 Glossary **26–37**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **method** *n.* an *object* that is part of a *generic function* and which provides information about how that *generic function* should behave when its *arguments* are *objects* of certain *classes* or with certain identities. 
 
@@ -1274,11 +1271,11 @@ purpose, but which deviates in syntax or functionality from the definition of an
 
 which is a symbol’s name is returned by **symbol-name**.” 4. *n.* (of a *pathname*) a. the name component, returned by **pathname-name**. b. the entire namestring, returned by **namestring**. 5. *n.* (of a *character* ) a *string* that names the *character* and that 
 
-**26–38** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 has *length* greater than one. (All *non-graphic characters* are required to have *names* unless they have some *implementation-defined attribute* which is not *null*. Whether or not other *characters* have *names* is *implementation-dependent*.) 
 
@@ -1312,9 +1309,9 @@ intent that no special effort should be made by *code* signaling an *error* to m
 
 Glossary **26–39**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **non-graphic** *adj.* (of a *character* ) not *graphic*. See Section 13.1.4.1 (Graphic 
 
@@ -1348,11 +1345,11 @@ constituent *character* when it appears in the middle of an extended token. See 
 
 **null lexical environment** *n.* the *lexical environment* which has no *bindings*. 
 
-**26–40** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **number** *n.* an *object* of *type* **number**. 
 
@@ -1382,9 +1379,9 @@ object-traversing operations.”
 
 Glossary **26–41**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **otherwise inaccessible part** *n.* (of an *object*, *O*\<sub\>1\</sub\>) an *object*, *O*\<sub\>2\</sub\>, which would 
 
@@ -1414,11 +1411,11 @@ computational “parallelism” since the *forms* that produce *values* are eval
 
 *sequentially*. See *sequential*. 
 
-**26–42** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **parameter** *n.* 1. (of a *function*) a *variable* in the definition of a *function* which takes on the *value* of a corresponding *argument* (or of a *list* of corresponding arguments) to that *function* when it is called, or which in some cases is given a default value because there is no corresponding *argument*. 2. (of a *format directive*) an *object* received as 
 
@@ -1452,9 +1449,9 @@ conceptual location referred to by such a *place*\<sub\>1\</sub\>.
 
 Glossary **26–43**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **pprint dispatch table** *n.* an *object* that can be the *value* of **\*print-pprint-dispatch\*** and hence can control how *objects* are printed when **\*print-pretty\*** is *true*. See Section 22.2.1.4 (Pretty Print Dispatch Tables). 
 
@@ -1480,11 +1477,11 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **printer control variable** *n.* a *variable* whose specific purpose is to control some action of the *Lisp printer* ; that is, one of the *variables* in Figure 22–1, or else some *implementation-defined variable* which is defined by the *implementation* to be a *printer control variable*. 
 
-**26–44** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **printer escaping** *n.* The combined state of the *printer control variables* 
 
@@ -1524,9 +1521,9 @@ or **\*print-escape\*** is *true*, then *printer escaping* is “enabled”; oth
 
 Glossary **26–45**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **property list** *n.* 1. a *list* containing an even number of *elements* that are alternating *names* (sometimes called *indicators* or *keys*) and *values* (sometimes called *properties*). When there is more than one *name* and *value* pair with the *identical name* in 
 
@@ -1558,11 +1555,11 @@ expresses intention to conform, regardless of whether the goal of that intention
 
 **ratio** *n.* an *object* of *type* **ratio**. 
 
-**26–46** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **ratio marker** *n.* a character which is used in the textual notation for a *ratio* to separate the numerator from the denominator, and which is *slash* in the *standard readtable*. See Section 2.1 (Character Syntax). 
 
@@ -1600,9 +1597,9 @@ Printer).
 
 Glossary **26–47**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **registered package** *n.* a *package object* that is installed in the *package registry*. (Every *registered package* has a *name* that is a *string*, as well as zero or more *string* nicknames. All *packages* that are initially specified by Common Lisp or created by **make-package** or **defpackage** are *registered packages*. *Registered packages* can be turned into *unregistered packages* by **delete-package**.) 
 
@@ -1640,11 +1637,11 @@ The primary purpose of a *restart function* is to provide an alternate interface
 
 **Figure 26–4. Standardized Restart Functions** 
 
-**26–48** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **return** *v.t.* (of *values*) 1. (from a *block*) to transfer control and *values* from the *block*; that is, to cause the *block* to *yield* the *values* immediately without doing any further evaluation of the *forms* in its body. 2. (from a *form*) to *yield* the *values*. 
 
@@ -1680,9 +1677,9 @@ of calling the *sequence function*’s *key argument* on the *object* being cons
 
 Glossary **26–49**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 *argument* returns *true* when given a first *argument* that is the *object* being considered, and when given a second *argument* that is the result of calling the *sequence function*’s *key argument* on an *element* of the *sequence function*’s *sequence argument* which is being tested for equality; or to be in a state such that the *test-not function* returns *false* given the same *arguments*. See Section 17.2.1 (Satisfying a Two-Argument Test). 
 
@@ -1710,11 +1707,11 @@ self-evaluating objects.”
 
 **sequentially** *adv.* in a *sequential* way. 
 
-**26–50** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **serious condition** *n.* a *condition* of *type* **serious-condition**, which represents a 
 
@@ -1752,9 +1749,9 @@ represented by a *condition*, has been detected. See Section 9.1 (Condition Syst
 
 Glossary **26–51**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **signature** *n.* (of a *method*) a description of the *parameters* and *parameter specializers* for the *method* which determines the *method*’s applicability for a given set of 
 
@@ -1790,11 +1787,11 @@ required *arguments*, and which also describes the *argument* conventions for it
 
 **singleton** *adj.* (of a *sequence*) having only one *element*. “(list ’hello) returns a singleton list.” 
 
-**26–52** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **situation** *n.* the *evaluation* of a *form* in a specific *environment*. 
 
@@ -1826,9 +1823,9 @@ Fri 12-Aug-1994 6:35pm EDT
 
 Glossary **26–53**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **stack allocate** *v.t. Trad.* to allocate in a non-permanent way, such as on a stack. Stack-allocation is an optimization technique used in some *implementations* for 
 
@@ -1860,11 +1857,11 @@ other *readtables*, must never be modified by any program. (Although the definit
 
 actually *implementation-dependent* whether a single *object* fills the role of the *standard readtable*, or whether there might be multiple such objects, any one of which could be used on any given occasion where “the *standard readtable*” is called for. As such, 
 
-**26–54** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 this phrase should be seen as an indefinite reference in all cases except for anaphoric references.) 
 
@@ -1900,9 +1897,9 @@ cannot be created with **make-two-way-stream**, **make-echo-stream**,
 
 Glossary **26–55**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **string designator** *n.* a *designator* for a *string*; that is, an *object* that denotes a *string* and that is one of: a *character* (denoting a *singleton string* that has the *character* as its only *element*), a *symbol* (denoting the *string* that is its *name*), or a *string* (denoting itself). The intent is that this term be consistent with the behavior of **string**; *implementations* that extend **string** must extend the meaning of this term in a compatible way. 
 
@@ -1936,11 +1933,11 @@ membership of another *type*, called a *supertype*. (Every *type* is a *subtype*
 
 **supertype** *n.* a *type* whose membership is the same as or a proper superset of the membership of another *type*, called a *subtype*. (Every *type* is a *supertype* of itself.) See *subtype*. 
 
-**26–56** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **supplied-p parameter** *n.* a *parameter* which recieves its *generalized boolean* value implicitly due to the presence or absence of an *argument* corresponding to another *parameter* (such as an *optional parameter* or a *rest parameter* ). See Section 3.4.1 (Ordinary Lambda Lists). 
 
@@ -1980,9 +1977,9 @@ representing true. (Although any *object* other than **nil** is considered *true
 
 Glossary **26–57**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **tail** *n.* (of a *list*) an *object* that is the *same* as either some *cons* which makes up that *list* or the *atom* (if any) which terminates the *list*. “The empty list is a tail of every proper list.” 
 
@@ -2012,11 +2009,11 @@ Fri 12-Aug-1994 6:35pm EDT
 
 **\*trace-output\***. 
 
-**26–58** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **tree** *n.* 1. a binary recursive data structure made up of *conses* and *atoms*: the *conses* are themselves also *trees* (sometimes called “subtrees” or “branches”), and the *atoms* are terminal nodes (sometimes called *leaves*). Typically, the *leaves* represent data while the branches establish some relationship among that data. 2. in general, any recursive data structure that has some notion of “branches” and *leaves*. 
 
@@ -2048,9 +2045,9 @@ this internally, and some situations involving *type specifiers* are most easily
 
 Glossary **26–59**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **unbound variable** *n.* a *name* that is syntactically plausible as the name of a *variable* but which is not *bound* in the *variable namespace*. 
 
@@ -2086,11 +2083,11 @@ when choosing an appropriately *specialized array* representation. See the *func
 
 **upgraded complex part type** *n.* (of a *type*) a *type* that is a *supertype* of the *type* and that is used instead of the *type* whenever the *type* is used as a *complex part type* for object creation or type discrimination. See the *function* **upgraded-complex-part-type**. 
 
-**26–60** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **uppercase** *adj.* (of a *character* ) being among *standard characters* corresponding to the capital letters A through Z, or being some other *implementation-defined character* that is defined by the *implementation* to be *uppercase*. See Section 13.1.4.3 (Characters With Case). 
 
@@ -2116,9 +2113,9 @@ Such a *fixnum* must be greater than or equal to zero, and less than the *value*
 
 Glossary **26–61**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **valid pathname device** *n.* a *string*, **nil**, :unspecific, or some other *object* defined by the *implementation* to be a *valid pathname device*. 
 
@@ -2150,11 +2147,11 @@ several *objects* that result from the *evaluation* of the last *form*, or **nil
 
 **vector** *n.* a one-dimensional *array*. 
 
-**vertical-bar** *n.* the *standard character* that is called “vertical bar” (|). See Figure 2–5. **26–62** Programming Language—Common Lisp
+**vertical-bar** *n.* the *standard character* that is called “vertical bar” (|). See Figure 2–5. 
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **W** 
 
@@ -2176,8 +2173,8 @@ possibly several *pathnames*, and which can therefore be used to refer to the ag
 
 Glossary **26–63**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
-**26–64** Programming Language—Common Lisp
+

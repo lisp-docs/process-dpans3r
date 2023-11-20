@@ -1,20 +1,17 @@
-﻿Version 15.17R, X3J13/94-101R. 
+﻿ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
-**Programming Language—Common Lisp** 
+ 
 
 **17. Sequences** 
+  
 
-Sequences **i**
 
-Version 15.17R, X3J13/94-101R. Fri 12-Aug-1994 6:35pm EDT 
 
-**ii** Programming Language—Common Lisp
+ 
 
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **17.1 Sequence Concepts** 
 
@@ -36,9 +33,9 @@ In general, *lists* (including *association lists* and *property lists*) that ar
 
 Sequences **17–1**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **17.2 Rules about Test Functions** 
 
@@ -64,11 +61,11 @@ If neither a :test nor a :test-not *argument* is supplied, it is as if a :test a
 
 The consequences are unspecified if both a :test and a :test-not *argument* are supplied in the same *call* to *F*. 
 
-**17–2** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **17.2.1.1 Examples of Satisfying a Two-Argument Test** 
 
@@ -126,9 +123,9 @@ When using one of the *functions* in Figure 17–3, the elements *E* of a *seque
 
 Sequences **17–3**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 The element \<i\>E\<sub\>i\</sub\>\</i\> might not be considered directly. If a :key \<i\>argument\</i\> is provided, it is a \<i\>designator\</i\> for a \<i\>function\</i\> of one \<i\>argument\</i\> to be called with each \<i\>E\<sub\>i\</sub\>\</i\> as an \<i\>argument\</i\>, and \<i\>yielding\</i\> an \<i\>object Z\<sub\>i\</sub\>\</i\> to be used for comparison. (If there is no :key \<i\>argument\</i\>, \<i\>Z\<sub\>i\</sub\>\</i\>is \<i\>E\<sub\>i\</sub\>\</i\>.) 
 
@@ -152,11 +149,11 @@ The element \<i\>E\<sub\>i\</sub\>\</i\> might not be considered directly. If a 
 
 *→* 3 
 
-**17–4** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **sequence** *System Class* 
 
@@ -208,9 +205,9 @@ Should be prepared to signal an error of *type* **type-error** if *sequence* is 
 
 Sequences **17–5**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Notes:** 
 
@@ -260,11 +257,11 @@ Should be prepared to signal an error of *type* **type-error** if *sequence* is 
 
 **Notes:** 
 
-**aref** may be used to *access vector* elements that are beyond the *vector* ’s *fill pointer* . **17–6** Programming Language—Common Lisp
+**aref** may be used to *access vector* elements that are beyond the *vector* ’s *fill pointer* . 
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **fill** *Function* 
 
@@ -318,9 +315,9 @@ Should be prepared to signal an error of *type* **type-error** if *sequence* is 
 
 Sequences **17–7**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **make-sequence** 
 
@@ -374,11 +371,11 @@ The *implementation*.
 
 The consequences are unspecified if *initial-element* is not an *object* which can be stored in the resulting *sequence*. 
 
-**17–8** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 An error of *type* **type-error** must be signaled if the *result-type* is neither a *recognizable subtype* of **list**, nor a *recognizable subtype* of **vector**. 
 
@@ -424,9 +421,9 @@ If *sequence* is a *vector* , the result is a *fresh simple array* of *rank* one
 
 Sequences **17–9**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 length, the shorter length determines the number of elements that are replaced. The remaining *elements* at the end of the longer sequence are not modified in the operation. 
 
@@ -474,11 +471,11 @@ Applies *function* to successive sets of arguments in which one argument is obta
 
 **map** returns **nil** if *result-type* is **nil**. Otherwise, **map** returns a *sequence* such that element j is the result of applying *function* to element j of each of the *sequences*. The result *sequence* is as long as the shortest of the *sequences*. The consequences are undefined if the result of applying *function* to 
 
-**17–10** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 the successive elements of the *sequences* cannot be contained in a *sequence* of the *type* given by *result-type*. 
 
@@ -526,9 +523,9 @@ Section 3.6 (Traversal Rules and Side Effects)
 
 Sequences **17–11**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **map-into** 
 
@@ -578,11 +575,11 @@ Should be prepared to signal an error of *type* **type-error** if *result-sequen
 
 **map-into** differs from **map** in that it modifies an existing *sequence* rather than creating a new one. In addition, **map-into** can be called with only two arguments, while **map** requires at least three 
 
-**17–12** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 arguments. 
 
@@ -636,9 +633,9 @@ If *key* is supplied, it is used is used to extract the values to reduce. The *k
 
 Sequences **17–13**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 the value of *initial-value*, if supplied. The *key* function typically returns part of the *element* of *sequence*. If *key* is not supplied or is **nil**, the *sequence element* itself is used. 
 
@@ -688,11 +685,11 @@ Should be prepared to signal an error of *type* **type-error** if *sequence* is 
 
 Section 3.6 (Traversal Rules and Side Effects) 
 
-**17–14** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **count, count-if, count-if-not** 
 
@@ -740,9 +737,9 @@ The *from-end* has no direct effect on the result. However, if *from-end* is *tr
 
 Should be prepared to signal an error of *type* **type-error** if *sequence* is not a *proper sequence*. Sequences **17–15**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **See Also:** 
 
@@ -796,11 +793,11 @@ Should be prepared to signal an error of *type* **type-error** if *sequence* is 
 
 **list-length**, **sequence** 
 
-**17–16** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **reverse, nreverse** 
 
@@ -858,9 +855,9 @@ l *→ implementation-dependent*
 
 Sequences **17–17**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Exceptional Situations:** 
 
@@ -894,11 +891,11 @@ The argument to the *key* function is the *sequence* element. The return value o
 
 If the *key* and *predicate* always return, then the sorting operation will always terminate, producing a *sequence* containing the same *elements* as *sequence* (that is, the result is a permutation of *sequence*). This is guaranteed even if the *predicate* does not really consistently represent a total order (in which case the *elements* will be scrambled in some unpredictable way, but no *element* will be lost). If the *key* consistently returns meaningful keys, and the *predicate* does reflect some total ordering criterion on those keys, then the *elements* of the *sorted-sequence* will be properly sorted according to that ordering. 
 
-**17–18** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **sort, stable-sort** 
 
@@ -980,9 +977,9 @@ The sorting operation can be destructive in all cases. In the case of a *vector*
 
 Sequences **17–19**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 (("Dick" "Waters") "Iteration") 
 
@@ -1032,11 +1029,11 @@ If *sequence* is a *vector* , the result might or might not be simple, and might
 
 *element*—an *element* of the *sequence*, or **nil**. 
 
-**17–20** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Description:** 
 
@@ -1092,9 +1089,9 @@ The *function* **find-if-not** is deprecated.
 
 *predicate*—a *designator* for a *function* of one argument that returns a *generalized boolean*. Sequences **17–21**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 *from-end*—a *generalized boolean*. The default is *false*. 
 
@@ -1136,11 +1133,11 @@ The :test-not *argument* is deprecated.
 
 The *function* **position-if-not** is deprecated. 
 
-**17–22** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **search** 
 
@@ -1188,9 +1185,9 @@ If *from-end* is *true*, the index of the leftmost element of the rightmost matc
 
 Sequences **17–23**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **See Also:** 
 
@@ -1230,11 +1227,11 @@ The specified subsequences of *sequence-1* and *sequence-2* are compared element
 
 If *sequence-1* and *sequence-2* are of equal length and match in every element, the result is *false*. Otherwise, the result is a non-negative *integer* , the index within *sequence-1* of the leftmost or rightmost position, depending on *from-end*, at which the two subsequences fail to match. If one subsequence is shorter than and a matching prefix of the other, the result is the index relative to *sequence-1* beyond the last position tested. 
 
-**17–24** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 If *from-end* is *true*, then one plus the index of the rightmost position in which the *sequences* differ is returned. In effect, the subsequences are aligned at their right-hand ends; then, the last elements are compared, the penultimate elements, and so on. The index returned is an index relative to *sequence-1*. 
 
@@ -1280,9 +1277,9 @@ Destructively modifies *sequence-1* by replacing the *elements* of *subsequence-
 
 Sequences **17–25**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 (min (- *end1 start1*) (- *end2 start2*)) 
 
@@ -1330,11 +1327,11 @@ The *sequence-1* is modified.
 
 **nsubstitute** *newitem olditem sequence* &key *from-end test test-not start end count key → sequence* 
 
-**17–26** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **substitute, substitute-if, substitute-if-not,** *. . .* 
 
@@ -1382,9 +1379,9 @@ Supplying a *from-end* of *true* matters only when the *count* is provided (and 
 
 Sequences **17–27**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **substitute, substitute-if, substitute-if-not,** *. . .* 
 
@@ -1446,11 +1443,11 @@ Should be prepared to signal an error of *type* **type-error** if *sequence* is 
 
 **Notes:** 
 
-If *sequence* is a *vector* , the result might or might not be simple, and might or might not be *identical* **17–28** Programming Language—Common Lisp
+If *sequence* is a *vector* , the result might or might not be simple, and might or might not be *identical* 
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 to *sequence*. 
 
@@ -1498,9 +1495,9 @@ It is an error if any element of the *sequences* cannot be an element of the *se
 
 Sequences **17–29**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 If the *result-type* is a *subtype* of **vector**, then if the implementation can determine the element type specified for the *result-type*, the element type of the resulting array is the result of *upgrading* that element type; or, if the implementation can determine that the element type is unspecified (or \*), the element type of the resulting array is **t**; otherwise, an error is signaled. 
 
@@ -1544,11 +1541,11 @@ An error of *type* **type-error** should be signaled if *result-type* specifies 
 
 *result-sequence*—a *proper sequence* of *type result-type*. 
 
-**17–30** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **merge** 
 
@@ -1590,9 +1587,9 @@ If the *result-type* is a *subtype* of **vector**, then if the implementation ca
 
 Sequences **17–31**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 (setq test2 (vector ((yellow . 2) (green . 7)))) 
 
@@ -1632,11 +1629,11 @@ An error of *type* **type-error** should be signaled if *result-type* specifies 
 
 *test*—a *designator* for a *function* of one *argument* that returns a *generalized boolean*. *from-end*—a *generalized boolean*. The default is *false*. 
 
-*test*—a *designator* for a *function* of two *arguments* that returns a *generalized boolean*. **17–32** Programming Language—Common Lisp
+*test*—a *designator* for a *function* of two *arguments* that returns a *generalized boolean*. 
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **remove, remove-if, remove-if-not, delete, delete-if,** *. . .* 
 
@@ -1674,9 +1671,9 @@ For all these functions, elements not removed or deleted occur in the same order
 
 Sequences **17–33**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **remove, remove-if, remove-if-not, delete, delete-if,** *. . .* 
 
@@ -1756,11 +1753,11 @@ bar *→* ((C)) or ...
 
 (eq (cdr foo) (car bar)) *→* T or ... 
 
-**17–34** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Side Effects:** 
 
@@ -1812,9 +1809,9 @@ The functions **delete-if-not** and **remove-if-not** are deprecated.
 
 Sequences **17–35**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **remove-duplicates, delete-duplicates** 
 
@@ -1866,11 +1863,11 @@ Should signal an error of *type* **type-error** if *sequence* is not a *proper s
 
 **See Also:** 
 
-Section 3.2.1 (Compiler Terminology), Section 3.6 (Traversal Rules and Side Effects) **17–36** Programming Language—Common Lisp
+Section 3.2.1 (Compiler Terminology), Section 3.6 (Traversal Rules and Side Effects) 
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **remove-duplicates, delete-duplicates** 
 
@@ -1884,8 +1881,8 @@ These functions are useful for converting *sequence* into a canonical form suita
 
 Sequences **17–37**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
-**17–38** Programming Language—Common Lisp
+

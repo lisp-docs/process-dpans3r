@@ -1,20 +1,17 @@
-﻿Version 15.17R, X3J13/94-101R. 
+﻿ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
-**Programming Language—Common Lisp** 
+ 
 
 **13. Characters** 
+  
 
-Characters **i**
 
-Version 15.17R, X3J13/94-101R. Fri 12-Aug-1994 6:35pm EDT 
 
-**ii** Programming Language—Common Lisp
+ 
 
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **13.1 Character Concepts** 
 
@@ -46,9 +43,9 @@ Figure 13–2 lists some *character* construction and conversion *defined names*
 
 Characters **13–1**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **13.1.2.1 Character Scripts** 
 
@@ -76,11 +73,11 @@ Additional, *implementation-defined attributes* of *characters* are also permitt
 
 For any *implementation-defined attribute* there is a distinguished value called the *null* value for that *attribute*. A *character* for which each *implementation-defined attribute* has the null value for that *attribute* is called a *simple character* . If the *implementation* has no *implementation-defined attributes*, then all *characters* are *simple characters*. 
 
-**13–2** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **13.1.4 Character Categories** 
 
@@ -118,9 +115,9 @@ The *characters* with *case* are a subset of the *alphabetic*\<sub\>1\</sub\> *c
 
 Characters **13–3**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **13.1.4.3.1 Uppercase Characters** 
 
@@ -158,11 +155,11 @@ For each *implementation-defined graphic character* that has no *case*, the *imp
 
 The set of *alphanumeric characters* is the union of the set of *alphabetic*\<sub\>1\</sub\> *characters* and the set of *numeric characters*. 
 
-**13–4** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **13.1.4.6 Digits in a Radix** 
 
@@ -204,9 +201,9 @@ This implies that, for *standard characters*, *alphabetic*\<sub\>1\</sub\> order
 
 Characters **13–5**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **13.1.7 Character Names** 
 
@@ -248,11 +245,11 @@ The line-feed character.
 
 In some *implementations*, one or more of these *character names* might denote a *standard character* ; for example, #\Linefeed and #\Newline might be the *same character* in some *implementations*. 
 
-**13–6** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **13.1.8 Treatment of Newline during Input and Output** 
 
@@ -280,9 +277,9 @@ An *implementation* must document the *character scripts* it supports. For each 
 
 Characters **13–7**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **character** *System Class* 
 
@@ -322,11 +319,11 @@ The *type* **base-char** is defined as the *upgraded array element type* of **st
 
 Whether a character is a *base character* depends on the way that an *implementation* represents *strings*, and not any other properties of the *implementation* or the host operating system. For example, one implementation might encode all *strings* as characters having 16-bit encodings, and another might have two kinds of *strings*: those with characters having 8-bit encodings and those with characters having 16-bit encodings. In the first *implementation*, the *type* **base-char** is 
 
-**13–8** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 equivalent to the *type* **character**: there is only one kind of *string*. In the second *implementation*, the *base characters* might be those *characters* that could be stored in a *string* of *characters* having 8-bit encodings. In such an implementation, the *type* **base-char** is a *proper subtype* of the *type* **character**. 
 
@@ -364,9 +361,9 @@ The *type* **extended-char** might have no *elements*\<sub\>4\</sub\> in *implem
 
 Characters **13–9**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **char=, char/=, char***\<***, char***\>***, char***\<***=, char***\>***=,** *. . .* 
 
@@ -418,11 +415,11 @@ These predicates compare *characters*.
 
 **char**\<**=** returns *true* if the *characters* are monotonically nondecreasing; otherwise, it returns *false*. If two *characters* have *identical implementation-defined attributes*, then their ordering by **char**\<**=** is consistent with the numerical ordering by the predicate \<= on their *codes*. 
 
-**char**\>**=** returns *true* if the *characters* are monotonically nonincreasing; otherwise, it returns *false*. **13–10** Programming Language—Common Lisp
+**char**\>**=** returns *true* if the *characters* are monotonically nonincreasing; otherwise, it returns *false*. 
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **char=, char/=, char***\<***, char***\>***, char***\<***=, char***\>***=,** *. . .* 
 
@@ -502,9 +499,9 @@ If two *characters* have *identical implementation-defined attributes*, then the
 
 Characters **13–11**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 (stable-sort (list #\b #\A #\B #\a #\c #\C) #’char-lessp) 
 
@@ -554,11 +551,11 @@ The manner in which *case* is used by **char-equal**, **char-not-equal**, **char
 
 Returns the *character* denoted by the *character designator* . 
 
-**13–12** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Examples:** 
 
@@ -622,9 +619,9 @@ Returns *true* if *object* is of *type* **character**; otherwise, returns *false
 
 Characters **13–13**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **See Also:** 
 
@@ -674,11 +671,11 @@ Should signal an error of *type* **type-error** if *character* is not a *charact
 
 **See Also:** 
 
-**alphanumericp**, Section 13.1.10 (Documentation of Implementation-Defined Scripts) **13–14** Programming Language—Common Lisp
+**alphanumericp**, Section 13.1.10 (Documentation of Implementation-Defined Scripts) 
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **alphanumericp** *Function* 
 
@@ -728,9 +725,9 @@ Alphanumeric characters are graphic as defined by **graphic-char-p**. The alphan
 
 Characters **13–15**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **digit-char** *Function* 
 
@@ -786,11 +783,11 @@ If *weight* is greater than or equal to *radix*, **digit-char** returns *false*.
 
 *char*—a *character* . 
 
-**13–16** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 *radix*—a *radix* . The default is 10. 
 
@@ -856,9 +853,9 @@ Digits are *graphic characters*.
 
 Characters **13–17**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 *generalized-boolean*—a *generalized boolean*. 
 
@@ -916,11 +913,11 @@ Returns *true* if *character* is of *type* **standard-char**; otherwise, returns
 
 Should signal an error of *type* **type-error** if *character* is not a *character* . 
 
-**13–18** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **char-upcase, char-downcase** 
 
@@ -990,9 +987,9 @@ Should signal an error of *type* **type-error** if *character* is not a *charact
 
 Characters **13–19**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **See Also:** 
 
@@ -1044,11 +1041,11 @@ These functions test the case of a given *character*.
 
 (lower-case-p #\Bell) *→ false* 
 
-**13–20** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Exceptional Situations:** 
 
@@ -1094,9 +1091,9 @@ Should signal an error of *type* **type-error** if *character* is not a *charact
 
 Characters **13–21**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **char-int** *Function* 
 
@@ -1144,11 +1141,11 @@ for characters *c1* and *c2*.
 
 *char-p*—a *character* or **nil**. 
 
-**13–22** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Description:** 
 
@@ -1190,9 +1187,9 @@ The *value* of **char-code-limit** might be larger than the actual number of *ch
 
 Characters **13–23**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **char-name** 
 
@@ -1248,11 +1245,11 @@ The *standard characters hNewlinei* and *hSpacei* have the respective names "New
 
 (prin1-to-string (read-from-string (format nil "#\\~A" (or (char-name #\A) "A")))) *→* "#\\A" 
 
-**13–24** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Exceptional Situations:** 
 
@@ -1304,8 +1301,8 @@ Should signal an error of *type* **type-error** if *name* is not a *string desig
 
 Characters **13–25**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
-**13–26** Programming Language—Common Lisp
+

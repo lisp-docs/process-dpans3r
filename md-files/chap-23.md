@@ -1,20 +1,17 @@
-﻿Version 15.17R, X3J13/94-101R. 
+﻿ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
-**Programming Language—Common Lisp** 
+ 
 
 **23. Reader** 
+  
 
-Reader **i**
 
-Version 15.17R, X3J13/94-101R. Fri 12-Aug-1994 6:35pm EDT 
 
-**ii** Programming Language—Common Lisp
+ 
 
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **23.1 Reader Concepts** 
 
@@ -66,9 +63,9 @@ input
 
 Reader **23–1**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 The output from (test-readtable-case-reading) should be as follows: 
 
@@ -108,11 +105,11 @@ READTABLE-CASE Input Symbol-name
 
 Functions such as **read** that read the representation of an *object* rather than a single character always signals an error, regardless of *eof-error-p*, if the file ends in the middle of an object representation. For example, if a file does not contain enough right parentheses to balance the left parentheses in it, **read** signals an error. If a file ends in a *symbol* or a *number* immediately followed by end-of-file, **read** reads the *symbol* or *number* successfully and when called again will act according to *eof-error-p*. Similarly, the *function* **read-line** successfully reads the last line of a file even if that line is terminated by end-of-file rather than the newline character. Ignorable text, such as lines containing only *whitespace*\<sub\>2\</sub\> or comments, are not considered to begin an *object*; if **read** begins to read an *expression* but sees only such ignorable text, it does not consider the file to end in the middle of an *object*. Thus an *eof-error-p* argument controls what happens when the file ends between *objects*. 
 
-**23–2** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **23.1.3.2 The RECURSIVE-P argument** 
 
@@ -148,9 +145,9 @@ then each call to the *single-quote reader macro function* would establish indep
 
 Reader **23–3**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **readtable** *System Class* 
 
@@ -200,11 +197,11 @@ zvar *→* 123
 
 (copy-readtable table2 \*readtable\*) *→* #\<READTABLE 614000277\> 
 
-**23–4** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 zvar *→* VAR 
 
@@ -256,9 +253,9 @@ Initially, every *character* in the dispatch table associated with the *char* ha
 
 Reader **23–5**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 If *non-terminating-p* is *true*, the *dispatching macro character* is made a *non-terminating macro character* ; if *non-terminating-p* is *false*, the *dispatching macro character* is made a *terminating macro character* . 
 
@@ -306,11 +303,11 @@ The *readtable* is altered.
 
 **read-preserving-whitespace** is like **read** but preserves any *whitespace*\<sub\>2\</sub\> *character* that delimits the printed representation of the *object*. **read-preserving-whitespace** is exactly like **read** when the *recursive-p argument* to **read-preserving-whitespace** is *true*. 
 
-**23–6** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **read, read-preserving-whitespace** 
 
@@ -374,9 +371,9 @@ The / macro reads objects separated by more / characters; thus /usr/games/zork i
 
 Reader **23–7**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 (zyedh (path usr games zork) (path usr games boggle)) 
 
@@ -416,11 +413,11 @@ If *eof-error-p* is *true*, an error of *type* **end-of-file** is signaled at th
 
 *list*—a *list* of the *objects* read. 
 
-**23–8** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **read-delimited-list** 
 
@@ -472,9 +469,9 @@ shown above were not included, then the \} in
 
 Reader **23–9**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 would be considered a constituent character, part of the symbol named a\}. This could be corrected by putting a space before the \}, but it is better to call **set-macro-character**. 
 
@@ -518,11 +515,11 @@ Giving \} the same definition as the standard definition of the character ) has 
 
 *position*—an *integer* greater than or equal to zero, and less than or equal to one more than the *length* of the *string*. 
 
-**23–10** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **Description:** 
 
@@ -568,9 +565,9 @@ The reason that *position* is allowed to be beyond the *length* of the *string* 
 
 Reader **23–11**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Description:** 
 
@@ -620,11 +617,11 @@ Returns *true* if *object* is of *type* **readtable**; otherwise, returns *false
 
 (readtablep *object*) *≡* (typep *object* ’readtable) 
 
-**23–12** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **set-dispatch-macro-character,** *. . .* 
 
@@ -678,9 +675,9 @@ For more information about how the *new-function* is invoked, see Section 2.1.4.
 
 Reader **23–13**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 list))) *→* T 
 
@@ -738,11 +735,11 @@ It is necessary to use **make-dispatch-macro-character** to set up the dispatch 
 
 *non-terminating-p*—a *generalized boolean*. The default is *false*. 
 
-**23–14** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 **set-macro-character, get-macro-character** 
 
@@ -804,9 +801,9 @@ The *readtable* is modified.
 
 Reader **23–15**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **set-syntax-from-char** *Function* 
 
@@ -848,11 +845,11 @@ The existing values in the *from-readtable*.
 
 **See Also:** 
 
-**set-macro-character**, **make-dispatch-macro-character**, Section 2.1.4 (Character Syntax Types) **23–16** Programming Language—Common Lisp
+**set-macro-character**, **make-dispatch-macro-character**, Section 2.1.4 (Character Syntax Types) 
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Notes:** 
 
@@ -876,9 +873,9 @@ Within the dynamic extent of the body of *forms*, all reader/printer control var
 
 Reader **23–17**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 |**Variable Value**|
 | :- |
@@ -903,11 +900,11 @@ Fri 12-Aug-1994 6:35pm EDT
 
 (setq data (read file)))) 
 
-**23–18** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 *∗***read-base***∗ Variable* 
 
@@ -963,9 +960,9 @@ one of the *atomic type specifiers* **short-float**, **single-float**, **double-
 
 Reader **23–19**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 **Initial Value:** 
 
@@ -1009,11 +1006,11 @@ If it is *true*, the #. *reader macro* has its normal effect. Otherwise, that *r
 
 If **\*read-eval\*** is *false* and **\*print-readably\*** is *true*, any *method* for **print-object** that would output a reference to the #. *reader macro* either outputs something different or signals an error of *type* **print-not-readable**. 
 
-**23–20** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 *∗***read-suppress***∗ Variable* 
 
@@ -1047,9 +1044,9 @@ The #= notation is totally ignored. It does not read a following *object*. It pr
 
 Reader **23–21**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
 \## 
 
@@ -1097,11 +1094,11 @@ The *value* of **\*readtable\*** is called the *current readtable*. It controls 
 
 (readtablep \*readtable\*) *→ true* 
 
-**23–22** Programming Language—Common Lisp
 
-Version 15.17R, X3J13/94-101R. 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
+
+ 
 
 (setq zvar 123) *→* 123 
 
@@ -1141,8 +1138,8 @@ The *type* **reader-error** consists of error conditions that are related to tok
 
 Reader **23–23**
 
-Version 15.17R, X3J13/94-101R. 
+ 
 
-Fri 12-Aug-1994 6:35pm EDT 
+ 
 
-**23–24** Programming Language—Common Lisp
+

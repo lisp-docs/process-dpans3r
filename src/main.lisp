@@ -89,6 +89,9 @@
 	(alexandria-2:read-file-into-string
 	 (get-filepath "chap-2.md"))))
 
+(defun load-file (filepath)
+  (alexandria-2:read-file-into-string filepath))
+
 (defvar *c2* (load-ch2))
 
 (defun save-file (filename string-data)
@@ -121,28 +124,6 @@
   (setf *c2* (replace-html-chars *c2*))
   (save-ch2))
 
-;; Loop through directory and get all .md files
-;; For each file
-;;   create a dir called name minues .md
-;;   create a file called file (including the .md) in same directory as the new directory
-;;   in that file add the contents of the very first subsection AKA X before the X.1
-;;   then for each sub section add both a folder and a file with the name of that subsection
-;;     inside that folder, create a file for each subsubsection and fill it
-;;     in the description file of the subsection add import statements in the very top
-;;     `import Hide from './_hide.md';` for each component, need to change dots to dashes
-;;      and need to remove spaces, title case, etc...
-;;      need to add a category, description not needed, but label, position?,
-;;    add the first file as an introduction maybe...
-;;   need to add headings where the files are imported, and then import them
-
-;; eventually will need to do the linking...
-
-;; ensure-directories-exist
-
-;; make output dir variable...
-
-
-
 
 (defun get-output-dir ()
   (asdf:system-relative-pathname "html-to-md" "output/"))
@@ -159,9 +140,46 @@
 (defun filename-from-pathname (pathname)
   (car (last (str:split "/" (namestring pathname)))))
 
+;; Loop through directory and get all .md files
+;; For each file
+;;   create a dir called name minues .md
+;;    replace html chars...
+;;   create a file called file (including the .md) in same directory as the new directory
+;;   in that file add the contents of the very first subsection AKA X before the X.1
+;;   then for each sub section add both a folder and a file with the name of that subsection
+;;     inside that folder, create a file for each subsubsection and fill it
+;;     in the description file of the subsection add import statements in the very top
+;;     `import Hide from './_hide.md';` for each component, need to change dots to dashes
+;;      and need to remove spaces, title case, etc...
+;;      need to add a category, description not needed, but label, position?,
+;;    add the first file as an introduction maybe...
+;;   need to add headings where the files are imported, and then import them
+
+;; eventually will need to do the linking...
+
+;; make output dir variable...
+
 (defun process-file (filepath)
+  (let* ((chapter-contents (load-file filepath))
+	 (md-escaped-chapter (replace-html-chars chapter-contents))
+	 (processed-titles (cl-ppcre:regex-replace-all
+			    "[^\\n]\\*\\*\\d+(\\.\\d+)*(\\s*\\w)+\\*\\*"
+			    md-escaped-chapter
+			    (concatenate 'string '(#\Newline) "\\&" '(#\Newline))))
+	 (chapter-sections (get-chapter-sections md-escaped-chapter))))
+  ;; i should search here for all subsection or section titles which are not in a new
+  ;;   line, so anything that's [^\\n]\\*\\*\\d+(.\\d+)*(\\s*\\w)+\\*\\*
+  ;; (cl-ppcre:all-matches "[^\\n]\\*\\*\\d+(\\.\\d+)*(\\s*\\w)+\\*\\*" *c2*)
+  ;; (cl-ppcre:regex-replace-all
+  ;;  "[^\\n]\\*\\*\\d+(\\.\\d+)*(\\s*\\w)+\\*\\*"
+  ;;  (first (cl-ppcre:all-matches-as-strings "[^\\n]\\*\\*\\d+(\\.\\d+)*(\\s*\\w)+\\*\\*" *c2*))
+  ;;  (concatenate 'string '(#\Newline) "\\&" '(#\Newline)))
+  ;; save-file
+
   (format T "~A~%" filepath)
-  (format T "~A~%~%" (get-directory-for-chapter filepath)))
+  (format T "~A~%~%" (get-directory-for-chapter filepath))
+  (ensure-directories-exist (get-directory-for-chapter filepath)))
+
 
 (defun process-files-in-dir (dir-path)
   (mapcar #'process-file
@@ -170,4 +188,6 @@
 	     (search ".md" (namestring it)))
 	   (uiop:directory-files dir-path))))
 
-(process-files-in-dir *md-dir*)
+;;(process-files-in-dir *md-dir*)
+(format T "~A~%" *load-pathname*)
+(format T "~A~%" *load-truename*)

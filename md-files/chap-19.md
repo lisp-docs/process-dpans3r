@@ -27,7 +27,11 @@ In general, the syntax of *namestrings* involves the use of *implementation-defi
 
 A *conforming program* must never unconditionally use a *literal namestring* other than a *logical pathname namestring* because Common Lisp does not define any *namestring* syntax other than that for *logical pathnames* that would be guaranteed to be portable. However, a *conforming program* can, if it is careful, successfully manipulate user-supplied data which contains or refers to non-portable *namestrings*. 
 
-A *namestring* can be *coerced* to a *pathname* by the *functions* **pathname** or **parse-namestring**. **19.1.2 Pathnames as Filenames** 
+A *namestring* can be *coerced* to a *pathname* by the *functions* **pathname** or **parse-namestring**.
+
+ **19.1.2 Pathnames as Filenames**
+
+ 
 
 *Pathnames* are structured *objects* that can represent, in an *implementation-independent* way, the *filenames* that are used natively by an underlying *file system*. 
 

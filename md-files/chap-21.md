@@ -147,7 +147,11 @@ Note that, by convention, *standardized stream variables* have names ending in �
 
  
 
-User programs may *assign* or *bind* any *standardized stream variable* except **\*terminal-io\***. **21.1.3 Stream Arguments to Standardized Functions** The *operators* in Figure 21–7 accept *stream arguments* that might be either *open* or *closed streams*. 
+User programs may *assign* or *bind* any *standardized stream variable* except **\*terminal-io\***.
+
+ **21.1.3 Stream Arguments to Standardized Functions**
+
+ The *operators* in Figure 21–7 accept *stream arguments* that might be either *open* or *closed streams*. 
 
 |\<p\>**broadcast-stream-streams file-author pathnamep** \</p\>\<p\>**close file-namestring probe-file** \</p\>\<p\>**compile-file file-write-date rename-file** \</p\>\<p\>**compile-file-pathname host-namestring streamp** \</p\>\<p\>**concatenated-stream-streams load synonym-stream-symbol delete-file logical-pathname translate-logical-pathname directory merge-pathnames translate-pathname directory-namestring namestring truename** \</p\>\<p\>**dribble open two-way-stream-input-stream echo-stream-input-stream open-stream-p two-way-stream-output-stream echo-stream-ouput-stream parse-namestring wild-pathname-p ed pathname with-open-file** \</p\>\<p\>**enough-namestring pathname-match-p**\</p\>|
 | :- |

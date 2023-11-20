@@ -387,7 +387,11 @@ This section summarizes the full syntax for *numbers*.
 
 *Integers* can be written as a sequence of *digits*, optionally preceded by a *sign* and optionally followed by a decimal point; see Figure 2–9. When a decimal point is used, the *digits* are taken to be in *radix* 10; when no decimal point is used, the *digits* are taken to be in radix given by the *current input base*. 
 
-For information on how *integers* are printed, see Section 22.1.3.1.1 (Printing Integers). **2.3.2.1.2 Syntax of a Ratio** 
+For information on how *integers* are printed, see Section 22.1.3.1.1 (Printing Integers).
+
+ **2.3.2.1.2 Syntax of a Ratio**
+
+ 
 
 *Ratios* can be written as an optional *sign* followed by two non-empty sequences of *digits* separated by a *slash*; see Figure 2–9. The second sequence may not consist entirely of zeros. Examples of *ratios* are in Figure 2–13.  
 
@@ -673,7 +677,11 @@ Examples of the use of the *double-quote* character are in Figure 2–18.
 
 Note that to place a single escape character or a *double-quote* into a string, such a character must be preceded by a single escape character. Note, too, that a multiple escape character need not be quoted by a single escape character within a string. 
 
-For information on how the *Lisp printer* prints *strings*, see Section 22.1.3.4 (Printing Strings). **2.4.6 Backquote** 
+For information on how the *Lisp printer* prints *strings*, see Section 22.1.3.4 (Printing Strings).
+
+ **2.4.6 Backquote**
+
+ 
 
 The *backquote* introduces a template of a data structure to be built. For example, writing ‘(cond ((numberp ,x) ,@y) (t (print ,x) ,@y)) 
 

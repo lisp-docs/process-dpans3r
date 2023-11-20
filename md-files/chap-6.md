@@ -21,7 +21,11 @@ The **loop** *macro* performs iteration.
 
 **6.1.1.1 Simple vs Extended Loop** 
 
-**loop** *forms* are partitioned into two categories: simple **loop** *forms* and extended **loop** *forms*. **6.1.1.1.1 Simple Loop** 
+**loop** *forms* are partitioned into two categories: simple **loop** *forms* and extended **loop** *forms*.
+
+ **6.1.1.1.1 Simple Loop**
+
+ 
 
 A simple **loop** *form* is one that has a body containing only *compound forms*. Each *form* is *evaluated* in turn from left to right. When the last *form* has been *evaluated*, then the first *form* is evaluated again, and so on, in a never-ending cycle. A simple **loop** *form* establishes an *implicit block* named 
 
@@ -115,7 +119,11 @@ The for and as constructs provide iteration control clauses that establish a var
 
 The with construct is similar to a single **let** clause. with clauses can be combined using the *loop keyword* and to get *parallel* initialization. 
 
-For more information, see Section 6.1.2 (Variable Initialization and Stepping Clauses). **6.1.1.5.2 Summary of Value Accumulation Clauses** 
+For more information, see Section 6.1.2 (Variable Initialization and Stepping Clauses).
+
+ **6.1.1.5.2 Summary of Value Accumulation Clauses**
+
+ 
 
 The collect (or collecting) construct takes one *form* in its clause and adds the value of that *form* to the end of a *list* of values. By default, the *list* of values is returned when the **loop** finishes. 
 

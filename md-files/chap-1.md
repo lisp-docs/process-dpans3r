@@ -150,7 +150,11 @@ For information about general purpose control and data flow, see Chapter 5 (Data
 
 **1.4 Definitions** 
 
-This section contains notational conventions and definitions of terms used in this manual. **1.4.1 Notational Conventions** 
+This section contains notational conventions and definitions of terms used in this manual.
+
+ **1.4.1 Notational Conventions**
+
+ 
 
 The following notational conventions are used throughout this document. 
 

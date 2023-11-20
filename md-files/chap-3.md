@@ -626,7 +626,11 @@ There are two situations in which a *compiler macro* definition must not be appl
 
 *•* The function name has been declared or proclaimed **notinline** and the call form appears within the scope of the declaration. 
 
-It is unspecified whether *compiler macros* are expanded or used in any other situations. **3.2.2.1.3.1 Notes about the Implementation of Compiler Macros** 
+It is unspecified whether *compiler macros* are expanded or used in any other situations.
+
+ **3.2.2.1.3.1 Notes about the Implementation of Compiler Macros**
+
+ 
 
 Although it is technically permissible, as described above, for **eval** to treat *compiler macros* in the same situations as *compiler* might, this is not necessarily a good idea in *interpreted implementations*. 
 
@@ -975,7 +979,11 @@ Some warnings might be deferred until the end of compilation. See **with-compila
 
 The **the** *special form* provides a shorthand notation for making a *local declaration* about the *type* of the *value* of a given *form*. 
 
-The consequences are undefined if a program violates a *declaration* or a *proclamation*. **3.3.1 Minimal Declaration Processing Requirements** 
+The consequences are undefined if a program violates a *declaration* or a *proclamation*.
+
+ **3.3.1 Minimal Declaration Processing Requirements**
+
+ 
 
 In general, an *implementation* is free to ignore *declaration specifiers* except for the **declaration**, **notinline**, **safety**, and **special** *declaration specifiers*. 
 

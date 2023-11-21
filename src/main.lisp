@@ -148,7 +148,7 @@
 
 (defun get-dir-name-for-file (filename)
   (if (uiop:string-suffix-p filename ".md")
-      (subseq filename 0 (- (length filename) 3))))
+      (str:concat (subseq filename 0 (- (length filename) 3)) "/")))
 
 (defun filename-from-pathname (pathname)
   (car (last (str:split "/" (namestring pathname)))))
@@ -311,10 +311,6 @@
 	 (section-list (get-chapter-sections chapter-text)))
     (ensure-directories-exist chapter-dir)
     (str:to-file category-path (make-doc-category-json label))
-    ;;    (process-introduction chapter-dir (car section-list))
-    ;; create intro file and _intro.md file, import one into the other
-    ;; TODO there are no introductions but chapters 0 and 8 have no sections!
-    ;; mapcar to each section AKA (cdr sections) process-section
     (mapcar (lambda (x) (process-section chapter-dir x)) section-list)))
 
 ;; make function to replace symbols missing

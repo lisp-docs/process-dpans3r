@@ -480,7 +480,7 @@ This denotes the *reals* on the interval described by *lower-limit* and *upper-l
 
 A \<i\>float\</i\> is a mathematical rational (but \<i\>not\</i\> a Common Lisp \<i\>rational\</i\>) of the form \<i\>s · f · b\<sup\>e−p\</sup\>\</i\>, where \<i\>s\</i\> is +1 or \<i\>−\</i\>1, the \<i\>sign\</i\>; \<i\>b\</i\> is an \<i\>integer\</i\> greater than 1, the \<i\>base\</i\> or \<i\>radix\</i\> of the representation; \<i\>p\</i\> is a positive \<i\>integer\</i\> , the \<i\>precision\</i\> (in base-\<i\>b\</i\> digits) of the \<i\>float\</i\>; \<i\>f\</i\> is a positive \<i\>integer\</i\> between \<i\>b\<sup\>p−\</sup\>\</i\>1\</sup\> and \<i\>b\<sup\>p\</sup\> −\</i\> 1 (inclusive), the significand; and \<i\>e\</i\> is an \<i\>integer\</i\> , the exponent. The value of \<i\>p\</i\> and the 
 
-range of *e* depends on the implementation and on the type of *float* within that implementation. In addition, there is a floating-point zero; depending on the implementation, there can also be a “minus zero”. If there is no minus zero, then 0*.*0 and *−*0*.*0 are both interpreted as simply a floating-point zero. (= 0.0 -0.0) is always true. If there is a minus zero, (eql -0.0 0.0) is *false*, otherwise it is *true*. 
+range of *e* depends on the implementation and on the type of *float* within that implementation. In addition, there is a floating-point zero; depending on the implementation, there can also be a “minus zero”. If there is no minus zero, then 0&#9655;0 and *−*0&#9655;0 are both interpreted as simply a floating-point zero. (= 0.0 -0.0) is always true. If there is a minus zero, (eql -0.0 0.0) is *false*, otherwise it is *true*. 
 
 The *types* **short-float**, **single-float**, **double-float**, and **long-float** are *subtypes* of *type* **float**. Any two of them must be either *disjoint types* or the *same type*; if the *same type*, then any other *types* between them in the above ordering must also be the *same type*. For example, if the *type* **single-float** and the *type* **long-float** are the *same type*, then the *type* **double-float** must be the *same type* also. 
 
@@ -1169,25 +1169,25 @@ The *remainder* is an *integer* if both x and y are *integers*, is a *rational* 
 
 n (floor n) (ceiling n) (truncate n) (round n))) 
 
-*.* +2.6 2 3 2 3 
+&#9655; +2.6 2 3 2 3 
 
-*.* +2.5 2 3 2 2 
+&#9655; +2.5 2 3 2 2 
 
-*.* +2.4 2 3 2 2 
+&#9655; +2.4 2 3 2 2 
 
-*.* +0.7 0 1 0 1 
+&#9655; +0.7 0 1 0 1 
 
-*.* +0.3 0 1 0 0 
+&#9655; +0.3 0 1 0 0 
 
-*.* -0.3 -1 0 0 0 
+&#9655; -0.3 -1 0 0 0 
 
-*.* -0.7 -1 0 0 -1 
+&#9655; -0.7 -1 0 0 -1 
 
-*.* -2.4 -3 -2 -2 -2 
+&#9655; -2.4 -3 -2 -2 -2 
 
-*.* -2.5 -3 -2 -2 -2 
+&#9655; -2.5 -3 -2 -2 -2 
 
-*.* -2.6 -3 -2 -2 -3 
+&#9655; -2.6 -3 -2 -2 -3 
 
 *→* NIL 
 
@@ -1492,7 +1492,7 @@ The branch cut for the inverse hyperbolic sine function is in two pieces: one al
 
 The following definition for the inverse hyperbolic tangent determines the range and branch cuts: arctanh \<i\>z\</i\> =\<sup\>log (1 + \<i\>z\</i\>) \<i\>−\</i\> log (1 \<i\>− z\</i\>)\</sup\> 
 
-\<sub\>2\</sub\>*.* 
+\<sub\>2\</sub\>&#9655; 
 
 Note that: 
 
@@ -3415,41 +3415,41 @@ boole-orc1 boole-orc2 boole-set boole-xor))
 
 symbol result (logand result #b1111))))) 
 
-*.* Results of (BOOLE \<op\> #b0011 #b0101) ... 
+&#9655; Results of (BOOLE \<op\> #b0011 #b0101) ... 
 
-*.* –-Op–––-Decimal––-Binary––Bits–- 
+&#9655; –-Op–––-Decimal––-Binary––Bits–- 
 
-*.* BOOLE-1 3 11 ...0011 
+&#9655; BOOLE-1 3 11 ...0011 
 
-*.* BOOLE-2 5 101 ...0101 
+&#9655; BOOLE-2 5 101 ...0101 
 
-*.* BOOLE-AND 1 1 ...0001 
+&#9655; BOOLE-AND 1 1 ...0001 
 
-*.* BOOLE-ANDC1 4 100 ...0100 
+&#9655; BOOLE-ANDC1 4 100 ...0100 
 
-*.* BOOLE-ANDC2 2 10 ...0010 
+&#9655; BOOLE-ANDC2 2 10 ...0010 
 
-*.* BOOLE-C1 -4 -100 ...1100 
+&#9655; BOOLE-C1 -4 -100 ...1100 
 
-*.* BOOLE-C2 -6 -110 ...1010 
+&#9655; BOOLE-C2 -6 -110 ...1010 
 
-*.* BOOLE-CLR 0 0 ...0000 
+&#9655; BOOLE-CLR 0 0 ...0000 
 
-*.* BOOLE-EQV -7 -111 ...1001 
+&#9655; BOOLE-EQV -7 -111 ...1001 
 
-*.* BOOLE-IOR 7 111 ...0111 
+&#9655; BOOLE-IOR 7 111 ...0111 
 
-*.* BOOLE-NAND -2 -10 ...1110 
+&#9655; BOOLE-NAND -2 -10 ...1110 
 
-*.* BOOLE-NOR -8 -1000 ...1000 
+&#9655; BOOLE-NOR -8 -1000 ...1000 
 
-*.* BOOLE-ORC1 -3 -11 ...1101 
+&#9655; BOOLE-ORC1 -3 -11 ...1101 
 
-*.* BOOLE-ORC2 -5 -101 ...1011 
+&#9655; BOOLE-ORC2 -5 -101 ...1011 
 
-*.* BOOLE-SET -1 -1 ...1111 
+&#9655; BOOLE-SET -1 -1 ...1111 
 
-*.* BOOLE-XOR 6 110 ...0110 
+&#9655; BOOLE-XOR 6 110 ...0110 
 
 *→* NIL 
 
@@ -3650,7 +3650,7 @@ m x y)))
 
 (show m x y)))) 
 
-*.* m = #o007750 
+&#9655; m = #o007750 
 
 
 
@@ -3658,17 +3658,17 @@ m x y)))
 
  
 
-*.* x = #o452576 
+&#9655; x = #o452576 
 
-*.* y = #o317407 
+&#9655; y = #o317407 
 
-*.* 
+&#9655; 
 
-*.* m = #o007750 
+&#9655; m = #o007750 
 
-*.* x = #o457426 
+&#9655; x = #o457426 
 
-*.* y = #o312557 
+&#9655; y = #o312557 
 
 *→* NIL 
 

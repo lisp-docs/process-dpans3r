@@ -577,7 +577,7 @@ The *right-parenthesis* is invalid except when used in conjunction with the left
 
 **2.4.3 Single-Quote** 
 
-**Syntax:** ’*hhexpii* 
+**Syntax:** ’&#10216;exp&#10217; 
 
 A *single-quote* introduces an *expression* to be “quoted.” *Single-quote* followed by an *expression exp* is treated by the *Lisp reader* as an abbreviation for and is parsed identically to the *expression* (quote *exp*). See the *special operator* **quote**. 
 
@@ -591,7 +591,7 @@ A *single-quote* introduces an *expression* to be “quoted.” *Single-quote* f
 
 **2.4.4 Semicolon** 
 
-**Syntax:** ;*hhtextii* 
+**Syntax:** ;&#10216;text&#10217; 
 
 A *semicolon* introduces *characters* that are to be ignored, such as comments. The *semicolon* and all *characters* up to and including the next *newline* or end of file are ignored. 
 
@@ -663,7 +663,7 @@ Comments that begin with a quadruple *semicolon* are all aligned to the left mar
 
 **2.4.5 Double-Quote** 
 
-**Syntax:** "*hhtextii*" 
+**Syntax:** "&#10216;text&#10217;" 
 
 The *double-quote* is used to begin and end a *string*. When a *double-quote* is encountered, *characters* are read from the *input stream* and accumulated until another *double-quote* is encountered. If a *single escape character* is seen, the *single escape character* is discarded, the next *character* is accumulated, and accumulation continues. The accumulated *characters* up to but not including the matching *double-quote* are made into a *simple string* and returned. It is *implementation-dependent* which *attributes* of the accumulated characters are removed in this process. 
 
@@ -808,7 +808,7 @@ accumulated and passed as an *argument* to the *reader macro* for the *character
 
 **2.4.8.1 Sharpsign Backslash** 
 
-**Syntax:** #\*hhxii* 
+**Syntax:** #\&#10216;x&#10217; 
 
 When the *token x* is a single *character* long, this parses as the literal *character char*. *Uppercase* and *lowercase* letters are distinguished after #\; #\A and #\a denote different *character objects*. Any single *character* works after #\, even those that are normally special to **read**, such as *left-parenthesis* and *right-parenthesis*. 
 
@@ -856,11 +856,11 @@ For information on how the *Lisp printer* prints *vectors*, see Section 22.1.3.4
 
 **2.4.8.4 Sharpsign Asterisk** 
 
-**Syntax:** #\**hhbitsii* 
+**Syntax:** #\*&#10216;bits&#10217; 
 
 A *simple bit vector* is constructed containing the indicated *bits* (0’s and 1’s), where the leftmost *bit* has index zero and the subsequent *bits* have increasing indices. 
 
-**Syntax:** #*hhnii*\**hhbitsii* 
+**Syntax:** #&#10216;n&#10217;\*&#10216;bits&#10217; 
 
 With an argument *n*, the *vector* to be created is of *length n*. If the number of *bits* is less than *n* but greater than zero, the last bit is used to fill all remaining bits of the *bit vector* . 
 
@@ -890,7 +890,7 @@ For example:
 
 **2.4.8.5 Sharpsign Colon** 
 
-**Syntax:** #:*hhsymbol-nameii* 
+**Syntax:** #:&#10216;symbol-name&#10217; 
 
 #: introduces an *uninterned symbol* whose *name* is *symbol-name*. Every time this syntax is encountered, a *distinct uninterned symbol* is created. The *symbol-name* must have the syntax of a *symbol* with no *package prefix* . 
 
@@ -1020,7 +1020,7 @@ For information on how the *Lisp printer* prints *structures*, see Section 22.1.
 
 #P reads a following *object*, which must be a *string*. 
 
-#P*hhexpressionii* is equivalent to #.(parse-namestring ’*hhexpressionii*), except that #P is not affected by **\*read-eval\***. 
+#P&#10216;expression&#10217; is equivalent to #.(parse-namestring ’&#10216;expression&#10217;), except that #P is not affected by **\*read-eval\***. 
 
 For information on how the *Lisp printer* prints *pathnames*, see Section 22.1.3.11 (Printing Pathnames). 
 
@@ -1108,7 +1108,7 @@ The following are some examples that exploit the #|...|# notation:
 
 (mention-fun-fact-1a) 
 
-*.* CL uses ; and #|...|# in comments. 
+&#9655; CL uses ; and #|...|# in comments. 
 
 *→* NIL 
 
@@ -1138,7 +1138,7 @@ The following are some examples that exploit the #|...|# notation:
 
 (mention-fun-fact-2a) 
 
-*.* Don’t use |# unmatched or you’ll get in trouble! 
+&#9655; Don’t use |# unmatched or you’ll get in trouble! 
 
 *→* NIL 
 
@@ -1168,7 +1168,7 @@ The following are some examples that exploit the #|...|# notation:
 
 (mention-fun-fact-3a) 
 
-*.* Don’t use |# unmatched or you’ll get in trouble! 
+&#9655; Don’t use |# unmatched or you’ll get in trouble! 
 
 *→* NIL 
 

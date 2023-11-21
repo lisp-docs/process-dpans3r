@@ -525,7 +525,7 @@ s (type-of s) captain serial#)))
 
 (describe \*) 
 
-*.* #\<FEDERATION-STARSHIP 26312465\> is a spaceship of type FEDERATION-STARSHIP, *.* with Rachel Garrett at the helm and with serial number NCC-1701-C. 
+&#9655; #\<FEDERATION-STARSHIP 26312465\> is a spaceship of type FEDERATION-STARSHIP, &#9655; with Rachel Garrett at the helm and with serial number NCC-1701-C. 
 
 *→ hno valuesi* 
 
@@ -587,27 +587,27 @@ If a *function* to be traced has been open-coded (*e.g.*, because it was declare
 
 (fact 3) 
 
-*.* 1 Enter FACT 3 
+&#9655; 1 Enter FACT 3 
 
-*.* | 2 Enter FACT 2 
+&#9655; | 2 Enter FACT 2 
 
-*.* | 3 Enter FACT 1 
+&#9655; | 3 Enter FACT 1 
 
-*.* | | 4 Enter FACT 0 
+&#9655; | | 4 Enter FACT 0 
 
-*.* | | 4 Exit FACT 1 
+&#9655; | | 4 Exit FACT 1 
 
-*.* | 3 Exit FACT 1 
+&#9655; | 3 Exit FACT 1 
 
-*.* | 2 Exit FACT 2 
+&#9655; | 2 Exit FACT 2 
 
 
-
- 
 
  
 
-*.* 1 Exit FACT 6 
+ 
+
+&#9655; 1 Exit FACT 6 
 
 *→* 6 
 
@@ -1179,7 +1179,7 @@ The *value* of **-** is the *form* that is currently being evaluated by the *Lis
 
 (format t "~&Evaluating ~S~%" -) 
 
-*.* Evaluating (FORMAT T "~&Evaluating ~S~%" -) 
+&#9655; Evaluating (FORMAT T "~&Evaluating ~S~%" -) 
 
 *→* NIL 
 

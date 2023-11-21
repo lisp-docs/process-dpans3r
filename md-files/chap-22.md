@@ -486,19 +486,19 @@ For information on how the *Lisp reader* parses these “other *arrays*,” see 
 
 (print (make-array 9 :displaced-to a))) 
 
-*.* #2A(("\<0,0\>" "\<0,1\>" "\<0,2\>") 
+&#9655; #2A(("\<0,0\>" "\<0,1\>" "\<0,2\>") 
 
-*.* ("\<1,0\>" "\<1,1\>" "\<1,2\>") 
+&#9655; ("\<1,0\>" "\<1,1\>" "\<1,2\>") 
 
 
-
- 
 
  
 
-*.* ("\<2,0\>" "\<2,1\>" "\<2,2\>")) 
+ 
 
-*.* #("\<0,0\>" "\<0,1\>" "\<0,2\>" "\<1,0\>" "\<1,1\>" "\<1,2\>" "\<2,0\>" "\<2,1\>" "\<2,2\>") 
+&#9655; ("\<2,0\>" "\<2,1\>" "\<2,2\>")) 
+
+&#9655; #("\<0,0\>" "\<0,1\>" "\<0,2\>" "\<1,0\>" "\<1,1\>" "\<1,2\>" "\<2,0\>" "\<2,1\>" "\<2,2\>") 
 
 *→* #\<ARRAY 9 indirect 36363476\> 
 
@@ -546,7 +546,7 @@ For information on how the *Lisp reader* treats this notation, see Section 2.4.8
 
 (let ((\*print-escape\* t)) (fresh-line) (write #\a)) 
 
-*.* #\a 
+&#9655; #\a 
 
 *→* #\a 
 
@@ -556,27 +556,27 @@ For information on how the *Lisp reader* treats this notation, see Section 2.4.8
 
 (write #\a)) 
 
-*.* a 
+&#9655; a 
 
 *→* #\a 
 
 (progn (fresh-line) (prin1 #\a)) 
 
-*.* #\a 
+&#9655; #\a 
 
 *→* #\a 
 
 (progn (fresh-line) (print #\a)) 
 
-*.* 
+&#9655; 
 
-*.* #\a 
+&#9655; #\a 
 
 *→* #\a 
 
 (progn (fresh-line) (princ #\a)) 
 
-*.* a 
+&#9655; a 
 
 *→* #\a 
 
@@ -592,7 +592,7 @@ For information on how the *Lisp reader* treats this notation, see Section 2.4.8
 
 (write #\a))) 
 
-*.* #\a #\a a #\a 
+&#9655; #\a #\a a #\a 
 
 
 
@@ -600,23 +600,23 @@ For information on how the *Lisp reader* treats this notation, see Section 2.4.8
 
  
 
-*.* #\a #\a a a 
+&#9655; #\a #\a a a 
 
 *→* NIL 
 
 (progn (fresh-line) (write ’(let ((a 1) (b 2)) (+ a b)))) 
 
-*.* (LET ((A 1) (B 2)) (+ A B)) 
+&#9655; (LET ((A 1) (B 2)) (+ A B)) 
 
 *→* (LET ((A 1) (B 2)) (+ A B)) 
 
 (progn (fresh-line) (pprint ’(let ((a 1) (b 2)) (+ a b)))) 
 
-*.* (LET ((A 1) 
+&#9655; (LET ((A 1) 
 
-*.* (B 2)) 
+&#9655; (B 2)) 
 
-*.* (+ A B)) 
+&#9655; (+ A B)) 
 
 *→* (LET ((A 1) (B 2)) (+ A B)) 
 
@@ -624,11 +624,11 @@ For information on how the *Lisp reader* treats this notation, see Section 2.4.8
 
 (write ’(let ((a 1) (b 2)) (+ a b)) :pretty t)) 
 
-*.* (LET ((A 1) 
+&#9655; (LET ((A 1) 
 
-*.* (B 2)) 
+&#9655; (B 2)) 
 
-*.* (+ A B)) 
+&#9655; (+ A B)) 
 
 *→* (LET ((A 1) (B 2)) (+ A B)) 
 
@@ -2066,7 +2066,7 @@ where *arguments-tail* is either the tail of *arguments* which has as its *car* 
 
 (funcall (formatter "~&~A~A") \*standard-output\* ’a ’b ’c) 
 
-*.* AB 
+&#9655; AB 
 
 *→* (C) 
 
@@ -2078,7 +2078,7 @@ where *arguments-tail* is either the tail of *arguments* which has as its *car* 
 
 (format t (formatter "~&~A~A") ’a ’b ’c) 
 
-*.* AB 
+&#9655; AB 
 
 *→* NIL 
 
@@ -3009,7 +3009,7 @@ If the *value* of **\*print-radix\*** is *true*, the printer will print a radix 
 
 (print 23.)) 
 
-*.* #24rN 
+&#9655; #24rN 
 
 *→* 23 
 
@@ -3025,15 +3025,15 @@ If the *value* of **\*print-radix\*** is *true*, the printer will print a radix 
 
 (if (zerop (mod i 10)) (terpri) (format t " ")))) 
 
-*.* 101000 
+&#9655; 101000 
 
-*.* 1111 220 130 104 55 50 44 40 37 34 
+&#9655; 1111 220 130 104 55 50 44 40 37 34 
 
-*.* 31 2C 2A 28 26 24 22 20 1J 1I 
+&#9655; 31 2C 2A 28 26 24 22 20 1J 1I 
 
-*.* 1H 1G 1F 1E 1D 1C 1B 1A 19 18 
+&#9655; 1H 1G 1F 1E 1D 1C 1B 1A 19 18 
 
-*.* 17 16 15 14 
+&#9655; 17 16 15 14 
 
 *→* NIL 
 
@@ -3051,15 +3051,15 @@ Printer **22–67**
 
 (format t "~&~S ~S~%" 10 1/10))) ;3, 8, 10, 16 
 
-*.* #b1010 #b1/1010 
+&#9655; #b1010 #b1/1010 
 
-*.* #3r101 #3r1/101 
+&#9655; #3r101 #3r1/101 
 
-*.* #o12 #o1/12 
+&#9655; #o12 #o1/12 
 
-*.* 10. #10r1/10 
+&#9655; 10. #10r1/10 
 
-*.* #xA #x1/A 
+&#9655; #xA #x1/A 
 
 *→* NIL 
 
@@ -3115,21 +3115,21 @@ The *value* of **\*print-case\*** controls the case (upper, lower, or mixed) in 
 
 (test-print-case) ;Implementation A 
 
-*.* THIS-AND-THAT |And-something-elSE| 
+&#9655; THIS-AND-THAT |And-something-elSE| 
 
-*.* this-and-that a\n\d-\s\o\m\e\t\h\i\n\g-\e\lse 
+&#9655; this-and-that a\n\d-\s\o\m\e\t\h\i\n\g-\e\lse 
 
-*.* This-And-That A\n\d-\s\o\m\e\t\h\i\n\g-\e\lse 
+&#9655; This-And-That A\n\d-\s\o\m\e\t\h\i\n\g-\e\lse 
 
 *→* NIL 
 
 (test-print-case) ;Implementation B 
 
-*.* THIS-AND-THAT |And-something-elSE| 
+&#9655; THIS-AND-THAT |And-something-elSE| 
 
-*.* this-and-that a|nd-something-el|se 
+&#9655; this-and-that a|nd-something-el|se 
 
-*.* This-And-That A|nd-something-el|se 
+&#9655; This-And-That A|nd-something-el|se 
 
 *→* NIL 
 
@@ -3185,7 +3185,7 @@ Note that implementations should not use #*n*# notation when the *Lisp reader* w
 
 :done)) 
 
-*.* #1=(1 2 3 . #1#) 
+&#9655; #1=(1 2 3 . #1#) 
 
 *→* :DONE 
 
@@ -3225,13 +3225,13 @@ For more specific details of how the *value* of **\*print-escape\*** affects the
 
  
 
-*.* #\a 
+&#9655; #\a 
 
 *→* #\a 
 
 (let ((\*print-escape\* nil)) (write #\a)) 
 
-*.* a 
+&#9655; a 
 
 *→* #\a 
 
@@ -3265,7 +3265,7 @@ Controls whether the prefix “#:” is printed before *apparently uninterned sy
 
 (print (gensym))) 
 
-*.* G6040 
+&#9655; G6040 
 
 *→* #:G6040 
 
@@ -3311,21 +3311,21 @@ to be recursively printed has components and is at a level equal to or greater t
 
 (format t "~&~D – ~S~%" i a))) 
 
-*.* 0 – # 
+&#9655; 0 – # 
 
-*.* 1 – (1 #) 
+&#9655; 1 – (1 #) 
 
-*.* 2 – (1 (2 #)) 
+&#9655; 2 – (1 (2 #)) 
 
-*.* 3 – (1 (2 (3 #))) 
+&#9655; 3 – (1 (2 (3 #))) 
 
-*.* 4 – (1 (2 (3 (4 #)))) 
+&#9655; 4 – (1 (2 (3 (4 #)))) 
 
-*.* 5 – (1 (2 (3 (4 (5 #))))) 
+&#9655; 5 – (1 (2 (3 (4 (5 #))))) 
 
-*.* 6 – (1 (2 (3 (4 (5 (6)))))) 
+&#9655; 6 – (1 (2 (3 (4 (5 (6)))))) 
 
-*.* 7 – (1 (2 (3 (4 (5 (6)))))) 
+&#9655; 7 – (1 (2 (3 (4 (5 (6)))))) 
 
 *→* NIL 
 
@@ -3343,19 +3343,19 @@ to be recursively printed has components and is at a level equal to or greater t
 
 (format t "~&~D – ~S~%" i a))) 
 
-*.* 0 – (...) 
+&#9655; 0 – (...) 
 
-*.* 1 – (1 ...) 
+&#9655; 1 – (1 ...) 
 
-*.* 2 – (1 2 ...) 
+&#9655; 2 – (1 2 ...) 
 
-*.* 3 – (1 2 3 ...) 
+&#9655; 3 – (1 2 3 ...) 
 
-*.* 4 – (1 2 3 4 ...) 
+&#9655; 4 – (1 2 3 4 ...) 
 
-*.* 5 – (1 2 3 4 5 6) 
+&#9655; 5 – (1 2 3 4 5 6) 
 
-*.* 6 – (1 2 3 4 5 6) 
+&#9655; 6 – (1 2 3 4 5 6) 
 
 *→* NIL 
 
@@ -3373,27 +3373,27 @@ to be recursively printed has components and is at a level equal to or greater t
 
 ’(if (member x y) (+ (car x) 3) ’(foo . #(a b c d "Baz")))))) 
 
-*.* 0 1 – # 
+&#9655; 0 1 – # 
 
-*.* 1 1 – (IF ...) 
+&#9655; 1 1 – (IF ...) 
 
-*.* 1 2 – (IF # ...) 
+&#9655; 1 2 – (IF # ...) 
 
-*.* 1 3 – (IF # # ...) 
+&#9655; 1 3 – (IF # # ...) 
 
-*.* 1 4 – (IF # # #) 
+&#9655; 1 4 – (IF # # #) 
 
-*.* 2 1 – (IF ...) 
+&#9655; 2 1 – (IF ...) 
 
-*.* 2 2 – (IF (MEMBER X ...) ...) 
+&#9655; 2 2 – (IF (MEMBER X ...) ...) 
 
-*.* 2 3 – (IF (MEMBER X Y) (+ # 3) ...) 
+&#9655; 2 3 – (IF (MEMBER X Y) (+ # 3) ...) 
 
-*.* 3 2 – (IF (MEMBER X ...) ...) 
+&#9655; 3 2 – (IF (MEMBER X ...) ...) 
 
-*.* 3 3 – (IF (MEMBER X Y) (+ (CAR X) 3) ...) 
+&#9655; 3 3 – (IF (MEMBER X Y) (+ (CAR X) 3) ...) 
 
-*.* 3 4 – (IF (MEMBER X Y) (+ (CAR X) 3) ’(FOO . #(A B C D ...))) 
+&#9655; 3 4 – (IF (MEMBER X Y) (+ (CAR X) 3) ’(FOO . #(A B C D ...))) 
 
 *→* NIL 
 
@@ -3427,11 +3427,11 @@ When the *value* of **\*print-lines\*** is other than **nil**, it is a limit on 
 
 (pprint ’(progn (setq a 1 b 2 c 3 d 4)))) 
 
-*.* (PROGN (SETQ A 1 
+&#9655; (PROGN (SETQ A 1 
 
-*.* B 2 
+&#9655; B 2 
 
-*.* C 3 ..)) 
+&#9655; C 3 ..)) 
 
 *→ hno valuesi* 
 
@@ -3515,7 +3515,7 @@ Printer **22–75**
 
 (progn (write ’(let ((a 1) (b 2) (c 3)) (+ a b c))) nil) 
 
-*.* (LET ((A 1) (B 2) (C 3)) (+ A B C)) 
+&#9655; (LET ((A 1) (B 2) (C 3)) (+ A B C)) 
 
 *→* NIL 
 
@@ -3523,13 +3523,13 @@ Printer **22–75**
 
 (progn (write ’(let ((a 1) (b 2) (c 3)) (+ a b c))) nil)) 
 
-*.* (LET ((A 1) 
+&#9655; (LET ((A 1) 
 
-*.* (B 2) 
+&#9655; (B 2) 
 
-*.* (C 3)) 
+&#9655; (C 3)) 
 
-*.* (+ A B C)) 
+&#9655; (+ A B C)) 
 
 *→* NIL 
 
@@ -3551,21 +3551,21 @@ Printer **22–75**
 
 (test ’#’(lambda () (list "a" # ’c #’d)))) 
 
-*.* #’(LAMBDA () 
+&#9655; #’(LAMBDA () 
 
-*.* (LIST "a" # ’C #’D)) 
+&#9655; (LIST "a" # ’C #’D)) 
 
-*.* #’(LAMBDA () 
+&#9655; #’(LAMBDA () 
 
-*.* (LIST "a" # ’C #’D)) 
+&#9655; (LIST "a" # ’C #’D)) 
 
-*.* #’(LAMBDA () 
+&#9655; #’(LAMBDA () 
 
-*.* (LIST a b ’C #’D)) 
+&#9655; (LIST a b ’C #’D)) 
 
-*.* #’(LAMBDA () 
+&#9655; #’(LAMBDA () 
 
-*.* (LIST a b ’C #’D)) 
+&#9655; (LIST a b ’C #’D)) 
 
 *→* NIL 
 
@@ -3625,9 +3625,9 @@ If **\*read-eval\*** is *false* and **\*print-readably\*** is *true*, any such m
 
 :done)) 
 
-*.* (a a G4581 ((A #) D E ...)) 
+&#9655; (a a G4581 ((A #) D E ...)) 
 
-*.* ("a" |a| #:G4581 ((A (B (C))) D E F G)) 
+&#9655; ("a" |a| #:G4581 ((A (B (C))) D E F G)) 
 
 *→* :DONE 
 
@@ -3661,7 +3661,7 @@ Error: Can’t print #\<HASH-TABLE EQL 0/120 32005763\> readably.
 
 (let ((\*print-readably\* t)) (print table)) 
 
-*.* #S(HASH-TABLE :TEST EQL :SIZE 120 :CONTENTS (1 ONE 2 TWO)) 
+&#9655; #S(HASH-TABLE :TEST EQL :SIZE 120 :CONTENTS (1 ONE 2 TWO)) 
 
 *→* #\<HASH-TABLE EQL 0/120 32005763\> 
 
@@ -3677,13 +3677,13 @@ Error: Can’t print #\<HASH-TABLE EQL 0/120 32005763\> readably.
 
 (let ((\*print-readably\* t)) (print table)) 
 
-*.* #.(LET ((HASH-TABLE (MAKE-HASH-TABLE))) 
+&#9655; #.(LET ((HASH-TABLE (MAKE-HASH-TABLE))) 
 
-*.* (SETF (GETHASH 1 HASH-TABLE) ONE) 
+&#9655; (SETF (GETHASH 1 HASH-TABLE) ONE) 
 
-*.* (SETF (GETHASH 2 HASH-TABLE) TWO) 
+&#9655; (SETF (GETHASH 2 HASH-TABLE) TWO) 
 
-*.* HASH-TABLE) 
+&#9655; HASH-TABLE) 
 
 *→* #\<HASH-TABLE EQL 0/120 32005763\> 
 

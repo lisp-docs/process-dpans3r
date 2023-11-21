@@ -1732,11 +1732,11 @@ Conses **14–31**
 
 (print (equal list-2 ’(a b c)))) 
 
-*.* (3 2 1 A B C) 
+&#9655; (3 2 1 A B C) 
 
-*.* T 
+&#9655; T 
 
-*.* T 
+&#9655; T 
 
 *→* T 
 
@@ -1760,11 +1760,11 @@ Conses **14–31**
 
 (print (equal list-2 ’(a b c)))) 
 
-*.* (3 2 1 A B C) 
+&#9655; (3 2 1 A B C) 
 
-*.* NIL 
+&#9655; NIL 
 
-*.* T 
+&#9655; T 
 
 *→* T 
 
@@ -2010,41 +2010,41 @@ If *object* is the *same* as some *tail* of *list*, **ldiff** returns a *fresh l
 
 object (tailp object list) (ldiff list object)))))))) 
 
-*.* 
+&#9655; 
 
-*.* list=(A B C) (tailp object list) (ldiff list object) 
+&#9655; list=(A B C) (tailp object list) (ldiff list object) 
 
-*.* object=(A B C) T NIL 
+&#9655; object=(A B C) T NIL 
 
-*.* object=(C) T (A B) 
+&#9655; object=(C) T (A B) 
 
-*.* object=(C) NIL (A B C) 
+&#9655; object=(C) NIL (A B C) 
 
-*.* object=(F G H) NIL (A B C) 
+&#9655; object=(F G H) NIL (A B C) 
 
-*.* object=NIL T (A B C) 
+&#9655; object=NIL T (A B C) 
 
-*.* object=D NIL (A B C) 
+&#9655; object=D NIL (A B C) 
 
-*.* object=X NIL (A B C) 
+&#9655; object=X NIL (A B C) 
 
-*.* 
+&#9655; 
 
-*.* list=(A B C . D) (tailp object list) (ldiff list object) 
+&#9655; list=(A B C . D) (tailp object list) (ldiff list object) 
 
-*.* object=(A B C . D) T NIL 
+&#9655; object=(A B C . D) T NIL 
 
-*.* object=(C . D) T (A B) 
+&#9655; object=(C . D) T (A B) 
 
-*.* object=(C . D) NIL (A B C . D) 
+&#9655; object=(C . D) NIL (A B C . D) 
 
-*.* object=(F G H) NIL (A B C . D) 
+&#9655; object=(F G H) NIL (A B C . D) 
 
-*.* object=NIL NIL (A B C . D) 
+&#9655; object=NIL NIL (A B C . D) 
 
-*.* object=D T (A B C) 
+&#9655; object=D T (A B C) 
 
-*.* object=X NIL (A B C . D) 
+&#9655; object=X NIL (A B C . D) 
 
 *→* NIL 
 

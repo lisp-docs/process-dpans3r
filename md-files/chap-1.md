@@ -186,7 +186,7 @@ This font is also used for certain *standardized* names that are not names of *e
 
 Denotes the name of a *parameter* or *value*. 
 
-In some situations the notation “*hhnameii*” (*i.e.*, the same font, but with surrounding “angle brackets”) is used instead in order to provide better visual separation from surrounding characters. These “angle brackets” are metasyntactic, and never actually appear in program input or output.  
+In some situations the notation “&#10216;name&#10217;” (*i.e.*, the same font, but with surrounding “angle brackets”) is used instead in order to provide better visual separation from surrounding characters. These “angle brackets” are metasyntactic, and never actually appear in program input or output.  
 
 
 
@@ -394,7 +394,7 @@ This means that the results and observable side-effects of evaluating the *form*
 
 (gcd x (gcd y z)) are always the same as the results and observable side-effects of (gcd (gcd x y) z) for any x, y, and z. 
 
-*.*  
+&#9655;  
 
 
 
@@ -402,15 +402,15 @@ Common Lisp specifies input and output with respect to a non-interactive stream 
 
 For example, *conforming implementations* are permitted to differ in issues of how interactive input is terminated. For example, the *function* **read** terminates when the final delimiter is typed on a non-interactive stream. In some *implementations*, an interactive call to **read** returns as soon as the final delimiter is typed, even if that delimiter is not a *newline*. In other *implementations*, a final *newline* is always required. In still other *implementations*, there might be a command which “activates” a buffer full of input without the command itself being visible on the program’s input stream. 
 
-In the examples in this document, the notation “*.*” precedes lines where interactive input and output occurs. Within such a scenario, “this notation” notates user input. 
+In the examples in this document, the notation “&#9655;” precedes lines where interactive input and output occurs. Within such a scenario, “this notation” notates user input. 
 
 For example, the notation 
 
 (+ 1 (print (+ (sqrt (read)) (sqrt (read))))) 
 
-*.* 9 16 
+&#9655; 9 16 
 
-*.* 7 
+&#9655; 7 
 
 *→* 8 
 
@@ -422,7 +422,7 @@ Sometimes, the non-interactive stream model calls for a *newline*. How that *new
 
 (progn (format t "~&Who? ") (read-line)) 
 
-*.* Who? Fred, Mary, and Sally*←-* 
+&#9655; Who? Fred, Mary, and Sally*←-* 
 
 *→* "Fred, Mary, and Sally", *~~fal~~se* 
 
@@ -505,7 +505,7 @@ A *function* is sometimes said to “be *false*” or “be *true*” in some ci
 
 A *designator* is an *object* that denotes another *object*. 
 
-Where a *parameter* of an *operator* is described as a *designator* , the description of the *operator* is written in a way that assumes that the value of the *parameter* is the denoted *object*; that is, that the *parameter* is already of the denoted *type*. (The specific nature of the *object* denoted by a “*hhtypeii designator*” or a “*designator* for a *hhtypeii*” can be found in the Glossary entry for “*hhtypeii designator* .”) 
+Where a *parameter* of an *operator* is described as a *designator* , the description of the *operator* is written in a way that assumes that the value of the *parameter* is the denoted *object*; that is, that the *parameter* is already of the denoted *type*. (The specific nature of the *object* denoted by a “&#10216;typeii designator*” or a “*designator* for a &#10216;type&#10217;” can be found in the Glossary entry for “&#10216;typeii designator* .”) 
 
 For example, “**nil**” and “the *value* of **\*standard-output\***” are operationally indistinguishable as *stream designators*. Similarly, the *symbol* foo and the *string* "FOO" are operationally indistinguishable as *string designators*. 
 
@@ -529,7 +529,7 @@ For example, **mapcar** receives a *function designator* as an argument, and its
 
 \<i\>\<sup\>or\</sup\>→\</i\> (2 4 5 6) 
 
-In a few rare situations, there may be a need in a dictionary entry to refer to the *object* that was the original *designator* for a *parameter* . Since naming the *parameter* would refer to the denoted *object*, the phrase “the *hhparameter-nameii designator*” can be used to refer to the *designator* which was the *argument* from which the *value* of *hhparameter-nameii* was computed. 
+In a few rare situations, there may be a need in a dictionary entry to refer to the *object* that was the original *designator* for a *parameter* . Since naming the *parameter* would refer to the denoted *object*, the phrase “the &#10216;parameter-nameii designator*” can be used to refer to the *designator* which was the *argument* from which the *value* of &#10216;parameter-name&#10217; was computed. 
 
 **1.4.1.6 Nonsense Words** 
 
@@ -989,7 +989,7 @@ In addition, a *conforming implementation* is encouraged (but not required) to d
 
 **1.5.1.3 Documentation of Extensions** 
 
-A *conforming implementation* shall be accompanied by a document that separately describes any features accepted by the *implementation* that are not specified in this standard, but that do not cause any ambiguity or contradiction when added to the language standard. Such extensions shall be described as being “extensions to Common Lisp as specified by ANSI *hhstandard number ii*.” 
+A *conforming implementation* shall be accompanied by a document that separately describes any features accepted by the *implementation* that are not specified in this standard, but that do not cause any ambiguity or contradiction when added to the language standard. Such extensions shall be described as being “extensions to Common Lisp as specified by ANSI &#10216;standard number &#10217;.” 
 
 **1.5.1.4 Treatment of Exceptional Situations** 
 
@@ -1011,11 +1011,11 @@ Suppose that function foo is a member of a set *S* of *functions* that operate o
 
 A *conforming implementation* shall produce a conformance statement as a consequence of using the implementation, or that statement shall be included in the accompanying documentation. If the implementation conforms in all respects with this standard, the conformance statement shall be 
 
-“*hhImplementationii* conforms with the requirements of ANSI *hhstandard number ii*” 
+“&#10216;Implementation&#10217; conforms with the requirements of ANSI &#10216;standard number &#10217;” 
 
 If the *implementation* conforms with some but not all of the requirements of this standard, then the conformance statement shall be 
 
-“*hhImplementationii* conforms with the requirements of ANSI *hhstandard number ii* with the following exceptions: *hhreference to or complete list of the requirements of the standard with which the implementation does not conformii*.” 
+“&#10216;Implementation&#10217; conforms with the requirements of ANSI &#10216;standard number &#10217; with the following exceptions: &#10216;reference to or complete list of the requirements of the standard with which the implementation does not conform&#10217;.” 
 
 **1.5.2 Conforming Programs** 
 
@@ -1103,7 +1103,7 @@ The language described in this standard contains no subsets, though subsets are 
 
 For a language to be considered a subset, it must have the property that any valid *program* in that language has equivalent semantics and will run directly (with no extralingual pre-processing, and no special compatibility packages) in any *conforming implementation* of the full language. 
 
-A language that conforms to this requirement shall be described as being a “subset of Common Lisp as specified by ANSI *hhstandard number ii*.” 
+A language that conforms to this requirement shall be described as being a “subset of Common Lisp as specified by ANSI &#10216;standard number &#10217;.” 
 
 
 

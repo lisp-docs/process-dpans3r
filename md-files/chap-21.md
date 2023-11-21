@@ -597,7 +597,7 @@ If an *end of file*\<sub\>2\</sub\> occurs and *eof-error-p* is *false*, the *eo
 
 (format t "~S ~S" (read-byte s) (read-byte s nil ’eof))) 
 
-*.* 101 EOF 
+&#9655; 101 EOF 
 
 *→* NIL 
 
@@ -725,7 +725,7 @@ Streams **21–17**
 
 (peek-char nil input-stream))) 
 
-*.* #\1 #\4 #\4 
+&#9655; #\1 #\4 #\4 
 
 *→* NIL 
 
@@ -783,7 +783,7 @@ If an *end of file*\<sub\>2\</sub\> occurs and *eof-error-p* is *false*, *eof-va
 
 (format t "~S " c))) 
 
-*.* #\0 #\1 #\2 #\3 
+&#9655; #\0 #\1 #\2 #\3 
 
 *→* NIL 
 
@@ -859,7 +859,7 @@ If an *end of file*\<sub\>2\</sub\> occurs and *eof-error-p* is *false*, *eof-va
 
 (test-it) 
 
-*.* a 
+&#9655; a 
 
 *→* (#\a NIL NIL) 
 
@@ -871,7 +871,7 @@ If an *end of file*\<sub\>2\</sub\> occurs and *eof-error-p* is *false*, *eof-va
 
 (test-it) 
 
-*.* a*←-* 
+&#9655; a*←-* 
 
 *→* (#\a #\Newline NIL) 
 
@@ -1001,11 +1001,11 @@ Invoking **peek-char** or **read-char** commits all previous characters. The con
 
 (if (evenp i) (format t "~&~S ~S~%" i c) (unread-char c is))))) 
 
-*.* 0 #\0 
+&#9655; 0 #\0 
 
-*.* 2 #\1 
+&#9655; 2 #\1 
 
-*.* 4 #\2 
+&#9655; 4 #\2 
 
 *→* NIL 
 
@@ -1047,7 +1047,7 @@ Invoking **peek-char** or **read-char** commits all previous characters. The con
 
 (write-char #\a) 
 
-*.* a 
+&#9655; a 
 
 *→* #\a 
 
@@ -1181,7 +1181,7 @@ The corresponding output function is **write-line**.
 
 (prog1 (write-string "books" nil :end 4) (write-string "worms")) 
 
-*.* bookworms 
+&#9655; bookworms 
 
 *→* "books" 
 
@@ -1195,7 +1195,7 @@ The corresponding output function is **write-line**.
 
 nil) 
 
-*.* \*test1 
+&#9655; \*test1 
 
 Streams **21–25**
 
@@ -1203,9 +1203,9 @@ Streams **21–25**
 
  
 
-*.* \*test2 
+&#9655; \*test2 
 
-*.* \* 
+&#9655; \* 
 
 *→* NIL 
 
@@ -1309,7 +1309,7 @@ Streams **21–27**
 
 (write-sequence "bookworms" \*standard-output\* :end 4) 
 
-*.* book 
+&#9655; book 
 
 *→* "bookworms" 
 
@@ -1507,7 +1507,7 @@ If *position-spec* is supplied, but is too large or otherwise inappropriate, an 
 
 **Notes:** 
 
-Implementations that have character files represented as a sequence of records of bounded size might choose to encode the file position as, for example, *hhrecord-number ii*\**hhmax-record sizeii*+*hhcharacter-within-recordii*. This is a valid encoding because it increases monotonically as each character is read or written, though not necessarily by 1 at each step. An *integer* might then be considered “inappropriate” as *position-spec* to **file-position** if, when decoded into record number and character number, it turned out that the supplied record was too short for the specified character number. 
+Implementations that have character files represented as a sequence of records of bounded size might choose to encode the file position as, for example, &#10216;record-number &#10217;\*&#10216;max-record size&#10217;+&#10216;character-within-record&#10217;. This is a valid encoding because it increases monotonically as each character is read or written, though not necessarily by 1 at each step. An *integer* might then be considered “inappropriate” as *position-spec* to **file-position** if, when decoded into record number and character number, it turned out that the supplied record was too short for the specified character number. 
 
 **file-string-length** *Function* 
 
@@ -1875,9 +1875,9 @@ The consequences are undefined if an attempt is made to *assign* the *stream var
 
 (format t "~&\*\*\* ~A~%" l))) 
 
-*.* \*\*\* Here are a couple 
+&#9655; \*\*\* Here are a couple 
 
-*.* \*\*\* of test data lines 
+&#9655; \*\*\* of test data lines 
 
 *→* "Reached end of file." 
 
@@ -1891,7 +1891,7 @@ The consequences are undefined if an attempt is made to *assign* the *stream var
 
 (read foo)) 
 
-*.* hello? 
+&#9655; hello? 
 
 *→* HELLO? ;This value was read from the terminal, not a file! 
 
@@ -2039,7 +2039,7 @@ Returns *true* if there is a character immediately available from *input-stream*
 
 (progn (unread-char (read-char)) (list (listen) (read-char))) 
 
-*.* 1 
+&#9655; 1 
 
 *→* (T #\1) 
 
@@ -2107,37 +2107,37 @@ If **clear-input** does not make sense for *input-stream*, then **clear-input** 
 
 (read-sleepily) 
 
-*.* \> 10 
+&#9655; \> 10 
 
-*.* \> 
+&#9655; \> 
 
-*.* » 20 
+&#9655; » 20 
 
 *→* (10 20) 
 
 (read-sleepily t) 
 
-*.* \> 10 
+&#9655; \> 10 
 
-*.* \> 
+&#9655; \> 
 
-*.* » 20 
+&#9655; » 20 
 
 *→* (10 20) 
 
 (read-sleepily t 10) 
 
-*.* \> 10 
+&#9655; \> 10 
 
-*.* \> 20 ; Some implementations won’t echo typeahead here. 
+&#9655; \> 20 ; Some implementations won’t echo typeahead here. 
 
 
-
- 
 
  
 
-*.* » 30 
+ 
+
+&#9655; » 30 
 
 *→* (10 30) 
 
@@ -2201,7 +2201,7 @@ Streams **21–43**
 
 (progn (princ "am i seen?") (clear-output)) 
 
-*.* am i seen? 
+&#9655; am i seen? 
 
 *→* NIL 
 
@@ -2255,21 +2255,21 @@ All input and output are performed using *query I/O*.
 
 (y-or-n-p "(t or nil) given by") 
 
-*.* (t or nil) given by (Y or N) Y 
+&#9655; (t or nil) given by (Y or N) Y 
 
 *→ true* 
 
 (yes-or-no-p "a ~S message" ’frightening) 
 
-*.* a FRIGHTENING message (Yes or No) no 
+&#9655; a FRIGHTENING message (Yes or No) no 
 
 *→ false* 
 
 (y-or-n-p "Produce listing file?") 
 
-*.* Produce listing file? 
+&#9655; Produce listing file? 
 
-*.* Please respond with Y or N. n 
+&#9655; Please respond with Y or N. n 
 
 *→ false* 
 
@@ -3035,7 +3035,7 @@ Streams **21–59**
 
  
 
-*.* FOOBAR 
+&#9655; FOOBAR 
 
 *→* BAR 
 
@@ -3045,7 +3045,7 @@ Streams **21–59**
 
 (prin1 ’bar \*terminal-io\*)) 
 
-*.* BAR 
+&#9655; BAR 
 
 *→* "FOO" 
 

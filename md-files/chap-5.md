@@ -84,7 +84,7 @@ the *subforms* of place1 and value1 are evaluated, the location specified by pla
 
 (car (progn (princ "2") ref2)))) 
 
-*.* 12 
+&#9655; 12 
 
 *→* (REF1) 
 
@@ -2421,13 +2421,13 @@ Data and Control Flow **5–45**
 
 (print ’here)) 
 
-*.* 5 
+&#9655; 5 
 
-*.* HERE 
+&#9655; HERE 
 
-*.* 5 
+&#9655; 5 
 
-*.* HERE 
+&#9655; HERE 
 
 *→* NIL 
 
@@ -2447,13 +2447,13 @@ Data and Control Flow **5–45**
 
 (print ’here)) 
 
-*.* 5 
+&#9655; 5 
 
-*.* HERE 
+&#9655; HERE 
 
-*.* 5 
+&#9655; 5 
 
-*.* HERE 
+&#9655; HERE 
 
 *→* NIL 
 
@@ -2605,13 +2605,13 @@ out
 
 (f1 nil) 
 
-*.* 2 
+&#9655; 2 
 
 *→* NIL 
 
 (f1 t) 
 
-*.* 1 
+&#9655; 1 
 
 *→* NIL 
 
@@ -2697,7 +2697,7 @@ The following prints “The inner catch returns :SECOND-THROW” and then return
 
 :outer-catch) 
 
-*.* The inner catch returns :SECOND-THROW 
+&#9655; The inner catch returns :SECOND-THROW 
 
 *→* :OUTER-CATCH 
 
@@ -3039,7 +3039,7 @@ t *→* T
 
 (prin1 ’hello t) 
 
-*.* HELLO 
+&#9655; HELLO 
 
 *→* HELLO 
 
@@ -3869,13 +3869,13 @@ First *test-form* is evaluated. If the result is *true*, then *then-form* is sel
 
 (test) 
 
-*.* TRUE T 
+&#9655; TRUE T 
 
-*.* FALSE NIL 
+&#9655; FALSE NIL 
 
-*.* TRUE 1 
+&#9655; TRUE 1 
 
-*.* TRUE (A B C) 
+&#9655; TRUE (A B C) 
 
 *→* NIL 
 
@@ -3991,7 +3991,7 @@ In an **unless** *form*, if the *test-form yields false*, the *forms* are *evalu
 
 (when t (prin1 1) (prin1 2) (prin1 3)) 
 
-*.* 123 
+&#9655; 123 
 
 *→* 3 
 
@@ -4001,7 +4001,7 @@ In an **unless** *form*, if the *test-form yields false*, the *forms* are *evalu
 
 (unless nil (prin1 1) (prin1 2) (prin1 3)) 
 
-*.* 123 
+&#9655; 123 
 
 *→* 3 
 
@@ -4137,7 +4137,7 @@ Note that in contrast with **ccase**, the caller of **ecase** may rely on the fa
 
 (otherwise ’others)))) 
 
-*.* CLAUSE1 CLAUSE1 CLAUSE2 CLAUSE4 CLAUSE4 NILSLOT TSLOT OTHERS 
+&#9655; CLAUSE1 CLAUSE1 CLAUSE2 CLAUSE4 CLAUSE4 NILSLOT TSLOT OTHERS 
 
 *→* NIL 
 
@@ -4169,17 +4169,17 @@ Data and Control Flow **5–75**
 
 (add-em ’(uno iiii)) 
 
-*.* Error: The value of X, IIII, is not I, UNO, II, DOS, III, 
+&#9655; Error: The value of X, IIII, is not I, UNO, II, DOS, III, 
 
-*.* TRES, IV, or CUATRO. 
+&#9655; TRES, IV, or CUATRO. 
 
-*.* 1: Supply a value to use instead. 
+&#9655; 1: Supply a value to use instead. 
 
-*.* 2: Return to Lisp Toplevel. 
+&#9655; 2: Return to Lisp Toplevel. 
 
-*.* Debug\> :CONTINUE 1 
+&#9655; Debug\> :CONTINUE 1 
 
-*.* Value to evaluate and use for X: ’IV 
+&#9655; Value to evaluate and use for X: ’IV 
 
 *→* 5 
 
@@ -4317,15 +4317,15 @@ x (typecase x
 
 (map ’nil #’what-is-it ’(nil (a b) 7.0 7 box)) 
 
-*.* NIL is a symbol, boolean false, or the empty list. 
+&#9655; NIL is a symbol, boolean false, or the empty list. 
 
-*.* (A B) is a list. 
+&#9655; (A B) is a list. 
 
-*.* 7.0 is a float. 
+&#9655; 7.0 is a float. 
 
-*.* 7 is a(n) integer. 
+&#9655; 7 is a(n) integer. 
 
-*.* BOX is a(n) symbol. 
+&#9655; BOX is a(n) symbol. 
 
 *→* NIL 
 
@@ -4339,10 +4339,10 @@ x (typecase x
 
 (symbol (symbol-value x))) 
 
-*.* Error: The value of X, 1/3, is neither an integer nor a symbol. 
+&#9655; Error: The value of X, 1/3, is neither an integer nor a symbol. 
 
-*.* To continue, type :CONTINUE followed by an option number: 
+&#9655; To continue, type :CONTINUE followed by an option number: 
 
-*.* 1: Specify a value to use instead. 
+&#9655; 1: Specify a value to use instead. 
 
 

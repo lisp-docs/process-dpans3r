@@ -2325,9 +2325,9 @@ x2 (thing-x thing2) y2 (thing-y thing2))
 
 x2 (thing-x thing2) y2 (thing-y thing2))))) 
 
-*.* Changing X from 1 to 9 in #\<THING 43135676\>. 
+&#9655; Changing X from 1 to 9 in #\<THING 43135676\>. 
 
-*.* Changing X from 7 to (9) in #\<THING 43147374\>. 
+&#9655; Changing X from 7 to (9) in #\<THING 43147374\>. 
 
 *→* ((1 1 2 2 7 7 8 8) 
 
@@ -2463,7 +2463,7 @@ x2 (thing-x thing2) y2 (thing-y thing2))
 
 x2 (thing-x thing2) y2 (thing-y thing2))))) 
 
-*.* Changing X from 7 to (9) in #\<THING 43147374\>. 
+&#9655; Changing X from 7 to (9) in #\<THING 43147374\>. 
 
 *→* ((1 1 2 2 7 7 8 8) 
 

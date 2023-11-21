@@ -835,7 +835,7 @@ Glossary **26–25**
 
 **for-value** *adj.* (of a *reference* to a *binding*) being a *reference* that *reads*\<sub\>1\</sub\> the *value* of the *binding*. 
 
-**form** *n.* 1. any *object* meant to be *evaluated*. 2. a *symbol*, a *compound form*, or a *self-evaluating object*. 3. (for an *operator* , as in “*hhoperator ii form*”) a *compound form* having that *operator* as its first element. “A **quote** form is a constant form.” 
+**form** *n.* 1. any *object* meant to be *evaluated*. 2. a *symbol*, a *compound form*, or a *self-evaluating object*. 3. (for an *operator* , as in “&#10216;operator ii form*”) a *compound form* having that *operator* as its first element. “A **quote** form is a constant form.” 
 
 **formal argument** *n. Trad.* a *parameter* . 
 

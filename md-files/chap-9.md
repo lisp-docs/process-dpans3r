@@ -633,21 +633,21 @@ The *places* are *generalized references* to data upon which *test-form* depends
 
 (matrix-multiply x y) 
 
-*.* Correctable error in MATRIX-MULTIPLY: 
+&#9655; Correctable error in MATRIX-MULTIPLY: 
 
-*.* Cannot multiply #\<ARRAY ...\> by #\<ARRAY ...\>. 
+&#9655; Cannot multiply #\<ARRAY ...\> by #\<ARRAY ...\>. 
 
-*.* Restart options: 
+&#9655; Restart options: 
 
-*.* 1: You will be prompted for one or more new values. 
+&#9655; 1: You will be prompted for one or more new values. 
 
-*.* 2: Top level. 
+&#9655; 2: Top level. 
 
-*.* Debug\> :continue 1 
+&#9655; Debug\> :continue 1 
 
-*.* Value for A: x 
+&#9655; Value for A: x 
 
-*.* Value for B: (make-array ’(5 3) :initial-element 6) 
+&#9655; Value for B: (make-array ’(5 3) :initial-element 6) 
 
 *→* #2A((54 54 54 54 54) 
 
@@ -673,15 +673,15 @@ The *places* are *generalized references* to data upon which *test-form* depends
 
 (double-safely t) 
 
-*.* Correctable error in DOUBLE-SAFELY: The value of (NUMBERP X) must be non-NIL. *.* Restart options: 
+&#9655; Correctable error in DOUBLE-SAFELY: The value of (NUMBERP X) must be non-NIL. &#9655; Restart options: 
 
-*.* 1: You will be prompted for one or more new values. 
+&#9655; 1: You will be prompted for one or more new values. 
 
-*.* 2: Top level. 
+&#9655; 2: Top level. 
 
-*.* Debug\> :continue 1 
+&#9655; Debug\> :continue 1 
 
-*.* Value for X: 7 
+&#9655; Value for X: 7 
 
 *→* 14 
 
@@ -743,13 +743,13 @@ Conditions **9–17**
 
 (factorial -1) 
 
-*.* Error: -1 is not a valid argument to FACTORIAL. 
+&#9655; Error: -1 is not a valid argument to FACTORIAL. 
 
-*.* To continue, type :CONTINUE followed by an option number: 
+&#9655; To continue, type :CONTINUE followed by an option number: 
 
-*.* 1: Return to Lisp Toplevel. 
+&#9655; 1: Return to Lisp Toplevel. 
 
-*.* Debug\> 
+&#9655; Debug\> 
 
 (setq a ’fred) 
 
@@ -757,15 +757,15 @@ Conditions **9–17**
 
 (if (numberp a) (1+ a) (error "~S is not a number." A)) 
 
-*.* Error: FRED is not a number. 
+&#9655; Error: FRED is not a number. 
 
-*.* To continue, type :CONTINUE followed by an option number: 
+&#9655; To continue, type :CONTINUE followed by an option number: 
 
-*.* 1: Return to Lisp Toplevel. 
+&#9655; 1: Return to Lisp Toplevel. 
 
-*.* Debug\> :Continue 1 
+&#9655; Debug\> :Continue 1 
 
-*.* Return to Lisp Toplevel. 
+&#9655; Return to Lisp Toplevel. 
 
 (define-condition not-a-number (error) 
 
@@ -781,15 +781,15 @@ Conditions **9–17**
 
 (if (numberp a) (1+ a) (error ’not-a-number :argument a)) 
 
-*.* Error: FRED is not a number. 
+&#9655; Error: FRED is not a number. 
 
-*.* To continue, type :CONTINUE followed by an option number: 
+&#9655; To continue, type :CONTINUE followed by an option number: 
 
-*.* 1: Return to Lisp Toplevel. 
+&#9655; 1: Return to Lisp Toplevel. 
 
-*.* Debug\> :Continue 1 
+&#9655; Debug\> :Continue 1 
 
-*.* Return to Lisp Toplevel. 
+&#9655; Return to Lisp Toplevel. 
 
 **Side Effects:** 
 
@@ -869,15 +869,15 @@ Conditions **9–19**
 
 (real-sqrt -9) 
 
-*.* Correctable error in REAL-SQRT: Tried to take sqrt(-9). 
+&#9655; Correctable error in REAL-SQRT: Tried to take sqrt(-9). 
 
-*.* Restart options: 
+&#9655; Restart options: 
 
-*.* 1: Return sqrt(9) instead. 
+&#9655; 1: Return sqrt(9) instead. 
 
-*.* 2: Top level. 
+&#9655; 2: Top level. 
 
-*.* Debug\> :continue 1 
+&#9655; Debug\> :continue 1 
 
 *→* 3.0 
 
@@ -905,17 +905,17 @@ Conditions **9–19**
 
 (assure-number ’a) 
 
-*.* Correctable error in ASSURE-NUMBER: A is not a number. 
+&#9655; Correctable error in ASSURE-NUMBER: A is not a number. 
 
-*.* Restart options: 
+&#9655; Restart options: 
 
-*.* 1: Enter a number. 
+&#9655; 1: Enter a number. 
 
-*.* 2: Top level. 
+&#9655; 2: Top level. 
 
-*.* Debug\> :continue 1 
+&#9655; Debug\> :continue 1 
 
-*.* Type a number: 1/2 
+&#9655; Type a number: 1/2 
 
 *→* 1/2 
 
@@ -949,33 +949,33 @@ Conditions **9–19**
 
 (assure-large-number ’a) 
 
-*.* Correctable error in ASSURE-LARGE-NUMBER: A is not a large number. 
+&#9655; Correctable error in ASSURE-LARGE-NUMBER: A is not a large number. 
 
-*.* Restart options: 
+&#9655; Restart options: 
 
-*.* 1: Enter a number. 
+&#9655; 1: Enter a number. 
 
-*.* 2: Top level. 
+&#9655; 2: Top level. 
 
-*.* Debug\> :continue 1 
+&#9655; Debug\> :continue 1 
 
-*.* Type a large number: 88 
+&#9655; Type a large number: 88 
 
 *→* 88 
 
 (assure-large-number 37) 
 
-*.* Correctable error in ASSURE-LARGE-NUMBER: 37 is not a large number. 
+&#9655; Correctable error in ASSURE-LARGE-NUMBER: 37 is not a large number. 
 
-*.* Restart options: 
+&#9655; Restart options: 
 
-*.* 1: Enter a number a bit larger than 37. 
+&#9655; 1: Enter a number a bit larger than 37. 
 
-*.* 2: Top level. 
+&#9655; 2: Top level. 
 
-*.* Debug\> :continue 1 
+&#9655; Debug\> :continue 1 
 
-*.* Type a large number: 259 
+&#9655; Type a large number: 259 
 
 *→* 259 
 
@@ -1013,11 +1013,11 @@ Conditions **9–19**
 
 (assure-large-number ’a) 
 
-*.* Correctable error in ASSURE-LARGE-NUMBER: A is not a large number. 
+&#9655; Correctable error in ASSURE-LARGE-NUMBER: A is not a large number. 
 
-*.* Restart options: 
+&#9655; Restart options: 
 
-*.* 1: Enter a number. 
+&#9655; 1: Enter a number. 
 
 Conditions **9–21**
 
@@ -1025,27 +1025,27 @@ Conditions **9–21**
 
  
 
-*.* 2: Top level. 
+&#9655; 2: Top level. 
 
-*.* Debug\> :continue 1 
+&#9655; Debug\> :continue 1 
 
-*.* Type a large number: 88 
+&#9655; Type a large number: 88 
 
 *→* 88 
 
 (assure-large-number 37) 
 
-*.* Correctable error in ASSURE-LARGE-NUMBER: A is not a large number. 
+&#9655; Correctable error in ASSURE-LARGE-NUMBER: A is not a large number. 
 
-*.* Restart options: 
+&#9655; Restart options: 
 
-*.* 1: Enter a number a bit larger than 37. 
+&#9655; 1: Enter a number a bit larger than 37. 
 
-*.* 2: Top level. 
+&#9655; 2: Top level. 
 
-*.* Debug\> :continue 1 
+&#9655; Debug\> :continue 1 
 
-*.* Type a large number: 259 
+&#9655; Type a large number: 259 
 
 *→* 259 
 
@@ -1109,19 +1109,19 @@ The first time *place* is *evaluated*, it is *evaluated* by normal evaluation ru
 
 (check-type aardvarks (array \* (3))) 
 
-*.* Error: The value of AARDVARKS, (SAM HARRY FRED), 
+&#9655; Error: The value of AARDVARKS, (SAM HARRY FRED), 
 
-*.* is not a 3-long array. 
+&#9655; is not a 3-long array. 
 
-*.* To continue, type :CONTINUE followed by an option number: 
+&#9655; To continue, type :CONTINUE followed by an option number: 
 
-*.* 1: Specify a value to use instead. 
+&#9655; 1: Specify a value to use instead. 
 
-*.* 2: Return to Lisp Toplevel. 
+&#9655; 2: Return to Lisp Toplevel. 
 
-*.* Debug\> :CONTINUE 1 
+&#9655; Debug\> :CONTINUE 1 
 
-*.* Use Value: #(SAM FRED HARRY) 
+&#9655; Use Value: #(SAM FRED HARRY) 
 
 *→* NIL 
 
@@ -1139,13 +1139,13 @@ aardvarks
 
 (check-type aardvark-count (integer 0 \*) "A positive integer") 
 
-*.* Error: The value of AARDVARK-COUNT, FOO, is not a positive integer. 
+&#9655; Error: The value of AARDVARK-COUNT, FOO, is not a positive integer. 
 
-*.* To continue, type :CONTINUE followed by an option number: 
+&#9655; To continue, type :CONTINUE followed by an option number: 
 
-*.* 1: Specify a value to use instead. 
+&#9655; 1: Specify a value to use instead. 
 
-*.* 2: Top level. 
+&#9655; 2: Top level. 
 
 Conditions **9–23**
 
@@ -1155,7 +1155,7 @@ Conditions **9–23**
 
 **check-type** 
 
-*.* Debug\> :CONTINUE 2 
+&#9655; Debug\> :CONTINUE 2 
 
 (defmacro define-adder (name amount) 
 
@@ -1169,33 +1169,33 @@ Conditions **9–23**
 
 (macroexpand ’(define-adder 7 7)) 
 
-*.* Error: The value of NAME, 7, is not a name for an adder function. *.* To continue, type :CONTINUE followed by an option number: 
+&#9655; Error: The value of NAME, 7, is not a name for an adder function. &#9655; To continue, type :CONTINUE followed by an option number: 
 
-*.* 1: Specify a value to use instead. 
+&#9655; 1: Specify a value to use instead. 
 
-*.* 2: Top level. 
+&#9655; 2: Top level. 
 
-*.* Debug\> :Continue 1 
+&#9655; Debug\> :Continue 1 
 
-*.* Specify a value to use instead. 
+&#9655; Specify a value to use instead. 
 
-*.* Type a form to be evaluated and used instead: ’ADD7 
+&#9655; Type a form to be evaluated and used instead: ’ADD7 
 
 *→* (defun add7 (x) (+ x 7)) 
 
 (macroexpand ’(define-adder add5 something)) 
 
-*.* Error: The value of AMOUNT, SOMETHING, is not an integer. 
+&#9655; Error: The value of AMOUNT, SOMETHING, is not an integer. 
 
-*.* To continue, type :CONTINUE followed by an option number: 
+&#9655; To continue, type :CONTINUE followed by an option number: 
 
-*.* 1: Specify a value to use instead. 
+&#9655; 1: Specify a value to use instead. 
 
-*.* 2: Top level. 
+&#9655; 2: Top level. 
 
-*.* Debug\> :Continue 1 
+&#9655; Debug\> :Continue 1 
 
-*.* Type a form to be evaluated and used instead: 5 
+&#9655; Type a form to be evaluated and used instead: 5 
 
 *→* (defun add5 (x) (+ x 5)) 
 
@@ -1531,7 +1531,7 @@ result))
 
 (foo most-positive-fixnum) 
 
-*.* Warning: You’re using very big numbers. 
+&#9655; Warning: You’re using very big numbers. 
 
 *→* 4294967294 
 
@@ -1541,23 +1541,23 @@ result))
 
 (foo most-positive-fixnum) 
 
-*.* Break: Caveat emptor. 
+&#9655; Break: Caveat emptor. 
 
-*.* To continue, type :CONTINUE followed by an option number. 
+&#9655; To continue, type :CONTINUE followed by an option number. 
 
-*.* 1: Return from Break. 
+&#9655; 1: Return from Break. 
 
-*.* 2: Abort to Lisp Toplevel. 
+&#9655; 2: Abort to Lisp Toplevel. 
 
-*.* Debug\> :continue 1 
+&#9655; Debug\> :continue 1 
 
 
-
- 
 
  
 
-*.* Warning: You’re using very big numbers. 
+ 
+
+&#9655; Warning: You’re using very big numbers. 
 
 *→* 4294967294 
 
@@ -1675,17 +1675,17 @@ If the **continue** *restart* is used while in the debugger, **break** immediate
 
 (break "You got here with arguments: ~:S." ’(FOO 37 A)) 
 
-*.* BREAK: You got here with these arguments: FOO, 37, A. 
+&#9655; BREAK: You got here with these arguments: FOO, 37, A. 
 
-*.* To continue, type :CONTINUE followed by an option number: 
+&#9655; To continue, type :CONTINUE followed by an option number: 
 
-*.* 1: Return from BREAK. 
+&#9655; 1: Return from BREAK. 
 
-*.* 2: Top level. 
+&#9655; 2: Top level. 
 
-*.* Debug\> :CONTINUE 1 
+&#9655; Debug\> :CONTINUE 1 
 
-*.* Return from BREAK. 
+&#9655; Return from BREAK. 
 
 *→* NIL 
 
@@ -1789,27 +1789,27 @@ When the *value* of **\*debugger-hook\*** is *non-nil*, it is called prior to no
 
 (+ 3 ’a)) 
 
-*.* Fooey: The argument to +, A, is not a number. 
+&#9655; Fooey: The argument to +, A, is not a number. 
 
-*.* [1] Supply a replacement for A. 
+&#9655; [1] Supply a replacement for A. 
 
-*.* [2] Return to Cloe Toplevel. 
+&#9655; [2] Return to Cloe Toplevel. 
 
-*.* Choice: 1 
+&#9655; Choice: 1 
 
-*.* Form to evaluate and use: (+ 5 ’b) 
+&#9655; Form to evaluate and use: (+ 5 ’b) 
 
-*.* Fooey: The argument to +, B, is not a number. 
+&#9655; Fooey: The argument to +, B, is not a number. 
 
-*.* [1] Supply a replacement for B. 
+&#9655; [1] Supply a replacement for B. 
 
-*.* [2] Supply a replacement for A. 
+&#9655; [2] Supply a replacement for A. 
 
-*.* [3] Return to Cloe Toplevel. 
+&#9655; [3] Return to Cloe Toplevel. 
 
-*.* Choice: 1 
+&#9655; Choice: 1 
 
-*.* Form to evaluate and use: 1 
+&#9655; Form to evaluate and use: 1 
 
 *→* 9 
 
@@ -1857,19 +1857,19 @@ The **continue** *restart* can be used to continue with the normal *signaling* p
 
 (ignore-errors (error ’simple-error :format-control "Fooey!"))) 
 
-*.* Break: Fooey! 
+&#9655; Break: Fooey! 
 
-*.* BREAK entered because of \*BREAK-ON-SIGNALS\*. 
+&#9655; BREAK entered because of \*BREAK-ON-SIGNALS\*. 
 
-*.* To continue, type :CONTINUE followed by an option number: 
+&#9655; To continue, type :CONTINUE followed by an option number: 
 
-*.* 1: Continue to signal. 
+&#9655; 1: Continue to signal. 
 
-*.* 2: Top level. 
+&#9655; 2: Top level. 
 
-*.* Debug\> :CONTINUE 1 
+&#9655; Debug\> :CONTINUE 1 
 
-*.* Continue to signal. 
+&#9655; Continue to signal. 
 
 *→* NIL, #\<SIMPLE-ERROR 32212257\> 
 
@@ -1877,29 +1877,29 @@ The **continue** *restart* can be used to continue with the normal *signaling* p
 
 (error ’simple-error :format-control "Fooey!")) 
 
-*.* Break: Fooey! 
+&#9655; Break: Fooey! 
 
-*.* BREAK entered because of \*BREAK-ON-SIGNALS\*. 
+&#9655; BREAK entered because of \*BREAK-ON-SIGNALS\*. 
 
-*.* To continue, type :CONTINUE followed by an option number: 
+&#9655; To continue, type :CONTINUE followed by an option number: 
 
-*.* 1: Continue to signal. 
+&#9655; 1: Continue to signal. 
 
-*.* 2: Top level. 
+&#9655; 2: Top level. 
 
-*.* Debug\> :CONTINUE 1 
+&#9655; Debug\> :CONTINUE 1 
 
-*.* Continue to signal. 
+&#9655; Continue to signal. 
 
-*.* Error: Fooey! 
+&#9655; Error: Fooey! 
 
-*.* To continue, type :CONTINUE followed by an option number: 
+&#9655; To continue, type :CONTINUE followed by an option number: 
 
-*.* 1: Top level. 
+&#9655; 1: Top level. 
 
-*.* Debug\> :CONTINUE 1 
+&#9655; Debug\> :CONTINUE 1 
 
-*.* Top level. 
+&#9655; Top level. 
 
 **See Also:** 
 
@@ -1987,7 +1987,7 @@ If any other kind of error is signaled, the second function is called. In either
 
 (+ 1 2)) 
 
-*.* Bar. 
+&#9655; Bar. 
 
 *→* (1 NIL 3) 
 
@@ -2211,7 +2211,7 @@ Conditions **9–41**
 
 (load-init-file "no-such-program") 
 
-*.* Init file failed to load. 
+&#9655; Init file failed to load. 
 
 NIL 
 
@@ -2519,7 +2519,7 @@ Note that since no :report clause was given, the information inherited from mach
 
 (format t "~A" \*) 
 
-*.* FRED ate too much CHOCOLATE ice-cream 
+&#9655; FRED ate too much CHOCOLATE ice-cream 
 
 *→* NIL 
 
@@ -2565,19 +2565,19 @@ Constructs and returns a *condition* of type *type* using *slot-initializations*
 
 (format t "~&~A~%" a) 
 
-*.* This is your first error. 
+&#9655; This is your first error. 
 
 *→* NIL 
 
 (error a) 
 
-*.* Error: This is your first error. 
+&#9655; Error: This is your first error. 
 
-*.* To continue, type :CONTINUE followed by an option number: 
+&#9655; To continue, type :CONTINUE followed by an option number: 
 
-*.* 1: Return to Lisp Toplevel. 
+&#9655; 1: Return to Lisp Toplevel. 
 
-*.* Debug\> 
+&#9655; Debug\> 
 
 **Affected By:** 
 
@@ -2677,19 +2677,19 @@ Conditions **9–49**
 
 (two () ’II)) 
 
-*.* 0: ONE 
+&#9655; 0: ONE 
 
-*.* 1: TWO 
+&#9655; 1: TWO 
 
-*.* 2: Who knows? 
+&#9655; 2: Who knows? 
 
-*.* 3: ONE 
+&#9655; 3: ONE 
 
-*.* 4: TWO 
+&#9655; 4: TWO 
 
-*.* 5: Return to Lisp Toplevel. 
+&#9655; 5: Return to Lisp Toplevel. 
 
-*.* Option: 4 
+&#9655; Option: 4 
 
 *→* II 
 
@@ -2745,7 +2745,7 @@ If *identifier* is a currently active restart, then it is returned. Otherwise, *
 
 (my-restart () nil)) 
 
-*.* #\<RESTART 32307325\> is named MY-RESTART 
+&#9655; #\<RESTART 32307325\> is named MY-RESTART 
 
 *→* NIL 
 
@@ -2801,15 +2801,15 @@ Calls the *function* associated with *restart*, passing *arguments* to it. *Rest
 
 (foo ’seven) 
 
-*.* Error: The value SEVEN was not of type NUMBER. 
+&#9655; Error: The value SEVEN was not of type NUMBER. 
 
-*.* To continue, type :CONTINUE followed by an option number: 
+&#9655; To continue, type :CONTINUE followed by an option number: 
 
-*.* 1: Specify a different value to use. 
+&#9655; 1: Specify a different value to use. 
 
-*.* 2: Return to Lisp Toplevel. 
+&#9655; 2: Return to Lisp Toplevel. 
 
-*.* Debug\> (invoke-restart ’store-value 7) 
+&#9655; Debug\> (invoke-restart ’store-value 7) 
 
 *→* 10 
 
@@ -2871,17 +2871,17 @@ Once the arguments have been determined, **invoke-restart-interactively** execut
 
 (add3 ’seven) 
 
-*.* Error: The value SEVEN was not of type NUMBER. 
+&#9655; Error: The value SEVEN was not of type NUMBER. 
 
-*.* To continue, type :CONTINUE followed by an option number: 
+&#9655; To continue, type :CONTINUE followed by an option number: 
 
-*.* 1: Specify a different value to use. 
+&#9655; 1: Specify a different value to use. 
 
-*.* 2: Return to Lisp Toplevel. 
+&#9655; 2: Return to Lisp Toplevel. 
 
-*.* Debug\> (invoke-restart-interactively ’store-value) 
+&#9655; Debug\> (invoke-restart-interactively ’store-value) 
 
-*.* Type a form to evaluate and use: 7 
+&#9655; Type a form to evaluate and use: 7 
 
 *→* 10 
 
@@ -3215,19 +3215,19 @@ Conditions **9–59**
 
 *→* VERIFY-OR-FIX-PERFECT-SUNDAE 
 
-(verify-or-fix-perfect-sundae ’vanilla ’caramel ’cherry) *.* Error: Bad tasting sundae with VANILLA, CARAMEL, and CHERRY. *.* To continue, type :CONTINUE followed by an option number: *.* 1: Use a new ice cream. 
+(verify-or-fix-perfect-sundae ’vanilla ’caramel ’cherry) &#9655; Error: Bad tasting sundae with VANILLA, CARAMEL, and CHERRY. &#9655; To continue, type :CONTINUE followed by an option number: &#9655; 1: Use a new ice cream. 
 
-*.* 2: Use a new sauce. 
+&#9655; 2: Use a new sauce. 
 
-*.* 3: Use a new topping. 
+&#9655; 3: Use a new topping. 
 
-*.* 4: Return to Lisp Toplevel. 
+&#9655; 4: Return to Lisp Toplevel. 
 
-*.* Debug\> :continue 1 
+&#9655; Debug\> :continue 1 
 
-*.* Use a new ice cream. 
+&#9655; Use a new ice cream. 
 
-*.* Enter a new ice cream: ’chocolate 
+&#9655; Enter a new ice cream: ’chocolate 
 
 *→* CHOCOLATE, CARAMEL, CHERRY 
 
@@ -3455,17 +3455,17 @@ Conditions **9–63**
 
 (+ ’a 3) 
 
-*.* Error: The argument, A, to the function + was of the wrong type. *.* The function expected a number. 
+&#9655; Error: The argument, A, to the function + was of the wrong type. &#9655; The function expected a number. 
 
-*.* To continue, type :CONTINUE followed by an option number: 
+&#9655; To continue, type :CONTINUE followed by an option number: 
 
-*.* 1: Specify a value to use this time. 
+&#9655; 1: Specify a value to use this time. 
 
-*.* 2: Return to command level 1. 
+&#9655; 2: Return to command level 1. 
 
-*.* 3: Exit command level 1. 
+&#9655; 3: Exit command level 1. 
 
-*.* 4: Return to Lisp Toplevel. 
+&#9655; 4: Return to Lisp Toplevel. 
 
 (defun compute-fixnum-power-of-2 (x) 
 
@@ -3495,15 +3495,15 @@ COMPUTE-POWER-OF-2
 
 (compute-power-of-2 10000) 
 
-*.* Error: Power of 2 is too large. 
+&#9655; Error: Power of 2 is too large. 
 
-*.* To continue, type :CONTINUE followed by an option number. 
+&#9655; To continue, type :CONTINUE followed by an option number. 
 
 \<i\>.\</i\> 1: Give up on computing 2\<i\>\<sup\>∧\</sup\>\</i\>10000. 
 
-*.* 2: Return to Lisp Toplevel 
+&#9655; 2: Return to Lisp Toplevel 
 
-*.* Debug\> :continue 1 
+&#9655; Debug\> :continue 1 
 
 *→* SOMETHING-BIG 
 
@@ -3655,15 +3655,15 @@ This *restart* is established by **warn** so that *handlers* of **warning** *con
 
 (warn "Situation #3."))) 
 
-*.* Warning: Situation #2. 
+&#9655; Warning: Situation #2. 
 
 *→* (#\<SIMPLE-WARNING 42744421\> #\<SIMPLE-WARNING 42744365\>) 
 
 (dolist (s saved) (format t "~&~A~%" s)) 
 
-*.* Situation #3. 
+&#9655; Situation #3. 
 
-*.* Situation #1. 
+&#9655; Situation #1. 
 
 *→* NIL 
 
@@ -3779,7 +3779,7 @@ When *condition* is *non-nil*, only those *restarts* are considered that are eit
 
 (abort-on-error (error "You lose.")) 
 
-*.* Returned to Lisp Top Level. 
+&#9655; Returned to Lisp Top Level. 
 
 ;;; Example of the CONTINUE restart 
 
@@ -3797,17 +3797,17 @@ When *condition* is *non-nil*, only those *restarts* are considered that are eit
 
 (real-sqrt -9) 
 
-*.* Error: Tried to take sqrt(-9). 
+&#9655; Error: Tried to take sqrt(-9). 
 
-*.* To continue, type :CONTINUE followed by an option number: 
+&#9655; To continue, type :CONTINUE followed by an option number: 
 
-*.* 1: Return sqrt(9) instead. 
+&#9655; 1: Return sqrt(9) instead. 
 
-*.* 2: Return to Lisp Toplevel. 
+&#9655; 2: Return to Lisp Toplevel. 
 
-*.* Debug\> (continue) 
+&#9655; Debug\> (continue) 
 
-*.* Return sqrt(9) instead. 
+&#9655; Return sqrt(9) instead. 
 
 *→* 3 
 
@@ -3841,13 +3841,13 @@ Conditions **9–69**
 
 (count-down 3) 
 
-*.* 3 
+&#9655; 3 
 
-*.* 2 
+&#9655; 2 
 
-*.* Warning: Almost done 
+&#9655; Warning: Almost done 
 
-*.* 1 
+&#9655; 1 
 
 *→* DONE 
 
@@ -3869,11 +3869,11 @@ Conditions **9–69**
 
 (ignore-warnings-while-counting 3) 
 
-*.* 3 
+&#9655; 3 
 
-*.* 2 
+&#9655; 2 
 
-*.* 1 
+&#9655; 1 
 
 *→* DONE 
 
@@ -3921,33 +3921,33 @@ value)
 
 (careful-symbol-value ’a) 
 
-*.* Error: A is not bound. 
+&#9655; Error: A is not bound. 
 
-*.* To continue, type :CONTINUE followed by an option number. 
+&#9655; To continue, type :CONTINUE followed by an option number. 
 
-*.* 1: Specify a value to use this time. 
+&#9655; 1: Specify a value to use this time. 
 
-*.* 2: Specify a value to store and use in the future. 
+&#9655; 2: Specify a value to store and use in the future. 
 
-*.* 3: Return to Lisp Toplevel. 
+&#9655; 3: Return to Lisp Toplevel. 
 
-*.* Debug\> (use-value 12) 
+&#9655; Debug\> (use-value 12) 
 
 *→* 12 
 
 (careful-symbol-value ’a) 
 
-*.* Error: A is not bound. 
+&#9655; Error: A is not bound. 
 
-*.* To continue, type :CONTINUE followed by an option number. 
+&#9655; To continue, type :CONTINUE followed by an option number. 
 
-*.* 1: Specify a value to use this time. 
+&#9655; 1: Specify a value to use this time. 
 
-*.* 2: Specify a value to store and use in the future. 
+&#9655; 2: Specify a value to store and use in the future. 
 
-*.* 3: Return to Lisp Toplevel. 
+&#9655; 3: Return to Lisp Toplevel. 
 
-*.* Debug\> (store-value 24) 
+&#9655; Debug\> (store-value 24) 
 
 *→* 24 
 

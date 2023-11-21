@@ -2788,33 +2788,33 @@ append (list (key i) (nth i temps)))))))
 
 (print (funcall (compiler-macro-function ’distance) form nil))) 
 
-*.* (LET ((#:G6558 (SETQ X 7))  
+&#9655; (LET ((#:G6558 (SETQ X 7))  
 
 
 
-*.* (#:G6559 (DECF X)) 
+&#9655; (#:G6559 (DECF X)) 
 
-*.* (#:G6560 (DECF X)) 
+&#9655; (#:G6560 (DECF X)) 
 
-*.* (#:G6561 (DECF X))) 
+&#9655; (#:G6561 (DECF X))) 
 
-*.* (DISTANCE :X1 #:G6558 :X2 #:G6559 :Y1 #:G6560 :Y2 #:G6561)) 
+&#9655; (DISTANCE :X1 #:G6558 :X2 #:G6559 :Y1 #:G6560 :Y2 #:G6561)) 
 
-*.* (DISTANCE-POSITIONAL (SETQ X 7) (DECF X) (DECF X) (DECF X)) 
+&#9655; (DISTANCE-POSITIONAL (SETQ X 7) (DECF X) (DECF X) (DECF X)) 
 
-*.* (LET ((#:G6567 (SETQ X 7)) 
+&#9655; (LET ((#:G6567 (SETQ X 7)) 
 
-*.* (#:G6568 (INCF X))) 
+&#9655; (#:G6568 (INCF X))) 
 
-*.* (DISTANCE :X1 #:G6567 :Y1 #:G6568)) 
+&#9655; (DISTANCE :X1 #:G6567 :Y1 #:G6568)) 
 
-*.* (DISTANCE :X1 (SETQ X 7) :Y1 (INCF X) :X1 (INCF X)) 
+&#9655; (DISTANCE :X1 (SETQ X 7) :Y1 (INCF X) :X1 (INCF X)) 
 
-*.* (DISTANCE-POSITIONAL A1 B1 A2 B2) 
+&#9655; (DISTANCE-POSITIONAL A1 B1 A2 B2) 
 
-*.* (DISTANCE-POSITIONAL A1 B1 A2 B2) 
+&#9655; (DISTANCE-POSITIONAL A1 B1 A2 B2) 
 
-*.* (DISTANCE :X1 A1 :Y1 B1 :Z1 C1 :X2 A2 :Y2 B2 :Z2 C2) 
+&#9655; (DISTANCE :X1 A1 :Y1 B1 :Z1 C1 :X2 A2 :Y2 B2 :Z2 C2) 
 
 *→* NIL 
 

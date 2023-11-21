@@ -431,17 +431,17 @@ inclusive limit allows *var* to attain the value of *form2*; to, downto, and upt
 
 do (print i)) 
 
-*.* 1 
+&#9655; 1 
 
-*.* 2 
+&#9655; 2 
 
 
-
- 
 
  
 
-*.* 3 
+ 
+
+&#9655; 3 
 
 *→* NIL 
 
@@ -451,13 +451,13 @@ do (print i))
 
 do (print i)) 
 
-*.* 10 
+&#9655; 10 
 
-*.* 7 
+&#9655; 7 
 
-*.* 4 
+&#9655; 4 
 
-*.* 1 
+&#9655; 1 
 
 *→* NIL 
 
@@ -467,11 +467,11 @@ do (print i))
 
 do (print i)) 
 
-*.* 0 
+&#9655; 0 
 
-*.* 1 
+&#9655; 1 
 
-*.* 2 
+&#9655; 2 
 
 *→* NIL 
 
@@ -485,11 +485,11 @@ In the *for-as-in-list* subclause, the for or as construct iterates over the con
 
 (loop for item in ’(1 2 3) do (print item)) 
 
-*.* 1 
+&#9655; 1 
 
-*.* 2 
+&#9655; 2 
 
-*.* 3 
+&#9655; 3 
 
 *→* NIL 
 
@@ -499,11 +499,11 @@ In the *for-as-in-list* subclause, the for or as construct iterates over the con
 
 do (print item)) 
 
-*.* 1 
+&#9655; 1 
 
-*.* 3 
+&#9655; 3 
 
-*.* 5 
+&#9655; 5 
 
 *→* NIL 
 
@@ -541,11 +541,11 @@ collect sublist)
 
 do (print item)) 
 
-*.* 1 
+&#9655; 1 
 
-*.* 2 
+&#9655; 2 
 
-*.* 3 
+&#9655; 3 
 
 *→* NIL 
 
@@ -681,13 +681,13 @@ Iteration stops when there are no more *symbols* to be referenced in the supplie
 
 do (print x))) 
 
-*.* A 
+&#9655; A 
 
-*.* TEST 
+&#9655; TEST 
 
-*.* THIS 
+&#9655; THIS 
 
-*.* IS 
+&#9655; IS 
 
 *→* NIL 
 
@@ -907,7 +907,7 @@ collect i into my-list
 
 finally (print my-list)) 
 
-*.* (A C) 
+&#9655; (A C) 
 
 *→* NIL 
 
@@ -1049,11 +1049,11 @@ In most cases it is not necessary to use **loop-finish** because other loop cont
 
 do (format t "~&What I say three times is true.~%")) 
 
-*.* What I say three times is true. 
+&#9655; What I say three times is true. 
 
-*.* What I say three times is true. 
+&#9655; What I say three times is true. 
 
-*.* What I say three times is true. 
+&#9655; What I say three times is true. 
 
 *→* NIL 
 
@@ -1129,7 +1129,7 @@ thereis (\> i 11)
 
 finally (prin1 ’got-here)) 
 
-*.* GOT-HERE 
+&#9655; GOT-HERE 
 
 *→* NIL 
 
@@ -1223,17 +1223,17 @@ do (print i)
 
 (print (\* i i))) 
 
-*.* 1 
+&#9655; 1 
 
-*.* 1 
+&#9655; 1 
 
-*.* 2 
+&#9655; 2 
 
-*.* 4 
+&#9655; 4 
 
-*.* 3 
+&#9655; 3 
 
-*.* 9 
+&#9655; 9 
 
 *→* NIL 
 
@@ -1305,7 +1305,7 @@ collect i
 
 finally (prin1 ’got-here)) 
 
-*.* GOT-HERE 
+&#9655; GOT-HERE 
 
 *→* (6 7 8 9 10) 
 
@@ -1347,7 +1347,7 @@ do (print i)
 
 do (return-from max ’done)) 
 
-*.* 1 
+&#9655; 1 
 
 *→* DONE 
 
@@ -1425,19 +1425,19 @@ finally
 
 (return (values odd-numbers even-numbers))) 
 
-*.* 1 
+&#9655; 1 
 
-*.* 
+&#9655; 
 
-*.* 2345 
+&#9655; 2345 
 
-*.* 
+&#9655; 
 
-*.* 323 
+&#9655; 323 
 
-*.* 
+&#9655; 
 
-*.* 235 
+&#9655; 235 
 
 *→* (1 2345 323 235), (324 2 4 252) 
 
@@ -1531,13 +1531,13 @@ Iteration **6–29**
 
 and do (princ " c")) 
 
-*.* 0 a b c 
+&#9655; 0 a b c 
 
-*.* 1 
+&#9655; 1 
 
-*.* 2 a c 
+&#9655; 2 a c 
 
-*.* 3 
+&#9655; 3 
 
 *→* NIL 
 
@@ -1673,15 +1673,15 @@ An *implicit block* named **nil** surrounds the entire **do** (or **do\***) form
 
 (format t "~&Output ~D: ~S" j item)))) 
 
-*.* Input 0: banana 
+&#9655; Input 0: banana 
 
-*.* Output 0: BANANA 
+&#9655; Output 0: BANANA 
 
-*.* Input 1: (57 boxes) 
+&#9655; Input 1: (57 boxes) 
 
-*.* Output 1: (57 BOXES) 
+&#9655; Output 1: (57 BOXES) 
 
-*.* Input 2: NIL 
+&#9655; Input 2: NIL 
 
 *→* NIL 
 
@@ -1977,7 +1977,7 @@ temp-two *→* 4
 
 (dolist (x ’(a b c d)) (prin1 x) (princ " ")) 
 
-*.* A B C D 
+&#9655; A B C D 
 
 *→* NIL 
 
@@ -2151,15 +2151,15 @@ For details, see Section 6.1 (The LOOP Facility).
 
 (sqrt-advisor) 
 
-*.* Number: 5*←-* 
+&#9655; Number: 5*←-* 
 
-*.* The square root of 5 is 2.236068. 
+&#9655; The square root of 5 is 2.236068. 
 
-*.* Number: 4*←-* 
+&#9655; Number: 4*←-* 
 
-*.* The square root of 4 is 2. 
+&#9655; The square root of 4 is 2. 
 
-*.* Number: done*←-* 
+&#9655; Number: done*←-* 
 
 *→* NIL 
 
@@ -2179,15 +2179,15 @@ do (format t "~&The square of ~D is ~D.~%" n (\* n n))))
 
 (square-advisor) 
 
-*.* Number: 4*←-* 
+&#9655; Number: 4*←-* 
 
-*.* The square of 4 is 16. 
+&#9655; The square of 4 is 16. 
 
-*.* Number: 23*←-* 
+&#9655; Number: 23*←-* 
 
-*.* The square of 23 is 529. 
+&#9655; The square of 23 is 529. 
 
-*.* Number: done*←-* 
+&#9655; Number: done*←-* 
 
 *→* NIL 
 

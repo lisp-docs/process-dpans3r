@@ -3968,7 +3968,7 @@ Disclaimer added to back of cover page.
 
 Changes to this Edit and Review History, page *Credits iv*. 
 
-Changes to names and headings, pages *Credits v-vii*. 
+Changes to names and headings, pages *Credits v-v&#10217;. 
 
 12-Aug-94 Pitman Draft 15.17R (for X3 consideration). Document X3J13/94-101R. 
 

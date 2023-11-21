@@ -71,7 +71,7 @@ An *implementation* may impose a limit on the *rank* of an *array*, but there is
 
 An *array* can be a *general array*, meaning each *element* may be any *object*, or it may be a *specialized array*, meaning that each *element* must be of a restricted *type*. 
 
-The phrasing “an *array specialized* to *type hhtypeii*” is sometimes used to emphasize the *element type* of an *array*. This phrasing is tolerated even when the *hhtypeii* is **t**, even though an *array specialized* to *type t* is a *general array*, not a *specialized array*. 
+The phrasing “an *array specialized* to *type hhtype&#10217;” is sometimes used to emphasize the *element type* of an *array*. This phrasing is tolerated even when the &#10216;type&#10217; is **t**, even though an *array specialized* to *type t* is a *general array*, not a *specialized array*. 
 
 Figure 15–1 lists some *defined names* that are applicable to *array* creation, *access*, and information operations. 
 
@@ -537,21 +537,21 @@ The following is an example of making a *displaced array*.
 
 (print (list i (aref b i)))) 
 
-*.* (0 (0 X 2 = 0)) 
+&#9655; (0 (0 X 2 = 0)) 
 
-*.* (1 (1 X 0 = 0)) 
+&#9655; (1 (1 X 0 = 0)) 
 
-*.* (2 (1 X 1 = 1)) 
+&#9655; (2 (1 X 1 = 1)) 
 
-*.* (3 (1 X 2 = 2)) 
+&#9655; (3 (1 X 2 = 2)) 
 
-*.* (4 (2 X 0 = 0)) 
+&#9655; (4 (2 X 0 = 0)) 
 
-*.* (5 (2 X 1 = 2)) 
+&#9655; (5 (2 X 1 = 2)) 
 
-*.* (6 (2 X 2 = 4)) 
+&#9655; (6 (2 X 2 = 4)) 
 
-*.* (7 (3 X 0 = 0)) 
+&#9655; (7 (3 X 0 = 0)) 
 
 *→* NIL 
 

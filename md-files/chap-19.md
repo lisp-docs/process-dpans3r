@@ -724,23 +724,23 @@ If the *directory* is a *string*, it should be the name of a top level directory
 
 :name "CHESS" :type "DB")))) 
 
-*.* #P"MY-LISPM:\>public\>games\>chess.db" 
+&#9655; #P"MY-LISPM:\>public\>games\>chess.db" 
 
-*.* #P"MY-VAX:SYS$DISK:[PUBLIC.GAMES]CHESS.DB" 
+&#9655; #P"MY-VAX:SYS$DISK:[PUBLIC.GAMES]CHESS.DB" 
 
-*.* #P"MY-UNIX:/public/games/chess.db" 
+&#9655; #P"MY-UNIX:/public/games/chess.db" 
 
-*.* #P"MY-LISPM:\>public\>games\>chess.db" 
+&#9655; #P"MY-LISPM:\>public\>games\>chess.db" 
 
-*.* #P"MY-VAX:SYS$DISK:[PUBLIC.GAMES]CHESS.DB" 
+&#9655; #P"MY-VAX:SYS$DISK:[PUBLIC.GAMES]CHESS.DB" 
 
 
-
- 
 
  
 
-*.* #P"MY-UNIX:/PUBLIC/GAMES/CHESS.DB" 
+ 
+
+&#9655; #P"MY-UNIX:/PUBLIC/GAMES/CHESS.DB" 
 
 *→* NIL 
 
@@ -1010,13 +1010,13 @@ If the *host* is already defined, no attempt to find or load a definition is att
 
 (translate-logical-pathname "hacks:weather;barometer.lisp.newest") 
 
-*.* Error: The logical host HACKS is not defined. 
+&#9655; Error: The logical host HACKS is not defined. 
 
 (load-logical-pathname-translations "HACKS") 
 
-*.* ;; Loading SYS:SITE;HACKS.TRANSLATIONS 
+&#9655; ;; Loading SYS:SITE;HACKS.TRANSLATIONS 
 
-*.* ;; Loading done. 
+&#9655; ;; Loading done. 
 
 *→ true* 
 

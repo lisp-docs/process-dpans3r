@@ -860,15 +860,15 @@ After this operation completes, the *home package* of any *symbol* whose *home p
 
 (delete-package \*bar-package\*) 
 
-*.* Error: Package BAZ uses package BAR. 
+&#9655; Error: Package BAZ uses package BAR. 
 
-*.* If continued, BAZ will be made to unuse-package BAR, 
+&#9655; If continued, BAZ will be made to unuse-package BAR, 
 
-*.* and then BAR will be deleted. 
+&#9655; and then BAR will be deleted. 
 
-*.* Type :CONTINUE to continue. 
+&#9655; Type :CONTINUE to continue. 
 
-*.* Debug\> :CONTINUE 
+&#9655; Debug\> :CONTINUE 
 
 *→* T 
 

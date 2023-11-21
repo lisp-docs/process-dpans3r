@@ -523,9 +523,9 @@ Specifying (:print-function *printer-name*) is approximately equivalent to speci
 
 (defmethod print-object ((object *structure-name*) stream) 
 
-(funcall (function *printer-name*) object stream *hhcurrent-print-depthii*)) 
+(funcall (function *printer-name*) object stream &#10216;current-print-depth&#10217;)) 
 
-where the *hhcurrent-print-depthii* represents the printer’s belief of how deep it is currently printing. It is *implementation-dependent* whether *hhcurrent-print-depthii* is always 0 and *\*print-level\**, if *non-nil*, is re-bound to successively smaller values as printing descends recursively, or whether *current-print-depth* varies in value as printing descends recursively and *\*print-level\** remains constant during the same traversal. 
+where the &#10216;current-print-depth&#10217; represents the printer’s belief of how deep it is currently printing. It is *implementation-dependent* whether &#10216;current-print-depth&#10217; is always 0 and *\*print-level\**, if *non-nil*, is re-bound to successively smaller values as printing descends recursively, or whether *current-print-depth* varies in value as printing descends recursively and *\*print-level\** remains constant during the same traversal. 
 
 If the :print-object option is used, then when a structure of type *structure-name* is to be printed, the designated printer function is called on two arguments: 
 

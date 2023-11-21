@@ -323,7 +323,7 @@ Both functions return the *object* read from *input-stream*. *Eof-value* is retu
 
 (read) 
 
-*.* ’a 
+&#9655; ’a 
 
 *→* (QUOTE A) 
 
@@ -934,17 +934,17 @@ The effect of **\*read-base\*** on the reading of any particular *rational* numb
 
 (print (list \*read-base\* object))))) 
 
-*.* (10 (DAD DAD BEE BEE 123 123)) 
+&#9655; (10 (DAD DAD BEE BEE 123 123)) 
 
-*.* (11 (DAD DAD BEE BEE 123 146)) 
+&#9655; (11 (DAD DAD BEE BEE 123 146)) 
 
-*.* (12 (DAD DAD BEE BEE 123 171)) 
+&#9655; (12 (DAD DAD BEE BEE 123 171)) 
 
-*.* (13 (DAD DAD BEE BEE 123 198)) 
+&#9655; (13 (DAD DAD BEE BEE 123 198)) 
 
-*.* (14 (DAD 2701 BEE BEE 123 227)) 
+&#9655; (14 (DAD 2701 BEE BEE 123 227)) 
 
-*.* (15 (DAD 3088 BEE 2699 123 258)) 
+&#9655; (15 (DAD 3088 BEE 2699 123 258)) 
 
 *→* NIL 
 

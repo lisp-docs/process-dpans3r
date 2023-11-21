@@ -243,8 +243,8 @@
 ;;    (get-output-dir)))
 
 (defun get-chapter-label (text)
-  ;; TODO
-  (cl-ppcre:scan-to-strings "^\\s*\\*\\*\\d+\\. [\\s\\w\\W]\\*\\*" text))
+  (cl-ppcre:scan-to-strings "(\\d+\\. [^\\*]+)"
+   (cl-ppcre:scan-to-strings "\\*\\*(\\d+\\. [\\s\\w\\W]+?)\\*\\*" text)))
 
 (defun process-chapter (filename)
   (let* ((chapter-name
@@ -267,6 +267,7 @@
 ;; *hh ii* *.*
 
 (defun process-unicode-charachters (text)
+  ;; https://graphemica.com/%E2%96%B7
   (replace-strings text '(("*hh" "&#10216;") ("ii*" "&#10217;") ("*.*" "&#9655;"))))
 
 (defun process-titles (contents)
@@ -297,8 +298,6 @@
 	finally (return curstr)))
 
 (defun remove-headers (contents)
-  ;; remove here all the extra titles, headers, and footers...
-  ;; TODO remove-regex-list not working
   (remove-strings
    (remove-regex-list contents *headers-regex*)
   *headers-non-regex*))

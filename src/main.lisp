@@ -236,7 +236,29 @@
   ;;   them into the file as well adding an Examples subtitle based
   ;;   on the previous level's, just one more? better don't or do conditional
   ;;   rendering for an example page that is empty not to display even the title...
+
+  ;; create file for section
+  ;; create hidden folder for section
+  ;; find every sub section, independent of depth
+  ;; create a file for each one
+  ;; then import it and set a heading of corresponding depth (to the depth of the section)
+  ;; and display it
   )
+
+;; TODO need to find code snippets and wrap them in `` or ```lisp ```
+;; cases are
+;; (code)
+;; ;comment
+;; (code) ; comment
+;; (code) → result
+;; '\\w+ → \\w+
+;; "\\w+ → (\\w+)
+;; I think anything that containes this character → except probably one place
+;; where they discuss the function of certain characters...
+;; see 2.4.4.1 to see if multiline code was parsed correctly...
+;; 2.4.4.2.5
+;; need to edit the tables...
+;; 2.4.8.3 shar sign expressions...
 
 ;; (uiop:merge-pathnames*
 ;;    (get-dir-name-for-file (filename-from-pathname filename))
@@ -253,15 +275,15 @@
 	 (chapter-dir (get-directory-for-chapter filename))
 	 (chapter-text (load-file filename))
 	 (label (get-chapter-label chapter-text))
-	 (category-path (uiop:make-pathname* *category-filename* chapter-dir)))
+	 (category-path (uiop:make-pathname* *category-filename* chapter-dir))
+	 (section-list (get-chapter-sections chapter-text)))
     (ensure-directories-exist chapter-dir)
-    (str:to-file category-path (make-doc-category-json label)))
-  ;; create output-dir AKA ensure it exists...
-  ;; create folder and _category_.json
-  ;; get chapter parts
-  ;; create intro file and _intro.md file, import one into the other
-  ;; mapcar to each section AKA (cdr sections) process-section
-  )
+    (str:to-file category-path (make-doc-category-json label))
+    ;;    (process-introduction chapter-dir (car section-list))
+    ;; create intro file and _intro.md file, import one into the other
+    ;; TODO there are no introductions but chapters 0 and 8 have no sections!
+    ;; mapcar to each section AKA (cdr sections) process-section
+    (mapcar (lambda (x) (process-section chapter-dir x)) section-list)))
 
 ;; make function to replace symbols missing
 ;; *hh ii* *.*

@@ -267,7 +267,7 @@
 ;; *hh ii* *.*
 
 (defun process-unicode-charachters (text)
-  (replace-strings text '('("*hh" "&#10216;") '("ii*" "&#10217;")' ("*.*" "&#9655;"))))
+  (replace-strings text '(("*hh" "&#10216;") ("ii*" "&#10217;") ("*.*" "&#9655;"))))
 
 (defun process-titles (contents)
   (cl-ppcre:regex-replace-all
@@ -357,9 +357,10 @@
 (defun update-md-files (update-function)
   (modify-md-files-in-dir
    *md-dir*
-   (str:to-file
-    filepath
-    (update-function (load-file filepath)))))
+   (lambda (filepath)
+     (str:to-file
+      filepath
+      (funcall update-function (load-file filepath))))))
 
 ;; replace unicode characters
 ;; (update-md-files #'process-unicode-charachters)

@@ -59,9 +59,9 @@
 
 ;(defvar *chapter-sections* "\\n\\d\\+.\\d+.*?\\n")
 ;(defvar *chapter-sections* "\\n**\\d+\\.\\d+.*?**\\n")
-(defvar *chapter-sections* "\\n\\*\\*\\d+\\.\\d+[\\w\\s]+?\\*\\*\\s*\\n")
-(defvar *chapter-subsections* "\\n\\*\\*\\d+\\.\\d+\\.\\d+[\\w\\s]+?\\*\\*\\s*\\n")
-(defvar *chapter-subsubsections* "\\n\\*\\*\\d+\\.\\d+\\.\\d+\\.\\d+[\\w\\s]+?\\*\\*\\s*\\n")
+(defvar *chapter-sections* "\\*\\*\\d+\\.\\d+ [\\W\\w\\s]+?\\*\\*\\s*")
+(defvar *chapter-subsections* "\\*\\*\\d+\\.\\d+\\.\\d+ [\\W\\w\\s]+?\\*\\*\\s*")
+(defvar *chapter-subsubsections* "\\*\\*\\d+\\.\\d+\\.\\d+\\.\\d+ [\\W\\w\\s]+?\\*\\*\\s*")
 
 (defun get-text-parts (given-string split-regex)
   (let*
@@ -179,25 +179,88 @@
 ;;   file, and then for each subsubsection create a file with those contents
 ;; here will need to create the files with a "_" prefix
 
+(defun get-context-for-match (start end text)
+  (subseq text
+	  (max 0 (- start 20))
+	  (min (length text) (+ end 20))))
+
+(defun get-contexed-matches (regex text)
+  (for (start end) in (cl-ppcre:all-matches regex text)
+       collect (get-context-for-match start end text)))
+
 (defun get-title-folder-name (title)
   ;; convert from title name 2.1 Section Name to section-name
   )
 
-(defun make-doc-category-json (label position &optional description)
+(defun make-doc-category-json (label &optional position description)
   ;; TODO test the string, then wrap this into a write to file like
   ;; TODO   I did above str:to-file or something, and need a path,
   ;; TODO   make a constant called category-filename "_category_.json"
   (with-output-to-string (s)
-    (format s "{~%  'label': '~A',~%  'position': ~A,~%" label position)
+    (format s "{~%  'label': '~A',~%" label)
+    (if position (format s"  'position': ~A,~%" position))
     (format s "  'link': {~%    'type': 'generated-index',~%    ")
     (format s "'description': '~A'~%  }~%}~%" (if description description label))))
 
-(defun create-docusaurus-doc-section (output-dir label position contents)
+(defvar *category-filename* "_category_.json")
+
+(defun create-docusaurus-doc-section (output-dir label &optional position)
+  (let* ((folder-name (get-title-folder-name label))
+	 (dir-path (merge-pathnames folder-name output-dir))
+	 (category-path (merge-pathnames *category-filename* dir-path)))
   ;; create folder
+    (ensure-directories-exist dir-path)
+    ;; create _category_.json
+    (str:to-file category-path (make-doc-category-json label))))
+
   ;; create _intro.md
   ;; create intro.md (which includes _intro) `import Intro from './_intro.md';`
   ;; Make headings in intro.md with the label as `##` label on the top of the file
   ;; Then call #`mapcar on the sections (cdr contents) assuming contents is a list
+
+(defun process-section (output-dir section-text)
+  ;; get from regex the section title
+  ;; get the section-dir from merging output dir and get dir for title
+  ;; create file in output dir named dir-for-title .md
+  ;; create folder and _category_.json
+  ;; get section parts and subparts
+  ;; create  _intro.md file
+  ;; mapcar to each subsection process-subsection
+  ;; get from that a list of (filename title)
+  ;; in dir-for-title.md file created, import all created files from
+  ;;   dir-for-title/_subsection.md including _intro.md, and add them
+  ;;   below a heading with the title and the heading level based on the
+  ;;   level of the title
+  ;;   on the top of the file add a # h1 heading with the section title
+  ;;   create _subsection_examples.md file for each subsection, and import
+  ;;   them into the file as well adding an Examples subtitle based
+  ;;   on the previous level's, just one more? better don't or do conditional
+  ;;   rendering for an example page that is empty not to display even the title...
+  )
+
+;; (uiop:merge-pathnames*
+;;    (get-dir-name-for-file (filename-from-pathname filename))
+;;    (get-output-dir)))
+
+(defun get-chapter-label (text)
+  ;; TODO
+  (cl-ppcre:))
+
+(defun process-chapter (filename)
+  (let* ((chapter-name
+	   (get-dir-name-for-file
+	    (filename-from-pathname filename)))
+	 (chapter-dir (get-directory-for-chapter filename))
+	 (chapter-text (load-file filename))
+	 (label (get-chapter-label chapter-text))
+	 (category-path (uiop:make-pathname* *category-filename* chapter-dir)))
+    (ensure-directories-exist chapter-dir)
+    (str:to-file category-path (make-doc-category-json label))))
+  ;; create output-dir AKA ensure it exists...
+  ;; create folder and _category_.json
+  ;; get chapter parts
+  ;; create intro file and _intro.md file, import one into the other
+  ;; mapcar to each section AKA (cdr sections) process-section
   )
 
 (defun process-titles (contents)

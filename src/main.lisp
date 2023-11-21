@@ -183,7 +183,16 @@
   ;; convert from title name 2.1 Section Name to section-name
   )
 
-(defun create-docusaurus-doc-section (label position contents)
+(defun make-doc-category-json (label position &optional description)
+  ;; TODO test the string, then wrap this into a write to file like
+  ;; TODO   I did above str:to-file or something, and need a path,
+  ;; TODO   make a constant called category-filename "_category_.json"
+  (with-output-to-string (s)
+    (format s "{~%  'label': '~A',~%  'position': ~A,~%" label position)
+    (format s "  'link': {~%    'type': 'generated-index',~%    ")
+    (format s "'description': '~A'~%  }~%}~%" (if description description label))))
+
+(defun create-docusaurus-doc-section (output-dir label position contents)
   ;; create folder
   ;; create _intro.md
   ;; create intro.md (which includes _intro) `import Intro from './_intro.md';`
@@ -269,6 +278,13 @@
 
 (defun fix-titles-md-files ()
   (modify-md-files-in-dir *md-dir* #'fix-file-titles))
+
+(defun update-md-files (update-function)
+  (modify-md-files-in-dir
+   *md-dir*
+   (str:to-file
+    filepath
+    (update-function (load-file filepath)))))
 
 (defun process-files-in-dir (dir-path)
   (mapcar #'process-file

@@ -244,7 +244,7 @@
 
 (defun get-chapter-label (text)
   ;; TODO
-  (cl-ppcre:))
+  (cl-ppcre:scan-to-strings "^\\s*\\*\\*\\d+\\. [\\s\\w\\W]\\*\\*" text))
 
 (defun process-chapter (filename)
   (let* ((chapter-name
@@ -255,7 +255,7 @@
 	 (label (get-chapter-label chapter-text))
 	 (category-path (uiop:make-pathname* *category-filename* chapter-dir)))
     (ensure-directories-exist chapter-dir)
-    (str:to-file category-path (make-doc-category-json label))))
+    (str:to-file category-path (make-doc-category-json label)))
   ;; create output-dir AKA ensure it exists...
   ;; create folder and _category_.json
   ;; get chapter parts
@@ -263,11 +263,23 @@
   ;; mapcar to each section AKA (cdr sections) process-section
   )
 
+;; make function to replace symbols missing
+;; *hh ii* *.*
+
+(defun process-unicode-charachters (text)
+  (replace-strings text '('("*hh" "&#10216;") '("ii*" "&#10217;")' ("*.*" "&#9655;"))))
+
 (defun process-titles (contents)
   (cl-ppcre:regex-replace-all
    "[^\\n]\\*\\*\\d+(\\.\\d+)*(\\s*\\w)+\\*\\*"
    contents
    (concatenate 'string '(#\Newline) "\\&" '(#\Newline))))
+
+(defun replace-strings (contents string-cons-list)
+  (loop for (curr-string replacement) in string-cons-list
+	for curr-contents = (str:replace-all curr-string replacement contents)
+	  then (str:replace-all curr-string replacement curr-contents)
+	finally (return curr-contents)))
 
 (defun remove-strings (contents string-list)
   (loop for curr-string-to-replace in string-list
@@ -348,6 +360,9 @@
    (str:to-file
     filepath
     (update-function (load-file filepath)))))
+
+;; replace unicode characters
+;; (update-md-files #'process-unicode-charachters)
 
 (defun process-files-in-dir (dir-path)
   (mapcar #'process-file

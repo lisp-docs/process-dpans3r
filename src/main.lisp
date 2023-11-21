@@ -218,6 +218,24 @@
   ;; Make headings in intro.md with the label as `##` label on the top of the file
   ;; Then call #`mapcar on the sections (cdr contents) assuming contents is a list
 
+(defun get-section-meta-contents (meta-contents-list)
+  ;; should receive a list of (subsection-title, subsection-filename)
+  ;; and with with-output-to-string to produce a md file content that has
+  ;; section title
+  ;; import statements for each subsection, then a title of appropiate depth for
+  ;; that subsection, and then the React MDX component imported and displayed
+  ;; for that subsection under it's respective heading
+  )
+
+(defun process-subsection ()
+  ;; should basically be creating a file with the contents given
+  ;; and returning the cons of (subsection-title subsection-filename)
+  )
+
+(defun get-all-subsections ()
+  ;; TODO
+  )
+
 (defun process-section (output-dir section-text)
   ;; get from regex the section title
   ;; get the section-dir from merging output dir and get dir for title
@@ -243,7 +261,20 @@
   ;; create a file for each one
   ;; then import it and set a heading of corresponding depth (to the depth of the section)
   ;; and display it
-  )
+  (let* ((section-title (get-section-title section-text))
+	 (folder-name (get-title-folder-name label))
+	 (section-dir-path (uiop:merge-pathnames* folder-name output-dir))
+	 (section-filename
+	   (uiop:merge-pathnames*
+	    (concatenate 'string folder-name ".md")
+	   output-dir))
+    (create-docusaurus-doc-section output-dir section-title)
+	 (str:to-file
+	   section-filename
+	   (get-section-meta-contents
+	    (mapcar
+	     (lambda (x) (process-subsection section-dir-path x))
+	     (get-all-subsections section-text))))))
 
 ;; TODO need to find code snippets and wrap them in `` or ```lisp ```
 ;; cases are

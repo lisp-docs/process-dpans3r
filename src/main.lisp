@@ -62,6 +62,7 @@
 (defvar *chapter-sections* "\\*\\*\\d+\\.\\d+ [\\W\\w\\s]+?\\*\\*\\s*")
 (defvar *chapter-subsections* "\\*\\*\\d+\\.\\d+\\.\\d+ [\\W\\w\\s]+?\\*\\*\\s*")
 (defvar *chapter-subsubsections* "\\*\\*\\d+\\.\\d+\\.\\d+\\.\\d+ [\\W\\w\\s]+?\\*\\*\\s*")
+(defvar *all-subsections* "\\*\\*\\d+(\\.\\d+)* [\\W\\w\\s]+?\\*\\*")
 
 (defun get-text-parts (given-string split-regex)
   (let*
@@ -232,9 +233,9 @@
   ;; and returning the cons of (subsection-title subsection-filename)
   )
 
-(defun get-all-subsections ()
+(defun get-all-subsections (given-string)
   ;; TODO
-  )
+  (get-text-parts given-string *all-subsections*))
 
 (defun process-section (output-dir section-text)
   ;; get from regex the section title
@@ -267,7 +268,7 @@
 	 (section-filename
 	   (uiop:merge-pathnames*
 	    (concatenate 'string folder-name ".md")
-	   output-dir))
+	   output-dir)))
     (create-docusaurus-doc-section output-dir section-title)
 	 (str:to-file
 	   section-filename

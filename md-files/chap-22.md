@@ -5,7 +5,8 @@
  
 
 **22. Printer** 
-  
+
+  
 
 
 
@@ -2014,7 +2015,7 @@ The ~\<i\>\<sup\>∧\</sup\>\</i\> should appear only at the beginning of a ~\< 
 Printer **22–45**
 
  
-
+**22.4 Dictionary** 
  
 
 **copy-pprint-dispatch** *Function* 

@@ -205,12 +205,22 @@
 
 (defvar *category-filename* "_category_.json")
 
+(defun ensure-slash-ends-path (pathname)
+  (if
+   (eq #\/ (char (namestring pathname) (- (length (namestring pathname)) 1)))
+   pathname
+   (concatenate 'string (namestring pathname) #\/)))
+
 (defun create-docusaurus-doc-section (output-dir label &optional position)
   (let* ((folder-name (get-title-folder-name label))
-	 (dir-path (merge-pathnames folder-name output-dir))
-	 (category-path (merge-pathnames *category-filename* dir-path)))
+	 (dir-path (uiop:merge-pathnames*
+		    (ensure-slash-ends-path folder-name)
+		    (ensure-slash-ends-path output-dir)))
+	 (category-path (merge-pathnames
+			 (ensure-slash-ends-path *category-filename*)
+			 (ensure-slash-ends-path dir-path))))
   ;; create folder
-    (ensure-directories-exist dir-path)
+    (ensure-directories-exist (ensure-slash-ends-path dir-path))
     ;; create _category_.json
     (str:to-file category-path (make-doc-category-json label))))
 
@@ -264,11 +274,13 @@
   ;; and display it
   (let* ((section-title (get-section-title section-text))
 	 (folder-name (get-title-folder-name label))
-	 (section-dir-path (uiop:merge-pathnames* folder-name output-dir))
+	 (section-dir-path (uiop:merge-pathnames*
+			    (ensure-slash-ends-path folder-name)
+			    (ensure-slash-ends-path output-dir)))
 	 (section-filename
 	   (uiop:merge-pathnames*
 	    (concatenate 'string folder-name ".md")
-	   output-dir)))
+	   (ensure-slash-ends-path output-dir))))
     (create-docusaurus-doc-section output-dir section-title)
 	 (str:to-file
 	   section-filename

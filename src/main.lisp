@@ -59,10 +59,10 @@
 
 ;(defvar *chapter-sections* "\\n\\d\\+.\\d+.*?\\n")
 ;(defvar *chapter-sections* "\\n**\\d+\\.\\d+.*?**\\n")
-(defvar *chapter-sections* "\\*\\*\\d+\\.\\d+ [\\W\\w\\s]+?\\*\\*\\s*")
-(defvar *chapter-subsections* "\\*\\*\\d+\\.\\d+\\.\\d+ [\\W\\w\\s]+?\\*\\*\\s*")
-(defvar *chapter-subsubsections* "\\*\\*\\d+\\.\\d+\\.\\d+\\.\\d+ [\\W\\w\\s]+?\\*\\*\\s*")
-(defvar *all-subsections* "\\*\\*\\d+(\\.\\d+)* [\\W\\w\\s]+?\\*\\*")
+(defvar *chapter-sections* "\\*\\*(\\d+|A)\\.\\d+ [\\W\\w\\s]+?\\*\\*\\s*")
+(defvar *chapter-subsections* "\\*\\*(\\d+|A)\\.\\d+\\.\\d+ [\\W\\w\\s]+?\\*\\*\\s*")
+(defvar *chapter-subsubsections* "\\*\\*(\\d+|A)\\.\\d+\\.\\d+\\.\\d+ [\\W\\w\\s]+?\\*\\*\\s*")
+(defvar *all-subsections* "\\*\\*(\\d+|A)(\\.\\d+)* [\\W\\w\\s]+?\\*\\*")
 
 (defun get-text-parts (given-string split-regex)
   (let*
@@ -297,8 +297,8 @@
 ;;    (get-output-dir)))
 
 (defun get-chapter-label (text)
-  (cl-ppcre:scan-to-strings "(\\d+\\. [^\\*]+)"
-   (cl-ppcre:scan-to-strings "\\*\\*(\\d+\\. [\\s\\w\\W]+?)\\*\\*" text)))
+  (cl-ppcre:scan-to-strings "((\\d+|A)\\. [^\\*]+)"
+   (cl-ppcre:scan-to-strings "\\*\\*((\\d+|A)\\. [\\s\\w\\W]+?)\\*\\*" text)))
 
 (defun process-chapter (filename)
   (let* ((chapter-name
@@ -326,7 +326,7 @@
 
 (defun process-titles (contents)
   (cl-ppcre:regex-replace-all
-   "[^\\n]\\*\\*\\d+(\\.\\d+)*(\\s*\\w)+\\*\\*"
+   "[^\\n]\\*\\*(\\d+|A)(\\.\\d+)*(\\s*\\w)+\\*\\*"
    contents
    (concatenate 'string '(#\Newline) "\\&" '(#\Newline))))
 

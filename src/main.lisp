@@ -191,9 +191,16 @@
        collect (get-context-for-match start end text)))
 
 (defun get-title-folder-name (title)
-  ;; TODO
   ;; convert from title name 2.1 Section Name to section-name
-  )
+  (str:downcase
+   (str:trim
+    (str:join
+     "-"
+     (get-text-parts
+      (get-mdx-component-name
+       (get-section-title title))
+      "[A-Z]"))
+    :char-bag "-")))
 
 (defun make-doc-category-json (label &optional position description)
   ;; TODO test the string, then wrap this into a write to file like
@@ -232,16 +239,29 @@
   ;; Then call #`mapcar on the sections (cdr contents) assuming contents is a list
 
 (defun get-display-title (md-title)
-  (first (cl-ppcre:all-matches-as-strings "(\\d+|\\w+)(\\.\\d+)* (\\w+\\s*)+" title)))
+  (first (cl-ppcre:all-matches-as-strings "(\\d+|\\w+)(\\.\\d+)* (\\w+\\s*)+" md-title)))
 
 (defun get-mdx-component-name (title)
   (str:replace-all
    " " ""
    (str:remove-punctuation
-    (cl-ppcre:regex-replace-all
-     "\\d"
-     (get-display-title title)
-     "N")))) ; React Component Names seem to fail with Numbers in them
+    (replace-string-integers (get-display-title title))))) ; React Component Names seem to fail with Numbers in them
+
+(defun replace-integer-char-with-letter (x)
+  (code-char (+ (char-code #\A) (- (char-code x) 48))))
+
+(defun char-is-integerp (given-char)
+  (and
+   (>= (char-code given-char) 48)
+   (<= (char-code given-char) 57)))
+
+(defun replace-string-integers (given-string)
+  (map 'string
+       (lambda (x)
+	 (if (char-is-integerp x)
+	     (replace-integer-char-with-letter x)
+	     x))
+       given-string))
 
 (defun get-heading-depth (title)
   (- (length
@@ -276,15 +296,16 @@
 	  do (format s "~A~%" (get-heading title))
 	  do (format s "import ~A from './~A';~%"
 		     (get-mdx-component-name title)
-		     (get-mdx-component-name title))
+		     (get-title-folder-name title))
 	  do (format s "<~A />~%" (get-mdx-component-name title)))
     )
   )
 
-(defun process-subsection ()
+(defun process-subsection (section-dir-path subsection-text)
   ;; TODO
   ;; should basically be creating a file with the contents given
   ;; and returning the cons of (subsection-title subsection-filename)
+
   )
 
 (defun get-all-subsections (given-string)
@@ -321,21 +342,22 @@
   ;; then import it and set a heading of corresponding depth (to the depth of the section)
   ;; and display it
   (let* ((section-title (get-section-title section-text))
-	 (folder-name (get-title-folder-name label))
+	 (folder-name (get-title-folder-name section-title))
 	 (section-dir-path (uiop:merge-pathnames*
 			    (ensure-slash-ends-path folder-name)
 			    (ensure-slash-ends-path output-dir)))
 	 (section-filename
 	   (uiop:merge-pathnames*
 	    (concatenate 'string folder-name ".md")
-	   (ensure-slash-ends-path output-dir))))
+	    (ensure-slash-ends-path output-dir))))
     (create-docusaurus-doc-section output-dir section-title)
-	 (str:to-file
-	   section-filename
-	   (get-section-meta-contents
-	    (mapcar
-	     (lambda (x) (process-subsection section-dir-path x))
-	     (get-all-subsections section-text))))))
+    (str:to-file
+     section-filename
+     (get-section-meta-contents
+      (mapcar
+       (lambda (x) (process-subsection section-dir-path x))
+       (get-all-subsections section-text))
+      section-title))))
 
 ;; TODO need to find code snippets and wrap them in `` or ```lisp ```
 ;; cases are

@@ -59,7 +59,8 @@
 
 ;(defvar *chapter-sections* "\\n\\d\\+.\\d+.*?\\n")
 ;(defvar *chapter-sections* "\\n**\\d+\\.\\d+.*?**\\n")
-(defvar *chapter-sections* "\\*\\*(\\d+|A)\\.\\d+ [\\W\\w\\s]+?\\*\\*\\s*")
+;(defvar *chapter-sections* "\\*\\*(\\d+|A)\\.\\d+ [\\W\\w\\s]+?\\*\\*\\s*")
+(defvar *chapter-sections* "\\*\\*(\\d+|A)\\.\\d+ [\\W\\w\\s]+?\\*\\*(?:(?!\\n)\\s)*")
 (defvar *chapter-subsections* "\\*\\*(\\d+|A)\\.\\d+\\.\\d+ [\\W\\w\\s]+?\\*\\*\\s*")
 (defvar *chapter-subsubsections* "\\*\\*(\\d+|A)\\.\\d+\\.\\d+\\.\\d+ [\\W\\w\\s]+?\\*\\*\\s*")
 (defvar *all-subsections* "\\*\\*(\\d+|A)(\\.\\d+)* [\\W\\w\\s]+?\\*\\*")
@@ -190,6 +191,7 @@
        collect (get-context-for-match start end text)))
 
 (defun get-title-folder-name (title)
+  ;; TODO
   ;; convert from title name 2.1 Section Name to section-name
   )
 
@@ -229,16 +231,58 @@
   ;; Make headings in intro.md with the label as `##` label on the top of the file
   ;; Then call #`mapcar on the sections (cdr contents) assuming contents is a list
 
-(defun get-section-meta-contents (meta-contents-list)
+(defun get-display-title (md-title)
+  (first (cl-ppcre:all-matches-as-strings "(\\d+|\\w+)(\\.\\d+)* (\\w+\\s*)+" title)))
+
+(defun get-mdx-component-name (title)
+  (str:replace-all
+   " " ""
+   (str:remove-punctuation
+    (cl-ppcre:regex-replace-all
+     "\\d"
+     (get-display-title title)
+     "N")))) ; React Component Names seem to fail with Numbers in them
+
+(defun get-heading-depth (title)
+  (- (length
+      (str:split
+       "."
+       (first
+	(cl-ppcre:all-matches-as-strings
+	 "(\\d+|\\w+)(\\.\\d+)*"
+	 original-title))))
+     1))
+
+(defun get-heading (original-title)
+  ;; ,(format NIL "~v@{str~}" 10 T)
+  (with-output-to-string (s)
+    (format ("~A " (make-array
+		    (get-heading-depth original-title)
+		    :element-type 'character :initial-element #\#)))
+    (format "~A~%") (get-display-title title)))
+
+(defun get-section-meta-contents (meta-contents-list section-title)
   ;; should receive a list of (subsection-title, subsection-filename)
   ;; and with with-output-to-string to produce a md file content that has
   ;; section title
   ;; import statements for each subsection, then a title of appropiate depth for
   ;; that subsection, and then the React MDX component imported and displayed
   ;; for that subsection under it's respective heading
+  (with-output-to-string (s)
+    (format s "---~%")
+    (format s "title: \"~A\"~%" section-title)
+    (format s "---~%~%")
+    (loop for (title filename) in meta-contents-list
+	  do (format s "~A~%" (get-heading title))
+	  do (format s "import ~A from './~A';~%"
+		     (get-mdx-component-name title)
+		     (get-mdx-component-name title))
+	  do (format s "<~A />~%" (get-mdx-component-name title)))
+    )
   )
 
 (defun process-subsection ()
+  ;; TODO
   ;; should basically be creating a file with the contents given
   ;; and returning the cons of (subsection-title subsection-filename)
   )
@@ -246,6 +290,10 @@
 (defun get-all-subsections (given-string)
   ;; TODO
   (get-text-parts given-string *all-subsections*))
+
+(defun get-section-title (section-text)
+  (let ((match (cl-ppcre:all-matches-as-strings *chapter-sections* section-text)))
+    (if match (first match) NIL)))
 
 (defun process-section (output-dir section-text)
   ;; get from regex the section title

@@ -343,17 +343,22 @@
     (format s "---~%~%")
     (loop for (title filename) in meta-contents-list
 	  do (format s "~A~%" (get-heading title))
-	  do (format s "import ~A from './~A';~%"
-		     (get-react-component-name title)
+	  do (format s "import ~A from './~A.md';~%"
+		     (str:replace-all
+		      "-" ""
+		      (get-react-component-name title))
 		     (get-title-folder-name title))
-	  do (format s "<~A />~%" (get-react-component-name title)))))
+	  do (format s "<~A />~%"
+		     (str:replace-all
+		      "-" ""
+		      (get-react-component-name title))))))
 
 (defun process-subsection (section-dir-path subsection-text)
   ;; TODO
   ;; should basically be creating a file with the contents given
   ;; and returning the cons of (subsection-title subsection-filename)
   (let* ((subsection-title (get-subsection-title subsection-text))
-	 (subsection-filename (get-title-folder-name subsection-title))
+	 (subsection-filename (concatenate 'string "_" (get-title-folder-name subsection-title)))
 	 (subsection-filepath
 	   (uiop:merge-pathnames*
 	    (concatenate 'string subsection-filename ".md")
@@ -561,7 +566,8 @@
 	   (uiop:directory-files dir-path))))
 
 (defun slice-files-from-dir-to-output (dir-path)
-  (mapcar #'process-file
+  ;; TODO
+  (mapcar #'process-chapter
 	  (remove-if-not
 	   (lambda (it)
 	     (search ".md" (namestring it)))

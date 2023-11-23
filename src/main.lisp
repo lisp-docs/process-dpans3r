@@ -192,15 +192,16 @@
 
 (defun get-title-folder-name (title)
   ;; convert from title name 2.1 Section Name to section-name
-  (str:downcase
-   (str:trim
-    (str:join
-     "-"
-     (get-text-parts
-      (get-mdx-component-name
-       (get-section-title title))
-      "[A-Z]"))
-    :char-bag "-")))
+  ;; (str:downcase
+  ;;  (str:trim
+  ;;   (str:join
+  ;;    "-"
+  ;;    (get-text-parts
+  ;;     (get-mdx-component-name
+  ;;      (get-section-title title))
+  ;;     "[A-Z]"))
+  ;;   :char-bag "-"))
+  (str:downcase (get-react-component-name title)))
 
 (defun make-doc-category-json (label &optional position description)
   ;; TODO test the string, then wrap this into a write to file like
@@ -214,11 +215,18 @@
 
 (defvar *category-filename* "_category_.json")
 
+(defun make-adjustable-string (s)
+  (make-array (length s)
+              :fill-pointer (length s)
+              :adjustable t
+              :initial-contents s
+              :element-type (array-element-type s)))
+
 (defun ensure-slash-ends-path (pathname)
   (if
-   (eq #\/ (char (namestring pathname) (- (length (namestring pathname)) 1)))
+   (equal #\/ (char (namestring pathname) (- (length (namestring pathname)) 1)))
    pathname
-   (concatenate 'string (namestring pathname) #\/)))
+   (vector-push-extend #\/ (make-adjustable-string (namestring pathname)))))
 
 (defun create-docusaurus-doc-section (output-dir label &optional position)
   (let* ((folder-name (get-title-folder-name label))
@@ -238,22 +246,25 @@
   ;; Make headings in intro.md with the label as `##` label on the top of the file
   ;; Then call #`mapcar on the sections (cdr contents) assuming contents is a list
 
-(defun get-display-title (md-title)
-  (first (cl-ppcre:all-matches-as-strings "(\\d+|\\w+)(\\.\\d+)* (\\w+\\s*)+" md-title)))
-
-(defun get-mdx-component-name (title)
-  (str:replace-all
-   " " ""
-   (str:remove-punctuation
-    (replace-string-integers (get-display-title title))))) ; React Component Names seem to fail with Numbers in them
-
 (defun replace-integer-char-with-letter (x)
-  (code-char (+ (char-code #\A) (- (char-code x) 48))))
+  (code-char (+ (char-code #\a) (- (char-code x) 48))))
+
+(defun add-integer-char-to-letter (x base-char)
+  (code-char (+ (char-code base-char) (- (char-code x) 48))))
 
 (defun char-is-integerp (given-char)
   (and
    (>= (char-code given-char) 48)
    (<= (char-code given-char) 57)))
+
+(defun char-is-letter (given-char)
+  (or
+   (and
+    (>= (char-code given-char) 65)
+    (<= (char-code given-char) 90))
+   (and
+    (>= (char-code given-char) 97)
+    (<= (char-code given-char) 122))))
 
 (defun replace-string-integers (given-string)
   (map 'string
@@ -263,7 +274,45 @@
 	     x))
        given-string))
 
-(defun get-heading-depth (title)
+(defun get-react-component-name (title)
+  ;; (let ((new-number T))
+  ;;   (map 'string
+  ;; 	 (lambda (x)
+  ;; 	   (cond
+  ;; 	     (((not (char-is-integerp x)) x)
+  ;; 	      ((and new-number (char-is-integerp x)) (add-integer-char-to-letter x #\A))
+  ;; 	      ((and (not new-number) (char-is-integerp x)) (add-integer-char-to-letter x #\a)))))
+  ;; 	 title))
+  (coerce
+   (remove
+    nil
+    (loop for i from 1 below (length title)
+	  collect (cond
+		    ((equal #\. (char title i)) #\-)
+		    ((equal #\  (char title i)) #\-)
+		    ((and
+		      (not (char-is-integerp (char title i)))
+		      (not (char-is-letter (char title i))))
+		     NIL)
+		    ((not (char-is-integerp (char title i))) (char title i))
+		    ((and (char-is-integerp (char title (1- i))) (char-is-integerp (char title i)))
+		     (add-integer-char-to-letter (char title i) #\a))
+		    ((and
+		      (not (char-is-integerp (char title (1- i))))
+		      (char-is-integerp (char title i)))
+		     (add-integer-char-to-letter (char title i) #\A)))))
+   'string))
+
+(defun get-display-title (md-title)
+  (first (cl-ppcre:all-matches-as-strings "(\\d+|\\w+)(\\.\\d+)* (\\w+\\s*)+" md-title)))
+
+(defun get-mdx-component-name (title)
+  (str:replace-all
+   " " ""
+   (str:remove-punctuation
+    (replace-string-integers (get-display-title title))))) ; React Component Names seem to fail with Numbers in them
+
+(defun get-heading-depth (original-title)
   (- (length
       (str:split
        "."
@@ -276,10 +325,10 @@
 (defun get-heading (original-title)
   ;; ,(format NIL "~v@{str~}" 10 T)
   (with-output-to-string (s)
-    (format ("~A " (make-array
-		    (get-heading-depth original-title)
-		    :element-type 'character :initial-element #\#)))
-    (format "~A~%") (get-display-title title)))
+    (format s "~A " (make-array
+		     (get-heading-depth original-title)
+		     :element-type 'character :initial-element #\#))
+    (format s "~A~%" (get-display-title original-title))))
 
 (defun get-section-meta-contents (meta-contents-list section-title)
   ;; should receive a list of (subsection-title, subsection-filename)
@@ -295,21 +344,29 @@
     (loop for (title filename) in meta-contents-list
 	  do (format s "~A~%" (get-heading title))
 	  do (format s "import ~A from './~A';~%"
-		     (get-mdx-component-name title)
+		     (get-react-component-name title)
 		     (get-title-folder-name title))
-	  do (format s "<~A />~%" (get-mdx-component-name title)))
-    )
-  )
+	  do (format s "<~A />~%" (get-react-component-name title)))))
 
 (defun process-subsection (section-dir-path subsection-text)
   ;; TODO
   ;; should basically be creating a file with the contents given
   ;; and returning the cons of (subsection-title subsection-filename)
+  (let* ((subsection-title (get-subsection-title subsection-text))
+	 (subsection-filename (get-title-folder-name subsection-title))
+	 (subsection-filepath
+	   (uiop:merge-pathnames*
+	    (concatenate 'string subsection-filename ".md")
+	    (ensure-slash-ends-path section-dir-path))))
+    (str:to-file subsection-filepath subsection-text)
+    (cons subsection-title subsection-filename)))
 
-  )
+(defun get-subsection-title (subsection-text)
+  ;; TODO seems to be working...
+  (first (cl-ppcre:all-matches-as-strings *all-subsections* subsection-text)))
 
 (defun get-all-subsections (given-string)
-  ;; TODO
+  ;; TODO (seems done, but untested...)
   (get-text-parts given-string *all-subsections*))
 
 (defun get-section-title (section-text)
@@ -502,6 +559,14 @@
 	   (lambda (it)
 	     (search ".md" (namestring it)))
 	   (uiop:directory-files dir-path))))
+
+(defun slice-files-from-dir-to-output (dir-path)
+  (mapcar #'process-file
+	  (remove-if-not
+	   (lambda (it)
+	     (search ".md" (namestring it)))
+	   (uiop:directory-files dir-path))))
+
 
 ;;(process-files-in-dir *md-dir*)
 ;(format T "~A~%" *load-pathname*)

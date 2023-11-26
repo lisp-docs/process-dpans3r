@@ -175,15 +175,40 @@
    (get-react-component-name
     (string-trim '(#\^M #\ ) title))))
 
+(defun get-position-from-label (label)
+  (aref
+   (nth-value
+    1
+    (ppcre:scan-to-strings
+     "\\*\\*((\\d+(\\.\\d+)*)[\\s\\w\\W\"“”]*)\\*\\*"
+     label))
+   1))
+
+(defun get-title-from-label (label)
+  (aref
+   (nth-value
+    1
+    (ppcre:scan-to-strings
+     "\\*\\*((\\d+(\\.\\d+)*)[\\s\\w\\W\"“”]*)\\*\\*"
+     label))
+   0))
+
 (defun make-doc-category-json (label &optional position description)
   ;; TODO test the string, then wrap this into a write to file like
   ;; TODO   I did above str:to-file or something, and need a path,
   ;; TODO   make a constant called category-filename "_category_.json"
+
+  ;; TODO remove white space from label and *
+  ;; TODO change from single to double quotes ' "
+  ;; get position from label 
   (with-output-to-string (s)
-    (format s "{~%  'label': '~A',~%" label)
-    (if position (format s"  'position': ~A,~%" position))
-    (format s "  'link': {~%    'type': 'generated-index',~%    ")
-    (format s "'description': '~A'~%  }~%}~%" (if description description label))))
+    (format s "{~%  \"label\": \"~A\",~%" (get-title-from-label label))
+    (if position
+	(format s"  \"position\": ~A,~%" position)
+	(format s"  \"position\": ~A,~%" (get-position-from-label label)))
+    (format s "  \"link\": {~%    \"type\": \"generated-index\",~%    ")
+    (format s "\"description\": \"~A\"~%  }~%}~%"
+	    (if description description (get-title-from-label label)))))
 
 (defvar *category-filename* "_category_.json")
 

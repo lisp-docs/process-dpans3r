@@ -2,7 +2,7 @@
   :version "0.0.1"
   :author ""
   :license ""
-  :depends-on ("uiop" "cl-ppcre" "alexandria")
+  :depends-on ("uiop" "cl-ppcre" "alexandria" "str")
   :components ((:module "src"
                 :components
                 ((:file "main"))))

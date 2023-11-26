@@ -337,7 +337,7 @@
 		     :element-type 'character :initial-element #\#))
     (format s "~A~%" (get-display-title original-title))))
 
-(defun get-section-meta-contents (meta-contents-list section-title)
+(defun get-section-meta-contents (meta-contents-list section-title folder-name)
   ;; should receive a list of (subsection-title, subsection-filename)
   ;; and with with-output-to-string to produce a md file content that has
   ;; section title
@@ -351,14 +351,15 @@
     (format s "---~%")
     (format s "title: \"~A\"~%" (get-display-title section-title))
     (format s "---~%~%")
-    (loop for (title . filename) in (cdr meta-contents-list)
+    (loop for (title . filename) in meta-contents-list
 	  do (format s "~A~%" (get-heading title))
-	  do (format s "import ~A from './~A.md';~%"
+	  do (format s "import ~A from './~A/_~A.md';~%~%"
 		     (str:replace-all
 		      "-" ""
 		      (get-react-component-name title))
+		     folder-name
 		     (get-title-folder-name title))
-	  do (format s "<~A />~%"
+	  do (format s "<~A />~%~%"
 		     (str:replace-all
 		      "-" ""
 		      (get-react-component-name title))))))
@@ -428,7 +429,7 @@
       (mapcar
        (lambda (x) (process-subsection section-dir-path x))
        (get-all-subsections section-text))
-      section-title))))
+      section-title folder-name))))
 
 ;; TODO need to find code snippets and wrap them in `` or ```lisp ```
 ;; cases are

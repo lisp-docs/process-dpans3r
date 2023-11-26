@@ -1,4 +1,4 @@
-(defpackage html-to-md
+(defpackage process-dpans3r
   (:use :cl)
   (:import-from :alexandria )
   (:import-from  :cl-ppcre)
@@ -10,7 +10,7 @@
            :*headers-regex*
            :*headers-non-regex*
            :*c0*))
-(in-package :html-to-md)
+(in-package :process-dpans3r)
 
 ;; blah blah blah.
 
@@ -29,7 +29,7 @@
   (setf *curr-file* (alexandria-2:read-file-into-string filepath)))
   ;(alexandria-2:read-file-into-string filepath))
   
-(defvar *md-dir* #P"/Users/danielnussenbaum/Development/projects/lisp/roswell-projects/html-to-md/md-files/")
+(defvar *md-dir* #P"/Users/danielnussenbaum/Development/projects/lisp/roswell-projects/process-dpans3r/md-files/")
 
 (defvar *c0* "chap-0\\\chap-0.md")
 
@@ -148,7 +148,7 @@
 
 
 (defun get-output-dir ()
-  (asdf:system-relative-pathname "html-to-md" "output/"))
+  (asdf:system-relative-pathname "process-dpans3r" "output/"))
 
 (defun get-directory-for-chapter (filename)
   (uiop:merge-pathnames*
@@ -604,7 +604,7 @@
 ;(format T "~A~%" *load-pathname*)
 ;(format T "~A~%" *load-truename*)
 
-; (slice-files-from-dir-to-output #P"/Users/danielnussenbaum/Development/projects/lisp/roswell-projects/html-to-md/md-files/")
+; (slice-files-from-dir-to-output #P"/Users/danielnussenbaum/Development/projects/lisp/roswell-projects/process-dpans3r/md-files/")
 
 ;; TODO
 ;; Need to replace "{" with "&#123;"

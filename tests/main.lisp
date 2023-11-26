@@ -1,10 +1,10 @@
-(defpackage html-to-md/tests/main
+(defpackage process-dpans3r/tests/main
   (:use :cl
-        :html-to-md
+        :process-dpans3r
         :rove))
-(in-package :html-to-md/tests/main)
+(in-package :process-dpans3r/tests/main)
 
-;; NOTE: To run this test file, execute `(asdf:test-system :html-to-md)' in your Lisp.
+;; NOTE: To run this test file, execute `(asdf:test-system :process-dpans3r)' in your Lisp.
 
 (deftest test-target-1
   (testing "should (= 1 1) to be true"

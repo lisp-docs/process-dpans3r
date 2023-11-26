@@ -349,9 +349,9 @@
   (pprint meta-contents-list) 
   (with-output-to-string (s)
     (format s "---~%")
-    (format s "title: \"~A\"~%" section-title)
+    (format s "title: \"~A\"~%" (get-display-title section-title))
     (format s "---~%~%")
-    (loop for (title . filename) in meta-contents-list
+    (loop for (title . filename) in (cdr meta-contents-list)
 	  do (format s "~A~%" (get-heading title))
 	  do (format s "import ~A from './~A.md';~%"
 		     (str:replace-all

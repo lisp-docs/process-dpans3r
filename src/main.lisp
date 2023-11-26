@@ -12,28 +12,6 @@
            :*c0*))
 (in-package :process-dpans3r)
 
-;; blah blah blah.
-
-(defvar *curr-file* NIL)
-
-(defun hello ()
-  (format T "~A%S" *load-truename*)
-  (format T "hello world!"))
-
-;(ql:quickload "cl-ppcre")
-
-;(ql:quickload "alexandria")
-
-
-(defun load-md-file (filepath)
-  (setf *curr-file* (alexandria-2:read-file-into-string filepath)))
-  ;(alexandria-2:read-file-into-string filepath))
-  
-(defvar *md-dir* #P"/Users/danielnussenbaum/Development/projects/lisp/roswell-projects/process-dpans3r/md-files/")
-
-(defvar *c0* "chap-0\\\chap-0.md")
-
-(uiop:directory-files *md-dir*)
 
 (defvar *headers-non-regex*
   '("Version 15.17R, X3J13/94-101R."
@@ -95,24 +73,11 @@
    s
    :with-registers-p t))
 
-(defun get-filepath (filename)
-  (merge-pathnames *md-dir* filename))
-
-(defun load-ch2 ()
-  (setf *c2*
-	(alexandria-2:read-file-into-string
-	 (get-filepath "chap-2.md"))))
-
 (defun load-file (filepath)
   (alexandria-2:read-file-into-string filepath))
 
-(defvar *c2* (load-ch2))
-
 (defun save-file (filename string-data)
   (str:to-file (get-filepath filename) string-data))
-
-(defun save-ch2 ()
-  (save-file "chap-2.md" *c2*))
 
 (defun replace-bracket-open (given-string)
   (str:replace-all "{" "\\{" given-string))
@@ -140,12 +105,6 @@
 ;     ">" "\\>"
      )
    given-string))
-
-(defun process-ch2 ()
-  (load-ch2)
-  (setf *c2* (replace-html-chars *c2*))
-  (save-ch2))
-
 
 (defun get-output-dir ()
   (asdf:system-relative-pathname "process-dpans3r" "output/"))
@@ -394,13 +353,9 @@
     (cons subsection-title subsection-filename)))
 
 (defun get-subsection-title (subsection-text)
-  ;; TODO seems to be working...
   (first (cl-ppcre:all-matches-as-strings *all-subsections* subsection-text)))
 
 (defun get-all-subsections (given-string)
-  ;; TODO remove-if nil or empty...
-  ;; TODO (seems done, but untested...)
-  ;; TODO see sublime text, add to sbclrc debug 3 optimize flag...
   (remove-if
    (lambda (x) (or (equal x NIL) (equal x "")))
    (get-text-parts given-string *all-subsections*)))
@@ -604,7 +559,7 @@
 ;(format T "~A~%" *load-pathname*)
 ;(format T "~A~%" *load-truename*)
 
-; (slice-files-from-dir-to-output #P"/Users/danielnussenbaum/Development/projects/lisp/roswell-projects/process-dpans3r/md-files/")
+; (slice-files-from-dir-to-output #P"./process-dpans3r/md-files/")
 
 ;; TODO
 ;; Need to replace "{" with "&#123;"

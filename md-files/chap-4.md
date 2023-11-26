@@ -40,7 +40,7 @@ Information about *type* usage is located in the sections specified in Figure 4�
 
 |**Section** Data Type|
 | :- |
-|\<p\>Section 4.3 (Classes) Object System types \</p\>\<p\>Section 7.5 (Slots) Object System types \</p\>\<p\>Chapter 7 (Objects) Object System types \</p\>\<p\>Section 7.6 (Generic Functions and Methods) Object System types \</p\>\<p\>Section 9.1 (Condition System Concepts) Condition System types Chapter 4 (Types and Classes) Miscellaneous types \</p\>\<p\>Chapter 2 (Syntax) All types—read and print syntax Section 22.1 (The Lisp Printer) All types—print syntax Section 3.2 (Compilation) All types—compilation issues\</p\>|
+|&#60;p&#62;Section 4.3 (Classes) Object System types &#60;/p&#62;&#60;p&#62;Section 7.5 (Slots) Object System types &#60;/p&#62;&#60;p&#62;Chapter 7 (Objects) Object System types &#60;/p&#62;&#60;p&#62;Section 7.6 (Generic Functions and Methods) Object System types &#60;/p&#62;&#60;p&#62;Section 9.1 (Condition System Concepts) Condition System types Chapter 4 (Types and Classes) Miscellaneous types &#60;/p&#62;&#60;p&#62;Chapter 2 (Syntax) All types—read and print syntax Section 22.1 (The Lisp Printer) All types—print syntax Section 3.2 (Compilation) All types—compilation issues&#60;/p&#62;|
 
 
 **Figure 4–1. Cross-References to Data Type Information** 
@@ -69,7 +69,7 @@ At the discretion of the implementation, either **standard-object** or **structu
 
 
 
-|\<p\>**arithmetic-error function simple-condition array generic-function simple-error atom hash-table simple-string base-char integer simple-type-error base-string keyword simple-vector bignum list simple-warning bit logical-pathname single-float bit-vector long-float standard-char broadcast-stream method standard-class built-in-class method-combination standard-generic-function cell-error nil standard-method character null standard-object class number storage-condition compiled-function package stream** \</p\>\<p\>**complex package-error stream-error concatenated-stream parse-error string** \</p\>\<p\>**condition pathname string-stream cons print-not-readable structure-class control-error program-error structure-object division-by-zero random-state style-warning double-float ratio symbol** \</p\>\<p\>**echo-stream rational synonym-stream end-of-file reader-error t** \</p\>\<p\>**error readtable two-way-stream extended-char real type-error file-error restart unbound-slot file-stream sequence unbound-variable fixnum serious-condition undefined-function float short-float unsigned-byte floating-point-inexact signed-byte vector** \</p\>\<p\>**floating-point-invalid-operation simple-array warning** \</p\>\<p\>**floating-point-overflow simple-base-string** \</p\>\<p\>**floating-point-underflow simple-bit-vector**\</p\>|
+|&#60;p&#62;**arithmetic-error function simple-condition array generic-function simple-error atom hash-table simple-string base-char integer simple-type-error base-string keyword simple-vector bignum list simple-warning bit logical-pathname single-float bit-vector long-float standard-char broadcast-stream method standard-class built-in-class method-combination standard-generic-function cell-error nil standard-method character null standard-object class number storage-condition compiled-function package stream** &#60;/p&#62;&#60;p&#62;**complex package-error stream-error concatenated-stream parse-error string** &#60;/p&#62;&#60;p&#62;**condition pathname string-stream cons print-not-readable structure-class control-error program-error structure-object division-by-zero random-state style-warning double-float ratio symbol** &#60;/p&#62;&#60;p&#62;**echo-stream rational synonym-stream end-of-file reader-error t** &#60;/p&#62;&#60;p&#62;**error readtable two-way-stream extended-char real type-error file-error restart unbound-slot file-stream sequence unbound-variable fixnum serious-condition undefined-function float short-float unsigned-byte floating-point-inexact signed-byte vector** &#60;/p&#62;&#60;p&#62;**floating-point-invalid-operation simple-array warning** &#60;/p&#62;&#60;p&#62;**floating-point-overflow simple-base-string** &#60;/p&#62;&#60;p&#62;**floating-point-underflow simple-bit-vector**&#60;/p&#62;|
 | :- |
 
 
@@ -93,7 +93,7 @@ Suppose that two *type specifiers* are the same except that the first has a \* w
 
 If a *list* has one or more unspecified items at the end, those items can be dropped. If dropping all occurrences of \* results in a *singleton list*, then the parentheses can be dropped as well (the list can be replaced by the *symbol* in its *car* ). For example, (vector double-float \*) can be abbreviated to (vector double-float), and (vector \* \*) can be abbreviated to (vector) and then to vector. 
 
-|\<p\>**and long-float simple-base-string array member simple-bit-vector** \</p\>\<p\>**base-string mod simple-string** \</p\>\<p\>**bit-vector not simple-vector** \</p\>\<p\>**complex or single-float** \</p\>\<p\>**cons rational string** \</p\>\<p\>**double-float real unsigned-byte** \</p\>\<p\>**eql satisfies values** \</p\>\<p\>**float short-float vector** \</p\>\<p\>**function signed-byte** \</p\>\<p\>**integer simple-array**\</p\>|
+|&#60;p&#62;**and long-float simple-base-string array member simple-bit-vector** &#60;/p&#62;&#60;p&#62;**base-string mod simple-string** &#60;/p&#62;&#60;p&#62;**bit-vector not simple-vector** &#60;/p&#62;&#60;p&#62;**complex or single-float** &#60;/p&#62;&#60;p&#62;**cons rational string** &#60;/p&#62;&#60;p&#62;**double-float real unsigned-byte** &#60;/p&#62;&#60;p&#62;**eql satisfies values** &#60;/p&#62;&#60;p&#62;**float short-float vector** &#60;/p&#62;&#60;p&#62;**function signed-byte** &#60;/p&#62;&#60;p&#62;**integer simple-array**&#60;/p&#62;|
 | :- |
 
 
@@ -101,7 +101,7 @@ If a *list* has one or more unspecified items at the end, those items can be dro
 
 Figure 4–4 show the *defined names* that can be used as *compound type specifier names* but that cannot be used as *atomic type specifiers*. 
 
-|\<p\>**and mod satisfies** \</p\>\<p\>**eql not values** \</p\>\<p\>**member or**\</p\>|
+|&#60;p&#62;**and mod satisfies** &#60;/p&#62;&#60;p&#62;**eql not values** &#60;/p&#62;&#60;p&#62;**member or**&#60;/p&#62;|
 | :- |
 
 
@@ -123,7 +123,7 @@ of that *class*.
 
 Figure 4–5 shows some *defined names* relating to *types* and *declarations*. 
 
-|\<p\>**coerce defstruct subtypep** \</p\>\<p\>**declaim deftype the** \</p\>\<p\>**declare ftype type** \</p\>\<p\>**defclass locally type-of** \</p\>\<p\>**define-condition proclaim typep**\</p\>|
+|&#60;p&#62;**coerce defstruct subtypep** &#60;/p&#62;&#60;p&#62;**declaim deftype the** &#60;/p&#62;&#60;p&#62;**declare ftype type** &#60;/p&#62;&#60;p&#62;**defclass locally type-of** &#60;/p&#62;&#60;p&#62;**define-condition proclaim typep**&#60;/p&#62;|
 | :- |
 
 
@@ -133,7 +133,7 @@ Figure 4–6 shows all *defined names* that are *type specifier names*, whether 
 
 
 
-|\<p\>**and function simple-array arithmetic-error generic-function simple-base-string array hash-table simple-bit-vector atom integer simple-condition base-char keyword simple-error base-string list simple-string bignum logical-pathname simple-type-error bit long-float simple-vector bit-vector member simple-warning broadcast-stream method single-float built-in-class method-combination standard-char cell-error mod standard-class character nil standard-generic-function class not standard-method compiled-function null standard-object complex number storage-condition concatenated-stream or stream** \</p\>\<p\>**condition package stream-error cons package-error string** \</p\>\<p\>**control-error parse-error string-stream division-by-zero pathname structure-class double-float print-not-readable structure-object echo-stream program-error style-warning end-of-file random-state symbol** \</p\>\<p\>**eql ratio synonym-stream error rational t** \</p\>\<p\>**extended-char reader-error two-way-stream file-error readtable type-error file-stream real unbound-slot fixnum restart unbound-variable float satisfies undefined-function floating-point-inexact sequence unsigned-byte floating-point-invalid-operation serious-condition values** \</p\>\<p\>**floating-point-overflow short-float vector** \</p\>\<p\>**floating-point-underflow signed-byte warning**\</p\>|
+|&#60;p&#62;**and function simple-array arithmetic-error generic-function simple-base-string array hash-table simple-bit-vector atom integer simple-condition base-char keyword simple-error base-string list simple-string bignum logical-pathname simple-type-error bit long-float simple-vector bit-vector member simple-warning broadcast-stream method single-float built-in-class method-combination standard-char cell-error mod standard-class character nil standard-generic-function class not standard-method compiled-function null standard-object complex number storage-condition concatenated-stream or stream** &#60;/p&#62;&#60;p&#62;**condition package stream-error cons package-error string** &#60;/p&#62;&#60;p&#62;**control-error parse-error string-stream division-by-zero pathname structure-class double-float print-not-readable structure-object echo-stream program-error style-warning end-of-file random-state symbol** &#60;/p&#62;&#60;p&#62;**eql ratio synonym-stream error rational t** &#60;/p&#62;&#60;p&#62;**extended-char reader-error two-way-stream file-error readtable type-error file-stream real unbound-slot fixnum restart unbound-variable float satisfies undefined-function floating-point-inexact sequence unsigned-byte floating-point-invalid-operation serious-condition values** &#60;/p&#62;&#60;p&#62;**floating-point-overflow short-float vector** &#60;/p&#62;&#60;p&#62;**floating-point-underflow signed-byte warning**&#60;/p&#62;|
 | :- |
 
 
@@ -157,13 +157,13 @@ A *class* is an *object* that determines the structure and behavior of a set of 
 
 A *class* can inherit structure and behavior from other *classes*. A *class* whose definition refers to other *classes* for the purpose of inheriting from them is said to be a *subclass* of each of those *classes*. The *classes* that are designated for purposes of inheritance are said to be *superclasses* of the inheriting *class*. 
 
-A *class* can have a *name*. The *function* **class-name** takes a *class object* and returns its *name*. The *name* of an anonymous *class* is **nil**. A *symbol* can *name* a *class*. The *function* **find-class** takes a *symbol* and returns the *class* that the *symbol* names. A *class* has a *proper name* if the *name* is a *symbol* and if the *name* of the *class* names that *class*. That is, a *class C* has the *proper name S* if *S* = (class-name *C*) and *C* = (find-class *S*). Notice that it is possible for (find-class *S*\<sub\>1\</sub\>) = (find-class *S*\<sub\>2\</sub\>) and *S*\<sub\>1\</sub\> *6*= *S*\<sub\>2\</sub\>. If *C* = (find-class *S*), we say that *C* is the *class named S*. 
+A *class* can have a *name*. The *function* **class-name** takes a *class object* and returns its *name*. The *name* of an anonymous *class* is **nil**. A *symbol* can *name* a *class*. The *function* **find-class** takes a *symbol* and returns the *class* that the *symbol* names. A *class* has a *proper name* if the *name* is a *symbol* and if the *name* of the *class* names that *class*. That is, a *class C* has the *proper name S* if *S* = (class-name *C*) and *C* = (find-class *S*). Notice that it is possible for (find-class *S*&#60;sub&#62;1&#60;/sub&#62;) = (find-class *S*&#60;sub&#62;2&#60;/sub&#62;) and *S*&#60;sub&#62;1&#60;/sub&#62; *6*= *S*&#60;sub&#62;2&#60;/sub&#62;. If *C* = (find-class *S*), we say that *C* is the *class named S*. 
 
-A \<i\>class C\</i\>\<sub\>1\</sub\> is a \<i\>direct superclass\</i\> of a \<i\>class C\</i\>\<sub\>2\</sub\> if \<i\>C\</i\>\<sub\>2\</sub\> explicitly designates \<i\>C\</i\>\<sub\>1\</sub\> as a \<i\>superclass\</i\> in its definition. In this case \<i\>C\</i\>\<sub\>2\</sub\> is a \<i\>direct subclass\</i\> of \<i\>C\</i\>\<sub\>1\</sub\>. A \<i\>class C\<sub\>n\</sub\>\</i\> is a \<i\>superclass\</i\> of a \<i\>class C\</i\>\<sub\>1\</sub\> if there exists a series of \<i\>classes C\</i\>\<sub\>2\</sub\>\<i\>, . . . , C\<sub\>n−\</sub\>\</i\>1\</sub\> such that \<i\>C\<sub\>i\</sub\>\</i\>+1\</sub\> is a \<i\>direct superclass\</i\> of \<i\>C\<sub\>i\</sub\>\</i\> for 1 \<i\>≤ i\</i\> \< \<i\>n\</i\>. In this case, \<i\>C\</i\>\<sub\>1\</sub\> is a \<i\>subclass\</i\> of \<i\>C\<sub\>n\</sub\>\</i\>. A \<i\>class\</i\> is considered neither a \<i\>superclass\</i\> nor a \<i\>subclass\</i\> of 
+A &#60;i&#62;class C&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62; is a &#60;i&#62;direct superclass&#60;/i&#62; of a &#60;i&#62;class C&#60;/i&#62;&#60;sub&#62;2&#60;/sub&#62; if &#60;i&#62;C&#60;/i&#62;&#60;sub&#62;2&#60;/sub&#62; explicitly designates &#60;i&#62;C&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62; as a &#60;i&#62;superclass&#60;/i&#62; in its definition. In this case &#60;i&#62;C&#60;/i&#62;&#60;sub&#62;2&#60;/sub&#62; is a &#60;i&#62;direct subclass&#60;/i&#62; of &#60;i&#62;C&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62;. A &#60;i&#62;class C&#60;sub&#62;n&#60;/sub&#62;&#60;/i&#62; is a &#60;i&#62;superclass&#60;/i&#62; of a &#60;i&#62;class C&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62; if there exists a series of &#60;i&#62;classes C&#60;/i&#62;&#60;sub&#62;2&#60;/sub&#62;&#60;i&#62;, . . . , C&#60;sub&#62;n−&#60;/sub&#62;&#60;/i&#62;1&#60;/sub&#62; such that &#60;i&#62;C&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;+1&#60;/sub&#62; is a &#60;i&#62;direct superclass&#60;/i&#62; of &#60;i&#62;C&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62; for 1 &#60;i&#62;≤ i&#60;/i&#62; &#60; &#60;i&#62;n&#60;/i&#62;. In this case, &#60;i&#62;C&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62; is a &#60;i&#62;subclass&#60;/i&#62; of &#60;i&#62;C&#60;sub&#62;n&#60;/sub&#62;&#60;/i&#62;. A &#60;i&#62;class&#60;/i&#62; is considered neither a &#60;i&#62;superclass&#60;/i&#62; nor a &#60;i&#62;subclass&#60;/i&#62; of 
 
-itself. That is, if *C*\<sub\>1\</sub\> is a *superclass* of *C*\<sub\>2\</sub\>, then *C*\<sub\>1\</sub\> *6*= *C*\<sub\>2\</sub\>. The set of *classes* consisting of some given *class C* along with all of its *superclasses* is called “*C* and its superclasses.” 
+itself. That is, if *C*&#60;sub&#62;1&#60;/sub&#62; is a *superclass* of *C*&#60;sub&#62;2&#60;/sub&#62;, then *C*&#60;sub&#62;1&#60;/sub&#62; *6*= *C*&#60;sub&#62;2&#60;/sub&#62;. The set of *classes* consisting of some given *class C* along with all of its *superclasses* is called “*C* and its superclasses.” 
 
-Each *class* has a *class precedence list*, which is a total ordering on the set of the given *class* and its *superclasses*. The total ordering is expressed as a list ordered from most specific to least specific. The *class precedence list* is used in several ways. In general, more specific *classes* can *shadow*\<sub\>1\</sub\> features that would otherwise be inherited from less specific *classes*. The *method* selection and combination process uses the *class precedence list* to order *methods* from most specific to least specific. 
+Each *class* has a *class precedence list*, which is a total ordering on the set of the given *class* and its *superclasses*. The total ordering is expressed as a list ordered from most specific to least specific. The *class precedence list* is used in several ways. In general, more specific *classes* can *shadow*&#60;sub&#62;1&#60;/sub&#62; features that would otherwise be inherited from less specific *classes*. The *method* selection and combination process uses the *class precedence list* to order *methods* from most specific to least specific. 
 
 When a *class* is defined, the order in which its direct *superclasses* are mentioned in the defining 
 
@@ -271,37 +271,37 @@ The **defclass** form for a *class* provides a total ordering on that *class* an
 
 A *class* precedes its direct *superclasses*, and a direct *superclass* precedes all other direct *superclasses* specified to its right in the *superclasses* list of the **defclass** form. For every class *C*, define 
 
-\<i\>R\<sub\>C\</sub\>\</i\> = \<i\>\{\</i\>(\<i\>C, C\</i\>\<sub\>1\</sub\>)\<i\>,\</i\>(\<i\>C\</i\>\<sub\>1\</sub\>\<i\>, C\</i\>\<sub\>2\</sub\>)\<i\>, . . . ,\</i\>(\<i\>C\<sub\>n−\</sub\>\</i\>1\</sub\>\<i\>, C\<sub\>n\</sub\>\</i\>)\<i\>\}\</i\> 
+&#60;i&#62;R&#60;sub&#62;C&#60;/sub&#62;&#60;/i&#62; = &#60;i&#62;&#123;&#60;/i&#62;(&#60;i&#62;C, C&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62;)&#60;i&#62;,&#60;/i&#62;(&#60;i&#62;C&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62;&#60;i&#62;, C&#60;/i&#62;&#60;sub&#62;2&#60;/sub&#62;)&#60;i&#62;, . . . ,&#60;/i&#62;(&#60;i&#62;C&#60;sub&#62;n−&#60;/sub&#62;&#60;/i&#62;1&#60;/sub&#62;&#60;i&#62;, C&#60;sub&#62;n&#60;/sub&#62;&#60;/i&#62;)&#60;i&#62;&#125;&#60;/i&#62; 
 
-where \<i\>C\</i\>\<sub\>1\</sub\>\<i\>, . . . , C\<sub\>n\</sub\>\</i\> are the direct \<i\>superclasses\</i\> of \<i\>C\</i\> in the order in which they are mentioned in the \<b\>defclass\</b\> form. These ordered pairs generate the total ordering on the class \<i\>C\</i\> and its direct \<i\>superclasses\</i\>. 
+where &#60;i&#62;C&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62;&#60;i&#62;, . . . , C&#60;sub&#62;n&#60;/sub&#62;&#60;/i&#62; are the direct &#60;i&#62;superclasses&#60;/i&#62; of &#60;i&#62;C&#60;/i&#62; in the order in which they are mentioned in the &#60;b&#62;defclass&#60;/b&#62; form. These ordered pairs generate the total ordering on the class &#60;i&#62;C&#60;/i&#62; and its direct &#60;i&#62;superclasses&#60;/i&#62;. 
 
-Let \<i\>S\<sub\>C\</sub\>\</i\> be the set of \<i\>C\</i\> and its \<i\>superclasses\</i\>. Let \<i\>R\</i\> be 
+Let &#60;i&#62;S&#60;sub&#62;C&#60;/sub&#62;&#60;/i&#62; be the set of &#60;i&#62;C&#60;/i&#62; and its &#60;i&#62;superclasses&#60;/i&#62;. Let &#60;i&#62;R&#60;/i&#62; be 
 
-\<i\>R\<sub\>c\</sub\>\</i\> 
+&#60;i&#62;R&#60;sub&#62;c&#60;/sub&#62;&#60;/i&#62; 
 
 . 
 
-\<sub\>\<i\>R\</i\> =\</sub\>[ \<i\>c∈S\<sub\>C\</sub\>\</i\> 
+&#60;sub&#62;&#60;i&#62;R&#60;/i&#62; =&#60;/sub&#62;[ &#60;i&#62;c∈S&#60;sub&#62;C&#60;/sub&#62;&#60;/i&#62; 
 
-The set \<i\>R\</i\> might or might not generate a partial ordering, depending on whether the \<i\>R\<sub\>c\</sub\>\</i\>, \<i\>c ∈ S\<sub\>C\</sub\>\</i\> , are consistent; it is assumed that they are consistent and that \<i\>R\</i\> generates a partial ordering. When the \<i\>R\<sub\>c\</sub\>\</i\> are not consistent, it is said that \<i\>R\</i\> is inconsistent. 
+The set &#60;i&#62;R&#60;/i&#62; might or might not generate a partial ordering, depending on whether the &#60;i&#62;R&#60;sub&#62;c&#60;/sub&#62;&#60;/i&#62;, &#60;i&#62;c ∈ S&#60;sub&#62;C&#60;/sub&#62;&#60;/i&#62; , are consistent; it is assumed that they are consistent and that &#60;i&#62;R&#60;/i&#62; generates a partial ordering. When the &#60;i&#62;R&#60;sub&#62;c&#60;/sub&#62;&#60;/i&#62; are not consistent, it is said that &#60;i&#62;R&#60;/i&#62; is inconsistent. 
 
-To compute the \<i\>class precedence list\</i\> for \<i\>C\</i\>, topologically sort the elements of \<i\>S\<sub\>C\</sub\>\</i\> with respect to the partial ordering generated by \<i\>R\</i\>. When the topological sort must select a \<i\>class\</i\> from a set of two or more \<i\>classes\</i\>, none of which are preceded by other \<i\>classes\</i\> with respect to \<i\>R\</i\>, the \<i\>class\</i\> selected is chosen deterministically, as described below. 
+To compute the &#60;i&#62;class precedence list&#60;/i&#62; for &#60;i&#62;C&#60;/i&#62;, topologically sort the elements of &#60;i&#62;S&#60;sub&#62;C&#60;/sub&#62;&#60;/i&#62; with respect to the partial ordering generated by &#60;i&#62;R&#60;/i&#62;. When the topological sort must select a &#60;i&#62;class&#60;/i&#62; from a set of two or more &#60;i&#62;classes&#60;/i&#62;, none of which are preceded by other &#60;i&#62;classes&#60;/i&#62; with respect to &#60;i&#62;R&#60;/i&#62;, the &#60;i&#62;class&#60;/i&#62; selected is chosen deterministically, as described below. 
 
 If *R* is inconsistent, an error is signaled. 
 
 **4.3.5.1 Topological Sorting** 
 
-Topological sorting proceeds by finding a class \<i\>C\</i\> in \<i\>S\<sub\>C\</sub\>\</i\> such that no other \<i\>class\</i\> precedes that element according to the elements in \<i\>R\</i\>. The class \<i\>C\</i\> is placed first in the result. Remove \<i\>C\</i\> from \<i\>S\<sub\>C\</sub\>\</i\> , and remove all pairs of the form (\<i\>C, D\</i\>), \<i\>D ∈ S\<sub\>C\</sub\>\</i\> , from \<i\>R\</i\>. Repeat the process, adding \<i\>classes\</i\> with no predecessors to the end of the result. Stop when no element can be found that has no predecessor. 
+Topological sorting proceeds by finding a class &#60;i&#62;C&#60;/i&#62; in &#60;i&#62;S&#60;sub&#62;C&#60;/sub&#62;&#60;/i&#62; such that no other &#60;i&#62;class&#60;/i&#62; precedes that element according to the elements in &#60;i&#62;R&#60;/i&#62;. The class &#60;i&#62;C&#60;/i&#62; is placed first in the result. Remove &#60;i&#62;C&#60;/i&#62; from &#60;i&#62;S&#60;sub&#62;C&#60;/sub&#62;&#60;/i&#62; , and remove all pairs of the form (&#60;i&#62;C, D&#60;/i&#62;), &#60;i&#62;D ∈ S&#60;sub&#62;C&#60;/sub&#62;&#60;/i&#62; , from &#60;i&#62;R&#60;/i&#62;. Repeat the process, adding &#60;i&#62;classes&#60;/i&#62; with no predecessors to the end of the result. Stop when no element can be found that has no predecessor. 
 
-If \<i\>S\<sub\>C\</sub\>\</i\> is not empty and the process has stopped, the set \<i\>R\</i\> is inconsistent. If every \<i\>class\</i\> in the finite set of \<i\>classes\</i\> is preceded by another, then \<i\>R\</i\> contains a loop. That is, there is a chain of classes \<i\>C\</i\>\<sub\>1\</sub\>\<i\>, . . . , C\<sub\>n\</sub\>\</i\> such that \<i\>C\<sub\>i\</sub\>\</i\> precedes \<i\>C\<sub\>i\</sub\>\</i\>+1\</sub\>, 1 \<i\>≤ i\</i\> \< \<i\>n\</i\>, and \<i\>C\<sub\>n\</sub\>\</i\> precedes \<i\>C\</i\>\<sub\>1\</sub\>. 
+If &#60;i&#62;S&#60;sub&#62;C&#60;/sub&#62;&#60;/i&#62; is not empty and the process has stopped, the set &#60;i&#62;R&#60;/i&#62; is inconsistent. If every &#60;i&#62;class&#60;/i&#62; in the finite set of &#60;i&#62;classes&#60;/i&#62; is preceded by another, then &#60;i&#62;R&#60;/i&#62; contains a loop. That is, there is a chain of classes &#60;i&#62;C&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62;&#60;i&#62;, . . . , C&#60;sub&#62;n&#60;/sub&#62;&#60;/i&#62; such that &#60;i&#62;C&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62; precedes &#60;i&#62;C&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;+1&#60;/sub&#62;, 1 &#60;i&#62;≤ i&#60;/i&#62; &#60; &#60;i&#62;n&#60;/i&#62;, and &#60;i&#62;C&#60;sub&#62;n&#60;/sub&#62;&#60;/i&#62; precedes &#60;i&#62;C&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62;. 
 
-Sometimes there are several \<i\>classes\</i\> from \<i\>S\<sub\>C\</sub\>\</i\> with no predecessors. In this case select the one that has a direct \<i\>subclass\</i\> rightmost in the \<i\>class precedence list\</i\> computed so far. (If there is no such candidate \<i\>class\</i\>, \<i\>R\</i\> does not generate a partial ordering—the \<i\>R\<sub\>c\</sub\>\</i\>, \<i\>c ∈ S\<sub\>C\</sub\>\</i\> , are inconsistent.)  
+Sometimes there are several &#60;i&#62;classes&#60;/i&#62; from &#60;i&#62;S&#60;sub&#62;C&#60;/sub&#62;&#60;/i&#62; with no predecessors. In this case select the one that has a direct &#60;i&#62;subclass&#60;/i&#62; rightmost in the &#60;i&#62;class precedence list&#60;/i&#62; computed so far. (If there is no such candidate &#60;i&#62;class&#60;/i&#62;, &#60;i&#62;R&#60;/i&#62; does not generate a partial ordering—the &#60;i&#62;R&#60;sub&#62;c&#60;/sub&#62;&#60;/i&#62;, &#60;i&#62;c ∈ S&#60;sub&#62;C&#60;/sub&#62;&#60;/i&#62; , are inconsistent.)  
 
 
 
-In more precise terms, let \<i\>\{N\</i\>\<sub\>1\</sub\>\<i\>, . . . , N\<sub\>m\</sub\>\}\</i\>, \<i\>m ≥\</i\> 2, be the \<i\>classes\</i\> from \<i\>S\<sub\>C\</sub\>\</i\> with no predecessors. Let (\<i\>C\</i\>\<sub\>1\</sub\> \<i\>. . . C\<sub\>n\</sub\>\</i\>), \<i\>n ≥\</i\> 1, be the \<i\>class precedence list\</i\> constructed so far. \<i\>C\</i\>\<sub\>1\</sub\> is the most specific \<i\>class\</i\>, and \<i\>C\<sub\>n\</sub\>\</i\> is the least specific. Let 1 \<i\>≤ j ≤ n\</i\> be the largest number such that there exists an \<i\>i\</i\> where 1 \<i\>≤ i ≤ m\</i\> and \<i\>N\<sub\>i\</sub\>\</i\>is a direct \<i\>superclass\</i\> of \<i\>C\<sub\>j\</sub\>\</i\> ; \<i\>N\<sub\>i\</sub\>\</i\>is placed next. 
+In more precise terms, let &#60;i&#62;&#123;N&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62;&#60;i&#62;, . . . , N&#60;sub&#62;m&#60;/sub&#62;&#125;&#60;/i&#62;, &#60;i&#62;m ≥&#60;/i&#62; 2, be the &#60;i&#62;classes&#60;/i&#62; from &#60;i&#62;S&#60;sub&#62;C&#60;/sub&#62;&#60;/i&#62; with no predecessors. Let (&#60;i&#62;C&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62; &#60;i&#62;. . . C&#60;sub&#62;n&#60;/sub&#62;&#60;/i&#62;), &#60;i&#62;n ≥&#60;/i&#62; 1, be the &#60;i&#62;class precedence list&#60;/i&#62; constructed so far. &#60;i&#62;C&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62; is the most specific &#60;i&#62;class&#60;/i&#62;, and &#60;i&#62;C&#60;sub&#62;n&#60;/sub&#62;&#60;/i&#62; is the least specific. Let 1 &#60;i&#62;≤ j ≤ n&#60;/i&#62; be the largest number such that there exists an &#60;i&#62;i&#60;/i&#62; where 1 &#60;i&#62;≤ i ≤ m&#60;/i&#62; and &#60;i&#62;N&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;is a direct &#60;i&#62;superclass&#60;/i&#62; of &#60;i&#62;C&#60;sub&#62;j&#60;/sub&#62;&#60;/i&#62; ; &#60;i&#62;N&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;is placed next. 
 
-The effect of this rule for selecting from a set of *classes* with no predecessors is that the *classes* in a simple *superclass* chain are adjacent in the *class precedence list* and that *classes* in each relatively separated subgraph are adjacent in the *class precedence list*. For example, let *T*\<sub\>1\</sub\> and *T*\<sub\>2\</sub\> be subgraphs whose only element in common is the class *J*. Suppose that no superclass of *J* appears in either *T*\<sub\>1\</sub\> or *T*\<sub\>2\</sub\>, and that *J* is in the superclass chain of every class in both *T*\<sub\>1\</sub\> and *T*\<sub\>2\</sub\>. Let *C*\<sub\>1\</sub\> be the bottom of *T*\<sub\>1\</sub\>; and let *C*\<sub\>2\</sub\> be the bottom of *T*\<sub\>2\</sub\>. Suppose *C* is a *class* whose direct *superclasses* are *C*\<sub\>1\</sub\> and *C*\<sub\>2\</sub\> in that order, then the *class precedence list* for *C* starts with *C* and is followed by all *classes* in *T*\<sub\>1\</sub\> except *J*. All the *classes* of *T*\<sub\>2\</sub\> are next. The *class J* and its *superclasses* appear last. 
+The effect of this rule for selecting from a set of *classes* with no predecessors is that the *classes* in a simple *superclass* chain are adjacent in the *class precedence list* and that *classes* in each relatively separated subgraph are adjacent in the *class precedence list*. For example, let *T*&#60;sub&#62;1&#60;/sub&#62; and *T*&#60;sub&#62;2&#60;/sub&#62; be subgraphs whose only element in common is the class *J*. Suppose that no superclass of *J* appears in either *T*&#60;sub&#62;1&#60;/sub&#62; or *T*&#60;sub&#62;2&#60;/sub&#62;, and that *J* is in the superclass chain of every class in both *T*&#60;sub&#62;1&#60;/sub&#62; and *T*&#60;sub&#62;2&#60;/sub&#62;. Let *C*&#60;sub&#62;1&#60;/sub&#62; be the bottom of *T*&#60;sub&#62;1&#60;/sub&#62;; and let *C*&#60;sub&#62;2&#60;/sub&#62; be the bottom of *T*&#60;sub&#62;2&#60;/sub&#62;. Suppose *C* is a *class* whose direct *superclasses* are *C*&#60;sub&#62;1&#60;/sub&#62; and *C*&#60;sub&#62;2&#60;/sub&#62; in that order, then the *class precedence list* for *C* starts with *C* and is followed by all *classes* in *T*&#60;sub&#62;1&#60;/sub&#62; except *J*. All the *classes* of *T*&#60;sub&#62;2&#60;/sub&#62; are next. The *class J* and its *superclasses* appear last. 
 
 **4.3.5.2 Examples of Class Precedence List Determination** 
 
@@ -317,21 +317,21 @@ This example determines a *class precedence list* for the class pie. The followi
 
 (defclass food () ()) 
 
-The set \<i\>S\<sub\>pie\</sub\>\</i\> = \<i\>\{\</i\>pie, apple, cinnamon, fruit, spice, food, standard-object, t\<i\>\}\</i\>. The set \<i\>R\</i\> = \<i\>\{\</i\>(pie, apple), (apple, cinnamon), (apple, fruit), (cinnamon, spice), 
+The set &#60;i&#62;S&#60;sub&#62;pie&#60;/sub&#62;&#60;/i&#62; = &#60;i&#62;&#123;&#60;/i&#62;pie, apple, cinnamon, fruit, spice, food, standard-object, t&#60;i&#62;&#125;&#60;/i&#62;. The set &#60;i&#62;R&#60;/i&#62; = &#60;i&#62;&#123;&#60;/i&#62;(pie, apple), (apple, cinnamon), (apple, fruit), (cinnamon, spice), 
 
-(fruit, food), (spice, food), (food, standard-object), (standard-object, t)*\}*. 
+(fruit, food), (spice, food), (food, standard-object), (standard-object, t)*&#125;*. 
 
-The class pie is not preceded by anything, so it comes first; the result so far is (pie). Remove pie from *S* and pairs mentioning pie from *R* to get *S* = *\{*apple, cinnamon, fruit, spice, food, standard-object, t*\}* and *R* = *\{*(apple, cinnamon), (apple, fruit), (cinnamon, spice), (fruit, food), (spice, food), (food, standard-object), (standard-object, t)*\}*. 
+The class pie is not preceded by anything, so it comes first; the result so far is (pie). Remove pie from *S* and pairs mentioning pie from *R* to get *S* = *&#123;*apple, cinnamon, fruit, spice, food, standard-object, t*&#125;* and *R* = *&#123;*(apple, cinnamon), (apple, fruit), (cinnamon, spice), (fruit, food), (spice, food), (food, standard-object), (standard-object, t)*&#125;*. 
 
-The class apple is not preceded by anything, so it is next; the result is (pie apple). Removing apple and the relevant pairs results in *S* = *\{*cinnamon, fruit, spice, food, standard-object, t*\}* and *R* = *\{*(cinnamon, spice), (fruit, food), (spice, food), (food, standard-object), (standard-object, t)*\}*. 
+The class apple is not preceded by anything, so it is next; the result is (pie apple). Removing apple and the relevant pairs results in *S* = *&#123;*cinnamon, fruit, spice, food, standard-object, t*&#125;* and *R* = *&#123;*(cinnamon, spice), (fruit, food), (spice, food), (food, standard-object), (standard-object, t)*&#125;*. 
 
 The classes cinnamon and fruit are not preceded by anything, so the one with a direct *subclass* rightmost in the *class precedence list* computed so far goes next. The class apple is a direct *subclass*  
 
 
 
-of fruit, and the class pie is a direct *subclass* of cinnamon. Because apple appears to the right of pie in the *class precedence list*, fruit goes next, and the result so far is (pie apple fruit). *S* = *\{*cinnamon, spice, food, standard-object, t*\}*; *R* = *\{*(cinnamon, spice), (spice, food), (food, standard-object), (standard-object, t)*\}*. 
+of fruit, and the class pie is a direct *subclass* of cinnamon. Because apple appears to the right of pie in the *class precedence list*, fruit goes next, and the result so far is (pie apple fruit). *S* = *&#123;*cinnamon, spice, food, standard-object, t*&#125;*; *R* = *&#123;*(cinnamon, spice), (spice, food), (food, standard-object), (standard-object, t)*&#125;*. 
 
-The class cinnamon is next, giving the result so far as (pie apple fruit cinnamon). At this point *S* = *\{*spice, food, standard-object, t*\}*; *R* = *\{*(spice, food), (food, standard-object), (standard-object, t)*\}*. 
+The class cinnamon is next, giving the result so far as (pie apple fruit cinnamon). At this point *S* = *&#123;*spice, food, standard-object, t*&#125;*; *R* = *&#123;*(spice, food), (food, standard-object), (standard-object, t)*&#125;*. 
 
 The classes spice, food, **standard-object**, and **t** are added in that order, and the *class precedence list* is (pie apple fruit cinnamon spice food standard-object t). 
 
@@ -437,7 +437,7 @@ Figure 4–8 lists the set of *classes* that correspond to predefined *type spec
 
 
 
-|\<p\>**arithmetic-error generic-function simple-error array hash-table simple-type-error bit-vector integer simple-warning broadcast-stream list standard-class built-in-class logical-pathname standard-generic-function cell-error method standard-method character method-combination standard-object class null storage-condition complex number stream** \</p\>\<p\>**concatenated-stream package stream-error condition package-error string** \</p\>\<p\>**cons parse-error string-stream control-error pathname structure-class division-by-zero print-not-readable structure-object echo-stream program-error style-warning end-of-file random-state symbol** \</p\>\<p\>**error ratio synonym-stream file-error rational t** \</p\>\<p\>**file-stream reader-error two-way-stream float readtable type-error floating-point-inexact real unbound-slot floating-point-invalid-operation restart unbound-variable floating-point-overflow sequence undefined-function floating-point-underflow serious-condition vector** \</p\>\<p\>**function simple-condition warning**\</p\>|
+|&#60;p&#62;**arithmetic-error generic-function simple-error array hash-table simple-type-error bit-vector integer simple-warning broadcast-stream list standard-class built-in-class logical-pathname standard-generic-function cell-error method standard-method character method-combination standard-object class null storage-condition complex number stream** &#60;/p&#62;&#60;p&#62;**concatenated-stream package stream-error condition package-error string** &#60;/p&#62;&#60;p&#62;**cons parse-error string-stream control-error pathname structure-class division-by-zero print-not-readable structure-object echo-stream program-error style-warning end-of-file random-state symbol** &#60;/p&#62;&#60;p&#62;**error ratio synonym-stream file-error rational t** &#60;/p&#62;&#60;p&#62;**file-stream reader-error two-way-stream float readtable type-error floating-point-inexact real unbound-slot floating-point-invalid-operation restart unbound-variable floating-point-overflow sequence undefined-function floating-point-underflow serious-condition vector** &#60;/p&#62;&#60;p&#62;**function simple-condition warning**&#60;/p&#62;|
 | :- |
 
 
@@ -503,13 +503,13 @@ Specializing.
 
 (function [*arg-typespec* [*value-typespec*]]) 
 
-*arg-typespec::*=(*\{typespec\}*\* 
+*arg-typespec::*=(*&#123;typespec&#125;*\* 
 
-[&optional *\{typespec\}*\*] 
+[&optional *&#123;typespec&#125;*\*] 
 
 [&rest *typespec*] 
 
-[&key *\{*(*keyword typespec*)*\}*\*]) 
+[&key *&#123;*(*keyword typespec*)*&#125;*\*]) 
 
 **Compound Type Specifier Arguments:** 
 
@@ -749,7 +749,7 @@ Combining.
 
 **Compound Type Specifier Syntax:** 
 
-(member *\{object\}*\*) 
+(member *&#123;object&#125;*\*) 
 
 **Compound Type Specifier Arguments:** 
 
@@ -797,7 +797,7 @@ Combining.
 
 **Compound Type Specifier Syntax:** 
 
-(and *\{typespec\}*\*) 
+(and *&#123;typespec&#125;*\*) 
 
 **Compound Type Specifier Arguments:** 
 
@@ -817,7 +817,7 @@ Combining.
 
 **Compound Type Specifier Syntax:** 
 
-(or *\{typespec\}*\*) 
+(or *&#123;typespec&#125;*\*) 
 
 **Compound Type Specifier Arguments:** 
 
@@ -843,7 +843,7 @@ Specializing.
 
 (values *↓value-typespec*) 
 
-*value-typespec::*=*\{typespec\}*\* [&optional *\{typespec\}*\*] [&rest *typespec*] [**&allow-other-keys**] 
+*value-typespec::*=*&#123;typespec&#125;*\* [&optional *&#123;typespec&#125;*\*] [&rest *typespec*] [**&allow-other-keys**] 
 
 **Compound Type Specifier Arguments:** 
 
@@ -999,7 +999,7 @@ Coercions from *floats* to *rationals* and from *ratios* to *integers* are not p
 
 **Syntax:** 
 
-**deftype** *name lambda-list* [[ *\{declaration\}*\* *| documentation* ]] *\{form\}*\* *→ name* 
+**deftype** *name lambda-list* [[ *&#123;declaration&#125;*\* *| documentation* ]] *&#123;form&#125;*\* *→ name* 
 
 **Arguments and Values:** 
 
@@ -1019,9 +1019,9 @@ Coercions from *floats* to *rationals* and from *ratios* to *integers* are not p
 
 The meaning of the new *type specifier* is given in terms of a function which expands the *type specifier* into another *type specifier* , which itself will be expanded if it contains references to another *derived type specifier* . 
 
-The newly defined *type specifier* may be referenced as a list of the form (*name arg*\<sub\>1\</sub\> *arg*\<sub\>2\</sub\> ...). The number of arguments must be appropriate to the *lambda-list*. If the new *type specifier* takes no arguments, or if all of its arguments are optional, the *type specifier* may be used as an *atomic type specifier* . 
+The newly defined *type specifier* may be referenced as a list of the form (*name arg*&#60;sub&#62;1&#60;/sub&#62; *arg*&#60;sub&#62;2&#60;/sub&#62; ...). The number of arguments must be appropriate to the *lambda-list*. If the new *type specifier* takes no arguments, or if all of its arguments are optional, the *type specifier* may be used as an *atomic type specifier* . 
 
-The \<i\>argument expressions\</i\> to the \<i\>type specifier\</i\> , \<i\>arg\</i\>\<sub\>1\</sub\> \<i\>. . . arg\<sub\>n\</sub\>\</i\>, are not \<i\>evaluated\</i\>. Instead, these \<i\>literal objects\</i\> become the \<i\>objects\</i\> to which corresponding \<i\>parameters\</i\> become \<i\>bound\</i\>. 
+The &#60;i&#62;argument expressions&#60;/i&#62; to the &#60;i&#62;type specifier&#60;/i&#62; , &#60;i&#62;arg&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62; &#60;i&#62;. . . arg&#60;sub&#62;n&#60;/sub&#62;&#60;/i&#62;, are not &#60;i&#62;evaluated&#60;/i&#62;. Instead, these &#60;i&#62;literal objects&#60;/i&#62; become the &#60;i&#62;objects&#60;/i&#62; to which corresponding &#60;i&#62;parameters&#60;/i&#62; become &#60;i&#62;bound&#60;/i&#62;. 
 
 The body of the **deftype** *form* (but not the *lambda-list*) is implicitly enclosed in a *block* named *name*, and is evaluated as an *implicit progn*, returning a new *type specifier* . 
 
@@ -1043,7 +1043,7 @@ expansion of a *type specifier* is not defined fully at compile time (perhaps be
 
 (defun equidimensional (a) 
 
-(or (\< (array-rank a) 2) 
+(or (&#60; (array-rank a) 2) 
 
 (apply #’= (array-dimensions a)))) *→* EQUIDIMENSIONAL 
 
@@ -1089,7 +1089,7 @@ Figure 4–9 summarizes the possible combinations of *values* that might result.
 
 |**Value 1 Value 2 Meaning**|
 | :- |
-|\<p\>*true true type-1* is definitely a *subtype* of *type-2*. \</p\>\<p\>*false true type-1* is definitely not a *subtype* of *type-2*. *false false* **subtypep** could not determine the relationship, so *type-1* might or might not be a *subtype* of *type-2*.\</p\>|
+|&#60;p&#62;*true true type-1* is definitely a *subtype* of *type-2*. &#60;/p&#62;&#60;p&#62;*false true type-1* is definitely not a *subtype* of *type-2*. *false false* **subtypep** could not determine the relationship, so *type-1* might or might not be a *subtype* of *type-2*.&#60;/p&#62;|
 
 
 **Figure 4–9. Result possibilities for subtypep** 
@@ -1164,29 +1164,29 @@ returns *true* only in implementations that do not have a specialized *array* re
 
 (subtypep ’nil ’(member)) *→ true*, *true* ;or *false*, *false* 
 
-Let \<aet-x\> and \<aet-y\> be two distinct *type specifiers* that do not always refer to the same sets of *objects* in a given implementation, but for which **make-array**, will return an *object* of the same *array type*. 
+Let &#60;aet-x&#62; and &#60;aet-y&#62; be two distinct *type specifiers* that do not always refer to the same sets of *objects* in a given implementation, but for which **make-array**, will return an *object* of the same *array type*. 
 
 Thus, in each case, 
 
-(subtypep (array-element-type (make-array 0 :element-type ’\<aet-x\>)) 
+(subtypep (array-element-type (make-array 0 :element-type ’&#60;aet-x&#62;)) 
 
-(array-element-type (make-array 0 :element-type ’\<aet-y\>))) 
+(array-element-type (make-array 0 :element-type ’&#60;aet-y&#62;))) 
 
 *→ true*, *true*  
 
 
 
-(subtypep (array-element-type (make-array 0 :element-type ’\<aet-y\>)) 
+(subtypep (array-element-type (make-array 0 :element-type ’&#60;aet-y&#62;)) 
 
-(array-element-type (make-array 0 :element-type ’\<aet-x\>))) 
+(array-element-type (make-array 0 :element-type ’&#60;aet-x&#62;))) 
 
 *→ true*, *true* 
 
-If (array \<aet-x\>) and (array \<aet-y\>) are different names for exactly the same set of *objects*, these names should always refer to the same sets of *objects*. That implies that the following set of tests are also true: 
+If (array &#60;aet-x&#62;) and (array &#60;aet-y&#62;) are different names for exactly the same set of *objects*, these names should always refer to the same sets of *objects*. That implies that the following set of tests are also true: 
 
-(subtypep ’(array \<aet-x\>) ’(array \<aet-y\>)) *→ true*, *true* 
+(subtypep ’(array &#60;aet-x&#62;) ’(array &#60;aet-y&#62;)) *→ true*, *true* 
 
-(subtypep ’(array \<aet-y\>) ’(array \<aet-x\>)) *→ true*, *true* 
+(subtypep ’(array &#60;aet-y&#62;) ’(array &#60;aet-x&#62;)) *→ true*, *true* 
 
 **See Also:** 
 
@@ -1242,13 +1242,13 @@ b. the *type* returned does not involve and, eql, member, not, or, satisfies, or
 
 *→* CONS 
 
-\<i\>\<sup\>or\</sup\>→\</i\> (CONS FIXNUM FIXNUM) 
+&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; (CONS FIXNUM FIXNUM) 
 
 (type-of #c(0 1)) 
 
 *→* COMPLEX 
 
-\<i\>\<sup\>or\</sup\>→\</i\> (COMPLEX INTEGER) 
+&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; (COMPLEX INTEGER) 
 
 (defstruct temp-struct x y z) *→* TEMP-STRUCT 
 
@@ -1258,7 +1258,7 @@ b. the *type* returned does not involve and, eql, member, not, or, satisfies, or
 
 *→* STRING 
 
-\<i\>\<sup\>or\</sup\>→\</i\> (STRING 3) 
+&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; (STRING 3) 
 
 (subtypep (type-of "abc") ’string) *→ true*, *true* 
 
@@ -1266,13 +1266,13 @@ b. the *type* returned does not involve and, eql, member, not, or, satisfies, or
 
 *→* BIGNUM 
 
-\<i\>\<sup\>or\</sup\>→\</i\> INTEGER 
+&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; INTEGER 
 
-\<i\>\<sup\>or\</sup\>→\</i\> (INTEGER 1099511627776 1099511627776) 
+&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; (INTEGER 1099511627776 1099511627776) 
 
-\<i\>\<sup\>or\</sup\>→\</i\> SYSTEM::TWO-WORD-BIGNUM 
+&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; SYSTEM::TWO-WORD-BIGNUM 
 
-\<i\>\<sup\>or\</sup\>→\</i\> FIXNUM 
+&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; FIXNUM 
 
 (subtypep (type-of 112312) ’integer) *→ true*, *true* 
 
@@ -1286,7 +1286,7 @@ b. the *type* returned does not involve and, eql, member, not, or, satisfies, or
 
 *→* VECTOR 
 
-\<i\>\<sup\>or\</sup\>→\</i\> (VECTOR T 5) 
+&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; (VECTOR T 5) 
 
 **See Also:** 
 
@@ -1348,23 +1348,23 @@ See the *function* **upgraded-complex-part-type**.
 
 ;; Section 12.1.5.3 (Rule of Canonical Representation for Complex Rationals). (typep #c(0 0) ’(complex (eql 0))) *→ false* 
 
-Let A\<i\>\<sub\>x\</sub\>\</i\> and A\<i\>\<sub\>y\</sub\>\</i\> be two \<i\>type specifiers\</i\> that denote different \<i\>types\</i\>, but for which 
+Let A&#60;i&#62;&#60;sub&#62;x&#60;/sub&#62;&#60;/i&#62; and A&#60;i&#62;&#60;sub&#62;y&#60;/sub&#62;&#60;/i&#62; be two &#60;i&#62;type specifiers&#60;/i&#62; that denote different &#60;i&#62;types&#60;/i&#62;, but for which 
 
-(upgraded-array-element-type ’A\<i\>\<sub\>x\</sub\>\</i\>) 
+(upgraded-array-element-type ’A&#60;i&#62;&#60;sub&#62;x&#60;/sub&#62;&#60;/i&#62;) 
 
 and 
 
-(upgraded-array-element-type ’A\<i\>\<sub\>y\</sub\>\</i\>) 
+(upgraded-array-element-type ’A&#60;i&#62;&#60;sub&#62;y&#60;/sub&#62;&#60;/i&#62;) 
 
 denote the same *type*. Notice that 
 
-(typep (make-array 0 :element-type ’A\<i\>\<sub\>x\</sub\>\</i\>) ’(array A\<i\>\<sub\>x\</sub\>\</i\>)) \<i\>→ true\</i\> 
+(typep (make-array 0 :element-type ’A&#60;i&#62;&#60;sub&#62;x&#60;/sub&#62;&#60;/i&#62;) ’(array A&#60;i&#62;&#60;sub&#62;x&#60;/sub&#62;&#60;/i&#62;)) &#60;i&#62;→ true&#60;/i&#62; 
 
-(typep (make-array 0 :element-type ’A\<i\>\<sub\>y\</sub\>\</i\>) ’(array A\<i\>\<sub\>y\</sub\>\</i\>)) \<i\>→ true\</i\> 
+(typep (make-array 0 :element-type ’A&#60;i&#62;&#60;sub&#62;y&#60;/sub&#62;&#60;/i&#62;) ’(array A&#60;i&#62;&#60;sub&#62;y&#60;/sub&#62;&#60;/i&#62;)) &#60;i&#62;→ true&#60;/i&#62; 
 
-(typep (make-array 0 :element-type ’A\<i\>\<sub\>x\</sub\>\</i\>) ’(array A\<i\>\<sub\>y\</sub\>\</i\>)) \<i\>→ true\</i\> 
+(typep (make-array 0 :element-type ’A&#60;i&#62;&#60;sub&#62;x&#60;/sub&#62;&#60;/i&#62;) ’(array A&#60;i&#62;&#60;sub&#62;y&#60;/sub&#62;&#60;/i&#62;)) &#60;i&#62;→ true&#60;/i&#62; 
 
-(typep (make-array 0 :element-type ’A\<i\>\<sub\>y\</sub\>\</i\>) ’(array A\<i\>\<sub\>x\</sub\>\</i\>)) \<i\>→ true\</i\> 
+(typep (make-array 0 :element-type ’A&#60;i&#62;&#60;sub&#62;y&#60;/sub&#62;&#60;/i&#62;) ’(array A&#60;i&#62;&#60;sub&#62;x&#60;/sub&#62;&#60;/i&#62;)) &#60;i&#62;→ true&#60;/i&#62; 
 
 **Exceptional Situations:** 
 

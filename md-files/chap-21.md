@@ -21,7 +21,7 @@ A *stream* is an *object* that can be used with an input or output function to i
 
 Some operations may be performed on any kind of *stream*; Figure 21–1 provides a list of *standardized* operations that are potentially useful with any kind of *stream*. 
 
-|\<p\>**close stream-element-type** \</p\>\<p\>**input-stream-p streamp** \</p\>\<p\>**interactive-stream-p with-open-stream** \</p\>\<p\>**output-stream-p**\</p\>|
+|&#60;p&#62;**close stream-element-type** &#60;/p&#62;&#60;p&#62;**input-stream-p streamp** &#60;/p&#62;&#60;p&#62;**interactive-stream-p with-open-stream** &#60;/p&#62;&#60;p&#62;**output-stream-p**&#60;/p&#62;|
 | :- |
 
 
@@ -37,7 +37,7 @@ A *stream*, whether a *character stream* or a *binary stream*, can be an *input 
 
 Figure 21–2 shows *operators* relating to *input streams*. 
 
-|\<p\>**clear-input read-byte read-from-string** \</p\>\<p\>**listen read-char read-line** \</p\>\<p\>**peek-char read-char-no-hang read-preserving-whitespace read read-delimited-list unread-char**\</p\>|
+|&#60;p&#62;**clear-input read-byte read-from-string** &#60;/p&#62;&#60;p&#62;**listen read-char read-line** &#60;/p&#62;&#60;p&#62;**peek-char read-char-no-hang read-preserving-whitespace read read-delimited-list unread-char**&#60;/p&#62;|
 | :- |
 
 
@@ -51,7 +51,7 @@ Streams **21–1**
 
 Figure 21–3 shows *operators* relating to *output streams*. 
 
-|\<p\>**clear-output prin1 write** \</p\>\<p\>**finish-output prin1-to-string write-byte** \</p\>\<p\>**force-output princ write-char** \</p\>\<p\>**format princ-to-string write-line** \</p\>\<p\>**fresh-line print write-string** \</p\>\<p\>**pprint terpri write-to-string**\</p\>|
+|&#60;p&#62;**clear-output prin1 write** &#60;/p&#62;&#60;p&#62;**finish-output prin1-to-string write-byte** &#60;/p&#62;&#60;p&#62;**force-output princ write-char** &#60;/p&#62;&#60;p&#62;**format princ-to-string write-line** &#60;/p&#62;&#60;p&#62;**fresh-line print write-string** &#60;/p&#62;&#60;p&#62;**pprint terpri write-to-string**&#60;/p&#62;|
 | :- |
 
 
@@ -121,7 +121,7 @@ Streams **21–3**
 
 |**Class Related Operators**|
 | :- |
-|\<p\>**broadcast-stream make-broadcast-stream** \</p\>\<p\>**broadcast-stream-streams** \</p\>\<p\>**concatenated-stream make-concatenated-stream** \</p\>\<p\>**concatenated-stream-streams** \</p\>\<p\>**echo-stream make-echo-stream** \</p\>\<p\>**echo-stream-input-stream** \</p\>\<p\>**echo-stream-output-stream** \</p\>\<p\>**string-stream make-string-input-stream** \</p\>\<p\>**with-input-from-string** \</p\>\<p\>**make-string-output-stream** \</p\>\<p\>**with-output-to-string** \</p\>\<p\>**get-output-stream-string** \</p\>\<p\>**synonym-stream make-synonym-stream** \</p\>\<p\>**synonym-stream-symbol** \</p\>\<p\>**two-way-stream make-two-way-stream** \</p\>\<p\>**two-way-stream-input-stream** \</p\>\<p\>**two-way-stream-output-stream**\</p\>|
+|&#60;p&#62;**broadcast-stream make-broadcast-stream** &#60;/p&#62;&#60;p&#62;**broadcast-stream-streams** &#60;/p&#62;&#60;p&#62;**concatenated-stream make-concatenated-stream** &#60;/p&#62;&#60;p&#62;**concatenated-stream-streams** &#60;/p&#62;&#60;p&#62;**echo-stream make-echo-stream** &#60;/p&#62;&#60;p&#62;**echo-stream-input-stream** &#60;/p&#62;&#60;p&#62;**echo-stream-output-stream** &#60;/p&#62;&#60;p&#62;**string-stream make-string-input-stream** &#60;/p&#62;&#60;p&#62;**with-input-from-string** &#60;/p&#62;&#60;p&#62;**make-string-output-stream** &#60;/p&#62;&#60;p&#62;**with-output-to-string** &#60;/p&#62;&#60;p&#62;**get-output-stream-string** &#60;/p&#62;&#60;p&#62;**synonym-stream make-synonym-stream** &#60;/p&#62;&#60;p&#62;**synonym-stream-symbol** &#60;/p&#62;&#60;p&#62;**two-way-stream make-two-way-stream** &#60;/p&#62;&#60;p&#62;**two-way-stream-input-stream** &#60;/p&#62;&#60;p&#62;**two-way-stream-output-stream**&#60;/p&#62;|
 
 
 **Figure 21–5. Defined Names related to Specialized Streams** 
@@ -134,7 +134,7 @@ Certain *stream variables* are defined by this specification to be the proper so
 
 |**Glossary Term Variable Name**|
 | :- |
-|\<p\>*debug I/O* **\*debug-io\*** \</p\>\<p\>*error output* **\*error-output\*** \</p\>\<p\>*query I/O* **\*query-io\*** \</p\>\<p\>*standard input* **\*standard-input\*** \</p\>\<p\>*standard output* **\*standard-output\*** \</p\>\<p\>*terminal I/O* **\*terminal-io\*** \</p\>\<p\>*trace output* **\*trace-output\***\</p\>|
+|&#60;p&#62;*debug I/O* **\*debug-io\*** &#60;/p&#62;&#60;p&#62;*error output* **\*error-output\*** &#60;/p&#62;&#60;p&#62;*query I/O* **\*query-io\*** &#60;/p&#62;&#60;p&#62;*standard input* **\*standard-input\*** &#60;/p&#62;&#60;p&#62;*standard output* **\*standard-output\*** &#60;/p&#62;&#60;p&#62;*terminal I/O* **\*terminal-io\*** &#60;/p&#62;&#60;p&#62;*trace output* **\*trace-output\***&#60;/p&#62;|
 
 
 **Figure 21–6. Standardized Stream Variables** 
@@ -153,7 +153,7 @@ User programs may *assign* or *bind* any *standardized stream variable* except *
 
  The *operators* in Figure 21–7 accept *stream arguments* that might be either *open* or *closed streams*. 
 
-|\<p\>**broadcast-stream-streams file-author pathnamep** \</p\>\<p\>**close file-namestring probe-file** \</p\>\<p\>**compile-file file-write-date rename-file** \</p\>\<p\>**compile-file-pathname host-namestring streamp** \</p\>\<p\>**concatenated-stream-streams load synonym-stream-symbol delete-file logical-pathname translate-logical-pathname directory merge-pathnames translate-pathname directory-namestring namestring truename** \</p\>\<p\>**dribble open two-way-stream-input-stream echo-stream-input-stream open-stream-p two-way-stream-output-stream echo-stream-ouput-stream parse-namestring wild-pathname-p ed pathname with-open-file** \</p\>\<p\>**enough-namestring pathname-match-p**\</p\>|
+|&#60;p&#62;**broadcast-stream-streams file-author pathnamep** &#60;/p&#62;&#60;p&#62;**close file-namestring probe-file** &#60;/p&#62;&#60;p&#62;**compile-file file-write-date rename-file** &#60;/p&#62;&#60;p&#62;**compile-file-pathname host-namestring streamp** &#60;/p&#62;&#60;p&#62;**concatenated-stream-streams load synonym-stream-symbol delete-file logical-pathname translate-logical-pathname directory merge-pathnames translate-pathname directory-namestring namestring truename** &#60;/p&#62;&#60;p&#62;**dribble open two-way-stream-input-stream echo-stream-input-stream open-stream-p two-way-stream-output-stream echo-stream-ouput-stream parse-namestring wild-pathname-p ed pathname with-open-file** &#60;/p&#62;&#60;p&#62;**enough-namestring pathname-match-p**&#60;/p&#62;|
 | :- |
 
 
@@ -161,7 +161,7 @@ User programs may *assign* or *bind* any *standardized stream variable* except *
 
 The *operators* in Figure 21–8 accept *stream arguments* that must be *open streams*. 
 
-|\<p\>**clear-input output-stream-p read-char-no-hang clear-output peek-char read-delimited-list file-length pprint read-line** \</p\>\<p\>**file-position pprint-fill read-preserving-whitespace file-string-length pprint-indent stream-element-type finish-output pprint-linear stream-external-format force-output pprint-logical-block terpri** \</p\>\<p\>**format pprint-newline unread-char fresh-line pprint-tab with-open-stream get-output-stream-string pprint-tabular write** \</p\>\<p\>**input-stream-p prin1 write-byte** \</p\>\<p\>**interactive-stream-p princ write-char** \</p\>\<p\>**listen print write-line** \</p\>\<p\>**make-broadcast-stream print-object write-string make-concatenated-stream print-unreadable-object y-or-n-p** \</p\>\<p\>**make-echo-stream read yes-or-no-p** \</p\>\<p\>**make-synonym-stream read-byte** \</p\>\<p\>**make-two-way-stream read-char**\</p\>|
+|&#60;p&#62;**clear-input output-stream-p read-char-no-hang clear-output peek-char read-delimited-list file-length pprint read-line** &#60;/p&#62;&#60;p&#62;**file-position pprint-fill read-preserving-whitespace file-string-length pprint-indent stream-element-type finish-output pprint-linear stream-external-format force-output pprint-logical-block terpri** &#60;/p&#62;&#60;p&#62;**format pprint-newline unread-char fresh-line pprint-tab with-open-stream get-output-stream-string pprint-tabular write** &#60;/p&#62;&#60;p&#62;**input-stream-p prin1 write-byte** &#60;/p&#62;&#60;p&#62;**interactive-stream-p princ write-char** &#60;/p&#62;&#60;p&#62;**listen print write-line** &#60;/p&#62;&#60;p&#62;**make-broadcast-stream print-object write-string make-concatenated-stream print-unreadable-object y-or-n-p** &#60;/p&#62;&#60;p&#62;**make-echo-stream read yes-or-no-p** &#60;/p&#62;&#60;p&#62;**make-synonym-stream read-byte** &#60;/p&#62;&#60;p&#62;**make-two-way-stream read-char**&#60;/p&#62;|
 | - |
 
 
@@ -231,7 +231,7 @@ streams, **file-length** and **file-position** return 0, **file-string-length** 
 
 *•* The functions **streamp** and **output-stream-p** always return *true* for *broadcast streams*. 
 
-*•* The functions **open-stream-p** tests whether the *broadcast stream* is *open*\<sub\>2\</sub\>, not whether its component streams are *open*. 
+*•* The functions **open-stream-p** tests whether the *broadcast stream* is *open*&#60;sub&#62;2&#60;/sub&#62;, not whether its component streams are *open*. 
 
 *•* The functions **input-stream-p** and *interactive-stream-p* return an *implementation-defined*, *generalized boolean* value. 
 
@@ -253,7 +253,7 @@ For any output operations not having their return values explicitly specified ab
 
 A *concatenated stream* is an *input stream* which is a *composite stream* of zero or more other *input streams*, such that the sequence of data which can be read from the *concatenated stream* is the same as the concatenation of the sequences of data which could be read from each of the constituent *streams*. 
 
-Input from a *concatenated stream* is taken from the first of the associated *input streams* until it reaches *end of file*\<sub\>1\</sub\>; then that *stream* is discarded, and subsequent input is taken from the next *input stream*, and so on. An *end of file* on the associated *input streams* is always managed invisibly by the *concatenated stream*—the only time a client of a *concatenated stream* sees an *end of file* is 
+Input from a *concatenated stream* is taken from the first of the associated *input streams* until it reaches *end of file*&#60;sub&#62;1&#60;/sub&#62;; then that *stream* is discarded, and subsequent input is taken from the next *input stream*, and so on. An *end of file* on the associated *input streams* is always managed invisibly by the *concatenated stream*—the only time a client of a *concatenated stream* sees an *end of file* is 
 
 
 
@@ -409,7 +409,7 @@ Returns *true* if *stream* is an *interactive stream*; otherwise, returns *false
 
 **Examples:** 
 
-(when (\> measured limit) 
+(when (&#62; measured limit) 
 
 (let ((error (round (\* (- measured limit) 100) 
 
@@ -421,7 +421,7 @@ limit)))
 
 Is it safe to proceed? " error) 
 
-(\< error 15)) ;15% is acceptable 
+(&#60; error 15)) ;15% is acceptable 
 
 (error "The frammis is out of tolerance by ~D%." error)))) 
 
@@ -511,17 +511,17 @@ Streams **21–13**
 
 *→* INTEGER 
 
-\<i\>\<sup\>or\</sup\>→\</i\> (UNSIGNED-BYTE 16) 
+&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; (UNSIGNED-BYTE 16) 
 
-\<i\>\<sup\>or\</sup\>→\</i\> (UNSIGNED-BYTE 8) 
+&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; (UNSIGNED-BYTE 8) 
 
-\<i\>\<sup\>or\</sup\>→\</i\> BIT 
+&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; BIT 
 
-\<i\>\<sup\>or\</sup\>→\</i\> (UNSIGNED-BYTE 1) 
+&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; (UNSIGNED-BYTE 1) 
 
-\<i\>\<sup\>or\</sup\>→\</i\> (INTEGER 0 1) 
+&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; (INTEGER 0 1) 
 
-\<i\>\<sup\>or\</sup\>→\</i\> (INTEGER 0 (2)) 
+&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; (INTEGER 0 (2)) 
 
 **Exceptional Situations:** 
 
@@ -581,7 +581,7 @@ Returns *true* if *object* is of *type* **stream**; otherwise, returns *false*.
 
 **read-byte** reads and returns one byte from *stream*. 
 
-If an *end of file*\<sub\>2\</sub\> occurs and *eof-error-p* is *false*, the *eof-value* is returned. 
+If an *end of file*&#60;sub&#62;2&#60;/sub&#62; occurs and *eof-error-p* is *false*, the *eof-value* is returned. 
 
 **Examples:** 
 
@@ -699,9 +699,9 @@ Might signal an error of *type* **type-error** if *byte* is not an *integer* of 
 
 **peek-char** obtains the next character in *input-stream* without actually reading it, thus leaving the character to be read at a later time. It can also be used to skip over and discard intervening characters in the *input-stream* until a particular character is found. 
 
-If *peek-type* is not supplied or **nil**, **peek-char** returns the next character to be read from *input-stream*, without actually removing it from *input-stream*. The next time input is done from *input-stream*, the character will still be there. If *peek-type* is **t**, then **peek-char** skips over *whitespace*\<sub\>2\</sub\> *characters*, but not comments, and then performs the peeking operation on the next character. The last character examined, the one that starts an *object*, is not removed from *input-stream*. If *peek-type* is a *character* , then **peek-char** skips over input characters until a character that is **char=** to that *character* is found; that character is left in *input-stream*. 
+If *peek-type* is not supplied or **nil**, **peek-char** returns the next character to be read from *input-stream*, without actually removing it from *input-stream*. The next time input is done from *input-stream*, the character will still be there. If *peek-type* is **t**, then **peek-char** skips over *whitespace*&#60;sub&#62;2&#60;/sub&#62; *characters*, but not comments, and then performs the peeking operation on the next character. The last character examined, the one that starts an *object*, is not removed from *input-stream*. If *peek-type* is a *character* , then **peek-char** skips over input characters until a character that is **char=** to that *character* is found; that character is left in *input-stream*. 
 
-If an *end of file*\<sub\>2\</sub\> occurs and *eof-error-p* is *false*, *eof-value* is returned. 
+If an *end of file*&#60;sub&#62;2&#60;/sub&#62; occurs and *eof-error-p* is *false*, *eof-value* is returned. 
 
 If *recursive-p* is *true*, this call is expected to be embedded in a higher-level call to **read** or a similar *function* used by the *Lisp reader* . 
 
@@ -735,11 +735,11 @@ Streams **21–17**
 
 **Exceptional Situations:** 
 
-If *eof-error-p* is *true* and an *end of file*\<sub\>2\</sub\> occurs an error of *type* **end-of-file** is signaled. 
+If *eof-error-p* is *true* and an *end of file*&#60;sub&#62;2&#60;/sub&#62; occurs an error of *type* **end-of-file** is signaled. 
 
-If *peek-type* is a *character* , an *end of file*\<sub\>2\</sub\> occurs, and *eof-error-p* is *true*, an error of *type* **end-of-file** is signaled. 
+If *peek-type* is a *character* , an *end of file*&#60;sub&#62;2&#60;/sub&#62; occurs, and *eof-error-p* is *true*, an error of *type* **end-of-file** is signaled. 
 
-If *recursive-p* is *true* and an *end of file*\<sub\>2\</sub\> occurs, an error of *type* **end-of-file** is signaled. **read-char** *Function* 
+If *recursive-p* is *true* and an *end of file*&#60;sub&#62;2&#60;/sub&#62; occurs, an error of *type* **end-of-file** is signaled. **read-char** *Function* 
 
 **Syntax:** 
 
@@ -765,7 +765,7 @@ When *input-stream* is an *echo stream*, the character is echoed on *input-strea
 
 If *recursive-p* is *true*, this call is expected to be embedded in a higher-level call to **read** or a similar *function* used by the *Lisp reader* . 
 
-If an *end of file*\<sub\>2\</sub\> occurs and *eof-error-p* is *false*, *eof-value* is returned. 
+If an *end of file*&#60;sub&#62;2&#60;/sub&#62; occurs and *eof-error-p* is *false*, *eof-value* is returned. 
 
 
 
@@ -793,7 +793,7 @@ If an *end of file*\<sub\>2\</sub\> occurs and *eof-error-p* is *false*, *eof-va
 
 **Exceptional Situations:** 
 
-If an *end of file*\<sub\>2\</sub\> occurs before a character can be read, and *eof-error-p* is *true*, an error of *type* **end-of-file** is signaled. 
+If an *end of file*&#60;sub&#62;2&#60;/sub&#62; occurs before a character can be read, and *eof-error-p* is *true*, an error of *type* **end-of-file** is signaled. 
 
 **See Also:** 
 
@@ -833,7 +833,7 @@ Streams **21–19**
 
 If *recursive-p* is *true*, this call is expected to be embedded in a higher-level call to **read** or a similar *function* used by the *Lisp reader* . 
 
-If an *end of file*\<sub\>2\</sub\> occurs and *eof-error-p* is *false*, *eof-value* is returned. 
+If an *end of file*&#60;sub&#62;2&#60;/sub&#62; occurs and *eof-error-p* is *false*, *eof-value* is returned. 
 
 **Examples:** 
 
@@ -881,7 +881,7 @@ If an *end of file*\<sub\>2\</sub\> occurs and *eof-error-p* is *false*, *eof-va
 
 **Exceptional Situations:** 
 
-If an *end of file*\<sub\>2\</sub\> occurs when *eof-error-p* is *true*, an error of *type* **end-of-file** is signaled . **See Also:** 
+If an *end of file*&#60;sub&#62;2&#60;/sub&#62; occurs when *eof-error-p* is *true*, an error of *type* **end-of-file** is signaled . **See Also:** 
 
 **listen** 
 
@@ -1147,7 +1147,7 @@ line2"
 
 **Exceptional Situations:** 
 
-If an *end of file*\<sub\>2\</sub\> occurs before any characters are read in the line, an error is signaled if *eof-error-p* is *true*. 
+If an *end of file*&#60;sub&#62;2&#60;/sub&#62; occurs before any characters are read in the line, an error is signaled if *eof-error-p* is *true*. 
 
 **See Also:** 
 
@@ -1363,7 +1363,7 @@ For a binary file, the length is measured in units of the *element type* of the 
 
 (truename s)) 
 
-*→* #P"A:\>Joe\>decimal-digits.text.1" 
+*→* #P"A:&#62;Joe&#62;decimal-digits.text.1" 
 
 (with-open-file (s "decimal-digits.text") 
 
@@ -1479,9 +1479,9 @@ sequence) and other aspects of the implementation. For a binary file, every **re
 
 *→* (0 2 T 2 0 2 5 7) 
 
-\<i\>\<sup\>or\</sup\>→\</i\> (0 2 NIL 3 0 3 5 6 7) 
+&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; (0 2 NIL 3 0 3 5 6 7) 
 
-\<i\>\<sup\>or\</sup\>→\</i\> (NIL NIL NIL NIL NIL NIL) 
+&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; (NIL NIL NIL NIL NIL NIL) 
 
 **Side Effects:** 
 
@@ -1707,21 +1707,21 @@ A file can be deleted, renamed, or destructively modified by **open**.
 
 For information about opening relative pathnames, see Section 19.2.3 (Merging Pathnames). **Examples:** 
 
-(open *filespec* :direction :probe) *→* #\<Closed Probe File Stream...\> 
+(open *filespec* :direction :probe) *→* #&#60;Closed Probe File Stream...&#62; 
 
 (setq q (merge-pathnames (user-homedir-pathname) "test")) 
 
-*→* #\<PATHNAME :HOST NIL :DEVICE *device-name* :DIRECTORY *directory-name* 
+*→* #&#60;PATHNAME :HOST NIL :DEVICE *device-name* :DIRECTORY *directory-name* 
 
-:NAME "test" :TYPE NIL :VERSION :NEWEST\> 
+:NAME "test" :TYPE NIL :VERSION :NEWEST&#62; 
 
-(open *filespec* :if-does-not-exist :create) *→* #\<Input File Stream...\> 
+(open *filespec* :if-does-not-exist :create) *→* #&#60;Input File Stream...&#62; 
 
-(setq s (open *filespec* :direction :probe)) *→* #\<Closed Probe File Stream...\> 
+(setq s (open *filespec* :direction :probe)) *→* #&#60;Closed Probe File Stream...&#62; 
 
-(truename s) *→* #\<PATHNAME :HOST NIL :DEVICE *device-name* :DIRECTORY 
+(truename s) *→* #&#60;PATHNAME :HOST NIL :DEVICE *device-name* :DIRECTORY 
 
-*directory-name* :NAME *filespec* :TYPE *extension* :VERSION 1\> 
+*directory-name* :NAME *filespec* :TYPE *extension* :VERSION 1&#62; 
 
 (open s :direction :output :if-exists nil) *→* NIL 
 
@@ -1795,13 +1795,13 @@ Returns an *external file format designator* for the *stream*.
 
 *→* :DEFAULT 
 
-\<i\>\<sup\>or\</sup\>→\</i\> :ISO8859/1-1987 
+&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; :ISO8859/1-1987 
 
-\<i\>\<sup\>or\</sup\>→\</i\> (:ASCII :SAIL) 
+&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; (:ASCII :SAIL) 
 
-\<i\>\<sup\>or\</sup\>→\</i\> ACME::PROPRIETARY-FILE-FORMAT-17 
+&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; ACME::PROPRIETARY-FILE-FORMAT-17 
 
-\<i\>\<sup\>or\</sup\>→\</i\> #\<FILE-FORMAT :ISO646-1983 2343673\> 
+&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; #&#60;FILE-FORMAT :ISO646-1983 2343673&#62; 
 
 **See Also:** 
 
@@ -1815,7 +1815,7 @@ The *format* returned is not necessarily meaningful to other *implementations*.
 
 **Syntax:** 
 
-**with-open-file** (*stream filespec \{options\}*\*) *\{declaration\}*\* *\{form\}*\* 
+**with-open-file** (*stream filespec &#123;options&#125;*\*) *&#123;declaration&#125;*\* *&#123;form&#125;*\* 
 
 *→ results* 
 
@@ -1859,9 +1859,9 @@ The consequences are undefined if an attempt is made to *assign* the *stream var
 
 (setq p (merge-pathnames "test")) 
 
-*→* #\<PATHNAME :HOST NIL :DEVICE *device-name* :DIRECTORY *directory-name* 
+*→* #&#60;PATHNAME :HOST NIL :DEVICE *device-name* :DIRECTORY *directory-name* 
 
-:NAME "test" :TYPE NIL :VERSION :NEWEST\> 
+:NAME "test" :TYPE NIL :VERSION :NEWEST&#62; 
 
 (with-open-file (s p :direction :output :if-exists :supersede) 
 
@@ -1957,7 +1957,7 @@ Streams **21–39**
 
 **Examples:** 
 
-(setq s (make-broadcast-stream)) *→* #\<BROADCAST-STREAM\> 
+(setq s (make-broadcast-stream)) *→* #&#60;BROADCAST-STREAM&#62; 
 
 (close s) *→* T 
 
@@ -1975,9 +1975,9 @@ The *stream* is *closed* (if necessary). If *abort* is *true* and the *stream* i
 
 **Syntax:** 
 
-**with-open-stream** (*var stream*) *\{declaration\}*\* *\{form\}*\* 
+**with-open-stream** (*var stream*) *&#123;declaration&#125;*\* *&#123;form&#125;*\* 
 
-*→ \{result\}*\* 
+*→ &#123;result&#125;*\* 
 
 **Arguments and Values:** 
 
@@ -2033,7 +2033,7 @@ The *stream* is closed (upon exit).
 
 **Description:** 
 
-Returns *true* if there is a character immediately available from *input-stream*; otherwise, returns *false*. On a non-interactive *input-stream*, **listen** returns *true* except when at *end of file*\<sub\>1\</sub\>. If an *end of file* is encountered, **listen** returns *false*. **listen** is intended to be used when *input-stream* obtains characters from an interactive device such as a keyboard. 
+Returns *true* if there is a character immediately available from *input-stream*; otherwise, returns *false*. On a non-interactive *input-stream*, **listen** returns *true* except when at *end of file*&#60;sub&#62;1&#60;/sub&#62;. If an *end of file* is encountered, **listen** returns *false*. **listen** is intended to be used when *input-stream* obtains characters from an interactive device such as a keyboard. 
 
 **Examples:** 
 
@@ -2089,13 +2089,13 @@ If **clear-input** does not make sense for *input-stream*, then **clear-input** 
 
 (defun read-sleepily (&optional (clear-p nil) (zzz 0)) 
 
-(list (progn (print ’\>) (read)) 
+(list (progn (print ’&#62;) (read)) 
 
 ;; Note that input typed within the first ZZZ seconds 
 
 ;; will be discarded. 
 
-(progn (print ’\>) 
+(progn (print ’&#62;) 
 
 (if zzz (sleep zzz)) 
 
@@ -2107,9 +2107,9 @@ If **clear-input** does not make sense for *input-stream*, then **clear-input** 
 
 (read-sleepily) 
 
-&#9655; \> 10 
+&#9655; &#62; 10 
 
-&#9655; \> 
+&#9655; &#62; 
 
 &#9655; » 20 
 
@@ -2117,9 +2117,9 @@ If **clear-input** does not make sense for *input-stream*, then **clear-input** 
 
 (read-sleepily t) 
 
-&#9655; \> 10 
+&#9655; &#62; 10 
 
-&#9655; \> 
+&#9655; &#62; 
 
 &#9655; » 20 
 
@@ -2127,9 +2127,9 @@ If **clear-input** does not make sense for *input-stream*, then **clear-input** 
 
 (read-sleepily t 10) 
 
-&#9655; \> 10 
+&#9655; &#62; 10 
 
-&#9655; \> 20 ; Some implementations won’t echo typeahead here. 
+&#9655; &#62; 20 ; Some implementations won’t echo typeahead here. 
 
 
 
@@ -2317,21 +2317,21 @@ Returns a *synonym stream* whose *synonym stream symbol* is *symbol*.
 
 b-stream (make-string-input-stream "b-stream")) 
 
-*→* #\<String Input Stream\> 
+*→* #&#60;String Input Stream&#62; 
 
 (setq s-stream (make-synonym-stream ’c-stream)) 
 
-*→* #\<SYNONYM-STREAM for C-STREAM\> 
+*→* #&#60;SYNONYM-STREAM for C-STREAM&#62; 
 
 (setq c-stream a-stream) 
 
-*→* #\<String Input Stream\> 
+*→* #&#60;String Input Stream&#62; 
 
 (read s-stream) *→* A-STREAM 
 
 (setq c-stream b-stream) 
 
-*→* #\<String Input Stream\> 
+*→* #&#60;String Input Stream&#62; 
 
 (read s-stream) *→* B-STREAM 
 
@@ -2405,7 +2405,7 @@ Returns a *broadcast stream*.
 
 (setq a-stream (make-string-output-stream) 
 
-b-stream (make-string-output-stream)) *→* #\<String Output Stream\> 
+b-stream (make-string-output-stream)) *→* #&#60;String Output Stream&#62; 
 
 (format (make-broadcast-stream a-stream b-stream) 
 
@@ -2471,7 +2471,7 @@ Should signal an error of *type* **type-error** if *input-stream* is not an *inp
 
  
 
-\<b\>\<sup\>two-way-stream-input-stream, two-way-stream\</sup\> output-stream\</b\> \<i\>Function\</i\> 
+&#60;b&#62;&#60;sup&#62;two-way-stream-input-stream, two-way-stream&#60;/sup&#62; output-stream&#60;/b&#62; &#60;i&#62;Function&#60;/i&#62; 
 
 **Syntax:** 
 
@@ -2491,7 +2491,7 @@ Should signal an error of *type* **type-error** if *input-stream* is not an *inp
 
 **two-way-stream-input-stream** returns the *stream* from which *two-way-stream* receives input. **two-way-stream-output-stream** returns the *stream* to which *two-way-stream* sends output. 
 
-\<b\>\<sup\>echo-stream-input-stream, echo-stream-output\</sup\> stream\</b\> \<i\>Function\</i\> 
+&#60;b&#62;&#60;sup&#62;echo-stream-input-stream, echo-stream-output&#60;/sup&#62; stream&#60;/b&#62; &#60;i&#62;Function&#60;/i&#62; 
 
 **Syntax:** 
 
@@ -2745,9 +2745,9 @@ None..
 
 **Syntax:** 
 
-**with-input-from-string** (*var string* &key *index start end*) *\{declaration\}*\* *\{form\}*\* 
+**with-input-from-string** (*var string* &key *index start end*) *&#123;declaration&#125;*\* *&#123;form&#125;*\* 
 
-*→ \{result\}*\* 
+*→ &#123;result&#125;*\* 
 
 **Arguments and Values:** 
 
@@ -2815,7 +2815,7 @@ The *value* of the *place* named by *index*, if any, is modified.
 
 **Syntax:** 
 
-**with-output-to-string** (*var* &optional *string-form* &key *element-type*) *\{declaration\}*\* *\{form\}*\* *→ \{result\}*\* 
+**with-output-to-string** (*var* &optional *string-form* &key *element-type*) *&#123;declaration&#125;*\* *&#123;form&#125;*\* *→ &#123;result&#125;*\* 
 
 **Arguments and Values:** 
 
@@ -2887,7 +2887,7 @@ The consequences are undefined if destructive modifications are performed direct
 
 **See Also:** 
 
-\<b\>make-string-output-stream\</b\>, \<b\>vector-push-extend\</b\>, Section 3.6 (Traversal Rules and Side Effects) \<sup\>\<i\>∗\</i\>\<b\>debug-io\</b\>\<i\>∗\</i\>\<b\>,\</b\> \<i\>∗\</i\>\<b\>error-output\</b\>\<i\>∗\</i\>\<b\>,\</b\> \<i\>∗\</i\>\<b\>query-io\</b\>\<i\>∗\</i\>\<b\>,\</b\> \<i\>∗\</i\>\<b\>standard\</b\>\</sup\> input\</b\>\<i\>∗\</i\>\<b\>,\</b\> \<i\>∗\</i\>\<b\>standard-output\</b\>\<i\>∗\</i\>\<b\>,\</b\> \<i\>∗\</i\>\<b\>trace-output\</b\>\<i\>∗ Variable\</i\> 
+&#60;b&#62;make-string-output-stream&#60;/b&#62;, &#60;b&#62;vector-push-extend&#60;/b&#62;, Section 3.6 (Traversal Rules and Side Effects) &#60;sup&#62;&#60;i&#62;∗&#60;/i&#62;&#60;b&#62;debug-io&#60;/b&#62;&#60;i&#62;∗&#60;/i&#62;&#60;b&#62;,&#60;/b&#62; &#60;i&#62;∗&#60;/i&#62;&#60;b&#62;error-output&#60;/b&#62;&#60;i&#62;∗&#60;/i&#62;&#60;b&#62;,&#60;/b&#62; &#60;i&#62;∗&#60;/i&#62;&#60;b&#62;query-io&#60;/b&#62;&#60;i&#62;∗&#60;/i&#62;&#60;b&#62;,&#60;/b&#62; &#60;i&#62;∗&#60;/i&#62;&#60;b&#62;standard&#60;/b&#62;&#60;/sup&#62; input&#60;/b&#62;&#60;i&#62;∗&#60;/i&#62;&#60;b&#62;,&#60;/b&#62; &#60;i&#62;∗&#60;/i&#62;&#60;b&#62;standard-output&#60;/b&#62;&#60;i&#62;∗&#60;/i&#62;&#60;b&#62;,&#60;/b&#62; &#60;i&#62;∗&#60;/i&#62;&#60;b&#62;trace-output&#60;/b&#62;&#60;i&#62;∗ Variable&#60;/i&#62; 
 
 **Value Type:** 
 
@@ -2955,7 +2955,7 @@ out
 
 \"print and format t send things to\" \*standard-output\* now going to a string" 
 
-(defun fact (n) (if (\< n 2) 1 (\* n (fact (- n 1))))) 
+(defun fact (n) (if (&#60; n 2) 1 (\* n (fact (- n 1))))) 
 
 *→* FACT 
 
@@ -3097,7 +3097,7 @@ Returns the offending *stream* of a *condition* of *type* **stream-error**.
 
 (format nil "~&End of file on ~S." (stream-error-stream c))))) 
 
-"End of file on #\<String Stream\>." 
+"End of file on #&#60;String Stream&#62;." 
 
 **See Also:** 
 

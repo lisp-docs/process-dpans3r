@@ -65,7 +65,7 @@ If a *symbol* is *accessible* in a *package*, it can be referred to when using t
 
 – Any individual *symbol* can be added to a *package* by use of **import**. After the call to **import** the *symbol* is *present* in the importing *package*. The status of the *symbol* in the *package* it came from (if any) is unchanged, and the *home package* for this *symbol* is unchanged. Once *imported*, a *symbol* is *present* in the importing *package* and can be removed only by calling **unintern**. 
 
-A *symbol* is *shadowed* \<sub\>3\</sub\> by another *symbol* in some *package* if the first *symbol* would be *accessible* by inheritance if not for the presence of the second *symbol*. See **shadowing-import**. 
+A *symbol* is *shadowed* &#60;sub&#62;3&#60;/sub&#62; by another *symbol* in some *package* if the first *symbol* would be *accessible* by inheritance if not for the presence of the second *symbol*. See **shadowing-import**. 
 
 – The second mechanism for making *symbols* from one *package accessible* in another is provided by **use-package**. All of the *external symbols* of the used *package* are inherited 
 
@@ -127,7 +127,7 @@ This section describes the *packages* that are available in every *conforming im
 
 |**Name Nicknames**|
 | :- |
-|\<p\>COMMON-LISP CL \</p\>\<p\>COMMON-LISP-USER CL-USER \</p\>\<p\>KEYWORD *none*\</p\>|
+|&#60;p&#62;COMMON-LISP CL &#60;/p&#62;&#60;p&#62;COMMON-LISP-USER CL-USER &#60;/p&#62;&#60;p&#62;KEYWORD *none*&#60;/p&#62;|
 
 
 **Figure 11–2. Standardized Package Names** 
@@ -224,9 +224,9 @@ The COMMON-LISP-USER *package* is the *current package* when a Common Lisp syste
 
 **11.1.2.3 The KEYWORD Package** 
 
-The KEYWORD *package* contains *symbols*, called *keywords*\<sub\>1\</sub\>, that are typically used as special markers in *programs* and their associated data *expressions*\<sub\>1\</sub\>. 
+The KEYWORD *package* contains *symbols*, called *keywords*&#60;sub&#62;1&#60;/sub&#62;, that are typically used as special markers in *programs* and their associated data *expressions*&#60;sub&#62;1&#60;/sub&#62;. 
 
-*Symbol tokens* that start with a *package marker* are parsed by the *Lisp reader* as *symbols* in the KEYWORD *package*; see Section 2.3.4 (Symbols as Tokens). This makes it notationally convenient to use *keywords* when communicating between programs in different *packages*. For example, the mechanism for passing *keyword parameters* in a *call* uses *keywords*\<sub\>1\</sub\> to name the corresponding *arguments*; see Section 3.4.1 (Ordinary Lambda Lists). 
+*Symbol tokens* that start with a *package marker* are parsed by the *Lisp reader* as *symbols* in the KEYWORD *package*; see Section 2.3.4 (Symbols as Tokens). This makes it notationally convenient to use *keywords* when communicating between programs in different *packages*. For example, the mechanism for passing *keyword parameters* in a *call* uses *keywords*&#60;sub&#62;1&#60;/sub&#62; to name the corresponding *arguments*; see Section 3.4.1 (Ordinary Lambda Lists). 
 
 *Symbols* in the KEYWORD *package* are, by definition, of *type* **keyword**. 
 
@@ -238,7 +238,7 @@ The KEYWORD *package* is treated differently than other *packages* in that speci
 
 It is generally best to confine the use of *keywords* to situations in which there are a finitely enumerable set of names to be selected between. For example, if there were two states of a light switch, they might be called :on and :off. 
 
-In situations where the set of names is not finitely enumerable (*i.e.*, where name conflicts might arise) it is frequently best to use *symbols* in some *package* other than KEYWORD so that conflicts will be naturally avoided. For example, it is generally not wise for a *program* to use a *keyword* \<sub\>1\</sub\> as a *property indicator* , since if there were ever another *program* that did the same thing, each would clobber the other’s data. 
+In situations where the set of names is not finitely enumerable (*i.e.*, where name conflicts might arise) it is frequently best to use *symbols* in some *package* other than KEYWORD so that conflicts will be naturally avoided. For example, it is generally not wise for a *program* to use a *keyword* &#60;sub&#62;1&#60;/sub&#62; as a *property indicator* , since if there were ever another *program* that did the same thing, each would clobber the other’s data. 
 
 **11.1.2.4 Implementation-Defined Packages** 
 
@@ -296,7 +296,7 @@ A name conflict in **export** between one of *symbols* being exported and a *sym
 
 **Examples:** 
 
-(make-package ’temp :use nil) *→* #\<PACKAGE "TEMP"\> 
+(make-package ’temp :use nil) *→* #&#60;PACKAGE "TEMP"&#62; 
 
 (use-package ’temp) *→* T 
 
@@ -400,7 +400,7 @@ If the *symbol* is inherited by *package* through **use-package**, but is not *p
 
 *→* NIL, NIL 
 
-\<i\>\<sup\>or\</sup\>→\</i\> :NIL, :EXTERNAL 
+&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; :NIL, :EXTERNAL 
 
 (find-symbol (symbol-name :nil) "KEYWORD") *→* :NIL, :EXTERNAL 
 
@@ -440,9 +440,9 @@ If *name* is a *package object*, that *package object* is returned.
 
 **Examples:** 
 
-(find-package ’common-lisp) *→* #\<PACKAGE "COMMON-LISP"\> 
+(find-package ’common-lisp) *→* #&#60;PACKAGE "COMMON-LISP"&#62; 
 
-(find-package "COMMON-LISP-USER") *→* #\<PACKAGE "COMMON-LISP-USER"\> 
+(find-package "COMMON-LISP-USER") *→* #&#60;PACKAGE "COMMON-LISP-USER"&#62; 
 
 (find-package ’not-there) *→* NIL 
 
@@ -484,9 +484,9 @@ Packages **11–11**
 
 *→* (CAR) 
 
-\<i\>\<sup\>or\</sup\>→\</i\> (CAR VEHICLES:CAR) 
+&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; (CAR VEHICLES:CAR) 
 
-\<i\>\<sup\>or\</sup\>→\</i\> (VEHICLES:CAR CAR) 
+&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; (VEHICLES:CAR CAR) 
 
 (intern "CAR" (make-package ’temp :use nil)) *→* TEMP::CAR, NIL 
 
@@ -494,11 +494,11 @@ Packages **11–11**
 
 *→* (TEMP::CAR CAR) 
 
-\<i\>\<sup\>or\</sup\>→\</i\> (CAR TEMP::CAR) 
+&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; (CAR TEMP::CAR) 
 
-\<i\>\<sup\>or\</sup\>→\</i\> (TEMP::CAR CAR VEHICLES:CAR) 
+&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; (TEMP::CAR CAR VEHICLES:CAR) 
 
-\<i\>\<sup\>or\</sup\>→\</i\> (CAR TEMP::CAR VEHICLES:CAR) 
+&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; (CAR TEMP::CAR VEHICLES:CAR) 
 
 **See Also:** 
 
@@ -584,7 +584,7 @@ Packages **11–13**
 
 (make-package ’temp) 
 
-(set-difference (list-all-packages) before)) *→* (#\<PACKAGE "TEMP"\>) 
+(set-difference (list-all-packages) before)) *→* (#&#60;PACKAGE "TEMP"&#62;) 
 
 **Affected By:** 
 
@@ -620,9 +620,9 @@ The consequences are undefined if *new-name* or any *new-nickname* conflicts wit
 
 **Examples:** 
 
-(make-package ’temporary :nicknames ’("TEMP")) *→* #\<PACKAGE "TEMPORARY"\> 
+(make-package ’temporary :nicknames ’("TEMP")) *→* #&#60;PACKAGE "TEMPORARY"&#62; 
 
-(rename-package ’temp ’ephemeral) *→* #\<PACKAGE "EPHEMERAL"\> 
+(rename-package ’temp ’ephemeral) *→* #&#60;PACKAGE "EPHEMERAL"&#62; 
 
 (package-nicknames (find-package ’ephemeral)) *→* () 
 
@@ -630,7 +630,7 @@ The consequences are undefined if *new-name* or any *new-nickname* conflicts wit
 
 (rename-package ’ephemeral ’temporary ’(temp fleeting)) 
 
-*→* #\<PACKAGE "TEMPORARY"\> 
+*→* #&#60;PACKAGE "TEMPORARY"&#62; 
 
 (package-nicknames (find-package ’temp)) *→* ("TEMP" "FLEETING") 
 
@@ -668,7 +668,7 @@ Specifically, *package* is searched for *symbols* with the *names* supplied by *
 
 (package-shadowing-symbols ’temp) *→* (TEMP::CAR) 
 
-(make-package ’test-1) *→* #\<PACKAGE "TEST-1"\> 
+(make-package ’test-1) *→* #&#60;PACKAGE "TEST-1"&#62; 
 
 (intern "TEST" (find-package ’test-1)) *→* TEST-1::TEST, NIL 
 
@@ -686,7 +686,7 @@ Packages **11–15**
 
 (find-package ’test-1)))))) 
 
-(make-package ’test-2) *→* #\<PACKAGE "TEST-2"\> 
+(make-package ’test-2) *→* #&#60;PACKAGE "TEST-2"&#62; 
 
 (intern "TEST" (find-package ’test-2)) *→* TEST-2::TEST, NIL 
 
@@ -708,7 +708,7 @@ Current state of the package system.
 
 **Notes:** 
 
-If a *symbol* with a name in *symbol-names* already exists in *package*, but by inheritance, the inherited symbol becomes *shadowed* \<sub\>3\</sub\> by a newly created *internal symbol*. 
+If a *symbol* with a name in *symbol-names* already exists in *package*, but by inheritance, the inherited symbol becomes *shadowed* &#60;sub&#62;3&#60;/sub&#62; by a newly created *internal symbol*. 
 
 **shadowing-import** *Function* 
 
@@ -738,7 +738,7 @@ If a *symbol* with a name in *symbol-names* already exists in *package*, but by 
 
 **Examples:** 
 
-(in-package "COMMON-LISP-USER") *→* #\<PACKAGE "COMMON-LISP-USER"\> 
+(in-package "COMMON-LISP-USER") *→* #&#60;PACKAGE "COMMON-LISP-USER"&#62; 
 
 (setq sym (intern "CONFLICT")) *→* CONFLICT 
 
@@ -812,9 +812,9 @@ After this operation completes, the *home package* of any *symbol* whose *home p
 
 (setq \*baz-package\* (make-package "BAZ" :use ’("BAR"))) 
 
-(symbol-package \*foo-symbol\*) *→* #\<PACKAGE "FOO"\> 
+(symbol-package \*foo-symbol\*) *→* #&#60;PACKAGE "FOO"&#62; 
 
-(symbol-package \*bar-symbol\*) *→* #\<PACKAGE "BAR"\> 
+(symbol-package \*bar-symbol\*) *→* #&#60;PACKAGE "BAR"&#62; 
 
 (prin1-to-string \*foo-symbol\*) *→* "FOO:FOO" 
 
@@ -840,9 +840,9 @@ After this operation completes, the *home package* of any *symbol* whose *home p
 
 (package-use-list \*foo-package\*) *→* () 
 
-(package-use-list \*bar-package\*) *→* (#\<PACKAGE "FOO"\>) 
+(package-use-list \*bar-package\*) *→* (#&#60;PACKAGE "FOO"&#62;) 
 
-(package-use-list \*baz-package\*) *→* (#\<PACKAGE "BAR"\>) 
+(package-use-list \*baz-package\*) *→* (#&#60;PACKAGE "BAR"&#62;) 
 
 
 
@@ -852,9 +852,9 @@ After this operation completes, the *home package* of any *symbol* whose *home p
 
 **delete-package** 
 
-(package-used-by-list \*foo-package\*) *→* (#\<PACKAGE "BAR"\>) 
+(package-used-by-list \*foo-package\*) *→* (#&#60;PACKAGE "BAR"&#62;) 
 
-(package-used-by-list \*bar-package\*) *→* (#\<PACKAGE "BAZ"\>) 
+(package-used-by-list \*bar-package\*) *→* (#&#60;PACKAGE "BAZ"&#62;) 
 
 (package-used-by-list \*baz-package\*) *→* () 
 
@@ -868,11 +868,11 @@ After this operation completes, the *home package* of any *symbol* whose *home p
 
 &#9655; Type :CONTINUE to continue. 
 
-&#9655; Debug\> :CONTINUE 
+&#9655; Debug&#62; :CONTINUE 
 
 *→* T 
 
-(symbol-package \*foo-symbol\*) *→* #\<PACKAGE "FOO"\> 
+(symbol-package \*foo-symbol\*) *→* #&#60;PACKAGE "FOO"&#62; 
 
 (symbol-package \*bar-symbol\*) is unspecified 
 
@@ -952,11 +952,11 @@ Creates a new *package* with the name *package-name*.
 
 **Examples:** 
 
-(make-package ’temporary :nicknames ’("TEMP" "temp")) *→* #\<PACKAGE "TEMPORARY"\> (make-package "OWNER" :use ’("temp")) *→* #\<PACKAGE "OWNER"\> 
+(make-package ’temporary :nicknames ’("TEMP" "temp")) *→* #&#60;PACKAGE "TEMPORARY"&#62; (make-package "OWNER" :use ’("temp")) *→* #&#60;PACKAGE "OWNER"&#62; 
 
-(package-used-by-list ’temp) *→* (#\<PACKAGE "OWNER"\>) 
+(package-used-by-list ’temp) *→* (#&#60;PACKAGE "OWNER"&#62;) 
 
-(package-use-list ’owner) *→* (#\<PACKAGE "TEMPORARY"\>) 
+(package-use-list ’owner) *→* (#&#60;PACKAGE "TEMPORARY"&#62;) 
 
 **Affected By:** 
 
@@ -988,7 +988,7 @@ When packages are being created as part of the static definition of a program ra
 
 **Syntax:** 
 
-**with-package-iterator** (*name package-list-form* &rest *symbol-types*) *\{declaration\}*\* *\{form\}*\* *→ \{result\}*\* 
+**with-package-iterator** (*name package-list-form* &rest *symbol-types*) *&#123;declaration&#125;*\* *&#123;form&#125;*\* *→ &#123;result&#125;*\* 
 
 **Arguments and Values:** 
 
@@ -1178,7 +1178,7 @@ Section 3.6 (Traversal Rules and Side Effects)
 
 **Examples:** 
 
-(in-package "COMMON-LISP-USER") *→* #\<PACKAGE "COMMON-LISP-USER"\> 
+(in-package "COMMON-LISP-USER") *→* #&#60;PACKAGE "COMMON-LISP-USER"&#62; 
 
 (export (intern "CONTRABAND" (make-package ’temp)) ’temp) *→* T 
 
@@ -1238,7 +1238,7 @@ Use of **unintern** can result in a *symbol* that has no recorded *home package*
 
 **Examples:** 
 
-(in-package "COMMON-LISP-USER") *→* #\<PACKAGE "COMMON-LISP-USER"\> 
+(in-package "COMMON-LISP-USER") *→* #&#60;PACKAGE "COMMON-LISP-USER"&#62; 
 
 (setq temps-unpack (intern "UNPACK" (make-package ’temp))) *→* TEMP::UNPACK 
 
@@ -1324,7 +1324,7 @@ An error of *type* **package-error** is signaled if the specified *package* does
 
 Any *symbols* that have been *imported* into *package* continue to be *present* in *package*. **Examples:** 
 
-(in-package "COMMON-LISP-USER") *→* #\<PACKAGE "COMMON-LISP-USER"\> 
+(in-package "COMMON-LISP-USER") *→* #&#60;PACKAGE "COMMON-LISP-USER"&#62; 
 
 (export (intern "SHOES" (make-package ’temp)) ’temp) *→* T 
 
@@ -1334,7 +1334,7 @@ Any *symbols* that have been *imported* into *package* continue to be *present* 
 
 (find-symbol "SHOES") *→* SHOES, :INHERITED 
 
-(find (find-package ’temp) (package-use-list ’common-lisp-user)) *→* #\<PACKAGE "TEMP"\> (unuse-package ’temp) *→* T 
+(find (find-package ’temp) (package-use-list ’common-lisp-user)) *→* #&#60;PACKAGE "TEMP"&#62; (unuse-package ’temp) *→* T 
 
 (find-symbol "SHOES") *→* NIL, NIL 
 
@@ -1382,11 +1382,11 @@ Packages **11–27**
 
 (find-symbol "LAND-FILL" (make-package ’temp)) *→* NIL, NIL 
 
-(package-use-list ’temp) *→* (#\<PACKAGE "TEMP"\>) 
+(package-use-list ’temp) *→* (#&#60;PACKAGE "TEMP"&#62;) 
 
 (use-package ’trash ’temp) *→* T 
 
-(package-use-list ’temp) *→* (#\<PACKAGE "TEMP"\> #\<PACKAGE "TRASH"\>) 
+(package-use-list ’temp) *→* (#&#60;PACKAGE "TEMP"&#62; #&#60;PACKAGE "TRASH"&#62;) 
 
 (find-symbol "LAND-FILL" ’temp) *→* TRASH:LAND-FILL, :INHERITED 
 
@@ -1400,7 +1400,7 @@ The *use list* of *package* may be modified.
 
 **Notes:** 
 
-It is permissible for a *package P*\<sub\>1\</sub\> to *use* a *package P*\<sub\>2\</sub\> even if *P*\<sub\>2\</sub\> already uses *P*\<sub\>1\</sub\>. The using of *packages* is not transitive, so no problem results from the apparent circularity. 
+It is permissible for a *package P*&#60;sub&#62;1&#60;/sub&#62; to *use* a *package P*&#60;sub&#62;2&#60;/sub&#62; even if *P*&#60;sub&#62;2&#60;/sub&#62; already uses *P*&#60;sub&#62;1&#60;/sub&#62;. The using of *packages* is not transitive, so no problem results from the apparent circularity. 
 
 
 
@@ -1416,21 +1416,21 @@ It is permissible for a *package P*\<sub\>1\</sub\> to *use* a *package P*\<sub\
 
 **defpackage** *defined-package-name* [[ *↓option* ]] *→ package* 
 
-*option::*=*\{*(:nicknames *\{nickname\}*\*)*\}*\* *|* 
+*option::*=*&#123;*(:nicknames *&#123;nickname&#125;*\*)*&#125;*\* *|* 
 
 (:documentation *string*) *|* 
 
-*\{*(:use *\{package-name\}*\*)*\}*\* *|* 
+*&#123;*(:use *&#123;package-name&#125;*\*)*&#125;*\* *|* 
 
-*\{*(:shadow *\{↓symbol-name\}*\*)*\}*\* *|* 
+*&#123;*(:shadow *&#123;↓symbol-name&#125;*\*)*&#125;*\* *|* 
 
-*\{*(:shadowing-import-from *package-name \{↓symbol-name\}*\*)*\}*\* *|* 
+*&#123;*(:shadowing-import-from *package-name &#123;↓symbol-name&#125;*\*)*&#125;*\* *|* 
 
-*\{*(:import-from *package-name \{↓symbol-name\}*\*)*\}*\* *|* 
+*&#123;*(:import-from *package-name &#123;↓symbol-name&#125;*\*)*&#125;*\* *|* 
 
-*\{*(:export *\{↓symbol-name\}*\*)*\}*\* *|* 
+*&#123;*(:export *&#123;↓symbol-name&#125;*\*)*&#125;*\* *|* 
 
-*\{*(:intern *\{↓symbol-name\}*\*)*\}*\* *|* 
+*&#123;*(:intern *&#123;↓symbol-name&#125;*\*)*&#125;*\* *|* 
 
 (:size *integer* ) 
 
@@ -1622,21 +1622,21 @@ unrecognized option in implementations that do not support it.
 
 **do-symbols** (*var* [*package* [*result-form*]]) 
 
-*\{declaration\}*\* *\{tag | statement\}*\* 
+*&#123;declaration&#125;*\* *&#123;tag | statement&#125;*\* 
 
-*→ \{result\}*\* 
+*→ &#123;result&#125;*\* 
 
 **do-external-symbols** (*var* [*package* [*result-form*]]) 
 
-*\{declaration\}*\* *\{tag | statement\}*\* 
+*&#123;declaration&#125;*\* *&#123;tag | statement&#125;*\* 
 
-*→ \{result\}*\* 
+*→ &#123;result&#125;*\* 
 
 **do-all-symbols** (*var* [*result-form*]) 
 
-*\{declaration\}*\* *\{tag | statement\}*\* 
+*&#123;declaration&#125;*\* *&#123;tag | statement&#125;*\* 
 
-*→ \{result\}*\* 
+*→ &#123;result&#125;*\* 
 
 **Arguments and Values:** 
 
@@ -1684,7 +1684,7 @@ Any *tag* in the body is treated as with **tagbody**.
 
 **Examples:** 
 
-(make-package ’temp :use nil) *→* #\<PACKAGE "TEMP"\> 
+(make-package ’temp :use nil) *→* #&#60;PACKAGE "TEMP"&#62; 
 
 (intern "SHY" ’temp) *→* TEMP::SHY, NIL ;SHY will be an internal symbol 
 
@@ -1700,7 +1700,7 @@ lst)
 
 *→* (TEMP::SHY TEMP:BOLD) 
 
-\<i\>\<sup\>or\</sup\>→\</i\> (TEMP:BOLD TEMP::SHY) 
+&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; (TEMP:BOLD TEMP::SHY) 
 
 (let ((lst ())) 
 
@@ -1720,7 +1720,7 @@ lst)
 
 *→* (TEMP::SHY TEMP:BOLD) 
 
-\<i\>\<sup\>or\</sup\>→\</i\> (TEMP:BOLD TEMP::SHY) 
+&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; (TEMP:BOLD TEMP::SHY) 
 
 
 
@@ -1780,7 +1780,7 @@ It is *implementation-dependent* whether the *string* that becomes the new *symb
 
 **Examples:** 
 
-(in-package "COMMON-LISP-USER") *→* #\<PACKAGE "COMMON-LISP-USER"\> 
+(in-package "COMMON-LISP-USER") *→* #&#60;PACKAGE "COMMON-LISP-USER"&#62; 
 
 (intern "Never-Before") *→* |Never-Before|, NIL 
 
@@ -1816,7 +1816,7 @@ It is *implementation-dependent* whether the *string* that becomes the new *symb
 
 **Examples:** 
 
-(in-package "COMMON-LISP-USER") *→* #\<PACKAGE "COMMON-LISP-USER"\> 
+(in-package "COMMON-LISP-USER") *→* #&#60;PACKAGE "COMMON-LISP-USER"&#62; 
 
 (package-name \*package\*) *→* "COMMON-LISP-USER" 
 
@@ -1938,11 +1938,11 @@ Returns a *list* of other *packages* used by *package*.
 
 **Examples:** 
 
-(package-use-list (make-package ’temp)) *→* (#\<PACKAGE "COMMON-LISP"\>) 
+(package-use-list (make-package ’temp)) *→* (#&#60;PACKAGE "COMMON-LISP"&#62;) 
 
 (use-package ’common-lisp-user ’temp) *→* T 
 
-(package-use-list ’temp) *→* (#\<PACKAGE "COMMON-LISP"\> #\<PACKAGE "COMMON-LISP-USER"\>) 
+(package-use-list ’temp) *→* (#&#60;PACKAGE "COMMON-LISP"&#62; #&#60;PACKAGE "COMMON-LISP-USER"&#62;) 
 
 **Exceptional Situations:** 
 
@@ -1972,9 +1972,9 @@ Should signal an error of *type* **type-error** if *package* is not a *package d
 
 (package-used-by-list (make-package ’temp)) *→* () 
 
-(make-package ’trash :use ’(temp)) *→* #\<PACKAGE "TRASH"\> 
+(make-package ’trash :use ’(temp)) *→* #&#60;PACKAGE "TRASH"&#62; 
 
-(package-used-by-list ’temp) *→* (#\<PACKAGE "TRASH"\>) 
+(package-used-by-list ’temp) *→* (#&#60;PACKAGE "TRASH"&#62;) 
 
 **Exceptional Situations:** 
 
@@ -2032,13 +2032,13 @@ the COMMON-LISP-USER *package*.
 
 Whatever *package object* is currently the *value* of **\*package\*** is referred to as the *current package*. **Examples:** 
 
-(in-package "COMMON-LISP-USER") *→* #\<PACKAGE "COMMON-LISP-USER"\> 
+(in-package "COMMON-LISP-USER") *→* #&#60;PACKAGE "COMMON-LISP-USER"&#62; 
 
-\*package\* *→* #\<PACKAGE "COMMON-LISP-USER"\> 
+\*package\* *→* #&#60;PACKAGE "COMMON-LISP-USER"&#62; 
 
 (make-package "SAMPLE-PACKAGE" :use ’("COMMON-LISP")) 
 
-*→* #\<PACKAGE "SAMPLE-PACKAGE"\> 
+*→* #&#60;PACKAGE "SAMPLE-PACKAGE"&#62; 
 
 (list 
 
@@ -2056,13 +2056,13 @@ Whatever *package object* is currently the *value* of **\*package\*** is referre
 
 \*package\*) 
 
-*→* (#\<PACKAGE "SAMPLE-PACKAGE"\> #\<PACKAGE "COMMON-LISP-USER"\>) 
+*→* (#&#60;PACKAGE "SAMPLE-PACKAGE"&#62; #&#60;PACKAGE "COMMON-LISP-USER"&#62;) 
 
 (list (symbol-package (read-from-string "just-testing")) 
 
 \*package\*) 
 
-*→* (#\<PACKAGE "COMMON-LISP-USER"\> #\<PACKAGE "COMMON-LISP-USER"\>) 
+*→* (#&#60;PACKAGE "COMMON-LISP-USER"&#62; #&#60;PACKAGE "COMMON-LISP-USER"&#62;) 
 
 (eq ’foo (intern "FOO")) *→ true* 
 
@@ -2124,7 +2124,7 @@ Returns a *designator* for the offending *package* in the *situation* represente
 
 :package (find-package "COMMON-LISP"))) 
 
-*→* #\<Package "COMMON-LISP"\> 
+*→* #&#60;Package "COMMON-LISP"&#62; 
 
 **See Also:** 
 

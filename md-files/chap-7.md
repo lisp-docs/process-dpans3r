@@ -145,9 +145,9 @@ If two or more initialization arguments that initialize the same *slot* are give
 
 If two or more different initialization arguments that initialize the same *slot* have default values and none is given explicitly in the arguments to **make-instance**, the initialization argument that appears in a :default-initargs class option in the most specific of the *classes* supplies the value. If a single :default-initargs class option specifies two or more initialization arguments that initialize the same *slot* and none is given explicitly in the arguments to **make-instance**, the leftmost in the :default-initargs class option supplies the value, and the values of the remaining default value *forms* are ignored. 
 
-Initialization arguments given explicitly in the arguments to **make-instance** appear to the left of defaulted initialization arguments. Suppose that the classes *C*\<sub\>1\</sub\> and *C*\<sub\>2\</sub\> supply the values of defaulted initialization arguments for different *slots*, and suppose that *C*\<sub\>1\</sub\> is more specific than *C*\<sub\>2\</sub\>; then the defaulted initialization argument whose value is supplied by *C*\<sub\>1\</sub\> is to the left of 
+Initialization arguments given explicitly in the arguments to **make-instance** appear to the left of defaulted initialization arguments. Suppose that the classes *C*&#60;sub&#62;1&#60;/sub&#62; and *C*&#60;sub&#62;2&#60;/sub&#62; supply the values of defaulted initialization arguments for different *slots*, and suppose that *C*&#60;sub&#62;1&#60;/sub&#62; is more specific than *C*&#60;sub&#62;2&#60;/sub&#62;; then the defaulted initialization argument whose value is supplied by *C*&#60;sub&#62;1&#60;/sub&#62; is to the left of 
 
-the defaulted initialization argument whose value is supplied by *C*\<sub\>2\</sub\> in the *defaulted initialization argument list*. If a single :default-initargs class option supplies the values of initialization arguments for two different *slots*, the initialization argument whose value is specified farther to the left in the :default-initargs class option appears farther to the left in the *defaulted initialization argument list*. 
+the defaulted initialization argument whose value is supplied by *C*&#60;sub&#62;2&#60;/sub&#62; in the *defaulted initialization argument list*. If a single :default-initargs class option supplies the values of initialization arguments for two different *slots*, the initialization argument whose value is specified farther to the left in the :default-initargs class option appears farther to the left in the *defaulted initialization argument list*. 
 
 If a *slot* has both an :initform form and an :initarg slot option, and the initialization argument is defaulted using :default-initargs or is supplied to **make-instance**, the captured :initform form is neither used nor evaluated. 
 
@@ -269,7 +269,7 @@ Implementations are permitted to make certain optimizations to **initialize-inst
 
 **7.2 Changing the Class of an Instance** 
 
-The *function* **change-class** can be used to change the *class* of an *instance* from its current class, *C*\<sub\>from\</sub\>, to a different class, *C*\<sub\>to\</sub\>; it changes the structure of the *instance* to conform to the definition of the class *C*\<sub\>to\</sub\>. 
+The *function* **change-class** can be used to change the *class* of an *instance* from its current class, *C*&#60;sub&#62;from&#60;/sub&#62;, to a different class, *C*&#60;sub&#62;to&#60;/sub&#62;; it changes the structure of the *instance* to conform to the definition of the class *C*&#60;sub&#62;to&#60;/sub&#62;. 
 
 Note that changing the *class* of an *instance* may cause *slots* to be added or deleted. Changing the *class* of an *instance* does not change its identity as defined by the **eq** function. 
 
@@ -277,17 +277,17 @@ When **change-class** is invoked on an *instance*, a two-step updating process t
 
 **7.2.1 Modifying the Structure of the Instance** 
 
-In order to make the *instance* conform to the class *C*\<sub\>to\</sub\>, *local slots* specified by the class *C*\<sub\>to\</sub\> that are not specified by the class *C*\<sub\>from\</sub\> are added, and *local slots* not specified by the class *C*\<sub\>to\</sub\> that are specified by the class *C*\<sub\>from\</sub\> are discarded. 
+In order to make the *instance* conform to the class *C*&#60;sub&#62;to&#60;/sub&#62;, *local slots* specified by the class *C*&#60;sub&#62;to&#60;/sub&#62; that are not specified by the class *C*&#60;sub&#62;from&#60;/sub&#62; are added, and *local slots* not specified by the class *C*&#60;sub&#62;to&#60;/sub&#62; that are specified by the class *C*&#60;sub&#62;from&#60;/sub&#62; are discarded. 
 
-The values of *local slots* specified by both the class *C*\<sub\>to\</sub\> and the class *C*\<sub\>from\</sub\> are retained. If such a *local slot* was unbound, it remains unbound. 
+The values of *local slots* specified by both the class *C*&#60;sub&#62;to&#60;/sub&#62; and the class *C*&#60;sub&#62;from&#60;/sub&#62; are retained. If such a *local slot* was unbound, it remains unbound. 
 
-The values of *slots* specified as shared in the class *C*\<sub\>from\</sub\> and as local in the class *C*\<sub\>to\</sub\> are retained. This first step of the update does not affect the values of any *shared slots*. 
+The values of *slots* specified as shared in the class *C*&#60;sub&#62;from&#60;/sub&#62; and as local in the class *C*&#60;sub&#62;to&#60;/sub&#62; are retained. This first step of the update does not affect the values of any *shared slots*. 
 
 **7.2.2 Initializing Newly Added Local Slots** 
 
 The second step of the update initializes the newly added *slots* and performs any other user-defined actions. This step is implemented by the generic function **update-instance-for-different-class**. The generic function **update-instance-for-different-class** is invoked by **change-class** after the first step of the update has been completed. 
 
-The generic function **update-instance-for-different-class** is invoked on arguments computed by **change-class**. The first argument passed is a copy of the *instance* being updated and is an *instance* of the class *C*\<sub\>from\</sub\>; this copy has *dynamic extent* within the generic function **change-class**. The second argument is the *instance* as updated so far by **change-class** and is an *instance* of the class *C*\<sub\>to\</sub\>. The remaining arguments are an *initialization argument list*. 
+The generic function **update-instance-for-different-class** is invoked on arguments computed by **change-class**. The first argument passed is a copy of the *instance* being updated and is an *instance* of the class *C*&#60;sub&#62;from&#60;/sub&#62;; this copy has *dynamic extent* within the generic function **change-class**. The second argument is the *instance* as updated so far by **change-class** and is an *instance* of the class *C*&#60;sub&#62;to&#60;/sub&#62;. The remaining arguments are an *initialization argument list*. 
 
 There is a system-supplied primary *method* for **update-instance-for-different-class** that has two parameter specializers, each of which is the *class* **standard-object**. First this *method* checks the validity of initialization arguments and signals an error if an initialization argument is supplied that is not declared as valid. (For more information, see Section 7.1.2 (Declaring the Validity of 
 
@@ -421,13 +421,13 @@ In general, more than one *class* among *C* and its *superclasses* can define a 
 
 *•* The default initial value form for a *slot* is the value of the :initform slot option in the most specific *slot specifier* that contains one. If no *slot specifier* contains an :initform slot option, the *slot* has no default initial value form. 
 
-\<i\>•\</i\> The contents of a \<i\>slot\</i\> will always be of type (and \<i\>T\</i\>\<sub\>1\</sub\> \<i\>. . . T\<sub\>n\</sub\>\</i\>) where \<i\>T\</i\>\<sub\>1\</sub\> \<i\>. . . T\<sub\>n\</sub\>\</i\> are the values of the :type slot options contained in all of the \<i\>slot specifiers\</i\>. If no \<i\>slot specifier\</i\> contains the :type slot option, the contents of the \<i\>slot\</i\> will always be of \<i\>type\</i\> \<b\>t\</b\>. The consequences of attempting to store in a \<i\>slot\</i\> a value that does not satisfy the \<i\>type\</i\> of the \<i\>slot\</i\> are undefined. 
+&#60;i&#62;•&#60;/i&#62; The contents of a &#60;i&#62;slot&#60;/i&#62; will always be of type (and &#60;i&#62;T&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62; &#60;i&#62;. . . T&#60;sub&#62;n&#60;/sub&#62;&#60;/i&#62;) where &#60;i&#62;T&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62; &#60;i&#62;. . . T&#60;sub&#62;n&#60;/sub&#62;&#60;/i&#62; are the values of the :type slot options contained in all of the &#60;i&#62;slot specifiers&#60;/i&#62;. If no &#60;i&#62;slot specifier&#60;/i&#62; contains the :type slot option, the contents of the &#60;i&#62;slot&#60;/i&#62; will always be of &#60;i&#62;type&#60;/i&#62; &#60;b&#62;t&#60;/b&#62;. The consequences of attempting to store in a &#60;i&#62;slot&#60;/i&#62; a value that does not satisfy the &#60;i&#62;type&#60;/i&#62; of the &#60;i&#62;slot&#60;/i&#62; are undefined. 
 
 *•* The set of initialization arguments that initialize a given *slot* is the union of the initialization arguments declared in the :initarg slot options in all the *slot specifiers*. 
 
 *•* The *documentation string* for a *slot* is the value of the :documentation slot option in the most specific *slot* specifier that contains one. If no *slot specifier* contains a :documentation slot option, the *slot* has no *documentation string*. 
 
-A consequence of the allocation rule is that a *shared slot* can be *shadowed*. For example, if a class *C*\<sub\>1\</sub\> defines a *slot* named *S* whose value for the :allocation slot option is :class, that *slot* is *accessible* in *instances* of *C*\<sub\>1\</sub\> and all of its *subclasses*. However, if *C*\<sub\>2\</sub\> is a *subclass* of *C*\<sub\>1\</sub\> and also defines a *slot* named *S*, *C*\<sub\>1\</sub\>’s *slot* is not shared by *instances* of *C*\<sub\>2\</sub\> and its *subclasses*. When a class *C*\<sub\>1\</sub\> defines a *shared slot*, any subclass *C*\<sub\>2\</sub\> of *C*\<sub\>1\</sub\> will share this single *slot* unless the **defclass** form for *C*\<sub\>2\</sub\> specifies a *slot* of the same *name* or there is a *superclass* of *C*\<sub\>2\</sub\> that precedes *C*\<sub\>1\</sub\> in the *class precedence list* of *C*\<sub\>2\</sub\> that defines a *slot* of the same name. 
+A consequence of the allocation rule is that a *shared slot* can be *shadowed*. For example, if a class *C*&#60;sub&#62;1&#60;/sub&#62; defines a *slot* named *S* whose value for the :allocation slot option is :class, that *slot* is *accessible* in *instances* of *C*&#60;sub&#62;1&#60;/sub&#62; and all of its *subclasses*. However, if *C*&#60;sub&#62;2&#60;/sub&#62; is a *subclass* of *C*&#60;sub&#62;1&#60;/sub&#62; and also defines a *slot* named *S*, *C*&#60;sub&#62;1&#60;/sub&#62;’s *slot* is not shared by *instances* of *C*&#60;sub&#62;2&#60;/sub&#62; and its *subclasses*. When a class *C*&#60;sub&#62;1&#60;/sub&#62; defines a *shared slot*, any subclass *C*&#60;sub&#62;2&#60;/sub&#62; of *C*&#60;sub&#62;1&#60;/sub&#62; will share this single *slot* unless the **defclass** form for *C*&#60;sub&#62;2&#60;/sub&#62; specifies a *slot* of the same *name* or there is a *superclass* of *C*&#60;sub&#62;2&#60;/sub&#62; that precedes *C*&#60;sub&#62;1&#60;/sub&#62; in the *class precedence list* of *C*&#60;sub&#62;2&#60;/sub&#62; that defines a *slot* of the same name. 
 
 A consequence of the type rule is that the value of a *slot* satisfies the type constraint of each *slot specifier* that contributes to that *slot*. Because the result of attempting to store in a *slot* a value that does not satisfy the type constraint for the *slot* is undefined, the value in a *slot* might fail to satisfy its type constraint. 
 
@@ -445,7 +445,7 @@ Objects **7–15**
 
 **7.6.1 Introduction to Generic Functions** 
 
-A *generic function* is a function whose behavior depends on the *classes* or identities of the *arguments* supplied to it. A *generic function object* is associated with a set of *methods*, a *lambda list*, a *method combination*\<sub\>2\</sub\>, and other information. 
+A *generic function* is a function whose behavior depends on the *classes* or identities of the *arguments* supplied to it. A *generic function object* is associated with a set of *methods*, a *lambda list*, a *method combination*&#60;sub&#62;2&#60;/sub&#62;, and other information. 
 
 Like an *ordinary function*, a *generic function* takes *arguments*, performs a series of operations, and perhaps returns useful *values*. An *ordinary function* has a single body of *code* that is always *executed* when the *function* is called. A *generic function* has a set of bodies of *code* of which a subset is selected for *execution*. The selected bodies of *code* and the manner of their combination are determined by the *classes* or identities of one or more of the *arguments* to the *generic function* and by its *method combination*. 
 
@@ -473,7 +473,7 @@ Some *operators* permit specification of the options of a *generic function*, su
 
 Some *operators* define *methods* for a *generic function*. These *operators* will be referred to as *method-defining operators*; their associated *forms* are called *method-defining forms*. The *standardized method-defining operators* are listed in Figure 7–1. 
 
-|\<p\>**defgeneric defmethod defclass** \</p\>\<p\>**define-condition defstruct**\</p\>|
+|&#60;p&#62;**defgeneric defmethod defclass** &#60;/p&#62;&#60;p&#62;**define-condition defstruct**&#60;/p&#62;|
 | :- |
 
 
@@ -527,7 +527,7 @@ Only required parameters may be specialized, and there must be a *parameter spec
 
 Given a generic function and a set of arguments, an applicable method is a method for that generic function whose parameter specializers are satisfied by their corresponding arguments. The following definition specifies what it means for a method to be applicable and for an argument to satisfy a *parameter specializer* . 
 
-Let \<i\>hA\</i\>\<sub\>1\</sub\>\<i\>, . . . , A\<sub\>n\</sub\>i\</i\> be the required arguments to a generic function in order. Let \<i\>hP\</i\>\<sub\>1\</sub\>\<i\>, . . . , P\<sub\>n\</sub\>i\</i\> be the \<i\>parameter specializers\</i\> corresponding to the required parameters of the method \<i\>M\</i\> in order. The method \<i\>M\</i\> is applicable when each \<i\>A\<sub\>i\</sub\>\</i\>is of the \<i\>type\</i\> specified by the \<i\>type specifier P\<sub\>i\</sub\>\</i\>. Because every valid \<i\>parameter specializer\</i\> is also a valid \<i\>type specifier\</i\> , the \<i\>function\</i\> \<b\>typep\</b\> can be used during method selection to determine whether an argument satisfies a \<i\>parameter specializer\</i\> . 
+Let &#60;i&#62;hA&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62;&#60;i&#62;, . . . , A&#60;sub&#62;n&#60;/sub&#62;i&#60;/i&#62; be the required arguments to a generic function in order. Let &#60;i&#62;hP&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62;&#60;i&#62;, . . . , P&#60;sub&#62;n&#60;/sub&#62;i&#60;/i&#62; be the &#60;i&#62;parameter specializers&#60;/i&#62; corresponding to the required parameters of the method &#60;i&#62;M&#60;/i&#62; in order. The method &#60;i&#62;M&#60;/i&#62; is applicable when each &#60;i&#62;A&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;is of the &#60;i&#62;type&#60;/i&#62; specified by the &#60;i&#62;type specifier P&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;. Because every valid &#60;i&#62;parameter specializer&#60;/i&#62; is also a valid &#60;i&#62;type specifier&#60;/i&#62; , the &#60;i&#62;function&#60;/i&#62; &#60;b&#62;typep&#60;/b&#62; can be used during method selection to determine whether an argument satisfies a &#60;i&#62;parameter specializer&#60;/i&#62; . 
 
 A method all of whose *parameter specializers* are the *class* **t** is called a *default method*; it is always applicable but may be shadowed by a more specific method. 
 
@@ -545,9 +545,9 @@ In this specification, the terms “*primary method*” and “*auxiliary method
 
 Two *methods* are said to agree with each other on *parameter specializers* and *qualifiers* if the following conditions hold: 
 
-1\. Both methods have the same number of required parameters. Suppose the \<i\>parameter specializers\</i\> of the two methods are \<i\>P\</i\>\<sub\>1\<i\>,\</i\>1\</sub\> \<i\>. . . P\</i\>\<sub\>1\<i\>,n\</i\>\</sub\> and \<i\>P\</i\>\<sub\>2\<i\>,\</i\>1\</sub\> \<i\>. . . P\</i\>\<sub\>2\<i\>,n\</i\>\</sub\>. 
+1\. Both methods have the same number of required parameters. Suppose the &#60;i&#62;parameter specializers&#60;/i&#62; of the two methods are &#60;i&#62;P&#60;/i&#62;&#60;sub&#62;1&#60;i&#62;,&#60;/i&#62;1&#60;/sub&#62; &#60;i&#62;. . . P&#60;/i&#62;&#60;sub&#62;1&#60;i&#62;,n&#60;/i&#62;&#60;/sub&#62; and &#60;i&#62;P&#60;/i&#62;&#60;sub&#62;2&#60;i&#62;,&#60;/i&#62;1&#60;/sub&#62; &#60;i&#62;. . . P&#60;/i&#62;&#60;sub&#62;2&#60;i&#62;,n&#60;/i&#62;&#60;/sub&#62;. 
 
-2\. For each 1 \<i\>≤ i ≤ n\</i\>, \<i\>P\</i\>\<sub\>1\<i\>,i\</i\>\</sub\> agrees with \<i\>P\</i\>\<sub\>2\<i\>,i\</i\>\</sub\>. The \<i\>parameter specializer P\</i\>\<sub\>1\<i\>,i\</i\>\</sub\> agrees with \<i\>P\</i\>\<sub\>2\<i\>,i\</i\>\</sub\> if \<i\>P\</i\>\<sub\>1\<i\>,i\</i\>\</sub\> and \<i\>P\</i\>\<sub\>2\<i\>,i\</i\>\</sub\> are the same class or if \<i\>P\</i\>\<sub\>1\<i\>,i\</i\>\</sub\> = (\<b\>eql\</b\> \<i\>object\</i\>\<sub\>1\</sub\>), \<i\>P\</i\>\<sub\>2\<i\>,i\</i\>\</sub\> = (\<b\>eql\</b\> \<i\>object\</i\>\<sub\>2\</sub\>), and (\<b\>eql\</b\> \<i\>object\</i\>\<sub\>1\</sub\> \<i\>object\</i\>\<sub\>2\</sub\>). Otherwise \<i\>P\</i\>\<sub\>1\<i\>,i\</i\>\</sub\> and \<i\>P\</i\>\<sub\>2\<i\>,i\</i\>\</sub\> do not agree. 
+2\. For each 1 &#60;i&#62;≤ i ≤ n&#60;/i&#62;, &#60;i&#62;P&#60;/i&#62;&#60;sub&#62;1&#60;i&#62;,i&#60;/i&#62;&#60;/sub&#62; agrees with &#60;i&#62;P&#60;/i&#62;&#60;sub&#62;2&#60;i&#62;,i&#60;/i&#62;&#60;/sub&#62;. The &#60;i&#62;parameter specializer P&#60;/i&#62;&#60;sub&#62;1&#60;i&#62;,i&#60;/i&#62;&#60;/sub&#62; agrees with &#60;i&#62;P&#60;/i&#62;&#60;sub&#62;2&#60;i&#62;,i&#60;/i&#62;&#60;/sub&#62; if &#60;i&#62;P&#60;/i&#62;&#60;sub&#62;1&#60;i&#62;,i&#60;/i&#62;&#60;/sub&#62; and &#60;i&#62;P&#60;/i&#62;&#60;sub&#62;2&#60;i&#62;,i&#60;/i&#62;&#60;/sub&#62; are the same class or if &#60;i&#62;P&#60;/i&#62;&#60;sub&#62;1&#60;i&#62;,i&#60;/i&#62;&#60;/sub&#62; = (&#60;b&#62;eql&#60;/b&#62; &#60;i&#62;object&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62;), &#60;i&#62;P&#60;/i&#62;&#60;sub&#62;2&#60;i&#62;,i&#60;/i&#62;&#60;/sub&#62; = (&#60;b&#62;eql&#60;/b&#62; &#60;i&#62;object&#60;/i&#62;&#60;sub&#62;2&#60;/sub&#62;), and (&#60;b&#62;eql&#60;/b&#62; &#60;i&#62;object&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62; &#60;i&#62;object&#60;/i&#62;&#60;sub&#62;2&#60;/sub&#62;). Otherwise &#60;i&#62;P&#60;/i&#62;&#60;sub&#62;1&#60;i&#62;,i&#60;/i&#62;&#60;/sub&#62; and &#60;i&#62;P&#60;/i&#62;&#60;sub&#62;2&#60;i&#62;,i&#60;/i&#62;&#60;/sub&#62; do not agree. 
 
 3\. The two *lists* of *qualifiers* are the *same* under **equal**. 
 
@@ -729,7 +729,7 @@ ignored. An error is signaled if **call-next-method** is used in an *after metho
 
 In standard method combination, if there is an applicable method but no applicable primary method, an error is signaled. 
 
-The *before methods* are run in most-specific-first order while the *after methods* are run in least-specific-first order. The design rationale for this difference can be illustrated with an example. Suppose class *C*\<sub\>1\</sub\> modifies the behavior of its superclass, *C*\<sub\>2\</sub\>, by adding *before methods* and *after methods*. Whether the behavior of the class *C*\<sub\>2\</sub\> is defined directly by methods on *C*\<sub\>2\</sub\> or is inherited from its superclasses does not affect the relative order of invocation of methods on instances of the class *C*\<sub\>1\</sub\>. Class *C*\<sub\>1\</sub\>’s *before method* runs before all of class *C*\<sub\>2\</sub\>’s methods. Class *C*\<sub\>1\</sub\>’s *after method* runs after all of class *C*\<sub\>2\</sub\>’s methods. 
+The *before methods* are run in most-specific-first order while the *after methods* are run in least-specific-first order. The design rationale for this difference can be illustrated with an example. Suppose class *C*&#60;sub&#62;1&#60;/sub&#62; modifies the behavior of its superclass, *C*&#60;sub&#62;2&#60;/sub&#62;, by adding *before methods* and *after methods*. Whether the behavior of the class *C*&#60;sub&#62;2&#60;/sub&#62; is defined directly by methods on *C*&#60;sub&#62;2&#60;/sub&#62; or is inherited from its superclasses does not affect the relative order of invocation of methods on instances of the class *C*&#60;sub&#62;1&#60;/sub&#62;. Class *C*&#60;sub&#62;1&#60;/sub&#62;’s *before method* runs before all of class *C*&#60;sub&#62;2&#60;/sub&#62;’s methods. Class *C*&#60;sub&#62;1&#60;/sub&#62;’s *after method* runs after all of class *C*&#60;sub&#62;2&#60;/sub&#62;’s methods. 
 
 By contrast, all *around methods* run before any other methods run. Thus a less specific *around method* runs before a more specific primary method. 
 
@@ -781,11 +781,11 @@ Objects **7–25**
 
 *•* If an *around method* invokes **call-next-method**, the next most specific *around method* is called, if one is applicable. If there are no *around methods* or if **call-next-method** is called by the least specific *around method*, a Lisp form derived from the name of the built-in method combination type and from the list of applicable primary methods is evaluated to produce the value of the generic function. Suppose the name of the method combination type is *operator* and the call to the generic function is of the form 
 
-(\<i\>generic-function a\</i\>\<sub\>1\</sub\> \<i\>. . . a\<sub\>n\</sub\>\</i\>) 
+(&#60;i&#62;generic-function a&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62; &#60;i&#62;. . . a&#60;sub&#62;n&#60;/sub&#62;&#60;/i&#62;) 
 
-Let \<i\>M\</i\>\<sub\>1\</sub\>\<i\>, . . . , M\<sub\>k\</sub\>\</i\> be the applicable primary methods in order; then the derived Lisp form is (\<i\>operator hM\</i\>\<sub\>1\</sub\> \<i\>a\</i\>\<sub\>1\</sub\> \<i\>. . . a\<sub\>n\</sub\>i. . .hM\<sub\>k\</sub\> a\</i\>\<sub\>1\</sub\> \<i\>. . . a\<sub\>n\</sub\>i\</i\>) 
+Let &#60;i&#62;M&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62;&#60;i&#62;, . . . , M&#60;sub&#62;k&#60;/sub&#62;&#60;/i&#62; be the applicable primary methods in order; then the derived Lisp form is (&#60;i&#62;operator hM&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62; &#60;i&#62;a&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62; &#60;i&#62;. . . a&#60;sub&#62;n&#60;/sub&#62;i. . .hM&#60;sub&#62;k&#60;/sub&#62; a&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62; &#60;i&#62;. . . a&#60;sub&#62;n&#60;/sub&#62;i&#60;/i&#62;) 
 
-If the expression \<i\>hM\<sub\>i\</sub\> a\</i\>\<sub\>1\</sub\> \<i\>. . . a\<sub\>n\</sub\>i\</i\> is evaluated, the method \<i\>M\<sub\>i\</sub\>\</i\> will be applied to the arguments \<i\>a\</i\>\<sub\>1\</sub\> \<i\>. . . a\<sub\>n\</sub\>\</i\>. For example, if \<i\>operator\</i\> is or, the expression \<i\>hM\<sub\>i\</sub\> a\</i\>\<sub\>1\</sub\> \<i\>. . . a\<sub\>n\</sub\>i\</i\> is evaluated only if \<i\>hM\<sub\>j\</sub\> a\</i\>\<sub\>1\</sub\> \<i\>. . . a\<sub\>n\</sub\>i\</i\>, 1 \<i\>≤ j\</i\> \< \<i\>i\</i\>, returned nil. 
+If the expression &#60;i&#62;hM&#60;sub&#62;i&#60;/sub&#62; a&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62; &#60;i&#62;. . . a&#60;sub&#62;n&#60;/sub&#62;i&#60;/i&#62; is evaluated, the method &#60;i&#62;M&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62; will be applied to the arguments &#60;i&#62;a&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62; &#60;i&#62;. . . a&#60;sub&#62;n&#60;/sub&#62;&#60;/i&#62;. For example, if &#60;i&#62;operator&#60;/i&#62; is or, the expression &#60;i&#62;hM&#60;sub&#62;i&#60;/sub&#62; a&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62; &#60;i&#62;. . . a&#60;sub&#62;n&#60;/sub&#62;i&#60;/i&#62; is evaluated only if &#60;i&#62;hM&#60;sub&#62;j&#60;/sub&#62; a&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62; &#60;i&#62;. . . a&#60;sub&#62;n&#60;/sub&#62;i&#60;/i&#62;, 1 &#60;i&#62;≤ j&#60;/i&#62; &#60; &#60;i&#62;i&#60;/i&#62;, returned nil. 
 
 The default order for the primary methods is :most-specific-first. However, the order can be reversed by supplying :most-specific-last as the second argument to the :method-combination option. 
 
@@ -837,11 +837,11 @@ Two values are returned: a *list* of the explicitly named keywords and a *genera
 
 (list a b c d e f)) 
 
-*→* #\<STANDARD-METHOD GF1 (INTEGER) 36324653\> 
+*→* #&#60;STANDARD-METHOD GF1 (INTEGER) 36324653&#62; 
 
 (find-method #’gf1 ’() (list (find-class ’integer))) 
 
-*→* #\<STANDARD-METHOD GF1 (INTEGER) 36324653\> 
+*→* #&#60;STANDARD-METHOD GF1 (INTEGER) 36324653&#62; 
 
 (function-keywords \*) 
 
@@ -851,7 +851,7 @@ Two values are returned: a *list* of the explicitly named keywords and a *genera
 
 (list a b c d e f)) 
 
-*→* #\<STANDARD-METHOD GF2 (INTEGER) 42701775\> 
+*→* #&#60;STANDARD-METHOD GF2 (INTEGER) 42701775&#62; 
 
 (function-keywords (find-method #’gf1 ’() (list (find-class ’integer)))) 
 
@@ -1163,7 +1163,7 @@ The value returned by **update-instance-for-different-class** is ignored by **ch
 
 &rest *initargs* &key &allow-other-keys 
 
-*→ \{result\}*\* 
+*→ &#123;result&#125;*\* 
 
 
 
@@ -1551,7 +1551,7 @@ Objects **7–41**
 
 **Syntax:** 
 
-**slot-missing** *class object slot-name operation* &optional *new-value → \{result\}*\* 
+**slot-missing** *class object slot-name operation* &optional *new-value → &#123;result&#125;*\* 
 
 **Method Signatures:** 
 
@@ -1611,7 +1611,7 @@ The set of arguments (including the *class* of the instance) facilitates definin
 
 **Syntax:** 
 
-**slot-unbound** *class instance slot-name → \{result\}*\* 
+**slot-unbound** *class instance slot-name → &#123;result&#125;*\* 
 
 **Method Signatures:** 
 
@@ -1683,11 +1683,11 @@ The macro **setf** can be used with **slot-value** to change the value of a *slo
 
 (c :accessor foo-c :initform 3))) 
 
-*→* #\<STANDARD-CLASS FOO 244020371\> 
+*→* #&#60;STANDARD-CLASS FOO 244020371&#62; 
 
 (setq foo1 (make-instance ’foo :a ’one :b ’two)) 
 
-*→* #\<FOO 36325624\> 
+*→* #&#60;FOO 36325624&#62; 
 
 (slot-value foo1 ’a) *→* ONE 
 
@@ -1703,7 +1703,7 @@ The macro **setf** can be used with **slot-value** to change the value of a *slo
 
 (slot-value x ’a)) 
 
-*→* #\<STANDARD-METHOD FOO-METHOD (FOO) 42720573\> 
+*→* #&#60;STANDARD-METHOD FOO-METHOD (FOO) 42720573&#62; 
 
 (foo-method foo1) *→* UNO 
 
@@ -1783,7 +1783,7 @@ Returns a *list* of the *qualifiers* of the *method*.
 
 (defmethod some-gf :before ((a integer)) a) 
 
-*→* #\<STANDARD-METHOD SOME-GF (:BEFORE) (INTEGER) 42736540\> 
+*→* #&#60;STANDARD-METHOD SOME-GF (:BEFORE) (INTEGER) 42736540&#62; 
 
 (method-qualifiers \*) *→* (:BEFORE) 
 
@@ -1795,7 +1795,7 @@ Returns a *list* of the *qualifiers* of the *method*.
 
 **Syntax:** 
 
-**no-applicable-method** *generic-function* &rest *function-arguments → \{result\}*\* 
+**no-applicable-method** *generic-function* &rest *function-arguments → &#123;result&#125;*\* 
 
 **Method Signatures:** 
 
@@ -1833,7 +1833,7 @@ The default *method* signals an error of *type* **error**.
 
 **Syntax:** 
 
-**no-next-method** *generic-function method* &rest *args → \{result\}*\* 
+**no-next-method** *generic-function method* &rest *args → &#123;result&#125;*\* 
 
 **Method Signatures:** 
 
@@ -2061,7 +2061,7 @@ Both *conforming implementations* and *conforming programs* may further *special
 
 (dist :accessor obj-dist))) 
 
-*→* #\<STANDARD-CLASS OBJ 250020030\> 
+*→* #&#60;STANDARD-CLASS OBJ 250020030&#62; 
 
 (defmethod shared-initialize :after ((self obj) slot-names &rest keys) 
 
@@ -2073,7 +2073,7 @@ Both *conforming implementations* and *conforming programs* may further *special
 
 (sqrt (+ (expt (obj-x self) 2) (expt (obj-y self) 2)))))) 
 
-*→* #\<STANDARD-METHOD SHARED-INITIALIZE (:AFTER) (OBJ T) 26266714\> 
+*→* #&#60;STANDARD-METHOD SHARED-INITIALIZE (:AFTER) (OBJ T) 26266714&#62; 
 
 (defmethod make-load-form ((self obj) &optional environment) 
 
@@ -2089,9 +2089,9 @@ Both *conforming implementations* and *conforming programs* may further *special
 
 :x ’,(obj-x self) :y ’,(obj-y self))) 
 
-*→* #\<STANDARD-METHOD MAKE-LOAD-FORM (OBJ) 26267532\> 
+*→* #&#60;STANDARD-METHOD MAKE-LOAD-FORM (OBJ) 26267532&#62; 
 
-(setq obj1 (make-instance ’obj :x 3.0 :y 4.0)) *→* #\<OBJ 26274136\> 
+(setq obj1 (make-instance ’obj :x 3.0 :y 4.0)) *→* #&#60;OBJ 26274136&#62; 
 
 (obj-dist obj1) *→* 5.0 
 
@@ -2111,7 +2111,7 @@ Another way to write the **make-load-form** *method* in that example is to use *
 
 :environment environment)) 
 
-*→* #\<STANDARD-METHOD MAKE-LOAD-FORM (OBJ) 42755655\> 
+*→* #&#60;STANDARD-METHOD MAKE-LOAD-FORM (OBJ) 42755655&#62; 
 
 
 
@@ -2125,15 +2125,15 @@ Another way to write the **make-load-form** *method* in that example is to use *
 
 (make-load-form obj1) 
 
-*→* (ALLOCATE-INSTANCE ’#\<STANDARD-CLASS OBJ 250020030\>), 
+*→* (ALLOCATE-INSTANCE ’#&#60;STANDARD-CLASS OBJ 250020030&#62;), 
 
 (PROGN 
 
-(SETF (SLOT-VALUE ’#\<OBJ 26274136\> ’X) ’3.0) 
+(SETF (SLOT-VALUE ’#&#60;OBJ 26274136&#62; ’X) ’3.0) 
 
-(SETF (SLOT-VALUE ’#\<OBJ 26274136\> ’Y) ’4.0) 
+(SETF (SLOT-VALUE ’#&#60;OBJ 26274136&#62; ’Y) ’4.0) 
 
-(INITIALIZE-INSTANCE ’#\<OBJ 26274136\>)) 
+(INITIALIZE-INSTANCE ’#&#60;OBJ 26274136&#62;)) 
 
 In the following example, *instances* of my-frob are “interned” in some way. An equivalent *instance* is reconstructed by using the value of the name slot as a key for searching existing *objects*. In this case the programmer has chosen to create a new *object* if no existing *object* is found; alternatively an error could have been signaled in that case. 
 
@@ -2249,9 +2249,9 @@ When the *object* is an *instance* of **standard-object**, **make-load-form-savi
 
 **Syntax:** 
 
-**with-accessors** (*\{slot-entry\}*\*) *instance-form \{declaration\}*\* *\{form\}*\* 
+**with-accessors** (*&#123;slot-entry&#125;*\*) *instance-form &#123;declaration&#125;*\* *&#123;form&#125;*\* 
 
-*→ \{result\}*\* 
+*→ &#123;result&#125;*\* 
 
 *slot-entry::*=(*variable-name accessor-name*) 
 
@@ -2289,7 +2289,7 @@ Objects **7–55**
 
 (y :initarg :y :accessor thing-y))) 
 
-*→* #\<STANDARD-CLASS THING 250020173\> 
+*→* #&#60;STANDARD-CLASS THING 250020173&#62; 
 
 (defmethod (setf thing-x) :before (new-x (thing thing)) 
 
@@ -2297,9 +2297,9 @@ Objects **7–55**
 
 (thing-x thing) new-x thing)) 
 
-(setq thing1 (make-instance ’thing :x 1 :y 2)) *→* #\<THING 43135676\> 
+(setq thing1 (make-instance ’thing :x 1 :y 2)) *→* #&#60;THING 43135676&#62; 
 
-(setq thing2 (make-instance ’thing :x 7 :y 8)) *→* #\<THING 43147374\> 
+(setq thing2 (make-instance ’thing :x 7 :y 8)) *→* #&#60;THING 43147374&#62; 
 
 (with-accessors ((x1 thing-x) (y1 thing-y)) 
 
@@ -2325,9 +2325,9 @@ x2 (thing-x thing2) y2 (thing-y thing2))
 
 x2 (thing-x thing2) y2 (thing-y thing2))))) 
 
-&#9655; Changing X from 1 to 9 in #\<THING 43135676\>. 
+&#9655; Changing X from 1 to 9 in #&#60;THING 43135676&#62;. 
 
-&#9655; Changing X from 7 to (9) in #\<THING 43147374\>. 
+&#9655; Changing X from 7 to (9) in #&#60;THING 43147374&#62;. 
 
 *→* ((1 1 2 2 7 7 8 8) 
 
@@ -2355,7 +2355,7 @@ The consequences are undefined if any *accessor-name* is not the name of an acce
 
 A **with-accessors** expression of the form: 
 
-(with-accessors (\<i\>slot-entry\</i\>\<sub\>1\</sub\>\<i\>. . . slot-entry\<sub\>n\</sub\>\</i\>) \<i\>instance-form form\</i\>\<sub\>1\</sub\>\<i\>. . . form\<sub\>k\</sub\>\</i\>) 
+(with-accessors (&#60;i&#62;slot-entry&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62;&#60;i&#62;. . . slot-entry&#60;sub&#62;n&#60;/sub&#62;&#60;/i&#62;) &#60;i&#62;instance-form form&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62;&#60;i&#62;. . . form&#60;sub&#62;k&#60;/sub&#62;&#60;/i&#62;) 
 
 
 
@@ -2367,19 +2367,19 @@ expands into the equivalent of
 
 (let ((*in instance-form*)) 
 
-(symbol-macrolet (\<i\>Q\</i\>\<sub\>1\</sub\>\<i\>. . . Q\<sub\>n\</sub\>\</i\>) \<i\>form\</i\>\<sub\>1\</sub\>\<i\>. . . form\<sub\>k\</sub\>\</i\>)) 
+(symbol-macrolet (&#60;i&#62;Q&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62;&#60;i&#62;. . . Q&#60;sub&#62;n&#60;/sub&#62;&#60;/i&#62;) &#60;i&#62;form&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62;&#60;i&#62;. . . form&#60;sub&#62;k&#60;/sub&#62;&#60;/i&#62;)) 
 
-where \<i\>Q\<sub\>i\</sub\>\</i\>is 
+where &#60;i&#62;Q&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;is 
 
-(\<i\>variable-name\<sub\>i\</sub\>\</i\> () (\<i\>accessor-name\<sub\>i\</sub\> in\</i\>)) 
+(&#60;i&#62;variable-name&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62; () (&#60;i&#62;accessor-name&#60;sub&#62;i&#60;/sub&#62; in&#60;/i&#62;)) 
 
 **with-slots** *Macro* 
 
 **Syntax:** 
 
-**with-slots** (*\{slot-entry\}*\*) *instance-form \{declaration\}*\* *\{form\}*\* 
+**with-slots** (*&#123;slot-entry&#125;*\*) *instance-form &#123;declaration&#125;*\* *&#123;form&#125;*\* 
 
-*→ \{result\}*\* 
+*→ &#123;result&#125;*\* 
 
 *slot-entry::*=*slot-name |* (*variable-name slot-name*) 
 
@@ -2421,7 +2421,7 @@ Objects **7–57**
 
 (y :initarg :y :accessor thing-y))) 
 
-*→* #\<STANDARD-CLASS THING 250020173\> 
+*→* #&#60;STANDARD-CLASS THING 250020173&#62; 
 
 (defmethod (setf thing-x) :before (new-x (thing thing)) 
 
@@ -2429,15 +2429,15 @@ Objects **7–57**
 
 (thing-x thing) new-x thing)) 
 
-(setq thing (make-instance ’thing :x 0 :y 1)) *→* #\<THING 62310540\> 
+(setq thing (make-instance ’thing :x 0 :y 1)) *→* #&#60;THING 62310540&#62; 
 
 (with-slots (x y) thing (incf x) (incf y)) *→* 2 
 
 (values (thing-x thing) (thing-y thing)) *→* 1, 2 
 
-(setq thing1 (make-instance ’thing :x 1 :y 2)) *→* #\<THING 43135676\> 
+(setq thing1 (make-instance ’thing :x 1 :y 2)) *→* #&#60;THING 43135676&#62; 
 
-(setq thing2 (make-instance ’thing :x 7 :y 8)) *→* #\<THING 43147374\> 
+(setq thing2 (make-instance ’thing :x 7 :y 8)) *→* #&#60;THING 43147374&#62; 
 
 (with-slots ((x1 x) (y1 y)) 
 
@@ -2463,7 +2463,7 @@ x2 (thing-x thing2) y2 (thing-y thing2))
 
 x2 (thing-x thing2) y2 (thing-y thing2))))) 
 
-&#9655; Changing X from 7 to (9) in #\<THING 43147374\>. 
+&#9655; Changing X from 7 to (9) in #&#60;THING 43147374&#62;. 
 
 *→* ((1 1 2 2 7 7 8 8) 
 
@@ -2491,7 +2491,7 @@ The consequences are undefined if any *slot-name* is not the name of a *slot* in
 
 A **with-slots** expression of the form: 
 
-(with-slots (\<i\>slot-entry\</i\>\<sub\>1\</sub\>\<i\>. . . slot-entry\<sub\>n\</sub\>\</i\>) \<i\>instance-form form\</i\>\<sub\>1\</sub\>\<i\>. . . form\<sub\>k\</sub\>\</i\>) 
+(with-slots (&#60;i&#62;slot-entry&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62;&#60;i&#62;. . . slot-entry&#60;sub&#62;n&#60;/sub&#62;&#60;/i&#62;) &#60;i&#62;instance-form form&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62;&#60;i&#62;. . . form&#60;sub&#62;k&#60;/sub&#62;&#60;/i&#62;) 
 
 expands into the equivalent of 
 
@@ -2503,25 +2503,25 @@ expands into the equivalent of
 
 (let ((*in instance-form*)) 
 
-(symbol-macrolet (\<i\>Q\</i\>\<sub\>1\</sub\>\<i\>. . . Q\<sub\>n\</sub\>\</i\>) \<i\>form\</i\>\<sub\>1\</sub\>\<i\>. . . form\<sub\>k\</sub\>\</i\>)) 
+(symbol-macrolet (&#60;i&#62;Q&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62;&#60;i&#62;. . . Q&#60;sub&#62;n&#60;/sub&#62;&#60;/i&#62;) &#60;i&#62;form&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62;&#60;i&#62;. . . form&#60;sub&#62;k&#60;/sub&#62;&#60;/i&#62;)) 
 
-where \<i\>Q\<sub\>i\</sub\>\</i\>is 
+where &#60;i&#62;Q&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;is 
 
-(\<i\>slot-entry\<sub\>i\</sub\>\</i\>() (slot-value \<i\>in\</i\> ’\<i\>slot-entry\<sub\>i\</sub\>\</i\>)) 
+(&#60;i&#62;slot-entry&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;() (slot-value &#60;i&#62;in&#60;/i&#62; ’&#60;i&#62;slot-entry&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;)) 
 
-if \<i\>slot-entry\<sub\>i\</sub\>\</i\>is a \<i\>symbol\</i\> and is 
+if &#60;i&#62;slot-entry&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;is a &#60;i&#62;symbol&#60;/i&#62; and is 
 
-(\<i\>variable-name\<sub\>i\</sub\>\</i\> () (slot-value \<i\>in\</i\> ’\<i\>slot-name\<sub\>i\</sub\>\</i\>)) 
+(&#60;i&#62;variable-name&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62; () (slot-value &#60;i&#62;in&#60;/i&#62; ’&#60;i&#62;slot-name&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;)) 
 
-if \<i\>slot-entry\<sub\>i\</sub\>\</i\>is of the form 
+if &#60;i&#62;slot-entry&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;is of the form 
 
-(\<i\>variable-name\<sub\>i\</sub\> slot-name\<sub\>i\</sub\>\</i\>) 
+(&#60;i&#62;variable-name&#60;sub&#62;i&#60;/sub&#62; slot-name&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;) 
 
 **defclass** *Macro* 
 
 **Syntax:** 
 
-**defclass** *class-name* (*\{superclass-name\}*\*) (*\{slot-specifier\}*\*) [[*↓class-option* ]] 
+**defclass** *class-name* (*&#123;superclass-name&#125;*\*) (*&#123;slot-specifier&#125;*\*) [[*↓class-option* ]] 
 
 *→ new-class* 
 
@@ -2529,23 +2529,23 @@ if \<i\>slot-entry\<sub\>i\</sub\>\</i\>is of the form
 
 *slot-name*::= *symbol* 
 
-*slot-option*::= *\{*:reader *reader-function-name\}*\* *|* 
+*slot-option*::= *&#123;*:reader *reader-function-name&#125;*\* *|* 
 
-*\{*:writer *writer-function-name\}*\* *|* 
+*&#123;*:writer *writer-function-name&#125;*\* *|* 
 
-*\{*:accessor *reader-function-name\}*\* *|* 
+*&#123;*:accessor *reader-function-name&#125;*\* *|* 
 
-*\{*:allocation *allocation-type\} |* 
+*&#123;*:allocation *allocation-type&#125; |* 
 
-*\{*:initarg *initarg-name\}*\* *|* 
+*&#123;*:initarg *initarg-name&#125;*\* *|* 
 
-*\{*:initform *form\} |* 
+*&#123;*:initform *form&#125; |* 
 
-*\{*:type *type-specifier\} |* 
+*&#123;*:type *type-specifier&#125; |* 
 
-*\{*:documentation *string\}* 
+*&#123;*:documentation *string&#125;* 
 
-*function-name*::= *\{symbol |* (setf *symbol*)*\}* 
+*function-name*::= *&#123;symbol |* (setf *symbol*)*&#125;* 
 
 *class-option*::= (:default-initargs . *initarg-list*) *|* 
 
@@ -2623,13 +2623,13 @@ The following slot options are available:
 
 – If *allocation-type* is :class, a shared *slot* of the given name is allocated in the *class object* created by this **defclass** form. The value of the *slot* is shared by all 
 
-*instances* of the *class*. If a class *C*\<sub\>1\</sub\> defines such a *shared slot*, any subclass *C*\<sub\>2\</sub\> of 
+*instances* of the *class*. If a class *C*&#60;sub&#62;1&#60;/sub&#62; defines such a *shared slot*, any subclass *C*&#60;sub&#62;2&#60;/sub&#62; of 
 
-*C*\<sub\>1\</sub\> will share this single *slot* unless the **defclass** form for *C*\<sub\>2\</sub\> specifies a *slot* of the 
+*C*&#60;sub&#62;1&#60;/sub&#62; will share this single *slot* unless the **defclass** form for *C*&#60;sub&#62;2&#60;/sub&#62; specifies a *slot* of the 
 
-same *name* or there is a superclass of *C*\<sub\>2\</sub\> that precedes *C*\<sub\>1\</sub\> in the class precedence 
+same *name* or there is a superclass of *C*&#60;sub&#62;2&#60;/sub&#62; that precedes *C*&#60;sub&#62;1&#60;/sub&#62; in the class precedence 
 
-list of *C*\<sub\>2\</sub\> and that defines a *slot* of the same *name*. 
+list of *C*&#60;sub&#62;2&#60;/sub&#62; and that defines a *slot* of the same *name*. 
 
 *•* The :initform slot option is used to provide a default initial value form to be used in the initialization of the *slot*. This *form* is evaluated every time it is used to initialize the *slot*. The lexical environment in which this *form* is evaluated is the lexical environment in which the **defclass** form was evaluated. Note that the lexical environment refers both to variables 
 
@@ -2713,27 +2713,27 @@ List), Section 7.1 (Object Creation and Initialization)
 
 **Syntax:** 
 
-**defgeneric** *function-name gf-lambda-list* [[ *↓option | \{↓method-description\}*\* ]] 
+**defgeneric** *function-name gf-lambda-list* [[ *↓option | &#123;↓method-description&#125;*\* ]] 
 
 *→ new-generic* 
 
-*option::*=(:argument-precedence-order *\{parameter-name\}*\<sup\>+\</sup\>) *|* 
+*option::*=(:argument-precedence-order *&#123;parameter-name&#125;*&#60;sup&#62;+&#60;/sup&#62;) *|* 
 
-(**declare** *\{gf-declaration\}*\<sup\>+\</sup\>) *|* 
+(**declare** *&#123;gf-declaration&#125;*&#60;sup&#62;+&#60;/sup&#62;) *|* 
 
 (:documentation *gf-documentation*) *|* 
 
-(:method-combination *method-combination \{method-combination-argument\}*\*) *|* 
+(:method-combination *method-combination &#123;method-combination-argument&#125;*\*) *|* 
 
 (:generic-function-class *generic-function-class*) *|* 
 
 (:method-class *method-class*) 
 
-*method-description::*=(:method *\{method-qualifier\}*\* *specialized-lambda-list* 
+*method-description::*=(:method *&#123;method-qualifier&#125;*\* *specialized-lambda-list* 
 
 **Arguments and Values:** 
 
-[[ *\{declaration\}*\* *| documentation* ]] *\{form\}*\*) 
+[[ *&#123;declaration&#125;*\* *| documentation* ]] *&#123;form&#125;*\*) 
 
 *function-name*—a *function name*. 
 
@@ -2845,13 +2845,13 @@ Implementations can extend **defgeneric** to include other options. It is requir
 
 **Syntax:** 
 
-**defmethod** *function-name \{method-qualifier\}*\* *specialized-lambda-list* 
+**defmethod** *function-name &#123;method-qualifier&#125;*\* *specialized-lambda-list* 
 
-[[ *\{declaration\}*\* *| documentation* ]] *\{form\}*\* 
+[[ *&#123;declaration&#125;*\* *| documentation* ]] *&#123;form&#125;*\* 
 
 *→ new-method* 
 
-*function-name*::= *\{symbol |* (setf *symbol*)*\}* 
+*function-name*::= *&#123;symbol |* (setf *symbol*)*&#125;* 
 
 Objects **7–67**
 
@@ -2863,17 +2863,17 @@ Objects **7–67**
 
 *method-qualifier*::= *non-list* 
 
-*specialized-lambda-list*::= (*\{var |* (*var parameter-specializer-name*)*\}*\* 
+*specialized-lambda-list*::= (*&#123;var |* (*var parameter-specializer-name*)*&#125;*\* 
 
-[&optional *\{var |* (var [*initform* [*supplied-p-parameter*] ])*\}*\*] 
+[&optional *&#123;var |* (var [*initform* [*supplied-p-parameter*] ])*&#125;*\*] 
 
 [&rest *var*] 
 
-[&key*\{var |* (*\{var |* (*keywordvar*)*\}* [*initform* [*supplied-p-parameter*] ])*\}*\* 
+[&key*&#123;var |* (*&#123;var |* (*keywordvar*)*&#125;* [*initform* [*supplied-p-parameter*] ])*&#125;*\* 
 
 [**&allow-other-keys**] ] 
 
-[&aux *\{var |* (*var* [*initform*] )*\}*\*] ) 
+[&aux *&#123;var |* (*var* [*initform*] )*&#125;*\*] ) 
 
 *parameter-specializer-name*::= *symbol |* (eql *eql-specializer-form*) 
 
@@ -2931,7 +2931,7 @@ The expansion of the **defmethod** macro “refers to” each specialized parame
 
 Declarations at the head of the method body that apply to the method’s *lambda variables* are treated as *bound declarations* whose *scope* is the same as the corresponding *bindings*. 
 
-Declarations at the head of the method body that apply to the functional bindings of **call-next-method** or **next-method-p** apply to references to those functions within the method body *forms*. Any outer *bindings* of the *function names* **call-next-method** and **next-method-p**, and declarations associated with such *bindings* are *shadowed* \<sub\>2\</sub\> within the method body *forms*. 
+Declarations at the head of the method body that apply to the functional bindings of **call-next-method** or **next-method-p** apply to references to those functions within the method body *forms*. Any outer *bindings* of the *function names* **call-next-method** and **next-method-p**, and declarations associated with such *bindings* are *shadowed* &#60;sub&#62;2&#60;/sub&#62; within the method body *forms*. 
 
 The *scope* of *free declarations* at the head of the method body is the entire method body, which includes any implicit local function definitions but excludes *initialization forms* for the *lambda variables*. 
 
@@ -3035,7 +3035,7 @@ Objects **7–71**
 
 **Syntax:** 
 
-**call-method** *method* &optional *next-method-list → \{result\}*\* 
+**call-method** *method* &optional *next-method-list → &#123;result&#125;*\* 
 
 **make-method** *form → method-object* 
 
@@ -3083,7 +3083,7 @@ If *next-method-list* is not supplied, the **call-next-method** function availab
 
 **Syntax:** 
 
-**call-next-method** &rest *args → \{result\}*\* 
+**call-next-method** &rest *args → &#123;result&#125;*\* 
 
 **Arguments and Values:** 
 
@@ -3173,15 +3173,15 @@ Section 7.6.6 (Method Selection and Combination)
 
 **define-method-combination** *name lambda-list* 
 
-(*\{method-group-specifier\}*\*) 
+(*&#123;method-group-specifier&#125;*\*) 
 
 [(:arguments *. args-lambda-list*)] 
 
 [(:generic-function *generic-function-symbol*)] 
 
-[[ *\{declaration\}*\* *| documentation* ]] 
+[[ *&#123;declaration&#125;*\* *| documentation* ]] 
 
-*\{form\}*\* 
+*&#123;form&#125;*\* 
 
 *→ name* 
 
@@ -3191,7 +3191,7 @@ Section 7.6.6 (Method Selection and Combination)
 
 :operator *operator* 
 
-*method-group-specifier::*=(*name \{\{qualifier-pattern\}*\<sup\>+\</sup\>*| predicate\}* [[ *↓long-form-option* ]]) 
+*method-group-specifier::*=(*name &#123;&#123;qualifier-pattern&#125;*&#60;sup&#62;+&#60;/sup&#62;*| predicate&#125;* [[ *↓long-form-option* ]]) 
 
 *long-form-option::*=:description *description |* 
 

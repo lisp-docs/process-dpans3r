@@ -21,7 +21,7 @@ A *sequence* is an ordered collection of *elements*, implemented as either a *ve
 
 A *sequence function* is a *function* defined by this specification or added as an extension by the *implementation* that operates on one or more *sequences*. Whenever a *sequence function* must construct and return a new *vector* , it always returns a *simple vector* . Similarly, any *strings* constructed will be *simple strings*. 
 
-|\<p\>**concatenate length remove** \</p\>\<p\>**copy-seq map remove-duplicates count map-into remove-if** \</p\>\<p\>**count-if merge remove-if-not count-if-not mismatch replace** \</p\>\<p\>**delete notany reverse** \</p\>\<p\>**delete-duplicates notevery search** \</p\>\<p\>**delete-if nreverse some** \</p\>\<p\>**delete-if-not nsubstitute sort** \</p\>\<p\>**elt nsubstitute-if stable-sort** \</p\>\<p\>**every nsubstitute-if-not subseq** \</p\>\<p\>**fill position substitute** \</p\>\<p\>**find position-if substitute-if** \</p\>\<p\>**find-if position-if-not substitute-if-not find-if-not reduce**\</p\>|
+|&#60;p&#62;**concatenate length remove** &#60;/p&#62;&#60;p&#62;**copy-seq map remove-duplicates count map-into remove-if** &#60;/p&#62;&#60;p&#62;**count-if merge remove-if-not count-if-not mismatch replace** &#60;/p&#62;&#60;p&#62;**delete notany reverse** &#60;/p&#62;&#60;p&#62;**delete-duplicates notevery search** &#60;/p&#62;&#60;p&#62;**delete-if nreverse some** &#60;/p&#62;&#60;p&#62;**delete-if-not nsubstitute sort** &#60;/p&#62;&#60;p&#62;**elt nsubstitute-if stable-sort** &#60;/p&#62;&#60;p&#62;**every nsubstitute-if-not subseq** &#60;/p&#62;&#60;p&#62;**fill position substitute** &#60;/p&#62;&#60;p&#62;**find position-if substitute-if** &#60;/p&#62;&#60;p&#62;**find-if position-if-not substitute-if-not find-if-not reduce**&#60;/p&#62;|
 | :- |
 
 
@@ -41,21 +41,21 @@ Sequences **17–1**
 
 **17.2.1 Satisfying a Two-Argument Test** 
 
-When an \<i\>object O\</i\> is being considered iteratively against each \<i\>element E\<sub\>i\</sub\>\</i\> of a \<i\>sequence S\</i\> by an \<i\>operator F\</i\> listed in Figure 17–2, it is sometimes useful to control the way in which the presence of \<i\>O\</i\> is tested in \<i\>S\</i\> is tested by \<i\>F\</i\>. This control is offered on the basis of a \<i\>function\</i\> designated with either a :test or :test-not \<i\>argument\</i\>. 
+When an &#60;i&#62;object O&#60;/i&#62; is being considered iteratively against each &#60;i&#62;element E&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62; of a &#60;i&#62;sequence S&#60;/i&#62; by an &#60;i&#62;operator F&#60;/i&#62; listed in Figure 17–2, it is sometimes useful to control the way in which the presence of &#60;i&#62;O&#60;/i&#62; is tested in &#60;i&#62;S&#60;/i&#62; is tested by &#60;i&#62;F&#60;/i&#62;. This control is offered on the basis of a &#60;i&#62;function&#60;/i&#62; designated with either a :test or :test-not &#60;i&#62;argument&#60;/i&#62;. 
 
-|\<p\>**adjoin nset-exclusive-or search** \</p\>\<p\>**assoc nsublis set-difference count nsubst set-exclusive-or delete nsubstitute sublis** \</p\>\<p\>**find nunion subsetp** \</p\>\<p\>**intersection position subst** \</p\>\<p\>**member pushnew substitute** \</p\>\<p\>**mismatch rassoc tree-equal** \</p\>\<p\>**nintersection remove union** \</p\>\<p\>**nset-difference remove-duplicates**\</p\>|
+|&#60;p&#62;**adjoin nset-exclusive-or search** &#60;/p&#62;&#60;p&#62;**assoc nsublis set-difference count nsubst set-exclusive-or delete nsubstitute sublis** &#60;/p&#62;&#60;p&#62;**find nunion subsetp** &#60;/p&#62;&#60;p&#62;**intersection position subst** &#60;/p&#62;&#60;p&#62;**member pushnew substitute** &#60;/p&#62;&#60;p&#62;**mismatch rassoc tree-equal** &#60;/p&#62;&#60;p&#62;**nintersection remove union** &#60;/p&#62;&#60;p&#62;**nset-difference remove-duplicates**&#60;/p&#62;|
 | :- |
 
 
 **Figure 17–2. Operators that have Two-Argument Tests to be Satisfied** 
 
-The object \<i\>O\</i\> might not be compared directly to \<i\>E\<sub\>i\</sub\>\</i\>. If a :key \<i\>argument\</i\> is provided, it is a \<i\>designator\</i\> for a \<i\>function\</i\> of one \<i\>argument\</i\> to be called with each \<i\>E\<sub\>i\</sub\>\</i\> as an \<i\>argument\</i\>, and \<i\>yielding\</i\> an \<i\>object Z\<sub\>i\</sub\>\</i\> to be used for comparison. (If there is no :key \<i\>argument\</i\>, \<i\>Z\<sub\>i\</sub\>\</i\>is \<i\>E\<sub\>i\</sub\>\</i\>.) 
+The object &#60;i&#62;O&#60;/i&#62; might not be compared directly to &#60;i&#62;E&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;. If a :key &#60;i&#62;argument&#60;/i&#62; is provided, it is a &#60;i&#62;designator&#60;/i&#62; for a &#60;i&#62;function&#60;/i&#62; of one &#60;i&#62;argument&#60;/i&#62; to be called with each &#60;i&#62;E&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62; as an &#60;i&#62;argument&#60;/i&#62;, and &#60;i&#62;yielding&#60;/i&#62; an &#60;i&#62;object Z&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62; to be used for comparison. (If there is no :key &#60;i&#62;argument&#60;/i&#62;, &#60;i&#62;Z&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;is &#60;i&#62;E&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;.) 
 
 The *function* designated by the :key *argument* is never called on *O* itself. However, if the function operates on multiple sequences (*e.g.*, as happens in **set-difference**), *O* will be the result of calling the :key function on an *element* of the other sequence. 
 
-A :test \<i\>argument\</i\>, if supplied to \<i\>F\</i\>, is a \<i\>designator\</i\> for a \<i\>function\</i\> of two \<i\>arguments\</i\>, \<i\>O\</i\> and \<i\>Z\<sub\>i\</sub\>\</i\>. An \<i\>E\<sub\>i\</sub\>\</i\>is said (or, sometimes, an \<i\>O\</i\> and an \<i\>E\<sub\>i\</sub\>\</i\> are said) to \<i\>satisfy the test\</i\> if this :test \<i\>function\</i\> returns a \<i\>generalized boolean\</i\> representing \<i\>true\</i\>. 
+A :test &#60;i&#62;argument&#60;/i&#62;, if supplied to &#60;i&#62;F&#60;/i&#62;, is a &#60;i&#62;designator&#60;/i&#62; for a &#60;i&#62;function&#60;/i&#62; of two &#60;i&#62;arguments&#60;/i&#62;, &#60;i&#62;O&#60;/i&#62; and &#60;i&#62;Z&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;. An &#60;i&#62;E&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;is said (or, sometimes, an &#60;i&#62;O&#60;/i&#62; and an &#60;i&#62;E&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62; are said) to &#60;i&#62;satisfy the test&#60;/i&#62; if this :test &#60;i&#62;function&#60;/i&#62; returns a &#60;i&#62;generalized boolean&#60;/i&#62; representing &#60;i&#62;true&#60;/i&#62;. 
 
-A :test-not \<i\>argument\</i\>, if supplied to \<i\>F\</i\>, is \<i\>designator\</i\> for a \<i\>function\</i\> of two \<i\>arguments\</i\>, \<i\>O\</i\> and \<i\>Z\<sub\>i\</sub\>\</i\>. An \<i\>E\<sub\>i\</sub\>\</i\>is said (or, sometimes, an \<i\>O\</i\> and an \<i\>E\<sub\>i\</sub\>\</i\> are said) to \<i\>satisfy the test\</i\> if this :test-not \<i\>function\</i\> returns a \<i\>generalized boolean\</i\> representing \<i\>false\</i\>. 
+A :test-not &#60;i&#62;argument&#60;/i&#62;, if supplied to &#60;i&#62;F&#60;/i&#62;, is &#60;i&#62;designator&#60;/i&#62; for a &#60;i&#62;function&#60;/i&#62; of two &#60;i&#62;arguments&#60;/i&#62;, &#60;i&#62;O&#60;/i&#62; and &#60;i&#62;Z&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;. An &#60;i&#62;E&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;is said (or, sometimes, an &#60;i&#62;O&#60;/i&#62; and an &#60;i&#62;E&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62; are said) to &#60;i&#62;satisfy the test&#60;/i&#62; if this :test-not &#60;i&#62;function&#60;/i&#62; returns a &#60;i&#62;generalized boolean&#60;/i&#62; representing &#60;i&#62;false&#60;/i&#62;. 
 
 If neither a :test nor a :test-not *argument* is supplied, it is as if a :test argument of #’eql was supplied. 
 
@@ -115,7 +115,7 @@ The consequences are unspecified if both a :test and a :test-not *argument* are 
 
 When using one of the *functions* in Figure 17–3, the elements *E* of a *sequence S* are filtered not on the basis of the presence or absence of an object *O* under a two *argument predicate*, as with the *functions* described in Section 17.2.1 (Satisfying a Two-Argument Test), but rather on the basis of a one *argument predicate*. 
 
-|\<p\>**assoc-if member-if rassoc-if** \</p\>\<p\>**assoc-if-not member-if-not rassoc-if-not** \</p\>\<p\>**count-if nsubst-if remove-if** \</p\>\<p\>**count-if-not nsubst-if-not remove-if-not** \</p\>\<p\>**delete-if nsubstitute-if subst-if** \</p\>\<p\>**delete-if-not nsubstitute-if-not subst-if-not** \</p\>\<p\>**find-if position-if substitute-if** \</p\>\<p\>**find-if-not position-if-not substitute-if-not**\</p\>|
+|&#60;p&#62;**assoc-if member-if rassoc-if** &#60;/p&#62;&#60;p&#62;**assoc-if-not member-if-not rassoc-if-not** &#60;/p&#62;&#60;p&#62;**count-if nsubst-if remove-if** &#60;/p&#62;&#60;p&#62;**count-if-not nsubst-if-not remove-if-not** &#60;/p&#62;&#60;p&#62;**delete-if nsubstitute-if subst-if** &#60;/p&#62;&#60;p&#62;**delete-if-not nsubstitute-if-not subst-if-not** &#60;/p&#62;&#60;p&#62;**find-if position-if substitute-if** &#60;/p&#62;&#60;p&#62;**find-if-not position-if-not substitute-if-not**&#60;/p&#62;|
 | :- |
 
 
@@ -127,11 +127,11 @@ Sequences **17–3**
 
  
 
-The element \<i\>E\<sub\>i\</sub\>\</i\> might not be considered directly. If a :key \<i\>argument\</i\> is provided, it is a \<i\>designator\</i\> for a \<i\>function\</i\> of one \<i\>argument\</i\> to be called with each \<i\>E\<sub\>i\</sub\>\</i\> as an \<i\>argument\</i\>, and \<i\>yielding\</i\> an \<i\>object Z\<sub\>i\</sub\>\</i\> to be used for comparison. (If there is no :key \<i\>argument\</i\>, \<i\>Z\<sub\>i\</sub\>\</i\>is \<i\>E\<sub\>i\</sub\>\</i\>.) 
+The element &#60;i&#62;E&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62; might not be considered directly. If a :key &#60;i&#62;argument&#60;/i&#62; is provided, it is a &#60;i&#62;designator&#60;/i&#62; for a &#60;i&#62;function&#60;/i&#62; of one &#60;i&#62;argument&#60;/i&#62; to be called with each &#60;i&#62;E&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62; as an &#60;i&#62;argument&#60;/i&#62;, and &#60;i&#62;yielding&#60;/i&#62; an &#60;i&#62;object Z&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62; to be used for comparison. (If there is no :key &#60;i&#62;argument&#60;/i&#62;, &#60;i&#62;Z&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;is &#60;i&#62;E&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;.) 
 
-\<i\>Functions\</i\> defined in this specification and having a name that ends in “-if” accept a first \<i\>argument\</i\> that is a \<i\>designator\</i\> for a \<i\>function\</i\> of one \<i\>argument\</i\>, \<i\>Z\<sub\>i\</sub\>\</i\>. An \<i\>E\<sub\>i\</sub\>\</i\>is said to \<i\>satisfy the test\</i\> if this :test \<i\>function\</i\> returns a \<i\>generalized boolean\</i\> representing \<i\>true\</i\>. 
+&#60;i&#62;Functions&#60;/i&#62; defined in this specification and having a name that ends in “-if” accept a first &#60;i&#62;argument&#60;/i&#62; that is a &#60;i&#62;designator&#60;/i&#62; for a &#60;i&#62;function&#60;/i&#62; of one &#60;i&#62;argument&#60;/i&#62;, &#60;i&#62;Z&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;. An &#60;i&#62;E&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;is said to &#60;i&#62;satisfy the test&#60;/i&#62; if this :test &#60;i&#62;function&#60;/i&#62; returns a &#60;i&#62;generalized boolean&#60;/i&#62; representing &#60;i&#62;true&#60;/i&#62;. 
 
-\<i\>Functions\</i\> defined in this specification and having a name that ends in “-if-not” accept a first \<i\>argument\</i\> that is a \<i\>designator\</i\> for a \<i\>function\</i\> of one \<i\>argument\</i\>, \<i\>Z\<sub\>i\</sub\>\</i\>. An \<i\>E\<sub\>i\</sub\>\</i\>is said to \<i\>satisfy the test\</i\> if this :test \<i\>function\</i\> returns a \<i\>generalized boolean\</i\> representing \<i\>false\</i\>. 
+&#60;i&#62;Functions&#60;/i&#62; defined in this specification and having a name that ends in “-if-not” accept a first &#60;i&#62;argument&#60;/i&#62; that is a &#60;i&#62;designator&#60;/i&#62; for a &#60;i&#62;function&#60;/i&#62; of one &#60;i&#62;argument&#60;/i&#62;, &#60;i&#62;Z&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;. An &#60;i&#62;E&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;is said to &#60;i&#62;satisfy the test&#60;/i&#62; if this :test &#60;i&#62;function&#60;/i&#62; returns a &#60;i&#62;generalized boolean&#60;/i&#62; representing &#60;i&#62;false&#60;/i&#62;. 
 
 **17.2.2.1 Examples of Satisfying a One-Argument Test** 
 
@@ -455,7 +455,7 @@ Should be prepared to signal an error of *type* **type-error** if *sequence* is 
 
 **Syntax:** 
 
-**map** *result-type function* &rest *sequences*\<sup\>+\</sup\> *→ result* 
+**map** *result-type function* &rest *sequences*&#60;sup&#62;+&#60;/sup&#62; *→ result* 
 
 **Arguments and Values:** 
 
@@ -911,7 +911,7 @@ The sorting operation can be destructive in all cases. In the case of a *vector*
 
 (setq tester (list ’(1 2 3) ’(4 5 6) ’(7 8 9))) *→* ((1 2 3) (4 5 6) (7 8 9)) 
 
-(sort tester #’\> :key #’car) *→* ((7 8 9) (4 5 6) (1 2 3)) 
+(sort tester #’&#62; :key #’car) *→* ((7 8 9) (4 5 6) (1 2 3)) 
 
 (setq tester (list 1 2 3 4 5 6 7 8 9 0)) *→* (1 2 3 4 5 6 7 8 9 0) 
 
@@ -1045,7 +1045,7 @@ If the *sequence* contains an *element* that *satisfies the test*, then the left
 
 **Examples:** 
 
-(find #\d "here are some letters that can be looked at" :test #’char\>) 
+(find #\d "here are some letters that can be looked at" :test #’char&#62;) 
 
 *→* #\Space 
 
@@ -1305,7 +1305,7 @@ The *sequence-1* is modified.
 
 **fill** 
 
-\<b\>\<sup\>substitute, substitute-if, substitute-if-not, nsubsti\</sup\> tute, nsubstitute-if, nsubstitute-if-not\</b\> \<i\>Function\</i\> 
+&#60;b&#62;&#60;sup&#62;substitute, substitute-if, substitute-if-not, nsubsti&#60;/sup&#62; tute, nsubstitute-if, nsubstitute-if-not&#60;/b&#62; &#60;i&#62;Function&#60;/i&#62; 
 
 **Syntax:** 
 
@@ -1403,7 +1403,7 @@ The result of all these functions is a *sequence* of the same *type* as *sequenc
 
 *→* (1 2 4 1 3 9 5) 
 
-(substitute 9 3 ’(1 2 4 1 3 4 5) :test #’\>) *→* (9 9 4 9 3 4 5) 
+(substitute 9 3 ’(1 2 4 1 3 4 5) :test #’&#62;) *→* (9 9 4 9 3 4 5) 
 
 (substitute-if 0 #’evenp ’((1) (2) (3) (4)) :start 2 :key #’car) 
 
@@ -1575,7 +1575,7 @@ If the *result-type* is a *subtype* of **vector**, then if the implementation ca
 
 (setq test2 (list 2 5 8)) 
 
-(merge ’list test1 test2 #’\<) *→* (1 2 3 4 5 6 7 8) 
+(merge ’list test1 test2 #’&#60;) *→* (1 2 3 4 5 6 7 8) 
 
 (setq test1 (copy-seq "BOY")) 
 
@@ -1593,11 +1593,11 @@ Sequences **17–31**
 
 (setq test2 (vector ((yellow . 2) (green . 7)))) 
 
-(merge ’vector test1 test2 #’\< :key #’cdr) 
+(merge ’vector test1 test2 #’&#60; :key #’cdr) 
 
 *→* #((RED . 1) (YELLOW . 2) (BLUE . 4) (GREEN . 7)) 
 
-(merge ’(vector \* 4) ’(1 5) ’(2 4 6) #’\<) should signal an error 
+(merge ’(vector \* 4) ’(1 5) ’(2 4 6) #’&#60;) should signal an error 
 
 **Exceptional Situations:** 
 
@@ -1693,7 +1693,7 @@ Sequences **17–33**
 
 (remove 4 ’(1 2 4 1 3 4 5) :count 1 :from-end t) *→* (1 2 4 1 3 5) 
 
-(remove 3 ’(1 2 4 1 3 4 5) :test #’\>) *→* (4 3 4 5) 
+(remove 3 ’(1 2 4 1 3 4 5) :test #’&#62;) *→* (4 3 4 5) 
 
 (setq lst ’(list of four elements)) *→* (LIST OF FOUR ELEMENTS) 
 
@@ -1727,7 +1727,7 @@ Sequences **17–33**
 
 (setq tester (list 1 2 4 1 3 4 5)) *→* (1 2 4 1 3 4 5) 
 
-(delete 3 tester :test #’\>) *→* (4 3 4 5) 
+(delete 3 tester :test #’&#62;) *→* (4 3 4 5) 
 
 (setq tester (list 1 2 4 1 3 4 5)) *→* (1 2 4 1 3 4 5) 
 

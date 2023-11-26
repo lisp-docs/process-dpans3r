@@ -19,7 +19,7 @@
 
 To **load** a *file* is to treat its contents as *code* and *execute* that *code*. The *file* may contain *source code* or *compiled code*. 
 
-A *file* containing *source code* is called a *source file*. *Loading* a *source file* is accomplished essentially by sequentially *reading*\<sub\>2\</sub\> the *forms* in the file, *evaluating* each immediately after it is *read*. 
+A *file* containing *source code* is called a *source file*. *Loading* a *source file* is accomplished essentially by sequentially *reading*&#60;sub&#62;2&#60;/sub&#62; the *forms* in the file, *evaluating* each immediately after it is *read*. 
 
 A *file* containing *compiled code* is called a *compiled file*. *Loading* a *compiled file* is similar to *loading* a *source file*, except that the *file* does not contain text but rather an *implementation dependent* representation of pre-digested *expressions* created by the *compiler* . Often, a *compiled file* can be *loaded* more quickly than a *source file*. See Section 3.2 (Compilation). 
 
@@ -47,7 +47,7 @@ If a *symbol* naming a *feature* is used as a *feature expression*, the *feature
 
 A **not** *feature expression* succeeds if its argument *feature-conditional* fails; otherwise, it succeeds. 
 
-(and *\{feature-conditional\}*\*) 
+(and *&#123;feature-conditional&#125;*\*) 
 
 An **and** *feature expression* succeeds if all of its argument *feature-conditionals* succeed; otherwise, it fails. 
 
@@ -57,15 +57,15 @@ System Construction **24–1**
 
  
 
-(or *\{feature-conditional\}*\*) 
+(or *&#123;feature-conditional&#125;*\*) 
 
 An **or** *feature expression* succeeds if any of its argument *feature-conditionals* succeed; otherwise, it fails. 
 
 **24.1.2.1.1 Examples of Feature Expressions** 
 
-For example, suppose that in *implementation* A, the *features* spice and perq are *present*, but the *feature* lispm is not *present*; in *implementation* B, the feature lispm is *present*, but the *features* spice and perq are not *present*; and in *implementation* C, none of the features spice, *lispm*, or perq are *present*. Figure 24–1 shows some sample *expressions*, and how they would be *read* \<sub\>2\</sub\> in these *implementations*. 
+For example, suppose that in *implementation* A, the *features* spice and perq are *present*, but the *feature* lispm is not *present*; in *implementation* B, the feature lispm is *present*, but the *features* spice and perq are not *present*; and in *implementation* C, none of the features spice, *lispm*, or perq are *present*. Figure 24–1 shows some sample *expressions*, and how they would be *read* &#60;sub&#62;2&#60;/sub&#62; in these *implementations*. 
 
-|\<p\>(cons #+spice "Spice" #-spice "Lispm" x) \</p\>\<p\>in *implementation* A *. . .* (CONS "Spice" X) \</p\>\<p\>in *implementation* B *. . .* (CONS "Lispm" X) \</p\>\<p\>in *implementation* C *. . .* (CONS "Lispm" X) \</p\>\<p\>(cons #+spice "Spice" #+LispM "Lispm" x) \</p\>\<p\>in *implementation* A *. . .* (CONS "Spice" X) \</p\>\<p\>in *implementation* B *. . .* (CONS "Lispm" X) \</p\>\<p\>in *implementation* C *. . .* (CONS X) \</p\>\<p\>(setq a ’(1 2 #+perq 43 #+(not perq) 27)) \</p\>\<p\>in *implementation* A *. . .* (SETQ A ’(1 2 43)) \</p\>\<p\>in *implementation* B *. . .* (SETQ A ’(1 2 27)) \</p\>\<p\>in *implementation* C *. . .* (SETQ A ’(1 2 27)) \</p\>\<p\>(let ((a 3) #+(or spice lispm) (b 3)) (foo a)) \</p\>\<p\>in *implementation* A *. . .* (LET ((A 3) (B 3)) (FOO A)) \</p\>\<p\>in *implementation* B *. . .* (LET ((A 3) (B 3)) (FOO A)) \</p\>\<p\>in *implementation* C *. . .* (LET ((A 3)) (FOO A)) \</p\>\<p\>(cons #+Lispm "#+Spice" #+Spice "foo" #-(or Lispm Spice) 7 x) \</p\>\<p\>in *implementation* A *. . .* (CONS "foo" X) \</p\>\<p\>in *implementation* B *. . .* (CONS "#+Spice" X) \</p\>\<p\>in *implementation* C *. . .* (CONS 7 X)\</p\>|
+|&#60;p&#62;(cons #+spice "Spice" #-spice "Lispm" x) &#60;/p&#62;&#60;p&#62;in *implementation* A *. . .* (CONS "Spice" X) &#60;/p&#62;&#60;p&#62;in *implementation* B *. . .* (CONS "Lispm" X) &#60;/p&#62;&#60;p&#62;in *implementation* C *. . .* (CONS "Lispm" X) &#60;/p&#62;&#60;p&#62;(cons #+spice "Spice" #+LispM "Lispm" x) &#60;/p&#62;&#60;p&#62;in *implementation* A *. . .* (CONS "Spice" X) &#60;/p&#62;&#60;p&#62;in *implementation* B *. . .* (CONS "Lispm" X) &#60;/p&#62;&#60;p&#62;in *implementation* C *. . .* (CONS X) &#60;/p&#62;&#60;p&#62;(setq a ’(1 2 #+perq 43 #+(not perq) 27)) &#60;/p&#62;&#60;p&#62;in *implementation* A *. . .* (SETQ A ’(1 2 43)) &#60;/p&#62;&#60;p&#62;in *implementation* B *. . .* (SETQ A ’(1 2 27)) &#60;/p&#62;&#60;p&#62;in *implementation* C *. . .* (SETQ A ’(1 2 27)) &#60;/p&#62;&#60;p&#62;(let ((a 3) #+(or spice lispm) (b 3)) (foo a)) &#60;/p&#62;&#60;p&#62;in *implementation* A *. . .* (LET ((A 3) (B 3)) (FOO A)) &#60;/p&#62;&#60;p&#62;in *implementation* B *. . .* (LET ((A 3) (B 3)) (FOO A)) &#60;/p&#62;&#60;p&#62;in *implementation* C *. . .* (LET ((A 3)) (FOO A)) &#60;/p&#62;&#60;p&#62;(cons #+Lispm "#+Spice" #+Spice "foo" #-(or Lispm Spice) 7 x) &#60;/p&#62;&#60;p&#62;in *implementation* A *. . .* (CONS "foo" X) &#60;/p&#62;&#60;p&#62;in *implementation* B *. . .* (CONS "#+Spice" X) &#60;/p&#62;&#60;p&#62;in *implementation* C *. . .* (CONS 7 X)&#60;/p&#62;|
 | :- |
 
 
@@ -347,7 +347,7 @@ An error of *type* **file-error** might be signaled if (wild-pathname-p *filespe
 
 **Syntax:** 
 
-**with-compilation-unit** ([[ *↓option* ]]) *\{form\}*\* *→ \{result\}*\* 
+**with-compilation-unit** ([[ *↓option* ]]) *&#123;form&#125;*\* *→ &#123;result&#125;*\* 
 
 *option::*=:override *override* 
 
@@ -471,7 +471,7 @@ Section 1.5.2.1.1 (Use of Read-Time Conditionals), Section 2.4 (Standard Macro C
 
 The *value* of **\*features\*** is used by the #+ and #- reader syntax. 
 
-*Symbols* in the *features list* may be in any *package*, but in practice they are generally in the KEYWORD *package*. This is because KEYWORD is the *package* used by default when *reading*\<sub\>2\</sub\> *feature expressions* in the #+ and #- *reader macros*. *Code* that needs to name a *feature*\<sub\>2\</sub\> in a *package P* (other than KEYWORD) can do so by making explicit use of a *package prefix* for *P*, but note that such *code* must also assure that the *package P* exists in order for the *feature expression* to be *read* \<sub\>2\</sub\>—even in cases where the *feature expression* is expected to fail. 
+*Symbols* in the *features list* may be in any *package*, but in practice they are generally in the KEYWORD *package*. This is because KEYWORD is the *package* used by default when *reading*&#60;sub&#62;2&#60;/sub&#62; *feature expressions* in the #+ and #- *reader macros*. *Code* that needs to name a *feature*&#60;sub&#62;2&#60;/sub&#62; in a *package P* (other than KEYWORD) can do so by making explicit use of a *package prefix* for *P*, but note that such *code* must also assure that the *package P* exists in order for the *feature expression* to be *read* &#60;sub&#62;2&#60;/sub&#62;—even in cases where the *feature expression* is expected to fail. 
 
 It is generally considered wise for an *implementation* to include one or more *features* identifying the specific *implementation*, so that conditional expressions can be written which distinguish idiosyncrasies of one *implementation* from those of another. Since features are normally *symbols* in the KEYWORD *package* where name collisions might easily result, and since no uniquely defined 
 

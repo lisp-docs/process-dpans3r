@@ -114,13 +114,13 @@ If a *form* is a *symbol* that is not a *symbol macro*, then it is the *name* of
 
 
 
-and *constant variables*. A *variable* can store one *object*. The main operations on a *variable* are to *read* \<sub\>1\</sub\> and to *write*\<sub\>1\</sub\> its *value*. 
+and *constant variables*. A *variable* can store one *object*. The main operations on a *variable* are to *read* &#60;sub&#62;1&#60;/sub&#62; and to *write*&#60;sub&#62;1&#60;/sub&#62; its *value*. 
 
 An error of *type* **unbound-variable** should be signaled if an *unbound variable* is referenced. 
 
-*Non-constant variables* can be *assigned* by using **setq** or *bound* \<sub\>3\</sub\> by using **let**. Figure 3–1 lists some *defined names* that are applicable to assigning, binding, and defining *variables*. 
+*Non-constant variables* can be *assigned* by using **setq** or *bound* &#60;sub&#62;3&#60;/sub&#62; by using **let**. Figure 3–1 lists some *defined names* that are applicable to assigning, binding, and defining *variables*. 
 
-|\<p\>**boundp let progv** \</p\>\<p\>**defconstant let\* psetq** \</p\>\<p\>**defparameter makunbound set** \</p\>\<p\>**defvar multiple-value-bind setq** \</p\>\<p\>**lambda multiple-value-setq symbol-value**\</p\>|
+|&#60;p&#62;**boundp let progv** &#60;/p&#62;&#60;p&#62;**defconstant let\* psetq** &#60;/p&#62;&#60;p&#62;**defparameter makunbound set** &#60;/p&#62;&#60;p&#62;**defvar multiple-value-bind setq** &#60;/p&#62;&#60;p&#62;**lambda multiple-value-setq symbol-value**&#60;/p&#62;|
 | :- |
 
 
@@ -132,7 +132,7 @@ The following is a description of each kind of variable.
 
 A *lexical variable* is a *variable* that can be referenced only within the *lexical scope* of the *form* that establishes that *variable*; *lexical variables* have *lexical scope*. Each time a *form* creates a *lexical binding* of a *variable*, a *fresh binding* is *established*. 
 
-Within the *scope* of a *binding* for a *lexical variable name*, uses of that *name* as a *variable* are considered to be references to that *binding* except where the *variable* is *shadowed* \<sub\>2\</sub\> by a *form* that *establishes* a *fresh binding* for that *variable name*, or by a *form* that locally *declares* the *name* **special**. 
+Within the *scope* of a *binding* for a *lexical variable name*, uses of that *name* as a *variable* are considered to be references to that *binding* except where the *variable* is *shadowed* &#60;sub&#62;2&#60;/sub&#62; by a *form* that *establishes* a *fresh binding* for that *variable name*, or by a *form* that locally *declares* the *name* **special**. 
 
 A *lexical variable* always has a *value*. There is no *operator* that introduces a *binding* for a *lexical variable* without giving it an initial *value*, nor is there any *operator* that can make a *lexical variable* be *unbound*. 
 
@@ -144,7 +144,7 @@ A *variable* is a *dynamic variable* if one of the following conditions hold:
 
 *•* It is locally declared or globally proclaimed **special**. 
 
-*•* It occurs textually within a *form* that creates a *dynamic binding* for a *variable* of the *same name*, and the *binding* is not *shadowed* \<sub\>2\</sub\> by a *form* that creates a *lexical binding* of the same *variable name*. 
+*•* It occurs textually within a *form* that creates a *dynamic binding* for a *variable* of the *same name*, and the *binding* is not *shadowed* &#60;sub&#62;2&#60;/sub&#62; by a *form* that creates a *lexical binding* of the same *variable name*. 
 
 A *dynamic variable* can be referenced at any time in any *program*; there is no textual limitation on references to *dynamic variables*. At any given time, all *dynamic variables* with a given name refer to exactly one *binding*, either in the *dynamic environment* or in the *global environment*.  
 
@@ -206,7 +206,7 @@ Some *special operators* create new lexical or dynamic *environments* for use du
 
 The set of *special operator names* is fixed in Common Lisp; no way is provided for the user to define a *special operator* . Figure 3–2 lists all of the Common Lisp *symbols* that have definitions as *special operators*. 
 
-|\<p\>**block let\* return-from** \</p\>\<p\>**catch load-time-value setq** \</p\>\<p\>**eval-when locally symbol-macrolet flet macrolet tagbody** \</p\>\<p\>**function multiple-value-call the** \</p\>\<p\>**go multiple-value-prog1 throw** \</p\>\<p\>**if progn unwind-protect labels progv** \</p\>\<p\>**let quote**\</p\>|
+|&#60;p&#62;**block let\* return-from** &#60;/p&#62;&#60;p&#62;**catch load-time-value setq** &#60;/p&#62;&#60;p&#62;**eval-when locally symbol-macrolet flet macrolet tagbody** &#60;/p&#62;&#60;p&#62;**function multiple-value-call the** &#60;/p&#62;&#60;p&#62;**go multiple-value-prog1 throw** &#60;/p&#62;&#60;p&#62;**if progn unwind-protect labels progv** &#60;/p&#62;&#60;p&#62;**let quote**&#60;/p&#62;|
 | :- |
 
 
@@ -262,7 +262,7 @@ A *binding* for a *function name* can be *established* in one of several ways. A
 
 Figure 3–4 lists some *defined names* that are applicable to *functions*. 
 
-|\<p\>**apply fdefinition mapcan** \</p\>\<p\>**call-arguments-limit flet mapcar** \</p\>\<p\>**complement fmakunbound mapcon** \</p\>\<p\>**constantly funcall mapl** \</p\>\<p\>**defgeneric function maplist** \</p\>\<p\>**defmethod functionp multiple-value-call defun labels reduce** \</p\>\<p\>**fboundp map symbol-function**\</p\>|
+|&#60;p&#62;**apply fdefinition mapcan** &#60;/p&#62;&#60;p&#62;**call-arguments-limit flet mapcar** &#60;/p&#62;&#60;p&#62;**complement fmakunbound mapcon** &#60;/p&#62;&#60;p&#62;**constantly funcall mapl** &#60;/p&#62;&#60;p&#62;**defgeneric function maplist** &#60;/p&#62;&#60;p&#62;**defmethod functionp multiple-value-call defun labels reduce** &#60;/p&#62;&#60;p&#62;**fboundp map symbol-function**&#60;/p&#62;|
 | :- |
 
 
@@ -434,29 +434,29 @@ Consider the call (contorted-example nil nil 2). This produces 4. During the cou
 
 (contorted-example nil nil 2) 
 
-(block here\<sub\>1\</sub\> ...) 
+(block here&#60;sub&#62;1&#60;/sub&#62; ...) 
 
-(contorted-example nil #’(lambda () (return-from here\<sub\>1\</sub\> 4)) 1) 
+(contorted-example nil #’(lambda () (return-from here&#60;sub&#62;1&#60;/sub&#62; 4)) 1) 
 
-(block here\<sub\>2\</sub\> ...) 
+(block here&#60;sub&#62;2&#60;/sub&#62; ...) 
 
-(contorted-example #’(lambda () (return-from here\<sub\>1\</sub\> 4)) 
+(contorted-example #’(lambda () (return-from here&#60;sub&#62;1&#60;/sub&#62; 4)) 
 
-#’(lambda () (return-from here\<sub\>2\</sub\> 4)) 
+#’(lambda () (return-from here&#60;sub&#62;2&#60;/sub&#62; 4)) 
 
 \0) 
 
 (funcall f) 
 
-where f *→* #’(lambda () (return-from here\<sub\>1\</sub\> 4))  
+where f *→* #’(lambda () (return-from here&#60;sub&#62;1&#60;/sub&#62; 4))  
 
 
 
-(return-from here\<sub\>1\</sub\> 4) 
+(return-from here&#60;sub&#62;1&#60;/sub&#62; 4) 
 
-At the time the funcall is executed there are two **block** *exit points* outstanding, each apparently named here. The **return-from** *form* executed as a result of the funcall operation refers to the outer outstanding *exit point* (here\<sub\>1\</sub\>), not the inner one (here\<sub\>2\</sub\>). It refers to that *exit point* textually visible at the point of execution of **function** (here abbreviated by the #’ syntax) that resulted in creation of the *function object* actually invoked by **funcall**. 
+At the time the funcall is executed there are two **block** *exit points* outstanding, each apparently named here. The **return-from** *form* executed as a result of the funcall operation refers to the outer outstanding *exit point* (here&#60;sub&#62;1&#60;/sub&#62;), not the inner one (here&#60;sub&#62;2&#60;/sub&#62;). It refers to that *exit point* textually visible at the point of execution of **function** (here abbreviated by the #’ syntax) that resulted in creation of the *function object* actually invoked by **funcall**. 
 
-If, in this example, one were to change the (funcall f) to (funcall g), then the value of the call (contorted-example nil nil 2) would be 9. The value would change because **funcall** would cause the execution of (return-from here\<sub\>2\</sub\> 4), thereby causing a return from the inner *exit point* (here\<sub\>2\</sub\>). 
+If, in this example, one were to change the (funcall f) to (funcall g), then the value of the call (contorted-example nil nil 2) would be 9. The value would change because **funcall** would cause the execution of (return-from here&#60;sub&#62;2&#60;/sub&#62; 4), thereby causing a return from the inner *exit point* (here&#60;sub&#62;2&#60;/sub&#62;). 
 
 When that occurs, the value 4 is returned from the middle invocation of contorted-example, 5 is added to that to get 9, and that value is returned from the outer block and the outermost call to contorted-example. The point is that the choice of *exit point* returned from has nothing to do with its being innermost or outermost; rather, it depends on the lexical environment that is packaged up with a *lambda expression* when **function** is executed. 
 
@@ -504,15 +504,15 @@ Ordinarily the result of calling a *function* is a single *object*. Sometimes, h
 
 In order to receive other than exactly one value from a *form*, one of several *special forms* or *macros* must be used to request those values. If a *form* produces *multiple values* which were not requested in this way, then the first value is given to the caller and all others are discarded; if the *form* produces zero values, then the caller receives **nil** as a value. 
 
-Figure 3–5 lists some *operators* for receiving *multiple values*\<sub\>2\</sub\>. These *operators* can be used to specify one or more *forms* to *evaluate* and where to put the *values* returned by those *forms*. 
+Figure 3–5 lists some *operators* for receiving *multiple values*&#60;sub&#62;2&#60;/sub&#62;. These *operators* can be used to specify one or more *forms* to *evaluate* and where to put the *values* returned by those *forms*. 
 
-|\<p\>**multiple-value-bind multiple-value-prog1 return-from multiple-value-call multiple-value-setq throw** \</p\>\<p\>**multiple-value-list return**\</p\>|
+|&#60;p&#62;**multiple-value-bind multiple-value-prog1 return-from multiple-value-call multiple-value-setq throw** &#60;/p&#62;&#60;p&#62;**multiple-value-list return**&#60;/p&#62;|
 | :- |
 
 
 **Figure 3–5. Some operators applicable to receiving multiple values** 
 
-The *function* **values** can produce *multiple values*\<sub\>2\</sub\>. (values) returns zero values; (values *form*) returns the *primary value* returned by *form*; (values *form1 form2*) returns two values, the *primary value* of *form1* and the *primary value* of *form2*; and so on. 
+The *function* **values** can produce *multiple values*&#60;sub&#62;2&#60;/sub&#62;. (values) returns zero values; (values *form*) returns the *primary value* returned by *form*; (values *form1 form2*) returns two values, the *primary value* of *form1* and the *primary value* of *form2*; and so on. 
 
 See **multiple-values-limit** and **values-list**.  
 
@@ -574,7 +574,7 @@ Conceptually, compilation is a process that traverses code, performs certain kin
 
 A *compiler macro* can be defined for a *name* that also names a *function* or *macro*. That is, it is possible for a *function name* to name both a *function* and a *compiler macro*. 
 
-A *function name* names a *compiler macro* if **compiler-macro-function** is *true* of the *function name* in the *lexical environment* in which it appears. Creating a *lexical binding* for the *function name* not only creates a new local *function* or *macro* definition, but also *shadows*\<sub\>2\</sub\> the *compiler macro*. 
+A *function name* names a *compiler macro* if **compiler-macro-function** is *true* of the *function name* in the *lexical environment* in which it appears. Creating a *lexical binding* for the *function name* not only creates a new local *function* or *macro* definition, but also *shadows*&#60;sub&#62;2&#60;/sub&#62; the *compiler macro*. 
 
 The *function* returned by **compiler-macro-function** is a *function* of two arguments, called the expansion function. To expand a *compiler macro*, the expansion function is invoked by calling the *macroexpand hook* with the expansion function as its first argument, the entire compiler macro *form* as its second argument, and the current compilation *environment* (or with the current lexical *environment*, if the *form* is being processed by something other than **compile-file**) as its third  
 
@@ -724,7 +724,7 @@ Processing of *top level forms* in the file compiler is defined as follows:
 
 |**CT LT E Mode Action New Mode**|
 | :- |
-|\<p\>Yes Yes — — Process compile-time-too No Yes Yes CTT Process compile-time-too No Yes Yes NCT Process not-compile-time No Yes No — Process not-compile-time Yes No — — Evaluate — \</p\>\<p\>No No Yes CTT Evaluate — No No Yes NCT Discard — No No No — Discard —\</p\>|
+|&#60;p&#62;Yes Yes — — Process compile-time-too No Yes Yes CTT Process compile-time-too No Yes Yes NCT Process not-compile-time No Yes No — Process not-compile-time Yes No — — Evaluate — &#60;/p&#62;&#60;p&#62;No No Yes CTT Evaluate — No No Yes NCT Discard — No No No — Discard —&#60;/p&#62;|
 
 
 **Figure 3–7. EVAL-WHEN processing** 
@@ -857,19 +857,19 @@ referencing it as a *literal object* is *loaded*. The *loader* finds the corresp
 
 **random-state** 
 
-Two *random states S* and *C* are *similar* if *S* would always produce the same sequence of pseudo-random numbers as a *copy*\<sub\>5\</sub\> of *C* when given as the *random-state argument* to the *function* **random**, assuming equivalent *limit arguments* in each case. 
+Two *random states S* and *C* are *similar* if *S* would always produce the same sequence of pseudo-random numbers as a *copy*&#60;sub&#62;5&#60;/sub&#62; of *C* when given as the *random-state argument* to the *function* **random**, assuming equivalent *limit arguments* in each case. 
 
 (Note that since *C* has been processed by the *file compiler* , it cannot be used directly as an *argument* to **random** because **random** would perform a side effect.) 
 
 **cons** 
 
-Two *conses*, *S* and *C*, are *similar* if the *car* \<sub\>2\</sub\> of *S* is *similar* to the *car* \<sub\>2\</sub\> of *C*, and the *cdr* \<sub\>2\</sub\> of *S* is *similar* to the *cdr* \<sub\>2\</sub\> of *C*. 
+Two *conses*, *S* and *C*, are *similar* if the *car* &#60;sub&#62;2&#60;/sub&#62; of *S* is *similar* to the *car* &#60;sub&#62;2&#60;/sub&#62; of *C*, and the *cdr* &#60;sub&#62;2&#60;/sub&#62; of *S* is *similar* to the *cdr* &#60;sub&#62;2&#60;/sub&#62; of *C*. 
 
 **array** 
 
 Two one-dimensional *arrays*, *S* and *C*, are *similar* if the *length* of *S* is *similar* to the *length* of *C*, the *actual array element type* of *S* is *similar* to the *actual array element type* of *C*, and each *active element* of *S* is *similar* to the corresponding *element* of *C*. 
 
-Two *arrays* of *rank* other than one, *S* and *C*, are *similar* if the *rank* of *S* is *similar* to the *rank* of *C*, each *dimension*\<sub\>1\</sub\> of *S* is *similar* to the corresponding *dimension*\<sub\>1\</sub\> of *C*, the *actual array element type* of *S* is *similar* to the *actual array element type* of *C*, and each *element* of *S* is *similar* to the corresponding *element* of *C*. 
+Two *arrays* of *rank* other than one, *S* and *C*, are *similar* if the *rank* of *S* is *similar* to the *rank* of *C*, each *dimension*&#60;sub&#62;1&#60;/sub&#62; of *S* is *similar* to the corresponding *dimension*&#60;sub&#62;1&#60;/sub&#62; of *C*, the *actual array element type* of *S* is *similar* to the *actual array element type* of *C*, and each *element* of *S* is *similar* to the corresponding *element* of *C*. 
 
 In addition, if *S* is a *simple array*, then *C* must also be a *simple array*. If *S* is a *displaced array*, has a *fill pointer* , or is *actually adjustable*, *C* is permitted to lack any or all of these qualities. 
 
@@ -1003,7 +1003,7 @@ A *declaration specifier* is an *expression* that can appear at top level of a *
 
 Figure 3–9 shows a list of all *declaration identifiers* defined by this standard. 
 
-|\<p\>**declaration ignore special** \</p\>\<p\>**dynamic-extent inline type** \</p\>\<p\>**ftype notinline** \</p\>\<p\>**ignorable optimize**\</p\>|
+|&#60;p&#62;**declaration ignore special** &#60;/p&#62;&#60;p&#62;**dynamic-extent inline type** &#60;/p&#62;&#60;p&#62;**ftype notinline** &#60;/p&#62;&#60;p&#62;**ignorable optimize**&#60;/p&#62;|
 | :- |
 
 
@@ -1015,7 +1015,7 @@ An implementation is free to support other (*implementation-defined*) *declarati
 
 **3.3.3.1 Shorthand notation for Type Declarations** 
 
-A *type specifier* can be used as a *declaration identifier* . (*type-specifier \{var\}*\*) is taken as shorthand for (type *type-specifier \{var\}*\*). 
+A *type specifier* can be used as a *declaration identifier* . (*type-specifier &#123;var&#125;*\*) is taken as shorthand for (type *type-specifier &#123;var&#125;*\*). 
 
 **3.3.4 Declaration Scope** 
 
@@ -1121,7 +1121,7 @@ There are several kinds of *lambda lists*.
 
 |**Context Kind of Lambda List**|
 | :- |
-|\<p\>**defun** *form ordinary lambda list* \</p\>\<p\>**defmacro** *form macro lambda list* \</p\>\<p\>*lambda expression ordinary lambda list* \</p\>\<p\>**flet** local *function* definition *ordinary lambda list* \</p\>\<p\>**labels** local *function* definition *ordinary lambda list* \</p\>\<p\>**handler-case** *clause* specification *ordinary lambda list* \</p\>\<p\>**restart-case** *clause* specification *ordinary lambda list* \</p\>\<p\>**macrolet** local *macro* definition *macro lambda list* \</p\>\<p\>**define-method-combination** *ordinary lambda list* \</p\>\<p\>**define-method-combination** :arguments option *define-method-combination arguments lambda list***defstruct** :constructor option *boa lambda list* \</p\>\<p\>**defgeneric** *form generic function lambda list* **defgeneric** *method* clause *specialized lambda list* \</p\>\<p\>**defmethod** *form specialized lambda list* \</p\>\<p\>**defsetf** *form defsetf lambda list* \</p\>\<p\>**define-setf-expander** *form macro lambda list* \</p\>\<p\>**deftype** *form deftype lambda list* \</p\>\<p\>**destructuring-bind** *form destructuring lambda list* **define-compiler-macro** *form macro lambda list* \</p\>\<p\>**define-modify-macro** *form define-modify-macro lambda list*\</p\>|
+|&#60;p&#62;**defun** *form ordinary lambda list* &#60;/p&#62;&#60;p&#62;**defmacro** *form macro lambda list* &#60;/p&#62;&#60;p&#62;*lambda expression ordinary lambda list* &#60;/p&#62;&#60;p&#62;**flet** local *function* definition *ordinary lambda list* &#60;/p&#62;&#60;p&#62;**labels** local *function* definition *ordinary lambda list* &#60;/p&#62;&#60;p&#62;**handler-case** *clause* specification *ordinary lambda list* &#60;/p&#62;&#60;p&#62;**restart-case** *clause* specification *ordinary lambda list* &#60;/p&#62;&#60;p&#62;**macrolet** local *macro* definition *macro lambda list* &#60;/p&#62;&#60;p&#62;**define-method-combination** *ordinary lambda list* &#60;/p&#62;&#60;p&#62;**define-method-combination** :arguments option *define-method-combination arguments lambda list***defstruct** :constructor option *boa lambda list* &#60;/p&#62;&#60;p&#62;**defgeneric** *form generic function lambda list* **defgeneric** *method* clause *specialized lambda list* &#60;/p&#62;&#60;p&#62;**defmethod** *form specialized lambda list* &#60;/p&#62;&#60;p&#62;**defsetf** *form defsetf lambda list* &#60;/p&#62;&#60;p&#62;**define-setf-expander** *form macro lambda list* &#60;/p&#62;&#60;p&#62;**deftype** *form deftype lambda list* &#60;/p&#62;&#60;p&#62;**destructuring-bind** *form destructuring lambda list* **define-compiler-macro** *form macro lambda list* &#60;/p&#62;&#60;p&#62;**define-modify-macro** *form define-modify-macro lambda list*&#60;/p&#62;|
 
 
 \* 
@@ -1142,7 +1142,7 @@ An *ordinary lambda list* is used to describe how a set of *arguments* is receiv
 
 
 
-|\<p\>**define-method-combination handler-case restart-case defun labels** \</p\>\<p\>**flet lambda**\</p\>|
+|&#60;p&#62;**define-method-combination handler-case restart-case defun labels** &#60;/p&#62;&#60;p&#62;**flet lambda**&#60;/p&#62;|
 | :- |
 
 
@@ -1150,7 +1150,7 @@ An *ordinary lambda list* is used to describe how a set of *arguments* is receiv
 
 An *ordinary lambda list* can contain the *lambda list keywords* shown in Figure 3–13. 
 
-|\<p\>**&allow-other-keys &key &rest** \</p\>\<p\>**&aux &optional**\</p\>|
+|&#60;p&#62;**&allow-other-keys &key &rest** &#60;/p&#62;&#60;p&#62;**&aux &optional**&#60;/p&#62;|
 | :- |
 
 
@@ -1160,23 +1160,23 @@ Each *element* of a *lambda list* is either a parameter specifier or a *lambda l
 
 The syntax for *ordinary lambda lists* is as follows: 
 
-*lambda-list::*=(*\{var\}*\* 
+*lambda-list::*=(*&#123;var&#125;*\* 
 
-[&optional *\{var |* (*var* [*init-form* [*supplied-p-parameter*]])*\}*\*] 
+[&optional *&#123;var |* (*var* [*init-form* [*supplied-p-parameter*]])*&#125;*\*] 
 
 [&rest *var*] 
 
-[&key *\{var |* (*\{var |* (*keyword-name var*)*\}* [*init-form* [*supplied-p-parameter*]])*\}*\* 
+[&key *&#123;var |* (*&#123;var |* (*keyword-name var*)*&#125;* [*init-form* [*supplied-p-parameter*]])*&#125;*\* 
 
 [&allow-other-keys]] 
 
-[&aux *\{var |* (*var* [*init-form*])*\}*\*]) 
+[&aux *&#123;var |* (*var* [*init-form*])*&#125;*\*]) 
 
 A *var* or *supplied-p-parameter* must be a *symbol* that is not the name of a *constant variable*. 
 
 An *init-form* can be any *form*. Whenever any *init-form* is evaluated for any parameter specifier, that *form* may refer to any parameter variable to the left of the specifier in which the *init-form* appears, including any *supplied-p-parameter* variables, and may rely on the fact that no other parameter variable has yet been bound (including its own parameter variable). 
 
-A *keyword-name* can be any *symbol*, but by convention is normally a *keyword* \<sub\>1\</sub\>; all *standardized functions* follow that convention. 
+A *keyword-name* can be any *symbol*, but by convention is normally a *keyword* &#60;sub&#62;1&#60;/sub&#62;; all *standardized functions* follow that convention. 
 
 An *ordinary lambda list* has five parts, any or all of which may be empty. For information about the treatment of argument mismatches, see Section 3.5 (Error Checking in Function Calls).  
 
@@ -1226,13 +1226,13 @@ Furthermore, if the receiving argument list specifies a regular argument which w
 
 **3.4.1.4.1 Suppressing Keyword Argument Checking** 
 
-If **&allow-other-keys** was specified in the *lambda list* of a *function*, *keyword* \<sub\>2\</sub\> *argument* checking is suppressed in calls to that *function*.  
+If **&allow-other-keys** was specified in the *lambda list* of a *function*, *keyword* &#60;sub&#62;2&#60;/sub&#62; *argument* checking is suppressed in calls to that *function*.  
 
 
 
-If the :allow-other-keys *argument* is *true* in a call to a *function*, *keyword* \<sub\>2\</sub\> *argument* checking is suppressed in that call. 
+If the :allow-other-keys *argument* is *true* in a call to a *function*, *keyword* &#60;sub&#62;2&#60;/sub&#62; *argument* checking is suppressed in that call. 
 
-The :allow-other-keys *argument* is permissible in all situations involving *keyword* \<sub\>2\</sub\> *arguments*, even when its associated *value* is *false*. 
+The :allow-other-keys *argument* is permissible in all situations involving *keyword* &#60;sub&#62;2&#60;/sub&#62; *arguments*, even when its associated *value* is *false*. 
 
 **3.4.1.4.1.1 Examples of Suppressing Keyword Argument Checking** 
 
@@ -1396,19 +1396,19 @@ A *generic function lambda list* is used by **defgeneric**.
 
 A *generic function lambda list* has the following syntax: 
 
-*lambda-list::*=(*\{var\}*\* 
+*lambda-list::*=(*&#123;var&#125;*\* 
 
-[&optional *\{var |* (*var*)*\}*\*] 
+[&optional *&#123;var |* (*var*)*&#125;*\*] 
 
 [&rest *var*] 
 
-[&key *\{var |* (*\{var |* (*keyword-name var*)*\}*)*\}*\* 
+[&key *&#123;var |* (*&#123;var |* (*keyword-name var*)*&#125;*)*&#125;*\* 
 
 [&allow-other-keys]]) 
 
 A *generic function lambda list* can contain the *lambda list keywords* shown in Figure 3–14. 
 
-|\<p\>**&allow-other-keys &optional** \</p\>\<p\>**&key &rest**\</p\>|
+|&#60;p&#62;**&allow-other-keys &optional** &#60;/p&#62;&#60;p&#62;**&key &rest**&#60;/p&#62;|
 | :- |
 
 
@@ -1446,7 +1446,7 @@ A *specialized lambda list* is used to *specialize* a *method* for a particular 
 
 A *specialized lambda list* can contain the *lambda list keywords* shown in Figure 3–16. 
 
-|\<p\>**&allow-other-keys &key &rest** \</p\>\<p\>**&aux &optional**\</p\>|
+|&#60;p&#62;**&allow-other-keys &key &rest** &#60;/p&#62;&#60;p&#62;**&aux &optional**&#60;/p&#62;|
 | :- |
 
 
@@ -1454,13 +1454,13 @@ A *specialized lambda list* can contain the *lambda list keywords* shown in Figu
 
 A *specialized lambda list* is syntactically the same as an *ordinary lambda list* except that each *required parameter* may optionally be associated with a *class* or *object* for which that *parameter* is *specialized*. 
 
-*lambda-list::*=(*\{var |* (*var* [*specializer*])*\}*\* 
+*lambda-list::*=(*&#123;var |* (*var* [*specializer*])*&#125;*\* 
 
-[&optional *\{var |* (*var* [*init-form* [*supplied-p-parameter*]])*\}*\*] 
+[&optional *&#123;var |* (*var* [*init-form* [*supplied-p-parameter*]])*&#125;*\*] 
 
 [&rest *var*] 
 
-[&key *\{var |* (*\{var |* (*keyword-name var*)*\}* [*init-form* [*supplied-p-parameter*]])*\}*\* [&allow-other-keys[&aux *\{var |* (*var* [*init-form*])*\}*\*])  
+[&key *&#123;var |* (*&#123;var |* (*keyword-name var*)*&#125;* [*init-form* [*supplied-p-parameter*]])*&#125;*\* [&allow-other-keys[&aux *&#123;var |* (*var* [*init-form*])*&#125;*\*])  
 
 
 
@@ -1468,7 +1468,7 @@ A *specialized lambda list* is syntactically the same as an *ordinary lambda lis
 
 A *macro lambda list* is used in describing *macros* defined by the *operators* in Figure 3–17. 
 
-|\<p\>**define-compiler-macro defmacro macrolet** \</p\>\<p\>**define-setf-expander**\</p\>|
+|&#60;p&#62;**define-compiler-macro defmacro macrolet** &#60;/p&#62;&#60;p&#62;**define-setf-expander**&#60;/p&#62;|
 | :- |
 
 
@@ -1476,15 +1476,15 @@ A *macro lambda list* is used in describing *macros* defined by the *operators* 
 
 With the additional restriction that an *environment parameter* may appear only once (at any of the positions indicated), a *macro lambda list* has the following syntax: 
 
-*reqvars::*=*\{var | ↓pattern\}*\* 
+*reqvars::*=*&#123;var | ↓pattern&#125;*\* 
 
-*optvars::*=[&optional *\{var |* (*\{var | ↓pattern\}* [*init-form* [*supplied-p-parameter*]])*\}*\*] 
+*optvars::*=[&optional *&#123;var |* (*&#123;var | ↓pattern&#125;* [*init-form* [*supplied-p-parameter*]])*&#125;*\*] 
 
-*restvar::*=[*\{*&rest *|* &body*\} \{var | ↓pattern\}*] 
+*restvar::*=[*&#123;*&rest *|* &body*&#125; &#123;var | ↓pattern&#125;*] 
 
-*keyvars::*=[&key *\{var |* (*\{var |* (*keyword-name \{var | ↓pattern\}*)*\}* [*init-form* [*supplied-p-parameter*]])*\}*\* [&allow-other-keys]] 
+*keyvars::*=[&key *&#123;var |* (*&#123;var |* (*keyword-name &#123;var | ↓pattern&#125;*)*&#125;* [*init-form* [*supplied-p-parameter*]])*&#125;*\* [&allow-other-keys]] 
 
-*auxvars::*=[&aux *\{var |* (*var* [*init-form*])*\}*\*] 
+*auxvars::*=[&aux *&#123;var |* (*var* [*init-form*])*&#125;*\*] 
 
 *envvar::*=[&environment *var*] 
 
@@ -1502,7 +1502,7 @@ With the additional restriction that an *environment parameter* may appear only 
 
 A *macro lambda list* can contain the *lambda list keywords* shown in Figure 3–18. 
 
-|\<p\>**&allow-other-keys &environment &rest** \</p\>\<p\>**&aux &key &whole** \</p\>\<p\>**&body &optional**\</p\>|
+|&#60;p&#62;**&allow-other-keys &environment &rest** &#60;/p&#62;&#60;p&#62;**&aux &key &whole** &#60;/p&#62;&#60;p&#62;**&body &optional**&#60;/p&#62;|
 | :- |
 
 
@@ -1616,15 +1616,15 @@ A *destructuring lambda list* is used by **destructuring-bind**.
 
 A *destructuring lambda list* has the following syntax: 
 
-*reqvars::*=*\{var | ↓lambda-list\}*\* 
+*reqvars::*=*&#123;var | ↓lambda-list&#125;*\* 
 
-*optvars::*=[&optional *\{var |* (*\{var | ↓lambda-list\}* [*init-form* [*supplied-p-parameter*]])*\}*\*] 
+*optvars::*=[&optional *&#123;var |* (*&#123;var | ↓lambda-list&#125;* [*init-form* [*supplied-p-parameter*]])*&#125;*\*] 
 
-*restvar::*=[*\{*&rest *|* &body*\} \{var | ↓lambda-list\}*] 
+*restvar::*=[*&#123;*&rest *|* &body*&#125; &#123;var | ↓lambda-list&#125;*] 
 
-*keyvars::*=[&key *\{var |* (*\{var |* (*keyword-name \{var | ↓lambda-list\}*)*\}* [*init-form* [*supplied-p-parameter*]])*\}*\* [&allow-other-keys]] 
+*keyvars::*=[&key *&#123;var |* (*&#123;var |* (*keyword-name &#123;var | ↓lambda-list&#125;*)*&#125;* [*init-form* [*supplied-p-parameter*]])*&#125;*\* [&allow-other-keys]] 
 
-*auxvars::*=[&aux *\{var |* (*var* [*init-form*])*\}*\*] 
+*auxvars::*=[&aux *&#123;var |* (*var* [*init-form*])*&#125;*\*] 
 
 *envvar::*=[&environment *var*] 
 
@@ -1704,13 +1704,13 @@ A *defsetf lambda list* is used by **defsetf**.
 
 A *defsetf lambda list* has the following syntax: 
 
-*lambda-list::*=(*\{var\}*\* 
+*lambda-list::*=(*&#123;var&#125;*\* 
 
-[&optional *\{var |* (*var* [*init-form* [*supplied-p-parameter*]])*\}*\*] 
+[&optional *&#123;var |* (*var* [*init-form* [*supplied-p-parameter*]])*&#125;*\*] 
 
 [&rest *var*] 
 
-[&key *\{var |* (*\{var |* (*keyword-name var*)*\}* [*init-form* [*supplied-p-parameter*]])*\}*\* 
+[&key *&#123;var |* (*&#123;var |* (*keyword-name var*)*&#125;* [*init-form* [*supplied-p-parameter*]])*&#125;*\* 
 
 [&allow-other-keys]] 
 
@@ -1718,7 +1718,7 @@ A *defsetf lambda list* has the following syntax:
 
 A *defsetf lambda list* can contain the *lambda list keywords* shown in Figure 3–19. 
 
-|\<p\>**&allow-other-keys &key &rest** \</p\>\<p\>**&environment &optional**\</p\>|
+|&#60;p&#62;**&allow-other-keys &key &rest** &#60;/p&#62;&#60;p&#62;**&environment &optional**&#60;/p&#62;|
 | :- |
 
 
@@ -1756,7 +1756,7 @@ A *define-method-combination arguments lambda list* is used by the :arguments op
 
 A *define-method-combination arguments lambda list* can contain the *lambda list keywords* shown in Figure 3–21. 
 
-|\<p\>**&allow-other-keys &key &rest** \</p\>\<p\>**&aux &optional &whole**\</p\>|
+|&#60;p&#62;**&allow-other-keys &key &rest** &#60;/p&#62;&#60;p&#62;**&aux &optional &whole**&#60;/p&#62;|
 | :- |
 
 
@@ -1908,7 +1908,7 @@ Using it as an *argument* to the *function* **random**.
 
 **cons** 
 
-Changing the *car* \<sub\>1\</sub\> or *cdr* \<sub\>1\</sub\> of the *cons*, or performing a *destructive* operation on an *object* which is either the *car* \<sub\>2\</sub\> or the *cdr* \<sub\>2\</sub\> of the *cons*. 
+Changing the *car* &#60;sub&#62;1&#60;/sub&#62; or *cdr* &#60;sub&#62;1&#60;/sub&#62; of the *cons*, or performing a *destructive* operation on an *object* which is either the *car* &#60;sub&#62;2&#60;/sub&#62; or the *cdr* &#60;sub&#62;2&#60;/sub&#62; of the *cons*. 
 
 **array** 
 
@@ -1922,7 +1922,7 @@ Performing a *destructive* operation on another *array* that is displaced to the
 
 Performing a *destructive* operation on any *key*. 
 
-Storing a new *value*\<sub\>4\</sub\> for any *key*, or performing a *destructive* operation on any *object* that is such a *value*. 
+Storing a new *value*&#60;sub&#62;4&#60;/sub&#62; for any *key*, or performing a *destructive* operation on any *object* that is such a *value*. 
 
 Adding or removing entries from the *hash table*. 
 
@@ -1966,23 +1966,23 @@ The following examples illustrate some of the many ways in which the *implementa
 
 (let ((a (list 2 1 4 3 7 6 ’five))) 
 
-(ignore-errors (sort a #’\<)) 
+(ignore-errors (sort a #’&#60;)) 
 
 a) 
 
 *→* (1 2 3 4 6 7 FIVE) 
 
-\<i\>\<sup\>or\</sup\>→\</i\> (2 1 4 3 7 6 FIVE) 
+&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; (2 1 4 3 7 6 FIVE) 
 
-\<i\>\<sup\>or\</sup\>→\</i\> (2) 
+&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; (2) 
 
 (prog foo ((a (list 1 2 3 4 5 6 7 8 9 10))) 
 
-(sort a #’(lambda (x y) (if (zerop (random 5)) (return-from foo a) (\> x y))))) *→* (1 2 3 4 5 6 7 8 9 10) 
+(sort a #’(lambda (x y) (if (zerop (random 5)) (return-from foo a) (&#62; x y))))) *→* (1 2 3 4 5 6 7 8 9 10) 
 
-\<i\>\<sup\>or\</sup\>→\</i\> (3 4 5 6 2 7 8 9 10 1) 
+&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; (3 4 5 6 2 7 8 9 10 1) 
 
-\<i\>\<sup\>or\</sup\>→\</i\> (1 2 4 3)  
+&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; (1 2 4 3)  
 
 
 
@@ -1990,7 +1990,7 @@ a)
 
 **Syntax:** 
 
-**lambda** *lambda-list* [[ *\{declaration\}*\* *| documentation* ]] *\{form\}*\* 
+**lambda** *lambda-list* [[ *&#123;declaration&#125;*\* *| documentation* ]] *&#123;form&#125;*\* 
 
 **Arguments:** 
 
@@ -2026,7 +2026,7 @@ is semantically equivalent to the *function form*
 
 **Syntax:** 
 
-**lambda** *lambda-list* [[ *\{declaration\}*\* *| documentation* ]] *\{form\}*\* *→ function* 
+**lambda** *lambda-list* [[ *&#123;declaration&#125;*\* *| documentation* ]] *&#123;form&#125;*\* *→ function* 
 
 **Arguments and Values:** 
 
@@ -2046,11 +2046,11 @@ is semantically equivalent to the *function form*
 
 Provides a shorthand notation for a **function** *special form* involving a *lambda expression* such that: 
 
-(lambda *lambda-list* [[ *\{declaration\}*\* *| documentation* ]] *\{form\}*\*) 
+(lambda *lambda-list* [[ *&#123;declaration&#125;*\* *| documentation* ]] *&#123;form&#125;*\*) 
 
-*≡* (function (lambda *lambda-list* [[ *\{declaration\}*\* *| documentation* ]] *\{form\}*\*)) 
+*≡* (function (lambda *lambda-list* [[ *&#123;declaration&#125;*\* *| documentation* ]] *&#123;form&#125;*\*)) 
 
-*≡* #’(lambda *lambda-list* [[ *\{declaration\}*\* *| documentation* ]] *\{form\}*\*) 
+*≡* #’(lambda *lambda-list* [[ *&#123;declaration&#125;*\* *| documentation* ]] *&#123;form&#125;*\*) 
 
 **Examples:** 
 
@@ -2120,7 +2120,7 @@ The *tertiary value*, *failure-p*, is *false* if no *conditions* of *type* **err
 
 (setf (symbol-function ’foo) 
 
-(compile nil ’(lambda () "replaced"))) *→* #\<Compiled-Function\> 
+(compile nil ’(lambda () "replaced"))) *→* #&#60;Compiled-Function&#62; 
 
 (foo) *→* "replaced" 
 
@@ -2150,7 +2150,7 @@ Situations in the Compiler).
 
 **Syntax:** 
 
-**eval** *form → \{result\}*\* 
+**eval** *form → &#123;result&#125;*\* 
 
 **Arguments and Values:** 
 
@@ -2200,7 +2200,7 @@ The *argument form* (list ’cdr (car ’((quote (a . b)) c))) is evaluated in t
 
 **Syntax:** 
 
-**eval-when** (*\{situation\}*\*) *\{form\}*\* *→ \{result\}*\* 
+**eval-when** (*&#123;situation&#125;*\*) *&#123;form&#125;*\* *→ &#123;result&#125;*\* 
 
 **Arguments and Values:** 
 
@@ -2586,7 +2586,7 @@ The consequences are undefined if *environment* is *non-nil* in a use of **setf*
 
 **Syntax:** 
 
-**define-compiler-macro** *name lambda-list* [[ *\{declaration\}*\* *| documentation* ]] *\{form\}*\* *→ name* 
+**define-compiler-macro** *name lambda-list* [[ *&#123;declaration&#125;*\* *| documentation* ]] *&#123;form&#125;*\* *→ name* 
 
 **Arguments and Values:** 
 
@@ -2752,7 +2752,7 @@ finally (return (values x1s y1s x2s y2s others)))
 
 ‘(distance-positional ,x1 ,y1 ,x2 ,y2)) 
 
-((and (\< x1s 2) (\< y1s 2) (\< x2s 2) (\< y2s 2) 
+((and (&#60; x1s 2) (&#60; y1s 2) (&#60; x2s 2) (&#60; y2s 2) 
 
 (zerop others)) 
 
@@ -2830,7 +2830,7 @@ The consequences of writing a *compiler macro* definition for a function in the 
 
 **Syntax:** 
 
-**defmacro** *name lambda-list* [[ *\{declaration\}*\* *| documentation* ]] *\{form\}*\* 
+**defmacro** *name lambda-list* [[ *&#123;declaration&#125;*\* *| documentation* ]] *&#123;form&#125;*\* 
 
 *→ name* 
 
@@ -3248,13 +3248,13 @@ Globally establishes an expansion function for the *symbol macro* named by *symb
 
 
 
-Each global reference to *symbol* (*i.e.*, not *shadowed* \<sub\>2\</sub\> by a *binding* for a *variable* or *symbol macro* named by the same *symbol*) is expanded by the normal macro expansion process; see Section 3.1.2.1.1 (Symbols as Forms). The expansion of a *symbol macro* is subject to further *macro expansion* in the same *lexical environment* as the *symbol macro* reference, exactly analogous to normal *macros*. 
+Each global reference to *symbol* (*i.e.*, not *shadowed* &#60;sub&#62;2&#60;/sub&#62; by a *binding* for a *variable* or *symbol macro* named by the same *symbol*) is expanded by the normal macro expansion process; see Section 3.1.2.1.1 (Symbols as Forms). The expansion of a *symbol macro* is subject to further *macro expansion* in the same *lexical environment* as the *symbol macro* reference, exactly analogous to normal *macros*. 
 
-The consequences are unspecified if a **special** declaration is made for *symbol* while in the scope of this definition (*i.e.*, when it is not *shadowed* \<sub\>2\</sub\> by a *binding* for a *variable* or *symbol macro* named by the same *symbol*). 
+The consequences are unspecified if a **special** declaration is made for *symbol* while in the scope of this definition (*i.e.*, when it is not *shadowed* &#60;sub&#62;2&#60;/sub&#62; by a *binding* for a *variable* or *symbol macro* named by the same *symbol*). 
 
 Any use of **setq** to set the value of the *symbol* while in the scope of this definition is treated as if it were a **setf**. **psetq** of *symbol* is treated as if it were a **psetf**, and **multiple-value-setq** is treated as if it were a **setf** of **values**. 
 
-A *binding* for a *symbol macro* can be *shadowed* \<sub\>2\</sub\> by **let** or **symbol-macrolet**. 
+A *binding* for a *symbol macro* can be *shadowed* &#60;sub&#62;2&#60;/sub&#62; by **let** or **symbol-macrolet**. 
 
 **Examples:** 
 
@@ -3296,9 +3296,9 @@ If *symbol* is already defined as a *global variable*, an error of *type* **prog
 
 **Syntax:** 
 
-**symbol-macrolet** (*\{*(*symbol expansion*)*\}*\*) *\{declaration\}*\* *\{form\}*\* 
+**symbol-macrolet** (*&#123;*(*symbol expansion*)*&#125;*\*) *&#123;declaration&#125;*\* *&#123;form&#125;*\* 
 
-*→ \{result\}*\* 
+*→ &#123;result&#125;*\* 
 
 **Arguments and Values:** 
 

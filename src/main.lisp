@@ -59,8 +59,8 @@
 
 ;(defvar *chapter-sections* "\\n\\d\\+.\\d+.*?\\n")
 ;(defvar *chapter-sections* "\\n**\\d+\\.\\d+.*?**\\n")
-;(defvar *chapter-sections* "\\*\\*(\\d+|A)\\.\\d+ [\\W\\w\\s]+?\\*\\*\\s*")
-(defvar *chapter-sections* "\\*\\*(\\d+|A)\\.\\d+ [\\W\\w\\s]+?\\*\\*(?:(?!\\n)\\s)*")
+(defvar *chapter-sections* "\\*\\*(\\d+|A)\\.\\d+ [\\W\\w\\s]+?\\*\\*\\s*")
+(defvar *chapter-sections-title* "\\*\\*(\\d+|A)\\.\\d+ [\\W\\w\\s]+?\\*\\*(?:(?!\\n)\\s)*")
 (defvar *chapter-subsections* "\\*\\*(\\d+|A)\\.\\d+\\.\\d+ [\\W\\w\\s]+?\\*\\*\\s*")
 (defvar *chapter-subsubsections* "\\*\\*(\\d+|A)\\.\\d+\\.\\d+\\.\\d+ [\\W\\w\\s]+?\\*\\*\\s*")
 (defvar *all-subsections* "\\*\\*(\\d+|A)(\\.\\d+)* [\\W\\w\\s]+?\\*\\*")
@@ -201,7 +201,12 @@
   ;;      (get-section-title title))
   ;;     "[A-Z]"))
   ;;   :char-bag "-"))
-  (str:downcase (get-react-component-name title)))
+  ;; (format T "get-title-folder-name~%" title)
+  ;; (format T "~A~%" title)
+  ;; (format T "~A~%" (str:downcase (get-react-component-name (string-trim '(#\^M #\ ) title))))
+  (str:downcase
+   (get-react-component-name
+    (string-trim '(#\^M #\ ) title))))
 
 (defun make-doc-category-json (label &optional position description)
   ;; TODO test the string, then wrap this into a write to file like
@@ -226,7 +231,9 @@
   (if
    (equal #\/ (char (namestring pathname) (- (length (namestring pathname)) 1)))
    pathname
-   (vector-push-extend #\/ (make-adjustable-string (namestring pathname)))))
+   (let ((s (make-adjustable-string (namestring pathname))))
+     (vector-push-extend #\/ s)
+     s)))
 
 (defun create-docusaurus-doc-section (output-dir label &optional position)
   (let* ((folder-name (get-title-folder-name label))
@@ -337,11 +344,14 @@
   ;; import statements for each subsection, then a title of appropiate depth for
   ;; that subsection, and then the React MDX component imported and displayed
   ;; for that subsection under it's respective heading
+  (pprint "get-section-meta-contents")
+  (pprint section-title)
+  (pprint meta-contents-list) 
   (with-output-to-string (s)
     (format s "---~%")
     (format s "title: \"~A\"~%" section-title)
     (format s "---~%~%")
-    (loop for (title filename) in meta-contents-list
+    (loop for (title . filename) in meta-contents-list
 	  do (format s "~A~%" (get-heading title))
 	  do (format s "import ~A from './~A.md';~%"
 		     (str:replace-all
@@ -371,38 +381,36 @@
   (first (cl-ppcre:all-matches-as-strings *all-subsections* subsection-text)))
 
 (defun get-all-subsections (given-string)
+  ;; TODO remove-if nil or empty...
   ;; TODO (seems done, but untested...)
-  (get-text-parts given-string *all-subsections*))
+  ;; TODO see sublime text, add to sbclrc debug 3 optimize flag...
+  (remove-if
+   (lambda (x) (or (equal x NIL) (equal x "")))
+   (get-text-parts given-string *all-subsections*)))
 
 (defun get-section-title (section-text)
-  (let ((match (cl-ppcre:all-matches-as-strings *chapter-sections* section-text)))
+  (let ((match (cl-ppcre:all-matches-as-strings *chapter-sections-title* section-text)))
     (if match (first match) NIL)))
 
-(defun process-section (output-dir section-text)
-  ;; get from regex the section title
-  ;; get the section-dir from merging output dir and get dir for title
-  ;; create file in output dir named dir-for-title .md
-  ;; create folder and _category_.json
-  ;; get section parts and subparts
-  ;; create  _intro.md file
-  ;; mapcar to each subsection process-subsection
-  ;; get from that a list of (filename title)
-  ;; in dir-for-title.md file created, import all created files from
-  ;;   dir-for-title/_subsection.md including _intro.md, and add them
-  ;;   below a heading with the title and the heading level based on the
-  ;;   level of the title
-  ;;   on the top of the file add a # h1 heading with the section title
-  ;;   create _subsection_examples.md file for each subsection, and import
-  ;;   them into the file as well adding an Examples subtitle based
-  ;;   on the previous level's, just one more? better don't or do conditional
-  ;;   rendering for an example page that is empty not to display even the title...
+(defun process-chapter-intro (chapter-dir intro-text)
+  (let* ((section-filename
+	   (uiop:merge-pathnames*
+	    "intro.md"
+	    (ensure-slash-ends-path chapter-dir))))
+;    (create-docusaurus-doc-section chapter-dir "Introduction")
+    (str:to-file
+     section-filename
+     intro-text)))
 
-  ;; create file for section
-  ;; create hidden folder for section
-  ;; find every sub section, independent of depth
-  ;; create a file for each one
-  ;; then import it and set a heading of corresponding depth (to the depth of the section)
-  ;; and display it
+(defun process-section (output-dir section-text)
+  (declaim (optimize (debug 3)))
+  (format T "proess-section~%")
+  (format T "~A~%" (get-section-title section-text))
+  (format T "~A~%" (get-title-folder-name (get-section-title section-text)))
+  (format T "~A~%" output-dir)
+  (format T "~A~%" (ensure-slash-ends-path
+		    (get-title-folder-name (get-section-title section-text))))
+  (format T "~A~%" (ensure-slash-ends-path output-dir))
   (let* ((section-title (get-section-title section-text))
 	 (folder-name (get-title-folder-name section-title))
 	 (section-dir-path (uiop:merge-pathnames*
@@ -413,6 +421,7 @@
 	    (concatenate 'string folder-name ".md")
 	    (ensure-slash-ends-path output-dir))))
     (create-docusaurus-doc-section output-dir section-title)
+;    (break )
     (str:to-file
      section-filename
      (get-section-meta-contents
@@ -451,11 +460,12 @@
 	 (chapter-dir (get-directory-for-chapter filename))
 	 (chapter-text (load-file filename))
 	 (label (get-chapter-label chapter-text))
-	 (category-path (uiop:make-pathname* *category-filename* chapter-dir))
+	 (category-path (uiop:merge-pathnames* *category-filename* chapter-dir))
 	 (section-list (get-chapter-sections chapter-text)))
     (ensure-directories-exist chapter-dir)
     (str:to-file category-path (make-doc-category-json label))
-    (mapcar (lambda (x) (process-section chapter-dir x)) section-list)))
+    (process-chapter-intro chapter-dir (car section-list))
+    (mapcar (lambda (x) (process-section chapter-dir x)) (cdr section-list))))
 
 ;; make function to replace symbols missing
 ;; *hh ii* *.*
@@ -566,7 +576,6 @@
 	   (uiop:directory-files dir-path))))
 
 (defun slice-files-from-dir-to-output (dir-path)
-  ;; TODO
   (mapcar #'process-chapter
 	  (remove-if-not
 	   (lambda (it)
@@ -577,3 +586,5 @@
 ;;(process-files-in-dir *md-dir*)
 ;(format T "~A~%" *load-pathname*)
 ;(format T "~A~%" *load-truename*)
+
+; (slice-files-from-dir-to-output #P"/Users/danielnussenbaum/Development/projects/lisp/roswell-projects/html-to-md/md-files/")

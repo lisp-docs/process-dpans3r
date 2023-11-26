@@ -310,8 +310,16 @@
 		     (add-integer-char-to-letter (char title i) #\A)))))
    'string))
 
+(defvar *subsection-title* "(\\d+|\\w+)(\\.\\d+)* ([\"“”\\w]+\\s*)+")
+
 (defun get-display-title (md-title)
-  (first (cl-ppcre:all-matches-as-strings "(\\d+|\\w+)(\\.\\d+)* (\\w+\\s*)+" md-title)))
+  (first (cl-ppcre:all-matches-as-strings *subsection-title* md-title)))
+
+(defun remove-title (section-text)
+  (str:replace-first
+   (get-subsection-title section-text)
+   ""
+   section-text))
 
 (defun get-mdx-component-name (title)
   (str:replace-all
@@ -374,7 +382,7 @@
 	   (uiop:merge-pathnames*
 	    (concatenate 'string subsection-filename ".md")
 	    (ensure-slash-ends-path section-dir-path))))
-    (str:to-file subsection-filepath subsection-text)
+    (str:to-file subsection-filepath (remove-title subsection-text))
     (cons subsection-title subsection-filename)))
 
 (defun get-subsection-title (subsection-text)
@@ -589,3 +597,6 @@
 ;(format T "~A~%" *load-truename*)
 
 ; (slice-files-from-dir-to-output #P"/Users/danielnussenbaum/Development/projects/lisp/roswell-projects/html-to-md/md-files/")
+
+;; TODO
+;; Need to replace "{" with "&#123;"

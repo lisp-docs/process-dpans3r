@@ -1,55 +1,23 @@
 (defpackage process-dpans3r.code-blocks
   (:use :cl)
-  (:import-from :alexandria )
+  (:import-from :alexandria-2 )
   (:import-from  :cl-ppcre)
   (:import-from :str)
   (:import-from :uiop)
+  (:import-from :process-dpans3r
+		:modify-md-files-in-dir)
   (:export :*headers-regex*
            :*headers-non-regex*
            :*c0*))
 (in-package :process-dpans3r.code-blocks)
 
 (defvar *tex-code-block* "\code[\\s\\S\\n.]*?\endcode")
-(setf *tex-code-block* "\code([\\w\\W\\s\\S\\n.]*?)\endcode")
+(setf *tex-code-block* "\\code([\\w\\W\\s\\S\\n.]*?)\endcode")
 
-(defvar *tex-sample* "It is a description of any of these:
+(defvar *tex-sample* (alexandria-2:read-file-into-string (asdf:system-relative-pathname "process-dpans3r" "tex-files/concept-definitions.tex")))
 
-\code
- (x y)
- (x B A C y)
- (x A B B B B B C y)
- (x C B A B B B y)
-\endcode
-
-\noindent but not any of these:
-
-\code
- (x B B A A C C y)
- (x C B C y)
-\endcode
-
-\noindent In the first case, both {\tt A} and {\tt C} appear too often,
-")
-
-(defvar *md-sample* "
-means that at most one A, any number of B’s, and at most one C can occur in any order. It is a description of any of these: 
-
-(x y) 
-
-(x B A C y) 
-
-(x A B B B B B C y) 
-
-(x C B A B B B y) 
-
-but not any of these: 
-
-(x B B A A C C y) 
-
-(x C B C y) 
-
-In the first case, both A and C appear too often, and in the second case C appears too often. 
-")
+;; TODO which file to load...
+(defvar *md-sample* (alexandria-2:read-file-into-string (asdf:system-relative-pathname "process-dpans3r" "md-files/chap-1.md")))
 
 (defun find-code-blocks (text)
   (ppcre:all-matches-as-strings *tex-code-block* text))
@@ -69,7 +37,6 @@ In the first case, both A and C appear too often, and in the second case C appea
   (coerce
    (loop for char across (get-clean-code-block code-block)
 	 when (ppcre:scan "\\s" (format nil "~A" char))
-					;	   collect #\\ and collect #\\ and collect #\s and collect #\*
 	   collect #\[ and collect #\\
 	   and collect #\n
 	   and collect #\\ 
@@ -81,18 +48,53 @@ In the first case, both A and C appear too often, and in the second case C appea
 		collect #\\ and collect #\(
 	 else when (eq #\) char)
 		collect #\\ and collect #\)
-					;	 else when ()
-	 ;; todo include []{}.*+ and other special characters
+	 else when (eq #\[ char)
+		collect #\\ and collect #\[
+	 else when (eq #\] char)
+		collect #\\ and collect #\]
+	 else when (eq #\{ char)
+		collect #\\ and collect #\{
+	 else when (eq #\} char)
+		collect #\\ and collect #\}
+	 else when (eq #\. char)
+		collect #\\ and collect #\.
+	 else when (eq #\* char)
+		collect #\\ and collect #\*
+	 else when (eq #\+ char)
+		collect #\\ and collect #\+
+	 ;; todo include other special characters
 	 else collect char)
    'string))
 
-(defun find-md-code-block (md-text code-block))
+(defun find-md-code-block (md-text code-block)
+  (ppcre:scan (get-code-block-regex code-block) md-text))
 
-(str:replace-first "code" "```lisp" (first (find-code-block *tex-sample*)))
+(defun replace-md-code-block (md-text code-block)
+  (multiple-value-bind (start end) (find-md-code-block md-text code-block)
+    (concatenate 'string
+		 (subseq md-text 0 start)
+		 (tex-to-md-code code-block)
+		 (subseq md-text end))))
 
-(ppcre:all-matches-as-strings "\code[\\n.\\w\\W]*\endcode" "
-\code
- (x B B A A C C y)
- (x C B C y)
-\endcode
-")
+;; Open all tex files, make list of concatenated lists of all find-code-blocks in each file
+;; then go through each md file, check each code-block, if matches, remove from list, and replace
+;; save files...
+
+(defun build-tex-code-blocks-list ()
+  (mapcar (lambda (x) (find-code-blocks (alexandria-2:read-file-into-string x)))
+	  (remove-if-not
+	   (lambda (it)
+	     (str:suffixp (list (namestring it)) ".tex"))
+	   (uiop:directory-files
+	    (asdf:system-relative-pathname "process-dpans3r" "tex-files/")))))
+
+(defun transform-file-code-blocks (filepath)
+  (str:to-file
+   filepath
+   (remove-headers (load-file filepath))))
+
+(defun process-files ()
+  (modify-md-files-in-dir
+   (asdf:system-relative-pathname "process-dpans3r" "tex-files/")
+   #'transform-file-code-blocks))
+

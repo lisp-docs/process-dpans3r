@@ -176,13 +176,19 @@
     (string-trim '(#\^M #\ ) title))))
 
 (defun get-position-from-label (label)
-  (aref
-   (nth-value
-    1
-    (ppcre:scan-to-strings
-     "\\*?\\*?(((\\d+|\\w)(\\.\\d+)*)[\\s\\w\\W\"“”]*)\\*?\\*?"
-     label))
-   1))
+  (let ((chapter-key (aref
+		      (nth-value
+		       1
+		       (ppcre:scan-to-strings
+			"\\*?\\*?(((\\d+|\\w)(\\.\\d+)*)[\\s\\w\\W\"“”]*)\\*?\\*?"
+			label))
+		      1)))
+    (coerce
+     (loop for char across "A.1"
+	   when (equalp #\A char)
+	     collect #\2 and collect #\7
+	   else collect char)
+     'string)))
 
 (defun get-title-from-label (label)
   (let ((trimed-title

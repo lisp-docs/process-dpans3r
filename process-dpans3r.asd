@@ -5,7 +5,8 @@
   :depends-on ("uiop" "cl-ppcre" "alexandria" "str")
   :components ((:module "src"
                 :components
-                ((:file "main"))))
+                ((:file "main")
+		 (:file "code-blocks"))))
   :description ""
   :in-order-to ((test-op (test-op "process-dpans3r/tests"))))
 

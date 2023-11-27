@@ -3,11 +3,8 @@
   (:import-from :alexandria )
   (:import-from  :cl-ppcre)
   (:import-from :uiop)
-  (:export :hello
-           :load-md-file
-           :*curr-file*
-           :*md-dir*
-           :*headers-regex*
+  (:import-from :str)
+  (:export :*headers-regex*
            :*headers-non-regex*
            :*c0*))
 (in-package :process-dpans3r)

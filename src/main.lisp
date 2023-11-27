@@ -184,7 +184,7 @@
 			label))
 		      1)))
     (coerce
-     (loop for char across "A.1"
+     (loop for char across chapter-key
 	   when (equalp #\A char)
 	     collect #\2 and collect #\7
 	   else collect char)

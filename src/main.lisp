@@ -180,18 +180,23 @@
    (nth-value
     1
     (ppcre:scan-to-strings
-     "\\*\\*((\\d+(\\.\\d+)*)[\\s\\w\\W\"“”]*)\\*\\*"
+     "\\*?\\*?(((\\d+|\\w)(\\.\\d+)*)[\\s\\w\\W\"“”]*)\\*?\\*?"
      label))
    1))
 
 (defun get-title-from-label (label)
-  (aref
-   (nth-value
-    1
-    (ppcre:scan-to-strings
-     "\\*\\*((\\d+(\\.\\d+)*)[\\s\\w\\W\"“”]*)\\*\\*"
-     label))
-   0))
+  (let ((trimed-title
+	  (str:trim 
+	   (aref
+	    (nth-value
+	     1
+	     (ppcre:scan-to-strings
+	      "\\*?\\*?(((\\d+|\\w)(\\.\\d+)*)[ \\w\\W\"“”]*)\\*?\\*?"
+	      label))
+	    0))))
+    (if (str:suffixp (list trimed-title) "**")
+	(subseq trimed-title 0 (- (length trimed-title) 2))
+	trimed-title)))
 
 (defun make-doc-category-json (label &optional position description)
   ;; TODO test the string, then wrap this into a write to file like
@@ -201,14 +206,15 @@
   ;; TODO remove white space from label and *
   ;; TODO change from single to double quotes ' "
   ;; get position from label 
-  (with-output-to-string (s)
-    (format s "{~%  \"label\": \"~A\",~%" (get-title-from-label label))
-    (if position
-	(format s"  \"position\": ~A,~%" position)
-	(format s"  \"position\": ~A,~%" (get-position-from-label label)))
-    (format s "  \"link\": {~%    \"type\": \"generated-index\",~%    ")
-    (format s "\"description\": \"~A\"~%  }~%}~%"
-	    (if description description (get-title-from-label label)))))
+  (if (equal label NIL) ""
+    (with-output-to-string (s)
+      (format s "{~%  \"label\": \"~A\",~%" (get-title-from-label label))
+      (if position
+	  (format s"  \"position\": ~A,~%" position)
+	  (format s"  \"position\": ~A,~%" (get-position-from-label label)))
+      (format s "  \"link\": {~%    \"type\": \"generated-index\",~%    ")
+      (format s "\"description\": \"~A\"~%  }~%}~%"
+	      (if description description (get-title-from-label label))))))
 
 (defvar *category-filename* "_category_.json")
 
@@ -344,9 +350,6 @@
   ;; import statements for each subsection, then a title of appropiate depth for
   ;; that subsection, and then the React MDX component imported and displayed
   ;; for that subsection under it's respective heading
-  (pprint "get-section-meta-contents")
-  (pprint section-title)
-  (pprint meta-contents-list) 
   (with-output-to-string (s)
     (format s "---~%")
     (format s "title: \"~A\"~%" (get-display-title section-title))
@@ -401,13 +404,13 @@
 
 (defun process-section (output-dir section-text)
   (declaim (optimize (debug 3)))
-  (format T "proess-section~%")
-  (format T "~A~%" (get-section-title section-text))
-  (format T "~A~%" (get-title-folder-name (get-section-title section-text)))
-  (format T "~A~%" output-dir)
-  (format T "~A~%" (ensure-slash-ends-path
-		    (get-title-folder-name (get-section-title section-text))))
-  (format T "~A~%" (ensure-slash-ends-path output-dir))
+  ;; (format T "proess-section~%")
+  ;; (format T "~A~%" (get-section-title section-text))
+  ;; (format T "~A~%" (get-title-folder-name (get-section-title section-text)))
+  ;; (format T "~A~%" output-dir)
+  ;; (format T "~A~%" (ensure-slash-ends-path
+  ;; 		    (get-title-folder-name (get-section-title section-text))))
+  ;; (format T "~A~%" (ensure-slash-ends-path output-dir))
   (let* ((section-title (get-section-title section-text))
 	 (folder-name (get-title-folder-name section-title))
 	 (section-dir-path (uiop:merge-pathnames*
@@ -520,8 +523,9 @@
   ;;  (concatenate 'string '(#\Newline) "\\&" '(#\Newline)))
   ;; save-file
 
-  (format T "~A~%" filepath)
-  (format T "~A~%~%" (get-directory-for-chapter filepath)))
+  ;; (format T "~A~%" filepath)
+  ;; (format T "~A~%~%" (get-directory-for-chapter filepath))
+  )
 
 (defun escape-file-html (filepath)
   (str:to-file

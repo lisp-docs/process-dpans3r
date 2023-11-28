@@ -5,7 +5,8 @@
   (:import-from :uiop)
   (:import-from :str)
   (:export :*headers-regex*
-	   :modify-md-files-in-dir
+   :modify-md-files-in-dir
+	   :update-md-files
            :*headers-non-regex*
            :*c0*))
 (in-package :process-dpans3r)

@@ -108,7 +108,8 @@
 
 (defun build-tex-code-blocks-list ()
   (apply #'append
-	 (mapcar (lambda (x) (find-code-blocks (alexandria-2:read-file-into-string x)))
+	 (mapcar (lambda (x) (find-code-blocks (pre-process-tex-text
+						(alexandria-2:read-file-into-string x))))
 		 (remove-if-not
 		  (lambda (it)
 		    (str:suffixp (list (namestring it)) ".tex"))

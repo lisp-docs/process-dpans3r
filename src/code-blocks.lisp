@@ -23,7 +23,7 @@
   (ppcre:all-matches-as-strings *tex-code-block* text))
 
 (defun tex-to-md-code (text)
-  (str:replace-using (list "\\endcode" "\n```\n" "\\code" "\n```lisp\n") text))
+  (str:replace-using (list "\\endcode" "\\n```\\n" "\\code" "\\n```lisp\\n") text))
 
 (defun get-clean-code-block (code-block)
   (str:trim
@@ -34,6 +34,18 @@
     0)))
 
 (defun get-code-block-regex (code-block)
+  (coerce
+   (loop for char across (ppcre:quote-meta-chars (get-clean-code-block code-block))
+	 when (ppcre:scan "\\s" (format nil "~A" char))
+	   collect #\[ and collect #\\
+	   and collect #\n
+	   and collect #\\ 
+	   and collect #\s
+	   and collect #\] and collect #\*
+	 else collect char)
+   'string))
+
+(defun get-code-block-regex-old (code-block)
   (coerce
    (loop for char across (get-clean-code-block code-block)
 	 when (ppcre:scan "\\s" (format nil "~A" char))

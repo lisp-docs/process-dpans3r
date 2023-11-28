@@ -1,0 +1,16 @@
+* tex code blocks that need work
+
+- → in chapter 11
+- chapter 10
+- sample tex text
+\\EV ((1 . \"one\") (2 A B C))
+ (setq object-too object) \\EV ((1 . \"one\") (2 A B C))
+ (setq copy-as-list (copy-list object))
+ (setq copy-as-alist (copy-alist object))
+ (setq copy-as-tree (copy-tree object))
+ (eq object object-too) \\EV \\term{true}
+ (eq copy-as-tree object) \\EV \\term{false}
+ (eql copy-as-tree object) \\EV \\term{false}
+ (equal copy-as-tree object) \\EV \\term{true}
+ (setf (first (cdr (second object))) \"a\"
+       (car (second object)) \"two\"

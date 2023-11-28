@@ -23,7 +23,7 @@
   (ppcre:all-matches-as-strings *tex-code-block* text))
 
 (defun tex-to-md-code (text)
-  (str:replace-using (list "\\endcode" "```" "\\code" "```lisp") text))
+  (str:replace-using (list "\\endcode" "\n```\n" "\\code" "\n```lisp\n") text))
 
 (defun get-clean-code-block (code-block)
   (str:trim
@@ -60,6 +60,8 @@
 		collect #\\ and collect #\.
 	 else when (eq #\* char)
 		collect #\\ and collect #\*
+	 else when (eq #\? char)
+		collect #\\ and collect #\?
 	 else when (eq #\+ char)
 		collect #\\ and collect #\+
 	 ;; todo include other special characters
@@ -76,9 +78,33 @@
 		 (tex-to-md-code code-block)
 		 (subseq md-text end))))
 
-;; Open all tex files, make list of concatenated lists of all find-code-blocks in each file
-;; then go through each md file, check each code-block, if matches, remove from list, and replace
-;; save files...
+;; TODO preprocess all the TeX files to account for the pandocs transformations to MD
+;; \\EV\\s+[^\\s]+ becomes *→()*
+
+(defun pre-process-tex-text (tex-text)
+  (let* ((curr-text tex-text)
+	(tex-arrow-true "\\EV \\term\\{true\\}")
+	(md-arrow-true "*→ true*")
+	(tex-arrow-false "\\EV \\term\\{false\\}")
+	(md-arrow-false "*→ false*")
+	(tex-arrow "\\EV")
+	(md-arrow "*→*")
+	(tex-true "\\term\\{true\\}")
+	(md-true "true")
+	(tex-false "\\term\\{false\\}")
+	(md-false "false")
+	(all-replacements (list
+			   (cons tex-arrow-true md-arrow-true)
+			   (cons tex-arrow-false md-arrow-false)
+			   (cons tex-arrow md-arrow)
+			   (cons tex-true md-true)
+			   (cons tex-false md-false))))
+  (mapcar (lambda (x)
+	    (setf curr-text
+		  (ppcre:regex-replace-all
+		   (car x) curr-text (cdr x))))
+	  all-replacements)
+    curr-text))
 
 (defun build-tex-code-blocks-list ()
   (apply #'append
@@ -90,18 +116,18 @@
 		   (asdf:system-relative-pathname "process-dpans3r" "tex-files/"))))))
 
 (defun transform-file-code-blocks (filepath code-blocks-list)
+  (format T "~%Processing: ~A~%" filepath)
+  (format T "Code Block Quantity: ~A" (length code-blocks-list))
   (let ((md-text (alexandria-2:read-file-into-string filepath))
 	(used-code-blocks NIL))
     (loop for code-block in code-blocks-list
 	  when (find-md-code-block md-text code-block)
 	    do (progn
-		 ;; add the replace-md-code-block... in the end save the file and return
-		 ;; the list of used code-blocks, and remove them like I
-		 ;; did in the REPL
-		 ;; see lime chat for read and print discussion for saving unused code-blocks...
+;		 (format T "Found Code Block: ~A~%" code-block)
 		 (setf md-text (replace-md-code-block md-text code-block))
 		 (push code-block used-code-blocks))
 	  finally
+	     (format T "~%Replaced ~A code blocks" (length used-code-blocks))
 	     (str:to-file filepath md-text)
 	     (return used-code-blocks))))
 
@@ -123,7 +149,8 @@
 		    (lambda (it)
 		      (search ".md" (namestring it)))
 		    (uiop:directory-files
-		     (asdf:system-relative-pathname "process-dpans3r" "tex-files/")))))
+		     (asdf:system-relative-pathname "process-dpans3r" "md-files/")))))
+    (format T "Processing ~A Files" (length file-list))
     (loop for filepath in file-list
 	 do (mapcar
 	     (lambda (x)

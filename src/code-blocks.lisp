@@ -226,4 +226,9 @@
 		    "process-dpans3r"
 		    "program-state/unused-code-blocks.lispdata")))))
 
-
+(defun save-code-block-list ()
+  (str:to-file (asdf:system-relative-pathname
+		    "process-dpans3r"
+		    "output/code-blocks.md")
+	       (format NIL "~{~A~%~%~}"
+		       (mapcar #'tex-to-md-code (build-tex-code-blocks-list)))))

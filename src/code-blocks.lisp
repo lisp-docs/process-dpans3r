@@ -23,7 +23,10 @@
   (ppcre:all-matches-as-strings *tex-code-block* text))
 
 (defun tex-to-md-code (text)
-  (str:replace-using (list "\\endcode" "\\n```\\n" "\\code" "\\n```lisp\\n") text))
+  (str:replace-using (list
+		      "\\endcode" (format NIL "~%```")
+		      "\\code" (format NIL "~%```lisp"))
+		     text))
 
 (defun get-clean-code-block (code-block)
   (str:trim
@@ -33,7 +36,7 @@
      (ppcre:scan-to-strings *tex-code-block* code-block))
     0)))
 
-(defun get-code-block-regex (code-block)
+(defun get-code-block-regex-experimental (code-block)
   (coerce
    (loop for char across (ppcre:quote-meta-chars (get-clean-code-block code-block))
 	 when (ppcre:scan "\\s" (format nil "~A" char))
@@ -45,7 +48,7 @@
 	 else collect char)
    'string))
 
-(defun get-code-block-regex-old (code-block)
+(defun get-code-block-regex (code-block)
   (coerce
    (loop for char across (get-clean-code-block code-block)
 	 when (ppcre:scan "\\s" (format nil "~A" char))
@@ -76,6 +79,8 @@
 		collect #\\ and collect #\?
 	 else when (eq #\+ char)
 		collect #\\ and collect #\+
+	 else when (eq #\→ char)
+		collect #\\ and collect #\→
 	 ;; todo include other special characters
 	 else collect char)
    'string))
@@ -94,23 +99,47 @@
 ;; \\EV\\s+[^\\s]+ becomes *→()*
 
 (defun pre-process-tex-text (tex-text)
+  ;; replace "&#60;" with "<" and ">" and also "{" and "}" and see main.lisp for anything else
+  ;; try to work with https://plaster.tymoon.eu/edit/4022?password#
+  ;; just the text, not the whole file
+  ;; until it works, then do the rest... maybe it get's stuck because of those special values...
   (let* ((curr-text tex-text)
-	(tex-arrow-true "\\\\EV \\\\term\\{true\\}")
-	(md-arrow-true "*→ true*")
-	(tex-arrow-false "\\\\EV \\\\term\\{false\\}")
-	(md-arrow-false "*→ false*")
-	(tex-arrow "\\\\EV")
-	(md-arrow "*→*")
-	(tex-true "\\\\term\\{true\\}")
-	(md-true "true")
-	(tex-false "\\\\term\\{false\\}")
-	(md-false "false")
-	(all-replacements (list
-			   (cons tex-arrow-true md-arrow-true)
-			   (cons tex-arrow-false md-arrow-false)
-			   (cons tex-arrow md-arrow)
-			   (cons tex-true md-true)
-			   (cons tex-false md-false))))
+	 (tex-arrow-true "\\\\EV \\\\term\\{true\\}")
+	 (md-arrow-true "*→ true*")
+	 (tex-arrow-false "\\\\EV \\\\term\\{false\\}")
+	 (md-arrow-false "*→ false*")
+	 (tex-arrow "\\\\EV")
+	 (md-arrow "*→*")
+	 (tex-true "\\\\term\\{true\\}")
+	 (md-true "true")
+	 (tex-false "\\\\term\\{false\\}")
+	 (md-false "false")
+	 ;(md-left-carret "&#60;")
+	 ;(cons "\\{"    "&#123;")
+	 ;(cons "\\}"    "&#125;")
+	 ;(cons "{"    "&#123;")
+	 ;(cons "}"    "&#125;")
+	 ;(cons "\\<"    "&#60;")
+	 ;(cons "<"    "&#60;")
+	 ;(cons "\\>"    "&#62;")
+	 ;(cons ">"    "&#62;")
+
+	 (tex-left-carret)
+	 (all-replacements (list
+			    (cons tex-arrow-true md-arrow-true)
+			    (cons tex-arrow-false md-arrow-false)
+			    (cons tex-arrow md-arrow)
+			    (cons tex-true md-true)
+			    (cons tex-false md-false)
+			    (cons "\\{"    "&#123;")
+			    (cons "\\}"    "&#125;")
+			    (cons "{"    "&#123;")
+			    (cons "}"    "&#125;")
+			    (cons "\\<"    "&#60;")
+			    (cons "<"    "&#60;")
+			    (cons "\\>"    "&#62;")
+			    (cons ">"    "&#62;")			    
+			    )))
   (mapcar (lambda (x)
 	    (setf curr-text
 		  (ppcre:regex-replace-all

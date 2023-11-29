@@ -36,6 +36,16 @@
      (ppcre:scan-to-strings *tex-code-block* code-block))
     0)))
 
+(defun get-clean-code-block-simple (code-block)
+  (str:trim
+   (subseq code-block
+	   (if (search "\\code" code-block)
+	       (search "\\code" code-block)
+	       0)
+	   (if (search "\\endcode" code-block)
+	       (search "\\endcode" code-block)
+	       (length code-block)))))
+  
 (defun get-code-block-regex-experimental (code-block)
   (coerce
    (loop for char across (ppcre:quote-meta-chars (get-clean-code-block code-block))
@@ -85,7 +95,18 @@
 	 else collect char)
    'string))
 
+(defun get-code-block-simple-regex (code-block)
+  (if (< (length code-block) 50)
+      (get-code-block-regex code-block)
+      (concatenate 'string
+		   (get-code-block-regex (subseq code-block 0 25))
+		   "[.\\s\\n]*?"
+		   (get-code-block-regex (subseq code-block
+						 (- (length code-block) 25)
+						 (length code-block))))))
+
 (defun find-md-code-block (md-text code-block)
+  ;; get-code-block-simple-regex
   (ppcre:scan (get-code-block-regex code-block) md-text))
 
 (defun replace-md-code-block (md-text code-block)
@@ -124,7 +145,7 @@
 	 ;(cons "\\>"    "&#62;")
 	 ;(cons ">"    "&#62;")
 
-	 (tex-left-carret)
+	 ;(tex-left-carret)
 	 (all-replacements (list
 			    (cons tex-arrow-true md-arrow-true)
 			    (cons tex-arrow-false md-arrow-false)

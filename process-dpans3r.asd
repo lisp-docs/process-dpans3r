@@ -6,7 +6,8 @@
   :components ((:module "src"
                 :components
                 ((:file "main")
-		 (:file "code-blocks"))))
+		 (:file "code-blocks")
+		 (:file "tex-parser"))))
   :description ""
   :in-order-to ((test-op (test-op "process-dpans3r/tests"))))
 

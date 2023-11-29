@@ -14,3 +14,8 @@
  (equal copy-as-tree object) \\EV \\term{true}
  (setf (first (cdr (second object))) \"a\"
        (car (second object)) \"two\"
+
+- make file of all code blocks turned into md, wihtout tex processing, for manual changes..
+  - same as for tables, list in the file the file source
+- find all tables with regex "\\displaytwo\\{[^\\}]*?\\}\\{[^\\}]*?\\}"
+- again do not replace tables.. maybe just list before the file where they were found and print them to a file...         

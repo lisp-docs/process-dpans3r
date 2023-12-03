@@ -205,7 +205,7 @@ def split_dictionary_content(content):
     print("split_dictionary_content")
 
 def clear_footers(given_dir):
-    footer_regex = r'[A-Z][a-z]+ \*\*(\w|\d+)–\d+\*\*'
+    footer_regex = r'([A-Z][a-z]+ \*\*(\w|\d+)–\d+\*\*)'
     for root, dirs, filenames in os.walk(given_dir):
         for filename in filenames:
             if filename.endswith(".md"):
@@ -213,11 +213,16 @@ def clear_footers(given_dir):
                 curr_file = open(curr_filepath, "r")
                 curr_text = curr_file.read()
                 curr_file.close()
-                match = re.search(footer_regex, curr_text)
-                if match:
-                    print(match.group())
-                    curr_text.replace(match.group(), "")
-
+                # match = re.search(footer_regex, curr_text)
+                matches = re.findall(footer_regex, curr_text)
+                if len(matches) > 0:
+                    print(matches)
+                    for match in matches:
+                        curr_text = curr_text.replace(match[0], "")
+                        curr_file = open(curr_filepath, "w")
+                        curr_file.write(curr_text)
+                        curr_file.close()
+                        
 def main(args=[]):
     code_blocks = get_block_list()
     print(code_blocks[0][0])

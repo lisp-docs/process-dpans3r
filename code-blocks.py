@@ -59,6 +59,36 @@ def get_last_section(filenames):
     # print(all_matches_dict[all_matches_list.sort()[-1]])
     return None
 
+def get_section_number(section_filename):
+    section_name_regex = r'_?((\w+-)+).*'
+    section_number_regex = r'^\w+-\w+'
+    section_name_match = re.search(section_name_regex, last_section_filename)
+    if section_name_match:
+        # print(section_name_match)
+        section_name_matched_string = section_name_match.groups()[0]
+        section_number_match = re.search(section_number_regex, section_name_matched_string).group()
+        return section_number_match
+    raise Exception("Invalid Section Name " + section_filename)
+
+def get_new_section_name(last_section_filename):
+    # print(last_section_filename)
+    section_name_regex = r'_?((\w+-)+).*'
+    section_number_regex = r'^\w+-\w+'
+    section_name_match = re.search(section_name_regex, last_section_filename)
+    if section_name_match:
+        # print(section_name_match)
+        section_name_matched_string = section_name_match.groups()[0]
+        section_number_match = re.search(section_number_regex, section_name_matched_string).group()
+        # print(section_name_matched_string)
+        # print(section_number_match)
+        new_section_number = section_number_match[:-1] + chr(ord(section_number_match[-1]) + 1)
+        new_section_name = new_section_number + "-dictionary"
+        # print(section_number_match[:-1] + chr(ord(section_number_match[-1]) + 1))
+        # print(new_section_name)
+        return new_section_name
+    raise Exception("Could not find section name for " + last_section_filename)
+    
+
 def split_dictionary_files(given_dir):
     # Loop through all files up to one depth
     # get the last file _x-x- or _x-x-x- where x.x.x would be the section number
@@ -89,19 +119,40 @@ def split_dictionary_files(given_dir):
                 last_sec_dir = os.path.join(curr_root, last_section)
                 last_file = get_last_section(os.listdir(last_sec_dir))
                 # print(last_file)
-                curr_file = open(os.path.join(last_sec_dir, last_file), "r")
+                curr_file_path = os.path.join(last_sec_dir, last_file)
+                curr_file = open(curr_file_path, "r")
                 curr_text = curr_file.read()
                 curr_file.close()
-                is_dictionary_file_content(curr_text)
+                if is_dictionary_file_content(curr_text):
+                    process_dictionary_file(curr_root, last_section, curr_file_path, curr_text)
         break
 
+def process_dictionary_file(root, last_section, filapath, curr_text):
+    # Create Folder
+    # Create _category_.json file
+    # Open category json file, parse, get name without r'\d+\. ', add " Dictionary"...
+    # create files (make sure no name conflicts! error if exists!) as _name.md
+    # Create name.md files importing the _name.md and adding "\n\n## Expanded Reference: "
+    #   and add there the first heading 
+    # Add a first heading, get the name from the dicionary item...
+    # Parse all dictionary items appropiately...
+    # print("hello")
+    # os.mkdir()
+    new_section_name = get_new_section_name(last_section)
+    print(os.path.join(root, new_section_name))
+    # os.mkdir(os.path.join(root, new_section_name))
+
+def make_category_json_file(section_name):
+    CATEGORY_JSON = '{\n  "label": "1. Introduction",\n  "position": 1,\n  "link": {\n    "type": "generated-index",\n    "description": "1. Introduction"\n  }\n}\n'
+    curr_json = json.loads(CATEGORY_JSON)
+    # curr_json["position"] = 
 
 def is_dictionary_file_content(content):
     dic_file_regex = r'(\*\*Class Precedence List:\*\*)|(\*\*Syntax:\*\*)'
     matches = re.search(dic_file_regex, content)
     if matches:
-        print(matches.span())
-        print(matches.group())
+        # print(matches.span())
+        # print(matches.group())
         return True
     return False
         # print("is_dictionary_file")

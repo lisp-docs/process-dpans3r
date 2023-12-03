@@ -2,11 +2,12 @@
   :version "0.0.1"
   :author ""
   :license ""
-  :depends-on ("uiop" "cl-ppcre" "alexandria" "str" "com.inuoe.jzon")
+  :depends-on ("uiop" "cl-ppcre" "alexandria" "str" "com.inuoe.jzon" "cl-fad")
   :components ((:module "src"
                 :components
                 ((:file "main")
 		 (:file "code-blocks")
+		 (:file "dictionary-parser")
 		 (:file "tex-parser"))))
   :description ""
   :in-order-to ((test-op (test-op "process-dpans3r/tests"))))

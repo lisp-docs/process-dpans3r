@@ -2,7 +2,7 @@
   :version "0.0.1"
   :author ""
   :license ""
-  :depends-on ("uiop" "cl-ppcre" "alexandria" "str")
+  :depends-on ("uiop" "cl-ppcre" "alexandria" "str" "com.inuoe.jzon")
   :components ((:module "src"
                 :components
                 ((:file "main")

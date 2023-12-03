@@ -226,9 +226,31 @@
 		    "process-dpans3r"
 		    "program-state/unused-code-blocks.lispdata")))))
 
+(defun replace-html-to-normal-chars (given-string)
+  (str:replace-using
+   '( "&#123;" "{"
+     "&#125;" "}"
+     "&#60;" "<"
+     "&#62;" ">"
+     )
+   given-string))
+
+(defun process-tx-code (text)
+  (tex-to-md-code (replace-html-to-normal-chars text)))
+
 (defun save-code-block-list ()
   (str:to-file (asdf:system-relative-pathname
 		    "process-dpans3r"
 		    "output/code-blocks.md")
 	       (format NIL "~{~A~%~%~}"
-		       (mapcar #'tex-to-md-code (build-tex-code-blocks-list)))))
+		       (mapcar #'process-tx-code (build-tex-code-blocks-list)))))
+
+(defun save-json-code-blocks ()
+  (str:to-file (asdf:system-relative-pathname
+		    "process-dpans3r"
+		    "output/code-blocks.json")
+	       (com.inuoe.jzon:stringify
+		(mapcar
+		 (lambda (x)
+		   (list x (get-code-block-regex x)))
+		 (build-tex-code-blocks-list)))))

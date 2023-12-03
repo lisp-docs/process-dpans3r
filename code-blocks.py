@@ -156,9 +156,15 @@ def split_dictionary_text(curr_text):
     item_regex = r'(\*\*.*?\*\* \*[A-Z][a-z]*(\s+\w+)*\*\s*\n)'
     matches = re.findall(item_regex, curr_text)
     start_indices = [m.start(0) for m in re.finditer(item_regex, curr_text)]
-    pprint(matches)
-    pprint(start_indices)
-    print(curr_text[:start_indices[0]])
+    # pprint(matches)
+    # pprint(start_indices)
+    # print(curr_text[:start_indices[0]])
+    split_items = [curr_text[0:start_indices[0]]] 
+    split_items += [curr_text[start_indices[i]:start_indices[i+1]] for i in range(len(start_indices)-1)]
+    split_items += [curr_text[start_indices[-1]:]] 
+    # print(len(start_indices))
+    # print(len(split_items))
+    # print(split_items[2])
     return matches
 
 def create_dicionary_entry_files(file_section, new_section_dir):
@@ -232,5 +238,5 @@ def main(args=[]):
 if __name__ == "__main__":
     # main(sys.argv[1:])
     # replace_code_blocks([], MD_DIR)
-    # split_dictionary_files(MD_DIR)
-    clear_footers(MD_DIR)
+    split_dictionary_files(MD_DIR)
+    # clear_footers(MD_DIR)

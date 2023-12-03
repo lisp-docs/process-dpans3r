@@ -117,10 +117,10 @@ def split_dictionary_files(given_dir):
             last_section = get_last_section(section_dir_names)
             # print(last_section)
             if last_section:
-                # print(last_section)
+                print(last_section)
                 last_sec_dir = os.path.join(curr_root, last_section)
                 last_file = get_last_section(os.listdir(last_sec_dir))
-                # print(last_file)
+                print(last_file)
                 curr_file_path = os.path.join(last_sec_dir, last_file)
                 curr_file = open(curr_file_path, "r")
                 curr_text = curr_file.read()
@@ -186,14 +186,14 @@ def get_new_item_name(names_used, curr_name):
 def create_dicionary_entry_files(file_section, new_section_dir):
     # create _x.md, x.md filename,s import correctly... add first heading as title to x.md
     # avoid name conflicts, make a dic, +a to filenames...
-    print("create_dicionary_entry_files(file_section, new_section_dir)")
+    # print("create_dicionary_entry_files(file_section, new_section_dir)")
     item_regex = r'(\*\*(.*?)\*\* \*[A-Z][a-z]*(\s+\w+)*\*\s*\n)'
     matches = re.match(item_regex, file_section)
     names_used = {}
     if matches:
         groups = matches.groups()
         print(groups)
-        item_name = groups[1]
+        item_name = re.sub("\W", "a", groups[1])
         if item_name in names_used:
             item_name = get_new_item_name(names_used, item_name)
         names_used[item_name] = True
@@ -240,7 +240,7 @@ def make_category_json_file(section_name, root):
     # print(curr_json)
     # print(os.path.join(root, section_name + "/_category_.json"))
     final_category_file = open(os.path.join(root, section_name + "/_category_.json"), "w")
-    final_category_file.write(curr_json)
+    final_category_file.write(json.dumps(curr_json))
     final_category_file.close()
 
     # curr_json["position"] = 

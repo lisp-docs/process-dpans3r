@@ -22,10 +22,10 @@ def replace_code_blocks(code_blocks, given_dir):
         # print`([os.path.join(given_dir, dir) for dir in dirs].)
         for dir in dirs:
             for curr_root, chap_dirs, section_filenames in os.walk(os.path.join(given_dir, dir)):
-                print(os.path.join(given_dir, dir))
+                # print(os.path.join(given_dir, dir))
                 # print(section_filenames)
                 last_section = get_last_section(section_filenames)
-                print(last_section)
+                # print(last_section)
             break
         break
         for filename in filenames:
@@ -101,7 +101,7 @@ def split_dictionary_files(given_dir):
     # then later on modify the content and save the file...
     # the subsections always end with a colon **Notes:**. The titles don't have colons
     # 
-    print("split_dictionary_files")
+    # print("split_dictionary_files")
     for root, dirs, filenames in os.walk(given_dir):
         # print(root)
         # print(dirs)
@@ -112,15 +112,15 @@ def split_dictionary_files(given_dir):
             curr_root = os.path.join(given_dir, dir)
             section_dir_names = [filename for filename in os.listdir(curr_root) if os.path.isdir(os.path.join(curr_root, filename))]
             # for curr_root, chap_dirs, section_filenames in os.walk(os.path.join(given_dir, dir)):
-            print(curr_root)
+            # print(curr_root)
             # print(section_dir_names)
             last_section = get_last_section(section_dir_names)
             # print(last_section)
             if last_section:
-                print(last_section)
+                # print(last_section)
                 last_sec_dir = os.path.join(curr_root, last_section)
                 last_file = get_last_section(os.listdir(last_sec_dir))
-                print(last_file)
+                # print(last_file)
                 curr_file_path = os.path.join(last_sec_dir, last_file)
                 curr_file = open(curr_file_path, "r")
                 curr_text = curr_file.read()
@@ -142,7 +142,7 @@ def process_dictionary_file(root, last_section, curr_file_path, curr_text):
     # os.mkdir()
     new_section_name = get_new_section_name(last_section)
     new_section_dir = os.path.join(root, new_section_name)
-    print(new_section_dir)
+    # print(new_section_dir)
     # print(os.path.join(root, new_section_name))
     os.mkdir(new_section_dir)
     make_category_json_file(new_section_name, root)
@@ -192,16 +192,18 @@ def create_dicionary_entry_files(file_section, new_section_dir):
     names_used = {}
     if matches:
         groups = matches.groups()
-        print(groups)
+        # print(groups)
         item_name = re.sub("\W", "a", "".join([name_part for name_part in groups[1].split("-")]))
         if item_name in names_used:
             item_name = get_new_item_name(names_used, item_name)
         names_used[item_name] = True
-        heading = "# " + groups[0].strip() + "\n\n"
+        # heading = "# " + groups[0].strip() + "\n\n"
+        heading = "# " + groups[1] + "\n\n"
         component_name = "".join([re.sub("\W", "a", item).capitalize() for item in groups[1].split("-")])
         filename = item_name + ".md"
         hidden_filename = "_" + filename
-        hidden_file_text = file_section.replace(groups[0].strip(), "", 1)
+        # hidden_file_text = file_section.replace(groups[0].strip(), "", 1)
+        hidden_file_text = file_section
         import_statement = f"import {component_name} from './{hidden_filename}';\n\n"
         import_component = f"<{component_name} />\n\n"
         expanded_reference = f"## Expanded Reference: {groups[1]}\n\n:::tip\nTODO: Please contribute to this page by adding explanations and examples\n:::\n\n```lisp\n({groups[1]} )\n```\n"
@@ -214,6 +216,7 @@ def create_dicionary_entry_files(file_section, new_section_dir):
         display_file.write(markdown_contents)
         display_file.close()
 
+        print(f"- [{groups[1]}]({os.path.join(new_section_dir, filename)})")
         # print(groups[0].strip())
         # print(groups[1])
         # print(os.path.join(new_section_dir, filename))
@@ -222,7 +225,7 @@ def create_dicionary_entry_files(file_section, new_section_dir):
         # print(file_section)
 
 def make_category_json_file(section_name, root):
-    CATEGORY_JSON = '{\n  "label": "1. Introduction",\n  "position": 1,\n  "link": {\n    "type": "generated-index",\n    "description": "1. Introduction"\n  }\n}\n'
+    CATEGORY_JSON = '{\n  "label": "1. Introduction",\n  "link": {\n    "type": "generated-index",\n    "description": "1. Introduction"\n  }\n}\n'
     curr_json = json.loads(CATEGORY_JSON)
     section_number = get_section_number(section_name)
     new_section_number = ".".join([char_to_num_decode(curr_str) for curr_str in section_number.split("-")])
@@ -234,7 +237,9 @@ def make_category_json_file(section_name, root):
     chapter_category_file.close()
     # print(new_section_number + section_label.split(".")[1] + " Dictionary")
     section_label = new_section_number + section_label.split(".")[1] + " Dictionary"
-    curr_json["position"] = position
+    section_label = re.sub("[\s\*]*&#60;[\*\s]*", "<", section_label)
+    section_label = re.sub("[\s\*]*&#62;[\*\s]*", ">", section_label)
+    # curr_json["position"] = position
     curr_json["label"] = section_label
     curr_json["link"]["description"] = section_label
     # print(curr_json)
@@ -258,8 +263,8 @@ def is_dictionary_file_content(content):
     return False
         # print("is_dictionary_file")
 
-def split_dictionary_content(content):
-    print("split_dictionary_content")
+# def split_dictionary_content(content):
+#     print("split_dictionary_content")
 
 def clear_footers(given_dir):
     footer_regex = r'([A-Z][a-z]+ \*\*(\w|\d+)–\d+\*\*)'
@@ -273,7 +278,7 @@ def clear_footers(given_dir):
                 # match = re.search(footer_regex, curr_text)
                 matches = re.findall(footer_regex, curr_text)
                 if len(matches) > 0:
-                    print(matches)
+                    # print(matches)
                     for match in matches:
                         curr_text = curr_text.replace(match[0], "")
                         curr_file = open(curr_filepath, "w")
@@ -282,9 +287,9 @@ def clear_footers(given_dir):
                         
 def main(args=[]):
     code_blocks = get_block_list()
-    print(code_blocks[0][0])
-    print("\n")
-    print(code_blocks[0][1])
+    # print(code_blocks[0][0])
+    # print("\n")
+    # print(code_blocks[0][1])
 
 if __name__ == "__main__":
     # main(sys.argv[1:])

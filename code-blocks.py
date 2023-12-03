@@ -193,12 +193,12 @@ def create_dicionary_entry_files(file_section, new_section_dir):
     if matches:
         groups = matches.groups()
         print(groups)
-        item_name = re.sub("\W", "a", groups[1])
+        item_name = re.sub("\W", "a", "".join([name_part for name_part in groups[1].split("-")]))
         if item_name in names_used:
             item_name = get_new_item_name(names_used, item_name)
         names_used[item_name] = True
         heading = "# " + groups[0].strip() + "\n\n"
-        component_name = "".join([item.capitalize() for item in item_name.split("-")])
+        component_name = "".join([re.sub("\W", "a", item).capitalize() for item in groups[1].split("-")])
         filename = item_name + ".md"
         hidden_filename = "_" + filename
         hidden_file_text = file_section.replace(groups[0].strip(), "", 1)

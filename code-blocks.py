@@ -129,7 +129,7 @@ def split_dictionary_files(given_dir):
                     process_dictionary_file(curr_root, last_section, curr_file_path, curr_text)
         break
 
-def process_dictionary_file(root, last_section, filapath, curr_text):
+def process_dictionary_file(root, last_section, curr_file_path, curr_text):
     # Create Folder
     # Create _category_.json file
     # Open category json file, parse, get name without r'\d+\. ', add " Dictionary"...
@@ -144,12 +144,16 @@ def process_dictionary_file(root, last_section, filapath, curr_text):
     new_section_dir = os.path.join(root, new_section_name)
     print(new_section_dir)
     # print(os.path.join(root, new_section_name))
-    # os.mkdir(new_section_dir)
+    os.mkdir(new_section_dir)
     make_category_json_file(new_section_name, root)
     new_file_sections = split_dictionary_text(curr_text)
-    # for file_section in new_file_sections:
-    #     print(file_section)
-    #     create_dicionary_entry_files(file_section, new_section_dir)
+    if len(new_file_sections) > 1:
+        last_file_before_dictionary_section = open(curr_file_path, "w")
+        last_file_before_dictionary_section.write(new_file_sections[0])
+        last_file_before_dictionary_section.close()
+        for file_section in new_file_sections[1:]:
+            # print(file_section)
+            create_dicionary_entry_files(file_section, new_section_dir)
 
 def split_dictionary_text(curr_text):
     # item_regex = r'\*\*.*?\*\* \*\w+(\s+\w+)*\* \n\n\*\*Class Precedence List:\*\* \n'
@@ -165,10 +169,57 @@ def split_dictionary_text(curr_text):
     # print(len(start_indices))
     # print(len(split_items))
     # print(split_items[2])
-    return matches
+    return split_items
+
+def get_new_item_name(names_used, curr_name):
+    names_used = {}
+    found_name = False
+    curr_sufix = "a"
+    while not found_name:
+        new_name = curr_name + curr_sufix
+        if new_name in names_used:
+            curr_sufix = chr(ord(curr_sufix) + 1)
+        else:
+            # found_name = True
+            return new_name
 
 def create_dicionary_entry_files(file_section, new_section_dir):
+    # create _x.md, x.md filename,s import correctly... add first heading as title to x.md
+    # avoid name conflicts, make a dic, +a to filenames...
     print("create_dicionary_entry_files(file_section, new_section_dir)")
+    item_regex = r'(\*\*(.*?)\*\* \*[A-Z][a-z]*(\s+\w+)*\*\s*\n)'
+    matches = re.match(item_regex, file_section)
+    names_used = {}
+    if matches:
+        groups = matches.groups()
+        print(groups)
+        item_name = groups[1]
+        if item_name in names_used:
+            item_name = get_new_item_name(names_used, item_name)
+        names_used[item_name] = True
+        heading = "# " + groups[0].strip() + "\n\n"
+        component_name = "".join([item.capitalize() for item in item_name.split("-")])
+        filename = item_name + ".md"
+        hidden_filename = "_" + filename
+        hidden_file_text = file_section.replace(groups[0].strip(), "", 1)
+        import_statement = f"import {component_name} from './{hidden_filename}';\n\n"
+        import_component = f"<{component_name} />\n\n"
+        expanded_reference = f"## Expanded Reference: {groups[1]}\n\n:::tip\nTODO: Please contribute to this page by adding explanations and examples\n:::\n\n```lisp\n({groups[1]} )\n```\n"
+        markdown_contents = heading + import_statement + import_component + expanded_reference
+        hidden_file = open(os.path.join(new_section_dir, hidden_filename), "w")
+        hidden_file.write(hidden_file_text)
+        hidden_file.close()
+
+        display_file = open(os.path.join(new_section_dir, filename), "w")
+        display_file.write(markdown_contents)
+        display_file.close()
+
+        # print(groups[0].strip())
+        # print(groups[1])
+        # print(os.path.join(new_section_dir, filename))
+        # print(hidden_file_text)
+        # print(markdown_contents)
+        # print(file_section)
 
 def make_category_json_file(section_name, root):
     CATEGORY_JSON = '{\n  "label": "1. Introduction",\n  "position": 1,\n  "link": {\n    "type": "generated-index",\n    "description": "1. Introduction"\n  }\n}\n'
@@ -188,9 +239,9 @@ def make_category_json_file(section_name, root):
     curr_json["link"]["description"] = section_label
     # print(curr_json)
     # print(os.path.join(root, section_name + "/_category_.json"))
-    # final_category_file = open(os.path.join(root, section_name + "/_category_.json"), "w")
-    # final_category_file.write(curr_json)
-    # final_category_file.close()
+    final_category_file = open(os.path.join(root, section_name + "/_category_.json"), "w")
+    final_category_file.write(curr_json)
+    final_category_file.close()
 
     # curr_json["position"] = 
 

@@ -185,7 +185,7 @@ def get_new_item_name(names_used, curr_name):
 
 def apply_example_code_blocks(given_text):
     example_title = "**Examples:**"
-    title_regex = r'(\*\*\w+(\w\s)*:\*\*\s*?\n)'
+    title_regex = r'(\*\*\w+(\w*\s*)*:\*\*\s*?\n)'
     begin_code = "\n```lisp\n"
     end_code = "\n```\n"
     example_index = given_text.find(example_title)

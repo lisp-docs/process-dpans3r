@@ -183,6 +183,26 @@ def get_new_item_name(names_used, curr_name):
             # found_name = True
             return new_name
 
+def apply_example_code_blocks(given_text):
+    example_title = "**Examples:**"
+    title_regex = r'(\*\*\w+(\w\s)*:\*\*\s*?\n)'
+    begin_code = "\n```lisp\n"
+    end_code = "\n```\n"
+    example_index = given_text.find(example_title)
+
+    # No examples section
+    if example_index == -1:
+        return given_text
+    
+    post_example_index = example_index + len(example_title)
+    next_title_index = len(given_text)
+    next_title_match = re.search(title_regex, given_text[post_example_index:])
+    if next_title_index:
+        next_title_index = next_title_match.span()[0] + post_example_index
+        return given_text[:post_example_index] + begin_code + given_text[post_example_index:next_title_index] + end_code + given_text[next_title_index:]
+    else:
+        return given_text[:post_example_index] + begin_code + given_text[post_example_index:] + end_code
+
 def create_dicionary_entry_files(file_section, new_section_dir):
     # create _x.md, x.md filename,s import correctly... add first heading as title to x.md
     # avoid name conflicts, make a dic, +a to filenames...
@@ -192,9 +212,9 @@ def create_dicionary_entry_files(file_section, new_section_dir):
     names_used = {}
     if matches:
         groups = matches.groups()
-        print(groups)
+        # print(groups)
         item_name = re.sub("\W", "a", "".join([name_part for name_part in groups[1].split(",")[0].split("-")]))
-        print(item_name)
+        # print(item_name)
         if item_name in names_used:
             item_name = get_new_item_name(names_used, item_name)
         names_used[item_name] = True
@@ -204,7 +224,7 @@ def create_dicionary_entry_files(file_section, new_section_dir):
         filename = item_name + ".md"
         hidden_filename = "_" + filename
         # hidden_file_text = file_section.replace(groups[0].strip(), "", 1)
-        hidden_file_text = file_section
+        hidden_file_text = apply_example_code_blocks(file_section)
         import_statement = f"import {component_name} from './{hidden_filename}';\n\n"
         import_component = f"<{component_name} />\n\n"
         expanded_reference = f"## Expanded Reference: {groups[1]}\n\n:::tip\nTODO: Please contribute to this page by adding explanations and examples\n:::\n\n```lisp\n({groups[1]} )\n```\n"

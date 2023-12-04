@@ -197,7 +197,7 @@ def apply_example_code_blocks(given_text):
     post_example_index = example_index + len(example_title)
     next_title_index = len(given_text)
     next_title_match = re.search(title_regex, given_text[post_example_index:])
-    if next_title_index:
+    if next_title_match:
         next_title_index = next_title_match.span()[0] + post_example_index
         return given_text[:post_example_index] + begin_code + given_text[post_example_index:next_title_index] + end_code + given_text[next_title_index:]
     else:

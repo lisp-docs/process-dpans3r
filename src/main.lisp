@@ -636,27 +636,39 @@
 	  given-list))
 
 (defun complete-processing-md-spec (given-dir)
-  (let* ((dir-files (uiop:directory-files dir-path))
+  (let* ((dir-files (uiop:directory-files given-dir))
 	 (md-files (remove-if-not
 		    (lambda (it)
 		      (search ".md" (namestring it)))
 		    dir-files))
 	 (md-lists (mapcar (lambda (x) (list x (str:from-file x)))
-			   md-files))
-	 ())
+			   md-files)))
     (format T "~%Removing Headers")
-    (setf md-lists (mapcar-to-second md-lists #'remove-headers))))
+    (setf md-lists (mapcar-to-second md-lists #'remove-headers))
+
+    (format T "~%Processing Titles")
+    (setf md-lists (mapcar-to-second md-lists #'process-titles))
+    
+    ;; (format T "~%Removing Headers")
+    ;; (setf md-lists (mapcar-to-second md-lists #'remove-headers))
+
+    ;; (format T "~%Replacing HTML Characters")
+    ;; (setf md-lists (mapcar-to-second md-lists #'replace-html-chars))
+    ;; This save is for debugging and testing... 
+    (format T "~%Saving All Files")
+    (mapcar (lambda (x) (str:to-file
+			 (uiop:merge-pathnames*
+			  (first x)
+			  (uiop:merge-pathnames*
+			   "md-files/"
+			   (asdf:system-source-directory :process-dpans3r)))
+			 (second x)))
+	    md-lists)
+    (format T "Finished Processing MD Files")))
 
 
 
-   (replace-html-chars (load-file filepath))))
- 
-(defun remove-file-headers (filepath)
-  (str:to-file
-   filepath
-   (remove-headers (load-file filepath))))
- 
-(defun fix-file-titles (filepath)
-  (str:to-file
-   filepath
-   (process-titles (load-file filepath))))
+(defun run-project ()
+  (complete-processing-md-spec (uiop:merge-pathnames*
+				"original-md-files/"
+				(asdf:system-source-directory :process-dpans3r))))

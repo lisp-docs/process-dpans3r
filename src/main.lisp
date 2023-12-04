@@ -597,3 +597,34 @@
 
 ;; TODO
 ;; Need to replace "{" with "&#123;"
+
+;; TODO
+;; make function for parsing everything from the original to the final version to be modified
+;; by the other script
+;; Include parsing the <sub> and <sup> tags
+;; add new lines for titles \*\*(\w|\d+)(\.\d+)*(\s\w)+\*\*
+;; *hhnameii* to &#10216;name&#10217;
+;; process <i> tags
+;; maybe yes or not, change {} to &#123; and &#125;
+;; change *.* to &#9655;
+;; <p> tags?
+;; *hh to &#10216; and ii* to &#10217;
+;; <> to &#60; and &#62; there seem to not be any of these which are not
+;;   one of the mentioned tags, so they are probably all code and it's probably better
+;;   then not to change them to allow for manual change into code blocks...
+;;   there are not so many of them anyways...
+;; a;; the <p> tags, whenever there are a few back to back, they are tables
+;; each tag represents a column
+;; we can parse them |<p>a bunch of symbols...</p>| that's the whole table
+;;   each <p> tag is a row, each row can probably be split by space to be a column?
+;;      maybe only if all the rows split (or most of them 95%) to the same
+;;       length of columns, otherwise leave as is... with just one column for that row...
+;;       keep in mind that inside the <p> tags, usually all the content is surrounded
+;;       by two asteriks ** to make it bold... so may have to remove those before
+;;       then split, then to each one apply the asteriks, and turn into columns
+;; clear headers and footers...
+;; clear extra footers not processed: Symbols **10–5**
+;; #<FUNCTION anonymous> is problematic, but really only shows up inside a code block...
+;;     so could use it to identify code blocks...
+;; Every **Example** or whatever is a code block...
+;; 

@@ -473,6 +473,21 @@
     (process-chapter-intro chapter-dir (car section-list))
     (mapcar (lambda (x) (process-section chapter-dir x)) (cdr section-list))))
 
+(defun process-chapter-with-text (filename chapter-text)
+  (let* ((chapter-name
+	   (get-dir-name-for-file
+	    (filename-from-pathname filename)))
+	 (chapter-dir (get-directory-for-chapter filename))
+	 ;; (chapter-text (load-file filename))
+	 (label (get-chapter-label chapter-text))
+	 (category-path (uiop:merge-pathnames* *category-filename* chapter-dir))
+	 (section-list (get-chapter-sections chapter-text)))
+    (format T "~%chapter-name: ~A" chapter-name)
+    (ensure-directories-exist chapter-dir)
+    (str:to-file category-path (make-doc-category-json label))
+    (process-chapter-intro chapter-dir (car section-list))
+    (mapcar (lambda (x) (process-section chapter-dir x)) (cdr section-list))))
+
 ;; make function to replace symbols missing
 ;; *hh ii* *.*
 
@@ -653,21 +668,24 @@
     (format T "~%~%Processing Titles")
     (setf md-lists (mapcar-to-second md-lists #'process-titles))
     
-    (format T "~%~%Removing extra Headers nad Footers")
+    (format T "~%~%Removing extra Headers and Footers")
     (setf md-lists (mapcar-to-second md-lists #'remove-extra-headers-footers))
+
+    (format T "~%~%Splitting and Saving Chapters to Output")
+    (setf md-lists (mapcar-to-second md-lists #'process-chapter-with-text))
 
     ;; (format T "~%Replacing HTML Characters")
     ;; (setf md-lists (mapcar-to-second md-lists #'replace-html-chars))
     ;; This save is for debugging and testing... 
-    (format T "~%~%Saving All Files")
-    (mapcar (lambda (x) (str:to-file
-			 (uiop:merge-pathnames*
-			  (first x)
-			  (uiop:merge-pathnames*
-			   "md-files/"
-			   (asdf:system-source-directory :process-dpans3r)))
-			 (second x)))
-	    md-lists)
+    ;; (format T "~%~%Saving All Files")
+    ;; (mapcar (lambda (x) (str:to-file
+    ;; 			 (uiop:merge-pathnames*
+    ;; 			  (first x)
+    ;; 			  (uiop:merge-pathnames*
+    ;; 			   "md-files/"
+    ;; 			   (asdf:system-source-directory :process-dpans3r)))
+    ;; 			 (second x)))
+    ;; 	    md-lists)
     (format T "~%~%Finished Processing MD Files")
     T))
 

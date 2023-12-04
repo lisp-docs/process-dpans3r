@@ -628,3 +628,35 @@
 ;;     so could use it to identify code blocks...
 ;; Every **Example** or whatever is a code block...
 ;; 
+
+(defun mapcar-to-second (given-list func-to-mapcar)
+  (format T "~%Applying Function to List of Length: ~A~%" (length given-list))
+  (mapcar (lambda (x) (format T "-")
+	    (list (car x) (funcall func-to-mapcar (second x))))
+	  given-list))
+
+(defun complete-processing-md-spec (given-dir)
+  (let* ((dir-files (uiop:directory-files dir-path))
+	 (md-files (remove-if-not
+		    (lambda (it)
+		      (search ".md" (namestring it)))
+		    dir-files))
+	 (md-lists (mapcar (lambda (x) (list x (str:from-file x)))
+			   md-files))
+	 ())
+    (format T "~%Removing Headers")
+    (setf md-lists (mapcar-to-second md-lists #'remove-headers))))
+
+
+
+   (replace-html-chars (load-file filepath))))
+ 
+(defun remove-file-headers (filepath)
+  (str:to-file
+   filepath
+   (remove-headers (load-file filepath))))
+ 
+(defun fix-file-titles (filepath)
+  (str:to-file
+   filepath
+   (process-titles (load-file filepath))))

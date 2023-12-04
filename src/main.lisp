@@ -497,8 +497,8 @@
 	  (format T "~%chapter-name: ~A" chapter-name)
 	  (format T "~%label: ~A" label)
 	  (if (< (length (car section-list)) 400)
-	      (format T "~%Intro No Change: ~A" (car section-list))))
-		(process-chapter-intro chapter-dir (car section-list)))
+	      (format T "~%Intro No Change: ~A" (car section-list)))
+	  (process-chapter-intro chapter-dir (car section-list))))
 ;    (progn
       ;; (format T "~%Intro: ~A" (str:trim
       ;; 			       (str:replace-first  (format NIL "**~A**" label)

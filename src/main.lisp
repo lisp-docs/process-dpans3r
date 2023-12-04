@@ -650,16 +650,16 @@
     (format T "~%Removing Headers")
     (setf md-lists (mapcar-to-second md-lists #'remove-headers))
 
-    (format T "~%Processing Titles")
+    (format T "~%~%Processing Titles")
     (setf md-lists (mapcar-to-second md-lists #'process-titles))
     
-    (format T "~%Removing extra Headers nad Footers")
+    (format T "~%~%Removing extra Headers nad Footers")
     (setf md-lists (mapcar-to-second md-lists #'remove-extra-headers-footers))
 
     ;; (format T "~%Replacing HTML Characters")
     ;; (setf md-lists (mapcar-to-second md-lists #'replace-html-chars))
     ;; This save is for debugging and testing... 
-    (format T "~%Saving All Files")
+    (format T "~%~%Saving All Files")
     (mapcar (lambda (x) (str:to-file
 			 (uiop:merge-pathnames*
 			  (first x)
@@ -668,7 +668,8 @@
 			   (asdf:system-source-directory :process-dpans3r)))
 			 (second x)))
 	    md-lists)
-    (format T "Finished Processing MD Files")))
+    (format T "~%~%Finished Processing MD Files")
+    T))
 
 
 

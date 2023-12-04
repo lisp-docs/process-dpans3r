@@ -499,11 +499,6 @@
 	  (if (< (length (car section-list)) 400)
 	      (format T "~%Intro No Change: ~A" (car section-list)))
 	  (process-chapter-intro chapter-dir (car section-list))))
-;    (progn
-      ;; (format T "~%Intro: ~A" (str:trim
-      ;; 			       (str:replace-first  (format NIL "**~A**" label)
-      ;; 						   ""
-      ;; 						   (car section-list))))
       (mapcar (lambda (x) (process-section chapter-dir x)) (cdr section-list))))
 
 ;; make function to replace symbols missing
@@ -638,14 +633,14 @@
 ;; TODO
 ;; make function for parsing everything from the original to the final version to be modified
 ;; by the other script
-;; Include parsing the <sub> and <sup> tags
+;; Include parsing the <sub> and <sup> tags NO NEED
 ;; add new lines for titles \*\*(\w|\d+)(\.\d+)*(\s\w)+\*\*
 ;; *hhnameii* to &#10216;name&#10217;
-;; process <i> tags
+;; process <i> tags  NO NEED
 ;; maybe yes or not, change {} to &#123; and &#125;
-;; change *.* to &#9655;
+;; change *.* to &#9655; ▷
 ;; <p> tags?
-;; *hh to &#10216; and ii* to &#10217;
+;; *hh to &#10216; ⟨ and ii* to &#10217; ⟩
 ;; <> to &#60; and &#62; there seem to not be any of these which are not
 ;;   one of the mentioned tags, so they are probably all code and it's probably better
 ;;   then not to change them to allow for manual change into code blocks...
@@ -665,6 +660,21 @@
 ;;     so could use it to identify code blocks...
 ;; Every **Example** or whatever is a code block...
 ;; 
+
+;; replace-brackets
+(defun replace-unicode-special-chars (given-string)
+  (str:replace-using
+   '("*.*" "▷"
+     "*hh" "⟨"
+     "ii*" "⟩"
+     "}" "&#125;"
+     "{" "&#123;"
+     ;; "<" "&#60;"
+     ;; "\\>" "&#62;"
+     ;; ">" "&#62;"
+     )
+   given-string))
+
 
 (defun mapcar-to-second (given-list func-to-mapcar)
   (format T "~%Applying Function to List of Length: ~A~%" (length given-list))
@@ -698,6 +708,12 @@
     (setf md-lists (mapcar-to-second md-lists
 				     (lambda (x)
 				       (substitute #\Space #\ZERO_WIDTH_NO-BREAK_SPACE x))))
+
+    (format T "~%~%Replacing Brackets and Unicode Special Characters ")
+    (setf md-lists (mapcar-to-second md-lists
+				     #'replace-brackets))
+    (setf md-lists (mapcar-to-second md-lists
+				     #'replace-unicode-special-chars))
 
     (format T "~%~%Splitting and Saving Chapters to Output")
     (mapcar #'process-chapter-with-text md-lists)

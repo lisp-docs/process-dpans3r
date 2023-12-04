@@ -192,8 +192,9 @@ def create_dicionary_entry_files(file_section, new_section_dir):
     names_used = {}
     if matches:
         groups = matches.groups()
-        # print(groups)
-        item_name = re.sub("\W", "a", "".join([name_part for name_part in groups[1].split("-")]))
+        print(groups)
+        item_name = re.sub("\W", "a", "".join([name_part for name_part in groups[1].split(",")[0].split("-")]))
+        print(item_name)
         if item_name in names_used:
             item_name = get_new_item_name(names_used, item_name)
         names_used[item_name] = True

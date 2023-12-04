@@ -473,8 +473,10 @@
     (process-chapter-intro chapter-dir (car section-list))
     (mapcar (lambda (x) (process-section chapter-dir x)) (cdr section-list))))
 
-(defun process-chapter-with-text (filename chapter-text)
-  (let* ((chapter-name
+(defun process-chapter-with-text (md-filename-text-item)
+  (let* ((filename (first md-filename-text-item))
+	 (chapter-text (second md-filename-text-item))
+	 (chapter-name
 	   (get-dir-name-for-file
 	    (filename-from-pathname filename)))
 	 (chapter-dir (get-directory-for-chapter filename))
@@ -671,8 +673,13 @@
     (format T "~%~%Removing extra Headers and Footers")
     (setf md-lists (mapcar-to-second md-lists #'remove-extra-headers-footers))
 
+    (format T "~%~%Replacing #\Return with #\Newline")
+    (setf md-lists (mapcar-to-second md-lists
+				     (lambda (x)
+				       (substitute  #\Newline  #\Return x))))
+
     (format T "~%~%Splitting and Saving Chapters to Output")
-    (setf md-lists (mapcar-to-second md-lists #'process-chapter-with-text))
+    (mapcar #'process-chapter-with-text md-lists)
 
     ;; (format T "~%Replacing HTML Characters")
     ;; (setf md-lists (mapcar-to-second md-lists #'replace-html-chars))

@@ -1,18 +1,20 @@
-﻿ 
+﻿Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
- 
+**Programming Language—Common Lisp** 
 
 **7. Objects** 
 
-  
+Objects **i**
 
+Version 15.17R, X3J13/94-101R. Fri 12-Aug-1994 6:35pm EDT 
 
+**ii** Programming Language—Common Lisp
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **7.1 Object Creation and Initialization** 
 
@@ -34,9 +36,9 @@ of the **defclass** form that defined it, and the resulting value is stored in t
 
 Objects **7–1**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **7.1.1 Initialization Arguments** 
 
@@ -64,11 +66,11 @@ There are two means for declaring initialization arguments valid.
 
 *•* Initialization arguments that fill *slots* are declared as valid by the :initarg slot option to **defclass**. The :initarg slot option is inherited from *superclasses*. Thus the set of valid 
 
+**7–2** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 initialization arguments that fill *slots* for a *class* is the union of the initialization arguments that fill *slots* declared as valid by that *class* and its *superclasses*. Initialization arguments that fill *slots* are valid in all four contexts. 
 
@@ -108,9 +110,9 @@ A default value *form* can be supplied for an initialization argument by using t
 
 Objects **7–3**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 The :default-initargs option is used only to provide default values for initialization arguments; it does not declare a *symbol* as a valid initialization argument name. Furthermore, the :default-initargs option is used only to provide default values for initialization arguments when making an *instance*. 
 
@@ -134,11 +136,11 @@ The following rules specify when initialization arguments may be multiply define
 
 *•* A given initialization argument name can appear in the *lambda list* of more than one initialization *method*. 
 
+**7–4** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 *•* A given initialization argument name can appear both in an :initarg slot option and in the *lambda list* of an initialization *method*. 
 
@@ -146,9 +148,9 @@ If two or more initialization arguments that initialize the same *slot* are give
 
 If two or more different initialization arguments that initialize the same *slot* have default values and none is given explicitly in the arguments to **make-instance**, the initialization argument that appears in a :default-initargs class option in the most specific of the *classes* supplies the value. If a single :default-initargs class option specifies two or more initialization arguments that initialize the same *slot* and none is given explicitly in the arguments to **make-instance**, the leftmost in the :default-initargs class option supplies the value, and the values of the remaining default value *forms* are ignored. 
 
-Initialization arguments given explicitly in the arguments to **make-instance** appear to the left of defaulted initialization arguments. Suppose that the classes *C*&#60;sub&#62;1&#60;/sub&#62; and *C*&#60;sub&#62;2&#60;/sub&#62; supply the values of defaulted initialization arguments for different *slots*, and suppose that *C*&#60;sub&#62;1&#60;/sub&#62; is more specific than *C*&#60;sub&#62;2&#60;/sub&#62;; then the defaulted initialization argument whose value is supplied by *C*&#60;sub&#62;1&#60;/sub&#62; is to the left of 
+Initialization arguments given explicitly in the arguments to **make-instance** appear to the left of defaulted initialization arguments. Suppose that the classes *C*<sub>1</sub> and *C*<sub>2</sub> supply the values of defaulted initialization arguments for different *slots*, and suppose that *C*<sub>1</sub> is more specific than *C*<sub>2</sub>; then the defaulted initialization argument whose value is supplied by *C*<sub>1</sub> is to the left of 
 
-the defaulted initialization argument whose value is supplied by *C*&#60;sub&#62;2&#60;/sub&#62; in the *defaulted initialization argument list*. If a single :default-initargs class option supplies the values of initialization arguments for two different *slots*, the initialization argument whose value is specified farther to the left in the :default-initargs class option appears farther to the left in the *defaulted initialization argument list*. 
+the defaulted initialization argument whose value is supplied by *C*<sub>2</sub> in the *defaulted initialization argument list*. If a single :default-initargs class option supplies the values of initialization arguments for two different *slots*, the initialization argument whose value is specified farther to the left in the :default-initargs class option appears farther to the left in the *defaulted initialization argument list*. 
 
 If a *slot* has both an :initform form and an :initarg slot option, and the initialization argument is defaulted using :default-initargs or is supplied to **make-instance**, the captured :initform form is neither used nor evaluated. 
 
@@ -172,9 +174,9 @@ The following is an example of the above rules:
 
 Objects **7–5**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **7.1.5 Shared-Initialize** 
 
@@ -202,11 +204,11 @@ The generic function **shared-initialize** is called by the system-supplied prim
 
 The *generic function* **initialize-instance** is called by **make-instance** to initialize a newly created *instance*. It uses *standard method combination*. *Methods* for **initialize-instance** can be defined in order to perform any initialization that cannot be achieved simply by supplying initial values for *slots*. 
 
-During initialization, **initialize-instance** is invoked after the following actions have been taken: 
+During initialization, **initialize-instance** is invoked after the following actions have been taken: **7–6** Programming Language—Common Lisp
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 *•* The *defaulted initialization argument list* has been computed by combining the supplied *initialization argument list* with any default initialization arguments for the *class*. 
 
@@ -244,9 +246,9 @@ The elided code in the definition of **make-instance** augments the initargs wit
 
 Objects **7–7**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 an initialization argument was supplied that neither filled a *slot* nor supplied an argument to an applicable *method*. 
 
@@ -262,15 +264,15 @@ Customizing at the Programmer Interface level includes using the :initform, :ini
 
 Implementations are permitted to make certain optimizations to **initialize-instance** and **shared-initialize**. The description of **shared-initialize** in Chapter 7 mentions the possible optimizations. 
 
+**7–8** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **7.2 Changing the Class of an Instance** 
 
-The *function* **change-class** can be used to change the *class* of an *instance* from its current class, *C*&#60;sub&#62;from&#60;/sub&#62;, to a different class, *C*&#60;sub&#62;to&#60;/sub&#62;; it changes the structure of the *instance* to conform to the definition of the class *C*&#60;sub&#62;to&#60;/sub&#62;. 
+The *function* **change-class** can be used to change the *class* of an *instance* from its current class, *C*<sub>from</sub>, to a different class, *C*<sub>to</sub>; it changes the structure of the *instance* to conform to the definition of the class *C*<sub>to</sub>. 
 
 Note that changing the *class* of an *instance* may cause *slots* to be added or deleted. Changing the *class* of an *instance* does not change its identity as defined by the **eq** function. 
 
@@ -278,17 +280,17 @@ When **change-class** is invoked on an *instance*, a two-step updating process t
 
 **7.2.1 Modifying the Structure of the Instance** 
 
-In order to make the *instance* conform to the class *C*&#60;sub&#62;to&#60;/sub&#62;, *local slots* specified by the class *C*&#60;sub&#62;to&#60;/sub&#62; that are not specified by the class *C*&#60;sub&#62;from&#60;/sub&#62; are added, and *local slots* not specified by the class *C*&#60;sub&#62;to&#60;/sub&#62; that are specified by the class *C*&#60;sub&#62;from&#60;/sub&#62; are discarded. 
+In order to make the *instance* conform to the class *C*<sub>to</sub>, *local slots* specified by the class *C*<sub>to</sub> that are not specified by the class *C*<sub>from</sub> are added, and *local slots* not specified by the class *C*<sub>to</sub> that are specified by the class *C*<sub>from</sub> are discarded. 
 
-The values of *local slots* specified by both the class *C*&#60;sub&#62;to&#60;/sub&#62; and the class *C*&#60;sub&#62;from&#60;/sub&#62; are retained. If such a *local slot* was unbound, it remains unbound. 
+The values of *local slots* specified by both the class *C*<sub>to</sub> and the class *C*<sub>from</sub> are retained. If such a *local slot* was unbound, it remains unbound. 
 
-The values of *slots* specified as shared in the class *C*&#60;sub&#62;from&#60;/sub&#62; and as local in the class *C*&#60;sub&#62;to&#60;/sub&#62; are retained. This first step of the update does not affect the values of any *shared slots*. 
+The values of *slots* specified as shared in the class *C*<sub>from</sub> and as local in the class *C*<sub>to</sub> are retained. This first step of the update does not affect the values of any *shared slots*. 
 
 **7.2.2 Initializing Newly Added Local Slots** 
 
 The second step of the update initializes the newly added *slots* and performs any other user-defined actions. This step is implemented by the generic function **update-instance-for-different-class**. The generic function **update-instance-for-different-class** is invoked by **change-class** after the first step of the update has been completed. 
 
-The generic function **update-instance-for-different-class** is invoked on arguments computed by **change-class**. The first argument passed is a copy of the *instance* being updated and is an *instance* of the class *C*&#60;sub&#62;from&#60;/sub&#62;; this copy has *dynamic extent* within the generic function **change-class**. The second argument is the *instance* as updated so far by **change-class** and is an *instance* of the class *C*&#60;sub&#62;to&#60;/sub&#62;. The remaining arguments are an *initialization argument list*. 
+The generic function **update-instance-for-different-class** is invoked on arguments computed by **change-class**. The first argument passed is a copy of the *instance* being updated and is an *instance* of the class *C*<sub>from</sub>; this copy has *dynamic extent* within the generic function **change-class**. The second argument is the *instance* as updated so far by **change-class** and is an *instance* of the class *C*<sub>to</sub>. The remaining arguments are an *initialization argument list*. 
 
 There is a system-supplied primary *method* for **update-instance-for-different-class** that has two parameter specializers, each of which is the *class* **standard-object**. First this *method* checks the validity of initialization arguments and signals an error if an initialization argument is supplied that is not declared as valid. (For more information, see Section 7.1.2 (Declaring the Validity of 
 
@@ -296,9 +298,9 @@ Initialization Arguments).) Then it calls the generic function **shared-initiali
 
 Objects **7–9**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **7.2.3 Customizing the Change of Class of an Instance** 
 
@@ -306,11 +308,11 @@ Objects **7–9**
 
 *Methods* for **shared-initialize** may be defined to customize *class* redefinition. For more information, see Section 7.1.5 (Shared-Initialize). 
 
+**7–10** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **7.3 Reinitializing an Instance** 
 
@@ -330,9 +332,9 @@ There is a system-supplied primary *method* for **reinitialize-instance** whose 
 
 Objects **7–11**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **7.4 Meta-Objects** 
 
@@ -348,11 +350,11 @@ The object system supplies a set of meta-objects, called standard meta-objects. 
 
 *•* The *class* named **standard-object** is an *instance* of the *class* **standard-class** and is a *superclass* of every *class* that is an *instance* of **standard-class** except itself and **structure-class**. 
 
-*•* Every *method* combination object is an *instance* of a *subclass* of *class* **method-combination**. 
+*•* Every *method* combination object is an *instance* of a *subclass* of *class* **method-combination**. **7–12** Programming Language—Common Lisp
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **7.5 Slots** 
 
@@ -380,9 +382,9 @@ The *function* **slot-value** can be used with any of the *slot* names specified
 
 Objects **7–13**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 The macro **defclass** provides syntax for generating *methods* to read and write *slots*. If a reader *method* is requested, a *method* is automatically generated for reading the value of the *slot*, but no *method* for storing a value into it is generated. If a writer *method* is requested, a *method* is automatically generated for storing a value into the *slot*, but no *method* for reading its value is generated. If an accessor *method* is requested, a *method* for reading the value of the *slot* and a *method* for storing a value into the *slot* are automatically generated. Reader and writer *methods* 
 
@@ -410,11 +412,11 @@ a slot *S*. If the value of the :allocation slot option is :instance, then *S* i
 
 In general, more than one *class* among *C* and its *superclasses* can define a *slot* with a given *name*. In such cases, only one *slot* with the given name is *accessible* in an *instance* of *C*, and the characteristics of that *slot* are a combination of the several *slot* specifiers, computed as follows: 
 
+**7–14** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 *•* All the *slot specifiers* for a given *slot* name are ordered from most specific to least specific, according to the order in *C*’s *class precedence list* of the *classes* that define them. All references to the specificity of *slot specifiers* immediately below refers to this ordering. 
 
@@ -422,13 +424,13 @@ In general, more than one *class* among *C* and its *superclasses* can define a 
 
 *•* The default initial value form for a *slot* is the value of the :initform slot option in the most specific *slot specifier* that contains one. If no *slot specifier* contains an :initform slot option, the *slot* has no default initial value form. 
 
-&#60;i&#62;•&#60;/i&#62; The contents of a &#60;i&#62;slot&#60;/i&#62; will always be of type (and &#60;i&#62;T&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62; &#60;i&#62;. . . T&#60;sub&#62;n&#60;/sub&#62;&#60;/i&#62;) where &#60;i&#62;T&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62; &#60;i&#62;. . . T&#60;sub&#62;n&#60;/sub&#62;&#60;/i&#62; are the values of the :type slot options contained in all of the &#60;i&#62;slot specifiers&#60;/i&#62;. If no &#60;i&#62;slot specifier&#60;/i&#62; contains the :type slot option, the contents of the &#60;i&#62;slot&#60;/i&#62; will always be of &#60;i&#62;type&#60;/i&#62; &#60;b&#62;t&#60;/b&#62;. The consequences of attempting to store in a &#60;i&#62;slot&#60;/i&#62; a value that does not satisfy the &#60;i&#62;type&#60;/i&#62; of the &#60;i&#62;slot&#60;/i&#62; are undefined. 
+<i>•</i> The contents of a <i>slot</i> will always be of type (and <i>T</i><sub>1</sub> <i>. . . T<sub>n</sub></i>) where <i>T</i><sub>1</sub> <i>. . . T<sub>n</sub></i> are the values of the :type slot options contained in all of the <i>slot specifiers</i>. If no <i>slot specifier</i> contains the :type slot option, the contents of the <i>slot</i> will always be of <i>type</i> <b>t</b>. The consequences of attempting to store in a <i>slot</i> a value that does not satisfy the <i>type</i> of the <i>slot</i> are undefined. 
 
 *•* The set of initialization arguments that initialize a given *slot* is the union of the initialization arguments declared in the :initarg slot options in all the *slot specifiers*. 
 
 *•* The *documentation string* for a *slot* is the value of the :documentation slot option in the most specific *slot* specifier that contains one. If no *slot specifier* contains a :documentation slot option, the *slot* has no *documentation string*. 
 
-A consequence of the allocation rule is that a *shared slot* can be *shadowed*. For example, if a class *C*&#60;sub&#62;1&#60;/sub&#62; defines a *slot* named *S* whose value for the :allocation slot option is :class, that *slot* is *accessible* in *instances* of *C*&#60;sub&#62;1&#60;/sub&#62; and all of its *subclasses*. However, if *C*&#60;sub&#62;2&#60;/sub&#62; is a *subclass* of *C*&#60;sub&#62;1&#60;/sub&#62; and also defines a *slot* named *S*, *C*&#60;sub&#62;1&#60;/sub&#62;’s *slot* is not shared by *instances* of *C*&#60;sub&#62;2&#60;/sub&#62; and its *subclasses*. When a class *C*&#60;sub&#62;1&#60;/sub&#62; defines a *shared slot*, any subclass *C*&#60;sub&#62;2&#60;/sub&#62; of *C*&#60;sub&#62;1&#60;/sub&#62; will share this single *slot* unless the **defclass** form for *C*&#60;sub&#62;2&#60;/sub&#62; specifies a *slot* of the same *name* or there is a *superclass* of *C*&#60;sub&#62;2&#60;/sub&#62; that precedes *C*&#60;sub&#62;1&#60;/sub&#62; in the *class precedence list* of *C*&#60;sub&#62;2&#60;/sub&#62; that defines a *slot* of the same name. 
+A consequence of the allocation rule is that a *shared slot* can be *shadowed*. For example, if a class *C*<sub>1</sub> defines a *slot* named *S* whose value for the :allocation slot option is :class, that *slot* is *accessible* in *instances* of *C*<sub>1</sub> and all of its *subclasses*. However, if *C*<sub>2</sub> is a *subclass* of *C*<sub>1</sub> and also defines a *slot* named *S*, *C*<sub>1</sub>’s *slot* is not shared by *instances* of *C*<sub>2</sub> and its *subclasses*. When a class *C*<sub>1</sub> defines a *shared slot*, any subclass *C*<sub>2</sub> of *C*<sub>1</sub> will share this single *slot* unless the **defclass** form for *C*<sub>2</sub> specifies a *slot* of the same *name* or there is a *superclass* of *C*<sub>2</sub> that precedes *C*<sub>1</sub> in the *class precedence list* of *C*<sub>2</sub> that defines a *slot* of the same name. 
 
 A consequence of the type rule is that the value of a *slot* satisfies the type constraint of each *slot specifier* that contributes to that *slot*. Because the result of attempting to store in a *slot* a value that does not satisfy the type constraint for the *slot* is undefined, the value in a *slot* might fail to satisfy its type constraint. 
 
@@ -438,15 +440,15 @@ The :reader, :writer, and :accessor slot options create *methods* rather than de
 
 Objects **7–15**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **7.6 Generic Functions and Methods** 
 
 **7.6.1 Introduction to Generic Functions** 
 
-A *generic function* is a function whose behavior depends on the *classes* or identities of the *arguments* supplied to it. A *generic function object* is associated with a set of *methods*, a *lambda list*, a *method combination*&#60;sub&#62;2&#60;/sub&#62;, and other information. 
+A *generic function* is a function whose behavior depends on the *classes* or identities of the *arguments* supplied to it. A *generic function object* is associated with a set of *methods*, a *lambda list*, a *method combination*<sub>2</sub>, and other information. 
 
 Like an *ordinary function*, a *generic function* takes *arguments*, performs a series of operations, and perhaps returns useful *values*. An *ordinary function* has a single body of *code* that is always *executed* when the *function* is called. A *generic function* has a set of bodies of *code* of which a subset is selected for *execution*. The selected bodies of *code* and the manner of their combination are determined by the *classes* or identities of one or more of the *arguments* to the *generic function* and by its *method combination*. 
 
@@ -466,15 +468,15 @@ When a **defgeneric** form is evaluated, one of three actions is taken (due to *
 
 Some *operators* permit specification of the options of a *generic function*, such as the *type* of *method combination* it uses or its *argument precedence order* . These *operators* will be referred to as “operators that specify generic function options.” The only *standardized operator* in this category is **defgeneric**. 
 
+**7–16** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 Some *operators* define *methods* for a *generic function*. These *operators* will be referred to as *method-defining operators*; their associated *forms* are called *method-defining forms*. The *standardized method-defining operators* are listed in Figure 7–1. 
 
-|&#60;p&#62;**defgeneric defmethod defclass** &#60;/p&#62;&#60;p&#62;**define-condition defstruct**&#60;/p&#62;|
+|<p>**defgeneric defmethod defclass** </p><p>**define-condition defstruct**</p>|
 | :- |
 
 
@@ -502,9 +504,9 @@ A method-defining form contains the *code* that is to be run when the arguments 
 
 Objects **7–17**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 If the *lambda list* of a new *method* is not *congruent* with the *lambda list* of the *generic function*, an error is signaled. If a *method-defining operator* that cannot specify *generic function* options creates a new *generic function*, a *lambda list* for that *generic function* is derived from the *lambda list* of the *method* in the *method-defining form* in such a way as to be *congruent* with it. For a discussion of *congruence*, see Section 7.6.4 (Congruent Lambda-lists for all Methods of a Generic Function). 
 
@@ -528,15 +530,15 @@ Only required parameters may be specialized, and there must be a *parameter spec
 
 Given a generic function and a set of arguments, an applicable method is a method for that generic function whose parameter specializers are satisfied by their corresponding arguments. The following definition specifies what it means for a method to be applicable and for an argument to satisfy a *parameter specializer* . 
 
-Let &#60;i&#62;hA&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62;&#60;i&#62;, . . . , A&#60;sub&#62;n&#60;/sub&#62;i&#60;/i&#62; be the required arguments to a generic function in order. Let &#60;i&#62;hP&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62;&#60;i&#62;, . . . , P&#60;sub&#62;n&#60;/sub&#62;i&#60;/i&#62; be the &#60;i&#62;parameter specializers&#60;/i&#62; corresponding to the required parameters of the method &#60;i&#62;M&#60;/i&#62; in order. The method &#60;i&#62;M&#60;/i&#62; is applicable when each &#60;i&#62;A&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;is of the &#60;i&#62;type&#60;/i&#62; specified by the &#60;i&#62;type specifier P&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;. Because every valid &#60;i&#62;parameter specializer&#60;/i&#62; is also a valid &#60;i&#62;type specifier&#60;/i&#62; , the &#60;i&#62;function&#60;/i&#62; &#60;b&#62;typep&#60;/b&#62; can be used during method selection to determine whether an argument satisfies a &#60;i&#62;parameter specializer&#60;/i&#62; . 
+Let <i>hA</i><sub>1</sub><i>, . . . , A<sub>n</sub>i</i> be the required arguments to a generic function in order. Let <i>hP</i><sub>1</sub><i>, . . . , P<sub>n</sub>i</i> be the <i>parameter specializers</i> corresponding to the required parameters of the method <i>M</i> in order. The method <i>M</i> is applicable when each <i>A<sub>i</sub></i>is of the <i>type</i> specified by the <i>type specifier P<sub>i</sub></i>. Because every valid <i>parameter specializer</i> is also a valid <i>type specifier</i> , the <i>function</i> <b>typep</b> can be used during method selection to determine whether an argument satisfies a <i>parameter specializer</i> . 
 
 A method all of whose *parameter specializers* are the *class* **t** is called a *default method*; it is always applicable but may be shadowed by a more specific method. 
 
+**7–18** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 Methods can have *qualifiers*, which give the method combination procedure a way to distinguish among methods. A method that has one or more *qualifiers* is called a *qualified method*. A method with no *qualifiers* is called an *unqualified method*. A *qualifier* is any *non-list*. The *qualifiers* defined by the *standardized* method combination types are *symbols*. 
 
@@ -546,9 +548,9 @@ In this specification, the terms “*primary method*” and “*auxiliary method
 
 Two *methods* are said to agree with each other on *parameter specializers* and *qualifiers* if the following conditions hold: 
 
-1\. Both methods have the same number of required parameters. Suppose the &#60;i&#62;parameter specializers&#60;/i&#62; of the two methods are &#60;i&#62;P&#60;/i&#62;&#60;sub&#62;1&#60;i&#62;,&#60;/i&#62;1&#60;/sub&#62; &#60;i&#62;. . . P&#60;/i&#62;&#60;sub&#62;1&#60;i&#62;,n&#60;/i&#62;&#60;/sub&#62; and &#60;i&#62;P&#60;/i&#62;&#60;sub&#62;2&#60;i&#62;,&#60;/i&#62;1&#60;/sub&#62; &#60;i&#62;. . . P&#60;/i&#62;&#60;sub&#62;2&#60;i&#62;,n&#60;/i&#62;&#60;/sub&#62;. 
+1\. Both methods have the same number of required parameters. Suppose the <i>parameter specializers</i> of the two methods are <i>P</i><sub>1<i>,</i>1</sub> <i>. . . P</i><sub>1<i>,n</i></sub> and <i>P</i><sub>2<i>,</i>1</sub> <i>. . . P</i><sub>2<i>,n</i></sub>. 
 
-2\. For each 1 &#60;i&#62;≤ i ≤ n&#60;/i&#62;, &#60;i&#62;P&#60;/i&#62;&#60;sub&#62;1&#60;i&#62;,i&#60;/i&#62;&#60;/sub&#62; agrees with &#60;i&#62;P&#60;/i&#62;&#60;sub&#62;2&#60;i&#62;,i&#60;/i&#62;&#60;/sub&#62;. The &#60;i&#62;parameter specializer P&#60;/i&#62;&#60;sub&#62;1&#60;i&#62;,i&#60;/i&#62;&#60;/sub&#62; agrees with &#60;i&#62;P&#60;/i&#62;&#60;sub&#62;2&#60;i&#62;,i&#60;/i&#62;&#60;/sub&#62; if &#60;i&#62;P&#60;/i&#62;&#60;sub&#62;1&#60;i&#62;,i&#60;/i&#62;&#60;/sub&#62; and &#60;i&#62;P&#60;/i&#62;&#60;sub&#62;2&#60;i&#62;,i&#60;/i&#62;&#60;/sub&#62; are the same class or if &#60;i&#62;P&#60;/i&#62;&#60;sub&#62;1&#60;i&#62;,i&#60;/i&#62;&#60;/sub&#62; = (&#60;b&#62;eql&#60;/b&#62; &#60;i&#62;object&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62;), &#60;i&#62;P&#60;/i&#62;&#60;sub&#62;2&#60;i&#62;,i&#60;/i&#62;&#60;/sub&#62; = (&#60;b&#62;eql&#60;/b&#62; &#60;i&#62;object&#60;/i&#62;&#60;sub&#62;2&#60;/sub&#62;), and (&#60;b&#62;eql&#60;/b&#62; &#60;i&#62;object&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62; &#60;i&#62;object&#60;/i&#62;&#60;sub&#62;2&#60;/sub&#62;). Otherwise &#60;i&#62;P&#60;/i&#62;&#60;sub&#62;1&#60;i&#62;,i&#60;/i&#62;&#60;/sub&#62; and &#60;i&#62;P&#60;/i&#62;&#60;sub&#62;2&#60;i&#62;,i&#60;/i&#62;&#60;/sub&#62; do not agree. 
+2\. For each 1 <i>≤ i ≤ n</i>, <i>P</i><sub>1<i>,i</i></sub> agrees with <i>P</i><sub>2<i>,i</i></sub>. The <i>parameter specializer P</i><sub>1<i>,i</i></sub> agrees with <i>P</i><sub>2<i>,i</i></sub> if <i>P</i><sub>1<i>,i</i></sub> and <i>P</i><sub>2<i>,i</i></sub> are the same class or if <i>P</i><sub>1<i>,i</i></sub> = (<b>eql</b> <i>object</i><sub>1</sub>), <i>P</i><sub>2<i>,i</i></sub> = (<b>eql</b> <i>object</i><sub>2</sub>), and (<b>eql</b> <i>object</i><sub>1</sub> <i>object</i><sub>2</sub>). Otherwise <i>P</i><sub>1<i>,i</i></sub> and <i>P</i><sub>2<i>,i</i></sub> do not agree. 
 
 3\. The two *lists* of *qualifiers* are the *same* under **equal**. 
 
@@ -564,9 +566,9 @@ These rules define the congruence of a set of *lambda lists*, including the *lam
 
 Objects **7–19**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 4\. If the *generic function lambda list* mentions **&key**, each method must accept all of the keyword names mentioned after **&key**, either by accepting them explicitly, by specifying **&allow-other-keys**, or by specifying **&rest** but not **&key**. Each method can accept additional keyword arguments of its own. The checking of the validity of keyword names is done in the generic function, not in each method. A method is invoked as if the keyword argument pair whose name is :allow-other-keys and whose value is *true* were supplied, though no such argument pair will be passed. 
 
@@ -590,11 +592,11 @@ If a *generic function* is passed a keyword argument that no applicable method a
 
 (defmethod width ((p picture-class) &key pixel-size) ...) 
 
+**7–20** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 Assume that there are no other methods and no generic function definition for width. The evaluation of the following form should signal an error because the keyword argument :pixel-size is not accepted by the applicable method. 
 
@@ -634,9 +636,9 @@ The effective method is determined by the following three-step procedure:
 
 Objects **7–21**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **7.6.6.1.1 Selecting the Applicable Methods** 
 
@@ -662,11 +664,11 @@ In general, the effective method is some combination of the applicable methods. 
 
 The role of each method in the effective method is determined by its *qualifiers* and the specificity of the method. A *qualifier* serves to mark a method, and the meaning of a *qualifier* is determined 
 
+**7–22** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 by the way that these marks are used by this step of the procedure. If an applicable method has an unrecognized *qualifier* , this step signals an error and does not include that method in the effective method. 
 
@@ -698,9 +700,9 @@ The semantics of standard method combination is as follows:
 
 Objects **7–23**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 *•* If an *around method* invokes **call-next-method**, the next most specific *around method* is called, if one is applicable. If there are no *around methods* or if **call-next-method** is called by the least specific *around method*, the other methods are called as follows: 
 
@@ -730,7 +732,7 @@ ignored. An error is signaled if **call-next-method** is used in an *after metho
 
 In standard method combination, if there is an applicable method but no applicable primary method, an error is signaled. 
 
-The *before methods* are run in most-specific-first order while the *after methods* are run in least-specific-first order. The design rationale for this difference can be illustrated with an example. Suppose class *C*&#60;sub&#62;1&#60;/sub&#62; modifies the behavior of its superclass, *C*&#60;sub&#62;2&#60;/sub&#62;, by adding *before methods* and *after methods*. Whether the behavior of the class *C*&#60;sub&#62;2&#60;/sub&#62; is defined directly by methods on *C*&#60;sub&#62;2&#60;/sub&#62; or is inherited from its superclasses does not affect the relative order of invocation of methods on instances of the class *C*&#60;sub&#62;1&#60;/sub&#62;. Class *C*&#60;sub&#62;1&#60;/sub&#62;’s *before method* runs before all of class *C*&#60;sub&#62;2&#60;/sub&#62;’s methods. Class *C*&#60;sub&#62;1&#60;/sub&#62;’s *after method* runs after all of class *C*&#60;sub&#62;2&#60;/sub&#62;’s methods. 
+The *before methods* are run in most-specific-first order while the *after methods* are run in least-specific-first order. The design rationale for this difference can be illustrated with an example. Suppose class *C*<sub>1</sub> modifies the behavior of its superclass, *C*<sub>2</sub>, by adding *before methods* and *after methods*. Whether the behavior of the class *C*<sub>2</sub> is defined directly by methods on *C*<sub>2</sub> or is inherited from its superclasses does not affect the relative order of invocation of methods on instances of the class *C*<sub>1</sub>. Class *C*<sub>1</sub>’s *before method* runs before all of class *C*<sub>2</sub>’s methods. Class *C*<sub>1</sub>’s *after method* runs after all of class *C*<sub>2</sub>’s methods. 
 
 By contrast, all *around methods* run before any other methods run. Thus a less specific *around method* runs before a more specific primary method. 
 
@@ -740,11 +742,11 @@ If only primary methods are used and if **call-next-method** is not used, only t
 
 The macro **define-method-combination** defines new forms of method combination. It provides a mechanism for customizing the production of the effective method. The default procedure for producing an effective method is described in Section 7.6.6.1 (Determining the Effective Method). 
 
+**7–24** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 There are two forms of **define-method-combination**. The short form is a simple facility while the long form is more powerful and more verbose. The long form resembles **defmacro** in that the body is an expression that computes a Lisp form; it provides mechanisms for implementing arbitrary control structures within method combination and for arbitrary processing of method *qualifiers*. 
 
@@ -776,17 +778,17 @@ The semantics of the simple built-in method combination types is as follows:
 
 Objects **7–25**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 *•* If an *around method* invokes **call-next-method**, the next most specific *around method* is called, if one is applicable. If there are no *around methods* or if **call-next-method** is called by the least specific *around method*, a Lisp form derived from the name of the built-in method combination type and from the list of applicable primary methods is evaluated to produce the value of the generic function. Suppose the name of the method combination type is *operator* and the call to the generic function is of the form 
 
-(&#60;i&#62;generic-function a&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62; &#60;i&#62;. . . a&#60;sub&#62;n&#60;/sub&#62;&#60;/i&#62;) 
+(<i>generic-function a</i><sub>1</sub> <i>. . . a<sub>n</sub></i>) 
 
-Let &#60;i&#62;M&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62;&#60;i&#62;, . . . , M&#60;sub&#62;k&#60;/sub&#62;&#60;/i&#62; be the applicable primary methods in order; then the derived Lisp form is (&#60;i&#62;operator hM&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62; &#60;i&#62;a&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62; &#60;i&#62;. . . a&#60;sub&#62;n&#60;/sub&#62;i. . .hM&#60;sub&#62;k&#60;/sub&#62; a&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62; &#60;i&#62;. . . a&#60;sub&#62;n&#60;/sub&#62;i&#60;/i&#62;) 
+Let <i>M</i><sub>1</sub><i>, . . . , M<sub>k</sub></i> be the applicable primary methods in order; then the derived Lisp form is (<i>operator hM</i><sub>1</sub> <i>a</i><sub>1</sub> <i>. . . a<sub>n</sub>i. . .hM<sub>k</sub> a</i><sub>1</sub> <i>. . . a<sub>n</sub>i</i>) 
 
-If the expression &#60;i&#62;hM&#60;sub&#62;i&#60;/sub&#62; a&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62; &#60;i&#62;. . . a&#60;sub&#62;n&#60;/sub&#62;i&#60;/i&#62; is evaluated, the method &#60;i&#62;M&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62; will be applied to the arguments &#60;i&#62;a&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62; &#60;i&#62;. . . a&#60;sub&#62;n&#60;/sub&#62;&#60;/i&#62;. For example, if &#60;i&#62;operator&#60;/i&#62; is or, the expression &#60;i&#62;hM&#60;sub&#62;i&#60;/sub&#62; a&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62; &#60;i&#62;. . . a&#60;sub&#62;n&#60;/sub&#62;i&#60;/i&#62; is evaluated only if &#60;i&#62;hM&#60;sub&#62;j&#60;/sub&#62; a&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62; &#60;i&#62;. . . a&#60;sub&#62;n&#60;/sub&#62;i&#60;/i&#62;, 1 &#60;i&#62;≤ j&#60;/i&#62; &#60; &#60;i&#62;i&#60;/i&#62;, returned nil. 
+If the expression <i>hM<sub>i</sub> a</i><sub>1</sub> <i>. . . a<sub>n</sub>i</i> is evaluated, the method <i>M<sub>i</sub></i> will be applied to the arguments <i>a</i><sub>1</sub> <i>. . . a<sub>n</sub></i>. For example, if <i>operator</i> is or, the expression <i>hM<sub>i</sub> a</i><sub>1</sub> <i>. . . a<sub>n</sub>i</i> is evaluated only if <i>hM<sub>j</sub> a</i><sub>1</sub> <i>. . . a<sub>n</sub>i</i>, 1 <i>≤ j</i> < <i>i</i>, returned nil. 
 
 The default order for the primary methods is :most-specific-first. However, the order can be reversed by supplying :most-specific-last as the second argument to the :method-combination option. 
 
@@ -800,11 +802,11 @@ The inheritance of methods acts the same way regardless of which of the *method-
 
 The inheritance of methods is described in detail in Section 7.6.6 (Method Selection and Combination). 
 
+**7–26** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **function-keywords** *Standard Generic Function* 
 
@@ -838,11 +840,11 @@ Two values are returned: a *list* of the explicitly named keywords and a *genera
 
 (list a b c d e f)) 
 
-*→* #&#60;STANDARD-METHOD GF1 (INTEGER) 36324653&#62; 
+*→* #<STANDARD-METHOD GF1 (INTEGER) 36324653> 
 
 (find-method #’gf1 ’() (list (find-class ’integer))) 
 
-*→* #&#60;STANDARD-METHOD GF1 (INTEGER) 36324653&#62; 
+*→* #<STANDARD-METHOD GF1 (INTEGER) 36324653> 
 
 (function-keywords \*) 
 
@@ -852,7 +854,7 @@ Two values are returned: a *list* of the explicitly named keywords and a *genera
 
 (list a b c d e f)) 
 
-*→* #&#60;STANDARD-METHOD GF2 (INTEGER) 42701775&#62; 
+*→* #<STANDARD-METHOD GF2 (INTEGER) 42701775> 
 
 (function-keywords (find-method #’gf1 ’() (list (find-class ’integer)))) 
 
@@ -872,9 +874,9 @@ Two values are returned: a *list* of the explicitly named keywords and a *genera
 
 Objects **7–27**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **See Also:** 
 
@@ -916,11 +918,11 @@ If *function-name* is a *list*, it must be of the form (setf *symbol*). If *func
 
 If *function-name* specifies a *generic function* that has a different value for the :lambda-list argument, and the new value is congruent with the *lambda lists* of all existing *methods* or there are no *methods*, the value is changed; otherwise an error is signaled. 
 
+**7–28** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 If *function-name* specifies a *generic function* that has a different value for the :generic-function-class argument and if the new generic function class is compatible with the old, **change-class** is called to change the *class* of the *generic function*; otherwise an error is signaled. 
 
@@ -962,9 +964,9 @@ If *function-name* specifies a *generic function* that has a different value for
 
 Objects **7–29**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Description:** 
 
@@ -1008,11 +1010,11 @@ The system-supplied primary *method* for **reinitialize-instance** checks the va
 
 The *generic function* **reinitialize-instance** changes the values of *local slots*. 
 
+**7–30** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Exceptional Situations:** 
 
@@ -1054,9 +1056,9 @@ The generic function **shared-initialize** takes the following arguments: the *i
 
 Objects **7–31**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **shared-initialize** 
 
@@ -1088,11 +1090,11 @@ Implementations are permitted to optimize default initial value forms for *inita
 
 forms can be treated like :initform forms. This optimization has no visible effects other than a performance improvement. 
 
+**7–32** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **update-instance-for-different-class** *Standard Generic Function* 
 
@@ -1128,9 +1130,9 @@ The system-supplied primary *method* on **update-instance-for-different-class** 
 
 Objects **7–33**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 The arguments to **update-instance-for-different-class** are computed by **change-class**. When **change-class** is invoked on an *instance*, a copy of that *instance* is made; **change-class** then de structively alters the original *instance*. The first argument to **update-instance-for-different-class**, *previous*, is that copy; it holds the old *slot* values temporarily. This argument has dynamic extent within **change-class**; if it is referenced in any way once **update-instance-for-different-class** returns, the results are undefined. The second argument to **update-instance-for-different-class**, *current*, is the altered original *instance*. The intended use of *previous* is to extract old *slot* values by using **slot-value** or **with-slots** or by invoking a reader generic function, or to run other *methods* that were applicable to *instances* of the original *class*. 
 
@@ -1164,13 +1166,13 @@ The value returned by **update-instance-for-different-class** is ignored by **ch
 
 &rest *initargs* &key &allow-other-keys 
 
-*→ &#123;result&#125;*\* 
+*→ {result}*\* 
 
+**7–34** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **update-instance-for-redefined-class** 
 
@@ -1214,9 +1216,9 @@ The value returned by **update-instance-for-redefined-class** is ignored.
 
 Objects **7–35**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **update-instance-for-redefined-class** 
 
@@ -1284,11 +1286,11 @@ new-x)))
 
 (setq rho (sqrt (+ (\* x x) (\* new-y new-y))) 
 
+**7–36** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 theta (atan new-y x)) 
 
@@ -1332,9 +1334,9 @@ The *generic function* **change-class** changes the *class* of an *instance* to 
 
 Objects **7–37**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **change-class** 
 
@@ -1394,11 +1396,11 @@ If the second of the above *methods* is selected, that *method* invokes **change
 
 ;;; method performed the initialization of the rho and theta slots based 
 
+**7–38** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 ;;; on the value of the x and y slots, which were maintained by 
 
@@ -1448,9 +1450,9 @@ If no *slot* of the *name slot-name* exists in the *instance*, **slot-missing** 
 
 Objects **7–39**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 The specific behavior depends on *instance*’s *metaclass*. An error is never signaled if *instance* has *metaclass* **standard-class**. An error is always signaled if *instance* has *metaclass* **built-in-class**. The consequences are undefined if *instance* has any other *metaclass*–an error might or might not be signaled in this situation. Note in particular that the behavior for *conditions* and *structures* is not specified. 
 
@@ -1494,11 +1496,11 @@ Returns *true* if the *object* has a *slot* named *slot-name*.
 
 Although no *implementation* is required to do so, implementors are strongly encouraged to implement the *function* **slot-exists-p** using the *function* slot-exists-p-using-class described in the *Metaobject Protocol*. 
 
+**7–40** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **slot-makunbound** *Function* 
 
@@ -1542,9 +1544,9 @@ Although no *implementation* is required to do so, implementors are strongly enc
 
 Objects **7–41**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **slot-missing** 
 
@@ -1552,7 +1554,7 @@ Objects **7–41**
 
 **Syntax:** 
 
-**slot-missing** *class object slot-name operation* &optional *new-value → &#123;result&#125;*\* 
+**slot-missing** *class object slot-name operation* &optional *new-value → {result}*\* 
 
 **Method Signatures:** 
 
@@ -1590,11 +1592,11 @@ If **slot-missing** returns, its values will be treated as follows:
 
 *•* If the *operation* is **slot-boundp**, any *boolean equivalent* of the *primary value* of the *method* might be is used, and all other values will be ignored. 
 
+**7–42** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Exceptional Situations:** 
 
@@ -1612,7 +1614,7 @@ The set of arguments (including the *class* of the instance) facilitates definin
 
 **Syntax:** 
 
-**slot-unbound** *class instance slot-name → &#123;result&#125;*\* 
+**slot-unbound** *class instance slot-name → {result}*\* 
 
 **Method Signatures:** 
 
@@ -1646,9 +1648,9 @@ The default *method* on **slot-unbound** signals an error of *type* **unbound-sl
 
 Objects **7–43**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Notes:** 
 
@@ -1684,11 +1686,11 @@ The macro **setf** can be used with **slot-value** to change the value of a *slo
 
 (c :accessor foo-c :initform 3))) 
 
-*→* #&#60;STANDARD-CLASS FOO 244020371&#62; 
+*→* #<STANDARD-CLASS FOO 244020371> 
 
 (setq foo1 (make-instance ’foo :a ’one :b ’two)) 
 
-*→* #&#60;FOO 36325624&#62; 
+*→* #<FOO 36325624> 
 
 (slot-value foo1 ’a) *→* ONE 
 
@@ -1704,15 +1706,15 @@ The macro **setf** can be used with **slot-value** to change the value of a *slo
 
 (slot-value x ’a)) 
 
-*→* #&#60;STANDARD-METHOD FOO-METHOD (FOO) 42720573&#62; 
+*→* #<STANDARD-METHOD FOO-METHOD (FOO) 42720573> 
 
 (foo-method foo1) *→* UNO 
 
+**7–44** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Exceptional Situations:** 
 
@@ -1762,9 +1764,9 @@ Implementations may optimize **slot-value** by compiling it inline.
 
 Objects **7–45**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Method Signatures:** 
 
@@ -1784,7 +1786,7 @@ Returns a *list* of the *qualifiers* of the *method*.
 
 (defmethod some-gf :before ((a integer)) a) 
 
-*→* #&#60;STANDARD-METHOD SOME-GF (:BEFORE) (INTEGER) 42736540&#62; 
+*→* #<STANDARD-METHOD SOME-GF (:BEFORE) (INTEGER) 42736540> 
 
 (method-qualifiers \*) *→* (:BEFORE) 
 
@@ -1796,7 +1798,7 @@ Returns a *list* of the *qualifiers* of the *method*.
 
 **Syntax:** 
 
-**no-applicable-method** *generic-function* &rest *function-arguments → &#123;result&#125;*\* 
+**no-applicable-method** *generic-function* &rest *function-arguments → {result}*\* 
 
 **Method Signatures:** 
 
@@ -1818,11 +1820,11 @@ The generic function **no-applicable-method** is called when a *generic function
 
 The generic function **no-applicable-method** is not intended to be called by programmers. Programmers may write *methods* for it. 
 
+**7–46** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Exceptional Situations:** 
 
@@ -1834,7 +1836,7 @@ The default *method* signals an error of *type* **error**.
 
 **Syntax:** 
 
-**no-next-method** *generic-function method* &rest *args → &#123;result&#125;*\* 
+**no-next-method** *generic-function method* &rest *args → {result}*\* 
 
 **Method Signatures:** 
 
@@ -1868,9 +1870,9 @@ The system-supplied *method* on **no-next-method** signals an error of *type* **
 
 Objects **7–47**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **remove-method** *Standard Generic Function* 
 
@@ -1920,11 +1922,11 @@ The *generic function* **remove-method** removes a *method* from *generic-functi
 
 *instance*—a *fresh instance* of *class class*. 
 
+**7–48** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Description:** 
 
@@ -1970,9 +1972,9 @@ If the second of the above *methods* is selected, that *method* invokes **make-i
 
 Objects **7–49**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Examples:** 
 
@@ -2016,11 +2018,11 @@ The *file compiler* calls **make-load-form** to process certain *classes* of *li
 
 The creation form is a *form* that, when evaluated at **load** time, should return an *object* that is equivalent to *object*. The exact meaning of equivalent depends on the *type* of *object* and is up to the programmer who defines a *method* for **make-load-form**; see Section 3.2.4 (Literal Objects in Compiled Files). 
 
+**7–50** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **make-load-form** 
 
@@ -2042,9 +2044,9 @@ The *method specialized* on **class** returns a creation *form* using the *name*
 
 Objects **7–51**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **make-load-form** 
 
@@ -2062,7 +2064,7 @@ Both *conforming implementations* and *conforming programs* may further *special
 
 (dist :accessor obj-dist))) 
 
-*→* #&#60;STANDARD-CLASS OBJ 250020030&#62; 
+*→* #<STANDARD-CLASS OBJ 250020030> 
 
 (defmethod shared-initialize :after ((self obj) slot-names &rest keys) 
 
@@ -2074,7 +2076,7 @@ Both *conforming implementations* and *conforming programs* may further *special
 
 (sqrt (+ (expt (obj-x self) 2) (expt (obj-y self) 2)))))) 
 
-*→* #&#60;STANDARD-METHOD SHARED-INITIALIZE (:AFTER) (OBJ T) 26266714&#62; 
+*→* #<STANDARD-METHOD SHARED-INITIALIZE (:AFTER) (OBJ T) 26266714> 
 
 (defmethod make-load-form ((self obj) &optional environment) 
 
@@ -2090,9 +2092,9 @@ Both *conforming implementations* and *conforming programs* may further *special
 
 :x ’,(obj-x self) :y ’,(obj-y self))) 
 
-*→* #&#60;STANDARD-METHOD MAKE-LOAD-FORM (OBJ) 26267532&#62; 
+*→* #<STANDARD-METHOD MAKE-LOAD-FORM (OBJ) 26267532> 
 
-(setq obj1 (make-instance ’obj :x 3.0 :y 4.0)) *→* #&#60;OBJ 26274136&#62; 
+(setq obj1 (make-instance ’obj :x 3.0 :y 4.0)) *→* #<OBJ 26274136> 
 
 (obj-dist obj1) *→* 5.0 
 
@@ -2112,13 +2114,13 @@ Another way to write the **make-load-form** *method* in that example is to use *
 
 :environment environment)) 
 
-*→* #&#60;STANDARD-METHOD MAKE-LOAD-FORM (OBJ) 42755655&#62; 
+*→* #<STANDARD-METHOD MAKE-LOAD-FORM (OBJ) 42755655> 
 
+**7–52** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **make-load-form** 
 
@@ -2126,15 +2128,15 @@ Another way to write the **make-load-form** *method* in that example is to use *
 
 (make-load-form obj1) 
 
-*→* (ALLOCATE-INSTANCE ’#&#60;STANDARD-CLASS OBJ 250020030&#62;), 
+*→* (ALLOCATE-INSTANCE ’#<STANDARD-CLASS OBJ 250020030>), 
 
 (PROGN 
 
-(SETF (SLOT-VALUE ’#&#60;OBJ 26274136&#62; ’X) ’3.0) 
+(SETF (SLOT-VALUE ’#<OBJ 26274136> ’X) ’3.0) 
 
-(SETF (SLOT-VALUE ’#&#60;OBJ 26274136&#62; ’Y) ’4.0) 
+(SETF (SLOT-VALUE ’#<OBJ 26274136> ’Y) ’4.0) 
 
-(INITIALIZE-INSTANCE ’#&#60;OBJ 26274136&#62;)) 
+(INITIALIZE-INSTANCE ’#<OBJ 26274136>)) 
 
 In the following example, *instances* of my-frob are “interned” in some way. An equivalent *instance* is reconstructed by using the value of the name slot as a key for searching existing *objects*. In this case the programmer has chosen to create a new *object* if no existing *object* is found; alternatively an error could have been signaled in that case. 
 
@@ -2180,9 +2182,9 @@ In the following example, the data structure to be dumped has no special propert
 
 Objects **7–53**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Exceptional Situations:** 
 
@@ -2224,11 +2226,11 @@ Some *implementations* may provide facilities for defining new *subclasses* of *
 
 Returns *forms* that, when *evaluated*, will construct an *object* equivalent to *object*, without *executing initialization forms*. The *slots* in the new *object* that correspond to initialized *slots* in *object* are initialized using the values from *object*. Uninitialized *slots* in *object* are not initialized in the new *object*. **make-load-form-saving-slots** works for any *instance* of **standard-object** or **structure-object**. 
 
+**7–54** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 *Slot-names* is a *list* of the names of the *slots* to preserve. If *slot-names* is not supplied, its value is all of the *local slots*. 
 
@@ -2250,9 +2252,9 @@ When the *object* is an *instance* of **standard-object**, **make-load-form-savi
 
 **Syntax:** 
 
-**with-accessors** (*&#123;slot-entry&#125;*\*) *instance-form &#123;declaration&#125;*\* *&#123;form&#125;*\* 
+**with-accessors** (*{slot-entry}*\*) *instance-form {declaration}*\* *{form}*\* 
 
-*→ &#123;result&#125;*\* 
+*→ {result}*\* 
 
 *slot-entry::*=(*variable-name accessor-name*) 
 
@@ -2276,9 +2278,9 @@ Creates a lexical environment in which the slots specified by *slot-entry* are l
 
 Objects **7–55**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **with-accessors** 
 
@@ -2290,7 +2292,7 @@ Objects **7–55**
 
 (y :initarg :y :accessor thing-y))) 
 
-*→* #&#60;STANDARD-CLASS THING 250020173&#62; 
+*→* #<STANDARD-CLASS THING 250020173> 
 
 (defmethod (setf thing-x) :before (new-x (thing thing)) 
 
@@ -2298,9 +2300,9 @@ Objects **7–55**
 
 (thing-x thing) new-x thing)) 
 
-(setq thing1 (make-instance ’thing :x 1 :y 2)) *→* #&#60;THING 43135676&#62; 
+(setq thing1 (make-instance ’thing :x 1 :y 2)) *→* #<THING 43135676> 
 
-(setq thing2 (make-instance ’thing :x 7 :y 8)) *→* #&#60;THING 43147374&#62; 
+(setq thing2 (make-instance ’thing :x 7 :y 8)) *→* #<THING 43147374> 
 
 (with-accessors ((x1 thing-x) (y1 thing-y)) 
 
@@ -2326,9 +2328,9 @@ x2 (thing-x thing2) y2 (thing-y thing2))
 
 x2 (thing-x thing2) y2 (thing-y thing2))))) 
 
-&#9655; Changing X from 1 to 9 in #&#60;THING 43135676&#62;. 
+*.* Changing X from 1 to 9 in #<THING 43135676>. 
 
-&#9655; Changing X from 7 to (9) in #&#60;THING 43147374&#62;. 
+*.* Changing X from 7 to (9) in #<THING 43147374>. 
 
 *→* ((1 1 2 2 7 7 8 8) 
 
@@ -2356,31 +2358,31 @@ The consequences are undefined if any *accessor-name* is not the name of an acce
 
 A **with-accessors** expression of the form: 
 
-(with-accessors (&#60;i&#62;slot-entry&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62;&#60;i&#62;. . . slot-entry&#60;sub&#62;n&#60;/sub&#62;&#60;/i&#62;) &#60;i&#62;instance-form form&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62;&#60;i&#62;. . . form&#60;sub&#62;k&#60;/sub&#62;&#60;/i&#62;) 
+(with-accessors (<i>slot-entry</i><sub>1</sub><i>. . . slot-entry<sub>n</sub></i>) <i>instance-form form</i><sub>1</sub><i>. . . form<sub>k</sub></i>) 
 
+**7–56** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 expands into the equivalent of 
 
 (let ((*in instance-form*)) 
 
-(symbol-macrolet (&#60;i&#62;Q&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62;&#60;i&#62;. . . Q&#60;sub&#62;n&#60;/sub&#62;&#60;/i&#62;) &#60;i&#62;form&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62;&#60;i&#62;. . . form&#60;sub&#62;k&#60;/sub&#62;&#60;/i&#62;)) 
+(symbol-macrolet (<i>Q</i><sub>1</sub><i>. . . Q<sub>n</sub></i>) <i>form</i><sub>1</sub><i>. . . form<sub>k</sub></i>)) 
 
-where &#60;i&#62;Q&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;is 
+where <i>Q<sub>i</sub></i>is 
 
-(&#60;i&#62;variable-name&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62; () (&#60;i&#62;accessor-name&#60;sub&#62;i&#60;/sub&#62; in&#60;/i&#62;)) 
+(<i>variable-name<sub>i</sub></i> () (<i>accessor-name<sub>i</sub> in</i>)) 
 
 **with-slots** *Macro* 
 
 **Syntax:** 
 
-**with-slots** (*&#123;slot-entry&#125;*\*) *instance-form &#123;declaration&#125;*\* *&#123;form&#125;*\* 
+**with-slots** (*{slot-entry}*\*) *instance-form {declaration}*\* *{form}*\* 
 
-*→ &#123;result&#125;*\* 
+*→ {result}*\* 
 
 *slot-entry::*=*slot-name |* (*variable-name slot-name*) 
 
@@ -2412,9 +2414,9 @@ The macro **with-slots** translates an appearance of the slot name as a *variabl
 
 Objects **7–57**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **with-slots** 
 
@@ -2422,7 +2424,7 @@ Objects **7–57**
 
 (y :initarg :y :accessor thing-y))) 
 
-*→* #&#60;STANDARD-CLASS THING 250020173&#62; 
+*→* #<STANDARD-CLASS THING 250020173> 
 
 (defmethod (setf thing-x) :before (new-x (thing thing)) 
 
@@ -2430,15 +2432,15 @@ Objects **7–57**
 
 (thing-x thing) new-x thing)) 
 
-(setq thing (make-instance ’thing :x 0 :y 1)) *→* #&#60;THING 62310540&#62; 
+(setq thing (make-instance ’thing :x 0 :y 1)) *→* #<THING 62310540> 
 
 (with-slots (x y) thing (incf x) (incf y)) *→* 2 
 
 (values (thing-x thing) (thing-y thing)) *→* 1, 2 
 
-(setq thing1 (make-instance ’thing :x 1 :y 2)) *→* #&#60;THING 43135676&#62; 
+(setq thing1 (make-instance ’thing :x 1 :y 2)) *→* #<THING 43135676> 
 
-(setq thing2 (make-instance ’thing :x 7 :y 8)) *→* #&#60;THING 43147374&#62; 
+(setq thing2 (make-instance ’thing :x 7 :y 8)) *→* #<THING 43147374> 
 
 (with-slots ((x1 x) (y1 y)) 
 
@@ -2464,7 +2466,7 @@ x2 (thing-x thing2) y2 (thing-y thing2))
 
 x2 (thing-x thing2) y2 (thing-y thing2))))) 
 
-&#9655; Changing X from 7 to (9) in #&#60;THING 43147374&#62;. 
+*.* Changing X from 7 to (9) in #<THING 43147374>. 
 
 *→* ((1 1 2 2 7 7 8 8) 
 
@@ -2492,37 +2494,37 @@ The consequences are undefined if any *slot-name* is not the name of a *slot* in
 
 A **with-slots** expression of the form: 
 
-(with-slots (&#60;i&#62;slot-entry&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62;&#60;i&#62;. . . slot-entry&#60;sub&#62;n&#60;/sub&#62;&#60;/i&#62;) &#60;i&#62;instance-form form&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62;&#60;i&#62;. . . form&#60;sub&#62;k&#60;/sub&#62;&#60;/i&#62;) 
+(with-slots (<i>slot-entry</i><sub>1</sub><i>. . . slot-entry<sub>n</sub></i>) <i>instance-form form</i><sub>1</sub><i>. . . form<sub>k</sub></i>) 
 
 expands into the equivalent of 
 
+**7–58** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 (let ((*in instance-form*)) 
 
-(symbol-macrolet (&#60;i&#62;Q&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62;&#60;i&#62;. . . Q&#60;sub&#62;n&#60;/sub&#62;&#60;/i&#62;) &#60;i&#62;form&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62;&#60;i&#62;. . . form&#60;sub&#62;k&#60;/sub&#62;&#60;/i&#62;)) 
+(symbol-macrolet (<i>Q</i><sub>1</sub><i>. . . Q<sub>n</sub></i>) <i>form</i><sub>1</sub><i>. . . form<sub>k</sub></i>)) 
 
-where &#60;i&#62;Q&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;is 
+where <i>Q<sub>i</sub></i>is 
 
-(&#60;i&#62;slot-entry&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;() (slot-value &#60;i&#62;in&#60;/i&#62; ’&#60;i&#62;slot-entry&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;)) 
+(<i>slot-entry<sub>i</sub></i>() (slot-value <i>in</i> ’<i>slot-entry<sub>i</sub></i>)) 
 
-if &#60;i&#62;slot-entry&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;is a &#60;i&#62;symbol&#60;/i&#62; and is 
+if <i>slot-entry<sub>i</sub></i>is a <i>symbol</i> and is 
 
-(&#60;i&#62;variable-name&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62; () (slot-value &#60;i&#62;in&#60;/i&#62; ’&#60;i&#62;slot-name&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;)) 
+(<i>variable-name<sub>i</sub></i> () (slot-value <i>in</i> ’<i>slot-name<sub>i</sub></i>)) 
 
-if &#60;i&#62;slot-entry&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;is of the form 
+if <i>slot-entry<sub>i</sub></i>is of the form 
 
-(&#60;i&#62;variable-name&#60;sub&#62;i&#60;/sub&#62; slot-name&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;) 
+(<i>variable-name<sub>i</sub> slot-name<sub>i</sub></i>) 
 
 **defclass** *Macro* 
 
 **Syntax:** 
 
-**defclass** *class-name* (*&#123;superclass-name&#125;*\*) (*&#123;slot-specifier&#125;*\*) [[*↓class-option* ]] 
+**defclass** *class-name* (*{superclass-name}*\*) (*{slot-specifier}*\*) [[*↓class-option* ]] 
 
 *→ new-class* 
 
@@ -2530,23 +2532,23 @@ if &#60;i&#62;slot-entry&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;is of the form
 
 *slot-name*::= *symbol* 
 
-*slot-option*::= *&#123;*:reader *reader-function-name&#125;*\* *|* 
+*slot-option*::= *{*:reader *reader-function-name}*\* *|* 
 
-*&#123;*:writer *writer-function-name&#125;*\* *|* 
+*{*:writer *writer-function-name}*\* *|* 
 
-*&#123;*:accessor *reader-function-name&#125;*\* *|* 
+*{*:accessor *reader-function-name}*\* *|* 
 
-*&#123;*:allocation *allocation-type&#125; |* 
+*{*:allocation *allocation-type} |* 
 
-*&#123;*:initarg *initarg-name&#125;*\* *|* 
+*{*:initarg *initarg-name}*\* *|* 
 
-*&#123;*:initform *form&#125; |* 
+*{*:initform *form} |* 
 
-*&#123;*:type *type-specifier&#125; |* 
+*{*:type *type-specifier} |* 
 
-*&#123;*:documentation *string&#125;* 
+*{*:documentation *string}* 
 
-*function-name*::= *&#123;symbol |* (setf *symbol*)*&#125;* 
+*function-name*::= *{symbol |* (setf *symbol*)*}* 
 
 *class-option*::= (:default-initargs . *initarg-list*) *|* 
 
@@ -2556,9 +2558,9 @@ if &#60;i&#62;slot-entry&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;is of the form
 
 Objects **7–59**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **defclass** 
 
@@ -2596,11 +2598,11 @@ The syntax of **defclass** provides options for specifying initialization argume
 
 Defining a new *class* also causes a *type* of the same name to be defined. The predicate (typep *object class-name*) returns true if the *class* of the given *object* is the *class* named by *class-name* itself or a subclass of the class *class-name*. A *class object* can be used as a *type specifier* . Thus (typep *object class*) returns *true* if the *class* of the *object* is *class* itself or a subclass of *class*. 
 
-The *class-name* argument specifies the *proper name* of the new *class*. If a *class* with the same 
+The *class-name* argument specifies the *proper name* of the new *class*. If a *class* with the same **7–60** Programming Language—Common Lisp
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **defclass** 
 
@@ -2624,21 +2626,21 @@ The following slot options are available:
 
 – If *allocation-type* is :class, a shared *slot* of the given name is allocated in the *class object* created by this **defclass** form. The value of the *slot* is shared by all 
 
-*instances* of the *class*. If a class *C*&#60;sub&#62;1&#60;/sub&#62; defines such a *shared slot*, any subclass *C*&#60;sub&#62;2&#60;/sub&#62; of 
+*instances* of the *class*. If a class *C*<sub>1</sub> defines such a *shared slot*, any subclass *C*<sub>2</sub> of 
 
-*C*&#60;sub&#62;1&#60;/sub&#62; will share this single *slot* unless the **defclass** form for *C*&#60;sub&#62;2&#60;/sub&#62; specifies a *slot* of the 
+*C*<sub>1</sub> will share this single *slot* unless the **defclass** form for *C*<sub>2</sub> specifies a *slot* of the 
 
-same *name* or there is a superclass of *C*&#60;sub&#62;2&#60;/sub&#62; that precedes *C*&#60;sub&#62;1&#60;/sub&#62; in the class precedence 
+same *name* or there is a superclass of *C*<sub>2</sub> that precedes *C*<sub>1</sub> in the class precedence 
 
-list of *C*&#60;sub&#62;2&#60;/sub&#62; and that defines a *slot* of the same *name*. 
+list of *C*<sub>2</sub> and that defines a *slot* of the same *name*. 
 
 *•* The :initform slot option is used to provide a default initial value form to be used in the initialization of the *slot*. This *form* is evaluated every time it is used to initialize the *slot*. The lexical environment in which this *form* is evaluated is the lexical environment in which the **defclass** form was evaluated. Note that the lexical environment refers both to variables 
 
 Objects **7–61**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **defclass** 
 
@@ -2660,11 +2662,11 @@ Each class option is an option that refers to the *class* as a whole. The follow
 
 *•* The :metaclass class option is used to specify that instances of the *class* being defined are to have a different metaclass than the default provided by the system (the *class* **standard-class**). 
 
+**7–62** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **defclass** 
 
@@ -2704,9 +2706,9 @@ It is required that all implementations signal an error of *type* **program-erro
 
 Objects **7–63**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 List), Section 7.1 (Object Creation and Initialization) 
 
@@ -2714,27 +2716,27 @@ List), Section 7.1 (Object Creation and Initialization)
 
 **Syntax:** 
 
-**defgeneric** *function-name gf-lambda-list* [[ *↓option | &#123;↓method-description&#125;*\* ]] 
+**defgeneric** *function-name gf-lambda-list* [[ *↓option | {↓method-description}*\* ]] 
 
 *→ new-generic* 
 
-*option::*=(:argument-precedence-order *&#123;parameter-name&#125;*&#60;sup&#62;+&#60;/sup&#62;) *|* 
+*option::*=(:argument-precedence-order *{parameter-name}*<sup>+</sup>) *|* 
 
-(**declare** *&#123;gf-declaration&#125;*&#60;sup&#62;+&#60;/sup&#62;) *|* 
+(**declare** *{gf-declaration}*<sup>+</sup>) *|* 
 
 (:documentation *gf-documentation*) *|* 
 
-(:method-combination *method-combination &#123;method-combination-argument&#125;*\*) *|* 
+(:method-combination *method-combination {method-combination-argument}*\*) *|* 
 
 (:generic-function-class *generic-function-class*) *|* 
 
 (:method-class *method-class*) 
 
-*method-description::*=(:method *&#123;method-qualifier&#125;*\* *specialized-lambda-list* 
+*method-description::*=(:method *{method-qualifier}*\* *specialized-lambda-list* 
 
 **Arguments and Values:** 
 
-[[ *&#123;declaration&#125;*\* *| documentation* ]] *&#123;form&#125;*\*) 
+[[ *{declaration}*\* *| documentation* ]] *{form}*\*) 
 
 *function-name*—a *function name*. 
 
@@ -2754,11 +2756,11 @@ List), Section 7.1 (Object Creation and Initialization)
 
 *parameter-name*—a *symbol* that names a *required parameter* in the *lambda-list*. (If the :argument-precedence-order option is specified, each *required parameter* in the *lambda-list* must be used exactly once as a *parameter-name*.) 
 
+**7–64** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **defgeneric** 
 
@@ -2786,9 +2788,9 @@ An **optimize** *declaration specifier* is allowed. It specifies whether method 
 
 Objects **7–65**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **defgeneric** 
 
@@ -2812,11 +2814,11 @@ Implementations can extend **defgeneric** to include other options. It is requir
 
 **defgeneric** is not required to perform any compile-time side effects. In particular, the *methods* are not installed for invocation during compilation. An *implementation* may choose to store 
 
+**7–66** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 information about the *generic function* for the purposes of compile-time error-checking (such as checking the number of arguments on calls, or noting that a definition for the function name has been seen). 
 
@@ -2846,35 +2848,35 @@ Implementations can extend **defgeneric** to include other options. It is requir
 
 **Syntax:** 
 
-**defmethod** *function-name &#123;method-qualifier&#125;*\* *specialized-lambda-list* 
+**defmethod** *function-name {method-qualifier}*\* *specialized-lambda-list* 
 
-[[ *&#123;declaration&#125;*\* *| documentation* ]] *&#123;form&#125;*\* 
+[[ *{declaration}*\* *| documentation* ]] *{form}*\* 
 
 *→ new-method* 
 
-*function-name*::= *&#123;symbol |* (setf *symbol*)*&#125;* 
+*function-name*::= *{symbol |* (setf *symbol*)*}* 
 
 Objects **7–67**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **defmethod** 
 
 *method-qualifier*::= *non-list* 
 
-*specialized-lambda-list*::= (*&#123;var |* (*var parameter-specializer-name*)*&#125;*\* 
+*specialized-lambda-list*::= (*{var |* (*var parameter-specializer-name*)*}*\* 
 
-[&optional *&#123;var |* (var [*initform* [*supplied-p-parameter*] ])*&#125;*\*] 
+[&optional *{var |* (var [*initform* [*supplied-p-parameter*] ])*}*\*] 
 
 [&rest *var*] 
 
-[&key*&#123;var |* (*&#123;var |* (*keywordvar*)*&#125;* [*initform* [*supplied-p-parameter*] ])*&#125;*\* 
+[&key*{var |* (*{var |* (*keywordvar*)*}* [*initform* [*supplied-p-parameter*] ])*}*\* 
 
 [**&allow-other-keys**] ] 
 
-[&aux *&#123;var |* (*var* [*initform*] )*&#125;*\*] ) 
+[&aux *{var |* (*var* [*initform*] )*}*\*] ) 
 
 *parameter-specializer-name*::= *symbol |* (eql *eql-specializer-form*) 
 
@@ -2908,11 +2910,11 @@ If a *generic function* is currently named by *function-name*, the *lambda list*
 
 Each *method-qualifier* argument is an *object* that is used by method combination to identify the given *method*. The method combination type might further restrict what a method *qualifier* can be. The standard method combination type allows for *unqualified methods* and *methods* whose sole 
 
+**7–68** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **defmethod** 
 
@@ -2932,15 +2934,15 @@ The expansion of the **defmethod** macro “refers to” each specialized parame
 
 Declarations at the head of the method body that apply to the method’s *lambda variables* are treated as *bound declarations* whose *scope* is the same as the corresponding *bindings*. 
 
-Declarations at the head of the method body that apply to the functional bindings of **call-next-method** or **next-method-p** apply to references to those functions within the method body *forms*. Any outer *bindings* of the *function names* **call-next-method** and **next-method-p**, and declarations associated with such *bindings* are *shadowed* &#60;sub&#62;2&#60;/sub&#62; within the method body *forms*. 
+Declarations at the head of the method body that apply to the functional bindings of **call-next-method** or **next-method-p** apply to references to those functions within the method body *forms*. Any outer *bindings* of the *function names* **call-next-method** and **next-method-p**, and declarations associated with such *bindings* are *shadowed* <sub>2</sub> within the method body *forms*. 
 
 The *scope* of *free declarations* at the head of the method body is the entire method body, which includes any implicit local function definitions but excludes *initialization forms* for the *lambda variables*. 
 
 **defmethod** is not required to perform any compile-time side effects. In particular, the *methods* Objects **7–69**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 are not installed for invocation during compilation. An *implementation* may choose to store information about the *generic function* for the purposes of compile-time error-checking (such as checking the number of arguments on calls, or noting that a definition for the function name has been seen). 
 
@@ -2978,11 +2980,11 @@ If a *generic function* is currently named by *function-name*, the *lambda list*
 
 *class*—a *class object*, or **nil**. 
 
+**7–70** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Description:** 
 
@@ -3028,15 +3030,15 @@ Whether or not **next-method-p** is *fbound* in the *global environment* is *imp
 
 Objects **7–71**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **call-method, make-method** *Local Macro* 
 
 **Syntax:** 
 
-**call-method** *method* &optional *next-method-list → &#123;result&#125;*\* 
+**call-method** *method* &optional *next-method-list → {result}*\* 
 
 **make-method** *form → method-object* 
 
@@ -3064,11 +3066,11 @@ If *method* is a *list*, the first element of the *list* must be the symbol **ma
 
 Those are the only two places where **make-method** can be used. The *form* used with **make-method** is evaluated in the *null lexical environment* augmented with a local macro definition for **call-method** and with bindings named by symbols not *accessible* from the COMMON-LISP-USER *package*. 
 
-The **call-next-method** function available to *method* will call the first *method* in *next-method-list*. 
+The **call-next-method** function available to *method* will call the first *method* in *next-method-list*. **7–72** Programming Language—Common Lisp
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 The **call-next-method** function available in that *method*, in turn, will call the second *method* in *next-method-list*, and so on, until the list of next *methods* is exhausted. 
 
@@ -3084,7 +3086,7 @@ If *next-method-list* is not supplied, the **call-next-method** function availab
 
 **Syntax:** 
 
-**call-next-method** &rest *args → &#123;result&#125;*\* 
+**call-next-method** &rest *args → {result}*\* 
 
 **Arguments and Values:** 
 
@@ -3108,9 +3110,9 @@ If **call-next-method** is called with arguments but omits optional arguments, t
 
 The *function* **call-next-method** returns any *values* that are returned by the *next method*. Objects **7–73**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 The *function* **call-next-method** has *lexical scope* and *indefinite extent* and can only be used within the body of a *method* defined by a *method-defining form*. 
 
@@ -3150,11 +3152,11 @@ When providing arguments to **call-next-method**, the following rule must be sat
 
 Given a *generic-function* and a set of *function-arguments*, the function **compute-applicable-methods** returns the set of *methods* that are applicable for those arguments sorted according to precedence order. See Section 7.6.6 (Method Selection and Combination). 
 
+**7–74** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Affected By:** 
 
@@ -3174,15 +3176,15 @@ Section 7.6.6 (Method Selection and Combination)
 
 **define-method-combination** *name lambda-list* 
 
-(*&#123;method-group-specifier&#125;*\*) 
+(*{method-group-specifier}*\*) 
 
 [(:arguments *. args-lambda-list*)] 
 
 [(:generic-function *generic-function-symbol*)] 
 
-[[ *&#123;declaration&#125;*\* *| documentation* ]] 
+[[ *{declaration}*\* *| documentation* ]] 
 
-*&#123;form&#125;*\* 
+*{form}*\* 
 
 *→ name* 
 
@@ -3192,7 +3194,7 @@ Section 7.6.6 (Method Selection and Combination)
 
 :operator *operator* 
 
-*method-group-specifier::*=(*name &#123;&#123;qualifier-pattern&#125;*&#60;sup&#62;+&#60;/sup&#62;*| predicate&#125;* [[ *↓long-form-option* ]]) 
+*method-group-specifier::*=(*name {{qualifier-pattern}*<sup>+</sup>*| predicate}* [[ *↓long-form-option* ]]) 
 
 *long-form-option::*=:description *description |* 
 
@@ -3214,9 +3216,9 @@ Section 7.6.6 (Method Selection and Combination)
 
 Objects **7–75**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **define-method-combination** 
 
@@ -3264,11 +3266,11 @@ avoids the overhead of a *function* call. This option is designed to be used wit
 
 operators such as **progn**, **and**, +, and **max**. 
 
+**7–76** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **define-method-combination** 
 
@@ -3300,9 +3302,9 @@ If *qualifier-pattern* is a *symbol* it must be **\***. A method matches a *qual
 
 Objects **7–77**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **define-method-combination** 
 
@@ -3346,615 +3348,4 @@ is signaled. If :required is not supplied, it defaults to **nil**.
 
 The use of method group specifiers provides a convenient syntax to select methods, to divide them among the possible roles, and to perform the necessary error checking. It is possible to perform further filtering of methods in the body *forms* by using normal list-processing operations and the functions **method-qualifiers** and **invalid-method-error**. 
 
-It is permissible to use **setq** on the variables named in the method group specifiers and 
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-**define-method-combination** 
-
-to bind additional variables. It is also possible to bypass the method group specifier mechanism and do everything in the body *forms*. This is accomplished by writing a single method group with **\*** as its only *qualifier-pattern*; the variable is then bound to a *list* of all of the *applicable methods*, in most-specific-first order. 
-
-The body *forms* compute and return the *form* that specifies how the methods are combined, that is, the e↵ective method. The e↵ective method is evaluated in the *null lexical environment* augmented with a local macro definition for **call-method** and with bindings named by symbols not *accessible* from the COMMON-LISP-USER *package*. Given a method object in one of the *lists* produced by the method group specifiers and a *list* of next methods, **call-method** will invoke the method such that **call-next-method** has available the next methods. 
-
-When an e↵ective method has no e↵ect other than to call a single method, some implementations employ an optimization that uses the single method directly as the e↵ective method, thus avoiding the need to create a new e↵ective method. This optimization is active when the e↵ective method form consists entirely of an invocation of the **call-method** macro whose first *subform* is a method object and whose second *subform* is **nil** or unsupplied. Each **define-method-combination** body is responsible for stripping o↵ redundant invocations of **progn**, **and**, **multiple-value-prog1**, and the like, if this optimization is desired. 
-
-The list (:arguments . *lambda-list*) can appear before any declarations or *documentation string*. This form is useful when the method combination type performs some specific behavior as part of the combined method and that behavior needs access to the arguments to the *generic function*. Each parameter variable defined by *lambda-list* is bound to a *form* that can be inserted into the e↵ective method. When this *form* is evaluated during execution of the e↵ective method, its value is the corresponding argument to the *generic function*; the consequences of using such a *form* as the *place* in a **setf** *form* are undefined. Argument correspondence is computed by dividing the :arguments *lambda-list* and the *generic function lambda-list* into three sections: the *required parameters*, the *optional parameters*, and the *keyword* and *rest parameters*. The *arguments* supplied to the *generic function* for a particular *call* are also divided into three sections; the required *arguments* section contains as many *arguments* as the *generic function* has *required parameters*, the optional *arguments* section contains as many arguments as the *generic function* has *optional parameters*, and the keyword/rest *arguments* section contains the remaining arguments. Each *parameter* in the required and optional sections of the :arguments *lambda-list* accesses the argument at the same position in the corresponding section of the *arguments*. If the section of the :arguments *lambda-list* is shorter, extra *arguments* are ignored. If the section of the :arguments *lambda-list* is longer, excess *required parameters* are bound to forms that evaluate to **nil** and excess *optional parameters* are *bound* to their initforms. The *keyword parameters* and *rest parameters* in the :arguments *lambda-list* access the keyword/rest section of the *arguments*. If the :arguments *lambda-list* contains **&key**, it behaves as if it also contained **&allow-other-keys**. 
-
-In addition, **&whole** *var* can be placed first in the :arguments *lambda-list*. It causes *var* to Objects **7–79**
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-**define-method-combination** 
-
-be *bound* to a *form* that *evaluates* to a *list* of all of the *arguments* supplied to the *generic function*. This is di↵erent from **&rest** because it accesses all of the arguments, not just the keyword/rest *arguments*. 
-
-Erroneous conditions detected by the body should be reported with 
-
-**method-combination-error** or **invalid-method-error**; these *functions* add any nec essary contextual information to the error message and will signal the appropriate error. 
-
-The body *forms* are evaluated inside of the *bindings* created by the *lambda list* and method group specifiers. Declarations at the head of the body are positioned directly inside of *bindings* created by the *lambda list* and outside of the *bindings* of the method group variables. Thus method group variables cannot be declared in this way. **locally** may be used around the body, however. 
-
-Within the body *forms*, *generic-function-symbol* is bound to the *generic function object*. 
-
-*Documentation* is attached as a *documentation string* to *name* (as kind 
-
-**method-combination**) and to the *method combination object*. 
-
-Note that two methods with identical specializers, but with di↵erent *qualifiers*, are not ordered by the algorithm described in Step 2 of the method selection and combination process described in Section 7.6.6 (Method Selection and Combination). Normally the two methods play di↵erent roles in the e↵ective method because they have di↵erent *qualifiers*, and no matter how they are ordered in the result of Step 2, the e↵ective method is the same. If the two methods play the same role and their order matters, an error is signaled. This happens as part of the *qualifier* pattern matching in **define-method-combination**. 
-
-If a **define-method-combination** *form* appears as a *top level form*, the *compiler* must make the *method combination name* be recognized as a valid *method combination name* in subsequent **defgeneric** *forms*. However, the *method combination* is executed no earlier than when the **define-method-combination** *form* is executed, and possibly as late as the time that *generic functions* that use the *method combination* are executed. 
-
-**Examples:** 
-
-Most examples of the long form of **define-method-combination** also illustrate the use of the related *functions* that are provided as part of the declarative method combination facility. 
-
-;;; Examples of the short form of define-method-combination 
-
-(define-method-combination and :identity-with-one-argument t) 
-
-(defmethod func and ((x class1) y) ...) 
-
-;;; The equivalent of this example in the long form is: 
-
-(define-method-combination and 
-
-**7–80** Programming Language—Common Lisp
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-**define-method-combination** 
-
-(&optional (order :most-specific-first)) 
-
-((around (:around)) 
-
-(primary (and) :order order :required t)) 
-
-(let ((form (if (rest primary) 
-
-‘(and ,@(mapcar #’(lambda (method) 
-
-‘(call-method ,method)) 
-
-primary)) 
-
-‘(call-method ,(first primary))))) 
-
-(if around 
-
-‘(call-method ,(first around) 
-
-(,@(rest around) 
-
-(make-method ,form))) 
-
-form))) 
-
-;;; Examples of the long form of define-method-combination 
-
-;The default method-combination technique 
-
-(define-method-combination standard () 
-
-((around (:around)) 
-
-(before (:before)) 
-
-(primary () :required t) 
-
-(after (:after))) 
-
-(flet ((call-methods (methods) 
-
-(mapcar #’(lambda (method) 
-
-‘(call-method ,method)) 
-
-methods))) 
-
-(let ((form (if (or before after (rest primary)) 
-
-‘(multiple-value-prog1 
-
-(progn ,@(call-methods before) 
-
-(call-method ,(first primary) 
-
-,(rest primary))) 
-
-,@(call-methods (reverse after))) 
-
-‘(call-method ,(first primary))))) 
-
-(if around 
-
-‘(call-method ,(first around) 
-
-(,@(rest around) 
-
-(make-method ,form))) 
-
-form)))) 
-
-;A simple way to try several methods until one returns non-nil 
-
-(define-method-combination or () 
-
-((methods (or))) 
-
-‘(or ,@(mapcar #’(lambda (method) 
-
-‘(call-method ,method)) 
-
-methods))) 
-
-Objects **7–81**
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-**define-method-combination** 
-
-;A more complete version of the preceding 
-
-(define-method-combination or 
-
-(&optional (order ’:most-specific-first)) 
-
-((around (:around)) 
-
-(primary (or))) 
-
-;; Process the order argument 
-
-(case order 
-
-(:most-specific-first) 
-
-(:most-specific-last (setq primary (reverse primary))) 
-
-(otherwise (method-combination-error "~S is an invalid order.~@ 
-
-:most-specific-first and :most-specific-last are the possible values." order))) 
-
-;; Must have a primary method 
-
-(unless primary 
-
-(method-combination-error "A primary method is required.")) 
-
-;; Construct the form that calls the primary methods 
-
-(let ((form (if (rest primary) 
-
-‘(or ,@(mapcar #’(lambda (method) 
-
-‘(call-method ,method)) 
-
-primary)) 
-
-‘(call-method ,(first primary))))) 
-
-;; Wrap the around methods around that form 
-
-(if around 
-
-‘(call-method ,(first around) 
-
-(,@(rest around) 
-
-(make-method ,form))) 
-
-form))) 
-
-;The same thing, using the :order and :required keyword options 
-
-(define-method-combination or 
-
-(&optional (order ’:most-specific-first)) 
-
-((around (:around)) 
-
-(primary (or) :order order :required t)) 
-
-(let ((form (if (rest primary) 
-
-‘(or ,@(mapcar #’(lambda (method) 
-
-‘(call-method ,method)) 
-
-primary)) 
-
-‘(call-method ,(first primary))))) 
-
-(if around 
-
-‘(call-method ,(first around) 
-
-(,@(rest around) 
-
-(make-method ,form))) 
-
-form))) 
-
-**7–82** Programming Language—Common Lisp
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-**define-method-combination** 
-
-;This short-form call is behaviorally identical to the preceding 
-
-(define-method-combination or :identity-with-one-argument t) 
-
-;Order methods by positive integer qualifiers 
-
-;:around methods are disallowed to keep the example small 
-
-(define-method-combination example-method-combination () 
-
-((methods positive-integer-qualifier-p)) 
-
-‘(progn ,@(mapcar #’(lambda (method) 
-
-‘(call-method ,method)) 
-
-(stable-sort methods #’< 
-
-:key #’(lambda (method) 
-
-(first (method-qualifiers method))))))) 
-
-(defun positive-integer-qualifier-p (method-qualifiers) 
-
-(and (= (length method-qualifiers) 1) 
-
-(typep (first method-qualifiers) ’(integer 0 \*)))) 
-
-;;; Example of the use of :arguments 
-
-(define-method-combination progn-with-lock () 
-
-((methods ())) 
-
-(:arguments object) 
-
-‘(unwind-protect 
-
-(progn (lock (object-lock ,object)) 
-
-,@(mapcar #’(lambda (method) 
-
-‘(call-method ,method)) 
-
-methods)) 
-
-(unlock (object-lock ,object)))) 
-
-**Side Eects:** 
-
-The *compiler* is not required to perform any compile-time side-e↵ects. 
-
-**Exceptional Situations:** 
-
-Method combination types defined with the short form require exactly one *qualifier* per method. An error of *type* **error** is signaled if there are applicable methods with no *qualifiers* or with *qualifiers* that are not supported by the method combination type. At least one primary method must be applicable or an error of *type* **error** is signaled. 
-
-If an applicable method does not fall into any method group, the system signals an error of *type* **error** indicating that the method is invalid for the kind of method combination in use. 
-
-If the value of the :required option is *true* and the method group is empty (that is, no applicable methods match the *qualifier* patterns or satisfy the predicate), an error of *type* **error** is signaled. 
-
-If the :order option evaluates to a value other than :most-specific-first or :most-specific-last, an error of *type* **error** is signaled. 
-
-Objects **7–83**
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-**See Also:** 
-
-**call-method**, **call-next-method**, **documentation**, **method-qualifiers**, **method-combination-error**, **invalid-method-error**, **defgeneric**, Section 7.6.6 (Method Selection and Combination), Sec tion 7.6.6.4 (Built-in Method Combination Types), Section 3.4.11 (Syntactic Interaction of Documentation Strings and Declarations) 
-
-**Notes:** 
-
-The :method-combination option of **defgeneric** is used to specify that a *generic function* should use a particular method combination type. The first argument to the :method-combination option is the *name* of a method combination type and the remaining arguments are options for that type. 
-
-**find-method** *Standard Generic Function* 
-
-**Syntax:** 
-
-**find-method** *generic-function method-qualifiers specializers* &optional *errorp* 
-
-*! method* 
-
-**Method Signatures:** 
-
-**find-method** (*generic-function* **standard-generic-function**) 
-
-*method-qualifiers specializers* &optional *errorp* 
-
-**Arguments and Values:** 
-
-*generic-function*—a *generic function*. 
-
-*method-qualifiers*—a *list*. 
-
-*specializers*—a *list*. 
-
-*errorp*—a *generalized boolean*. The default is *true*. 
-
-*method*—a *method object*, or **nil**. 
-
-**Description:** 
-
-The *generic function* **find-method** takes a *generic function* and returns the *method object* that agrees on *qualifiers* and *parameter specializers* with the *method-qualifiers* and *specializers* arguments of **find-method**. *Method-qualifiers* contains the method *qualifiers* for the *method*. The order of the method *qualifiers* is significant. For a definition of agreement in this context, see Section 7.6.3 (Agreement on Parameter Specializers and Qualifiers). 
-
-The *specializers* argument contains the parameter specializers for the *method*. It must correspond in length to the number of required arguments of the *generic function*, or an error is signaled. This means that to obtain the default *method* on a given *generic-function*, a *list* whose elements are the *class* **t** must be given. 
-
-**7–84** Programming Language—Common Lisp
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-If there is no such *method* and *errorp* is *true*, **find-method** signals an error. If there is no such *method* and *errorp* is *false*, **find-method** returns **nil**. 
-
-**Examples:** 
-
-(defmethod some-operation ((a integer) (b float)) (list a b)) 
-
-*!* #<STANDARD-METHOD SOME-OPERATION (INTEGER FLOAT) 26723357> 
-
-(find-method #’some-operation ’() (mapcar #’find-class ’(integer float))) 
-
-*!* #<STANDARD-METHOD SOME-OPERATION (INTEGER FLOAT) 26723357> 
-
-(find-method #’some-operation ’() (mapcar #’find-class ’(integer integer))) 
-
-*.* Error: No matching method 
-
-(find-method #’some-operation ’() (mapcar #’find-class ’(integer integer)) nil) *!* NIL 
-
-**Aected By:** 
-
-**add-method**, **defclass**, **defgeneric**, **defmethod** 
-
-**Exceptional Situations:** 
-
-If the *specializers* argument does not correspond in length to the number of required arguments of the *generic-function*, an an error of *type* **error** is signaled. 
-
-If there is no such *method* and *errorp* is *true*, **find-method** signals an error of *type* **error**. 
-
-**See Also:** 
-
-Section 7.6.3 (Agreement on Parameter Specializers and Qualifiers) 
-
-**add-method** *Standard Generic Function* 
-
-**Syntax:** 
-
-**add-method** *generic-function method ! generic-function* 
-
-**Method Signatures:** 
-
-**add-method** (*generic-function* **standard-generic-function**) 
-
-(*method* **method**) 
-
-**Arguments and Values:** 
-
-*generic-function*—a *generic function object*. 
-
-*method*—a *method object*. 
-
-**Description:** 
-
-The generic function **add-method** adds a *method* to a *generic function*. 
-
-Objects **7–85**
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-If *method* agrees with an existing *method* of *generic-function* on *parameter specializers* and *qualifiers*, the existing *method* is replaced. 
-
-**Exceptional Situations:** 
-
-The *lambda list* of the method function of *method* must be congruent with the *lambda list* of *generic-function*, or an error of *type* **error** is signaled. 
-
-If *method* is a *method object* of another *generic function*, an error of *type* **error** is signaled. 
-
-**See Also:** 
-
-**defmethod**, **defgeneric**, **find-method**, **remove-method**, Section 7.6.3 (Agreement on Parameter Specializers and Qualifiers) 
-
-**initialize-instance** *Standard Generic Function* 
-
-**Syntax:** 
-
-**initialize-instance** *instance* &rest *initargs* &key &allow-other-keys *! instance* 
-
-**Method Signatures:** 
-
-**initialize-instance** (*instance* **standard-object**) &rest *initargs* 
-
-**Arguments and Values:** 
-
-*instance*—an *object*. 
-
-*initargs*—a *defaulted initialization argument list*. 
-
-**Description:** 
-
-Called by **make-instance** to initialize a newly created *instance*. The generic function is called with the new *instance* and the *defaulted initialization argument list*. 
-
-The system-supplied primary *method* on **initialize-instance** initializes the *slots* of the *instance* with values according to the *initargs* and the :initform forms of the *slots*. It does this by calling the generic function **shared-initialize** with the following arguments: the *instance*, **t** (this indicates that all *slots* for which no initialization arguments are provided should be initialized according to their :initform forms), and the *initargs*. 
-
-Programmers can define *methods* for **initialize-instance** to specify actions to be taken when an instance is initialized. If only *after methods* are defined, they will be run after the system-supplied primary *method* for initialization and therefore will not interfere with the default behavior of **initialize-instance**. 
-
-**7–86** Programming Language—Common Lisp
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-**See Also:** 
-
-**shared-initialize**, **make-instance**, **slot-boundp**, **slot-makunbound**, Section 7.1 (Object Creation and Initialization), Section 7.1.4 (Rules for Initialization Arguments), Section 7.1.2 (Declaring the Validity of Initialization Arguments) 
-
-**class-name** *Standard Generic Function* 
-
-**Syntax:** 
-
-**class-name** *class ! name* 
-
-**Method Signatures:** 
-
-**class-name** (*class* **class**) 
-
-**Arguments and Values:** 
-
-*class*—a *class object*. 
-
-*name*—a *symbol*. 
-
-**Description:** 
-
-Returns the *name* of the given *class*. 
-
-**See Also:** 
-
-**find-class**, Section 4.3 (Classes) 
-
-**Notes:** 
-
-If *S* is a *symbol* such that *S* =(class-name *C*) and *C* =(find-class *S*), then *S* is the proper name of *C*. For further discussion, see Section 4.3 (Classes). 
-
-The name of an anonymous *class* is **nil**. 
-
-Objects **7–87**
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-**(setf class-name)** *Standard Generic Function* 
-
-**Syntax:** 
-
-**(setf class-name)** *new-value class ! new-value* 
-
-**Method Signatures:** 
-
-**(setf class-name)** *new-value* (*class* **class**) 
-
-**Arguments and Values:** 
-
-*new-value*—a *symbol*. 
-
-*class*—a *class*. 
-
-**Description:** 
-
-The generic function (setf class-name) sets the name of a *class* object. 
-
-**See Also:** 
-
-**find-class**, *proper name*, Section 4.3 (Classes) 
-
-**class-of** *Function* 
-
-**Syntax:** 
-
-**class-of** *object ! class* 
-
-**Arguments and Values:** 
-
-*object*—an *object*. 
-
-*class*—a *class object*. 
-
-**Description:** 
-
-Returns the *class* of which the *object* is a *direct instance*. 
-
-**Examples:** 
-
-(class-of ’fred) *!* #<BUILT-IN-CLASS SYMBOL 610327300> 
-
-(class-of 2/3) *!* #<BUILT-IN-CLASS RATIO 610326642> 
-
-(defclass book () ()) *!* #<STANDARD-CLASS BOOK 33424745> 
-
-(class-of (make-instance ’book)) *!* #<STANDARD-CLASS BOOK 33424745> 
-
-(defclass novel (book) ()) *!* #<STANDARD-CLASS NOVEL 33424764> 
-
-(class-of (make-instance ’novel)) *!* #<STANDARD-CLASS NOVEL 33424764> 
-
-**7–88** Programming Language—Common Lisp
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-(defstruct kons kar kdr) *!* KONS 
-
-(class-of (make-kons :kar 3 :kdr 4)) *!* #<STRUCTURE-CLASS KONS 250020317> 
-
-**See Also:** 
-
-**make-instance**, **type-of** 
-
-**unbound-slot** *Condition Type* 
-
-**Class Precedence List:** 
-
-**unbound-slot**, **cell-error**, **error**, **serious-condition**, **condition**, **t** 
-
-**Description:** 
-
-The *object* having the unbound slot is initialized by the :instance initialization argument to **make-condition**, and is *accessed* by the *function* **unbound-slot-instance**. 
-
-The name of the cell (see **cell-error**) is the name of the slot. 
-
-**See Also:** 
-
-**cell-error-name**, **unbound-slot-object**, Section 9.1 (Condition System Concepts) 
-
-**unbound-slot-instance** *Function* 
-
-**Syntax:** 
-
-**unbound-slot-instance** *condition ! instance* 
-
-**Arguments and Values:** 
-
-*condition*—a *condition* of *type* **unbound-slot**. 
-
-*instance*—an *object*. 
-
-**Description:** 
-
-Returns the instance which had the unbound slot in the *situation* represented by the *condition*. 
-
-**See Also:** 
-
-**cell-error-name**, **unbound-slot**, Section 9.1 (Condition System Concepts) 
-
-Objects **7–89**
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-**7–90** Programming Language—Common Lisp
+It is permissible to use **setq** on the variables named in the method group specifiers and **7–78** Programming Language—Common Lisp

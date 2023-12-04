@@ -1,18 +1,20 @@
-﻿ 
+﻿Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
- 
+**Programming Language—Common Lisp** 
 
 **12. Numbers** 
 
-  
+Numbers **i**
 
+Version 15.17R, X3J13/94-101R. Fri 12-Aug-1994 6:35pm EDT 
 
+**ii** Programming Language—Common Lisp
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **12.1 Number Concepts** 
 
@@ -22,7 +24,7 @@ Common Lisp provides a large variety of operations related to *numbers*. This se
 
 Figure 12–1 shows *operators* relating to arithmetic operations. 
 
-|&#60;p&#62;**\* 1+ gcd** &#60;/p&#62;&#60;p&#62;**+ 1- incf** &#60;/p&#62;&#60;p&#62;**- conjugate lcm** &#60;/p&#62;&#60;p&#62;**/ decf**&#60;/p&#62;|
+|<p>**\* 1+ gcd** </p><p>**+ 1- incf** </p><p>**- conjugate lcm** </p><p>**/ decf**</p>|
 | :- |
 
 
@@ -30,13 +32,13 @@ Figure 12–1 shows *operators* relating to arithmetic operations.
 
 Figure 12–2 shows *defined names* relating to exponential, logarithmic, and trigonometric operations. 
 
-|&#60;p&#62;**abs cos signum** &#60;/p&#62;&#60;p&#62;**acos cosh sin** &#60;/p&#62;&#60;p&#62;**acosh exp sinh** &#60;/p&#62;&#60;p&#62;**asin expt sqrt** &#60;/p&#62;&#60;p&#62;**asinh isqrt tan** &#60;/p&#62;&#60;p&#62;**atan log tanh** &#60;/p&#62;&#60;p&#62;**atanh phase** &#60;/p&#62;&#60;p&#62;**cis pi**&#60;/p&#62;|
+|<p>**abs cos signum** </p><p>**acos cosh sin** </p><p>**acosh exp sinh** </p><p>**asin expt sqrt** </p><p>**asinh isqrt tan** </p><p>**atan log tanh** </p><p>**atanh phase** </p><p>**cis pi**</p>|
 | :- |
 
 
 **Figure 12–2. Defined names relating to Exponentials, Logarithms, and Trigonometry.** Figure 12–3 shows *operators* relating to numeric comparison and predication. 
 
-|&#60;p&#62;**/=** &#62;**= oddp** &#60;/p&#62;&#60;p&#62;&#60; **evenp plusp** &#60;/p&#62;&#60;p&#62;&#60;**= max zerop** &#60;/p&#62;&#60;p&#62;**= min** &#60;/p&#62;&#60;p&#62;&#62; **minusp**&#60;/p&#62;|
+|<p>**/=** >**= oddp** </p><p>< **evenp plusp** </p><p><**= max zerop** </p><p>**= min** </p><p>> **minusp**</p>|
 | :- |
 
 
@@ -44,13 +46,13 @@ Figure 12–2 shows *defined names* relating to exponential, logarithmic, and tr
 
 Numbers **12–1**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 Figure 12–4 shows *defined names* relating to numeric type manipulation and coercion. 
 
-|&#60;p&#62;**ceiling float-radix rational** &#60;/p&#62;&#60;p&#62;**complex float-sign rationalize decode-float floor realpart** &#60;/p&#62;&#60;p&#62;**denominator fround rem** &#60;/p&#62;&#60;p&#62;**fceiling ftruncate round** &#60;/p&#62;&#60;p&#62;**ffloor imagpart scale-float float integer-decode-float truncate** &#60;/p&#62;&#60;p&#62;**float-digits mod** &#60;/p&#62;&#60;p&#62;**float-precision numerator**&#60;/p&#62;|
+|<p>**ceiling float-radix rational** </p><p>**complex float-sign rationalize decode-float floor realpart** </p><p>**denominator fround rem** </p><p>**fceiling ftruncate round** </p><p>**ffloor imagpart scale-float float integer-decode-float truncate** </p><p>**float-digits mod** </p><p>**float-precision numerator**</p>|
 | :- |
 
 
@@ -76,11 +78,11 @@ Another *conforming implementation* might process the *arguments* from right to 
 
 A third *conforming implementation* might first scan all the *arguments*, process all the *rationals* first to keep that part of the computation exact, then find an *argument* of the largest floating-point 
 
+**12–2** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 format among all the *arguments* and add that, and then add in all other *arguments*, converting each in turn (all in a perhaps misguided attempt to make the computation as accurate as possible). 
 
@@ -102,7 +104,7 @@ Logical operations require *integers* as arguments; an error of *type* **type-er
 
 Figure 12–5 shows *defined names* relating to logical operations on numbers. 
 
-|&#60;p&#62;**ash boole-ior logbitp** &#60;/p&#62;&#60;p&#62;**boole boole-nand logcount** &#60;/p&#62;&#60;p&#62;**boole-1 boole-nor logeqv** &#60;/p&#62;&#60;p&#62;**boole-2 boole-orc1 logior** &#60;/p&#62;&#60;p&#62;**boole-and boole-orc2 lognand** &#60;/p&#62;&#60;p&#62;**boole-andc1 boole-set lognor** &#60;/p&#62;&#60;p&#62;**boole-andc2 boole-xor lognot** &#60;/p&#62;&#60;p&#62;**boole-c1 integer-length logorc1** &#60;/p&#62;&#60;p&#62;**boole-c2 logand logorc2** &#60;/p&#62;&#60;p&#62;**boole-clr logandc1 logtest** &#60;/p&#62;&#60;p&#62;**boole-eqv logandc2 logxor**&#60;/p&#62;|
+|<p>**ash boole-ior logbitp** </p><p>**boole boole-nand logcount** </p><p>**boole-1 boole-nor logeqv** </p><p>**boole-2 boole-orc1 logior** </p><p>**boole-and boole-orc2 lognand** </p><p>**boole-andc1 boole-set lognor** </p><p>**boole-andc2 boole-xor lognot** </p><p>**boole-c1 integer-length logorc1** </p><p>**boole-c2 logand logorc2** </p><p>**boole-clr logandc1 logtest** </p><p>**boole-eqv logandc2 logxor**</p>|
 | :- |
 
 
@@ -110,9 +112,9 @@ Figure 12–5 shows *defined names* relating to logical operations on numbers.
 
 Numbers **12–3**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **12.1.1.3.2 Byte Operations on Integers** 
 
@@ -120,7 +122,7 @@ The byte-manipulation *functions* use *objects* called *byte specifiers* to desi
 
 Figure 12–6 shows *defined names* relating to manipulating *bytes* of *numbers*. 
 
-|&#60;p&#62;**byte deposit-field ldb-test** &#60;/p&#62;&#60;p&#62;**byte-position dpb mask-field** &#60;/p&#62;&#60;p&#62;**byte-size ldb**&#60;/p&#62;|
+|<p>**byte deposit-field ldb-test** </p><p>**byte-position dpb mask-field** </p><p>**byte-size ldb**</p>|
 | :- |
 
 
@@ -128,7 +130,7 @@ Figure 12–6 shows *defined names* relating to manipulating *bytes* of *numbers
 
 **12.1.2 Implementation-Dependent Numeric Constants** Figure 12–7 shows *defined names* relating to *implementation-dependent* details about *numbers*. 
 
-|&#60;p&#62;**double-float-epsilon most-negative-fixnum** &#60;/p&#62;&#60;p&#62;**double-float-negative-epsilon most-negative-long-float** &#60;/p&#62;&#60;p&#62;**least-negative-double-float most-negative-short-float** &#60;/p&#62;&#60;p&#62;**least-negative-long-float most-negative-single-float** &#60;/p&#62;&#60;p&#62;**least-negative-short-float most-positive-double-float** &#60;/p&#62;&#60;p&#62;**least-negative-single-float most-positive-fixnum** &#60;/p&#62;&#60;p&#62;**least-positive-double-float most-positive-long-float** &#60;/p&#62;&#60;p&#62;**least-positive-long-float most-positive-short-float** &#60;/p&#62;&#60;p&#62;**least-positive-short-float most-positive-single-float** &#60;/p&#62;&#60;p&#62;**least-positive-single-float short-float-epsilon** &#60;/p&#62;&#60;p&#62;**long-float-epsilon short-float-negative-epsilon long-float-negative-epsilon single-float-epsilon** &#60;/p&#62;&#60;p&#62;**most-negative-double-float single-float-negative-epsilon**&#60;/p&#62;|
+|<p>**double-float-epsilon most-negative-fixnum** </p><p>**double-float-negative-epsilon most-negative-long-float** </p><p>**least-negative-double-float most-negative-short-float** </p><p>**least-negative-long-float most-negative-single-float** </p><p>**least-negative-short-float most-positive-double-float** </p><p>**least-negative-single-float most-positive-fixnum** </p><p>**least-positive-double-float most-positive-long-float** </p><p>**least-positive-long-float most-positive-short-float** </p><p>**least-positive-short-float most-positive-single-float** </p><p>**least-positive-single-float short-float-epsilon** </p><p>**long-float-epsilon short-float-negative-epsilon long-float-negative-epsilon single-float-epsilon** </p><p>**most-negative-double-float single-float-negative-epsilon**</p>|
 | :- |
 
 
@@ -138,11 +140,11 @@ Figure 12–6 shows *defined names* relating to manipulating *bytes* of *numbers
 
 The rules in this section apply to *rational* computations. 
 
+**12–4** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **12.1.3.1 Rule of Unbounded Rational Precision** 
 
@@ -170,13 +172,13 @@ Float substitutability applies neither to the rational *functions* **+**, **-**,
 
 Numbers **12–5**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 |**Function Sample Results**|
 | :- |
-|&#60;p&#62;**abs** (abs #c(3 4)) *→* 5 *or* 5.0 &#60;/p&#62;&#60;p&#62;**acos** (acos 1) *→* 0 *or* 0.0 &#60;/p&#62;&#60;p&#62;**acosh** (acosh 1) *→* 0 *or* 0.0 &#60;/p&#62;&#60;p&#62;**asin** (asin 0) *→* 0 *or* 0.0 &#60;/p&#62;&#60;p&#62;**asinh** (asinh 0) *→* 0 *or* 0.0 &#60;/p&#62;&#60;p&#62;**atan** (atan 0) *→* 0 *or* 0.0 &#60;/p&#62;&#60;p&#62;**atanh** (atanh 0) *→* 0 *or* 0.0 &#60;/p&#62;&#60;p&#62;**cis** (cis 0) *→* 1 *or* #c(1.0 0.0) &#60;/p&#62;&#60;p&#62;**cos** (cos 0) *→* 1 *or* 1.0 &#60;/p&#62;&#60;p&#62;**cosh** (cosh 0) *→* 1 *or* 1.0 &#60;/p&#62;&#60;p&#62;**exp** (exp 0) *→* 1 *or* 1.0 &#60;/p&#62;&#60;p&#62;**expt** (expt 8 1/3) *→* 2 *or* 2.0 &#60;/p&#62;&#60;p&#62;**log** (log 1) *→* 0 *or* 0.0 &#60;/p&#62;&#60;p&#62;(log 8 2) *→* 3 *or* 3.0 &#60;/p&#62;&#60;p&#62;**phase** (phase 7) *→* 0 *or* 0.0 &#60;/p&#62;&#60;p&#62;**signum** (signum #c(3 4)) *→* #c(3/5 4/5) *or* #c(0.6 0.8) **sin** (sin 0) *→* 0 *or* 0.0 &#60;/p&#62;&#60;p&#62;**sinh** (sinh 0) *→* 0 *or* 0.0 &#60;/p&#62;&#60;p&#62;**sqrt** (sqrt 4) *→* 2 *or* 2.0 &#60;/p&#62;&#60;p&#62;(sqrt 9/16) *→* 3/4 *or* 0.75 &#60;/p&#62;&#60;p&#62;**tan** (tan 0) *→* 0 *or* 0.0 &#60;/p&#62;&#60;p&#62;**tanh** (tanh 0) *→* 0 *or* 0.0&#60;/p&#62;|
+|<p>**abs** (abs #c(3 4)) *→* 5 *or* 5.0 </p><p>**acos** (acos 1) *→* 0 *or* 0.0 </p><p>**acosh** (acosh 1) *→* 0 *or* 0.0 </p><p>**asin** (asin 0) *→* 0 *or* 0.0 </p><p>**asinh** (asinh 0) *→* 0 *or* 0.0 </p><p>**atan** (atan 0) *→* 0 *or* 0.0 </p><p>**atanh** (atanh 0) *→* 0 *or* 0.0 </p><p>**cis** (cis 0) *→* 1 *or* #c(1.0 0.0) </p><p>**cos** (cos 0) *→* 1 *or* 1.0 </p><p>**cosh** (cosh 0) *→* 1 *or* 1.0 </p><p>**exp** (exp 0) *→* 1 *or* 1.0 </p><p>**expt** (expt 8 1/3) *→* 2 *or* 2.0 </p><p>**log** (log 1) *→* 0 *or* 0.0 </p><p>(log 8 2) *→* 3 *or* 3.0 </p><p>**phase** (phase 7) *→* 0 *or* 0.0 </p><p>**signum** (signum #c(3 4)) *→* #c(3/5 4/5) *or* #c(0.6 0.8) **sin** (sin 0) *→* 0 *or* 0.0 </p><p>**sinh** (sinh 0) *→* 0 *or* 0.0 </p><p>**sqrt** (sqrt 4) *→* 2 *or* 2.0 </p><p>(sqrt 9/16) *→* 3/4 *or* 0.75 </p><p>**tan** (tan 0) *→* 0 *or* 0.0 </p><p>**tanh** (tanh 0) *→* 0 *or* 0.0</p>|
 
 
 **Figure 12–8. Functions Affected by Rule of Float Substitutability** 
@@ -191,11 +193,11 @@ When *rationals* and *floats* are combined by a numerical function, the *rationa
 
 When *rationals* and *floats* are compared by a numerical function, the *function* **rational** is effectively called to convert the *float* to a *rational* and then an exact comparison is performed. In the case of *complex* numbers, the real and imaginary parts are effectively handled individually. 
 
+**12–6** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **12.1.4.1.1 Examples of Rule of Float and Rational Contagion** 
 
@@ -223,11 +225,11 @@ When *rationals* and *floats* are compared by a numerical function, the *functio
 
 ;;; in which 5/7 is rounded upwards by FLOAT. 
 
-(&#60; 5/7 (float 5/7)) *→ true* 
+(< 5/7 (float 5/7)) *→ true* 
 
-(&#60; 5/7 (rational (float 5/7))) *→ true* 
+(< 5/7 (rational (float 5/7))) *→ true* 
 
-(&#60; (float 5/7) (float 5/7)) *→ false* 
+(< (float 5/7) (float 5/7)) *→ false* 
 
 **12.1.4.2 Rule of Float Approximation** 
 
@@ -243,9 +245,9 @@ The result of a numerical function is a *float* of the largest format among all 
 
 Numbers **12–7**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **12.1.5 Complex Computations** 
 
@@ -283,11 +285,11 @@ If the result of any computation would be a *complex* number whose real part is 
 
 (typep #c(0 0) ’(complex (eql 0))) *→ false* 
 
+**12–8** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **12.1.5.4 Principal Values and Branch Cuts** 
 
@@ -307,15 +309,15 @@ Positive
 
 Imaginary Axis 
 
-&#60;sup&#62;..&#60;/sup&#62;. 
+<sup>..</sup>. 
 
-&#60;sub&#62;II&#60;/sub&#62;&#60;sup&#62;..&#60;/sup&#62;. I 
+<sub>II</sub><sup>..</sup>. I 
 
 Negative Real Axis *· · · · · · · · · · · · · · · · · ·* Positive Real Axis 
 
-&#60;sub&#62;III&#60;/sub&#62;&#60;sup&#62;..&#60;/sup&#62;. IV 
+<sub>III</sub><sup>..</sup>. IV 
 
-&#60;sup&#62;..&#60;/sup&#62;. 
+<sup>..</sup>. 
 
 Negative 
 
@@ -329,9 +331,9 @@ The *compound type specifier* form of the numeric *type specifiers* permit the u
 
 Numbers **12–9**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 The first of the two *interval designators* for *type T* can be any of the following: 
 
@@ -365,17 +367,17 @@ This denotes the absence of an upper bound on the interval.
 
 Figure 12–11 lists some *defined names* that are applicable to *random states*. 
 
-|&#60;p&#62;**\*random-state\* random** &#60;/p&#62;&#60;p&#62;**make-random-state random-state-p**&#60;/p&#62;|
+|<p>**\*random-state\* random** </p><p>**make-random-state random-state-p**</p>|
 | :- |
 
 
 **Figure 12–11. Random-state defined names** 
 
+**12–10** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **number** *System Class* 
 
@@ -413,9 +415,9 @@ Specializing.
 
 Numbers **12–11**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Compound Type Specifier Arguments:** 
 
@@ -445,7 +447,7 @@ For every *float*, *n*, there is a *complex* which represents the same mathemati
 
 **Description:** 
 
-The *type* **real** includes all *numbers* that represent mathematical real numbers, though there are mathematical real numbers (*e.g.*, irrational numbers) that do not have an exact representation in Common Lisp. Only *reals* can be ordered using the &#60;, &#62;, &#60;**=**, and &#62;**=** functions. 
+The *type* **real** includes all *numbers* that represent mathematical real numbers, though there are mathematical real numbers (*e.g.*, irrational numbers) that do not have an exact representation in Common Lisp. Only *reals* can be ordered using the <, >, <**=**, and >**=** functions. 
 
 The *types* **rational** and **float** are *disjoint subtypes* of *type* **real**. 
 
@@ -457,11 +459,11 @@ Abbreviating.
 
 (real [*lower-limit* [*upper-limit*]]) 
 
+**12–12** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Compound Type Specifier Arguments:** 
 
@@ -479,9 +481,9 @@ This denotes the *reals* on the interval described by *lower-limit* and *upper-l
 
 **Description:** 
 
-A &#60;i&#62;float&#60;/i&#62; is a mathematical rational (but &#60;i&#62;not&#60;/i&#62; a Common Lisp &#60;i&#62;rational&#60;/i&#62;) of the form &#60;i&#62;s · f · b&#60;sup&#62;e−p&#60;/sup&#62;&#60;/i&#62;, where &#60;i&#62;s&#60;/i&#62; is +1 or &#60;i&#62;−&#60;/i&#62;1, the &#60;i&#62;sign&#60;/i&#62;; &#60;i&#62;b&#60;/i&#62; is an &#60;i&#62;integer&#60;/i&#62; greater than 1, the &#60;i&#62;base&#60;/i&#62; or &#60;i&#62;radix&#60;/i&#62; of the representation; &#60;i&#62;p&#60;/i&#62; is a positive &#60;i&#62;integer&#60;/i&#62; , the &#60;i&#62;precision&#60;/i&#62; (in base-&#60;i&#62;b&#60;/i&#62; digits) of the &#60;i&#62;float&#60;/i&#62;; &#60;i&#62;f&#60;/i&#62; is a positive &#60;i&#62;integer&#60;/i&#62; between &#60;i&#62;b&#60;sup&#62;p−&#60;/sup&#62;&#60;/i&#62;1&#60;/sup&#62; and &#60;i&#62;b&#60;sup&#62;p&#60;/sup&#62; −&#60;/i&#62; 1 (inclusive), the significand; and &#60;i&#62;e&#60;/i&#62; is an &#60;i&#62;integer&#60;/i&#62; , the exponent. The value of &#60;i&#62;p&#60;/i&#62; and the 
+A <i>float</i> is a mathematical rational (but <i>not</i> a Common Lisp <i>rational</i>) of the form <i>s · f · b<sup>e−p</sup></i>, where <i>s</i> is +1 or <i>−</i>1, the <i>sign</i>; <i>b</i> is an <i>integer</i> greater than 1, the <i>base</i> or <i>radix</i> of the representation; <i>p</i> is a positive <i>integer</i> , the <i>precision</i> (in base-<i>b</i> digits) of the <i>float</i>; <i>f</i> is a positive <i>integer</i> between <i>b<sup>p−</sup></i>1</sup> and <i>b<sup>p</sup> −</i> 1 (inclusive), the significand; and <i>e</i> is an <i>integer</i> , the exponent. The value of <i>p</i> and the 
 
-range of *e* depends on the implementation and on the type of *float* within that implementation. In addition, there is a floating-point zero; depending on the implementation, there can also be a “minus zero”. If there is no minus zero, then 0&#9655;0 and *−*0&#9655;0 are both interpreted as simply a floating-point zero. (= 0.0 -0.0) is always true. If there is a minus zero, (eql -0.0 0.0) is *false*, otherwise it is *true*. 
+range of *e* depends on the implementation and on the type of *float* within that implementation. In addition, there is a floating-point zero; depending on the implementation, there can also be a “minus zero”. If there is no minus zero, then 0*.*0 and *−*0*.*0 are both interpreted as simply a floating-point zero. (= 0.0 -0.0) is always true. If there is a minus zero, (eql -0.0 0.0) is *false*, otherwise it is *true*. 
 
 The *types* **short-float**, **single-float**, **double-float**, and **long-float** are *subtypes* of *type* **float**. Any two of them must be either *disjoint types* or the *same type*; if the *same type*, then any other *types* between them in the above ordering must also be the *same type*. For example, if the *type* **single-float** and the *type* **long-float** are the *same type*, then the *type* **double-float** must be the *same type* also. 
 
@@ -503,9 +505,9 @@ This denotes the *floats* on the interval described by *lower-limit* and *upper-
 
 Numbers **12–13**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **See Also:** 
 
@@ -529,11 +531,11 @@ Note that all mathematical integers are representable not only as Common Lisp *r
 
 **Description:** 
 
-For the four defined *subtypes* of *type* **float**, it is true that intermediate between the *type* **short-float** and the *type* **long-float** are the *type* **single-float** and the *type* **double-float**. The precise definition of these categories is *implementation-defined*. The precision (measured in “bits”, computed as *p* log&#60;sub&#62;2&#60;/sub&#62;*b*) and the exponent size (also measured in “bits,” computed as log&#60;sub&#62;2&#60;/sub&#62;(*n* + 1), where *n* is the maximum exponent value) is recommended to be at least as great as the values in Figure 12–12. Each of the defined *subtypes* of *type* **float** might or might not have a minus zero. 
+For the four defined *subtypes* of *type* **float**, it is true that intermediate between the *type* **short-float** and the *type* **long-float** are the *type* **single-float** and the *type* **double-float**. The precise definition of these categories is *implementation-defined*. The precision (measured in “bits”, computed as *p* log<sub>2</sub>*b*) and the exponent size (also measured in “bits,” computed as log<sub>2</sub>(*n* + 1), where *n* is the maximum exponent value) is recommended to be at least as great as the values in Figure 12–12. Each of the defined *subtypes* of *type* **float** might or might not have a minus zero. 
 
 |**Format Minimum Precision Minimum Exponent Size**|
 | :- |
-|&#60;p&#62;Short 13 bits 5 bits &#60;/p&#62;&#60;p&#62;Single 24 bits 8 bits &#60;/p&#62;&#60;p&#62;Double 50 bits 8 bits &#60;/p&#62;&#60;p&#62;Long 50 bits 8 bits&#60;/p&#62;|
+|<p>Short 13 bits 5 bits </p><p>Single 24 bits 8 bits </p><p>Double 50 bits 8 bits </p><p>Long 50 bits 8 bits</p>|
 
 
 **Figure 12–12. Recommended Minimum Floating-Point Precision and Exponent Size** 
@@ -544,11 +546,11 @@ There can be fewer than four internal representations for *floats*. If there are
 
 – Two internal representations can be arranged in either of the following ways: 
 
+**12–14** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 *•* Two *types* are provided: **single-float** and **short-float**. An *object* is simultaneously of *types* **single-float**, **double-float**, and **long-float**. 
 
@@ -590,9 +592,9 @@ Each of these denotes the set of *floats* of the indicated *type* that are on th
 
 Numbers **12–15**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **rational** *System Class* 
 
@@ -634,11 +636,11 @@ A *ratio* is a *number* representing the mathematical ratio of two non-zero inte
 
 **See Also:** 
 
-Figure 2–9, Section 2.3.2 (Constructing Numbers from Tokens), Section 22.1.3.1.2 (Printing Ratios) 
+Figure 2–9, Section 2.3.2 (Constructing Numbers from Tokens), Section 22.1.3.1.2 (Printing Ratios) **12–16** Programming Language—Common Lisp
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **integer** *System Class* 
 
@@ -686,9 +688,9 @@ The atomic *type specifier* **signed-byte** denotes the same type as is denoted 
 
 Numbers **12–17**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Compound Type Specifier Kind:** 
 
@@ -704,7 +706,7 @@ Abbreviating.
 
 **Compound Type Specifier Description:** 
 
-This denotes the set of &#60;i&#62;integers&#60;/i&#62; that can be represented in two’s-complement form in a &#60;i&#62;byte&#60;/i&#62; of &#60;i&#62;s&#60;/i&#62; bits. This is equivalent to (integer &#60;i&#62;−&#60;/i&#62;2&#60;sup&#62;&#60;i&#62;s−&#60;/i&#62;1&#60;/sup&#62; 2&#60;sup&#62;&#60;i&#62;s−&#60;/i&#62;1&#60;/sup&#62; &#60;i&#62;−&#60;/i&#62; 1). The type &#60;b&#62;signed-byte&#60;/b&#62; or the type (signed-byte *) is the same as the &#60;i&#62;type&#60;/i&#62; &#60;b&#62;integer&#60;/b&#62;. 
+This denotes the set of <i>integers</i> that can be represented in two’s-complement form in a <i>byte</i> of <i>s</i> bits. This is equivalent to (integer <i>−</i>2<sup><i>s−</i>1</sup> 2<sup><i>s−</i>1</sup> <i>−</i> 1). The type <b>signed-byte</b> or the type (signed-byte *) is the same as the <i>type</i> <b>integer</b>. 
 
 **unsigned-byte** *Type* 
 
@@ -730,17 +732,17 @@ Abbreviating.
 
 **Compound Type Specifier Description:** 
 
-This denotes the set of non-negative &#60;i&#62;integers&#60;/i&#62; that can be represented in a byte of size &#60;i&#62;s&#60;/i&#62; (bits). This is equivalent to (mod &#60;i&#62;m&#60;/i&#62;) for &#60;i&#62;m&#60;/i&#62; = 2&#60;i&#62;&#60;sup&#62;s&#60;/sup&#62;&#60;/i&#62;, or to (integer 0 &#60;i&#62;n&#60;/i&#62;) for &#60;i&#62;n&#60;/i&#62; = 2&#60;i&#62;&#60;sup&#62;s&#60;/sup&#62; −&#60;/i&#62;1. The &#60;i&#62;type&#60;/i&#62; &#60;b&#62;unsigned-byte&#60;/b&#62; or the type (unsigned-byte *) is the same as the type (integer 0 *), the set of non-negative &#60;i&#62;integers&#60;/i&#62;. 
+This denotes the set of non-negative <i>integers</i> that can be represented in a byte of size <i>s</i> (bits). This is equivalent to (mod <i>m</i>) for <i>m</i> = 2<i><sup>s</sup></i>, or to (integer 0 <i>n</i>) for <i>n</i> = 2<i><sup>s</sup> −</i>1. The <i>type</i> <b>unsigned-byte</b> or the type (unsigned-byte *) is the same as the type (integer 0 *), the set of non-negative <i>integers</i>. 
 
 **Notes:** 
 
 The *type* (unsigned-byte 1) is also called **bit**. 
 
+**12–18** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **mod** *Type Specifier* 
 
@@ -786,9 +788,9 @@ A *fixnum* is an *integer* whose value is between **most-negative-fixnum** and *
 
 Numbers **12–19**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **bignum** *Type* 
 
@@ -800,61 +802,61 @@ Numbers **12–19**
 
 The *type* **bignum** is defined to be exactly (and integer (not fixnum)). 
 
-**=, /=,** *&#60;***,** *&#62;***,** *&#60;***=,** *&#62;***=** *Function* 
+**=, /=,** *<***,** *>***,** *<***=,** *>***=** *Function* 
 
 **Syntax:** 
 
-**=** &rest *numbers*&#60;sup&#62;+&#60;/sup&#62; *→ generalized-boolean* 
+**=** &rest *numbers*<sup>+</sup> *→ generalized-boolean* 
 
-**/=** &rest *numbers*&#60;sup&#62;+&#60;/sup&#62; *→ generalized-boolean* 
+**/=** &rest *numbers*<sup>+</sup> *→ generalized-boolean* 
 
-&#60; &rest *numbers*&#60;sup&#62;+&#60;/sup&#62; *→ generalized-boolean* 
+< &rest *numbers*<sup>+</sup> *→ generalized-boolean* 
 
-\&#62; &rest *numbers*&#60;sup&#62;+&#60;/sup&#62; *→ generalized-boolean* 
+\> &rest *numbers*<sup>+</sup> *→ generalized-boolean* 
 
-&#60;**=** &rest *numbers*&#60;sup&#62;+&#60;/sup&#62; *→ generalized-boolean* 
+<**=** &rest *numbers*<sup>+</sup> *→ generalized-boolean* 
 
-\&#62;**=** &rest *numbers*&#60;sup&#62;+&#60;/sup&#62; *→ generalized-boolean* 
+\>**=** &rest *numbers*<sup>+</sup> *→ generalized-boolean* 
 
 **Arguments and Values:** 
 
-*number*—for &#60;, &#62;, &#60;**=**, &#62;**=**: a *real*; for **=**, **/=**: a *number* . 
+*number*—for <, >, <**=**, >**=**: a *real*; for **=**, **/=**: a *number* . 
 
 *generalized-boolean*—a *generalized boolean*. 
 
 **Description:** 
 
-**=**, **/=**, &#60;, &#62;, &#60;**=**, and &#62;**=** perform arithmetic comparisons on their arguments as follows: **=** 
+**=**, **/=**, <, >, <**=**, and >**=** perform arithmetic comparisons on their arguments as follows: **=** 
 
 The value of **=** is *true* if all *numbers* are the same in value; otherwise it is *false*. Two *complexes* are considered equal by **=** if their real and imaginary parts are equal according to **=**. 
 
 **/=** 
 
-The value of **/=** is *true* if no two *numbers* are the same in value; otherwise it is *false*. 
+The value of **/=** is *true* if no two *numbers* are the same in value; otherwise it is *false*. **12–20** Programming Language—Common Lisp
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
-**=, /=,** *&#60;***,** *&#62;***,** *&#60;***=,** *&#62;***=** 
+**=, /=,** *<***,** *>***,** *<***=,** *>***=** 
 
-&#60; 
+< 
 
-The value of &#60; is *true* if the *numbers* are in monotonically increasing order; otherwise it is *false*. 
+The value of < is *true* if the *numbers* are in monotonically increasing order; otherwise it is *false*. 
 
-\&#62; 
+\> 
 
-The value of &#62; is *true* if the *numbers* are in monotonically decreasing order; otherwise it is *false*. 
+The value of > is *true* if the *numbers* are in monotonically decreasing order; otherwise it is *false*. 
 
-&#60;**=** 
+<**=** 
 
-The value of &#60;**=** is *true* if the *numbers* are in monotonically nondecreasing order; otherwise it is *false*. 
+The value of <**=** is *true* if the *numbers* are in monotonically nondecreasing order; otherwise it is *false*. 
 
-\&#62;**=** 
+\>**=** 
 
-The value of &#62;**=** is *true* if the *numbers* are in monotonically nonincreasing order; otherwise it is *false*. 
+The value of >**=** is *true* if the *numbers* are in monotonically nonincreasing order; otherwise it is *false*. 
 
-**=**, **/=**, &#60;, &#62;, &#60;**=**, and &#62;**=** perform necessary type conversions. 
+**=**, **/=**, <, >, <**=**, and >**=** perform necessary type conversions. 
 
 **Examples:** 
 
@@ -862,15 +864,15 @@ The uses of these functions are illustrated in Figure 12–13.
 
 Numbers **12–21**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
-|&#60;p&#62;(= 3 3) is *true*. (/= 3 3) is *false*. &#60;/p&#62;&#60;p&#62;(= 3 5) is *false*. (/= 3 5) is *true*. &#60;/p&#62;&#60;p&#62;(= 3 3 3 3) is *true*. (/= 3 3 3 3) is *false*. &#60;/p&#62;&#60;p&#62;(= 3 3 5 3) is *false*. (/= 3 3 5 3) is *false*. &#60;/p&#62;&#60;p&#62;(= 3 6 5 2) is *false*. (/= 3 6 5 2) is *true*. &#60;/p&#62;&#60;p&#62;(= 3 2 3) is *false*. (/= 3 2 3) is *false*. &#60;/p&#62;&#60;p&#62;(&#60; 3 5) is *true*. (&#60;= 3 5) is *true*. &#60;/p&#62;&#60;p&#62;(&#60; 3 -5) is *false*. (&#60;= 3 -5) is *false*. &#60;/p&#62;&#60;p&#62;(&#60; 3 3) is *false*. (&#60;= 3 3) is *true*. &#60;/p&#62;&#60;p&#62;(&#60; 0 3 4 6 7) is *true*. (&#60;= 0 3 4 6 7) is *true*. &#60;/p&#62;&#60;p&#62;(&#60; 0 3 4 4 6) is *false*. (&#60;= 0 3 4 4 6) is *true*. &#60;/p&#62;&#60;p&#62;(&#62; 4 3) is *true*. (&#62;= 4 3) is *true*. &#60;/p&#62;&#60;p&#62;(&#62; 4 3 2 1 0) is *true*. (&#62;= 4 3 2 1 0) is *true*. &#60;/p&#62;&#60;p&#62;(&#62; 4 3 3 2 0) is *false*. (&#62;= 4 3 3 2 0) is *true*. &#60;/p&#62;&#60;p&#62;(&#62; 4 3 1 2 0) is *false*. (&#62;= 4 3 1 2 0) is *false*. &#60;/p&#62;&#60;p&#62;(= 3) is *true*. (/= 3) is *true*. &#60;/p&#62;&#60;p&#62;(&#60; 3) is *true*. (&#60;= 3) is *true*. &#60;/p&#62;&#60;p&#62;(= 3.0 #c(3.0 0.0)) is *true*. (/= 3.0 #c(3.0 1.0)) is *true*. &#60;/p&#62;&#60;p&#62;(= 3 3.0) is *true*. (= 3.0s0 3.0d0) is *true*. &#60;/p&#62;&#60;p&#62;(= 0.0 -0.0) is *true*. (= 5/2 2.5) is *true*. &#60;/p&#62;&#60;p&#62;(&#62; 0.0 -0.0) is *false*. (= 0 -0.0) is *true*. &#60;/p&#62;&#60;p&#62;(&#60;= 0 x 9) is *true* if x is between 0 and 9, inclusive &#60;/p&#62;&#60;p&#62;(&#60; 0.0 x 1.0) is *true* if x is between 0.0 and 1.0, exclusive &#60;/p&#62;&#60;p&#62;(&#60; -1 j (length v)) is *true* if j is a *valid array index* for a *vector* v&#60;/p&#62;|
+|<p>(= 3 3) is *true*. (/= 3 3) is *false*. </p><p>(= 3 5) is *false*. (/= 3 5) is *true*. </p><p>(= 3 3 3 3) is *true*. (/= 3 3 3 3) is *false*. </p><p>(= 3 3 5 3) is *false*. (/= 3 3 5 3) is *false*. </p><p>(= 3 6 5 2) is *false*. (/= 3 6 5 2) is *true*. </p><p>(= 3 2 3) is *false*. (/= 3 2 3) is *false*. </p><p>(< 3 5) is *true*. (<= 3 5) is *true*. </p><p>(< 3 -5) is *false*. (<= 3 -5) is *false*. </p><p>(< 3 3) is *false*. (<= 3 3) is *true*. </p><p>(< 0 3 4 6 7) is *true*. (<= 0 3 4 6 7) is *true*. </p><p>(< 0 3 4 4 6) is *false*. (<= 0 3 4 4 6) is *true*. </p><p>(> 4 3) is *true*. (>= 4 3) is *true*. </p><p>(> 4 3 2 1 0) is *true*. (>= 4 3 2 1 0) is *true*. </p><p>(> 4 3 3 2 0) is *false*. (>= 4 3 3 2 0) is *true*. </p><p>(> 4 3 1 2 0) is *false*. (>= 4 3 1 2 0) is *false*. </p><p>(= 3) is *true*. (/= 3) is *true*. </p><p>(< 3) is *true*. (<= 3) is *true*. </p><p>(= 3.0 #c(3.0 0.0)) is *true*. (/= 3.0 #c(3.0 1.0)) is *true*. </p><p>(= 3 3.0) is *true*. (= 3.0s0 3.0d0) is *true*. </p><p>(= 0.0 -0.0) is *true*. (= 5/2 2.5) is *true*. </p><p>(> 0.0 -0.0) is *false*. (= 0 -0.0) is *true*. </p><p>(<= 0 x 9) is *true* if x is between 0 and 9, inclusive </p><p>(< 0.0 x 1.0) is *true* if x is between 0.0 and 1.0, exclusive </p><p>(< -1 j (length v)) is *true* if j is a *valid array index* for a *vector* v</p>|
 | :- |
 
 
-**Figure 12–13. Uses of /=, =,** &#60;**,** &#62;**,** &#60;**=, and** &#62;**=** 
+**Figure 12–13. Uses of /=, =,** <**,** >**,** <**=, and** >**=** 
 
 **Exceptional Situations:** 
 
@@ -884,17 +886,17 @@ Might signal **type-error** if some *argument* is not a *real*. Might signal **a
 
 **Syntax:** 
 
-**max** &rest *reals*&#60;sup&#62;+&#60;/sup&#62; *→ max-real* 
+**max** &rest *reals*<sup>+</sup> *→ max-real* 
 
+**12–22** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **max, min** 
 
-**min** &rest *reals*&#60;sup&#62;+&#60;/sup&#62; *→ min-real* 
+**min** &rest *reals*<sup>+</sup> *→ min-real* 
 
 **Arguments and Values:** 
 
@@ -936,47 +938,47 @@ For **max**, the implementation has the choice of returning the largest argument
 
 *→* 2 
 
-&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; 2.0 
+<i><sup>or</sup>→</i> 2.0 
 
 (max 3.0 7 1) 
 
 *→* 7 
 
-&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; 7.0 
+<i><sup>or</sup>→</i> 7.0 
 
 (min 3.0 7 1) 
 
 *→* 1 
 
-&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; 1.0 
+<i><sup>or</sup>→</i> 1.0 
 
 (max 1.0s0 7.0d0) *→* 7.0d0 
 
 Numbers **12–23**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 (min 1.0s0 7.0d0) 
 
 *→* 1.0s0 
 
-&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; 1.0d0 
+<i><sup>or</sup>→</i> 1.0d0 
 
 (max 3 1 1.0s0 1.0d0) 
 
 *→* 3 
 
-&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; 3.0d0 
+<i><sup>or</sup>→</i> 3.0d0 
 
 (min 3 1 1.0s0 1.0d0) 
 
 *→* 1 
 
-&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; 1.0s0 
+<i><sup>or</sup>→</i> 1.0s0 
 
-&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; 1.0d0 
+<i><sup>or</sup>→</i> 1.0d0 
 
 **Exceptional Situations:** 
 
@@ -1016,11 +1018,11 @@ Regardless of whether an *implementation* provides distinct representations for 
 
 Should signal an error of *type* **type-error** if *real* is not a *real*. 
 
+**12–24** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **zerop** *Function* 
 
@@ -1076,9 +1078,9 @@ Should signal an error of *type* **type-error** if *number* is not a *number* .
 
 Numbers **12–25**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **floor, ffloor, ceiling, fceiling, truncate, ftruncate,** *. . .* 
 
@@ -1124,15 +1126,15 @@ The *quotient* always represents a mathematical integer. When more than one math
 
 **round** and **fround** produce a *quotient* that has been rounded to the nearest mathematical integer; if the mathematical quotient is exactly halfway between two integers, (that is, it 
 
+**12–26** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **floor, ffloor, ceiling, fceiling, truncate, ftruncate,** *. . .* 
 
-has the form *integer*+&#60;sup&#62;1&#60;/sup&#62;&#60;sub&#62;2&#60;/sub&#62;), then the *quotient* has been rounded to the even (divisible by two) integer. 
+has the form *integer*+<sup>1</sup><sub>2</sub>), then the *quotient* has been rounded to the even (divisible by two) integer. 
 
 All of these functions perform type conversion operations on *numbers*. 
 
@@ -1170,25 +1172,25 @@ The *remainder* is an *integer* if both x and y are *integers*, is a *rational* 
 
 n (floor n) (ceiling n) (truncate n) (round n))) 
 
-&#9655; +2.6 2 3 2 3 
+*.* +2.6 2 3 2 3 
 
-&#9655; +2.5 2 3 2 2 
+*.* +2.5 2 3 2 2 
 
-&#9655; +2.4 2 3 2 2 
+*.* +2.4 2 3 2 2 
 
-&#9655; +0.7 0 1 0 1 
+*.* +0.7 0 1 0 1 
 
-&#9655; +0.3 0 1 0 0 
+*.* +0.3 0 1 0 0 
 
-&#9655; -0.3 -1 0 0 0 
+*.* -0.3 -1 0 0 0 
 
-&#9655; -0.7 -1 0 0 -1 
+*.* -0.7 -1 0 0 -1 
 
-&#9655; -2.4 -3 -2 -2 -2 
+*.* -2.4 -3 -2 -2 -2 
 
-&#9655; -2.5 -3 -2 -2 -2 
+*.* -2.5 -3 -2 -2 -2 
 
-&#9655; -2.6 -3 -2 -2 -3 
+*.* -2.6 -3 -2 -2 -3 
 
 *→* NIL 
 
@@ -1200,9 +1202,9 @@ When only *number* is given, the two results are exact; the mathematical sum of 
 
 Numbers **12–27**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 but they return different remainders as the second value. For example: 
 
@@ -1248,11 +1250,11 @@ Should signal an error of *type* **type-error** if *radians* is not a *number* .
 
 **asin**, **acos**, **atan**, Section 12.1.3.3 (Rule of Float Substitutability) 
 
+**12–28** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **asin, acos, atan** 
 
@@ -1282,9 +1284,9 @@ Should signal an error of *type* **type-error** if *radians* is not a *number* .
 
 The arc sine, arc cosine, and arc tangent (with only *number1* supplied) functions can be defined mathematically for *number* or *number1* specified as *x* as in Figure 12–14. 
 
-|&#60;b&#62;&#60;sup&#62;Function Definition&#60;/sup&#62;&#60;/b&#62;&#60;i&#62;√&#60;/i&#62; |
+|<b><sup>Function Definition</sup></b><i>√</i> |
 | :- |
-|&#60;p&#62;Arc sine *−i* log *ix* +1 *− x*&#60;sup&#62;2&#60;/sup&#62; &#60;/p&#62;&#60;p&#62;Arc cosine (*π/*2) *−* arcsin *x* &#60;/p&#62;&#60;p&#62;&#60;sub&#62;Arc tangent &#60;i&#62;−i&#60;/i&#62; log (1 + &#60;i&#62;ix&#60;/i&#62;)&#60;/sub&#62;&#60;sup&#62;p&#60;/sup&#62;1&#60;i&#62;/&#60;/i&#62;(1 + &#60;i&#62;x&#60;/i&#62;&#60;sup&#62;2&#60;/sup&#62;&#60;sub&#62;)&#60;/sub&#62; &#60;/p&#62;|
+|<p>Arc sine *−i* log *ix* +1 *− x*<sup>2</sup> </p><p>Arc cosine (*π/*2) *−* arcsin *x* </p><p><sub>Arc tangent <i>−i</i> log (1 + <i>ix</i>)</sub><sup>p</sup>1<i>/</i>(1 + <i>x</i><sup>2</sup><sub>)</sub> </p>|
 
 
 **Figure 12–14. Mathematical definition of arc sine, arc cosine, and arc tangent** 
@@ -1299,9 +1301,9 @@ The following definition for arc sine determines the range and branch cuts:
 
 Numbers **12–29**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **asin, acos, atan** 
 
@@ -1309,11 +1311,11 @@ Numbers **12–29**
 
 arcsin *z* = *−i* log 
 
-&#60;sub&#62;&#60;i&#62;iz&#60;/i&#62; +&#60;/sub&#62;&#60;sup&#62;p&#60;/sup&#62;1 &#60;i&#62;− z&#60;/i&#62;&#60;sup&#62;2&#60;/sup&#62;  
+<sub><i>iz</i> +</sub><sup>p</sup>1 <i>− z</i><sup>2</sup>  
 
 The branch cut for the arc sine function is in two pieces: one along the negative real axis to the left of *−*1 (inclusive), continuous with quadrant II, and one along the positive real axis to the right of 1 (inclusive), continuous with quadrant IV. The range is that strip of the complex plane containing numbers whose real part is between *−π/*2 and *π/*2. A number with real part equal to *−π/*2 is in the range if and only if its imaginary part is non-negative; a number with real part equal to *π/*2 is in the range if and only if its imaginary part is non-positive. 
 
-The following definition for arc cosine determines the range and branch cuts: &#60;sub&#62;arccos &#60;i&#62;z&#60;/i&#62; =&#60;/sub&#62;&#60;i&#62;&#60;sup&#62;π&#60;/sup&#62;&#60;/i&#62;&#60;sub&#62;2&#60;/sub&#62;&#60;i&#62;−&#60;/i&#62; arcsin &#60;i&#62;z&#60;/i&#62; 
+The following definition for arc cosine determines the range and branch cuts: <sub>arccos <i>z</i> =</sub><i><sup>π</sup></i><sub>2</sub><i>−</i> arcsin <i>z</i> 
 
 or, which are equivalent, 
 
@@ -1321,9 +1323,9 @@ or, which are equivalent,
 
 arccos *z* = *−i* log 
 
-&#60;sub&#62;&#60;i&#62;z&#60;/i&#62; + &#60;i&#62;i&#60;/i&#62;&#60;/sub&#62;&#60;sup&#62;p&#60;/sup&#62;1 &#60;i&#62;− z&#60;/i&#62;&#60;sup&#62;2&#60;/sup&#62;  
+<sub><i>z</i> + <i>i</i></sub><sup>p</sup>1 <i>− z</i><sup>2</sup>  
 
-&#60;sub&#62;arccos &#60;i&#62;z&#60;/i&#62; =2 log&#60;/sub&#62; &#60;sup&#62;p&#60;/sup&#62;&#60;sub&#62;(1 + &#60;i&#62;z&#60;/i&#62;)&#60;i&#62;/&#60;/i&#62;2 + &#60;i&#62;i&#60;/i&#62;&#60;/sub&#62;&#60;sup&#62;p&#60;/sup&#62;&#60;sub&#62;(1 &#60;i&#62;− z&#60;/i&#62;)&#60;i&#62;/&#60;/i&#62;2&#60;/sub&#62;  
+<sub>arccos <i>z</i> =2 log</sub> <sup>p</sup><sub>(1 + <i>z</i>)<i>/</i>2 + <i>i</i></sub><sup>p</sup><sub>(1 <i>− z</i>)<i>/</i>2</sub>  
 
 *i* 
 
@@ -1331,7 +1333,7 @@ The branch cut for the arc cosine function is in two pieces: one along the negat
 
 The following definition for (one-argument) arc tangent determines the range and branch cuts: 
 
-arctan &#60;i&#62;z&#60;/i&#62; =&#60;sup&#62;log (1 + &#60;i&#62;iz&#60;/i&#62;) &#60;i&#62;−&#60;/i&#62; log (1 &#60;i&#62;− iz&#60;/i&#62;)&#60;/sup&#62; 
+arctan <i>z</i> =<sup>log (1 + <i>iz</i>) <i>−</i> log (1 <i>− iz</i>)</sup> 
 
 2*i* 
 
@@ -1339,11 +1341,11 @@ Beware of simplifying this formula; “obvious” simplifications are likely to 
 
 II, and one along the negative imaginary axis below *−i* (exclusive), continuous with quadrant IV. The points *i* and *−i* are excluded from the domain. The range is that strip of the complex plane containing numbers whose real part is between *−π/*2 and *π/*2. A number with real part equal to *−π/*2 is in the range if and only if its imaginary part is strictly positive; a number with real part equal to *π/*2 is in the range if and only if its imaginary part is strictly negative. Thus the range of 
 
-arc tangent is identical to that of arc sine with the points *−π/*2 and *π/*2 excluded. 
+arc tangent is identical to that of arc sine with the points *−π/*2 and *π/*2 excluded. **12–30** Programming Language—Common Lisp
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **asin, acos, atan** 
 
@@ -1351,7 +1353,7 @@ For **atan**, the signs of *number1* (indicated as *x*) and *number2* (indicated
 
 |*y* **Condition** *x* **Condition Cartesian locus Range of result**|
 | :- |
-|&#60;p&#62;*y* = 0 *x* &#62; 0 Positive x-axis 0 &#60;/p&#62;&#60;p&#62;\* *y* = +0 *x* &#62; 0 Positive x-axis +0 &#60;/p&#62;&#60;p&#62;\* *y* = *−*0 *x* &#62; 0 Positive x-axis *−*0 &#60;/p&#62;&#60;p&#62;*y* &#62; 0 *x* &#62; 0 Quadrant I 0 &#60; result &#60; *π/*2 *y* &#62; 0 *x* = 0 Positive y-axis *π/*2 &#60;/p&#62;&#60;p&#62;*y* &#62; 0 *x* &#60; 0 Quadrant II *π/*2 &#60; result &#60; *π y* = 0 *x* &#60; 0 Negative x-axis *π* &#60;/p&#62;&#60;p&#62;\* *y* = +0 *x* &#60; 0 Negative x-axis +*π* &#60;/p&#62;&#60;p&#62;\* *y* = *−*0 *x* &#60; 0 Negative x-axis *−π* &#60;/p&#62;&#60;p&#62;*y* &#60; 0 *x* &#60; 0 Quadrant III *−π* &#60; result &#60; *−π/*2 *y* &#60; 0 *x* = 0 Negative y-axis *−π/*2 &#60;/p&#62;&#60;p&#62;*y* &#60; 0 *x* &#62; 0 Quadrant IV *−π/*2 &#60; result &#60; 0 *y* = 0 *x* = 0 Origin undefined consequences \* *y* = +0 *x* = +0 Origin +0 &#60;/p&#62;&#60;p&#62;\* *y* = *−*0 *x* = +0 Origin *−*0 &#60;/p&#62;&#60;p&#62;\* *y* = +0 *x* = *−*0 Origin +*π* &#60;/p&#62;&#60;p&#62;\* *y* = *−*0 *x* = *−*0 Origin *−π*&#60;/p&#62;|
+|<p>*y* = 0 *x* > 0 Positive x-axis 0 </p><p>\* *y* = +0 *x* > 0 Positive x-axis +0 </p><p>\* *y* = *−*0 *x* > 0 Positive x-axis *−*0 </p><p>*y* > 0 *x* > 0 Quadrant I 0 < result < *π/*2 *y* > 0 *x* = 0 Positive y-axis *π/*2 </p><p>*y* > 0 *x* < 0 Quadrant II *π/*2 < result < *π y* = 0 *x* < 0 Negative x-axis *π* </p><p>\* *y* = +0 *x* < 0 Negative x-axis +*π* </p><p>\* *y* = *−*0 *x* < 0 Negative x-axis *−π* </p><p>*y* < 0 *x* < 0 Quadrant III *−π* < result < *−π/*2 *y* < 0 *x* = 0 Negative y-axis *−π/*2 </p><p>*y* < 0 *x* > 0 Quadrant IV *−π/*2 < result < 0 *y* = 0 *x* = 0 Origin undefined consequences \* *y* = +0 *x* = +0 Origin +0 </p><p>\* *y* = *−*0 *x* = +0 Origin *−*0 </p><p>\* *y* = +0 *x* = *−*0 Origin +*π* </p><p>\* *y* = *−*0 *x* = *−*0 Origin *−π*</p>|
 
 
 **Figure 12–15. Quadrant information for arc tangent** 
@@ -1378,9 +1380,9 @@ For **atan**, the signs of *number1* (indicated as *x*) and *number2* (indicated
 
 Numbers **12–31**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Notes:** 
 
@@ -1422,11 +1424,11 @@ pi *→* 3.141592653589793L0
 
 An approximation to *π* in some other precision can be obtained by writing (float pi x), where x is a *float* of the desired precision, or by writing (coerce pi *type*), where *type* is the desired type, such as **short-float**. 
 
+**12–32** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **sinh, cosh, tanh, asinh, acosh, atanh** 
 
@@ -1458,7 +1460,7 @@ These functions compute the hyperbolic sine, cosine, tangent, arc sine, arc cosi
 
 |**Function Definition**|
 | :- |
-|&#60;p&#62;Hyperbolic sine (&#60;i&#62;e&#60;sup&#62;x&#60;/sup&#62; − e&#60;sup&#62;−x&#60;/sup&#62;&#60;/i&#62;)&#60;i&#62;/&#60;/i&#62;2 &#60;/p&#62;&#60;p&#62;Hyperbolic cosine (&#60;i&#62;e&#60;sup&#62;x&#60;/sup&#62;&#60;/i&#62; + &#60;i&#62;e&#60;sup&#62;−x&#60;/sup&#62;&#60;/i&#62;)&#60;i&#62;/&#60;/i&#62;2 &#60;/p&#62;&#60;p&#62;Hyperbolic tangent (&#60;i&#62;e&#60;sup&#62;x&#60;/sup&#62; − e&#60;sup&#62;−x&#60;/sup&#62;&#60;/i&#62;)&#60;i&#62;/&#60;/i&#62;(&#60;i&#62;e&#60;sup&#62;x&#60;/sup&#62;&#60;/i&#62; + &#60;i&#62;e&#60;sup&#62;−x&#60;/sup&#62;&#60;/i&#62;) &#60;/p&#62;&#60;p&#62;&#60;sub&#62;Hyperbolic arc sine log (&#60;i&#62;x&#60;/i&#62; +&#60;/sub&#62;&#60;i&#62;&#60;sup&#62;√&#60;/sup&#62;&#60;/i&#62;1 + &#60;i&#62;x&#60;/i&#62;&#60;s&#62;&#60;sup&#62;2&#60;/sup&#62;&#60;/s&#62;) &#60;/p&#62;&#60;p&#62;&#60;sub&#62;Hyperbolic arc cosine 2 log (&#60;/sub&#62;&#60;sup&#62;p&#60;/sup&#62;&#60;sub&#62;(&#60;i&#62;x&#60;/i&#62; + 1)&#60;i&#62;/&#60;/i&#62;2 +&#60;/sub&#62; &#60;sup&#62;p&#60;/sup&#62;(&#60;i&#62;x −&#60;/i&#62; 1)&#60;i&#62;/&#60;/i&#62;2) &#60;/p&#62;&#60;p&#62;Hyperbolic arc tangent (log (1 + *x*) *−* log (1 *− x*))*/*2&#60;/p&#62;|
+|<p>Hyperbolic sine (<i>e<sup>x</sup> − e<sup>−x</sup></i>)<i>/</i>2 </p><p>Hyperbolic cosine (<i>e<sup>x</sup></i> + <i>e<sup>−x</sup></i>)<i>/</i>2 </p><p>Hyperbolic tangent (<i>e<sup>x</sup> − e<sup>−x</sup></i>)<i>/</i>(<i>e<sup>x</sup></i> + <i>e<sup>−x</sup></i>) </p><p><sub>Hyperbolic arc sine log (<i>x</i> +</sub><i><sup>√</sup></i>1 + <i>x</i><s><sup>2</sup></s>) </p><p><sub>Hyperbolic arc cosine 2 log (</sub><sup>p</sup><sub>(<i>x</i> + 1)<i>/</i>2 +</sub> <sup>p</sup>(<i>x −</i> 1)<i>/</i>2) </p><p>Hyperbolic arc tangent (log (1 + *x*) *−* log (1 *− x*))*/*2</p>|
 
 
 **Figure 12–16. Mathematical definitions for hyperbolic functions** 
@@ -1467,7 +1469,7 @@ The following definition for the inverse hyperbolic cosine determines the range 
 
 arccosh *z* = 2 log 
 
-` `&#60;sup&#62;p&#60;/sup&#62;&#60;sub&#62;(&#60;i&#62;z&#60;/i&#62; + 1)&#60;i&#62;/&#60;/i&#62;2 +&#60;/sub&#62; &#60;sup&#62;p&#60;/sup&#62;&#60;sub&#62;(&#60;i&#62;z −&#60;/i&#62; 1)&#60;i&#62;/&#60;/i&#62;2&#60;/sub&#62;&#60;/sup&#62; &#60;i&#62;.&#60;/i&#62; 
+` `<sup>p</sup><sub>(<i>z</i> + 1)<i>/</i>2 +</sub> <sup>p</sup><sub>(<i>z −</i> 1)<i>/</i>2</sub></sup> <i>.</i> 
 
 The branch cut for the inverse hyperbolic cosine function lies along the real axis to the left of 1 (inclusive), extending indefinitely along the negative real axis, continuous with quadrant II and (between 0 and 1) with quadrant I. The range is that half-strip of the complex plane containing 
 
@@ -1475,9 +1477,9 @@ numbers whose real part is non-negative and whose imaginary part is between *−
 
 Numbers **12–33**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **sinh, cosh, tanh, asinh, acosh, atanh** 
 
@@ -1487,13 +1489,13 @@ The following definition for the inverse hyperbolic sine determines the range an
 
 arcsinh *z* = log 
 
-&#60;sub&#62;&#60;i&#62;z&#60;/i&#62; +&#60;/sub&#62;&#60;sup&#62;p&#60;/sup&#62;1 + &#60;i&#62;z&#60;/i&#62;&#60;sup&#62;2&#60;/sup&#62; &#60;i&#62;.&#60;/i&#62; 
+<sub><i>z</i> +</sub><sup>p</sup>1 + <i>z</i><sup>2</sup> <i>.</i> 
 
 The branch cut for the inverse hyperbolic sine function is in two pieces: one along the positive imaginary axis above *i* (inclusive), continuous with quadrant I, and one along the negative imaginary axis below *−i* (inclusive), continuous with quadrant III. The range is that strip of the complex plane containing numbers whose imaginary part is between *−π/*2 and *π/*2. A number with imaginary part equal to *−π/*2 is in the range if and only if its real part is non-positive; a number with imaginary part equal to *π/*2 is in the range if and only if its imaginary part is non-negative. 
 
-The following definition for the inverse hyperbolic tangent determines the range and branch cuts: arctanh &#60;i&#62;z&#60;/i&#62; =&#60;sup&#62;log (1 + &#60;i&#62;z&#60;/i&#62;) &#60;i&#62;−&#60;/i&#62; log (1 &#60;i&#62;− z&#60;/i&#62;)&#60;/sup&#62; 
+The following definition for the inverse hyperbolic tangent determines the range and branch cuts: arctanh <i>z</i> =<sup>log (1 + <i>z</i>) <i>−</i> log (1 <i>− z</i>)</sup> 
 
-&#60;sub&#62;2&#60;/sub&#62;&#9655; 
+<sub>2</sub>*.* 
 
 Note that: 
 
@@ -1519,11 +1521,11 @@ Should signal an error of *type* **type-error** if *number* is not a *number* . 
 
 The result of **acosh** may be a *complex* even if *number* is not a *complex* ; this occurs when *number* is less than one. Also, the result of **atanh** may be a *complex* even if *number* is not a *complex* ; this occurs when the absolute value of *number* is greater than one. 
 
+**12–34** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 The branch cut formulae are mathematically correct, assuming completely accurate computation. Implementors should consult a good text on numerical analysis. The formulae given above are not necessarily the simplest ones for real-valued computations; they are chosen to define the branch cuts in desirable ways for the complex case. 
 
@@ -1561,9 +1563,9 @@ Section 12.1.1 (Numeric Operations), Section 12.1.3 (Rational Computations), Sec
 
 Numbers **12–35**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **+** *Function* 
 
@@ -1605,7 +1607,7 @@ Section 12.1.1 (Numeric Operations), Section 12.1.3 (Rational Computations), Sec
 
 *− number → negation* 
 
-*− minuend* &rest *subtrahends*&#60;sup&#62;+&#60;/sup&#62; *→ difference* 
+*− minuend* &rest *subtrahends*<sup>+</sup> *→ difference* 
 
 **Arguments and Values:** 
 
@@ -1617,11 +1619,11 @@ Section 12.1.1 (Numeric Operations), Section 12.1.3 (Rational Computations), Sec
 
 The *function* **-** performs arithmetic subtraction and negation. 
 
+**12–36** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 If only one *number* is supplied, the negation of that *number* is returned. 
 
@@ -1657,7 +1659,7 @@ Section 12.1.1 (Numeric Operations), Section 12.1.3 (Rational Computations), Sec
 
 **/** *number → reciprocal* 
 
-**/** *numerator* &rest *denominators*&#60;sup&#62;+&#60;/sup&#62; *→ quotient* 
+**/** *numerator* &rest *denominators*<sup>+</sup> *→ quotient* 
 
 **Arguments and Values:** 
 
@@ -1675,9 +1677,9 @@ If at least one *denominator* is supplied, the *function* **/** divides the *num
 
 If each *argument* is either an *integer* or a *ratio*, and the result is not an *integer* , then it is a *ratio*. Numbers **12–37**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 The *function* **/** performs necessary type conversions. 
 
@@ -1731,11 +1733,11 @@ Might signal **type-error** if some *argument* is not a *number* . Might signal 
 
 **1+** returns a *number* that is one more than its argument *number*. **1-** returns a *number* that is one less than its argument *number*. 
 
+**12–38** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Examples:** 
 
@@ -1789,9 +1791,9 @@ If *number* is a *complex* , the result is a positive *real* with the same magni
 
 Numbers **12–39**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 (abs 12/13) *→* 12/13 
 
@@ -1847,11 +1849,11 @@ An implementation should not use this formula directly for all *complexes* but s
 
 Should signal an error of *type* **type-error** if *integer* is not an *integer* . 
 
+**12–40** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Notes:** 
 
@@ -1887,13 +1889,13 @@ Should signal an error of *type* **type-error** if *integer* is not an *integer*
 
 The result of **expt** can be a *complex* , even when neither argument is a *complex* , if *base-number* is negative and *power-number* is not an *integer* . The result is always the *principal complex value*. For example, (expt -8 1/3) is not permitted to return -2, even though -2 is one of the cube roots of -8. The *principal* cube root is a *complex* approximately equal to #C(1.0 1.73205), not -2. 
 
-&#60;b&#62;expt&#60;/b&#62; is defined as &#60;i&#62;b&#60;sup&#62;x&#60;/sup&#62; = e&#60;sup&#62;xlogb&#60;/sup&#62;&#60;/i&#62;. This defines the &#60;i&#62;principal values&#60;/i&#62; precisely. The range of &#60;b&#62;expt&#60;/b&#62; is the entire complex plane. Regarded as a function of &#60;i&#62;x&#60;/i&#62;, with &#60;i&#62;b&#60;/i&#62; fixed, there is no branch cut. Regarded as a function of &#60;i&#62;b&#60;/i&#62;, with &#60;i&#62;x&#60;/i&#62; fixed, there is in general a branch cut along the negative real axis, continuous with quadrant II. The domain excludes the origin. By definition, 0&#60;sup&#62;0&#60;/sup&#62;=1. If &#60;i&#62;b&#60;/i&#62;=0 and the real part of &#60;i&#62;x&#60;/i&#62; is strictly positive, then &#60;i&#62;b&#60;sup&#62;x&#60;/sup&#62;&#60;/i&#62;=0. For all other values of &#60;i&#62;x&#60;/i&#62;, 0&#60;i&#62;&#60;sup&#62;x&#60;/sup&#62;&#60;/i&#62;is an error. 
+<b>expt</b> is defined as <i>b<sup>x</sup> = e<sup>xlogb</sup></i>. This defines the <i>principal values</i> precisely. The range of <b>expt</b> is the entire complex plane. Regarded as a function of <i>x</i>, with <i>b</i> fixed, there is no branch cut. Regarded as a function of <i>b</i>, with <i>x</i> fixed, there is in general a branch cut along the negative real axis, continuous with quadrant II. The domain excludes the origin. By definition, 0<sup>0</sup>=1. If <i>b</i>=0 and the real part of <i>x</i> is strictly positive, then <i>b<sup>x</sup></i>=0. For all other values of <i>x</i>, 0<i><sup>x</sup></i>is an error. 
 
 Numbers **12–41**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 When *power-number* is an *integer* 0, then the result is always the value one in the *type* of *base-number*, even if the *base-number* is zero (of any *type*). That is: 
 
@@ -1947,11 +1949,11 @@ Note that by the following logic, (sqrt (expt *x* 3)) is not equivalent to (expt
 
 *integer*—an *integer* . 
 
+**12–42** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 *greatest-common-denominator*—a non-negative *integer* . 
 
@@ -2011,9 +2013,9 @@ For three or more arguments,
 
 Numbers **12–43**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Description:** 
 
@@ -2073,11 +2075,11 @@ n *→* 1.5
 
 If no *integer* is supplied, the *integer* 1 is returned. 
 
+**12–44** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 If only one *integer* is supplied, the absolute value of that *integer* is returned. 
 
@@ -2135,9 +2137,9 @@ Should signal **type-error** if any argument is not an *integer* .
 
 Numbers **12–45**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **log** 
 
@@ -2179,7 +2181,7 @@ This defines the *principal values* precisely. The range of the two-argument log
 
 *→* #C(-1.0 0.0) 
 
-&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; #C(-1 0) 
+<i><sup>or</sup>→</i> #C(-1 0) 
 
 (log 8.0 2) *→* 3.0 
 
@@ -2191,11 +2193,11 @@ or approximately 3.0 (unlikely)
 
 The implementation. 
 
+**12–46** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **See Also:** 
 
@@ -2257,9 +2259,9 @@ The implementation.
 
 Numbers **12–47**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **See Also:** 
 
@@ -2311,11 +2313,11 @@ If *number* is a *float*, the result is a *float*. If *number* is a *rational*, 
 
 (eql (signum -0.0) -0.0) *→ true* 
 
+**12–48** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **See Also:** 
 
@@ -2363,9 +2365,9 @@ The branch cut for square root lies along the negative real axis, continuous wit
 
 Numbers **12–49**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 (isqrt 9) *→* 3 
 
@@ -2381,7 +2383,7 @@ Numbers **12–49**
 
 *→* 5 
 
-&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; 5.0 
+<i><sup>or</sup>→</i> 5.0 
 
 (isqrt 25) *→* 5 
 
@@ -2421,11 +2423,11 @@ A *random state object* contains state information used by the pseudo-random num
 
 **\*random-state\***, **random**, Section 22.1.3.10 (Printing Random States) 
 
+**12–50** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **make-random-state** *Function* 
 
@@ -2443,7 +2445,7 @@ A *random state object* contains state information used by the pseudo-random num
 
 Creates a *fresh object* of *type* **random-state** suitable for use as the *value* of **\*random-state\***. 
 
-If *state* is a *random state object*, the *new-state* is a *copy*&#60;sub&#62;5&#60;/sub&#62; of that *object*. If *state* is **nil**, the *new-state* is a *copy*&#60;sub&#62;5&#60;/sub&#62; of the *current random state*. If *state* is **t**, the *new-state* is a *fresh random state object* that has been randomly initialized by some means. 
+If *state* is a *random state object*, the *new-state* is a *copy*<sub>5</sub> of that *object*. If *state* is **nil**, the *new-state* is a *copy*<sub>5</sub> of the *current random state*. If *state* is **t**, the *new-state* is a *fresh random state object* that has been randomly initialized by some means. 
 
 **Examples:** 
 
@@ -2491,9 +2493,9 @@ Should signal an error of *type* **type-error** if *state* is not a *random stat
 
 Numbers **12–51**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Notes:** 
 
@@ -2523,7 +2525,7 @@ An approximately uniform choice distribution is used. If *limit* is an *integer*
 
 **Examples:** 
 
-(&#60;= 0 (random 1000) 1000) *→ true* 
+(<= 0 (random 1000) 1000) *→ true* 
 
 (let ((state1 (make-random-state)) 
 
@@ -2545,11 +2547,11 @@ Should signal an error of *type* **type-error** if *limit* is not a positive *in
 
 **Notes:** 
 
-See *Common Lisp: The Language* for information about generating random numbers. 
+See *Common Lisp: The Language* for information about generating random numbers. **12–52** Programming Language—Common Lisp
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **random-state-p** *Function* 
 
@@ -2599,9 +2601,9 @@ The *current random state*, which is used, for example, by the *function* **rand
 
 Numbers **12–53**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Examples:** 
 
@@ -2663,11 +2665,11 @@ The *implementation*.
 
 Returns *true* if *object* is of *type* **number**; otherwise, returns *false*. 
 
+**12–54** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Examples:** 
 
@@ -2699,7 +2701,7 @@ Returns *true* if *object* is of *type* **number**; otherwise, returns *false*.
 
 **Description:** 
 
-&#60;b&#62;cis&#60;/b&#62; returns the value of &#60;i&#62;e&#60;sup&#62;i· radians&#60;/sup&#62;&#60;/i&#62; , which is a &#60;i&#62;complex&#60;/i&#62; in which the real part is equal to the cosine of &#60;i&#62;radians&#60;/i&#62;, and the imaginary part is equal to the sine of &#60;i&#62;radians&#60;/i&#62;. 
+<b>cis</b> returns the value of <i>e<sup>i· radians</sup></i> , which is a <i>complex</i> in which the real part is equal to the cosine of <i>radians</i>, and the imaginary part is equal to the sine of <i>radians</i>. 
 
 **Examples:** 
 
@@ -2711,9 +2713,9 @@ Section 12.1.3.3 (Rule of Float Substitutability)
 
 Numbers **12–55**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **complex** *Function* 
 
@@ -2755,11 +2757,11 @@ Type upgrading implies a movement upwards in the type hierarchy lattice. In the 
 
 **realpart**, **imagpart**, Section 2.4.8.11 (Sharpsign C) 
 
+**12–56** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **complexp** *Function* 
 
@@ -2807,9 +2809,9 @@ Returns *true* if *object* is of *type* **complex**; otherwise, returns *false*.
 
 Returns the complex conjugate of *number*. The conjugate of a *real* number is itself. Numbers **12–57**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Examples:** 
 
@@ -2859,11 +2861,11 @@ The mathematical definition of **phase** is as follows:
 
 (phase 1) *→* 0.0s0 
 
+**12–58** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 (phase 0) *→* 0.0s0 
 
@@ -2917,9 +2919,9 @@ Should signal an error of *type* **type-error** if *number* is not a *number* .
 
 Numbers **12–59**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **upgraded-complex-part-type** *Function* 
 
@@ -2969,11 +2971,11 @@ Returns *true* if *object* is of *type* **real**; otherwise, returns *false*.
 
 (realp 12) *→ true* 
 
+**12–60** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 (realp #c(5/3 7.2)) *→ false* 
 
@@ -3029,9 +3031,9 @@ If *rational* is an *integer* , **numerator** returns *rational* and **denominat
 
 Numbers **12–61**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Notes:** 
 
@@ -3079,11 +3081,11 @@ The *implementation*.
 
 **Exceptional Situations:** 
 
-Should signal an error of *type* **type-error** if *number* is not a *real*. Might signal **arithmetic-error**. 
+Should signal an error of *type* **type-error** if *number* is not a *real*. Might signal **arithmetic-error**. **12–62** Programming Language—Common Lisp
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Notes:** 
 
@@ -3131,9 +3133,9 @@ Returns *true* if *object* is of *type* **rational**; otherwise, returns *false*
 
 Numbers **12–63**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **ash** *Function* 
 
@@ -3155,7 +3157,7 @@ Numbers **12–63**
 
 **ash** shifts *integer* arithmetically left by *count* bit positions if *count* is positive, or right *count* bit positions if *count* is negative. The shifted value of the same sign as *integer* is returned. 
 
-Mathematically speaking, &#60;b&#62;ash&#60;/b&#62; performs the computation floor(&#60;i&#62;integer·&#60;/i&#62;2&#60;i&#62;&#60;sup&#62;count&#60;/sup&#62;&#60;/i&#62;). Logically, &#60;b&#62;ash&#60;/b&#62; moves all of the bits in &#60;i&#62;integer&#60;/i&#62; to the left, adding zero-bits at the right, or moves them to the right, discarding bits. 
+Mathematically speaking, <b>ash</b> performs the computation floor(<i>integer·</i>2<i><sup>count</sup></i>). Logically, <b>ash</b> moves all of the bits in <i>integer</i> to the left, adding zero-bits at the right, or moves them to the right, discarding bits. 
 
 **ash** is defined to behave as if *integer* were represented in two’s complement form, regardless of how *integers* are represented internally. 
 
@@ -3177,13 +3179,13 @@ Should signal an error of *type* **type-error** if *integer* is not an *integer*
 
 (logbitp *j* (ash *n k*)) 
 
-*≡* (and (&#62;= *j k*) (logbitp (- *j k*) *n*)) 
+*≡* (and (>= *j k*) (logbitp (- *j k*) *n*)) 
 
+**12–64** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **integer-length** 
 
@@ -3251,9 +3253,9 @@ If *integer* is non-negative, then its value can be represented in unsigned bina
 
 Numbers **12–65**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **integerp** *Function* 
 
@@ -3301,11 +3303,11 @@ Returns *true* if *object* is of *type* **integer**; otherwise, returns *false*.
 
 *junk-allowed*—a *generalized boolean*. The default is *false*. 
 
+**12–66** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 *integer*—an *integer* or *false*. 
 
@@ -3315,11 +3317,11 @@ Returns *true* if *object* is of *type* **integer**; otherwise, returns *false*.
 
 **parse-integer** parses an *integer* in the specified *radix* from the substring of *string* delimited by *start* and *end*. 
 
-**parse-integer** expects an optional sign (+ or -) followed by a a non-empty sequence of digits to be interpreted in the specified *radix*. Optional leading and trailing *whitespace*&#60;sub&#62;1&#60;/sub&#62; is ignored. 
+**parse-integer** expects an optional sign (+ or -) followed by a a non-empty sequence of digits to be interpreted in the specified *radix*. Optional leading and trailing *whitespace*<sub>1</sub> is ignored. 
 
 **parse-integer** does not recognize the syntactic radix-specifier prefixes #O, #B, #X, and #*n*R, nor does it recognize a trailing decimal point. 
 
-If *junk-allowed* is *false*, an error of *type* **parse-error** is signaled if substring does not consist entirely of the representation of a signed *integer* , possibly surrounded on either side by *whitespace*&#60;sub&#62;1&#60;/sub&#62; *characters*. 
+If *junk-allowed* is *false*, an error of *type* **parse-error** is signaled if substring does not consist entirely of the representation of a signed *integer* , possibly surrounded on either side by *whitespace*<sub>1</sub> *characters*. 
 
 The first *value* returned is either the *integer* that was parsed, or else **nil** if no syntactically correct *integer* was seen but *junk-allowed* was *true*. 
 
@@ -3335,7 +3337,7 @@ The second *value* is either the index into the *string* of the delimiter that t
 
 **Exceptional Situations:** 
 
-If *junk-allowed* is *false*, an error is signaled if substring does not consist entirely of the representation of an *integer* , possibly surrounded on either side by *whitespace*&#60;sub&#62;1&#60;/sub&#62; characters. 
+If *junk-allowed* is *false*, an error is signaled if substring does not consist entirely of the representation of an *integer* , possibly surrounded on either side by *whitespace*<sub>1</sub> characters. 
 
 **boole** *Function* 
 
@@ -3351,9 +3353,9 @@ If *junk-allowed* is *false*, an error is signaled if substring does not consist
 
 Numbers **12–67**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **boole** 
 
@@ -3371,7 +3373,7 @@ The operation to be performed and the return value are determined by *op*.
 
 |**Op Result**|
 | :- |
-|&#60;p&#62;**boole-1** *integer-1* &#60;/p&#62;&#60;p&#62;**boole-2** *integer-2* &#60;/p&#62;&#60;p&#62;**boole-andc1** and complement of *integer-1* with *integer-2* &#60;/p&#62;&#60;p&#62;**boole-andc2** and *integer-1* with complement of *integer-2* &#60;/p&#62;&#60;p&#62;**boole-and** and &#60;/p&#62;&#60;p&#62;**boole-c1** complement of *integer-1* &#60;/p&#62;&#60;p&#62;**boole-c2** complement of *integer-2* &#60;/p&#62;&#60;p&#62;**boole-clr** always 0 (all zero bits) &#60;/p&#62;&#60;p&#62;**boole-eqv** equivalence (exclusive nor) &#60;/p&#62;&#60;p&#62;**boole-ior** inclusive or &#60;/p&#62;&#60;p&#62;**boole-nand** not-and &#60;/p&#62;&#60;p&#62;**boole-nor** not-or &#60;/p&#62;&#60;p&#62;**boole-orc1** or complement of *integer-1* with *integer-2* &#60;/p&#62;&#60;p&#62;**boole-orc2** or *integer-1* with complement of *integer-2* &#60;/p&#62;&#60;p&#62;**boole-set** always -1 (all one bits) &#60;/p&#62;&#60;p&#62;**boole-xor** exclusive or&#60;/p&#62;|
+|<p>**boole-1** *integer-1* </p><p>**boole-2** *integer-2* </p><p>**boole-andc1** and complement of *integer-1* with *integer-2* </p><p>**boole-andc2** and *integer-1* with complement of *integer-2* </p><p>**boole-and** and </p><p>**boole-c1** complement of *integer-1* </p><p>**boole-c2** complement of *integer-2* </p><p>**boole-clr** always 0 (all zero bits) </p><p>**boole-eqv** equivalence (exclusive nor) </p><p>**boole-ior** inclusive or </p><p>**boole-nand** not-and </p><p>**boole-nor** not-or </p><p>**boole-orc1** or complement of *integer-1* with *integer-2* </p><p>**boole-orc2** or *integer-1* with complement of *integer-2* </p><p>**boole-set** always -1 (all one bits) </p><p>**boole-xor** exclusive or</p>|
 
 
 **Figure 12–17. Bit-Wise Logical Operations** 
@@ -3390,7 +3392,7 @@ The operation to be performed and the return value are determined by *op*.
 
 (progn 
 
-(format t "~&Results of (BOOLE &#60;op&#62; #b0011 #b0101) ...~ 
+(format t "~&Results of (BOOLE <op> #b0011 #b0101) ...~ 
 
 ~%–-Op–––-Decimal––-Binary––Bits–-~%") 
 
@@ -3400,11 +3402,11 @@ boole-andc2 boole-c1 boole-c2 boole-clr
 
 boole-eqv boole-ior boole-nand boole-nor 
 
+**12–68** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **boole** 
 
@@ -3416,41 +3418,41 @@ boole-orc1 boole-orc2 boole-set boole-xor))
 
 symbol result (logand result #b1111))))) 
 
-&#9655; Results of (BOOLE &#60;op&#62; #b0011 #b0101) ... 
+*.* Results of (BOOLE <op> #b0011 #b0101) ... 
 
-&#9655; –-Op–––-Decimal––-Binary––Bits–- 
+*.* –-Op–––-Decimal––-Binary––Bits–- 
 
-&#9655; BOOLE-1 3 11 ...0011 
+*.* BOOLE-1 3 11 ...0011 
 
-&#9655; BOOLE-2 5 101 ...0101 
+*.* BOOLE-2 5 101 ...0101 
 
-&#9655; BOOLE-AND 1 1 ...0001 
+*.* BOOLE-AND 1 1 ...0001 
 
-&#9655; BOOLE-ANDC1 4 100 ...0100 
+*.* BOOLE-ANDC1 4 100 ...0100 
 
-&#9655; BOOLE-ANDC2 2 10 ...0010 
+*.* BOOLE-ANDC2 2 10 ...0010 
 
-&#9655; BOOLE-C1 -4 -100 ...1100 
+*.* BOOLE-C1 -4 -100 ...1100 
 
-&#9655; BOOLE-C2 -6 -110 ...1010 
+*.* BOOLE-C2 -6 -110 ...1010 
 
-&#9655; BOOLE-CLR 0 0 ...0000 
+*.* BOOLE-CLR 0 0 ...0000 
 
-&#9655; BOOLE-EQV -7 -111 ...1001 
+*.* BOOLE-EQV -7 -111 ...1001 
 
-&#9655; BOOLE-IOR 7 111 ...0111 
+*.* BOOLE-IOR 7 111 ...0111 
 
-&#9655; BOOLE-NAND -2 -10 ...1110 
+*.* BOOLE-NAND -2 -10 ...1110 
 
-&#9655; BOOLE-NOR -8 -1000 ...1000 
+*.* BOOLE-NOR -8 -1000 ...1000 
 
-&#9655; BOOLE-ORC1 -3 -11 ...1101 
+*.* BOOLE-ORC1 -3 -11 ...1101 
 
-&#9655; BOOLE-ORC2 -5 -101 ...1011 
+*.* BOOLE-ORC2 -5 -101 ...1011 
 
-&#9655; BOOLE-SET -1 -1 ...1111 
+*.* BOOLE-SET -1 -1 ...1111 
 
-&#9655; BOOLE-XOR 6 110 ...0110 
+*.* BOOLE-XOR 6 110 ...0110 
 
 *→* NIL 
 
@@ -3472,7 +3474,7 @@ In general,
 
 ;; The order of the values in this ‘table’ are such that 
 
-;; (logand (boole (elt boole-n-vector n) #b0101 #b0011) #b1111) =&#62; n 
+;; (logand (boole (elt boole-n-vector n) #b0101 #b0011) #b1111) => n 
 
 (defconstant boole-n-vector 
 
@@ -3484,9 +3486,9 @@ boole-nor boole-eqv boole-c1 boole-orc1
 
 Numbers **12–69**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 boole-c2 boole-orc2 boole-nand boole-set)) 
 
@@ -3512,7 +3514,7 @@ boole-c2 boole-orc2 boole-nand boole-set))
 
 *→* (0 1 2 3 4 5 6 7 -8 -7 -6 -5 -4 -3 -2 -1) 
 
-&#60;b&#62;&#60;sup&#62;boole-1, boole-2, boole-and, boole-andc1, boole&#60;/sup&#62; andc2, boole-c1, boole-c2, boole-clr, boole-eqv, boole-ior, boole-nand, boole-nor, boole-orc1, boole-orc2, boole-set, boole-xor&#60;/b&#62; &#60;i&#62;Constant Variable&#60;/i&#62; 
+<b><sup>boole-1, boole-2, boole-and, boole-andc1, boole</sup> andc2, boole-c1, boole-c2, boole-clr, boole-eqv, boole-ior, boole-nand, boole-nor, boole-orc1, boole-orc2, boole-set, boole-xor</b> <i>Constant Variable</i> 
 
 **Constant Value:** 
 
@@ -3534,11 +3536,11 @@ Each of these *constants* has a *value* which is one of the sixteen possible *bi
 
 **boole** 
 
+**12–70** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **logand, logandc1, logandc2, logeqv, logior, lognand,** *. . .* 
 
@@ -3588,15 +3590,15 @@ Figure 12–18 lists the meaning of each of the *functions*. Where an ‘identit
 
 Numbers **12–71**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **logand, logandc1, logandc2, logeqv, logior, lognand,** *. . .* 
 
 |**Function Identity Operation performed**|
 | :- |
-|&#60;p&#62;**logandc1** — and complement of *integer-1* with *integer-2* **logandc2** — and *integer-1* with complement of *integer-2* **logand** -1 and &#60;/p&#62;&#60;p&#62;**logeqv** -1 equivalence (exclusive nor) &#60;/p&#62;&#60;p&#62;**logior** 0 inclusive or &#60;/p&#62;&#60;p&#62;**lognand** — complement of *integer-1* and *integer-2* **lognor** — complement of *integer-1* or *integer-2* **lognot** — complement &#60;/p&#62;&#60;p&#62;**logorc1** — or complement of *integer-1* with *integer-2* **logorc2** — or *integer-1* with complement of *integer-2* **logxor** 0 exclusive or&#60;/p&#62;|
+|<p>**logandc1** — and complement of *integer-1* with *integer-2* **logandc2** — and *integer-1* with complement of *integer-2* **logand** -1 and </p><p>**logeqv** -1 equivalence (exclusive nor) </p><p>**logior** 0 inclusive or </p><p>**lognand** — complement of *integer-1* and *integer-2* **lognor** — complement of *integer-1* or *integer-2* **lognot** — complement </p><p>**logorc1** — or complement of *integer-1* with *integer-2* **logorc2** — or *integer-1* with complement of *integer-2* **logxor** 0 exclusive or</p>|
 
 
 **Figure 12–18. Bit-wise Logical Operations on Integers** 
@@ -3651,25 +3653,25 @@ m x y)))
 
 (show m x y)))) 
 
-&#9655; m = #o007750 
+*.* m = #o007750 
 
+**12–72** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
- 
+*.* x = #o452576 
 
-&#9655; x = #o452576 
+*.* y = #o317407 
 
-&#9655; y = #o317407 
+*.* 
 
-&#9655; 
+*.* m = #o007750 
 
-&#9655; m = #o007750 
+*.* x = #o457426 
 
-&#9655; x = #o457426 
-
-&#9655; y = #o312557 
+*.* y = #o312557 
 
 *→* NIL 
 
@@ -3717,13 +3719,13 @@ Because the following functions are not associative, they take exactly two argum
 
 Numbers **12–73**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Description:** 
 
-&#60;b&#62;logbitp&#60;/b&#62; is used to test the value of a particular bit in &#60;i&#62;integer&#60;/i&#62;, that is treated as if it were binary. The value of &#60;b&#62;logbitp&#60;/b&#62; is &#60;i&#62;true&#60;/i&#62; if the bit in &#60;i&#62;integer&#60;/i&#62; whose index is &#60;i&#62;index&#60;/i&#62; (that is, its weight is 2&#60;i&#62;&#60;sup&#62;index&#60;/sup&#62;&#60;/i&#62; ) is a one-bit; otherwise it is &#60;i&#62;false&#60;/i&#62;. 
+<b>logbitp</b> is used to test the value of a particular bit in <i>integer</i>, that is treated as if it were binary. The value of <b>logbitp</b> is <i>true</i> if the bit in <i>integer</i> whose index is <i>index</i> (that is, its weight is 2<i><sup>index</sup></i> ) is a one-bit; otherwise it is <i>false</i>. 
 
 Negative *integers* are treated as if they were in two’s-complement notation. 
 
@@ -3773,11 +3775,11 @@ Computes and returns the number of bits in the two’s-complement binary represe
 
 (logcount 7) *→* 3 
 
+**12–74** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 (logcount 13) *→* 3 ;Two’s-complement binary: ...0001101 
 
@@ -3835,9 +3837,9 @@ Negative *integer-1* and *integer-2* are treated as if they were represented in 
 
 Numbers **12–75**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 (logtest -2 -1) *→ true* 
 
@@ -3869,7 +3871,7 @@ Should signal an error of *type* **type-error** if *integer-1* is not an *intege
 
 **Description:** 
 
-&#60;b&#62;byte&#60;/b&#62; returns a &#60;i&#62;byte specifier&#60;/i&#62; that indicates a &#60;i&#62;byte&#60;/i&#62; of width &#60;i&#62;size&#60;/i&#62; and whose bits have weights 2&#60;sup&#62;&#60;i&#62;position&#60;/i&#62;+&#60;i&#62;size−&#60;/i&#62;1&#60;/sup&#62;through 2&#60;i&#62;&#60;sup&#62;position&#60;/sup&#62;&#60;/i&#62;, and whose representation is &#60;i&#62;implementation-dependent&#60;/i&#62;. 
+<b>byte</b> returns a <i>byte specifier</i> that indicates a <i>byte</i> of width <i>size</i> and whose bits have weights 2<sup><i>position</i>+<i>size−</i>1</sup>through 2<i><sup>position</sup></i>, and whose representation is <i>implementation-dependent</i>. 
 
 **byte-size** returns the number of bits specified by *bytespec*. 
 
@@ -3877,7 +3879,7 @@ Should signal an error of *type* **type-error** if *integer-1* is not an *intege
 
 **Examples:** 
 
-(setq b (byte 100 200)) *→* #&#60;BYTE-SPECIFIER size 100 position 200&#62; 
+(setq b (byte 100 200)) *→* #<BYTE-SPECIFIER size 100 position 200> 
 
 (byte-size b) *→* 100 
 
@@ -3887,11 +3889,11 @@ Should signal an error of *type* **type-error** if *integer-1* is not an *intege
 
 **ldb**, **dpb** 
 
+**12–76** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Notes:** 
 
@@ -3941,7 +3943,7 @@ Replaces a field of bits within *integer*; specifically, returns an *integer* th
 
 (logbitp *j* (deposit-field *m* (byte *s p*) *n*)) 
 
-*≡* (if (and (&#62;= *j p*) (&#60; *j* (+ *p s*))) 
+*≡* (if (and (>= *j p*) (< *j* (+ *p s*))) 
 
 (logbitp *j m*) 
 
@@ -3949,9 +3951,9 @@ Replaces a field of bits within *integer*; specifically, returns an *integer* th
 
 Numbers **12–77**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **deposit-field** is to **mask-field** as **dpb** is to **ldb**. 
 
@@ -3997,7 +3999,7 @@ Let s be the size specified by *bytespec*; then the low s bits of *newbyte* appe
 
 (logbitp *j* (dpb *m* (byte *s p*) *n*)) 
 
-*≡* (if (and (&#62;= *j p*) (&#60; *j* (+ *p s*))) 
+*≡* (if (and (>= *j p*) (< *j* (+ *p s*))) 
 
 (logbitp (- *j p*) *m*) 
 
@@ -4005,633 +4007,4 @@ Let s be the size specified by *bytespec*; then the low s bits of *newbyte* appe
 
 In general, 
 
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-(dpb *x* (byte 0 *y*) *z*) *! z* 
-
-for all valid values of *x*, *y*, and *z*. 
-
-Historically, the name “dpb” comes from a DEC PDP-10 assembly language instruction meaning “deposit byte.” 
-
-**ldb** *Accessor* 
-
-**Syntax:** 
-
-**ldb** *bytespec integer ! byte* 
-
-**(setf (ldb** *bytespec place***)** *new-byte***)** 
-
-**Pronunciation:** 
-
-[ **lidib** ] or [ **lid***✏***b** ] or [ **el d—e b—e** ] 
-
-**Arguments and Values:** 
-
-*bytespec*—a *byte specifier* . 
-
-*integer*—an *integer* . 
-
-*byte*, *new-byte*—a non-negative *integer* . 
-
-**Description:** 
-
-**ldb** extracts and returns the *byte* of *integer* specified by *bytespec*. 
-
-<b>ldb</b> returns an <i>integer</i> in which the bits with weights 2<sup>(<i>s</i>1)</sup> through 2<sup>0</sup> are the same as those in <i>integer</i> with weights 2<sup>(<i>p</i>+<i>s</i>1)</sup> through 2<i><sup>p</sup></i>, and all other bits zero; <i>s</i> is (byte-size <i>bytespec</i>) and <i>p</i> is (byte-position <i>bytespec</i>). 
-
-**setf** may be used with **ldb** to modify a byte within the *integer* that is stored in a given *place*. The order of evaluation, when an **ldb** form is supplied to **setf**, is exactly left-to-right. The e↵ect is to perform a **dpb** operation and then store the result back into the *place*. 
-
-**Examples:** 
-
-(ldb (byte 2 1) 10) *!* 1 
-
-(setq a (list 8)) *!* (8) 
-
-(setf (ldb (byte 2 1) (car a)) 1) *!* 1 
-
-a *!* (10) 
-
-**See Also:** 
-
-**byte**, **byte-position**, **byte-size**, **dpb** 
-
-Numbers **12–79**
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-**Notes:** 
-
-(logbitp *j* (ldb (byte *s p*) *n*)) 
-
-*⌘* (and (< *j s*) (logbitp (+ *j p*) *n*)) 
-
-In general, 
-
-(ldb (byte 0 *x*) *y*) *!* 0 
-
-for all valid values of *x* and *y*. 
-
-Historically, the name “ldb” comes from a DEC PDP-10 assembly language instruction meaning “load byte.” 
-
-**ldb-test** *Function* 
-
-**Syntax:** 
-
-**ldb-test** *bytespec integer ! generalized-boolean* 
-
-**Arguments and Values:** 
-
-*bytespec*—a *byte specifier* . 
-
-*integer*—an *integer* . 
-
-*generalized-boolean*—a *generalized boolean*. 
-
-**Description:** 
-
-Returns *true* if any of the bits of the byte in *integer* specified by *bytespec* is non-zero; otherwise returns *false*. 
-
-**Examples:** 
-
-(ldb-test (byte 4 1) 16) *! true* 
-
-(ldb-test (byte 3 1) 16) *! false* 
-
-(ldb-test (byte 3 2) 16) *! true* 
-
-**See Also:** 
-
-**byte**, **ldb**, **zerop** 
-
-**Notes:** 
-
-(ldb-test bytespec n) *⌘* 
-
-(not (zerop (ldb bytespec n))) *⌘* 
-
-(logtest (ldb bytespec -1) n) 
-
-**12–80** Programming Language—Common Lisp
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-**mask-field** *Accessor* 
-
-**Syntax:** 
-
-**mask-field** *bytespec integer ! masked-integer* 
-
-**(setf (mask-field** *bytespec place***)** *new-masked-integer***)** 
-
-**Arguments and Values:** 
-
-*bytespec*—a *byte specifier* . 
-
-*integer*—an *integer* . 
-
-*masked-integer*, *new-masked-integer*—a non-negative *integer* . 
-
-**Description:** 
-
-**mask-field** performs a “mask” operation on *integer*. It returns an *integer* that has the same bits as *integer* in the *byte* specified by *bytespec*, but that has zero-bits everywhere else. 
-
-**setf** may be used with **mask-field** to modify a byte within the *integer* that is stored in a given *place*. The e↵ect is to perform a **deposit-field** operation and then store the result back into the *place*. 
-
-**Examples:** 
-
-(mask-field (byte 1 5) -1) *!* 32 
-
-(setq a 15) *!* 15 
-
-(mask-field (byte 2 0) a) *!* 3 
-
-a *!* 15 
-
-(setf (mask-field (byte 2 0) a) 1) *!* 1 
-
-a *!* 13 
-
-**See Also:** 
-
-**byte**, **ldb** 
-
-**Notes:** 
-
-(ldb *bs* (mask-field *bs n*)) *⌘* (ldb *bs n*) 
-
-(logbitp *j* (mask-field (byte *s p*) *n*)) 
-
-*⌘* (and (>= *j p*) (< *j s*) (logbitp *j n*)) 
-
-(mask-field *bs n*) *⌘* (logand *n* (dpb -1 *bs* 0)) 
-
-Numbers **12–81**
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-**most-positive-fixnum, most-negative-fixnum** *Constant Variable* 
-
-**Constant Value:** 
-
-*implementation-dependent*. 
-
-**Description:** 
-
-**most-positive-fixnum** is that *fixnum* closest in value to positive infinity provided by the implementation, and greater than or equal to both 2<sup>15</sup> - 1 and **array-dimension-limit**. 
-
-**most-negative-fixnum** is that *fixnum* closest in value to negative infinity provided by the implementation, and less than or equal to 2<sup>15</sup>. 
-
-**decode-float, scale-float, float-radix, float-sign, float-digits, float-precision, integer-decode-float** *Function* 
-
-**Syntax:** 
-
-**decode-float** *float ! significand, exponent, sign* 
-
-**scale-float** *float integer ! scaled-float* 
-
-**float-radix** *float ! float-radix* 
-
-**float-sign** *float-1* &optional *float-2 ! signed-float* 
-
-**float-digits** *float ! digits1* 
-
-**float-precision** *float ! digits2* 
-
-**integer-decode-float** *float ! significand, exponent, integer-sign* 
-
-**Arguments and Values:** 
-
-*digits1*—a non-negative *integer* . 
-
-*digits2*—a non-negative *integer* . 
-
-*exponent*—an *integer* . 
-
-*float*—a *float*. 
-
-*float-1*—a *float*. 
-
-*float-2*—a *float*. 
-
-**12–82** Programming Language—Common Lisp
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-**decode-float, scale-float, float-radix, float-sign,** *...* 
-
-*float-radix*—an *integer* . 
-
-*integer*—a non-negative *integer* . 
-
-*integer-sign*—the *integer* -1, or the *integer* 1. 
-
-*scaled-float*—a *float*. 
-
-*sign*—A *float* of the same *type* as *float* but numerically equal to 1.0 or -1.0. 
-
-*signed-float*—a *float*. 
-
-*significand*—a *float*. 
-
-**Description:** 
-
-**decode-float** computes three values that characterize *float*. The first value is of the same *type* as *float* and represents the significand. The second value represents the exponent to which the radix (notated in this description by *b*) must be raised to obtain the value that, when multiplied with the first result, produces the absolute value of *float*. If *float* is zero, any *integer* value may be returned, provided that the identity shown for **scale-float** holds. The third value is of the same *type* as *float* and is 1.0 if *float* is greater than or equal to zero or -1.0 otherwise. 
-
-**decode-float** divides *float* by an integral power of *b* so as to bring its value between 1*/b* (inclusive) and 1 (exclusive), and returns the quotient as the first value. If *float* is zero, however, the result equals the absolute value of *float* (that is, if there is a negative zero, its significand is considered to be a positive zero). 
-
-**scale-float** returns (\* *float* (expt (float *b float*) *integer*)), where *b* is the radix of the floating point representation. *float* is not necessarily between 1*/b* and 1. 
-
-**float-radix** returns the radix of *float*. 
-
-**float-sign** returns a number z such that z and *float-1* have the same sign and also such that z and *float-2* have the same absolute value. If *float-2* is not supplied, its value is (float 1 *float-1*). If an implementation has distinct representations for negative zero and positive zero, then (float-sign -0.0) *!* -1.0. 
-
-**float-digits** returns the number of radix *b* digits used in the representation of *float* (including any implicit digits, such as a “hidden bit”). 
-
-**float-precision** returns the number of significant radix *b* digits present in *float*; if *float* is a *float* zero, then the result is an *integer* zero. 
-
-For *normalized floats*, the results of **float-digits** and **float-precision** are the same, but the precision is less than the number of representation digits for a *denormalized* or zero number. 
-
-**integer-decode-float** computes three values that characterize *float* - the significand scaled so as to be an *integer* , and the same last two values that are returned by **decode-float**. If *float* is zero, **integer-decode-float** returns zero as the first value. The second value bears the same relationship 
-
-Numbers **12–83**
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-**decode-float, scale-float, float-radix, float-sign,** *...* 
-
-to the first value as for **decode-float**: 
-
-(multiple-value-bind (signif expon sign) 
-
-(integer-decode-float f) 
-
-(scale-float (float signif f) expon)) *⌘* (abs f) 
-
-**Examples:** 
-
-;; Note that since the purpose of this functionality is to expose 
-
-;; details of the implementation, all of these examples are necessarily 
-
-;; very implementation-dependent. Results may vary widely. 
-
-;; Values shown here are chosen consistently from one particular implementation. (decode-float .5) *!* 0.5, 0, 1.0 
-
-(decode-float 1.0) *!* 0.5, 1, 1.0 
-
-(scale-float 1.0 1) *!* 2.0 
-
-(scale-float 10.01 -2) *!* 2.5025 
-
-(scale-float 23.0 0) *!* 23.0 
-
-(float-radix 1.0) *!* 2 
-
-(float-sign 5.0) *!* 1.0 
-
-(float-sign -5.0) *!* -1.0 
-
-(float-sign 0.0) *!* 1.0 
-
-(float-sign 1.0 0.0) *!* 0.0 
-
-(float-sign 1.0 -10.0) *!* 10.0 
-
-(float-sign -1.0 10.0) *!* -10.0 
-
-(float-digits 1.0) *!* 24 
-
-(float-precision 1.0) *!* 24 
-
-(float-precision least-positive-single-float) *!* 1 
-
-(integer-decode-float 1.0) *!* 8388608, -23, 1 
-
-**Aected By:** 
-
-The implementation’s representation for *floats*. 
-
-**Exceptional Situations:** 
-
-The functions **decode-float**, **float-radix**, **float-digits**, **float-precision**, and **integer-decode-float** should signal an error if their only argument is not a *float*. 
-
-The *function* **scale-float** should signal an error if its first argument is not a *float* or if its second argument is not an *integer* . 
-
-The *function* **float-sign** should signal an error if its first argument is not a *float* or if its second argument is supplied but is not a *float*. 
-
-**Notes:** 
-
-The product of the first result of **decode-float** or **integer-decode-float**, of the radix raised to the power of the second result, and of the third result is exactly equal to the value of *float*. 
-
-(multiple-value-bind (signif expon sign) 
-
-**12–84** Programming Language—Common Lisp
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-(decode-float f) 
-
-(scale-float signif expon)) 
-
-*⌘* (abs f) 
-
-and 
-
-(multiple-value-bind (signif expon sign) 
-
-(decode-float f) 
-
-(\* (scale-float signif expon) sign)) 
-
-*⌘* f 
-
-**float** *Function* 
-
-**Syntax:** 
-
-**float** *number* &optional *prototype ! float* 
-
-**Arguments and Values:** 
-
-*number*—a *real*. 
-
-*prototype*—a *float*. 
-
-*float*—a *float*. 
-
-**Description:** 
-
-**float** converts a *real* number to a *float*. 
-
-If a *prototype* is supplied, a *float* is returned that is mathematically equal to *number* but has the same format as *prototype*. 
-
-If *prototype* is not supplied, then if the *number* is already a *float*, it is returned; otherwise, a *float* is returned that is mathematically equal to *number* but is a *single float*. 
-
-**Examples:** 
-
-(float 0) *!* 0.0 
-
-(float 1 .5) *!* 1.0 
-
-(float 1.0) *!* 1.0 
-
-(float 1/2) *!* 0.5 
-
-<i>!</i> 1.0d0 <i><sub>or</sub></i> 
-
-*!* 1.0 
-
-(eql (float 1.0 1.0d0) 1.0d0) *! true* 
-
-Numbers **12–85**
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-**See Also:** 
-
-**coerce** 
-
-**floatp** *Function* 
-
-**Syntax:** 
-
-**floatp** *object* 
-
-generalized-boolean 
-
-**Arguments and Values:** 
-
-*object*—an *object*. 
-
-*generalized-boolean*—a *generalized boolean*. 
-
-**Description:** 
-
-Returns *true* if *object* is of *type* **float**; otherwise, returns *false*. 
-
-**Examples:** 
-
-(floatp 1.2d2) *! true* 
-
-(floatp 1.212) *! true* 
-
-(floatp 1.2s2) *! true* 
-
-(floatp (expt 2 130)) *! false* 
-
-**Notes:** 
-
-(floatp *object*) *⌘* (typep *object* ’float) 
-
-**12–86** Programming Language—Common Lisp
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-<b>most-positive-short-float, least-positive-short-float,</b> <i>...</i> <b><sup>most-positive-short-float, least-positive-short float, least-positive-normalized-short-float, most</sup> positive-double-float, least-positive-double-float, <sup>least-positive-normalized-double-float, most positive-long-float, least-positive-long-float, least positive-normalized-long-float, most-positive single-float, least-positive-single-float, least positive-normalized-single-float, most-negative short-float, least-negative-short-float, least negative-normalized-short-float, most-negative single-float, least-negative-single-float, least negative-normalized-single-float, most-negative double-float, least-negative-double-float, least negative-normalized-double-float, most-negative long-float, least-negative-long-float, least-negative</sup> normalized-long-float</b> <i>Constant Variable</i> 
-
-**Constant Value:** 
-
-*implementation-dependent*. 
-
-**Description:** 
-
-These *constant variables* provide a way for programs to examine the *implementation-defined* limits for the various float formats. 
-
-Of these *variables*, each which has “-normalized” in its *name* must have a *value* which is a *normalized float*, and each which does not have “-normalized” in its name may have a *value* which is either a *normalized float* or a *denormalized float*, as appropriate. 
-
-Of these *variables*, each which has “short-float” in its name must have a *value* which is a *short float*, each which has “single-float” in its name must have a *value* which is a *single float*, each which has “double-float” in its name must have a *value* which is a *double float*, and each which has “long-float” in its name must have a *value* which is a *long float*. 
-
-*•* **most-positive-short-float**, **most-positive-single-float**, 
-
-**most-positive-double-float**, **most-positive-long-float** 
-
-Each of these *constant variables* has as its *value* the positive *float* of the largest magnitude Numbers **12–87**
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-(closest in value to, but not equal to, positive infinity) for the float format implied by its name. 
-
-*•* **least-positive-short-float**, **least-positive-normalized-short-float**, 
-
-**least-positive-single-float**, **least-positive-normalized-single-float**, 
-
-**least-positive-double-float**, **least-positive-normalized-double-float**, 
-
-**least-positive-long-float**, **least-positive-normalized-long-float** 
-
-Each of these *constant variables* has as its *value* the smallest positive (nonzero) *float* for the float format implied by its name. 
-
-*•* **least-negative-short-float**, **least-negative-normalized-short-float**, 
-
-**least-negative-single-float**, **least-negative-normalized-single-float**, 
-
-**least-negative-double-float**, **least-negative-normalized-double-float**, 
-
-**least-negative-long-float**, **least-negative-normalized-long-float** 
-
-Each of these *constant variables* has as its *value* the negative (nonzero) *float* of the smallest magnitude for the float format implied by its name. (If an implementation supports minus zero as a *di↵erent object* from positive zero, this value must not be minus zero.) 
-
-*•* **most-negative-short-float**, **most-negative-single-float**, 
-
-**most-negative-double-float**, **most-negative-long-float** 
-
-Each of these *constant variables* has as its *value* the negative *float* of the largest magnitude (closest in value to, but not equal to, negative infinity) for the float format implied by its name. 
-
-**Notes:** 
-
-**short-float-epsilon, short-float-negative-epsilon, single-float-epsilon, single-float-negative-epsilon, double-float-epsilon, double-float-negative-epsilon, long-float-epsilon, long-float-negative-epsilon** *Con stant Variable* 
-
-**Constant Value:** 
-
-*implementation-dependent*. 
-
-**Description:** 
-
-The value of each of the constants **short-float-epsilon**, **single-float-epsilon**, **double-float-epsilon**, and **long-float-epsilon** is the smallest positive *float ✏* of the given format, such that the following expression is *true* when evaluated: 
-
-**12–88** Programming Language—Common Lisp
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-(not (= (float 1 *✏*) (+ (float 1 *✏*) *✏*))) 
-
-The value of each of the constants **short-float-negative-epsilon**, **single-float-negative-epsilon**, **double-float-negative-epsilon**, and **long-float-negative-epsilon** is the smallest positive *float ✏* of the given format, such that the following expression is *true* when evaluated: 
-
-(not (= (float 1 *✏*) (- (float 1 *✏*) *✏*))) 
-
-**arithmetic-error** *Condition Type* 
-
-**Class Precedence List:** 
-
-**arithmetic-error**, **error**, **serious-condition**, **condition**, **t** 
-
-**Description:** 
-
-The *type* **arithmetic-error** consists of error conditions that occur during arithmetic operations. The operation and operands are initialized with the initialization arguments named :operation and :operands to **make-condition**, and are *accessed* by the functions **arithmetic-error-operation** and **arithmetic-error-operands**. 
-
-**See Also:** 
-
-**arithmetic-error-operation**, **arithmetic-error-operands** 
-
-<b><sup>arithmetic-error-operands, arithmetic-error</sup> operation</b> <i>Function</i> 
-
-**Syntax:** 
-
-**arithmetic-error-operands** *condition ! operands* 
-
-**arithmetic-error-operation** *condition ! operation* 
-
-**Arguments and Values:** 
-
-*condition*—a *condition* of *type* **arithmetic-error**. 
-
-*operands*—a *list*. 
-
-*operation*—a *function designator* . 
-
-**Description:** 
-
-**arithmetic-error-operands** returns a *list* of the operands which were used in the o↵ending call to the operation that signaled the *condition*. 
-
-Numbers **12–89**
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-**arithmetic-error-operation** returns a *list* of the o↵ending operation in the o↵ending call that signaled the *condition*. 
-
-**See Also:** 
-
-**arithmetic-error**, Chapter 9 (Conditions) 
-
-**Notes:** 
-
-**division-by-zero** *Condition Type* 
-
-**Class Precedence List:** 
-
-**division-by-zero**, **arithmetic-error**, **error**, **serious-condition**, **condition**, **t** 
-
-**Description:** 
-
-The *type* **division-by-zero** consists of error conditions that occur because of division by zero. **floating-point-invalid-operation** *Condition Type* 
-
-**Class Precedence List:** 
-
-**floating-point-invalid-operation**, **arithmetic-error**, **error**, **serious-condition**, **condition**, **t** 
-
-**Description:** 
-
-The *type* **floating-point-invalid-operation** consists of error conditions that occur because of certain floating point traps. 
-
-It is *implementation-dependent* whether floating point traps occur, and whether or how they may be enabled or disabled. Therefore, conforming code may establish handlers for this condition, but must not depend on its being *signaled*. 
-
-**12–90** Programming Language—Common Lisp
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-**floating-point-inexact** *Condition Type* 
-
-**Class Precedence List:** 
-
-**floating-point-inexact**, **arithmetic-error**, **error**, **serious-condition**, **condition**, **t** 
-
-**Description:** 
-
-The *type* **floating-point-inexact** consists of error conditions that occur because of certain floating point traps. 
-
-It is *implementation-dependent* whether floating point traps occur, and whether or how they may be enabled or disabled. Therefore, conforming code may establish handlers for this condition, but must not depend on its being *signaled*. 
-
-**floating-point-overflow** *Condition Type* 
-
-**Class Precedence List:** 
-
-**floating-point-overflow**, **arithmetic-error**, **error**, **serious-condition**, **condition**, **t** 
-
-**Description:** 
-
-The *type* **floating-point-overflow** consists of error conditions that occur because of floating-point overflow. 
-
-**floating-point-underflow** *Condition Type* 
-
-**Class Precedence List:** 
-
-**floating-point-underflow**, **arithmetic-error**, **error**, **serious-condition**, **condition**, **t** 
-
-**Description:** 
-
-The *type* **floating-point-underflow** consists of error conditions that occur because of floating-point underflow. 
-
-Numbers **12–91**
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-**12–92** Programming Language—Common Lisp
+**12–78** Programming Language—Common Lisp

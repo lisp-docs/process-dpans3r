@@ -1,17 +1,20 @@
-﻿ 
+﻿Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
- 
+**Programming Language—Common Lisp** 
 
 **15. Arrays** 
-  
 
+Arrays **i**
 
+Version 15.17R, X3J13/94-101R. Fri 12-Aug-1994 6:35pm EDT 
 
- 
+**ii** Programming Language—Common Lisp
 
- 
+Version 15.17R, X3J13/94-101R. 
+
+Fri 12-Aug-1994 6:35pm EDT 
 
 **15.1 Array Concepts** 
 
@@ -45,9 +48,9 @@ An *array* of *rank* one (*i.e.*, a one-dimensional *array*) is called a *vector
 
 Arrays **15–1**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **15.1.1.3.1.1 Fill Pointers** 
 
@@ -71,31 +74,31 @@ An *implementation* may impose a limit on the *rank* of an *array*, but there is
 
 An *array* can be a *general array*, meaning each *element* may be any *object*, or it may be a *specialized array*, meaning that each *element* must be of a restricted *type*. 
 
-The phrasing “an *array specialized* to *type hhtype&#10217;” is sometimes used to emphasize the *element type* of an *array*. This phrasing is tolerated even when the &#10216;type&#10217; is **t**, even though an *array specialized* to *type t* is a *general array*, not a *specialized array*. 
+The phrasing “an *array specialized* to *type hhtypeii*” is sometimes used to emphasize the *element type* of an *array*. This phrasing is tolerated even when the *hhtypeii* is **t**, even though an *array specialized* to *type t* is a *general array*, not a *specialized array*. 
 
 Figure 15–1 lists some *defined names* that are applicable to *array* creation, *access*, and information operations. 
 
-|&#60;p&#62;**adjust-array array-has-fill-pointer-p make-array** &#60;/p&#62;&#60;p&#62;**adjustable-array-p array-in-bounds-p svref** &#60;/p&#62;&#60;p&#62;**aref array-rank upgraded-array-element-type array-dimension array-rank-limit upgraded-complex-part-type array-dimension-limit array-row-major-index vector** &#60;/p&#62;&#60;p&#62;**array-dimensions array-total-size vector-pop** &#60;/p&#62;&#60;p&#62;**array-displacement array-total-size-limit vector-push** &#60;/p&#62;&#60;p&#62;**array-element-type fill-pointer vector-push-extend**&#60;/p&#62;|
+|<p>**adjust-array array-has-fill-pointer-p make-array** </p><p>**adjustable-array-p array-in-bounds-p svref** </p><p>**aref array-rank upgraded-array-element-type array-dimension array-rank-limit upgraded-complex-part-type array-dimension-limit array-row-major-index vector** </p><p>**array-dimensions array-total-size vector-pop** </p><p>**array-displacement array-total-size-limit vector-push** </p><p>**array-element-type fill-pointer vector-push-extend**</p>|
 | :- |
 
 
 **Figure 15–1. General Purpose Array-Related Defined Names** 
 
+**15–2** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **15.1.2.1 Array Upgrading** 
 
-The *upgraded array element type* of a *type T*&#60;sub&#62;1&#60;/sub&#62; is a *type T*&#60;sub&#62;2&#60;/sub&#62; that is a *supertype* of *T*&#60;sub&#62;1&#60;/sub&#62; and that is used instead of *T*&#60;sub&#62;1&#60;/sub&#62; whenever *T*&#60;sub&#62;1&#60;/sub&#62; is used as an *array element type* for object creation or type discrimination. 
+The *upgraded array element type* of a *type T*<sub>1</sub> is a *type T*<sub>2</sub> that is a *supertype* of *T*<sub>1</sub> and that is used instead of *T*<sub>1</sub> whenever *T*<sub>1</sub> is used as an *array element type* for object creation or type discrimination. 
 
 During creation of an *array*, the *element type* that was requested is called the *expressed array element type*. The *upgraded array element type* of the *expressed array element type* becomes the *actual array element type* of the *array* that is created. 
 
-&#60;i&#62;Type upgrading&#60;/i&#62; implies a movement upwards in the type hierarchy lattice. A &#60;i&#62;type&#60;/i&#62; is always a &#60;i&#62;subtype&#60;/i&#62; of its &#60;i&#62;upgraded array element type&#60;/i&#62;. Also, if a &#60;i&#62;type T&#60;sub&#62;x&#60;/sub&#62;&#60;/i&#62; is a &#60;i&#62;subtype&#60;/i&#62; of another &#60;i&#62;type T&#60;sub&#62;y&#60;/sub&#62;&#60;/i&#62;, then the &#60;i&#62;upgraded array element type&#60;/i&#62; of &#60;i&#62;T&#60;sub&#62;x&#60;/sub&#62;&#60;/i&#62; must be a &#60;i&#62;subtype&#60;/i&#62; of the &#60;i&#62;upgraded array element type&#60;/i&#62; of &#60;i&#62;T&#60;sub&#62;y&#60;/sub&#62;&#60;/i&#62;. Two &#60;i&#62;disjoint types&#60;/i&#62; can be &#60;i&#62;upgraded&#60;/i&#62; to the same &#60;i&#62;type&#60;/i&#62;. 
+<i>Type upgrading</i> implies a movement upwards in the type hierarchy lattice. A <i>type</i> is always a <i>subtype</i> of its <i>upgraded array element type</i>. Also, if a <i>type T<sub>x</sub></i> is a <i>subtype</i> of another <i>type T<sub>y</sub></i>, then the <i>upgraded array element type</i> of <i>T<sub>x</sub></i> must be a <i>subtype</i> of the <i>upgraded array element type</i> of <i>T<sub>y</sub></i>. Two <i>disjoint types</i> can be <i>upgraded</i> to the same <i>type</i>. 
 
-The *upgraded array element type T*&#60;sub&#62;2&#60;/sub&#62; of a *type T*&#60;sub&#62;1&#60;/sub&#62; is a function only of *T*&#60;sub&#62;1&#60;/sub&#62; itself; that is, it is independent of any other property of the *array* for which *T*&#60;sub&#62;2&#60;/sub&#62; will be used, such as *rank*, *adjustability*, *fill pointers*, or displacement. The *function* **upgraded-array-element-type** can be used by *conforming programs* to predict how the *implementation* will *upgrade* a given *type*. 
+The *upgraded array element type T*<sub>2</sub> of a *type T*<sub>1</sub> is a function only of *T*<sub>1</sub> itself; that is, it is independent of any other property of the *array* for which *T*<sub>2</sub> will be used, such as *rank*, *adjustability*, *fill pointers*, or displacement. The *function* **upgraded-array-element-type** can be used by *conforming programs* to predict how the *implementation* will *upgrade* a given *type*. 
 
 **15.1.2.2 Required Kinds of Specialized Arrays** 
 
@@ -103,7 +106,7 @@ The *upgraded array element type T*&#60;sub&#62;2&#60;/sub&#62; of a *type T*&#6
 
 *Strings* are *specialized arrays* and might logically have been included in this chapter. However, for purposes of readability most information about *strings* does not appear in this chapter; see instead Chapter 16 (Strings). 
 
-|&#60;p&#62;**char string-equal string-upcase make-string string-greaterp string**/= &#60;/p&#62;&#60;p&#62;**nstring-capitalize string-left-trim string**&#60; &#60;/p&#62;&#60;p&#62;**nstring-downcase string-lessp string**&#60;= &#60;/p&#62;&#60;p&#62;**nstring-upcase string-not-equal string**= &#60;/p&#62;&#60;p&#62;**schar string-not-greaterp string**&#62; &#60;/p&#62;&#60;p&#62;**string string-not-lessp string**&#62;= &#60;/p&#62;&#60;p&#62;**string-capitalize string-right-trim** &#60;/p&#62;&#60;p&#62;**string-downcase string-trim**&#60;/p&#62;|
+|<p>**char string-equal string-upcase make-string string-greaterp string**/= </p><p>**nstring-capitalize string-left-trim string**< </p><p>**nstring-downcase string-lessp string**<= </p><p>**nstring-upcase string-not-equal string**= </p><p>**schar string-not-greaterp string**> </p><p>**string string-not-lessp string**>= </p><p>**string-capitalize string-right-trim** </p><p>**string-downcase string-trim**</p>|
 | :- |
 
 
@@ -113,21 +116,21 @@ The *upgraded array element type T*&#60;sub&#62;2&#60;/sub&#62; of a *type T*&#6
 
 Arrays **15–3**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
-|&#60;p&#62;**bit bit-ior bit-orc2** &#60;/p&#62;&#60;p&#62;**bit-and bit-nand bit-xor** &#60;/p&#62;&#60;p&#62;**bit-andc1 bit-nor sbit** &#60;/p&#62;&#60;p&#62;**bit-andc2 bit-not** &#60;/p&#62;&#60;p&#62;**bit-eqv bit-orc1**&#60;/p&#62;|
+|<p>**bit bit-ior bit-orc2** </p><p>**bit-and bit-nand bit-xor** </p><p>**bit-andc1 bit-nor sbit** </p><p>**bit-andc2 bit-not** </p><p>**bit-eqv bit-orc1**</p>|
 | :- |
 
 
 **Figure 15–3. Operators that Manipulate Bit Arrays** 
 
+**15–4** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **array** *System Class* 
 
@@ -137,7 +140,7 @@ Arrays **15–3**
 
 **Description:** 
 
-An &#60;i&#62;array&#60;/i&#62; contains &#60;i&#62;objects&#60;/i&#62; arranged according to a Cartesian coordinate system. An &#60;i&#62;array&#60;/i&#62; provides mappings from a set of &#60;i&#62;fixnums &#123;i&#60;/i&#62;&#60;sub&#62;0&#60;/sub&#62;&#60;i&#62;, i&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62;&#60;i&#62;, . . . , i&#60;sub&#62;r−&#60;/sub&#62;&#60;/i&#62;1&#60;/sub&#62;&#60;i&#62;&#125;&#60;/i&#62; to corresponding &#60;i&#62;elements&#60;/i&#62; of the &#60;i&#62;array&#60;/i&#62;, where 0 &#60;i&#62;≤ i&#60;sub&#62;j&#60;/sub&#62;&#60;/i&#62; &#60; &#60;i&#62;d&#60;sub&#62;j&#60;/sub&#62;&#60;/i&#62; , &#60;i&#62;r&#60;/i&#62; is the rank of the array, and &#60;i&#62;d&#60;sub&#62;j&#60;/sub&#62;&#60;/i&#62; is the size of &#60;i&#62;dimension j&#60;/i&#62; of the array. 
+An <i>array</i> contains <i>objects</i> arranged according to a Cartesian coordinate system. An <i>array</i> provides mappings from a set of <i>fixnums {i</i><sub>0</sub><i>, i</i><sub>1</sub><i>, . . . , i<sub>r−</sub></i>1</sub><i>}</i> to corresponding <i>elements</i> of the <i>array</i>, where 0 <i>≤ i<sub>j</sub></i> < <i>d<sub>j</sub></i> , <i>r</i> is the rank of the array, and <i>d<sub>j</sub></i> is the size of <i>dimension j</i> of the array. 
 
 When an *array* is created, the program requesting its creation may declare that all *elements* are of a particular *type*, called the *expressed array element type*. The implementation is permitted to *upgrade* this type in order to produce the *actual array element type*, which is the *element type* for the *array* is actually *specialized*. See the *function* **upgraded-array-element-type**. 
 
@@ -147,9 +150,9 @@ Specializing.
 
 **Compound Type Specifier Syntax:** 
 
-(array [*&#123;element-type |* **\****&#125;* [*dimension-spec*]]) 
+(array [*{element-type |* **\****}* [*dimension-spec*]]) 
 
-*dimension-spec::*=*rank |* **\*** *|* (*&#123;dimension |* **\****&#125;*\*) 
+*dimension-spec::*=*rank |* **\*** *|* (*{dimension |* **\****}*\*) 
 
 **Compound Type Specifier Arguments:** 
 
@@ -169,9 +172,9 @@ If the *dimension-spec* is a *rank*, the set includes only those *arrays* having
 
 Arrays **15–5**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **See Also:** 
 
@@ -201,9 +204,9 @@ Specializing.
 
 **Compound Type Specifier Syntax:** 
 
-(simple-array [*&#123;element-type |* **\****&#125;* [*dimension-spec*]]) 
+(simple-array [*{element-type |* **\****}* [*dimension-spec*]]) 
 
-*dimension-spec::*=*rank |* **\*** *|* (*&#123;dimension |* **\****&#125;*\*) 
+*dimension-spec::*=*rank |* **\*** *|* (*{dimension |* **\****}*\*) 
 
 **Compound Type Specifier Arguments:** 
 
@@ -213,11 +216,11 @@ Specializing.
 
 *rank*—a non-negative *fixnum*. 
 
+**15–6** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Compound Type Specifier Description:** 
 
@@ -247,7 +250,7 @@ Specializing.
 
 **Compound Type Specifier Syntax:** 
 
-(vector [*&#123;element-type |* **\****&#125;* [*&#123;size |* **\****&#125;*]]) 
+(vector [*{element-type |* **\****}* [*{size |* **\****}*]]) 
 
 **Compound Type Specifier Arguments:** 
 
@@ -263,9 +266,9 @@ If *element-type* is the *symbol* **\***, *vectors* are not excluded on the basi
 
 Arrays **15–7**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 If a *size* is specified, the set includes only those *vectors* whose only *dimension* is *size*. If the *symbol* **\*** is specified instead of a *size*, the set is not restricted on the basis of *dimension*. 
 
@@ -311,11 +314,11 @@ Specializing.
 
 This is the same as (simple-array t (*size*)). 
 
+**15–8** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **bit-vector** *System Class* 
 
@@ -369,9 +372,9 @@ Abbreviating.
 
 Arrays **15–9**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Compound Type Specifier Arguments:** 
 
@@ -421,11 +424,11 @@ This denotes the same type as the *type* (simple-array bit (*size*)); that is, t
 
 *new-array*—an *array*. 
 
+**15–10** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **make-array** 
 
@@ -463,9 +466,9 @@ The *displaced-index-offset* is made to be the index offset of the *array*. When
 
 Arrays **15–11**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **make-array** 
 
@@ -511,7 +514,7 @@ The following is an example of making a *displaced array*.
 
 (setq a (make-array ’(4 3))) 
 
-*→* #&#60;ARRAY 4x3 simple 32546632&#62; 
+*→* #<ARRAY 4x3 simple 32546632> 
 
 (dotimes (i 4) 
 
@@ -521,37 +524,37 @@ The following is an example of making a *displaced array*.
 
 *→* NIL 
 
+**15–12** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 (setq b (make-array 8 :displaced-to a 
 
 :displaced-index-offset 2)) 
 
-*→* #&#60;ARRAY 8 indirect 32550757&#62; 
+*→* #<ARRAY 8 indirect 32550757> 
 
 (dotimes (i 8) 
 
 (print (list i (aref b i)))) 
 
-&#9655; (0 (0 X 2 = 0)) 
+*.* (0 (0 X 2 = 0)) 
 
-&#9655; (1 (1 X 0 = 0)) 
+*.* (1 (1 X 0 = 0)) 
 
-&#9655; (2 (1 X 1 = 1)) 
+*.* (2 (1 X 1 = 1)) 
 
-&#9655; (3 (1 X 2 = 2)) 
+*.* (3 (1 X 2 = 2)) 
 
-&#9655; (4 (2 X 0 = 0)) 
+*.* (4 (2 X 0 = 0)) 
 
-&#9655; (5 (2 X 1 = 2)) 
+*.* (5 (2 X 1 = 2)) 
 
-&#9655; (6 (2 X 2 = 4)) 
+*.* (6 (2 X 2 = 4)) 
 
-&#9655; (7 (3 X 0 = 0)) 
+*.* (7 (3 X 0 = 0)) 
 
 *→* NIL 
 
@@ -559,21 +562,21 @@ The last example depends on the fact that *arrays* are, in effect, stored in row
 
 (setq a1 (make-array 50)) 
 
-*→* #&#60;ARRAY 50 simple 32562043&#62; 
+*→* #<ARRAY 50 simple 32562043> 
 
 (setq b1 (make-array 20 :displaced-to a1 :displaced-index-offset 10)) 
 
-*→* #&#60;ARRAY 20 indirect 32563346&#62; 
+*→* #<ARRAY 20 indirect 32563346> 
 
 (length b1) *→* 20 
 
 (setq a2 (make-array 50 :fill-pointer 10)) 
 
-*→* #&#60;ARRAY 50 fill-pointer 10 46100216&#62; 
+*→* #<ARRAY 50 fill-pointer 10 46100216> 
 
 (setq b2 (make-array 20 :displaced-to a2 :displaced-index-offset 10)) 
 
-*→* #&#60;ARRAY 20 indirect 46104010&#62; 
+*→* #<ARRAY 20 indirect 46104010> 
 
 (length a2) *→* 10 
 
@@ -581,13 +584,13 @@ The last example depends on the fact that *arrays* are, in effect, stored in row
 
 (setq a3 (make-array 50 :fill-pointer 10)) 
 
-*→* #&#60;ARRAY 50 fill-pointer 10 46105663&#62; 
+*→* #<ARRAY 50 fill-pointer 10 46105663> 
 
 (setq b3 (make-array 20 :displaced-to a3 :displaced-index-offset 10 
 
 :fill-pointer 5)) 
 
-*→* #&#60;ARRAY 20 indirect, fill-pointer 5 46107432&#62; 
+*→* #<ARRAY 20 indirect, fill-pointer 5 46107432> 
 
 (length a3) *→* 10 
 
@@ -603,9 +606,9 @@ There is no specified way to create an *array* for which **adjustable-array-p** 
 
 Arrays **15–13**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **adjust-array** 
 
@@ -655,11 +658,11 @@ Arrays **15–13**
 
 *Element-type* specifies the *type* of the *elements* of the resulting *array*. If *element-type* is supplied, the consequences are unspecified if the *upgraded array element type* of *element-type* is not the same as the *actual array element type* of *array*. 
 
+**15–14** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **adjust-array** 
 
@@ -699,9 +702,9 @@ A gets a new “data region,” and contents of B are copied into it as appropri
 
 Arrays **15–15**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **adjust-array** 
 
@@ -751,11 +754,11 @@ Note that if an *array A* is displaced to another *array B*, and *B* is displace
 
 (NIL NIL NIL NIL NIL NIL)) 
 
+**15–16** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 (array-dimensions beta) *→* (4 6) 
 
@@ -815,9 +818,9 @@ Returns true if and only if **adjust-array** could return a *value* which is *id
 
 Arrays **15–17**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 :adjustable t 
 
@@ -873,11 +876,11 @@ If the variable foo names a 3-by-5 array, then the first index could be 0, 1, or
 
 1 2) *→* 1 
 
+**15–18** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 (setq gamma ’(0 2)) 
 
@@ -907,7 +910,7 @@ If the variable foo names a 3-by-5 array, then the first index could be 0, 1, or
 
 **Description:** 
 
-**array-dimension** returns the *axis-number dimension*&#60;sub&#62;1&#60;/sub&#62; of *array*. (Any *fill pointer* is ignored.) **Examples:** 
+**array-dimension** returns the *axis-number dimension*<sub>1</sub> of *array*. (Any *fill pointer* is ignored.) **Examples:** 
 
 (array-dimension (make-array 4) 0) *→* 4 
 
@@ -927,9 +930,9 @@ None.
 
 Arrays **15–19**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **array-dimensions** *Function* 
 
@@ -979,11 +982,11 @@ Should signal an error of *type* **type-error** if its argument is not an *array
 
 Returns a *type specifier* which represents the *actual array element type* of the array, which is the set of *objects* that such an *array* can hold. (Because of *array upgrading*, this *type specifier* can in some cases denote a *supertype* of the *expressed array element type* of the *array*.) 
 
+**15–20** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Examples:** 
 
@@ -1045,9 +1048,9 @@ Returns *true* if *array* has a *fill pointer* ; otherwise returns *false*.
 
 Arrays **15–21**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Exceptional Situations:** 
 
@@ -1083,33 +1086,33 @@ If **array-displacement** is called on an *array* for which a *non-nil object* w
 
 **Examples:** 
 
-(setq a1 (make-array 5)) *→* #&#60;ARRAY 5 simple 46115576&#62; 
+(setq a1 (make-array 5)) *→* #<ARRAY 5 simple 46115576> 
 
 (setq a2 (make-array 4 :displaced-to a1 
 
 :displaced-index-offset 1)) 
 
-*→* #&#60;ARRAY 4 indirect 46117134&#62; 
+*→* #<ARRAY 4 indirect 46117134> 
 
 (array-displacement a2) 
 
-*→* #&#60;ARRAY 5 simple 46115576&#62;, 1 
+*→* #<ARRAY 5 simple 46115576>, 1 
 
 (setq a3 (make-array 2 :displaced-to a2 
 
 :displaced-index-offset 2)) 
 
-*→* #&#60;ARRAY 2 indirect 46122527&#62; 
+*→* #<ARRAY 2 indirect 46122527> 
 
+**15–22** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 (array-displacement a3) 
 
-*→* #&#60;ARRAY 4 indirect 46117134&#62;, 2 
+*→* #<ARRAY 4 indirect 46117134>, 2 
 
 **Exceptional Situations:** 
 
@@ -1161,13 +1164,13 @@ Returns *true* if the *subscripts* are all in bounds for *array*; otherwise retu
 
 *≡* (and (not (some #’minusp (list subscripts))) 
 
-(every #’&#60; (list subscripts) (array-dimensions array))) 
+(every #’< (list subscripts) (array-dimensions array))) 
 
 Arrays **15–23**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **array-rank** *Function* 
 
@@ -1217,11 +1220,11 @@ Should signal an error of *type* **type-error** if its argument is not an *array
 
 *index*—a *valid array row-major index* for the *array*. 
 
+**15–24** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Description:** 
 
@@ -1279,9 +1282,9 @@ Returns the *array total size* of the *array*.
 
 Arrays **15–25**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Examples:** 
 
@@ -1341,11 +1344,11 @@ Returns *true* if *object* is of *type* **array**; otherwise, returns *false*.
 
 (arrayp #\*1011) *→ true* 
 
+**15–26** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 (arrayp "hi") *→ true* 
 
@@ -1403,9 +1406,9 @@ a *→* #(0 1 4 9 NIL NIL NIL NIL)
 
 Should signal an error of *type* **type-error** if *vector* is not a *vector* with a *fill pointer* . Arrays **15–27**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **See Also:** 
 
@@ -1457,11 +1460,11 @@ index)
 
 (row-major-aref array (array-row-major-index array i1 i2)) 
 
+**15–28** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **upgraded-array-element-type** *Function* 
 
@@ -1503,9 +1506,9 @@ Except for storage allocation consequences and dealing correctly with the option
 
 Arrays **15–29**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **array-dimension-limit** *Constant Variable* 
 
@@ -1551,11 +1554,11 @@ The actual limit on the *array total size* imposed by the *implementation* might
 
 **make-array**, **array-element-type** 
 
+**15–30** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **simple-vector-p** *Function* 
 
@@ -1605,9 +1608,9 @@ Returns *true* if *object* is of *type* **simple-vector**; otherwise, returns *f
 
 Arrays **15–31**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 *element*, *new-element*—an *object* (whose *type* is a *subtype* of the *array element type* of the *simple-vector*). 
 
@@ -1661,11 +1664,11 @@ Creates a *fresh simple general vector* whose size corresponds to the number of 
 
 (length v) *→* 3 
 
+**15–32** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **See Also:** 
 
@@ -1675,13 +1678,13 @@ Creates a *fresh simple general vector* whose size corresponds to the number of 
 
 **vector** is analogous to **list**. 
 
-(vector a&#60;sub&#62;1&#60;/sub&#62; a&#60;sub&#62;2&#60;/sub&#62; ... a&#60;i&#62;&#60;sub&#62;n&#60;/sub&#62;&#60;/i&#62;) 
+(vector a<sub>1</sub> a<sub>2</sub> ... a<i><sub>n</sub></i>) 
 
 *≡* (make-array (list *n*) :element-type t 
 
 :initial-contents 
 
-(list a&#60;sub&#62;1&#60;/sub&#62; a&#60;sub&#62;2&#60;/sub&#62; ... a&#60;i&#62;&#60;sub&#62;n&#60;/sub&#62;&#60;/i&#62;)) 
+(list a<sub>1</sub> a<sub>2</sub> ... a<i><sub>n</sub></i>)) 
 
 **vector-pop** *Function* 
 
@@ -1727,9 +1730,9 @@ The value of the *fill pointer* .
 
 Arrays **15–33**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Exceptional Situations:** 
 
@@ -1763,11 +1766,11 @@ If the *fill pointer* is zero, **vector-pop** signals an error of *type* **error
 
 **Description:** 
 
-**vector-push** and **vector-push-extend** store *new-element* in *vector*. **vector-push** attempts to store *new-element* in the element of *vector* designated by the *fill pointer* , and to increase the *fill pointer* by one. If the (&#62;= (fill-pointer *vector*) (array-dimension *vector* 0)), neither *vector* nor its *fill pointer* are affected. Otherwise, the store and increment take place and **vector-push** returns the former value of the *fill pointer* which is one less than the one it leaves in *vector*. 
+**vector-push** and **vector-push-extend** store *new-element* in *vector*. **vector-push** attempts to store *new-element* in the element of *vector* designated by the *fill pointer* , and to increase the *fill pointer* by one. If the (>= (fill-pointer *vector*) (array-dimension *vector* 0)), neither *vector* nor its *fill pointer* are affected. Otherwise, the store and increment take place and **vector-push** returns the former value of the *fill pointer* which is one less than the one it leaves in *vector*. 
 
 **vector-push-extend** is just like **vector-push** except that if the *fill pointer* gets too large, *vector* is extended using **adjust-array** so that it can contain more elements. *Extension* is the minimum number of elements to be added to *vector* if it must be extended. 
 
-**vector-push** and **vector-push-extend** return the index of *new-element* in *vector*. If (&#62;= (fill-pointer *vector*) (array-dimension *vector* 0)), **vector-push** returns **nil**. 
+**vector-push** and **vector-push-extend** return the index of *new-element* in *vector*. If (>= (fill-pointer *vector*) (array-dimension *vector* 0)), **vector-push** returns **nil**. 
 
 **Examples:** 
 
@@ -1777,11 +1780,11 @@ If the *fill pointer* is zero, **vector-pop** signals an error of *type* **error
 
 :fill-pointer 2 
 
+**15–34** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 :initial-element ’first-one))) *→* 2 
 
@@ -1845,9 +1848,9 @@ Returns *true* if *object* is of *type* **vector**; otherwise, returns *false*.
 
 Arrays **15–35**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Examples:** 
 
@@ -1909,11 +1912,11 @@ These *functions* ignore the *fill pointer* when *accessing elements*.
 
 (setf (sbit ba 5) 1) *→* 1 
 
+**15–36** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 (sbit ba 5) *→* 1 
 
@@ -1927,7 +1930,7 @@ These *functions* ignore the *fill pointer* when *accessing elements*.
 
 **bit** and **sbit**, unlike **char** and **schar**, allow the first argument to be an *array* of any *rank*. 
 
-&#60;b&#62;&#60;sup&#62;bit-and, bit-andc1, bit-andc2, bit-eqv, bit-ior, bit&#60;/sup&#62; nand, bit-nor, bit-not, bit-orc1, bit-orc2, bit-xor&#60;/b&#62; &#60;i&#62;Function&#60;/i&#62; 
+<b><sup>bit-and, bit-andc1, bit-andc2, bit-eqv, bit-ior, bit</sup> nand, bit-nor, bit-not, bit-orc1, bit-orc2, bit-xor</b> <i>Function</i> 
 
 **Syntax:** 
 
@@ -1969,9 +1972,9 @@ These functions perform bit-wise logical operations on *bit-array1* and *bit-arr
 
 Arrays **15–37**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 In the case of **bit-not**, an *array* of *rank* and *dimensions* matching *bit-array* is returned that contains a copy of *bit-array* with all the bits inverted. 
 
@@ -1981,7 +1984,7 @@ Figure 15–4 indicates the logical operation performed by each of the *function
 
 |**Function Operation**|
 | :- |
-|&#60;p&#62;**bit-and** and &#60;/p&#62;&#60;p&#62;**bit-eqv** equivalence (exclusive nor) &#60;/p&#62;&#60;p&#62;**bit-not** complement &#60;/p&#62;&#60;p&#62;**bit-ior** inclusive or &#60;/p&#62;&#60;p&#62;**bit-xor** exclusive or &#60;/p&#62;&#60;p&#62;**bit-nand** complement of *bit-array1* and *bit-array2* &#60;/p&#62;&#60;p&#62;**bit-nor** complement of *bit-array1* or *bit-array2* &#60;/p&#62;&#60;p&#62;**bit-andc1** and complement of *bit-array1* with *bit-array2* &#60;/p&#62;&#60;p&#62;**bit-andc2** and *bit-array1* with complement of *bit-array2* &#60;/p&#62;&#60;p&#62;**bit-orc1** or complement of *bit-array1* with *bit-array2* &#60;/p&#62;&#60;p&#62;**bit-orc2** or *bit-array1* with complement of *bit-array2*&#60;/p&#62;|
+|<p>**bit-and** and </p><p>**bit-eqv** equivalence (exclusive nor) </p><p>**bit-not** complement </p><p>**bit-ior** inclusive or </p><p>**bit-xor** exclusive or </p><p>**bit-nand** complement of *bit-array1* and *bit-array2* </p><p>**bit-nor** complement of *bit-array1* or *bit-array2* </p><p>**bit-andc1** and complement of *bit-array1* with *bit-array2* </p><p>**bit-andc2** and *bit-array1* with complement of *bit-array2* </p><p>**bit-orc1** or complement of *bit-array1* with *bit-array2* </p><p>**bit-orc2** or *bit-array1* with complement of *bit-array2*</p>|
 
 
 **Figure 15–4. Bit-wise Logical Operations on Bit Arrays** 
@@ -2016,11 +2019,11 @@ Figure 15–4 indicates the logical operation performed by each of the *function
 
 **lognot**, **logand** 
 
+**15–38** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **bit-vector-p** *Function* 
 
@@ -2076,9 +2079,9 @@ Returns *true* if *object* is of *type* **simple-bit-vector**; otherwise, return
 
 Arrays **15–39**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **simple-bit-vector-p** 
 
@@ -2094,4 +2097,4 @@ Arrays **15–39**
 
 **Notes:** 
 
-(simple-bit-vector-p *object*) *≡* (typep *object* ’simple-bit-vector) 
+(simple-bit-vector-p *object*) *≡* (typep *object* ’simple-bit-vector) **15–40** Programming Language—Common Lisp

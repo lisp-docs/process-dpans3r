@@ -1,17 +1,20 @@
-﻿ 
+﻿Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
- 
+**Programming Language—Common Lisp** 
 
 **13. Characters** 
-  
 
+Characters **i**
 
+Version 15.17R, X3J13/94-101R. Fri 12-Aug-1994 6:35pm EDT 
 
- 
+**ii** Programming Language—Common Lisp
 
- 
+Version 15.17R, X3J13/94-101R. 
+
+Fri 12-Aug-1994 6:35pm EDT 
 
 **13.1 Character Concepts** 
 
@@ -25,7 +28,7 @@ The following figures contain lists of *defined names* applicable to *characters
 
 Figure 13–1 lists some *defined names* relating to *character attributes* and *character predicates*. 
 
-|&#60;p&#62;**alpha-char-p char-not-equal char**&#62; &#60;/p&#62;&#60;p&#62;**alphanumericp char-not-greaterp char**&#62;**=** &#60;/p&#62;&#60;p&#62;**both-case-p char-not-lessp digit-char-p** &#60;/p&#62;&#60;p&#62;**char-code-limit char/= graphic-char-p char-equal char**&#60; **lower-case-p** &#60;/p&#62;&#60;p&#62;**char-greaterp char**&#60;**= standard-char-p char-lessp char= upper-case-p**&#60;/p&#62;|
+|<p>**alpha-char-p char-not-equal char**> </p><p>**alphanumericp char-not-greaterp char**>**=** </p><p>**both-case-p char-not-lessp digit-char-p** </p><p>**char-code-limit char/= graphic-char-p char-equal char**< **lower-case-p** </p><p>**char-greaterp char**<**= standard-char-p char-lessp char= upper-case-p**</p>|
 | :- |
 
 
@@ -33,7 +36,7 @@ Figure 13–1 lists some *defined names* relating to *character attributes* and 
 
 Figure 13–2 lists some *character* construction and conversion *defined names*. 
 
-|&#60;p&#62;**char-code char-name code-char** &#60;/p&#62;&#60;p&#62;**char-downcase char-upcase digit-char** &#60;/p&#62;&#60;p&#62;**char-int character name-char**&#60;/p&#62;|
+|<p>**char-code char-name code-char** </p><p>**char-downcase char-upcase digit-char** </p><p>**char-int character name-char**</p>|
 | :- |
 
 
@@ -43,9 +46,9 @@ Figure 13–2 lists some *character* construction and conversion *defined names*
 
 Characters **13–1**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **13.1.2.1 Character Scripts** 
 
@@ -73,15 +76,15 @@ Additional, *implementation-defined attributes* of *characters* are also permitt
 
 For any *implementation-defined attribute* there is a distinguished value called the *null* value for that *attribute*. A *character* for which each *implementation-defined attribute* has the null value for that *attribute* is called a *simple character* . If the *implementation* has no *implementation-defined attributes*, then all *characters* are *simple characters*. 
 
+**13–2** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **13.1.4 Character Categories** 
 
-There are several (overlapping) categories of *characters* that have no formally associated *type* but that are nevertheless useful to name. They include *graphic characters*, *alphabetic*&#60;sub&#62;1&#60;/sub&#62; *characters*, *characters* with *case* (*uppercase* and *lowercase characters*), *numeric characters*, *alphanumeric characters*, and *digits* (in a given *radix* ). 
+There are several (overlapping) categories of *characters* that have no formally associated *type* but that are nevertheless useful to name. They include *graphic characters*, *alphabetic*<sub>1</sub> *characters*, *characters* with *case* (*uppercase* and *lowercase characters*), *numeric characters*, *alphanumeric characters*, and *digits* (in a given *radix* ). 
 
 For each *implementation-defined attribute* of a *character* , the documentation for that *implementa tion* must specify whether *characters* that differ only in that *attribute* are permitted to differ in whether are not they are members of one of the aforementioned categories. 
 
@@ -101,23 +104,23 @@ Of the *standard characters*, *newline* is *non-graphic* and all others are *gra
 
 **13.1.4.2 Alphabetic Characters** 
 
-The *alphabetic*&#60;sub&#62;1&#60;/sub&#62; *characters* are a subset of the *graphic characters*. Of the *standard characters*, only these are the *alphabetic*&#60;sub&#62;1&#60;/sub&#62; *characters*: 
+The *alphabetic*<sub>1</sub> *characters* are a subset of the *graphic characters*. Of the *standard characters*, only these are the *alphabetic*<sub>1</sub> *characters*: 
 
 A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 
 
 a b c d e f g h i j k l m n o p q r s t u v w x y z 
 
-Any &#60;i&#62;implementation-defined character&#60;/i&#62; that has &#60;i&#62;case&#60;/i&#62; must be &#60;i&#62;alphabetic&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62;&#60;sup&#62;. For each &#60;i&#62;implementation&#60;/i&#62;&#60;/sup&#62; defined graphic character&#60;/i&#62; that has no &#60;i&#62;case&#60;/i&#62;, it is &#60;i&#62;implementation-defined&#60;/i&#62; whether that &#60;i&#62;character&#60;/i&#62; is &#60;i&#62;alphabetic&#60;/i&#62;&#60;sub&#62;1&#60;/sub&#62;. 
+Any <i>implementation-defined character</i> that has <i>case</i> must be <i>alphabetic</i><sub>1</sub><sup>. For each <i>implementation</i></sup> defined graphic character</i> that has no <i>case</i>, it is <i>implementation-defined</i> whether that <i>character</i> is <i>alphabetic</i><sub>1</sub>. 
 
 **13.1.4.3 Characters With Case** 
 
-The *characters* with *case* are a subset of the *alphabetic*&#60;sub&#62;1&#60;/sub&#62; *characters*. A *character* with *case* has the property of being either *uppercase* or *lowercase*. Every *character* with *case* is in one-to-one correspondence with some other *character* with the opposite *case*. 
+The *characters* with *case* are a subset of the *alphabetic*<sub>1</sub> *characters*. A *character* with *case* has the property of being either *uppercase* or *lowercase*. Every *character* with *case* is in one-to-one correspondence with some other *character* with the opposite *case*. 
 
 Characters **13–3**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **13.1.4.3.1 Uppercase Characters** 
 
@@ -153,13 +156,13 @@ For each *implementation-defined graphic character* that has no *case*, the *imp
 
 **13.1.4.5 Alphanumeric Characters** 
 
-The set of *alphanumeric characters* is the union of the set of *alphabetic*&#60;sub&#62;1&#60;/sub&#62; *characters* and the set of *numeric characters*. 
+The set of *alphanumeric characters* is the union of the set of *alphabetic*<sub>1</sub> *characters* and the set of *numeric characters*. 
 
+**13–4** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **13.1.4.6 Digits in a Radix** 
 
@@ -169,11 +172,7 @@ What qualifies as a *digit* depends on the *radix* (an *integer* between 2 and 3
 
 Their respective weights are 0, 1, 2, *. . .* 35. In any given radix *n*, only the first *n* potential *digits* are considered to be *digits*. For example, the digits in radix 2 are 0 and 1, the digits in radix 10 are 0 through 9, and the digits in radix 16 are 0 through F. 
 
-*Case* is not significant in *digits*; for example, in radix 16, both F and f are *digits* with weight 15.
-
- **13.1.5 Identity of Characters**
-
- 
+*Case* is not significant in *digits*; for example, in radix 16, both F and f are *digits* with weight 15. **13.1.5 Identity of Characters** 
 
 Two *characters* that are **eql**, **char=**, or **char-equal** are not necessarily **eq**. 
 
@@ -181,33 +180,33 @@ Two *characters* that are **eql**, **char=**, or **char-equal** are not necessar
 
 The total ordering on *characters* is guaranteed to have the following properties: 
 
-*•* If two *characters* have the same *implementation-defined attributes*, then their ordering by **char**&#60; is consistent with the numerical ordering by the predicate &#60; on their code *attributes*. 
+*•* If two *characters* have the same *implementation-defined attributes*, then their ordering by **char**< is consistent with the numerical ordering by the predicate < on their code *attributes*. 
 
 *•* If two *characters* differ in any *attribute*, then they are not **char=**. 
 
 *•* The total ordering is not necessarily the same as the total ordering on the *integers* produced by applying **char-int** to the *characters*. 
 
-*•* While *alphabetic*&#60;sub&#62;1&#60;/sub&#62; *standard characters* of a given *case* must obey a partial ordering, they need not be contiguous; it is permissible for *uppercase* and *lowercase characters* to be interleaved. Thus (char&#60;= #\a x #\z) is not a valid way of determining whether or not x is a *lowercase character* . 
+*•* While *alphabetic*<sub>1</sub> *standard characters* of a given *case* must obey a partial ordering, they need not be contiguous; it is permissible for *uppercase* and *lowercase characters* to be interleaved. Thus (char<= #\a x #\z) is not a valid way of determining whether or not x is a *lowercase character* . 
 
 Of the *standard characters*, those which are *alphanumeric* obey the following partial ordering: 
 
-A&#60;B&#60;C&#60;D&#60;E&#60;F&#60;G&#60;H&#60;I&#60;J&#60;K&#60;L&#60;M&#60;N&#60;O&#60;P&#60;Q&#60;R&#60;S&#60;T&#60;U&#60;V&#60;W&#60;X&#60;Y&#60;Z 
+A<B<C<D<E<F<G<H<I<J<K<L<M<N<O<P<Q<R<S<T<U<V<W<X<Y<Z 
 
-a&#60;b&#60;c&#60;d&#60;e&#60;f&#60;g&#60;h&#60;i&#60;j&#60;k&#60;l&#60;m&#60;n&#60;o&#60;p&#60;q&#60;r&#60;s&#60;t&#60;u&#60;v&#60;w&#60;x&#60;y&#60;z 
+a<b<c<d<e<f<g<h<i<j<k<l<m<n<o<p<q<r<s<t<u<v<w<x<y<z 
 
-0&#60;1&#60;2&#60;3&#60;4&#60;5&#60;6&#60;7&#60;8&#60;9 
+0<1<2<3<4<5<6<7<8<9 
 
-either 9&#60;A or Z&#60;0 
+either 9<A or Z<0 
 
-either 9&#60;a or z&#60;0 
+either 9<a or z<0 
 
-This implies that, for *standard characters*, *alphabetic*&#60;sub&#62;1&#60;/sub&#62; ordering holds within each *case* (*uppercase* and *lowercase*), and that the *numeric characters* as a group are not interleaved with *alphabetic characters*. However, the ordering or possible interleaving of *uppercase characters* and *lowercase characters* is *implementation-defined*. 
+This implies that, for *standard characters*, *alphabetic*<sub>1</sub> ordering holds within each *case* (*uppercase* and *lowercase*), and that the *numeric characters* as a group are not interleaved with *alphabetic characters*. However, the ordering or possible interleaving of *uppercase characters* and *lowercase characters* is *implementation-defined*. 
 
 Characters **13–5**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **13.1.7 Character Names** 
 
@@ -249,11 +248,11 @@ The line-feed character.
 
 In some *implementations*, one or more of these *character names* might denote a *standard character* ; for example, #\Linefeed and #\Newline might be the *same character* in some *implementations*. 
 
+**13–6** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **13.1.8 Treatment of Newline during Input and Output** 
 
@@ -281,9 +280,9 @@ An *implementation* must document the *character scripts* it supports. For each 
 
 Characters **13–7**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **character** *System Class* 
 
@@ -323,11 +322,11 @@ The *type* **base-char** is defined as the *upgraded array element type* of **st
 
 Whether a character is a *base character* depends on the way that an *implementation* represents *strings*, and not any other properties of the *implementation* or the host operating system. For example, one implementation might encode all *strings* as characters having 16-bit encodings, and another might have two kinds of *strings*: those with characters having 8-bit encodings and those with characters having 16-bit encodings. In the first *implementation*, the *type* **base-char** is 
 
+**13–8** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 equivalent to the *type* **character**: there is only one kind of *string*. In the second *implementation*, the *base characters* might be those *characters* that could be stored in a *string* of *characters* having 8-bit encodings. In such an implementation, the *type* **base-char** is a *proper subtype* of the *type* **character**. 
 
@@ -361,43 +360,43 @@ The *type* **extended-char** is equivalent to the *type* (and character (not bas
 
 **Notes:** 
 
-The *type* **extended-char** might have no *elements*&#60;sub&#62;4&#60;/sub&#62; in *implementations* in which all *characters* are of *type* **base-char**. 
+The *type* **extended-char** might have no *elements*<sub>4</sub> in *implementations* in which all *characters* are of *type* **base-char**. 
 
 Characters **13–9**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
-**char=, char/=, char***&#60;***, char***&#62;***, char***&#60;***=, char***&#62;***=,** *. . .* 
+**char=, char/=, char***<***, char***>***, char***<***=, char***>***=,** *. . .* 
 
-&#60;b&#62;char=, char/=, char&#60;/b&#62;&#60;i&#62;&#60;&#60;/i&#62;&#60;b&#62;, char&#60;/b&#62;&#60;i&#62;&#62;&#60;/i&#62;&#60;b&#62;, char&#60;/b&#62;&#60;i&#62;&#60;&#60;/i&#62;&#60;b&#62;=, char&#60;/b&#62;&#60;i&#62;&#62;&#60;/i&#62;&#60;b&#62;=, &#60;sup&#62;char-equal, char-not-equal, char-lessp, char&#60;/sup&#62; greaterp, char-not-greaterp, char-not-lessp&#60;/b&#62; &#60;i&#62;Function&#60;/i&#62; 
+<b>char=, char/=, char</b><i><</i><b>, char</b><i>></i><b>, char</b><i><</i><b>=, char</b><i>></i><b>=, <sup>char-equal, char-not-equal, char-lessp, char</sup> greaterp, char-not-greaterp, char-not-lessp</b> <i>Function</i> 
 
 **Syntax:** 
 
-**char**= &rest *characters*&#60;sup&#62;+&#60;/sup&#62; *→ generalized-boolean* 
+**char**= &rest *characters*<sup>+</sup> *→ generalized-boolean* 
 
-**char***/* = &rest *characters*&#60;sup&#62;+&#60;/sup&#62; *→ generalized-boolean* 
+**char***/* = &rest *characters*<sup>+</sup> *→ generalized-boolean* 
 
-**char**&#60; &rest *characters*&#60;sup&#62;+&#60;/sup&#62; *→ generalized-boolean* 
+**char**< &rest *characters*<sup>+</sup> *→ generalized-boolean* 
 
-**char**&#62; &rest *characters*&#60;sup&#62;+&#60;/sup&#62; *→ generalized-boolean* 
+**char**> &rest *characters*<sup>+</sup> *→ generalized-boolean* 
 
-**char**&#60;= &rest *characters*&#60;sup&#62;+&#60;/sup&#62; *→ generalized-boolean* 
+**char**<= &rest *characters*<sup>+</sup> *→ generalized-boolean* 
 
-**char**&#62;= &rest *characters*&#60;sup&#62;+&#60;/sup&#62; *→ generalized-boolean* 
+**char**>= &rest *characters*<sup>+</sup> *→ generalized-boolean* 
 
-**char-equal** &rest *characters*&#60;sup&#62;+&#60;/sup&#62; *→ generalized-boolean* 
+**char-equal** &rest *characters*<sup>+</sup> *→ generalized-boolean* 
 
-**char-not-equal** &rest *characters*&#60;sup&#62;+&#60;/sup&#62; *→ generalized-boolean* 
+**char-not-equal** &rest *characters*<sup>+</sup> *→ generalized-boolean* 
 
-**char-lessp** &rest *characters*&#60;sup&#62;+&#60;/sup&#62; *→ generalized-boolean* 
+**char-lessp** &rest *characters*<sup>+</sup> *→ generalized-boolean* 
 
-**char-greaterp** &rest *characters*&#60;sup&#62;+&#60;/sup&#62; *→ generalized-boolean* 
+**char-greaterp** &rest *characters*<sup>+</sup> *→ generalized-boolean* 
 
-**char-not-greaterp** &rest *characters*&#60;sup&#62;+&#60;/sup&#62; *→ generalized-boolean* 
+**char-not-greaterp** &rest *characters*<sup>+</sup> *→ generalized-boolean* 
 
-**char-not-lessp** &rest *characters*&#60;sup&#62;+&#60;/sup&#62; *→ generalized-boolean* 
+**char-not-lessp** &rest *characters*<sup>+</sup> *→ generalized-boolean* 
 
 **Arguments and Values:** 
 
@@ -413,23 +412,23 @@ These predicates compare *characters*.
 
 **char/=** returns *true* if all *characters* are different; otherwise, it returns *false*. 
 
-**char**&#60; returns *true* if the *characters* are monotonically increasing; otherwise, it returns *false*. If two *characters* have *identical implementation-defined attributes*, then their ordering by **char**&#60; is consistent with the numerical ordering by the predicate &#60; on their *codes*. 
+**char**< returns *true* if the *characters* are monotonically increasing; otherwise, it returns *false*. If two *characters* have *identical implementation-defined attributes*, then their ordering by **char**< is consistent with the numerical ordering by the predicate < on their *codes*. 
 
-**char**&#62; returns *true* if the *characters* are monotonically decreasing; otherwise, it returns *false*. If two *characters* have *identical implementation-defined attributes*, then their ordering by **char**&#62; is consistent with the numerical ordering by the predicate &#62; on their *codes*. 
+**char**> returns *true* if the *characters* are monotonically decreasing; otherwise, it returns *false*. If two *characters* have *identical implementation-defined attributes*, then their ordering by **char**> is consistent with the numerical ordering by the predicate > on their *codes*. 
 
-**char**&#60;**=** returns *true* if the *characters* are monotonically nondecreasing; otherwise, it returns *false*. If two *characters* have *identical implementation-defined attributes*, then their ordering by **char**&#60;**=** is consistent with the numerical ordering by the predicate &#60;= on their *codes*. 
+**char**<**=** returns *true* if the *characters* are monotonically nondecreasing; otherwise, it returns *false*. If two *characters* have *identical implementation-defined attributes*, then their ordering by **char**<**=** is consistent with the numerical ordering by the predicate <= on their *codes*. 
 
-**char**&#62;**=** returns *true* if the *characters* are monotonically nonincreasing; otherwise, it returns *false*. 
+**char**>**=** returns *true* if the *characters* are monotonically nonincreasing; otherwise, it returns *false*. **13–10** Programming Language—Common Lisp
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
-**char=, char/=, char***&#60;***, char***&#62;***, char***&#60;***=, char***&#62;***=,** *. . .* 
+**char=, char/=, char***<***, char***>***, char***<***=, char***>***=,** *. . .* 
 
-If two *characters* have *identical implementation-defined attributes*, then their ordering by **char**&#62;**=** is consistent with the numerical ordering by the predicate &#62;= on their *codes*. 
+If two *characters* have *identical implementation-defined attributes*, then their ordering by **char**>**=** is consistent with the numerical ordering by the predicate >= on their *codes*. 
 
-**char-equal**, **char-not-equal**, **char-lessp**, **char-greaterp**, **char-not-greaterp**, and **char-not-lessp** are similar to **char=**, **char/=**, **char**&#60;, **char**&#62;, **char**&#60;**=**, **char**&#62;**=**, respectively, except that they ignore differences in *case* and might have an *implementation-defined* behavior for *non-simple characters*. For example, an *implementation* might define that **char-equal**, *etc.* ignore certain *implementation-defined attributes*. The effect, if any, of each *implementation-defined attribute* upon these functions must be specified as part of the definition of that *attribute*. 
+**char-equal**, **char-not-equal**, **char-lessp**, **char-greaterp**, **char-not-greaterp**, and **char-not-lessp** are similar to **char=**, **char/=**, **char**<, **char**>, **char**<**=**, **char**>**=**, respectively, except that they ignore differences in *case* and might have an *implementation-defined* behavior for *non-simple characters*. For example, an *implementation* might define that **char-equal**, *etc.* ignore certain *implementation-defined attributes*. The effect, if any, of each *implementation-defined attribute* upon these functions must be specified as part of the definition of that *attribute*. 
 
 **Examples:** 
 
@@ -463,55 +462,55 @@ If two *characters* have *identical implementation-defined attributes*, then the
 
 (char/= #\d #\c #\d) *→ false* 
 
-(char&#60; #\d #\x) *→ true* 
+(char< #\d #\x) *→ true* 
 
-(char&#60;= #\d #\x) *→ true* 
+(char<= #\d #\x) *→ true* 
 
-(char&#60; #\d #\d) *→ false* 
+(char< #\d #\d) *→ false* 
 
-(char&#60;= #\d #\d) *→ true* 
+(char<= #\d #\d) *→ true* 
 
-(char&#60; #\a #\e #\y #\z) *→ true* 
+(char< #\a #\e #\y #\z) *→ true* 
 
-(char&#60;= #\a #\e #\y #\z) *→ true* 
+(char<= #\a #\e #\y #\z) *→ true* 
 
-(char&#60; #\a #\e #\e #\y) *→ false* 
+(char< #\a #\e #\e #\y) *→ false* 
 
-(char&#60;= #\a #\e #\e #\y) *→ true* 
+(char<= #\a #\e #\e #\y) *→ true* 
 
-(char&#62; #\e #\d) *→ true* 
+(char> #\e #\d) *→ true* 
 
-(char&#62;= #\e #\d) *→ true* 
+(char>= #\e #\d) *→ true* 
 
-(char&#62; #\d #\c #\b #\a) *→ true* 
+(char> #\d #\c #\b #\a) *→ true* 
 
-(char&#62;= #\d #\c #\b #\a) *→ true* 
+(char>= #\d #\c #\b #\a) *→ true* 
 
-(char&#62; #\d #\d #\c #\a) *→ false* 
+(char> #\d #\d #\c #\a) *→ false* 
 
-(char&#62;= #\d #\d #\c #\a) *→ true* 
+(char>= #\d #\d #\c #\a) *→ true* 
 
-(char&#62; #\e #\d #\b #\c #\a) *→ false* 
+(char> #\e #\d #\b #\c #\a) *→ false* 
 
-(char&#62;= #\e #\d #\b #\c #\a) *→ false* 
+(char>= #\e #\d #\b #\c #\a) *→ false* 
 
-(char&#62; #\z #\A) *→ implementation-dependent* 
+(char> #\z #\A) *→ implementation-dependent* 
 
-(char&#62; #\Z #\a) *→ implementation-dependent* 
+(char> #\Z #\a) *→ implementation-dependent* 
 
 (char-equal #\A #\a) *→ true* 
 
 Characters **13–11**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 (stable-sort (list #\b #\A #\B #\a #\c #\C) #’char-lessp) 
 
 *→* (#\A #\a #\b #\B #\c #\C) 
 
-(stable-sort (list #\b #\A #\B #\a #\c #\C) #’char&#60;) 
+(stable-sort (list #\b #\A #\B #\a #\c #\C) #’char<) 
 
 *→* (#\A #\B #\C #\a #\b #\c) ;Implementation A 
 
@@ -537,7 +536,7 @@ If characters differ in their *code attribute* or any *implementation-defined at
 
 There is no requirement that (eq c1 c2) be true merely because (char= c1 c2) is *true*. While **eq** can distinguish two *characters* that **char=** does not, it is distinguishing them not as *characters*, but in some sense on the basis of a lower level implementation characteristic. If (eq c1 c2) is *true*, then (char= c1 c2) is also true. **eql** and **equal** compare *characters* in the same way that **char=** does. 
 
-The manner in which *case* is used by **char-equal**, **char-not-equal**, **char-lessp**, **char-greaterp**, **char-not-greaterp**, and **char-not-lessp** implies an ordering for *standard characters* such that A=a, B=b, and so on, up to Z=z, and furthermore either 9&#60;A or Z&#60;0. 
+The manner in which *case* is used by **char-equal**, **char-not-equal**, **char-lessp**, **char-greaterp**, **char-not-greaterp**, and **char-not-lessp** implies an ordering for *standard characters* such that A=a, B=b, and so on, up to Z=z, and furthermore either 9<A or Z<0. 
 
 **character** *Function* 
 
@@ -555,11 +554,11 @@ The manner in which *case* is used by **char-equal**, **char-not-equal**, **char
 
 Returns the *character* denoted by the *character designator* . 
 
+**13–12** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Examples:** 
 
@@ -623,9 +622,9 @@ Returns *true* if *object* is of *type* **character**; otherwise, returns *false
 
 Characters **13–13**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **See Also:** 
 
@@ -649,7 +648,7 @@ Characters **13–13**
 
 **Description:** 
 
-Returns *true* if *character* is an *alphabetic*&#60;sub&#62;1&#60;/sub&#62; *character* ; otherwise, returns *false*. 
+Returns *true* if *character* is an *alphabetic*<sub>1</sub> *character* ; otherwise, returns *false*. 
 
 **Examples:** 
 
@@ -675,11 +674,11 @@ Should signal an error of *type* **type-error** if *character* is not a *charact
 
 **See Also:** 
 
-**alphanumericp**, Section 13.1.10 (Documentation of Implementation-Defined Scripts) 
+**alphanumericp**, Section 13.1.10 (Documentation of Implementation-Defined Scripts) **13–14** Programming Language—Common Lisp
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **alphanumericp** *Function* 
 
@@ -695,7 +694,7 @@ Should signal an error of *type* **type-error** if *character* is not a *charact
 
 **Description:** 
 
-Returns *true* if *character* is an *alphabetic*&#60;sub&#62;1&#60;/sub&#62; *character* or a *numeric character* ; otherwise, returns *false*. 
+Returns *true* if *character* is an *alphabetic*<sub>1</sub> *character* or a *numeric character* ; otherwise, returns *false*. 
 
 **Examples:** 
 
@@ -729,9 +728,9 @@ Alphanumeric characters are graphic as defined by **graphic-char-p**. The alphan
 
 Characters **13–15**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **digit-char** *Function* 
 
@@ -749,7 +748,7 @@ Characters **13–15**
 
 **Description:** 
 
-If *weight* is less than *radix*, **digit-char** returns a *character* which has that *weight* when considered as a digit in the specified radix. If the resulting *character* is to be an *alphabetic*&#60;sub&#62;1&#60;/sub&#62; *character* , it will be an uppercase *character* . 
+If *weight* is less than *radix*, **digit-char** returns a *character* which has that *weight* when considered as a digit in the specified radix. If the resulting *character* is to be an *alphabetic*<sub>1</sub> *character* , it will be an uppercase *character* . 
 
 If *weight* is greater than or equal to *radix*, **digit-char** returns *false*. 
 
@@ -787,11 +786,11 @@ If *weight* is greater than or equal to *radix*, **digit-char** returns *false*.
 
 *char*—a *character* . 
 
+**13–16** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 *radix*—a *radix* . The default is 10. 
 
@@ -857,9 +856,9 @@ Digits are *graphic characters*.
 
 Characters **13–17**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 *generalized-boolean*—a *generalized boolean*. 
 
@@ -917,11 +916,11 @@ Returns *true* if *character* is of *type* **standard-char**; otherwise, returns
 
 Should signal an error of *type* **type-error** if *character* is not a *character* . 
 
+**13–18** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **char-upcase, char-downcase** 
 
@@ -991,9 +990,9 @@ Should signal an error of *type* **type-error** if *character* is not a *charact
 
 Characters **13–19**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **See Also:** 
 
@@ -1045,11 +1044,11 @@ These functions test the case of a given *character*.
 
 (lower-case-p #\Bell) *→ false* 
 
+**13–20** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Exceptional Situations:** 
 
@@ -1095,9 +1094,9 @@ Should signal an error of *type* **type-error** if *character* is not a *charact
 
 Characters **13–21**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **char-int** *Function* 
 
@@ -1145,11 +1144,11 @@ for characters *c1* and *c2*.
 
 *char-p*—a *character* or **nil**. 
 
+**13–22** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Description:** 
 
@@ -1191,9 +1190,9 @@ The *value* of **char-code-limit** might be larger than the actual number of *ch
 
 Characters **13–23**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **char-name** 
 
@@ -1229,31 +1228,31 @@ The *standard characters hNewlinei* and *hSpacei* have the respective names "New
 
 *→* NIL 
 
-&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; "LOWERCASE-a" 
+<i><sup>or</sup>→</i> "LOWERCASE-a" 
 
-&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; "Small-A" 
+<i><sup>or</sup>→</i> "Small-A" 
 
-&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; "LA01" 
+<i><sup>or</sup>→</i> "LA01" 
 
 (char-name #\A) 
 
 *→* NIL 
 
-&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; "UPPERCASE-A" 
+<i><sup>or</sup>→</i> "UPPERCASE-A" 
 
-&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; "Capital-A" 
+<i><sup>or</sup>→</i> "Capital-A" 
 
-&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; "LA02" 
+<i><sup>or</sup>→</i> "LA02" 
 
 ;; Even though its CHAR-NAME can vary, #\A prints as #\A 
 
 (prin1-to-string (read-from-string (format nil "#\\~A" (or (char-name #\A) "A")))) *→* "#\\A" 
 
+**13–24** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Exceptional Situations:** 
 
@@ -1305,8 +1304,8 @@ Should signal an error of *type* **type-error** if *name* is not a *string desig
 
 Characters **13–25**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
-
+**13–26** Programming Language—Common Lisp

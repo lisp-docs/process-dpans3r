@@ -1,17 +1,20 @@
-﻿ 
+﻿Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
- 
+**Programming Language—Common Lisp** 
 
 **17. Sequences** 
-  
 
+Sequences **i**
 
+Version 15.17R, X3J13/94-101R. Fri 12-Aug-1994 6:35pm EDT 
 
- 
+**ii** Programming Language—Common Lisp
 
- 
+Version 15.17R, X3J13/94-101R. 
+
+Fri 12-Aug-1994 6:35pm EDT 
 
 **17.1 Sequence Concepts** 
 
@@ -21,7 +24,7 @@ A *sequence* is an ordered collection of *elements*, implemented as either a *ve
 
 A *sequence function* is a *function* defined by this specification or added as an extension by the *implementation* that operates on one or more *sequences*. Whenever a *sequence function* must construct and return a new *vector* , it always returns a *simple vector* . Similarly, any *strings* constructed will be *simple strings*. 
 
-|&#60;p&#62;**concatenate length remove** &#60;/p&#62;&#60;p&#62;**copy-seq map remove-duplicates count map-into remove-if** &#60;/p&#62;&#60;p&#62;**count-if merge remove-if-not count-if-not mismatch replace** &#60;/p&#62;&#60;p&#62;**delete notany reverse** &#60;/p&#62;&#60;p&#62;**delete-duplicates notevery search** &#60;/p&#62;&#60;p&#62;**delete-if nreverse some** &#60;/p&#62;&#60;p&#62;**delete-if-not nsubstitute sort** &#60;/p&#62;&#60;p&#62;**elt nsubstitute-if stable-sort** &#60;/p&#62;&#60;p&#62;**every nsubstitute-if-not subseq** &#60;/p&#62;&#60;p&#62;**fill position substitute** &#60;/p&#62;&#60;p&#62;**find position-if substitute-if** &#60;/p&#62;&#60;p&#62;**find-if position-if-not substitute-if-not find-if-not reduce**&#60;/p&#62;|
+|<p>**concatenate length remove** </p><p>**copy-seq map remove-duplicates count map-into remove-if** </p><p>**count-if merge remove-if-not count-if-not mismatch replace** </p><p>**delete notany reverse** </p><p>**delete-duplicates notevery search** </p><p>**delete-if nreverse some** </p><p>**delete-if-not nsubstitute sort** </p><p>**elt nsubstitute-if stable-sort** </p><p>**every nsubstitute-if-not subseq** </p><p>**fill position substitute** </p><p>**find position-if substitute-if** </p><p>**find-if position-if-not substitute-if-not find-if-not reduce**</p>|
 | :- |
 
 
@@ -33,39 +36,39 @@ In general, *lists* (including *association lists* and *property lists*) that ar
 
 Sequences **17–1**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **17.2 Rules about Test Functions** 
 
 **17.2.1 Satisfying a Two-Argument Test** 
 
-When an &#60;i&#62;object O&#60;/i&#62; is being considered iteratively against each &#60;i&#62;element E&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62; of a &#60;i&#62;sequence S&#60;/i&#62; by an &#60;i&#62;operator F&#60;/i&#62; listed in Figure 17–2, it is sometimes useful to control the way in which the presence of &#60;i&#62;O&#60;/i&#62; is tested in &#60;i&#62;S&#60;/i&#62; is tested by &#60;i&#62;F&#60;/i&#62;. This control is offered on the basis of a &#60;i&#62;function&#60;/i&#62; designated with either a :test or :test-not &#60;i&#62;argument&#60;/i&#62;. 
+When an <i>object O</i> is being considered iteratively against each <i>element E<sub>i</sub></i> of a <i>sequence S</i> by an <i>operator F</i> listed in Figure 17–2, it is sometimes useful to control the way in which the presence of <i>O</i> is tested in <i>S</i> is tested by <i>F</i>. This control is offered on the basis of a <i>function</i> designated with either a :test or :test-not <i>argument</i>. 
 
-|&#60;p&#62;**adjoin nset-exclusive-or search** &#60;/p&#62;&#60;p&#62;**assoc nsublis set-difference count nsubst set-exclusive-or delete nsubstitute sublis** &#60;/p&#62;&#60;p&#62;**find nunion subsetp** &#60;/p&#62;&#60;p&#62;**intersection position subst** &#60;/p&#62;&#60;p&#62;**member pushnew substitute** &#60;/p&#62;&#60;p&#62;**mismatch rassoc tree-equal** &#60;/p&#62;&#60;p&#62;**nintersection remove union** &#60;/p&#62;&#60;p&#62;**nset-difference remove-duplicates**&#60;/p&#62;|
+|<p>**adjoin nset-exclusive-or search** </p><p>**assoc nsublis set-difference count nsubst set-exclusive-or delete nsubstitute sublis** </p><p>**find nunion subsetp** </p><p>**intersection position subst** </p><p>**member pushnew substitute** </p><p>**mismatch rassoc tree-equal** </p><p>**nintersection remove union** </p><p>**nset-difference remove-duplicates**</p>|
 | :- |
 
 
 **Figure 17–2. Operators that have Two-Argument Tests to be Satisfied** 
 
-The object &#60;i&#62;O&#60;/i&#62; might not be compared directly to &#60;i&#62;E&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;. If a :key &#60;i&#62;argument&#60;/i&#62; is provided, it is a &#60;i&#62;designator&#60;/i&#62; for a &#60;i&#62;function&#60;/i&#62; of one &#60;i&#62;argument&#60;/i&#62; to be called with each &#60;i&#62;E&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62; as an &#60;i&#62;argument&#60;/i&#62;, and &#60;i&#62;yielding&#60;/i&#62; an &#60;i&#62;object Z&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62; to be used for comparison. (If there is no :key &#60;i&#62;argument&#60;/i&#62;, &#60;i&#62;Z&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;is &#60;i&#62;E&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;.) 
+The object <i>O</i> might not be compared directly to <i>E<sub>i</sub></i>. If a :key <i>argument</i> is provided, it is a <i>designator</i> for a <i>function</i> of one <i>argument</i> to be called with each <i>E<sub>i</sub></i> as an <i>argument</i>, and <i>yielding</i> an <i>object Z<sub>i</sub></i> to be used for comparison. (If there is no :key <i>argument</i>, <i>Z<sub>i</sub></i>is <i>E<sub>i</sub></i>.) 
 
 The *function* designated by the :key *argument* is never called on *O* itself. However, if the function operates on multiple sequences (*e.g.*, as happens in **set-difference**), *O* will be the result of calling the :key function on an *element* of the other sequence. 
 
-A :test &#60;i&#62;argument&#60;/i&#62;, if supplied to &#60;i&#62;F&#60;/i&#62;, is a &#60;i&#62;designator&#60;/i&#62; for a &#60;i&#62;function&#60;/i&#62; of two &#60;i&#62;arguments&#60;/i&#62;, &#60;i&#62;O&#60;/i&#62; and &#60;i&#62;Z&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;. An &#60;i&#62;E&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;is said (or, sometimes, an &#60;i&#62;O&#60;/i&#62; and an &#60;i&#62;E&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62; are said) to &#60;i&#62;satisfy the test&#60;/i&#62; if this :test &#60;i&#62;function&#60;/i&#62; returns a &#60;i&#62;generalized boolean&#60;/i&#62; representing &#60;i&#62;true&#60;/i&#62;. 
+A :test <i>argument</i>, if supplied to <i>F</i>, is a <i>designator</i> for a <i>function</i> of two <i>arguments</i>, <i>O</i> and <i>Z<sub>i</sub></i>. An <i>E<sub>i</sub></i>is said (or, sometimes, an <i>O</i> and an <i>E<sub>i</sub></i> are said) to <i>satisfy the test</i> if this :test <i>function</i> returns a <i>generalized boolean</i> representing <i>true</i>. 
 
-A :test-not &#60;i&#62;argument&#60;/i&#62;, if supplied to &#60;i&#62;F&#60;/i&#62;, is &#60;i&#62;designator&#60;/i&#62; for a &#60;i&#62;function&#60;/i&#62; of two &#60;i&#62;arguments&#60;/i&#62;, &#60;i&#62;O&#60;/i&#62; and &#60;i&#62;Z&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;. An &#60;i&#62;E&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;is said (or, sometimes, an &#60;i&#62;O&#60;/i&#62; and an &#60;i&#62;E&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62; are said) to &#60;i&#62;satisfy the test&#60;/i&#62; if this :test-not &#60;i&#62;function&#60;/i&#62; returns a &#60;i&#62;generalized boolean&#60;/i&#62; representing &#60;i&#62;false&#60;/i&#62;. 
+A :test-not <i>argument</i>, if supplied to <i>F</i>, is <i>designator</i> for a <i>function</i> of two <i>arguments</i>, <i>O</i> and <i>Z<sub>i</sub></i>. An <i>E<sub>i</sub></i>is said (or, sometimes, an <i>O</i> and an <i>E<sub>i</sub></i> are said) to <i>satisfy the test</i> if this :test-not <i>function</i> returns a <i>generalized boolean</i> representing <i>false</i>. 
 
 If neither a :test nor a :test-not *argument* is supplied, it is as if a :test argument of #’eql was supplied. 
 
 The consequences are unspecified if both a :test and a :test-not *argument* are supplied in the same *call* to *F*. 
 
+**17–2** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **17.2.1.1 Examples of Satisfying a Two-Argument Test** 
 
@@ -115,7 +118,7 @@ The consequences are unspecified if both a :test and a :test-not *argument* are 
 
 When using one of the *functions* in Figure 17–3, the elements *E* of a *sequence S* are filtered not on the basis of the presence or absence of an object *O* under a two *argument predicate*, as with the *functions* described in Section 17.2.1 (Satisfying a Two-Argument Test), but rather on the basis of a one *argument predicate*. 
 
-|&#60;p&#62;**assoc-if member-if rassoc-if** &#60;/p&#62;&#60;p&#62;**assoc-if-not member-if-not rassoc-if-not** &#60;/p&#62;&#60;p&#62;**count-if nsubst-if remove-if** &#60;/p&#62;&#60;p&#62;**count-if-not nsubst-if-not remove-if-not** &#60;/p&#62;&#60;p&#62;**delete-if nsubstitute-if subst-if** &#60;/p&#62;&#60;p&#62;**delete-if-not nsubstitute-if-not subst-if-not** &#60;/p&#62;&#60;p&#62;**find-if position-if substitute-if** &#60;/p&#62;&#60;p&#62;**find-if-not position-if-not substitute-if-not**&#60;/p&#62;|
+|<p>**assoc-if member-if rassoc-if** </p><p>**assoc-if-not member-if-not rassoc-if-not** </p><p>**count-if nsubst-if remove-if** </p><p>**count-if-not nsubst-if-not remove-if-not** </p><p>**delete-if nsubstitute-if subst-if** </p><p>**delete-if-not nsubstitute-if-not subst-if-not** </p><p>**find-if position-if substitute-if** </p><p>**find-if-not position-if-not substitute-if-not**</p>|
 | :- |
 
 
@@ -123,15 +126,15 @@ When using one of the *functions* in Figure 17–3, the elements *E* of a *seque
 
 Sequences **17–3**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
-The element &#60;i&#62;E&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62; might not be considered directly. If a :key &#60;i&#62;argument&#60;/i&#62; is provided, it is a &#60;i&#62;designator&#60;/i&#62; for a &#60;i&#62;function&#60;/i&#62; of one &#60;i&#62;argument&#60;/i&#62; to be called with each &#60;i&#62;E&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62; as an &#60;i&#62;argument&#60;/i&#62;, and &#60;i&#62;yielding&#60;/i&#62; an &#60;i&#62;object Z&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62; to be used for comparison. (If there is no :key &#60;i&#62;argument&#60;/i&#62;, &#60;i&#62;Z&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;is &#60;i&#62;E&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;.) 
+The element <i>E<sub>i</sub></i> might not be considered directly. If a :key <i>argument</i> is provided, it is a <i>designator</i> for a <i>function</i> of one <i>argument</i> to be called with each <i>E<sub>i</sub></i> as an <i>argument</i>, and <i>yielding</i> an <i>object Z<sub>i</sub></i> to be used for comparison. (If there is no :key <i>argument</i>, <i>Z<sub>i</sub></i>is <i>E<sub>i</sub></i>.) 
 
-&#60;i&#62;Functions&#60;/i&#62; defined in this specification and having a name that ends in “-if” accept a first &#60;i&#62;argument&#60;/i&#62; that is a &#60;i&#62;designator&#60;/i&#62; for a &#60;i&#62;function&#60;/i&#62; of one &#60;i&#62;argument&#60;/i&#62;, &#60;i&#62;Z&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;. An &#60;i&#62;E&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;is said to &#60;i&#62;satisfy the test&#60;/i&#62; if this :test &#60;i&#62;function&#60;/i&#62; returns a &#60;i&#62;generalized boolean&#60;/i&#62; representing &#60;i&#62;true&#60;/i&#62;. 
+<i>Functions</i> defined in this specification and having a name that ends in “-if” accept a first <i>argument</i> that is a <i>designator</i> for a <i>function</i> of one <i>argument</i>, <i>Z<sub>i</sub></i>. An <i>E<sub>i</sub></i>is said to <i>satisfy the test</i> if this :test <i>function</i> returns a <i>generalized boolean</i> representing <i>true</i>. 
 
-&#60;i&#62;Functions&#60;/i&#62; defined in this specification and having a name that ends in “-if-not” accept a first &#60;i&#62;argument&#60;/i&#62; that is a &#60;i&#62;designator&#60;/i&#62; for a &#60;i&#62;function&#60;/i&#62; of one &#60;i&#62;argument&#60;/i&#62;, &#60;i&#62;Z&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;. An &#60;i&#62;E&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62;is said to &#60;i&#62;satisfy the test&#60;/i&#62; if this :test &#60;i&#62;function&#60;/i&#62; returns a &#60;i&#62;generalized boolean&#60;/i&#62; representing &#60;i&#62;false&#60;/i&#62;. 
+<i>Functions</i> defined in this specification and having a name that ends in “-if-not” accept a first <i>argument</i> that is a <i>designator</i> for a <i>function</i> of one <i>argument</i>, <i>Z<sub>i</sub></i>. An <i>E<sub>i</sub></i>is said to <i>satisfy the test</i> if this :test <i>function</i> returns a <i>generalized boolean</i> representing <i>false</i>. 
 
 **17.2.2.1 Examples of Satisfying a One-Argument Test** 
 
@@ -149,11 +152,11 @@ The element &#60;i&#62;E&#60;sub&#62;i&#60;/sub&#62;&#60;/i&#62; might not be co
 
 *→* 3 
 
+**17–4** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **sequence** *System Class* 
 
@@ -205,9 +208,9 @@ Should be prepared to signal an error of *type* **type-error** if *sequence* is 
 
 Sequences **17–5**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Notes:** 
 
@@ -257,11 +260,11 @@ Should be prepared to signal an error of *type* **type-error** if *sequence* is 
 
 **Notes:** 
 
-**aref** may be used to *access vector* elements that are beyond the *vector* ’s *fill pointer* . 
+**aref** may be used to *access vector* elements that are beyond the *vector* ’s *fill pointer* . **17–6** Programming Language—Common Lisp
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **fill** *Function* 
 
@@ -315,9 +318,9 @@ Should be prepared to signal an error of *type* **type-error** if *sequence* is 
 
 Sequences **17–7**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **make-sequence** 
 
@@ -371,11 +374,11 @@ The *implementation*.
 
 The consequences are unspecified if *initial-element* is not an *object* which can be stored in the resulting *sequence*. 
 
+**17–8** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 An error of *type* **type-error** must be signaled if the *result-type* is neither a *recognizable subtype* of **list**, nor a *recognizable subtype* of **vector**. 
 
@@ -421,9 +424,9 @@ If *sequence* is a *vector* , the result is a *fresh simple array* of *rank* one
 
 Sequences **17–9**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 length, the shorter length determines the number of elements that are replaced. The remaining *elements* at the end of the longer sequence are not modified in the operation. 
 
@@ -455,7 +458,7 @@ Should be prepared to signal an error of *type* **type-error** if *sequence* is 
 
 **Syntax:** 
 
-**map** *result-type function* &rest *sequences*&#60;sup&#62;+&#60;/sup&#62; *→ result* 
+**map** *result-type function* &rest *sequences*<sup>+</sup> *→ result* 
 
 **Arguments and Values:** 
 
@@ -471,11 +474,11 @@ Applies *function* to successive sets of arguments in which one argument is obta
 
 **map** returns **nil** if *result-type* is **nil**. Otherwise, **map** returns a *sequence* such that element j is the result of applying *function* to element j of each of the *sequences*. The result *sequence* is as long as the shortest of the *sequences*. The consequences are undefined if the result of applying *function* to 
 
+**17–10** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 the successive elements of the *sequences* cannot be contained in a *sequence* of the *type* given by *result-type*. 
 
@@ -523,9 +526,9 @@ Section 3.6 (Traversal Rules and Side Effects)
 
 Sequences **17–11**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **map-into** 
 
@@ -575,11 +578,11 @@ Should be prepared to signal an error of *type* **type-error** if *result-sequen
 
 **map-into** differs from **map** in that it modifies an existing *sequence* rather than creating a new one. In addition, **map-into** can be called with only two arguments, while **map** requires at least three 
 
+**17–12** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 arguments. 
 
@@ -633,9 +636,9 @@ If *key* is supplied, it is used is used to extract the values to reduce. The *k
 
 Sequences **17–13**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 the value of *initial-value*, if supplied. The *key* function typically returns part of the *element* of *sequence*. If *key* is not supplied or is **nil**, the *sequence element* itself is used. 
 
@@ -685,11 +688,11 @@ Should be prepared to signal an error of *type* **type-error** if *sequence* is 
 
 Section 3.6 (Traversal Rules and Side Effects) 
 
+**17–14** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **count, count-if, count-if-not** 
 
@@ -737,9 +740,9 @@ The *from-end* has no direct effect on the result. However, if *from-end* is *tr
 
 Should be prepared to signal an error of *type* **type-error** if *sequence* is not a *proper sequence*. Sequences **17–15**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **See Also:** 
 
@@ -793,11 +796,11 @@ Should be prepared to signal an error of *type* **type-error** if *sequence* is 
 
 **list-length**, **sequence** 
 
+**17–16** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **reverse, nreverse** 
 
@@ -855,9 +858,9 @@ l *→ implementation-dependent*
 
 Sequences **17–17**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Exceptional Situations:** 
 
@@ -891,11 +894,11 @@ The argument to the *key* function is the *sequence* element. The return value o
 
 If the *key* and *predicate* always return, then the sorting operation will always terminate, producing a *sequence* containing the same *elements* as *sequence* (that is, the result is a permutation of *sequence*). This is guaranteed even if the *predicate* does not really consistently represent a total order (in which case the *elements* will be scrambled in some unpredictable way, but no *element* will be lost). If the *key* consistently returns meaningful keys, and the *predicate* does reflect some total ordering criterion on those keys, then the *elements* of the *sorted-sequence* will be properly sorted according to that ordering. 
 
+**17–18** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **sort, stable-sort** 
 
@@ -911,7 +914,7 @@ The sorting operation can be destructive in all cases. In the case of a *vector*
 
 (setq tester (list ’(1 2 3) ’(4 5 6) ’(7 8 9))) *→* ((1 2 3) (4 5 6) (7 8 9)) 
 
-(sort tester #’&#62; :key #’car) *→* ((7 8 9) (4 5 6) (1 2 3)) 
+(sort tester #’> :key #’car) *→* ((7 8 9) (4 5 6) (1 2 3)) 
 
 (setq tester (list 1 2 3 4 5 6 7 8 9 0)) *→* (1 2 3 4 5 6 7 8 9 0) 
 
@@ -977,9 +980,9 @@ The sorting operation can be destructive in all cases. In the case of a *vector*
 
 Sequences **17–19**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 (("Dick" "Waters") "Iteration") 
 
@@ -1029,11 +1032,11 @@ If *sequence* is a *vector* , the result might or might not be simple, and might
 
 *element*—an *element* of the *sequence*, or **nil**. 
 
+**17–20** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Description:** 
 
@@ -1045,7 +1048,7 @@ If the *sequence* contains an *element* that *satisfies the test*, then the left
 
 **Examples:** 
 
-(find #\d "here are some letters that can be looked at" :test #’char&#62;) 
+(find #\d "here are some letters that can be looked at" :test #’char>) 
 
 *→* #\Space 
 
@@ -1089,9 +1092,9 @@ The *function* **find-if-not** is deprecated.
 
 *predicate*—a *designator* for a *function* of one argument that returns a *generalized boolean*. Sequences **17–21**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 *from-end*—a *generalized boolean*. The default is *false*. 
 
@@ -1133,11 +1136,11 @@ The :test-not *argument* is deprecated.
 
 The *function* **position-if-not** is deprecated. 
 
+**17–22** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **search** 
 
@@ -1185,9 +1188,9 @@ If *from-end* is *true*, the index of the leftmost element of the rightmost matc
 
 Sequences **17–23**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **See Also:** 
 
@@ -1227,11 +1230,11 @@ The specified subsequences of *sequence-1* and *sequence-2* are compared element
 
 If *sequence-1* and *sequence-2* are of equal length and match in every element, the result is *false*. Otherwise, the result is a non-negative *integer* , the index within *sequence-1* of the leftmost or rightmost position, depending on *from-end*, at which the two subsequences fail to match. If one subsequence is shorter than and a matching prefix of the other, the result is the index relative to *sequence-1* beyond the last position tested. 
 
+**17–24** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 If *from-end* is *true*, then one plus the index of the rightmost position in which the *sequences* differ is returned. In effect, the subsequences are aligned at their right-hand ends; then, the last elements are compared, the penultimate elements, and so on. The index returned is an index relative to *sequence-1*. 
 
@@ -1277,9 +1280,9 @@ Destructively modifies *sequence-1* by replacing the *elements* of *subsequence-
 
 Sequences **17–25**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 (min (- *end1 start1*) (- *end2 start2*)) 
 
@@ -1305,7 +1308,7 @@ The *sequence-1* is modified.
 
 **fill** 
 
-&#60;b&#62;&#60;sup&#62;substitute, substitute-if, substitute-if-not, nsubsti&#60;/sup&#62; tute, nsubstitute-if, nsubstitute-if-not&#60;/b&#62; &#60;i&#62;Function&#60;/i&#62; 
+<b><sup>substitute, substitute-if, substitute-if-not, nsubsti</sup> tute, nsubstitute-if, nsubstitute-if-not</b> <i>Function</i> 
 
 **Syntax:** 
 
@@ -1327,11 +1330,11 @@ The *sequence-1* is modified.
 
 **nsubstitute** *newitem olditem sequence* &key *from-end test test-not start end count key → sequence* 
 
+**17–26** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **substitute, substitute-if, substitute-if-not,** *. . .* 
 
@@ -1379,9 +1382,9 @@ Supplying a *from-end* of *true* matters only when the *count* is provided (and 
 
 Sequences **17–27**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **substitute, substitute-if, substitute-if-not,** *. . .* 
 
@@ -1403,7 +1406,7 @@ The result of all these functions is a *sequence* of the same *type* as *sequenc
 
 *→* (1 2 4 1 3 9 5) 
 
-(substitute 9 3 ’(1 2 4 1 3 4 5) :test #’&#62;) *→* (9 9 4 9 3 4 5) 
+(substitute 9 3 ’(1 2 4 1 3 4 5) :test #’>) *→* (9 9 4 9 3 4 5) 
 
 (substitute-if 0 #’evenp ’((1) (2) (3) (4)) :start 2 :key #’car) 
 
@@ -1443,11 +1446,11 @@ Should be prepared to signal an error of *type* **type-error** if *sequence* is 
 
 **Notes:** 
 
-If *sequence* is a *vector* , the result might or might not be simple, and might or might not be *identical* 
+If *sequence* is a *vector* , the result might or might not be simple, and might or might not be *identical* **17–28** Programming Language—Common Lisp
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 to *sequence*. 
 
@@ -1495,9 +1498,9 @@ It is an error if any element of the *sequences* cannot be an element of the *se
 
 Sequences **17–29**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 If the *result-type* is a *subtype* of **vector**, then if the implementation can determine the element type specified for the *result-type*, the element type of the resulting array is the result of *upgrading* that element type; or, if the implementation can determine that the element type is unspecified (or \*), the element type of the resulting array is **t**; otherwise, an error is signaled. 
 
@@ -1541,11 +1544,11 @@ An error of *type* **type-error** should be signaled if *result-type* specifies 
 
 *result-sequence*—a *proper sequence* of *type result-type*. 
 
+**17–30** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **merge** 
 
@@ -1575,7 +1578,7 @@ If the *result-type* is a *subtype* of **vector**, then if the implementation ca
 
 (setq test2 (list 2 5 8)) 
 
-(merge ’list test1 test2 #’&#60;) *→* (1 2 3 4 5 6 7 8) 
+(merge ’list test1 test2 #’<) *→* (1 2 3 4 5 6 7 8) 
 
 (setq test1 (copy-seq "BOY")) 
 
@@ -1587,17 +1590,17 @@ If the *result-type* is a *subtype* of **vector**, then if the implementation ca
 
 Sequences **17–31**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 (setq test2 (vector ((yellow . 2) (green . 7)))) 
 
-(merge ’vector test1 test2 #’&#60; :key #’cdr) 
+(merge ’vector test1 test2 #’< :key #’cdr) 
 
 *→* #((RED . 1) (YELLOW . 2) (BLUE . 4) (GREEN . 7)) 
 
-(merge ’(vector \* 4) ’(1 5) ’(2 4 6) #’&#60;) should signal an error 
+(merge ’(vector \* 4) ’(1 5) ’(2 4 6) #’<) should signal an error 
 
 **Exceptional Situations:** 
 
@@ -1629,11 +1632,11 @@ An error of *type* **type-error** should be signaled if *result-type* specifies 
 
 *test*—a *designator* for a *function* of one *argument* that returns a *generalized boolean*. *from-end*—a *generalized boolean*. The default is *false*. 
 
-*test*—a *designator* for a *function* of two *arguments* that returns a *generalized boolean*. 
+*test*—a *designator* for a *function* of two *arguments* that returns a *generalized boolean*. **17–32** Programming Language—Common Lisp
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **remove, remove-if, remove-if-not, delete, delete-if,** *. . .* 
 
@@ -1671,9 +1674,9 @@ For all these functions, elements not removed or deleted occur in the same order
 
 Sequences **17–33**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **remove, remove-if, remove-if-not, delete, delete-if,** *. . .* 
 
@@ -1693,7 +1696,7 @@ Sequences **17–33**
 
 (remove 4 ’(1 2 4 1 3 4 5) :count 1 :from-end t) *→* (1 2 4 1 3 5) 
 
-(remove 3 ’(1 2 4 1 3 4 5) :test #’&#62;) *→* (4 3 4 5) 
+(remove 3 ’(1 2 4 1 3 4 5) :test #’>) *→* (4 3 4 5) 
 
 (setq lst ’(list of four elements)) *→* (LIST OF FOUR ELEMENTS) 
 
@@ -1727,7 +1730,7 @@ Sequences **17–33**
 
 (setq tester (list 1 2 4 1 3 4 5)) *→* (1 2 4 1 3 4 5) 
 
-(delete 3 tester :test #’&#62;) *→* (4 3 4 5) 
+(delete 3 tester :test #’>) *→* (4 3 4 5) 
 
 (setq tester (list 1 2 4 1 3 4 5)) *→* (1 2 4 1 3 4 5) 
 
@@ -1753,11 +1756,11 @@ bar *→* ((C)) or ...
 
 (eq (cdr foo) (car bar)) *→* T or ... 
 
+**17–34** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Side Effects:** 
 
@@ -1809,9 +1812,9 @@ The functions **delete-if-not** and **remove-if-not** are deprecated.
 
 Sequences **17–35**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **remove-duplicates, delete-duplicates** 
 
@@ -1863,11 +1866,11 @@ Should signal an error of *type* **type-error** if *sequence* is not a *proper s
 
 **See Also:** 
 
-Section 3.2.1 (Compiler Terminology), Section 3.6 (Traversal Rules and Side Effects) 
+Section 3.2.1 (Compiler Terminology), Section 3.6 (Traversal Rules and Side Effects) **17–36** Programming Language—Common Lisp
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **remove-duplicates, delete-duplicates** 
 
@@ -1881,8 +1884,8 @@ These functions are useful for converting *sequence* into a canonical form suita
 
 Sequences **17–37**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
-
+**17–38** Programming Language—Common Lisp

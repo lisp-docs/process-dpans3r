@@ -1,17 +1,20 @@
-﻿ 
+﻿Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
- 
+**Programming Language—Common Lisp** 
 
 **16. Strings** 
-  
 
+Strings **i**
 
+Version 15.17R, X3J13/94-101R. Fri 12-Aug-1994 6:35pm EDT 
 
- 
+**ii** Programming Language—Common Lisp
 
- 
+Version 15.17R, X3J13/94-101R. 
+
+Fri 12-Aug-1994 6:35pm EDT 
 
 **16.1 String Concepts** 
 
@@ -29,9 +32,9 @@ However, the consequences are undefined if a *character* is inserted into a *str
 
 Strings **16–1**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **string** *System Class* 
 
@@ -79,11 +82,11 @@ Abbreviating.
 
 (base-string [*size*]) 
 
+**16–2** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Compound Type Specifier Arguments:** 
 
@@ -119,9 +122,9 @@ This denotes the union of all *types* (simple-array *c* (*size*)) for all *subty
 
 Strings **16–3**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **simple-base-string** *Type* 
 
@@ -175,11 +178,11 @@ Returns *true* if *object* is of *type* **simple-string**; otherwise, returns *f
 
 :fill-pointer t)) *→ false* 
 
+**16–4** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Notes:** 
 
@@ -245,9 +248,9 @@ my-filled-string *→* "AAACBD"
 
 Strings **16–5**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **See Also:** 
 
@@ -301,15 +304,15 @@ In the case where a conversion is defined neither by this specification nor by t
 
 **coerce** can be used to convert a *sequence* of *characters* to a *string*. 
 
+**16–6** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **prin1-to-string**, **princ-to-string**, **write-to-string**, or **format** (with a first argument of **nil**) can be used to get a *string* representation of a *number* or any other *object*. 
 
-&#60;b&#62;string-upcase, string-downcase, string-capitalize, &#60;sup&#62;nstring-upcase, nstring-downcase, nstring&#60;/sup&#62; capitalize&#60;/b&#62; &#60;i&#62;Function&#60;/i&#62; 
+<b>string-upcase, string-downcase, string-capitalize, <sup>nstring-upcase, nstring-downcase, nstring</sup> capitalize</b> <i>Function</i> 
 
 **Syntax:** 
 
@@ -347,9 +350,9 @@ In the case where a conversion is defined neither by this specification nor by t
 
 Strings **16–7**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **string-upcase, string-downcase, string-capitalize,** *. . .* 
 
@@ -405,11 +408,11 @@ str *→* "0123AbcD890a"
 
 **char-upcase**, **char-downcase** 
 
+**16–8** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Notes:** 
 
@@ -465,15 +468,15 @@ All of these *functions* observe the *fill pointer* .
 
 Strings **16–9**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Affected By:** 
 
 The *implementation*. 
 
-&#60;b&#62;string=, string/=, string&#60;/b&#62;&#60;i&#62;&#60;&#60;/i&#62;&#60;b&#62;, string&#60;/b&#62;&#60;i&#62;&#62;&#60;/i&#62;&#60;b&#62;, string&#60;/b&#62;&#60;i&#62;&#60;&#60;/i&#62;&#60;b&#62;=, &#60;sup&#62;string&#60;/sup&#62;&#60;/b&#62;&#62;&#60;/i&#62;&#60;b&#62;=, string-equal, string-not-equal, string lessp, string-greaterp, string-not-greaterp, string not-lessp&#60;/b&#62; &#60;i&#62;Function&#60;/i&#62; 
+<b>string=, string/=, string</b><i><</i><b>, string</b><i>></i><b>, string</b><i><</i><b>=, <sup>string</sup></b>></i><b>=, string-equal, string-not-equal, string lessp, string-greaterp, string-not-greaterp, string not-lessp</b> <i>Function</i> 
 
 **Syntax:** 
 
@@ -481,13 +484,13 @@ The *implementation*.
 
 **string/**= *string1 string2* &key *start1 end1 start2 end2 → mismatch-index* 
 
-**string**&#60; *string1 string2* &key *start1 end1 start2 end2 → mismatch-index* 
+**string**< *string1 string2* &key *start1 end1 start2 end2 → mismatch-index* 
 
-**string**&#62; *string1 string2* &key *start1 end1 start2 end2 → mismatch-index* 
+**string**> *string1 string2* &key *start1 end1 start2 end2 → mismatch-index* 
 
-**string**&#60;= *string1 string2* &key *start1 end1 start2 end2 → mismatch-index* 
+**string**<= *string1 string2* &key *start1 end1 start2 end2 → mismatch-index* 
 
-**string**&#62;= *string1 string2* &key *start1 end1 start2 end2 → mismatch-index* 
+**string**>= *string1 string2* &key *start1 end1 start2 end2 → mismatch-index* 
 
 **string-equal** *string1 string2* &key *start1 end1 start2 end2 → generalized-boolean* 
 
@@ -511,19 +514,19 @@ The *implementation*.
 
 These functions perform lexicographic comparisons on *string1* and *string2*. **string=** and **string-equal** are called equality functions; the others are called inequality functions. The 
 
+**16–10** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
- 
-
-**string=, string/=, string***&#60;***, string***&#62;***, string***&#60;***=,** *. . .* 
+**string=, string/=, string***<***, string***>***, string***<***=,** *. . .* 
 
 comparison operations these *functions* perform are restricted to the subsequence of *string1 bounded* by *start1* and *end1* and to the subsequence of *string2 bounded* by *start2* and *end2*. 
 
 A string *a* is equal to a string *b* if it contains the same number of characters, and the corresponding characters are the *same* under **char=** or **char-equal**, as appropriate. 
 
-A string *a* is less than a string *b* if in the first position in which they differ the character of *a* is less than the corresponding character of *b* according to **char**&#60; or **char-lessp** as appropriate, or if string *a* is a proper prefix of string *b* (of shorter length and matching in all the characters of *a*). 
+A string *a* is less than a string *b* if in the first position in which they differ the character of *a* is less than the corresponding character of *b* according to **char**< or **char-lessp** as appropriate, or if string *a* is a proper prefix of string *b* (of shorter length and matching in all the characters of *a*). 
 
 The equality functions return a *generalized boolean* that is *true* if the strings are equal, or *false* otherwise. 
 
@@ -543,31 +546,31 @@ The comparison has one of the following results:
 
 **string-equal** is just like **string=** except that differences in case are ignored; two characters are considered to be the same if **char-equal** is *true* of them. 
 
-**string**&#60; 
+**string**< 
 
-**string**&#60; is *true* if substring1 is less than substring2; otherwise it is *false*. 
+**string**< is *true* if substring1 is less than substring2; otherwise it is *false*. 
 
-**string**&#62; 
+**string**> 
 
-**string**&#62; is *true* if substring1 is greater than substring2; otherwise it is *false*. 
+**string**> is *true* if substring1 is greater than substring2; otherwise it is *false*. 
 
 **string-lessp**, **string-greaterp** 
 
-**string-lessp** and **string-greaterp** are exactly like **string**&#60; and **string**&#62;, respectively, except that distinctions between uppercase and lowercase letters are ignored. It is as if **char-lessp** were used instead of **char**&#60; for comparing characters. 
+**string-lessp** and **string-greaterp** are exactly like **string**< and **string**>, respectively, except that distinctions between uppercase and lowercase letters are ignored. It is as if **char-lessp** were used instead of **char**< for comparing characters. 
 
-**string**&#60;**=** 
+**string**<**=** 
 
-**string**&#60;**=** is *true* if substring1 is less than or equal to substring2; otherwise it is *false*. Strings **16–11**
+**string**<**=** is *true* if substring1 is less than or equal to substring2; otherwise it is *false*. Strings **16–11**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
-**string**&#62;**=** 
+**string**>**=** 
 
-**string**&#62;**=** is *true* if substring1 is greater than or equal to substring2; otherwise it is *false*. **string-not-greaterp**, **string-not-lessp** 
+**string**>**=** is *true* if substring1 is greater than or equal to substring2; otherwise it is *false*. **string-not-greaterp**, **string-not-lessp** 
 
-**string-not-greaterp** and **string-not-lessp** are exactly like **string**&#60;**=** and **string**&#62;**=**, respectively, except that distinctions between uppercase and lowercase letters are ignored. It is as if **char-lessp** were used instead of **char**&#60; for comparing characters. 
+**string-not-greaterp** and **string-not-lessp** are exactly like **string**<**=** and **string**>**=**, respectively, except that distinctions between uppercase and lowercase letters are ignored. It is as if **char-lessp** were used instead of **char**< for comparing characters. 
 
 **Examples:** 
 
@@ -583,9 +586,9 @@ The comparison has one of the following results:
 
 (string= "abcd" "01234abcd9012" :start2 5 :end2 9) *→ true* 
 
-(string&#60; "aaaa" "aaab") *→* 3 
+(string< "aaaa" "aaab") *→* 3 
 
-(string&#62;= "aaaaa" "aaaa") *→* 4 
+(string>= "aaaaa" "aaaa") *→* 4 
 
 (string-not-greaterp "Abcde" "abcdE") *→* 5 
 
@@ -619,11 +622,11 @@ The comparison has one of the following results:
 
 Returns *true* if *object* is of *type* **string**; otherwise, returns *false*. 
 
+**16–12** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Examples:** 
 
@@ -673,8 +676,8 @@ The *implementation*.
 
 Strings **16–13**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
-
+**16–14** Programming Language—Common Lisp

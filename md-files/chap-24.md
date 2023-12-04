@@ -1,17 +1,20 @@
-﻿ 
+﻿Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
- 
+**Programming Language—Common Lisp** 
 
 **24. System Construction** 
-  
 
+System Construction **i**
 
+Version 15.17R, X3J13/94-101R. Fri 12-Aug-1994 6:35pm EDT 
 
- 
+**ii** Programming Language—Common Lisp
 
- 
+Version 15.17R, X3J13/94-101R. 
+
+Fri 12-Aug-1994 6:35pm EDT 
 
 **24.1 System Construction Concepts** 
 
@@ -19,15 +22,11 @@
 
 To **load** a *file* is to treat its contents as *code* and *execute* that *code*. The *file* may contain *source code* or *compiled code*. 
 
-A *file* containing *source code* is called a *source file*. *Loading* a *source file* is accomplished essentially by sequentially *reading*&#60;sub&#62;2&#60;/sub&#62; the *forms* in the file, *evaluating* each immediately after it is *read*. 
+A *file* containing *source code* is called a *source file*. *Loading* a *source file* is accomplished essentially by sequentially *reading*<sub>2</sub> the *forms* in the file, *evaluating* each immediately after it is *read*. 
 
 A *file* containing *compiled code* is called a *compiled file*. *Loading* a *compiled file* is similar to *loading* a *source file*, except that the *file* does not contain text but rather an *implementation dependent* representation of pre-digested *expressions* created by the *compiler* . Often, a *compiled file* can be *loaded* more quickly than a *source file*. See Section 3.2 (Compilation). 
 
-The way in which a *source file* is distinguished from a *compiled file* is *implementation-dependent*.
-
- **24.1.2 Features**
-
- 
+The way in which a *source file* is distinguished from a *compiled file* is *implementation-dependent*. **24.1.2 Features** 
 
 A *feature* is an aspect or attribute of Common Lisp, of the *implementation*, or of the *environment*. A *feature* is identified by a *symbol*. 
 
@@ -47,35 +46,35 @@ If a *symbol* naming a *feature* is used as a *feature expression*, the *feature
 
 A **not** *feature expression* succeeds if its argument *feature-conditional* fails; otherwise, it succeeds. 
 
-(and *&#123;feature-conditional&#125;*\*) 
+(and *{feature-conditional}*\*) 
 
 An **and** *feature expression* succeeds if all of its argument *feature-conditionals* succeed; otherwise, it fails. 
 
 System Construction **24–1**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
-(or *&#123;feature-conditional&#125;*\*) 
+(or *{feature-conditional}*\*) 
 
 An **or** *feature expression* succeeds if any of its argument *feature-conditionals* succeed; otherwise, it fails. 
 
 **24.1.2.1.1 Examples of Feature Expressions** 
 
-For example, suppose that in *implementation* A, the *features* spice and perq are *present*, but the *feature* lispm is not *present*; in *implementation* B, the feature lispm is *present*, but the *features* spice and perq are not *present*; and in *implementation* C, none of the features spice, *lispm*, or perq are *present*. Figure 24–1 shows some sample *expressions*, and how they would be *read* &#60;sub&#62;2&#60;/sub&#62; in these *implementations*. 
+For example, suppose that in *implementation* A, the *features* spice and perq are *present*, but the *feature* lispm is not *present*; in *implementation* B, the feature lispm is *present*, but the *features* spice and perq are not *present*; and in *implementation* C, none of the features spice, *lispm*, or perq are *present*. Figure 24–1 shows some sample *expressions*, and how they would be *read* <sub>2</sub> in these *implementations*. 
 
-|&#60;p&#62;(cons #+spice "Spice" #-spice "Lispm" x) &#60;/p&#62;&#60;p&#62;in *implementation* A *. . .* (CONS "Spice" X) &#60;/p&#62;&#60;p&#62;in *implementation* B *. . .* (CONS "Lispm" X) &#60;/p&#62;&#60;p&#62;in *implementation* C *. . .* (CONS "Lispm" X) &#60;/p&#62;&#60;p&#62;(cons #+spice "Spice" #+LispM "Lispm" x) &#60;/p&#62;&#60;p&#62;in *implementation* A *. . .* (CONS "Spice" X) &#60;/p&#62;&#60;p&#62;in *implementation* B *. . .* (CONS "Lispm" X) &#60;/p&#62;&#60;p&#62;in *implementation* C *. . .* (CONS X) &#60;/p&#62;&#60;p&#62;(setq a ’(1 2 #+perq 43 #+(not perq) 27)) &#60;/p&#62;&#60;p&#62;in *implementation* A *. . .* (SETQ A ’(1 2 43)) &#60;/p&#62;&#60;p&#62;in *implementation* B *. . .* (SETQ A ’(1 2 27)) &#60;/p&#62;&#60;p&#62;in *implementation* C *. . .* (SETQ A ’(1 2 27)) &#60;/p&#62;&#60;p&#62;(let ((a 3) #+(or spice lispm) (b 3)) (foo a)) &#60;/p&#62;&#60;p&#62;in *implementation* A *. . .* (LET ((A 3) (B 3)) (FOO A)) &#60;/p&#62;&#60;p&#62;in *implementation* B *. . .* (LET ((A 3) (B 3)) (FOO A)) &#60;/p&#62;&#60;p&#62;in *implementation* C *. . .* (LET ((A 3)) (FOO A)) &#60;/p&#62;&#60;p&#62;(cons #+Lispm "#+Spice" #+Spice "foo" #-(or Lispm Spice) 7 x) &#60;/p&#62;&#60;p&#62;in *implementation* A *. . .* (CONS "foo" X) &#60;/p&#62;&#60;p&#62;in *implementation* B *. . .* (CONS "#+Spice" X) &#60;/p&#62;&#60;p&#62;in *implementation* C *. . .* (CONS 7 X)&#60;/p&#62;|
+|<p>(cons #+spice "Spice" #-spice "Lispm" x) </p><p>in *implementation* A *. . .* (CONS "Spice" X) </p><p>in *implementation* B *. . .* (CONS "Lispm" X) </p><p>in *implementation* C *. . .* (CONS "Lispm" X) </p><p>(cons #+spice "Spice" #+LispM "Lispm" x) </p><p>in *implementation* A *. . .* (CONS "Spice" X) </p><p>in *implementation* B *. . .* (CONS "Lispm" X) </p><p>in *implementation* C *. . .* (CONS X) </p><p>(setq a ’(1 2 #+perq 43 #+(not perq) 27)) </p><p>in *implementation* A *. . .* (SETQ A ’(1 2 43)) </p><p>in *implementation* B *. . .* (SETQ A ’(1 2 27)) </p><p>in *implementation* C *. . .* (SETQ A ’(1 2 27)) </p><p>(let ((a 3) #+(or spice lispm) (b 3)) (foo a)) </p><p>in *implementation* A *. . .* (LET ((A 3) (B 3)) (FOO A)) </p><p>in *implementation* B *. . .* (LET ((A 3) (B 3)) (FOO A)) </p><p>in *implementation* C *. . .* (LET ((A 3)) (FOO A)) </p><p>(cons #+Lispm "#+Spice" #+Spice "foo" #-(or Lispm Spice) 7 x) </p><p>in *implementation* A *. . .* (CONS "foo" X) </p><p>in *implementation* B *. . .* (CONS "#+Spice" X) </p><p>in *implementation* C *. . .* (CONS 7 X)</p>|
 | :- |
 
 
 **Figure 24–1. Features examples** 
 
+**24–2** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **compile-file** *Function* 
 
@@ -119,9 +118,9 @@ If *print* is *true*, information about *top level forms* in the file being comp
 
 The *external-format* specifies the *external file format* to be used when opening the *file*; see the System Construction **24–3**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **compile-file** 
 
@@ -159,11 +158,11 @@ An error of *type* **file-error** might be signaled if (wild-pathname-p *input-f
 
 If either the attempt to open the *source file* for input or the attempt to open the *compiled file* for output fails, an error of *type* **file-error** is signaled. 
 
+**24–4** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **See Also:** 
 
@@ -203,9 +202,9 @@ An error of *type* **file-error** might be signaled if either *input-file* or *o
 
 System Construction **24–5**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **compile-file**, **pathname**, **logical-pathname**, Section 20.1 (File System Concepts), Section 19.1.2 (Pathnames as Filenames) 
 
@@ -245,11 +244,11 @@ If *filespec* is a *stream*, **load** determines what kind of *stream* it is and
 
 **load** sequentially executes each *form* it encounters in the *file* named by *filespec*. If the *file* is a *source file* and the *implementation* chooses to perform *implicit compilation*, **load** must recognize *top level forms* as described in Section 3.2.3.1 (Processing of Top Level Forms) and arrange for each *top level form* to be executed before beginning *implicit compilation* of the next. (Note, however, that processing of **eval-when** *forms* by **load** is controlled by the :execute situation.) 
 
+**24–6** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **load** 
 
@@ -303,9 +302,9 @@ a *→* 888
 
 System Construction **24–7**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 ;––[Begin file SETUP]–– 
 
@@ -347,7 +346,7 @@ An error of *type* **file-error** might be signaled if (wild-pathname-p *filespe
 
 **Syntax:** 
 
-**with-compilation-unit** ([[ *↓option* ]]) *&#123;form&#125;*\* *→ &#123;result&#125;*\* 
+**with-compilation-unit** ([[ *↓option* ]]) *{form}*\* *→ {result}*\* 
 
 *option::*=:override *override* 
 
@@ -359,11 +358,11 @@ An error of *type* **file-error** might be signaled if (wild-pathname-p *filespe
 
 *results*—the *values* returned by the *forms*. 
 
+**24–8** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Description:** 
 
@@ -401,9 +400,9 @@ Note however that if the implementation does not normally defer any warnings, us
 
 System Construction **24–9**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 *∗***features***∗* 
 
@@ -441,11 +440,11 @@ If present, indicates that the implementation conforms to some particular workin
 
 discourage them from introducing the :draft-ansi-cl and :ansi-cl *features* prematurely.) :draft-ansi-cl 
 
+**24–10** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 *∗***features***∗* 
 
@@ -471,15 +470,15 @@ Section 1.5.2.1.1 (Use of Read-Time Conditionals), Section 2.4 (Standard Macro C
 
 The *value* of **\*features\*** is used by the #+ and #- reader syntax. 
 
-*Symbols* in the *features list* may be in any *package*, but in practice they are generally in the KEYWORD *package*. This is because KEYWORD is the *package* used by default when *reading*&#60;sub&#62;2&#60;/sub&#62; *feature expressions* in the #+ and #- *reader macros*. *Code* that needs to name a *feature*&#60;sub&#62;2&#60;/sub&#62; in a *package P* (other than KEYWORD) can do so by making explicit use of a *package prefix* for *P*, but note that such *code* must also assure that the *package P* exists in order for the *feature expression* to be *read* &#60;sub&#62;2&#60;/sub&#62;—even in cases where the *feature expression* is expected to fail. 
+*Symbols* in the *features list* may be in any *package*, but in practice they are generally in the KEYWORD *package*. This is because KEYWORD is the *package* used by default when *reading*<sub>2</sub> *feature expressions* in the #+ and #- *reader macros*. *Code* that needs to name a *feature*<sub>2</sub> in a *package P* (other than KEYWORD) can do so by making explicit use of a *package prefix* for *P*, but note that such *code* must also assure that the *package P* exists in order for the *feature expression* to be *read* <sub>2</sub>—even in cases where the *feature expression* is expected to fail. 
 
 It is generally considered wise for an *implementation* to include one or more *features* identifying the specific *implementation*, so that conditional expressions can be written which distinguish idiosyncrasies of one *implementation* from those of another. Since features are normally *symbols* in the KEYWORD *package* where name collisions might easily result, and since no uniquely defined 
 
 System Construction **24–11**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 mechanism is designated for deciding who has the right to use which *symbol* for what reason, a conservative strategy is to prefer names derived from one’s own company or product name, since those names are often trademarked and are hence less likely to be used unwittingly by another *implementation*. 
 
@@ -511,11 +510,11 @@ The *file system*.
 
 **compile-file** 
 
+**24–12** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 *∗***load-pathname***∗***,** *∗***load-truename***∗ Variable* 
 
@@ -565,9 +564,9 @@ The *value* of **\*compile-print\*** is the default value of the :print *argumen
 
 System Construction **24–13**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 *∗***load-print***∗***,** *∗***load-verbose***∗ Variable* 
 
@@ -613,11 +612,11 @@ The *value* of **\*modules\*** is a list of names of the modules that have been 
 
 The variable **\*modules\*** is deprecated. 
 
+**24–14** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **provide, require** 
 
@@ -671,9 +670,9 @@ Both functions use **string=** to test for the presence of a *module-name*.
 
 System Construction **24–15**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **provide, require** 
 
@@ -707,4 +706,4 @@ The functions **provide** and **require** are deprecated.
 
 If a module consists of a single *package*, it is customary for the package and module names to be the same. 
 
-
+**24–16** Programming Language—Common Lisp

@@ -1,17 +1,20 @@
-﻿ 
+﻿Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
- 
+**Programming Language—Common Lisp** 
 
 **20. Files** 
-  
 
+Files **i**
 
+Version 15.17R, X3J13/94-101R. Fri 12-Aug-1994 6:35pm EDT 
 
- 
+**ii** Programming Language—Common Lisp
 
- 
+Version 15.17R, X3J13/94-101R. 
+
+Fri 12-Aug-1994 6:35pm EDT 
 
 **20.1 File System Concepts** 
 
@@ -21,7 +24,7 @@ For information about opening and closing *files*, and manipulating their conten
 
 Figure 20–1 lists some *operators* that are applicable to *files* and directories. 
 
-|&#60;p&#62;**compile-file file-length open** &#60;/p&#62;&#60;p&#62;**delete-file file-position probe-file** &#60;/p&#62;&#60;p&#62;**directory file-write-date rename-file** &#60;/p&#62;&#60;p&#62;**file-author load with-open-file**&#60;/p&#62;|
+|<p>**compile-file file-length open** </p><p>**delete-file file-position probe-file** </p><p>**directory file-write-date rename-file** </p><p>**file-author load with-open-file**</p>|
 | :- |
 
 
@@ -41,7 +44,7 @@ Many *functions* that perform *file* operations accept either *open* or *closed 
 
 Of these, the *functions* in Figure 20–2 treat *open* and *closed streams* differently. 
 
-|&#60;p&#62;**delete-file file-author probe-file** &#60;/p&#62;&#60;p&#62;**directory file-write-date truename**&#60;/p&#62;|
+|<p>**delete-file file-author probe-file** </p><p>**directory file-write-date truename**</p>|
 | :- |
 
 
@@ -49,9 +52,9 @@ Of these, the *functions* in Figure 20–2 treat *open* and *closed streams* dif
 
 Files **20–1**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 Since treatment of *open streams* by the *file system* may vary considerably between *implementations*, however, a *closed stream* might be the most reliable kind of *argument* for some of these functions—in particular, those in Figure 20–3. For example, in some *file systems*, *open files* are written under temporary names and not renamed until *closed* and/or are held invisible until *closed*. In general, any code that is intended to be portable should use such *functions* carefully. 
 
@@ -73,17 +76,17 @@ The *truename* for a *file* is often, but not necessarily, unique for each *file
 
 **20.1.3.1 Examples of Truenames** 
 
-For example, a DEC TOPS-20 system with *files* PS:&#60;JOE&#62;FOO.TXT.1 and PS:&#60;JOE&#62;FOO.TXT.2 might permit the second *file* to be referred to as PS:&#60;JOE&#62;FOO.TXT.0, since the “.0” notation denotes “newest” version of several *files*. In the same *file system*, a “logical device” “JOE:” might be taken to refer to PS:&#60;JOE&#62;” and so the names JOE:FOO.TXT.2 or JOE:FOO.TXT.0 might refer to PS:&#60;JOE&#62;FOO.TXT.2. In all of these cases, the *truename* of the file would probably be PS:&#60;JOE&#62;FOO.TXT.2. 
+For example, a DEC TOPS-20 system with *files* PS:<JOE>FOO.TXT.1 and PS:<JOE>FOO.TXT.2 might permit the second *file* to be referred to as PS:<JOE>FOO.TXT.0, since the “.0” notation denotes “newest” version of several *files*. In the same *file system*, a “logical device” “JOE:” might be taken to refer to PS:<JOE>” and so the names JOE:FOO.TXT.2 or JOE:FOO.TXT.0 might refer to PS:<JOE>FOO.TXT.2. In all of these cases, the *truename* of the file would probably be PS:<JOE>FOO.TXT.2. 
 
 If a *file* is a symbolic link to another *file* (in a *file system* permitting such a thing), it is conventional for the *truename* to be the canonical name of the *file* after any symbolic links have been followed; that is, it is the canonical name of the *file* whose contents would become available if an *input stream* to that *file* were opened. 
 
 In the case of a *file* still being created (that is, of an *output stream* open to such a *file*), the exact *truename* of the file might not be known until the *stream* is closed. In this case, the *function* **truename** might return different values for such a *stream* before and after it was closed. In fact, before it is closed, the name returned might not even be a valid name in the *file system*—for example, while a file is being written, it might have version :newest and might only take on a specific numeric value later when the file is closed even in a *file system* where all files have numeric versions. 
 
+**20–2** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **directory** *Function* 
 
@@ -133,9 +136,9 @@ Common Lisp specifies “&key” in the argument list to **directory** even thou
 
 Files **20–3**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 *truename*—a *physical pathname* or **nil**. 
 
@@ -181,11 +184,11 @@ Tests whether the directories containing the specified *file* actually exist, an
 
 If the containing directories do not exist and if *verbose* is *true*, then the *implementation* is permitted (but not required) to perform output to *standard output* saying what directories were created. If the containing directories exist, or if *verbose* is *false*, this function performs no output. 
 
+**20–4** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 The *primary value* is the given *pathspec* so that this operation can be straightforwardly composed with other file manipulation expressions. The *secondary value*, *created*, is *true* if any directories were created. 
 
@@ -225,29 +228,29 @@ If the directory creation attempt is not successful, an error of *type* **file-e
 
 ;; the truename is implementation-dependent while the file is still open. 
 
-(with-open-file (stream "&#62;vistor&#62;test.text.newest") 
+(with-open-file (stream ">vistor>test.text.newest") 
 
 (values (pathname stream) 
 
 Files **20–5**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 (truename stream))) 
 
-*→* #P"S:&#62;vistor&#62;test.text.newest", #P"S:&#62;vistor&#62;test.text.1" 
+*→* #P"S:>vistor>test.text.newest", #P"S:>vistor>test.text.1" 
 
-&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; #P"S:&#62;vistor&#62;test.text.newest", #P"S:&#62;vistor&#62;test.text.newest" 
+<i><sup>or</sup>→</i> #P"S:>vistor>test.text.newest", #P"S:>vistor>test.text.newest" 
 
-&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; #P"S:&#62;vistor&#62;test.text.newest", #P"S:&#62;vistor&#62; temp . temp .1" 
+<i><sup>or</sup>→</i> #P"S:>vistor>test.text.newest", #P"S:>vistor> temp . temp .1" 
 
 ;; In this case, the file is closed when the truename is tried, so the 
 
 ;; truename information is reliable. 
 
-(with-open-file (stream "&#62;vistor&#62;test.text.newest") 
+(with-open-file (stream ">vistor>test.text.newest") 
 
 (close stream) 
 
@@ -255,13 +258,13 @@ Files **20–5**
 
 (truename stream))) 
 
-*→* #P"S:&#62;vistor&#62;test.text.newest", #P"S:&#62;vistor&#62;test.text.1" 
+*→* #P"S:>vistor>test.text.newest", #P"S:>vistor>test.text.1" 
 
 ;; An example involving TOP-20’s implementation-dependent concept 
 
 ;; of logical devices – in this case, "DOC:" is shorthand for 
 
-;; "PS:&#60;DOCUMENTATION&#62;" ... 
+;; "PS:<DOCUMENTATION>" ... 
 
 (with-open-file (stream "CMUC::DOC:DUMPER.HLP") 
 
@@ -269,7 +272,7 @@ Files **20–5**
 
 (truename stream))) 
 
-*→* #P"CMUC::DOC:DUMPER.HLP", #P"CMUC::PS:&#60;DOCUMENTATION&#62;DUMPER.HLP.13" 
+*→* #P"CMUC::DOC:DUMPER.HLP", #P"CMUC::PS:<DOCUMENTATION>DUMPER.HLP.13" 
 
 **Exceptional Situations:** 
 
@@ -295,11 +298,11 @@ An error of *type* **file-error** is signaled if *pathname* is *wild*.
 
 *author*—a *string* or **nil**. 
 
+**20–6** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Description:** 
 
@@ -307,7 +310,7 @@ Returns a *string* naming the author of the *file* specified by *pathspec*, or *
 
 **Examples:** 
 
-(with-open-file (stream "&#62;relativity&#62;general.text") 
+(with-open-file (stream ">relativity>general.text") 
 
 (file-author s)) 
 
@@ -357,9 +360,9 @@ Please leave lots of toys.~2%Love, Sue~
 
 Files **20–7**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 ~2%attachments: milk, cookies~%") 
 
@@ -411,11 +414,11 @@ Section 25.1.4.2 (Universal Time), Section 19.1.2 (Pathnames as Filenames)
 
 It is an error to specify a filename containing a *wild* component, for *filespec* to contain a **nil** component where the file system does not permit a **nil** component, or for the result of defaulting missing components of *new-name* from *filespec* to contain a **nil** component where the file system does not permit a **nil** component. 
 
-If *new-name* is a *logical pathname*, **rename-file** returns a *logical pathname* as its *primary value*. 
+If *new-name* is a *logical pathname*, **rename-file** returns a *logical pathname* as its *primary value*. **20–8** Programming Language—Common Lisp
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **rename-file** returns three values if successful. The *primary value*, *defaulted-new-name*, is the resulting name which is composed of *new-name* with any missing components filled in by performing a **merge-pathnames** operation using *filespec* as the defaults. The *secondary value*, *old-truename*, is the *truename* of the *file* before it was renamed. The *tertiary value*, *new-truename*, is the *truename* of the *file* after it was renamed. 
 
@@ -433,15 +436,15 @@ If the *filespec designator* is an open *stream*, then the *stream* itself and t
 
 (values (pathname stream) (truename stream))) 
 
-*→* #P"SYS:CHEMISTRY;LEAD.TEXT.NEWEST", #P"Q:&#62;sys&#62;chem&#62;lead.text.1" 
+*→* #P"SYS:CHEMISTRY;LEAD.TEXT.NEWEST", #P"Q:>sys>chem>lead.text.1" 
 
 (rename-file "sys:chemistry;lead.text" "gold.text") 
 
 *→* #P"SYS:CHEMISTRY;GOLD.TEXT.NEWEST", 
 
-#P"Q:&#62;sys&#62;chem&#62;lead.text.1", 
+#P"Q:>sys>chem>lead.text.1", 
 
-#P"Q:&#62;sys&#62;chem&#62;gold.text.1" 
+#P"Q:>sys>chem>gold.text.1" 
 
 **Exceptional Situations:** 
 
@@ -471,9 +474,9 @@ If the *filespec designator* is an open *stream*, then *filespec* and the file a
 
 Files **20–9**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 might be immediate or delayed until *filespec* is explicitly closed, depending on the requirements of the file system. 
 
@@ -489,7 +492,7 @@ The consequences are undefined if *filespec* has a *wild* component, or if *file
 
 *→* NIL 
 
-(setq p (probe-file "delete-me.text")) *→* #P"R:&#62;fred&#62;delete-me.text.1" 
+(setq p (probe-file "delete-me.text")) *→* #P"R:>fred>delete-me.text.1" 
 
 (delete-file p) *→* T 
 
@@ -523,11 +526,11 @@ An error of *type* **file-error** might be signaled if *filespec* is *wild*.
 
 The *type* **file-error** consists of error conditions that occur during an attempt to open or close a file, or during some low-level transactions with a file system. The “offending pathname” is initialized by the :pathname initialization argument to **make-condition**, and is *accessed* by the *function* **file-error-pathname**. 
 
+**20–10** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **See Also:** 
 
@@ -557,8 +560,8 @@ Returns the “offending pathname” of a *condition* of *type* **file-error**.
 
 Files **20–11**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
-
+**20–12** Programming Language—Common Lisp

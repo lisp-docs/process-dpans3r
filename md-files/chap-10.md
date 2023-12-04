@@ -1,17 +1,20 @@
-﻿ 
+﻿Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
- 
+**Programming Language—Common Lisp** 
 
 **10. Symbols** 
-  
 
+Symbols **i**
 
+Version 15.17R, X3J13/94-101R. Fri 12-Aug-1994 6:35pm EDT 
 
- 
+**ii** Programming Language—Common Lisp
 
- 
+Version 15.17R, X3J13/94-101R. 
+
+Fri 12-Aug-1994 6:35pm EDT 
 
 **10.1 Symbol Concepts** 
 
@@ -25,7 +28,7 @@ Figure 10–1 lists some *defined names* that are applicable to the *property li
 
 Figure 10–2 lists some *defined names* that are applicable to the creation of and inquiry about *symbols*. 
 
-|&#60;p&#62;**copy-symbol keywordp symbol-package gensym make-symbol symbol-value** &#60;/p&#62;&#60;p&#62;**gentemp symbol-name**&#60;/p&#62;|
+|<p>**copy-symbol keywordp symbol-package gensym make-symbol symbol-value** </p><p>**gentemp symbol-name**</p>|
 | :- |
 
 
@@ -33,9 +36,9 @@ Figure 10–2 lists some *defined names* that are applicable to the creation of 
 
 Symbols **10–1**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **symbol** *System Class* 
 
@@ -69,11 +72,11 @@ The consequences are undefined if an attempt is made to alter the *home package*
 
 **Property list** 
 
-The *property list* of a *symbol* provides a mechanism for associating named attributes 
+The *property list* of a *symbol* provides a mechanism for associating named attributes **10–2** Programming Language—Common Lisp
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 with that *symbol*. The operations for adding and removing entries are *destructive* to the *property list*. Common Lisp provides *operators* both for direct manipulation of *property list objects* (*e.g.*, see **getf**, **remf**, and **symbol-plist**) and for implicit manipulation of a *symbol*’s *property list* by reference to the *symbol* (*e.g.*, see **get** and **remprop**). The *property list* associated with a *fresh symbol* is initially *null*. 
 
@@ -99,9 +102,9 @@ Section 2.3.4 (Symbols as Tokens), Section 2.3.1.1 (Potential Numbers as Tokens)
 
 Symbols **10–3**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **keyword** *Type* 
 
@@ -159,11 +162,11 @@ Returns *true* if *object* is of *type* **symbol**; otherwise, returns *false*.
 
 **keywordp**, **symbol**, **typep** 
 
+**10–4** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Notes:** 
 
@@ -183,7 +186,7 @@ Returns *true* if *object* is of *type* **symbol**; otherwise, returns *false*.
 
 **Description:** 
 
-Returns *true* if *object* is a *keyword* &#60;sub&#62;1&#60;/sub&#62;; otherwise, returns *false*. 
+Returns *true* if *object* is a *keyword* <sub>1</sub>; otherwise, returns *false*. 
 
 **Examples:** 
 
@@ -213,9 +216,9 @@ Returns *true* if *object* is a *keyword* &#60;sub&#62;1&#60;/sub&#62;; otherwis
 
 Symbols **10–5**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **make-symbol** *Function* 
 
@@ -261,11 +264,11 @@ Should signal an error of *type* **type-error** if *name* is not a *string*.
 
 No attempt is made by **make-symbol** to convert the case of the *name* to uppercase. The only case conversion which ever occurs for *symbols* is done by the *Lisp reader* . The program interface to *symbol* creation retains case, and the program interface to interning symbols is case-sensitive. 
 
+**10–6** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **copy-symbol** 
 
@@ -287,7 +290,7 @@ No attempt is made by **make-symbol** to convert the case of the *name* to upper
 
 **copy-symbol** returns a *fresh*, *uninterned symbol*, the *name* of which is **string=** to and possibly the *same* as the *name* of the given *symbol*. 
 
-If *copy-properties* is *false*, the *new-symbol* is neither *bound* nor *fbound* and has a *null property list*. If *copy-properties* is *true*, then the initial *value* of *new-symbol* is the *value* of *symbol*, the initial *function* definition of *new-symbol* is the *functional value* of *symbol*, and the *property list* of *new-symbol* is a *copy*&#60;sub&#62;2&#60;/sub&#62; of the *property list* of *symbol*. 
+If *copy-properties* is *false*, the *new-symbol* is neither *bound* nor *fbound* and has a *null property list*. If *copy-properties* is *true*, then the initial *value* of *new-symbol* is the *value* of *symbol*, the initial *function* definition of *new-symbol* is the *functional value* of *symbol*, and the *property list* of *new-symbol* is a *copy*<sub>2</sub> of the *property list* of *symbol*. 
 
 **Examples:** 
 
@@ -327,7 +330,7 @@ If *copy-properties* is *false*, the *new-symbol* is neither *bound* nor *fbound
 
 (boundp fred-clone-1a) *→ false* 
 
-(setf (symbol-function fred) #’(lambda (x) x)) *→* #&#60;FUNCTION anonymous&#62; 
+(setf (symbol-function fred) #’(lambda (x) x)) *→* #<FUNCTION anonymous> 
 
 (fboundp fred) *→ true* 
 
@@ -337,9 +340,9 @@ If *copy-properties* is *false*, the *new-symbol* is neither *bound* nor *fbound
 
 Symbols **10–7**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Exceptional Situations:** 
 
@@ -387,11 +390,11 @@ If and only if no explicit suffix is supplied, **\*gensym-counter\*** is increme
 
 (find-symbol "G100") *→* NIL, NIL 
 
+**10–8** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 (gensym "T") *→* #:T3143 
 
@@ -443,9 +446,9 @@ A number which will be used in constructing the *name* of the next *symbol* gene
 
 Symbols **10–9**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Notes:** 
 
@@ -499,11 +502,11 @@ Its internal counter is incremented one or more times.
 
 The current state of its internal counter, and the current state of the *package*. 
 
+**10–10** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Exceptional Situations:** 
 
@@ -545,21 +548,21 @@ Just because **gentemp** creates a *symbol* which did not previously exist does 
 
 Symbols **10–11**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **symbol-function** 
 
 **Examples:** 
 
-(symbol-function ’car) *→* #&#60;FUNCTION CAR&#62; 
+(symbol-function ’car) *→* #<FUNCTION CAR> 
 
 (symbol-function ’twice) is an error ;because TWICE isn’t defined. 
 
 (defun twice (n) (\* n 2)) *→* TWICE 
 
-(symbol-function ’twice) *→* #&#60;FUNCTION TWICE&#62; 
+(symbol-function ’twice) *→* #<FUNCTION TWICE> 
 
 (list (twice 3) 
 
@@ -581,7 +584,7 @@ Symbols **10–11**
 
 (setf (symbol-function ’twice) #’(lambda (x) (list x x))) 
 
-*→* #&#60;FUNCTION anonymous&#62; 
+*→* #<FUNCTION anonymous> 
 
 (list (twice 3) 
 
@@ -613,7 +616,7 @@ Symbols **10–11**
 
 nil)) *→* SYMBOL-FUNCTION-OR-NIL 
 
-(symbol-function-or-nil ’car) *→* #&#60;FUNCTION CAR&#62; 
+(symbol-function-or-nil ’car) *→* #<FUNCTION CAR> 
 
 (symbol-function-or-nil ’defun) *→* NIL 
 
@@ -631,11 +634,11 @@ Should signal **undefined-function** if *symbol* is not *fbound* and an attempt 
 
 **fboundp**, **fmakunbound**, **macro-function**, **special-operator-p** 
 
+**10–12** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Notes:** 
 
@@ -677,9 +680,9 @@ Should signal an error of *type* **type-error** if *symbol* is not a *symbol*.
 
 Symbols **10–13**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **symbol-package** 
 
@@ -701,35 +704,35 @@ Returns the *home package* of *symbol*.
 
 **Examples:** 
 
-(in-package "CL-USER") *→* #&#60;PACKAGE "COMMON-LISP-USER"&#62; 
+(in-package "CL-USER") *→* #<PACKAGE "COMMON-LISP-USER"> 
 
-(symbol-package ’car) *→* #&#60;PACKAGE "COMMON-LISP"&#62; 
+(symbol-package ’car) *→* #<PACKAGE "COMMON-LISP"> 
 
-(symbol-package ’bus) *→* #&#60;PACKAGE "COMMON-LISP-USER"&#62; 
+(symbol-package ’bus) *→* #<PACKAGE "COMMON-LISP-USER"> 
 
-(symbol-package :optional) *→* #&#60;PACKAGE "KEYWORD"&#62; 
+(symbol-package :optional) *→* #<PACKAGE "KEYWORD"> 
 
 ;; Gensyms are uninterned, so have no home package. 
 
 (symbol-package (gensym)) *→* NIL 
 
-(make-package ’pk1) *→* #&#60;PACKAGE "PK1"&#62; 
+(make-package ’pk1) *→* #<PACKAGE "PK1"> 
 
 (intern "SAMPLE1" "PK1") *→* PK1::SAMPLE1, NIL 
 
 (export (find-symbol "SAMPLE1" "PK1") "PK1") *→* T 
 
-(make-package ’pk2 :use ’(pk1)) *→* #&#60;PACKAGE "PK2"&#62; 
+(make-package ’pk2 :use ’(pk1)) *→* #<PACKAGE "PK2"> 
 
 (find-symbol "SAMPLE1" "PK2") *→* PK1:SAMPLE1, :INHERITED 
 
-(symbol-package ’pk1::sample1) *→* #&#60;PACKAGE "PK1"&#62; 
+(symbol-package ’pk1::sample1) *→* #<PACKAGE "PK1"> 
 
-(symbol-package ’pk2::sample1) *→* #&#60;PACKAGE "PK1"&#62; 
+(symbol-package ’pk2::sample1) *→* #<PACKAGE "PK1"> 
 
-(symbol-package ’pk1::sample2) *→* #&#60;PACKAGE "PK1"&#62; 
+(symbol-package ’pk1::sample2) *→* #<PACKAGE "PK1"> 
 
-(symbol-package ’pk2::sample2) *→* #&#60;PACKAGE "PK2"&#62; 
+(symbol-package ’pk2::sample2) *→* #<PACKAGE "PK2"> 
 
 ;; The next several forms create a scenario in which a symbol 
 
@@ -755,11 +758,11 @@ Returns the *home package* of *symbol*.
 
 Should signal an error of *type* **type-error** if *symbol* is not a *symbol*. 
 
+**10–14** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **See Also:** 
 
@@ -815,9 +818,9 @@ The use of **setf** should be avoided, since a *symbol*’s *property list* is a
 
 Symbols **10–15**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **symbol-value** 
 
@@ -895,11 +898,11 @@ a *→* 3
 
 (symbol-value ’()) *→* NIL 
 
+**10–16** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 ;; The precision of this next one is *implementation-dependent*. 
 
@@ -943,17 +946,17 @@ Should signal **unbound-variable** if *symbol* is *unbound* and an attempt is ma
 
 **Description:** 
 
-**get** finds a *property* on the *property list* &#60;sub&#62;2&#60;/sub&#62; of *symbol* whose *property indicator* is *identical* to *indicator*, and returns its corresponding *property value*. If there are multiple *properties*&#60;sub&#62;1&#60;/sub&#62; with that *property indicator* , **get** uses the first such *property*. If there is no *property* with that *property indicator* , *default* is returned. 
+**get** finds a *property* on the *property list* <sub>2</sub> of *symbol* whose *property indicator* is *identical* to *indicator*, and returns its corresponding *property value*. If there are multiple *properties*<sub>1</sub> with that *property indicator* , **get** uses the first such *property*. If there is no *property* with that *property indicator* , *default* is returned. 
 
 Symbols **10–17**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **get** 
 
-**setf** of **get** may be used to associate a new *object* with an existing indicator already on the *symbol*’s *property list*, or to create a new assocation if none exists. If there are multiple *properties*&#60;sub&#62;1&#60;/sub&#62; with that *property indicator* , **setf** of **get** associates the *new-value* with the first such *property*. When a **get** *form* is used as a **setf** *place*, any *default* which is supplied is evaluated according to normal left-to-right evaluation rules, but its *value* is ignored. 
+**setf** of **get** may be used to associate a new *object* with an existing indicator already on the *symbol*’s *property list*, or to create a new assocation if none exists. If there are multiple *properties*<sub>1</sub> with that *property indicator* , **setf** of **get** associates the *new-value* with the first such *property*. When a **get** *form* is used as a **setf** *place*, any *default* which is supplied is evaluated according to normal left-to-right evaluation rules, but its *value* is ignored. 
 
 **Examples:** 
 
@@ -1025,11 +1028,11 @@ Should signal an error of *type* **type-error** if *symbol* is not a *symbol*.
 
 (get x y) *≡* (getf (symbol-plist x) y) 
 
+**10–18** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 *Numbers* and *characters* are not recommended for use as *indicators* in portable code since **get** tests with **eq** rather than **eql**, and consequently the effect of using such *indicators* is *implementation-dependent*. 
 
@@ -1051,7 +1054,7 @@ There is no way using **get** to distinguish an absent property from one whose v
 
 **Description:** 
 
-**remprop** removes from the *property list* &#60;sub&#62;2&#60;/sub&#62; of *symbol* a *property*&#60;sub&#62;1&#60;/sub&#62; with a *property indicator identical* to *indicator*. If there are multiple *properties*&#60;sub&#62;1&#60;/sub&#62; with the *identical* key, **remprop** only removes the first such *property*. **remprop** returns *false* if no such *property* was found, or *true* if a property was found. 
+**remprop** removes from the *property list* <sub>2</sub> of *symbol* a *property*<sub>1</sub> with a *property indicator identical* to *indicator*. If there are multiple *properties*<sub>1</sub> with the *identical* key, **remprop** only removes the first such *property*. **remprop** returns *false* if no such *property* was found, or *true* if a property was found. 
 
 The *property indicator* and the corresponding *property value* are removed in an undefined order by destructively splicing the property list. The permissible side-effects correspond to those permitted for **remf**, such that: 
 
@@ -1083,9 +1086,9 @@ The *property indicator* and the corresponding *property value* are removed in a
 
 Symbols **10–19**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 (remprop test ’approximation) *→ true* 
 
@@ -1141,11 +1144,11 @@ Should signal an error of *type* **type-error** if *symbol* is not a *symbol*.
 
 Returns *true* if *symbol* is *bound*; otherwise, returns *false*. 
 
+**10–20** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Examples:** 
 
@@ -1209,9 +1212,9 @@ Should signal an error of *type* **type-error** if *symbol* is not a *symbol*.
 
 Symbols **10–21**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **See Also:** 
 
@@ -1283,11 +1286,11 @@ n *→* 44
 
 \*n\* *→* 2 
 
+**10–22** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 (defvar \*even-count\* 0) *→* \*EVEN-COUNT\* 
 
@@ -1339,8 +1342,8 @@ The name of the cell (see **cell-error**) is the *name* of the *variable* that w
 
 Symbols **10–23**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
-
+**10–24** Programming Language—Common Lisp

@@ -1,17 +1,20 @@
-﻿ 
+﻿Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
- 
+**Programming Language—Common Lisp** 
 
 **9. Conditions** 
-  
 
+Conditions **i**
 
+Version 15.17R, X3J13/94-101R. Fri 12-Aug-1994 6:35pm EDT 
 
- 
+**ii** Programming Language—Common Lisp
 
- 
+Version 15.17R, X3J13/94-101R. 
+
+Fri 12-Aug-1994 6:35pm EDT 
 
 **9.1 Condition System Concepts** 
 
@@ -39,9 +42,9 @@ It can *handle* the *condition* by performing a non-local transfer of control. T
 
 Conditions **9–1**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Defer** 
 
@@ -75,15 +78,15 @@ Figure 9–2 shows *operators* that define *condition types* and creating *condi
 
 **Figure 9–2. Operators that define and create conditions.** 
 
+**9–2** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 Figure 9–3 shows *operators* that *read* the *value* of *condition slots*. 
 
-|&#60;p&#62;**arithmetic-error-operands simple-condition-format-arguments arithmetic-error-operation simple-condition-format-control cell-error-name stream-error-stream** &#60;/p&#62;&#60;p&#62;**file-error-pathname type-error-datum** &#60;/p&#62;&#60;p&#62;**package-error-package type-error-expected-type** &#60;/p&#62;&#60;p&#62;**print-not-readable-object unbound-slot-instance**&#60;/p&#62;|
+|<p>**arithmetic-error-operands simple-condition-format-arguments arithmetic-error-operation simple-condition-format-control cell-error-name stream-error-stream** </p><p>**file-error-pathname type-error-datum** </p><p>**package-error-package type-error-expected-type** </p><p>**print-not-readable-object unbound-slot-instance**</p>|
 | :- |
 
 
@@ -113,9 +116,9 @@ The denoted *condition* is the result of
 
 Conditions **9–3**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 *•* If the *datum* is a *format control . . .* 
 
@@ -157,11 +160,11 @@ When **\*print-escape\*** is *true*, the *object* should print in an abbreviated
 
 No *function* is provided for directly *accessing* or invoking *condition reporters*. 
 
+**9–4** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **9.1.3.1 Recommended Style in Condition Reporting** 
 
@@ -203,9 +206,9 @@ If the calling routine conventionally inserts some additional prefix (such as �
 
 Conditions **9–5**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 be added to each subsequent line of the output, so that the left edge of the message output by the *condition reporter* will still be properly aligned. 
 
@@ -255,17 +258,17 @@ Each *handler* is associated with a *type specifier* that must designate a *subt
 
 *Active handlers* can be *established* within the dynamic scope of other *active handlers*. At any point during program execution, there is a set of *active handlers*. When a *condition* is signaled, the *most* 
 
+**9–6** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 *recent* active *applicable handler* for that *condition* is selected from this set. Given a *condition*, the order of recentness of active *applicable handlers* is defined by the following two rules: 
 
-1\. Each handler in a set of active handlers *H*&#60;sub&#62;1&#60;/sub&#62; is more recent than every handler in a set *H*&#60;sub&#62;2&#60;/sub&#62; if the handlers in *H*&#60;sub&#62;2&#60;/sub&#62; were active when the handlers in *H*&#60;sub&#62;1&#60;/sub&#62; were established. 
+1\. Each handler in a set of active handlers *H*<sub>1</sub> is more recent than every handler in a set *H*<sub>2</sub> if the handlers in *H*<sub>2</sub> were active when the handlers in *H*<sub>1</sub> were established. 
 
-2\. Let *h*&#60;sub&#62;1&#60;/sub&#62; and *h*&#60;sub&#62;2&#60;/sub&#62; be two applicable active handlers established by the same *form*. Then *h*&#60;sub&#62;1&#60;/sub&#62; is more recent than *h*&#60;sub&#62;2&#60;/sub&#62; if *h*&#60;sub&#62;1&#60;/sub&#62; was defined to the left of *h*&#60;sub&#62;2&#60;/sub&#62; in the *form* that established them. 
+2\. Let *h*<sub>1</sub> and *h*<sub>2</sub> be two applicable active handlers established by the same *form*. Then *h*<sub>1</sub> is more recent than *h*<sub>2</sub> if *h*<sub>1</sub> was defined to the left of *h*<sub>2</sub> in the *form* that established them. 
 
 Once a handler in a handler binding *form* (such as **handler-bind** or **handler-case**) has been selected, all handlers in that *form* become inactive for the remainder of the signaling process. While the selected *handler* runs, no other *handler* established by that *form* is active. That is, if the *handler* declines, no other handler established by that *form* will be considered for possible invocation. 
 
@@ -289,7 +292,7 @@ The *variable* **\*break-on-signals\*** can be used to cause the debugger to be 
 
 Figure 9–5 shows *defined names* relating to the *signaling* of *conditions*. 
 
-|&#60;p&#62;**\*break-on-signals\* error warn** &#60;/p&#62;&#60;p&#62;**cerror signal**&#60;/p&#62;|
+|<p>**\*break-on-signals\* error warn** </p><p>**cerror signal**</p>|
 | :- |
 
 
@@ -297,9 +300,9 @@ Figure 9–5 shows *defined names* relating to the *signaling* of *conditions*.
 
 Conditions **9–7**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **9.1.4.1.1 Resignaling a Condition** 
 
@@ -323,15 +326,15 @@ The *restarts established* by a **restart-bind** *form*, a **restart-case** *for
 
 *Restarts* of the same name can be ordered from least recent to most recent according to the following two rules: 
 
-1\. Each *restart* in a set of active restarts *R*&#60;sub&#62;1&#60;/sub&#62; is more recent than every *restart* in a set *R*&#60;sub&#62;2&#60;/sub&#62; if the *restarts* in *R*&#60;sub&#62;2&#60;/sub&#62; were active when the *restarts* in *R*&#60;sub&#62;1&#60;/sub&#62; were established. 
+1\. Each *restart* in a set of active restarts *R*<sub>1</sub> is more recent than every *restart* in a set *R*<sub>2</sub> if the *restarts* in *R*<sub>2</sub> were active when the *restarts* in *R*<sub>1</sub> were established. 
 
-2\. Let *r*&#60;sub&#62;1&#60;/sub&#62; and *r*&#60;sub&#62;2&#60;/sub&#62; be two active *restarts* with the same name established by the same *form*. Then *r*&#60;sub&#62;1&#60;/sub&#62; is more recent than *r*&#60;sub&#62;2&#60;/sub&#62; if *r*&#60;sub&#62;1&#60;/sub&#62; was defined to the left of *r*&#60;sub&#62;2&#60;/sub&#62; in the *form* that established them. 
+2\. Let *r*<sub>1</sub> and *r*<sub>2</sub> be two active *restarts* with the same name established by the same *form*. Then *r*<sub>1</sub> is more recent than *r*<sub>2</sub> if *r*<sub>1</sub> was defined to the left of *r*<sub>2</sub> in the *form* that established them. 
 
+**9–8** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 If a *restart* is invoked but does not transfer control, the values resulting from the *restart* function are returned by the function that invoked the restart, either **invoke-restart** or **invoke-restart-interactively**. 
 
@@ -351,7 +354,7 @@ Some *restarts* have functional interfaces, such as **abort**, **continue**, **m
 
 Figure 9–6 shows *defined names* relating to *restarts*. 
 
-|&#60;p&#62;**abort invoke-restart-interactively store-value compute-restarts muffle-warning use-value** &#60;/p&#62;&#60;p&#62;**continue restart-bind with-simple-restart find-restart restart-case** &#60;/p&#62;&#60;p&#62;**invoke-restart restart-name**&#60;/p&#62;|
+|<p>**abort invoke-restart-interactively store-value compute-restarts muffle-warning use-value** </p><p>**continue restart-bind with-simple-restart find-restart restart-case** </p><p>**invoke-restart restart-name**</p>|
 | :- |
 
 
@@ -363,9 +366,9 @@ Each *restart* has an associated test, which is a function of one argument (a *c
 
 Conditions **9–9**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **9.1.4.2.4 Associating a Restart with a Condition** 
 
@@ -379,7 +382,7 @@ Active restarts associated with a particular *condition* can be detected by *cal
 
 Conditional signaling of *conditions* based on such things as key match, form evaluation, and *type* are handled by assertion *operators*. Figure 9–7 shows *operators* relating to assertions. 
 
-|&#60;p&#62;**assert check-type ecase** &#60;/p&#62;&#60;p&#62;**ccase ctypecase etypecase**&#60;/p&#62;|
+|<p>**assert check-type ecase** </p><p>**ccase ctypecase etypecase**</p>|
 | :- |
 
 
@@ -389,11 +392,11 @@ Conditional signaling of *conditions* based on such things as key match, form ev
 
 For a background reference to the abstract concepts detailed in this section, see *Exceptional Situations in Lisp*. The details of that paper are not binding on this document, but may be helpful in establishing a conceptual basis for understanding this material. 
 
+**9–10** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **condition** *Condition Type* 
 
@@ -431,9 +434,9 @@ The *type* **warning** consists of all types of warnings.
 
 Conditions **9–11**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **See Also:** 
 
@@ -477,11 +480,11 @@ All *conditions* serious enough to require interactive intervention if not handl
 
 Signaling a *serious condition* does not itself force entry into the debugger. However, except in the unusual situation where the programmer can assure that no harm will come from failing to *handle* 
 
+**9–12** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 a *serious condition*, such a *condition* is usually signaled with **error** rather than **signal** in order to assure that the program does not continue without *handling* the *condition*. (And conversely, it is conventional to use **signal** rather than **error** to signal conditions which are not *serious conditions*, since normally the failure to handle a non-serious condition is not reason enough for the debugger to be entered.) 
 
@@ -511,9 +514,9 @@ The *type* **cell-error** consists of error conditions that occur during a locat
 
 Conditions **9–13**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **cell-error-name** *Function* 
 
@@ -551,11 +554,11 @@ The *type* **parse-error** consists of error conditions that are related to pars
 
 **parse-namestring**, **reader-error** 
 
+**9–14** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **storage-condition** *Condition Type* 
 
@@ -577,7 +580,7 @@ While some Common Lisp operations might signal *storage-condition* because they 
 
 **Syntax:** 
 
-**assert** *test-form* [(*&#123;place&#125;*\*) [*datum-form &#123;argument-form&#125;*\*]] 
+**assert** *test-form* [(*{place}*\*) [*datum-form {argument-form}*\*]] 
 
 *→* **nil** 
 
@@ -595,9 +598,9 @@ While some Common Lisp operations might signal *storage-condition* because they 
 
 Conditions **9–15**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **assert** 
 
@@ -633,21 +636,21 @@ The *places* are *generalized references* to data upon which *test-form* depends
 
 (matrix-multiply x y) 
 
-&#9655; Correctable error in MATRIX-MULTIPLY: 
+*.* Correctable error in MATRIX-MULTIPLY: 
 
-&#9655; Cannot multiply #&#60;ARRAY ...&#62; by #&#60;ARRAY ...&#62;. 
+*.* Cannot multiply #<ARRAY ...> by #<ARRAY ...>. 
 
-&#9655; Restart options: 
+*.* Restart options: 
 
-&#9655; 1: You will be prompted for one or more new values. 
+*.* 1: You will be prompted for one or more new values. 
 
-&#9655; 2: Top level. 
+*.* 2: Top level. 
 
-&#9655; Debug&#62; :continue 1 
+*.* Debug> :continue 1 
 
-&#9655; Value for A: x 
+*.* Value for A: x 
 
-&#9655; Value for B: (make-array ’(5 3) :initial-element 6) 
+*.* Value for B: (make-array ’(5 3) :initial-element 6) 
 
 *→* #2A((54 54 54 54 54) 
 
@@ -665,23 +668,23 @@ The *places* are *generalized references* to data upon which *test-form* depends
 
 *→* 8 
 
+**9–16** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 (double-safely t) 
 
-&#9655; Correctable error in DOUBLE-SAFELY: The value of (NUMBERP X) must be non-NIL. &#9655; Restart options: 
+*.* Correctable error in DOUBLE-SAFELY: The value of (NUMBERP X) must be non-NIL. *.* Restart options: 
 
-&#9655; 1: You will be prompted for one or more new values. 
+*.* 1: You will be prompted for one or more new values. 
 
-&#9655; 2: Top level. 
+*.* 2: Top level. 
 
-&#9655; Debug&#62; :continue 1 
+*.* Debug> :continue 1 
 
-&#9655; Value for X: 7 
+*.* Value for X: 7 
 
 *→* 14 
 
@@ -727,9 +730,9 @@ If the *condition* is not handled, (invoke-debugger *condition*) is done. As a c
 
 Conditions **9–17**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **error** 
 
@@ -743,13 +746,13 @@ Conditions **9–17**
 
 (factorial -1) 
 
-&#9655; Error: -1 is not a valid argument to FACTORIAL. 
+*.* Error: -1 is not a valid argument to FACTORIAL. 
 
-&#9655; To continue, type :CONTINUE followed by an option number: 
+*.* To continue, type :CONTINUE followed by an option number: 
 
-&#9655; 1: Return to Lisp Toplevel. 
+*.* 1: Return to Lisp Toplevel. 
 
-&#9655; Debug&#62; 
+*.* Debug> 
 
 (setq a ’fred) 
 
@@ -757,15 +760,15 @@ Conditions **9–17**
 
 (if (numberp a) (1+ a) (error "~S is not a number." A)) 
 
-&#9655; Error: FRED is not a number. 
+*.* Error: FRED is not a number. 
 
-&#9655; To continue, type :CONTINUE followed by an option number: 
+*.* To continue, type :CONTINUE followed by an option number: 
 
-&#9655; 1: Return to Lisp Toplevel. 
+*.* 1: Return to Lisp Toplevel. 
 
-&#9655; Debug&#62; :Continue 1 
+*.* Debug> :Continue 1 
 
-&#9655; Return to Lisp Toplevel. 
+*.* Return to Lisp Toplevel. 
 
 (define-condition not-a-number (error) 
 
@@ -781,15 +784,15 @@ Conditions **9–17**
 
 (if (numberp a) (1+ a) (error ’not-a-number :argument a)) 
 
-&#9655; Error: FRED is not a number. 
+*.* Error: FRED is not a number. 
 
-&#9655; To continue, type :CONTINUE followed by an option number: 
+*.* To continue, type :CONTINUE followed by an option number: 
 
-&#9655; 1: Return to Lisp Toplevel. 
+*.* 1: Return to Lisp Toplevel. 
 
-&#9655; Debug&#62; :Continue 1 
+*.* Debug> :Continue 1 
 
-&#9655; Return to Lisp Toplevel. 
+*.* Return to Lisp Toplevel. 
 
 **Side Effects:** 
 
@@ -805,11 +808,11 @@ Signals an error of *type* **type-error** if *datum* and *arguments* are not *de
 
 **See Also:** 
 
-**cerror**, **signal**, **format**, **ignore-errors**, **\*break-on-signals\***, **handler-bind**, Section 9.1 (Condition 
+**cerror**, **signal**, **format**, **ignore-errors**, **\*break-on-signals\***, **handler-bind**, Section 9.1 (Condition **9–18** Programming Language—Common Lisp
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 System Concepts) 
 
@@ -855,9 +858,9 @@ If *datum* is a *condition*, *arguments* can be supplied, but are used only in c
 
 Conditions **9–19**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **cerror** 
 
@@ -869,15 +872,15 @@ Conditions **9–19**
 
 (real-sqrt -9) 
 
-&#9655; Correctable error in REAL-SQRT: Tried to take sqrt(-9). 
+*.* Correctable error in REAL-SQRT: Tried to take sqrt(-9). 
 
-&#9655; Restart options: 
+*.* Restart options: 
 
-&#9655; 1: Return sqrt(9) instead. 
+*.* 1: Return sqrt(9) instead. 
 
-&#9655; 2: Top level. 
+*.* 2: Top level. 
 
-&#9655; Debug&#62; :continue 1 
+*.* Debug> :continue 1 
 
 *→* 3.0 
 
@@ -905,23 +908,23 @@ Conditions **9–19**
 
 (assure-number ’a) 
 
-&#9655; Correctable error in ASSURE-NUMBER: A is not a number. 
+*.* Correctable error in ASSURE-NUMBER: A is not a number. 
 
-&#9655; Restart options: 
+*.* Restart options: 
 
-&#9655; 1: Enter a number. 
+*.* 1: Enter a number. 
 
-&#9655; 2: Top level. 
+*.* 2: Top level. 
 
-&#9655; Debug&#62; :continue 1 
+*.* Debug> :continue 1 
 
-&#9655; Type a number: 1/2 
+*.* Type a number: 1/2 
 
 *→* 1/2 
 
 (defun assure-large-number (n) 
 
-(loop (when (and (numberp n) (&#62; n 73)) (return n)) 
+(loop (when (and (numberp n) (> n 73)) (return n)) 
 
 (cerror "Enter a number~:[~; a bit larger than ~D~]." 
 
@@ -935,11 +938,11 @@ Conditions **9–19**
 
 (fresh-line))) 
 
+**9–20** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **cerror** 
 
@@ -949,33 +952,33 @@ Conditions **9–19**
 
 (assure-large-number ’a) 
 
-&#9655; Correctable error in ASSURE-LARGE-NUMBER: A is not a large number. 
+*.* Correctable error in ASSURE-LARGE-NUMBER: A is not a large number. 
 
-&#9655; Restart options: 
+*.* Restart options: 
 
-&#9655; 1: Enter a number. 
+*.* 1: Enter a number. 
 
-&#9655; 2: Top level. 
+*.* 2: Top level. 
 
-&#9655; Debug&#62; :continue 1 
+*.* Debug> :continue 1 
 
-&#9655; Type a large number: 88 
+*.* Type a large number: 88 
 
 *→* 88 
 
 (assure-large-number 37) 
 
-&#9655; Correctable error in ASSURE-LARGE-NUMBER: 37 is not a large number. 
+*.* Correctable error in ASSURE-LARGE-NUMBER: 37 is not a large number. 
 
-&#9655; Restart options: 
+*.* Restart options: 
 
-&#9655; 1: Enter a number a bit larger than 37. 
+*.* 1: Enter a number a bit larger than 37. 
 
-&#9655; 2: Top level. 
+*.* 2: Top level. 
 
-&#9655; Debug&#62; :continue 1 
+*.* Debug> :continue 1 
 
-&#9655; Type a large number: 259 
+*.* Type a large number: 259 
 
 *→* 259 
 
@@ -991,7 +994,7 @@ Conditions **9–19**
 
 (defun assure-large-number (n) 
 
-(loop (when (and (numberp n) (&#62; n 73)) (return n)) 
+(loop (when (and (numberp n) (> n 73)) (return n)) 
 
 (cerror "Enter a number~3\*~:[~; a bit larger than ~\*~D~]." 
 
@@ -1013,39 +1016,39 @@ Conditions **9–19**
 
 (assure-large-number ’a) 
 
-&#9655; Correctable error in ASSURE-LARGE-NUMBER: A is not a large number. 
+*.* Correctable error in ASSURE-LARGE-NUMBER: A is not a large number. 
 
-&#9655; Restart options: 
+*.* Restart options: 
 
-&#9655; 1: Enter a number. 
+*.* 1: Enter a number. 
 
 Conditions **9–21**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
-&#9655; 2: Top level. 
+*.* 2: Top level. 
 
-&#9655; Debug&#62; :continue 1 
+*.* Debug> :continue 1 
 
-&#9655; Type a large number: 88 
+*.* Type a large number: 88 
 
 *→* 88 
 
 (assure-large-number 37) 
 
-&#9655; Correctable error in ASSURE-LARGE-NUMBER: A is not a large number. 
+*.* Correctable error in ASSURE-LARGE-NUMBER: A is not a large number. 
 
-&#9655; Restart options: 
+*.* Restart options: 
 
-&#9655; 1: Enter a number a bit larger than 37. 
+*.* 1: Enter a number a bit larger than 37. 
 
-&#9655; 2: Top level. 
+*.* 2: Top level. 
 
-&#9655; Debug&#62; :continue 1 
+*.* Debug> :continue 1 
 
-&#9655; Type a large number: 259 
+*.* Type a large number: 259 
 
 *→* 259 
 
@@ -1083,11 +1086,11 @@ If *datum* is a *condition type* rather than a *string*, the **format** directiv
 
 *string*—a *string*; evaluated. 
 
+**9–22** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **check-type** 
 
@@ -1109,25 +1112,25 @@ The first time *place* is *evaluated*, it is *evaluated* by normal evaluation ru
 
 (check-type aardvarks (array \* (3))) 
 
-&#9655; Error: The value of AARDVARKS, (SAM HARRY FRED), 
+*.* Error: The value of AARDVARKS, (SAM HARRY FRED), 
 
-&#9655; is not a 3-long array. 
+*.* is not a 3-long array. 
 
-&#9655; To continue, type :CONTINUE followed by an option number: 
+*.* To continue, type :CONTINUE followed by an option number: 
 
-&#9655; 1: Specify a value to use instead. 
+*.* 1: Specify a value to use instead. 
 
-&#9655; 2: Return to Lisp Toplevel. 
+*.* 2: Return to Lisp Toplevel. 
 
-&#9655; Debug&#62; :CONTINUE 1 
+*.* Debug> :CONTINUE 1 
 
-&#9655; Use Value: #(SAM FRED HARRY) 
+*.* Use Value: #(SAM FRED HARRY) 
 
 *→* NIL 
 
 aardvarks 
 
-*→* #&#60;ARRAY-T-3 13571&#62; 
+*→* #<ARRAY-T-3 13571> 
 
 (map ’list #’identity aardvarks) 
 
@@ -1139,23 +1142,23 @@ aardvarks
 
 (check-type aardvark-count (integer 0 \*) "A positive integer") 
 
-&#9655; Error: The value of AARDVARK-COUNT, FOO, is not a positive integer. 
+*.* Error: The value of AARDVARK-COUNT, FOO, is not a positive integer. 
 
-&#9655; To continue, type :CONTINUE followed by an option number: 
+*.* To continue, type :CONTINUE followed by an option number: 
 
-&#9655; 1: Specify a value to use instead. 
+*.* 1: Specify a value to use instead. 
 
-&#9655; 2: Top level. 
+*.* 2: Top level. 
 
 Conditions **9–23**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **check-type** 
 
-&#9655; Debug&#62; :CONTINUE 2 
+*.* Debug> :CONTINUE 2 
 
 (defmacro define-adder (name amount) 
 
@@ -1169,33 +1172,33 @@ Conditions **9–23**
 
 (macroexpand ’(define-adder 7 7)) 
 
-&#9655; Error: The value of NAME, 7, is not a name for an adder function. &#9655; To continue, type :CONTINUE followed by an option number: 
+*.* Error: The value of NAME, 7, is not a name for an adder function. *.* To continue, type :CONTINUE followed by an option number: 
 
-&#9655; 1: Specify a value to use instead. 
+*.* 1: Specify a value to use instead. 
 
-&#9655; 2: Top level. 
+*.* 2: Top level. 
 
-&#9655; Debug&#62; :Continue 1 
+*.* Debug> :Continue 1 
 
-&#9655; Specify a value to use instead. 
+*.* Specify a value to use instead. 
 
-&#9655; Type a form to be evaluated and used instead: ’ADD7 
+*.* Type a form to be evaluated and used instead: ’ADD7 
 
 *→* (defun add7 (x) (+ x 7)) 
 
 (macroexpand ’(define-adder add5 something)) 
 
-&#9655; Error: The value of AMOUNT, SOMETHING, is not an integer. 
+*.* Error: The value of AMOUNT, SOMETHING, is not an integer. 
 
-&#9655; To continue, type :CONTINUE followed by an option number: 
+*.* To continue, type :CONTINUE followed by an option number: 
 
-&#9655; 1: Specify a value to use instead. 
+*.* 1: Specify a value to use instead. 
 
-&#9655; 2: Top level. 
+*.* 2: Top level. 
 
-&#9655; Debug&#62; :Continue 1 
+*.* Debug> :Continue 1 
 
-&#9655; Type a form to be evaluated and used instead: 5 
+*.* Type a form to be evaluated and used instead: 5 
 
 *→* (defun add5 (x) (+ x 5)) 
 
@@ -1219,11 +1222,11 @@ Section 9.1 (Condition System Concepts)
 
 (check-type *place typespec*) 
 
+**9–24** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 *≡* (assert (typep *place* ’*typespec*) (*place*) 
 
@@ -1261,9 +1264,9 @@ The *function* **invalid-method-error** is called automatically when a *method* 
 
 Whether **invalid-method-error** returns to its caller or exits via **throw** is *implementation-dependent*. Conditions **9–25**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Side Effects:** 
 
@@ -1309,11 +1312,11 @@ The debugger might be entered.
 
 **define-method-combination** 
 
+**9–26** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **signal** 
 
@@ -1393,9 +1396,9 @@ The debugger might be entered due to **\*break-on-signals\***.
 
 Conditions **9–27**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 Handlers for the condition being signaled might transfer control. 
 
@@ -1427,13 +1430,13 @@ The *type* **simple-condition** represents *conditions* that are signaled by **s
 
 **simple-condition-format-control**, **simple-condition-format-arguments** 
 
+**9–28** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
- 
-
-&#60;b&#62;&#60;sup&#62;simple-condition-format-control, simple&#60;/sup&#62; condition-format-arguments&#60;/b&#62; &#60;i&#62;Function&#60;/i&#62; 
+<b><sup>simple-condition-format-control, simple</sup> condition-format-arguments</b> <i>Function</i> 
 
 **Syntax:** 
 
@@ -1463,7 +1466,7 @@ The *type* **simple-condition** represents *conditions* that are signaled by **s
 
 :format-arguments ’(ho))) 
 
-*→* #&#60;SIMPLE-CONDITION 26223553&#62; 
+*→* #<SIMPLE-CONDITION 26223553> 
 
 (apply #’format nil (simple-condition-format-control foo) 
 
@@ -1487,9 +1490,9 @@ The *type* **simple-condition** represents *conditions* that are signaled by **s
 
 Conditions **9–29**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **warn** 
 
@@ -1531,7 +1534,7 @@ result))
 
 (foo most-positive-fixnum) 
 
-&#9655; Warning: You’re using very big numbers. 
+*.* Warning: You’re using very big numbers. 
 
 *→* 4294967294 
 
@@ -1541,23 +1544,23 @@ result))
 
 (foo most-positive-fixnum) 
 
-&#9655; Break: Caveat emptor. 
+*.* Break: Caveat emptor. 
 
-&#9655; To continue, type :CONTINUE followed by an option number. 
+*.* To continue, type :CONTINUE followed by an option number. 
 
-&#9655; 1: Return from Break. 
+*.* 1: Return from Break. 
 
-&#9655; 2: Abort to Lisp Toplevel. 
+*.* 2: Abort to Lisp Toplevel. 
 
-&#9655; Debug&#62; :continue 1 
+*.* Debug> :continue 1 
 
+**9–30** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
- 
-
-&#9655; Warning: You’re using very big numbers. 
+*.* Warning: You’re using very big numbers. 
 
 *→* 4294967294 
 
@@ -1593,9 +1596,9 @@ The *type* **simple-warning** represents *conditions* that are signaled by **war
 
 Conditions **9–31**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **invoke-debugger** *Function* 
 
@@ -1629,7 +1632,7 @@ To continue, type :CONTINUE followed by an option number:
 
 1: Return to Lisp Toplevel. 
 
-Debug&#62; 
+Debug> 
 
 **Side Effects:** 
 
@@ -1643,11 +1646,11 @@ Debug&#62;
 
 **error**, **break** 
 
+**9–32** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **break** 
 
@@ -1675,17 +1678,17 @@ If the **continue** *restart* is used while in the debugger, **break** immediate
 
 (break "You got here with arguments: ~:S." ’(FOO 37 A)) 
 
-&#9655; BREAK: You got here with these arguments: FOO, 37, A. 
+*.* BREAK: You got here with these arguments: FOO, 37, A. 
 
-&#9655; To continue, type :CONTINUE followed by an option number: 
+*.* To continue, type :CONTINUE followed by an option number: 
 
-&#9655; 1: Return from BREAK. 
+*.* 1: Return from BREAK. 
 
-&#9655; 2: Top level. 
+*.* 2: Top level. 
 
-&#9655; Debug&#62; :CONTINUE 1 
+*.* Debug> :CONTINUE 1 
 
-&#9655; Return from BREAK. 
+*.* Return from BREAK. 
 
 *→* NIL 
 
@@ -1707,9 +1710,9 @@ The debugger is entered.
 
 Conditions **9–33**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 The user interface aspects of **break** and **cerror** are permitted to vary more widely, in order to accomodate the interface needs of the *implementation*. For example, it is permissible for a *Lisp read-eval-print loop* to be entered by **break** rather than the conventional debugger. 
 
@@ -1763,11 +1766,11 @@ When the *value* of **\*debugger-hook\*** is *non-nil*, it is called prior to no
 
 (setq i (read)) 
 
+**9–34** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 (fresh-line)) 
 
@@ -1789,27 +1792,27 @@ When the *value* of **\*debugger-hook\*** is *non-nil*, it is called prior to no
 
 (+ 3 ’a)) 
 
-&#9655; Fooey: The argument to +, A, is not a number. 
+*.* Fooey: The argument to +, A, is not a number. 
 
-&#9655; [1] Supply a replacement for A. 
+*.* [1] Supply a replacement for A. 
 
-&#9655; [2] Return to Cloe Toplevel. 
+*.* [2] Return to Cloe Toplevel. 
 
-&#9655; Choice: 1 
+*.* Choice: 1 
 
-&#9655; Form to evaluate and use: (+ 5 ’b) 
+*.* Form to evaluate and use: (+ 5 ’b) 
 
-&#9655; Fooey: The argument to +, B, is not a number. 
+*.* Fooey: The argument to +, B, is not a number. 
 
-&#9655; [1] Supply a replacement for B. 
+*.* [1] Supply a replacement for B. 
 
-&#9655; [2] Supply a replacement for A. 
+*.* [2] Supply a replacement for A. 
 
-&#9655; [3] Return to Cloe Toplevel. 
+*.* [3] Return to Cloe Toplevel. 
 
-&#9655; Choice: 1 
+*.* Choice: 1 
 
-&#9655; Form to evaluate and use: 1 
+*.* Form to evaluate and use: 1 
 
 *→* 9 
 
@@ -1833,9 +1836,9 @@ a *type specifier* .
 
 Conditions **9–35**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 *∗***break-on-signals***∗* 
 
@@ -1851,55 +1854,55 @@ The **continue** *restart* can be used to continue with the normal *signaling* p
 
 (ignore-errors (error ’simple-error :format-control "Fooey!")) 
 
-*→* NIL, #&#60;SIMPLE-ERROR 32207172&#62; 
+*→* NIL, #<SIMPLE-ERROR 32207172> 
 
 (let ((\*break-on-signals\* ’error)) 
 
 (ignore-errors (error ’simple-error :format-control "Fooey!"))) 
 
-&#9655; Break: Fooey! 
+*.* Break: Fooey! 
 
-&#9655; BREAK entered because of \*BREAK-ON-SIGNALS\*. 
+*.* BREAK entered because of \*BREAK-ON-SIGNALS\*. 
 
-&#9655; To continue, type :CONTINUE followed by an option number: 
+*.* To continue, type :CONTINUE followed by an option number: 
 
-&#9655; 1: Continue to signal. 
+*.* 1: Continue to signal. 
 
-&#9655; 2: Top level. 
+*.* 2: Top level. 
 
-&#9655; Debug&#62; :CONTINUE 1 
+*.* Debug> :CONTINUE 1 
 
-&#9655; Continue to signal. 
+*.* Continue to signal. 
 
-*→* NIL, #&#60;SIMPLE-ERROR 32212257&#62; 
+*→* NIL, #<SIMPLE-ERROR 32212257> 
 
 (let ((\*break-on-signals\* ’error)) 
 
 (error ’simple-error :format-control "Fooey!")) 
 
-&#9655; Break: Fooey! 
+*.* Break: Fooey! 
 
-&#9655; BREAK entered because of \*BREAK-ON-SIGNALS\*. 
+*.* BREAK entered because of \*BREAK-ON-SIGNALS\*. 
 
-&#9655; To continue, type :CONTINUE followed by an option number: 
+*.* To continue, type :CONTINUE followed by an option number: 
 
-&#9655; 1: Continue to signal. 
+*.* 1: Continue to signal. 
 
-&#9655; 2: Top level. 
+*.* 2: Top level. 
 
-&#9655; Debug&#62; :CONTINUE 1 
+*.* Debug> :CONTINUE 1 
 
-&#9655; Continue to signal. 
+*.* Continue to signal. 
 
-&#9655; Error: Fooey! 
+*.* Error: Fooey! 
 
-&#9655; To continue, type :CONTINUE followed by an option number: 
+*.* To continue, type :CONTINUE followed by an option number: 
 
-&#9655; 1: Top level. 
+*.* 1: Top level. 
 
-&#9655; Debug&#62; :CONTINUE 1 
+*.* Debug> :CONTINUE 1 
 
-&#9655; Top level. 
+*.* Top level. 
 
 **See Also:** 
 
@@ -1909,11 +1912,11 @@ The **continue** *restart* can be used to continue with the normal *signaling* p
 
 **\*break-on-signals\*** is intended primarily for use in debugging code that does signaling. When setting **\*break-on-signals\***, the user is encouraged to choose the most restrictive specification 
 
+**9–36** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 that suffices. Setting **\*break-on-signals\*** effectively violates the modular handling of *condition* signaling. In practice, the complete effect of setting **\*break-on-signals\*** might be unpredictable in some cases since the user might not be aware of the variety or number of calls to **signal** that are used in code called only incidentally. 
 
@@ -1923,7 +1926,7 @@ that suffices. Setting **\*break-on-signals\*** effectively violates the modular
 
 **Syntax:** 
 
-**handler-bind** (*&#123;↓binding&#125;*\*) *&#123;form&#125;*\* *→ &#123;result&#125;*\* 
+**handler-bind** (*{↓binding}*\*) *{form}*\* *→ {result}*\* 
 
 *binding::*=(*type handler*) 
 
@@ -1955,9 +1958,9 @@ In the following code, if an unbound variable error is signaled in the body (and
 
 Conditions **9–37**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 (handler-bind ((unbound-variable #’(lambda ...)) 
 
@@ -1987,7 +1990,7 @@ If any other kind of error is signaled, the second function is called. In either
 
 (+ 1 2)) 
 
-&#9655; Bar. 
+*.* Bar. 
 
 *→* (1 NIL 3) 
 
@@ -2001,13 +2004,13 @@ Note that “Foo.” is not printed because the condition made by **signal** is 
 
 **Syntax:** 
 
-**handler-case** *expression* [[ *&#123;↓error-clause&#125;*\* *| ↓no-error-clause* ]] *→ &#123;result&#125;*\* 
+**handler-case** *expression* [[ *{↓error-clause}*\* *| ↓no-error-clause* ]] *→ {result}*\* 
 
 *clause::*=*↓error-clause | ↓no-error-clause* 
 
-*error-clause::*=(*typespec* ([*var*]) *&#123;declaration&#125;*\* *&#123;form&#125;*\*) 
+*error-clause::*=(*typespec* ([*var*]) *{declaration}*\* *{form}*\*) 
 
-*no-error-clause::*=(:no-error *lambda-list &#123;declaration&#125;*\* *&#123;form&#125;*\*) 
+*no-error-clause::*=(:no-error *lambda-list {declaration}*\* *{form}*\*) 
 
 **Arguments and Values:** 
 
@@ -2015,11 +2018,11 @@ Note that “Foo.” is not printed because the condition made by **signal** is 
 
 *typespec*—a *type specifier* . 
 
+**9–38** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **handler-case** 
 
@@ -2055,13 +2058,13 @@ If *var* is not needed, it can be omitted. That is, a *clause* such as:
 
 can be written (*typespec* () *form*). 
 
-If there are no *forms* in a selected *clause*, the case, and therefore **handler-case**, returns **nil**. If execution of *expression* returns normally and no *no-error-clause* exists, the values returned by *expression* are returned by **handler-case**. If execution of *expression* returns normally and a *no-error-clause* does exist, the values returned are used as arguments to the function described by constructing (lambda *lambda-list &#123;form&#125;*\*) from the *no-error-clause*, and the *values* of that function call are returned by **handler-case**. The handlers which were established around the *expression* are no longer active at the time of this call. 
+If there are no *forms* in a selected *clause*, the case, and therefore **handler-case**, returns **nil**. If execution of *expression* returns normally and no *no-error-clause* exists, the values returned by *expression* are returned by **handler-case**. If execution of *expression* returns normally and a *no-error-clause* does exist, the values returned are used as arguments to the function described by constructing (lambda *lambda-list {form}*\*) from the *no-error-clause*, and the *values* of that function call are returned by **handler-case**. The handlers which were established around the *expression* are no longer active at the time of this call. 
 
 Conditions **9–39**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **handler-case** 
 
@@ -2087,7 +2090,7 @@ Conditions **9–39**
 
 *→* ASSESS-CONDITION 
 
-(assess-condition (make-condition ’stream-error :stream \*terminal-io\*)) *→* "#&#60;STREAM-ERROR 12352256&#62; looks especially bad." 
+(assess-condition (make-condition ’stream-error :stream \*terminal-io\*)) *→* "#<STREAM-ERROR 12352256> looks especially bad." 
 
 (define-condition random-condition (condition) () 
 
@@ -2141,11 +2144,11 @@ is approximately equivalent to:
 
 (handler-case form 
 
+**9–40** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 (*type1 (var1)* . *body1*) 
 
@@ -2171,7 +2174,7 @@ is approximately equivalent to:
 
 **Syntax:** 
 
-**ignore-errors** *&#123;form&#125;*\* *→ &#123;result&#125;*\* 
+**ignore-errors** *{form}*\* *→ {result}*\* 
 
 **Arguments and Values:** 
 
@@ -2205,13 +2208,13 @@ win))
 
 Conditions **9–41**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 (load-init-file "no-such-program") 
 
-&#9655; Init file failed to load. 
+*.* Init file failed to load. 
 
 NIL 
 
@@ -2235,25 +2238,25 @@ Because the second return value is a *condition* in the exceptional case, it is 
 
 **Syntax:** 
 
-**define-condition** *name* (*&#123;parent-type&#125;*\*) (*&#123;↓slot-spec&#125;*\*) *&#123;option&#125;*\* 
+**define-condition** *name* (*{parent-type}*\*) (*{↓slot-spec}*\*) *{option}*\* 
 
 *→ name* 
 
 *slot-spec::*=*slot-name |* (*slot-name ↓slot-option*) 
 
-*slot-option::*=[[ *&#123;*:reader *symbol&#125;*\* *|* 
+*slot-option::*=[[ *{*:reader *symbol}*\* *|* 
 
-*&#123;*:writer *↓function-name&#125;*\* *|* 
+*{*:writer *↓function-name}*\* *|* 
 
-*&#123;*:accessor *symbol&#125;*\* *|* 
+*{*:accessor *symbol}*\* *|* 
 
-*&#123;*:allocation *↓allocation-type&#125; |* 
+*{*:allocation *↓allocation-type} |* 
 
-*&#123;*:initarg *symbol&#125;*\* *|* 
+*{*:initarg *symbol}*\* *|* 
 
-*&#123;*:initform *form&#125; |* 
+*{*:initform *form} |* 
 
-*&#123;*:type *type-specifier&#125;* ]] 
+*{*:type *type-specifier}* ]] 
 
 *option::*=[[(:default-initargs . *initarg-list*) *|* 
 
@@ -2261,15 +2264,15 @@ Because the second return value is a *condition* in the exceptional case, it is 
 
 (:report *report-name*) ]] 
 
+**9–42** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **define-condition** 
 
-*function-name::*=*&#123;symbol |* (setf *symbol*)*&#125;* 
+*function-name::*=*{symbol |* (setf *symbol*)*}* 
 
 *allocation-type::*=:instance *|* :class 
 
@@ -2315,9 +2318,9 @@ Because the second return value is a *condition* in the exceptional case, it is 
 
 Conditions **9–43**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **define-condition** 
 
@@ -2353,11 +2356,11 @@ No implementation is permitted to extend the syntax of **define-condition** to a
 
 The :initarg slot option declares an initialization argument named by its *symbol* argument and specifies that this initialization argument initializes the given *slot*. If the initialization 
 
+**9–44** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **define-condition** 
 
@@ -2399,9 +2402,9 @@ The consequences are unspecifed if an attempt is made to *read* a *slot* that ha
 
 The consequences are unspecified if an attempt is made to assign the *slots* by using **setf**. Conditions **9–45**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **define-condition** 
 
@@ -2465,11 +2468,11 @@ This defines a still more specific condition, built upon machine-not-available-e
 
 (machine-not-available-error) 
 
+**9–46** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 ((machine-name :initform "mc.lcs.mit.edu"))) 
 
@@ -2515,11 +2518,11 @@ Note that since no :report clause was given, the information inherited from mach
 
 :flavor ’chocolate) 
 
-*→* #&#60;ATE-TOO-MUCH-ICE-CREAM 32236101&#62; 
+*→* #<ATE-TOO-MUCH-ICE-CREAM 32236101> 
 
 (format t "~A" \*) 
 
-&#9655; FRED ate too much CHOCOLATE ice-cream 
+*.* FRED ate too much CHOCOLATE ice-cream 
 
 *→* NIL 
 
@@ -2543,9 +2546,9 @@ Note that since no :report clause was given, the information inherited from mach
 
 Conditions **9–47**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Description:** 
 
@@ -2561,23 +2564,23 @@ Constructs and returns a *condition* of type *type* using *slot-initializations*
 
 :format-arguments (list (incf \*oops-count\*)))) 
 
-*→* #&#60;SIMPLE-ERROR 32245104&#62; 
+*→* #<SIMPLE-ERROR 32245104> 
 
 (format t "~&~A~%" a) 
 
-&#9655; This is your first error. 
+*.* This is your first error. 
 
 *→* NIL 
 
 (error a) 
 
-&#9655; Error: This is your first error. 
+*.* Error: This is your first error. 
 
-&#9655; To continue, type :CONTINUE followed by an option number: 
+*.* To continue, type :CONTINUE followed by an option number: 
 
-&#9655; 1: Return to Lisp Toplevel. 
+*.* 1: Return to Lisp Toplevel. 
 
-&#9655; Debug&#62; 
+*.* Debug> 
 
 **Affected By:** 
 
@@ -2599,11 +2602,11 @@ An *object* of *type* **restart** represents a *function* that can be called to 
 
 An *implementation* is free to implement a *restart* in whatever manner is most convenient; a *restart* has only *dynamic extent* relative to the scope of the binding *form* which *establishes* it. 
 
+**9–48** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **compute-restarts** 
 
@@ -2647,7 +2650,7 @@ Implementations are permitted, but not required, to return *distinct lists* from
 
 (let ((n nil) (k (length restarts))) 
 
-(loop (when (and (typep n ’integer) (&#62;= n 0) (&#60; n k)) 
+(loop (when (and (typep n ’integer) (>= n 0) (< n k)) 
 
 (return t)) 
 
@@ -2661,9 +2664,9 @@ Implementations are permitted, but not required, to return *distinct lists* from
 
 Conditions **9–49**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 (restart-case (invoke-a-restart) 
 
@@ -2677,19 +2680,19 @@ Conditions **9–49**
 
 (two () ’II)) 
 
-&#9655; 0: ONE 
+*.* 0: ONE 
 
-&#9655; 1: TWO 
+*.* 1: TWO 
 
-&#9655; 2: Who knows? 
+*.* 2: Who knows? 
 
-&#9655; 3: ONE 
+*.* 3: ONE 
 
-&#9655; 4: TWO 
+*.* 4: TWO 
 
-&#9655; 5: Return to Lisp Toplevel. 
+*.* 5: Return to Lisp Toplevel. 
 
-&#9655; Option: 4 
+*.* Option: 4 
 
 *→* II 
 
@@ -2725,11 +2728,11 @@ restart
 
 **Description:** 
 
-**find-restart** searches for a particular *restart* in the current *dynamic environment*. 
+**find-restart** searches for a particular *restart* in the current *dynamic environment*. **9–50** Programming Language—Common Lisp
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 When *condition* is *non-nil*, only those *restarts* are considered that are either explicitly associated with that *condition*, or not associated with any *condition*; that is, the excluded *restarts* are those that are associated with a non-empty set of *conditions* of which the given *condition* is not an *element*. If *condition* is **nil**, all *restarts* are considered. 
 
@@ -2745,7 +2748,7 @@ If *identifier* is a currently active restart, then it is returned. Otherwise, *
 
 (my-restart () nil)) 
 
-&#9655; #&#60;RESTART 32307325&#62; is named MY-RESTART 
+*.* #<RESTART 32307325> is named MY-RESTART 
 
 *→* NIL 
 
@@ -2775,13 +2778,13 @@ Although anonymous restarts have a name of **nil**, the consequences are unspeci
 
 **Syntax:** 
 
-**invoke-restart** *restart* &rest *arguments → &#123;result&#125;*\* 
+**invoke-restart** *restart* &rest *arguments → {result}*\* 
 
 Conditions **9–51**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Arguments and Values:** 
 
@@ -2801,15 +2804,15 @@ Calls the *function* associated with *restart*, passing *arguments* to it. *Rest
 
 (foo ’seven) 
 
-&#9655; Error: The value SEVEN was not of type NUMBER. 
+*.* Error: The value SEVEN was not of type NUMBER. 
 
-&#9655; To continue, type :CONTINUE followed by an option number: 
+*.* To continue, type :CONTINUE followed by an option number: 
 
-&#9655; 1: Specify a different value to use. 
+*.* 1: Specify a different value to use. 
 
-&#9655; 2: Return to Lisp Toplevel. 
+*.* 2: Return to Lisp Toplevel. 
 
-&#9655; Debug&#62; (invoke-restart ’store-value 7) 
+*.* Debug> (invoke-restart ’store-value 7) 
 
 *→* 10 
 
@@ -2835,11 +2838,11 @@ The most common use for **invoke-restart** is in a *handler* . It might be used 
 
 *Restart functions* call **invoke-restart**, not vice versa. That is, *invoke-restart* provides primitive functionality, and *restart functions* are non-essential “syntactic sugar.” 
 
+**9–52** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **invoke-restart-interactively** 
 
@@ -2847,7 +2850,7 @@ The most common use for **invoke-restart** is in a *handler* . It might be used 
 
 **Syntax:** 
 
-**invoke-restart-interactively** *restart → &#123;result&#125;*\* 
+**invoke-restart-interactively** *restart → {result}*\* 
 
 **Arguments and Values:** 
 
@@ -2871,17 +2874,17 @@ Once the arguments have been determined, **invoke-restart-interactively** execut
 
 (add3 ’seven) 
 
-&#9655; Error: The value SEVEN was not of type NUMBER. 
+*.* Error: The value SEVEN was not of type NUMBER. 
 
-&#9655; To continue, type :CONTINUE followed by an option number: 
+*.* To continue, type :CONTINUE followed by an option number: 
 
-&#9655; 1: Specify a different value to use. 
+*.* 1: Specify a different value to use. 
 
-&#9655; 2: Return to Lisp Toplevel. 
+*.* 2: Return to Lisp Toplevel. 
 
-&#9655; Debug&#62; (invoke-restart-interactively ’store-value) 
+*.* Debug> (invoke-restart-interactively ’store-value) 
 
-&#9655; Type a form to evaluate and use: 7 
+*.* Type a form to evaluate and use: 7 
 
 *→* 10 
 
@@ -2897,9 +2900,9 @@ A non-local transfer of control might be done by the restart.
 
 Conditions **9–53**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Exceptional Situations:** 
 
@@ -2917,9 +2920,9 @@ If *restart* is not valid, an error of *type* **control-error** is signaled.
 
 **Syntax:** 
 
-**restart-bind** (*&#123;*(*name function &#123;↓key-val-pair&#125;*\*)*&#125;*) *&#123;form&#125;*\* 
+**restart-bind** (*{*(*name function {↓key-val-pair}*\*)*}*) *{form}*\* 
 
-*→ &#123;result&#125;*\* 
+*→ {result}*\* 
 
 *key-val-pair::*=:interactive-function *interactive-function |* 
 
@@ -2949,11 +2952,11 @@ If *restart* is not valid, an error of *type* **control-error** is signaled.
 
 If a *name* is **nil**, it indicates an anonymous restart; if a *name* is a *non-nil symbol*, it indicates a named restart. 
 
+**9–54** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **restart-bind** 
 
@@ -2987,9 +2990,9 @@ In the case of interactive invocation, the result is dependent on the value of :
 
 Conditions **9–55**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **See Also:** 
 
@@ -3003,11 +3006,11 @@ Conditions **9–55**
 
 **Syntax:** 
 
-**restart-case** *restartable-form &#123;↓clause&#125; → &#123;result&#125;*\* 
+**restart-case** *restartable-form {↓clause} → {result}*\* 
 
 *clause::*=(*case-name lambda-list* 
 
-[[ :interactive *interactive-expression |* :report *report-expression |* :test *test-expression* ]] *&#123;declaration&#125;*\* *&#123;form&#125;*\*) 
+[[ :interactive *interactive-expression |* :report *report-expression |* :test *test-expression* ]] *{declaration}*\* *{form}*\*) 
 
 **Arguments and Values:** 
 
@@ -3033,11 +3036,11 @@ Conditions **9–55**
 
 **restart-case** evaluates *restartable-form* in a *dynamic environment* where the clauses have special meanings as points to which control may be transferred. If *restartable-form* finishes executing and returns any values, all values returned are returned by **restart-case** and processing has completed. While *restartable-form* is executing, any code may transfer control to one of the clauses (see 
 
+**9–56** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **restart-case** 
 
@@ -3073,9 +3076,9 @@ If a named restart is asked to report but no report information has been supplie
 
 Conditions **9–57**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **restart-case** 
 
@@ -3141,11 +3144,11 @@ If the *restartable-form* is a *list* whose *car* is any of the *symbols* **sign
 
 (defun all-start-with-same-letter (symbol1 symbol2 symbol3) 
 
+**9–58** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **restart-case** 
 
@@ -3167,9 +3170,9 @@ If the *restartable-form* is a *list* whose *car* is any of the *symbols* **sign
 
 Conditions **9–59**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **restart-case** 
 
@@ -3215,19 +3218,19 @@ Conditions **9–59**
 
 *→* VERIFY-OR-FIX-PERFECT-SUNDAE 
 
-(verify-or-fix-perfect-sundae ’vanilla ’caramel ’cherry) &#9655; Error: Bad tasting sundae with VANILLA, CARAMEL, and CHERRY. &#9655; To continue, type :CONTINUE followed by an option number: &#9655; 1: Use a new ice cream. 
+(verify-or-fix-perfect-sundae ’vanilla ’caramel ’cherry) *.* Error: Bad tasting sundae with VANILLA, CARAMEL, and CHERRY. *.* To continue, type :CONTINUE followed by an option number: *.* 1: Use a new ice cream. 
 
-&#9655; 2: Use a new sauce. 
+*.* 2: Use a new sauce. 
 
-&#9655; 3: Use a new topping. 
+*.* 3: Use a new topping. 
 
-&#9655; 4: Return to Lisp Toplevel. 
+*.* 4: Return to Lisp Toplevel. 
 
-&#9655; Debug&#62; :continue 1 
+*.* Debug> :continue 1 
 
-&#9655; Use a new ice cream. 
+*.* Use a new ice cream. 
 
-&#9655; Enter a new ice cream: ’chocolate 
+*.* Enter a new ice cream: ’chocolate 
 
 *→* CHOCOLATE, CARAMEL, CHERRY 
 
@@ -3245,11 +3248,11 @@ Conditions **9–59**
 
 is essentially equivalent to 
 
+**9–60** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 (block #1=#:g0001 
 
@@ -3315,9 +3318,9 @@ Unnamed restarts are generally only useful interactively and an interactive opti
 
 Conditions **9–61**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Arguments and Values:** 
 
@@ -3359,9 +3362,9 @@ collect (restart-name restart))
 
 **Syntax:** 
 
-**with-condition-restarts** *condition-form restarts-form &#123;form&#125;*\* 
+**with-condition-restarts** *condition-form restarts-form {form}*\* 
 
-*→ &#123;result&#125;*\* 
+*→ {result}*\* 
 
 **Arguments and Values:** 
 
@@ -3377,11 +3380,11 @@ collect (restart-name restart))
 
 *results*—the *values* returned by *forms*. 
 
+**9–62** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **Description:** 
 
@@ -3401,9 +3404,9 @@ Usually this *macro* is not used explicitly in code, since **restart-case** hand
 
 **Syntax:** 
 
-**with-simple-restart** (*name format-control &#123;format-argument&#125;*\*) *&#123;form&#125;*\* 
+**with-simple-restart** (*name format-control {format-argument}*\*) *{form}*\* 
 
-*→ &#123;result&#125;*\* 
+*→ {result}*\* 
 
 **Arguments and Values:** 
 
@@ -3429,9 +3432,9 @@ The *format-control* and *format-arguments* are used report the *restart*.
 
 Conditions **9–63**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **with-simple-restart** 
 
@@ -3455,21 +3458,21 @@ Conditions **9–63**
 
 (+ ’a 3) 
 
-&#9655; Error: The argument, A, to the function + was of the wrong type. &#9655; The function expected a number. 
+*.* Error: The argument, A, to the function + was of the wrong type. *.* The function expected a number. 
 
-&#9655; To continue, type :CONTINUE followed by an option number: 
+*.* To continue, type :CONTINUE followed by an option number: 
 
-&#9655; 1: Specify a value to use this time. 
+*.* 1: Specify a value to use this time. 
 
-&#9655; 2: Return to command level 1. 
+*.* 2: Return to command level 1. 
 
-&#9655; 3: Exit command level 1. 
+*.* 3: Exit command level 1. 
 
-&#9655; 4: Return to Lisp Toplevel. 
+*.* 4: Return to Lisp Toplevel. 
 
 (defun compute-fixnum-power-of-2 (x) 
 
-(with-simple-restart (nil "Give up on computing 2&#60;i&#62;&#60;sup&#62;∧&#60;/sup&#62;&#60;/i&#62;~D." x) 
+(with-simple-restart (nil "Give up on computing 2<i><sup>∧</sup></i>~D." x) 
 
 (let ((result 1)) 
 
@@ -3495,15 +3498,15 @@ COMPUTE-POWER-OF-2
 
 (compute-power-of-2 10000) 
 
-&#9655; Error: Power of 2 is too large. 
+*.* Error: Power of 2 is too large. 
 
-&#9655; To continue, type :CONTINUE followed by an option number. 
+*.* To continue, type :CONTINUE followed by an option number. 
 
-&#60;i&#62;.&#60;/i&#62; 1: Give up on computing 2&#60;i&#62;&#60;sup&#62;∧&#60;/sup&#62;&#60;/i&#62;10000. 
+<i>.</i> 1: Give up on computing 2<i><sup>∧</sup></i>10000. 
 
-&#9655; 2: Return to Lisp Toplevel 
+*.* 2: Return to Lisp Toplevel 
 
-&#9655; Debug&#62; :continue 1 
+*.* Debug> :continue 1 
 
 *→* SOMETHING-BIG 
 
@@ -3513,11 +3516,11 @@ COMPUTE-POWER-OF-2
 
 **Notes:** 
 
-**with-simple-restart** is shorthand for one of the most common uses of **restart-case**. 
+**with-simple-restart** is shorthand for one of the most common uses of **restart-case**. **9–64** Programming Language—Common Lisp
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **with-simple-restart** could be defined by: 
 
@@ -3557,9 +3560,9 @@ Section 9.1.4.2 (Restarts), Section 9.1.4.2.2 (Interfaces to Restarts), **invoke
 
 Conditions **9–65**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **continue** *Restart* 
 
@@ -3615,11 +3618,11 @@ This *restart* is established by **warn** so that *handlers* of **warning** *con
 
 (let ((r (find-restart ’muffle-warning c))) 
 
+**9–66** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 (when r 
 
@@ -3655,15 +3658,15 @@ This *restart* is established by **warn** so that *handlers* of **warning** *con
 
 (warn "Situation #3."))) 
 
-&#9655; Warning: Situation #2. 
+*.* Warning: Situation #2. 
 
-*→* (#&#60;SIMPLE-WARNING 42744421&#62; #&#60;SIMPLE-WARNING 42744365&#62;) 
+*→* (#<SIMPLE-WARNING 42744421> #<SIMPLE-WARNING 42744365>) 
 
 (dolist (s saved) (format t "~&~A~%" s)) 
 
-&#9655; Situation #3. 
+*.* Situation #3. 
 
-&#9655; Situation #1. 
+*.* Situation #1. 
 
 *→* NIL 
 
@@ -3693,9 +3696,9 @@ The **store-value** *restart* is generally used by *handlers* trying to recover 
 
 Conditions **9–67**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 (type-error-expected-type c)))) 
 
@@ -3729,7 +3732,7 @@ The **use-value** *restart* is generally used by *handlers* trying to recover fr
 
 Section 9.1.4.2 (Restarts), Section 9.1.4.2.2 (Interfaces to Restarts), **invoke-restart**, **use-value** (*function*), **store-value** (*function* and *restart*) 
 
-&#60;b&#62;&#60;sup&#62;abort, continue, muffle-warning, store-value, use&#60;/sup&#62; value&#60;/b&#62; &#60;i&#62;Function&#60;/i&#62; 
+<b><sup>abort, continue, muffle-warning, store-value, use</sup> value</b> <i>Function</i> 
 
 **Syntax:** 
 
@@ -3743,11 +3746,11 @@ Section 9.1.4.2 (Restarts), Section 9.1.4.2.2 (Interfaces to Restarts), **invoke
 
 **use-value** *value* &optional *condition →* **nil** 
 
+**9–68** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **abort, continue, muffle-warning, store-value, use-value** 
 
@@ -3779,7 +3782,7 @@ When *condition* is *non-nil*, only those *restarts* are considered that are eit
 
 (abort-on-error (error "You lose.")) 
 
-&#9655; Returned to Lisp Top Level. 
+*.* Returned to Lisp Top Level. 
 
 ;;; Example of the CONTINUE restart 
 
@@ -3797,25 +3800,25 @@ When *condition* is *non-nil*, only those *restarts* are considered that are eit
 
 (real-sqrt -9) 
 
-&#9655; Error: Tried to take sqrt(-9). 
+*.* Error: Tried to take sqrt(-9). 
 
-&#9655; To continue, type :CONTINUE followed by an option number: 
+*.* To continue, type :CONTINUE followed by an option number: 
 
-&#9655; 1: Return sqrt(9) instead. 
+*.* 1: Return sqrt(9) instead. 
 
-&#9655; 2: Return to Lisp Toplevel. 
+*.* 2: Return to Lisp Toplevel. 
 
-&#9655; Debug&#62; (continue) 
+*.* Debug> (continue) 
 
-&#9655; Return sqrt(9) instead. 
+*.* Return sqrt(9) instead. 
 
 *→* 3 
 
 Conditions **9–69**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **abort, continue, muffle-warning, store-value, use-value** 
 
@@ -3841,13 +3844,13 @@ Conditions **9–69**
 
 (count-down 3) 
 
-&#9655; 3 
+*.* 3 
 
-&#9655; 2 
+*.* 2 
 
-&#9655; Warning: Almost done 
+*.* Warning: Almost done 
 
-&#9655; 1 
+*.* 1 
 
 *→* DONE 
 
@@ -3869,11 +3872,11 @@ Conditions **9–69**
 
 (ignore-warnings-while-counting 3) 
 
-&#9655; 3 
+*.* 3 
 
-&#9655; 2 
+*.* 2 
 
-&#9655; 1 
+*.* 1 
 
 *→* DONE 
 
@@ -3899,11 +3902,11 @@ Conditions **9–69**
 
 value) 
 
+**9–70** Programming Language—Common Lisp
 
+Version 15.17R, X3J13/94-101R. 
 
- 
-
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **abort, continue, muffle-warning, store-value, use-value** 
 
@@ -3921,33 +3924,33 @@ value)
 
 (careful-symbol-value ’a) 
 
-&#9655; Error: A is not bound. 
+*.* Error: A is not bound. 
 
-&#9655; To continue, type :CONTINUE followed by an option number. 
+*.* To continue, type :CONTINUE followed by an option number. 
 
-&#9655; 1: Specify a value to use this time. 
+*.* 1: Specify a value to use this time. 
 
-&#9655; 2: Specify a value to store and use in the future. 
+*.* 2: Specify a value to store and use in the future. 
 
-&#9655; 3: Return to Lisp Toplevel. 
+*.* 3: Return to Lisp Toplevel. 
 
-&#9655; Debug&#62; (use-value 12) 
+*.* Debug> (use-value 12) 
 
 *→* 12 
 
 (careful-symbol-value ’a) 
 
-&#9655; Error: A is not bound. 
+*.* Error: A is not bound. 
 
-&#9655; To continue, type :CONTINUE followed by an option number. 
+*.* To continue, type :CONTINUE followed by an option number. 
 
-&#9655; 1: Specify a value to use this time. 
+*.* 1: Specify a value to use this time. 
 
-&#9655; 2: Specify a value to store and use in the future. 
+*.* 2: Specify a value to store and use in the future. 
 
-&#9655; 3: Return to Lisp Toplevel. 
+*.* 3: Return to Lisp Toplevel. 
 
-&#9655; Debug&#62; (store-value 24) 
+*.* Debug> (store-value 24) 
 
 *→* 24 
 
@@ -3983,9 +3986,9 @@ A transfer of control may occur if an appropriate *restart* is available, or (in
 
 Each of these functions can be affected by the presence of a *restart* having the same name. Conditions **9–71**
 
- 
+Version 15.17R, X3J13/94-101R. 
 
- 
+Fri 12-Aug-1994 6:35pm EDT 
 
 **abort, continue, muffle-warning, store-value, use-value** 
 
@@ -4005,4 +4008,4 @@ If an appropriate **abort** *restart* is not available for the *function* **abor
 
 (continue) *≡* (let ((r (find-restart ’continue))) (if r (invoke-restart r))) (use-value *x*) *≡* (let ((r (find-restart ’use-value))) (if r (invoke-restart r *x*))) (store-value x) *≡* (let ((r (find-restart ’store-value))) (if r (invoke-restart r *x*))) 
 
-No functions defined in this specification are required to provide a **use-value** *restart*. 
+No functions defined in this specification are required to provide a **use-value** *restart*. **9–72** Programming Language—Common Lisp

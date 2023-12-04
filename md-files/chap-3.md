@@ -2,7 +2,7 @@
 
 
 
- 
+**Programming Language—Common Lisp** 
 
 **3. Evaluation and Compilation**   
 
@@ -114,13 +114,13 @@ If a *form* is a *symbol* that is not a *symbol macro*, then it is the *name* of
 
 
 
-and *constant variables*. A *variable* can store one *object*. The main operations on a *variable* are to *read* &#60;sub&#62;1&#60;/sub&#62; and to *write*&#60;sub&#62;1&#60;/sub&#62; its *value*. 
+and *constant variables*. A *variable* can store one *object*. The main operations on a *variable* are to *read* <sub>1</sub> and to *write*<sub>1</sub> its *value*. 
 
 An error of *type* **unbound-variable** should be signaled if an *unbound variable* is referenced. 
 
-*Non-constant variables* can be *assigned* by using **setq** or *bound* &#60;sub&#62;3&#60;/sub&#62; by using **let**. Figure 3–1 lists some *defined names* that are applicable to assigning, binding, and defining *variables*. 
+*Non-constant variables* can be *assigned* by using **setq** or *bound* <sub>3</sub> by using **let**. Figure 3–1 lists some *defined names* that are applicable to assigning, binding, and defining *variables*. 
 
-|&#60;p&#62;**boundp let progv** &#60;/p&#62;&#60;p&#62;**defconstant let\* psetq** &#60;/p&#62;&#60;p&#62;**defparameter makunbound set** &#60;/p&#62;&#60;p&#62;**defvar multiple-value-bind setq** &#60;/p&#62;&#60;p&#62;**lambda multiple-value-setq symbol-value**&#60;/p&#62;|
+|<p>**boundp let progv** </p><p>**defconstant let\* psetq** </p><p>**defparameter makunbound set** </p><p>**defvar multiple-value-bind setq** </p><p>**lambda multiple-value-setq symbol-value**</p>|
 | :- |
 
 
@@ -132,7 +132,7 @@ The following is a description of each kind of variable.
 
 A *lexical variable* is a *variable* that can be referenced only within the *lexical scope* of the *form* that establishes that *variable*; *lexical variables* have *lexical scope*. Each time a *form* creates a *lexical binding* of a *variable*, a *fresh binding* is *established*. 
 
-Within the *scope* of a *binding* for a *lexical variable name*, uses of that *name* as a *variable* are considered to be references to that *binding* except where the *variable* is *shadowed* &#60;sub&#62;2&#60;/sub&#62; by a *form* that *establishes* a *fresh binding* for that *variable name*, or by a *form* that locally *declares* the *name* **special**. 
+Within the *scope* of a *binding* for a *lexical variable name*, uses of that *name* as a *variable* are considered to be references to that *binding* except where the *variable* is *shadowed* <sub>2</sub> by a *form* that *establishes* a *fresh binding* for that *variable name*, or by a *form* that locally *declares* the *name* **special**. 
 
 A *lexical variable* always has a *value*. There is no *operator* that introduces a *binding* for a *lexical variable* without giving it an initial *value*, nor is there any *operator* that can make a *lexical variable* be *unbound*. 
 
@@ -144,7 +144,7 @@ A *variable* is a *dynamic variable* if one of the following conditions hold:
 
 *•* It is locally declared or globally proclaimed **special**. 
 
-*•* It occurs textually within a *form* that creates a *dynamic binding* for a *variable* of the *same name*, and the *binding* is not *shadowed* &#60;sub&#62;2&#60;/sub&#62; by a *form* that creates a *lexical binding* of the same *variable name*. 
+*•* It occurs textually within a *form* that creates a *dynamic binding* for a *variable* of the *same name*, and the *binding* is not *shadowed* <sub>2</sub> by a *form* that creates a *lexical binding* of the same *variable name*. 
 
 A *dynamic variable* can be referenced at any time in any *program*; there is no textual limitation on references to *dynamic variables*. At any given time, all *dynamic variables* with a given name refer to exactly one *binding*, either in the *dynamic environment* or in the *global environment*.  
 
@@ -206,7 +206,7 @@ Some *special operators* create new lexical or dynamic *environments* for use du
 
 The set of *special operator names* is fixed in Common Lisp; no way is provided for the user to define a *special operator* . Figure 3–2 lists all of the Common Lisp *symbols* that have definitions as *special operators*. 
 
-|&#60;p&#62;**block let\* return-from** &#60;/p&#62;&#60;p&#62;**catch load-time-value setq** &#60;/p&#62;&#60;p&#62;**eval-when locally symbol-macrolet flet macrolet tagbody** &#60;/p&#62;&#60;p&#62;**function multiple-value-call the** &#60;/p&#62;&#60;p&#62;**go multiple-value-prog1 throw** &#60;/p&#62;&#60;p&#62;**if progn unwind-protect labels progv** &#60;/p&#62;&#60;p&#62;**let quote**&#60;/p&#62;|
+|<p>**block let\* return-from** </p><p>**catch load-time-value setq** </p><p>**eval-when locally symbol-macrolet flet macrolet tagbody** </p><p>**function multiple-value-call the** </p><p>**go multiple-value-prog1 throw** </p><p>**if progn unwind-protect labels progv** </p><p>**let quote**</p>|
 | :- |
 
 
@@ -262,7 +262,7 @@ A *binding* for a *function name* can be *established* in one of several ways. A
 
 Figure 3–4 lists some *defined names* that are applicable to *functions*. 
 
-|&#60;p&#62;**apply fdefinition mapcan** &#60;/p&#62;&#60;p&#62;**call-arguments-limit flet mapcar** &#60;/p&#62;&#60;p&#62;**complement fmakunbound mapcon** &#60;/p&#62;&#60;p&#62;**constantly funcall mapl** &#60;/p&#62;&#60;p&#62;**defgeneric function maplist** &#60;/p&#62;&#60;p&#62;**defmethod functionp multiple-value-call defun labels reduce** &#60;/p&#62;&#60;p&#62;**fboundp map symbol-function**&#60;/p&#62;|
+|<p>**apply fdefinition mapcan** </p><p>**call-arguments-limit flet mapcar** </p><p>**complement fmakunbound mapcon** </p><p>**constantly funcall mapl** </p><p>**defgeneric function maplist** </p><p>**defmethod functionp multiple-value-call defun labels reduce** </p><p>**fboundp map symbol-function**</p>|
 | :- |
 
 
@@ -434,29 +434,29 @@ Consider the call (contorted-example nil nil 2). This produces 4. During the cou
 
 (contorted-example nil nil 2) 
 
-(block here&#60;sub&#62;1&#60;/sub&#62; ...) 
+(block here<sub>1</sub> ...) 
 
-(contorted-example nil #’(lambda () (return-from here&#60;sub&#62;1&#60;/sub&#62; 4)) 1) 
+(contorted-example nil #’(lambda () (return-from here<sub>1</sub> 4)) 1) 
 
-(block here&#60;sub&#62;2&#60;/sub&#62; ...) 
+(block here<sub>2</sub> ...) 
 
-(contorted-example #’(lambda () (return-from here&#60;sub&#62;1&#60;/sub&#62; 4)) 
+(contorted-example #’(lambda () (return-from here<sub>1</sub> 4)) 
 
-#’(lambda () (return-from here&#60;sub&#62;2&#60;/sub&#62; 4)) 
+#’(lambda () (return-from here<sub>2</sub> 4)) 
 
 \0) 
 
 (funcall f) 
 
-where f *→* #’(lambda () (return-from here&#60;sub&#62;1&#60;/sub&#62; 4))  
+where f *→* #’(lambda () (return-from here<sub>1</sub> 4))  
 
 
 
-(return-from here&#60;sub&#62;1&#60;/sub&#62; 4) 
+(return-from here<sub>1</sub> 4) 
 
-At the time the funcall is executed there are two **block** *exit points* outstanding, each apparently named here. The **return-from** *form* executed as a result of the funcall operation refers to the outer outstanding *exit point* (here&#60;sub&#62;1&#60;/sub&#62;), not the inner one (here&#60;sub&#62;2&#60;/sub&#62;). It refers to that *exit point* textually visible at the point of execution of **function** (here abbreviated by the #’ syntax) that resulted in creation of the *function object* actually invoked by **funcall**. 
+At the time the funcall is executed there are two **block** *exit points* outstanding, each apparently named here. The **return-from** *form* executed as a result of the funcall operation refers to the outer outstanding *exit point* (here<sub>1</sub>), not the inner one (here<sub>2</sub>). It refers to that *exit point* textually visible at the point of execution of **function** (here abbreviated by the #’ syntax) that resulted in creation of the *function object* actually invoked by **funcall**. 
 
-If, in this example, one were to change the (funcall f) to (funcall g), then the value of the call (contorted-example nil nil 2) would be 9. The value would change because **funcall** would cause the execution of (return-from here&#60;sub&#62;2&#60;/sub&#62; 4), thereby causing a return from the inner *exit point* (here&#60;sub&#62;2&#60;/sub&#62;). 
+If, in this example, one were to change the (funcall f) to (funcall g), then the value of the call (contorted-example nil nil 2) would be 9. The value would change because **funcall** would cause the execution of (return-from here<sub>2</sub> 4), thereby causing a return from the inner *exit point* (here<sub>2</sub>). 
 
 When that occurs, the value 4 is returned from the middle invocation of contorted-example, 5 is added to that to get 9, and that value is returned from the outer block and the outermost call to contorted-example. The point is that the choice of *exit point* returned from has nothing to do with its being innermost or outermost; rather, it depends on the lexical environment that is packaged up with a *lambda expression* when **function** is executed. 
 
@@ -504,15 +504,15 @@ Ordinarily the result of calling a *function* is a single *object*. Sometimes, h
 
 In order to receive other than exactly one value from a *form*, one of several *special forms* or *macros* must be used to request those values. If a *form* produces *multiple values* which were not requested in this way, then the first value is given to the caller and all others are discarded; if the *form* produces zero values, then the caller receives **nil** as a value. 
 
-Figure 3–5 lists some *operators* for receiving *multiple values*&#60;sub&#62;2&#60;/sub&#62;. These *operators* can be used to specify one or more *forms* to *evaluate* and where to put the *values* returned by those *forms*. 
+Figure 3–5 lists some *operators* for receiving *multiple values*<sub>2</sub>. These *operators* can be used to specify one or more *forms* to *evaluate* and where to put the *values* returned by those *forms*. 
 
-|&#60;p&#62;**multiple-value-bind multiple-value-prog1 return-from multiple-value-call multiple-value-setq throw** &#60;/p&#62;&#60;p&#62;**multiple-value-list return**&#60;/p&#62;|
+|<p>**multiple-value-bind multiple-value-prog1 return-from multiple-value-call multiple-value-setq throw** </p><p>**multiple-value-list return**</p>|
 | :- |
 
 
 **Figure 3–5. Some operators applicable to receiving multiple values** 
 
-The *function* **values** can produce *multiple values*&#60;sub&#62;2&#60;/sub&#62;. (values) returns zero values; (values *form*) returns the *primary value* returned by *form*; (values *form1 form2*) returns two values, the *primary value* of *form1* and the *primary value* of *form2*; and so on. 
+The *function* **values** can produce *multiple values*<sub>2</sub>. (values) returns zero values; (values *form*) returns the *primary value* returned by *form*; (values *form1 form2*) returns two values, the *primary value* of *form1* and the *primary value* of *form2*; and so on. 
 
 See **multiple-values-limit** and **values-list**.  
 
@@ -574,7 +574,7 @@ Conceptually, compilation is a process that traverses code, performs certain kin
 
 A *compiler macro* can be defined for a *name* that also names a *function* or *macro*. That is, it is possible for a *function name* to name both a *function* and a *compiler macro*. 
 
-A *function name* names a *compiler macro* if **compiler-macro-function** is *true* of the *function name* in the *lexical environment* in which it appears. Creating a *lexical binding* for the *function name* not only creates a new local *function* or *macro* definition, but also *shadows*&#60;sub&#62;2&#60;/sub&#62; the *compiler macro*. 
+A *function name* names a *compiler macro* if **compiler-macro-function** is *true* of the *function name* in the *lexical environment* in which it appears. Creating a *lexical binding* for the *function name* not only creates a new local *function* or *macro* definition, but also *shadows*<sub>2</sub> the *compiler macro*. 
 
 The *function* returned by **compiler-macro-function** is a *function* of two arguments, called the expansion function. To expand a *compiler macro*, the expansion function is invoked by calling the *macroexpand hook* with the expansion function as its first argument, the entire compiler macro *form* as its second argument, and the current compilation *environment* (or with the current lexical *environment*, if the *form* is being processed by something other than **compile-file**) as its third  
 
@@ -626,11 +626,7 @@ There are two situations in which a *compiler macro* definition must not be appl
 
 *•* The function name has been declared or proclaimed **notinline** and the call form appears within the scope of the declaration. 
 
-It is unspecified whether *compiler macros* are expanded or used in any other situations.
-
- **3.2.2.1.3.1 Notes about the Implementation of Compiler Macros**
-
- 
+It is unspecified whether *compiler macros* are expanded or used in any other situations. **3.2.2.1.3.1 Notes about the Implementation of Compiler Macros** 
 
 Although it is technically permissible, as described above, for **eval** to treat *compiler macros* in the same situations as *compiler* might, this is not necessarily a good idea in *interpreted implementations*. 
 
@@ -724,7 +720,7 @@ Processing of *top level forms* in the file compiler is defined as follows:
 
 |**CT LT E Mode Action New Mode**|
 | :- |
-|&#60;p&#62;Yes Yes — — Process compile-time-too No Yes Yes CTT Process compile-time-too No Yes Yes NCT Process not-compile-time No Yes No — Process not-compile-time Yes No — — Evaluate — &#60;/p&#62;&#60;p&#62;No No Yes CTT Evaluate — No No Yes NCT Discard — No No No — Discard —&#60;/p&#62;|
+|<p>Yes Yes — — Process compile-time-too No Yes Yes CTT Process compile-time-too No Yes Yes NCT Process not-compile-time No Yes No — Process not-compile-time Yes No — — Evaluate — </p><p>No No Yes CTT Evaluate — No No Yes NCT Discard — No No No — Discard —</p>|
 
 
 **Figure 3–7. EVAL-WHEN processing** 
@@ -857,19 +853,19 @@ referencing it as a *literal object* is *loaded*. The *loader* finds the corresp
 
 **random-state** 
 
-Two *random states S* and *C* are *similar* if *S* would always produce the same sequence of pseudo-random numbers as a *copy*&#60;sub&#62;5&#60;/sub&#62; of *C* when given as the *random-state argument* to the *function* **random**, assuming equivalent *limit arguments* in each case. 
+Two *random states S* and *C* are *similar* if *S* would always produce the same sequence of pseudo-random numbers as a *copy*<sub>5</sub> of *C* when given as the *random-state argument* to the *function* **random**, assuming equivalent *limit arguments* in each case. 
 
 (Note that since *C* has been processed by the *file compiler* , it cannot be used directly as an *argument* to **random** because **random** would perform a side effect.) 
 
 **cons** 
 
-Two *conses*, *S* and *C*, are *similar* if the *car* &#60;sub&#62;2&#60;/sub&#62; of *S* is *similar* to the *car* &#60;sub&#62;2&#60;/sub&#62; of *C*, and the *cdr* &#60;sub&#62;2&#60;/sub&#62; of *S* is *similar* to the *cdr* &#60;sub&#62;2&#60;/sub&#62; of *C*. 
+Two *conses*, *S* and *C*, are *similar* if the *car* <sub>2</sub> of *S* is *similar* to the *car* <sub>2</sub> of *C*, and the *cdr* <sub>2</sub> of *S* is *similar* to the *cdr* <sub>2</sub> of *C*. 
 
 **array** 
 
 Two one-dimensional *arrays*, *S* and *C*, are *similar* if the *length* of *S* is *similar* to the *length* of *C*, the *actual array element type* of *S* is *similar* to the *actual array element type* of *C*, and each *active element* of *S* is *similar* to the corresponding *element* of *C*. 
 
-Two *arrays* of *rank* other than one, *S* and *C*, are *similar* if the *rank* of *S* is *similar* to the *rank* of *C*, each *dimension*&#60;sub&#62;1&#60;/sub&#62; of *S* is *similar* to the corresponding *dimension*&#60;sub&#62;1&#60;/sub&#62; of *C*, the *actual array element type* of *S* is *similar* to the *actual array element type* of *C*, and each *element* of *S* is *similar* to the corresponding *element* of *C*. 
+Two *arrays* of *rank* other than one, *S* and *C*, are *similar* if the *rank* of *S* is *similar* to the *rank* of *C*, each *dimension*<sub>1</sub> of *S* is *similar* to the corresponding *dimension*<sub>1</sub> of *C*, the *actual array element type* of *S* is *similar* to the *actual array element type* of *C*, and each *element* of *S* is *similar* to the corresponding *element* of *C*. 
 
 In addition, if *S* is a *simple array*, then *C* must also be a *simple array*. If *S* is a *displaced array*, has a *fill pointer* , or is *actually adjustable*, *C* is permitted to lack any or all of these qualities. 
 
@@ -965,7 +961,7 @@ Both **compile** and **compile-file** are permitted (but not required) to *estab
 
 Both **compile** and **compile-file** return three values, the second two indicating whether the source code being compiled contained errors and whether style warnings were issued. 
 
-Some warnings might be deferred until the end of compilation. See **with-compilation-unit**. 
+Some warnings might be deferred until the end of compilation. See **with-compilation-unit**. **3–28** Programming Language—Common Lisp
 
 
 
@@ -979,11 +975,7 @@ Some warnings might be deferred until the end of compilation. See **with-compila
 
 The **the** *special form* provides a shorthand notation for making a *local declaration* about the *type* of the *value* of a given *form*. 
 
-The consequences are undefined if a program violates a *declaration* or a *proclamation*.
-
- **3.3.1 Minimal Declaration Processing Requirements**
-
- 
+The consequences are undefined if a program violates a *declaration* or a *proclamation*. **3.3.1 Minimal Declaration Processing Requirements** 
 
 In general, an *implementation* is free to ignore *declaration specifiers* except for the **declaration**, **notinline**, **safety**, and **special** *declaration specifiers*. 
 
@@ -1003,7 +995,7 @@ A *declaration specifier* is an *expression* that can appear at top level of a *
 
 Figure 3–9 shows a list of all *declaration identifiers* defined by this standard. 
 
-|&#60;p&#62;**declaration ignore special** &#60;/p&#62;&#60;p&#62;**dynamic-extent inline type** &#60;/p&#62;&#60;p&#62;**ftype notinline** &#60;/p&#62;&#60;p&#62;**ignorable optimize**&#60;/p&#62;|
+|<p>**declaration ignore special** </p><p>**dynamic-extent inline type** </p><p>**ftype notinline** </p><p>**ignorable optimize**</p>|
 | :- |
 
 
@@ -1015,7 +1007,7 @@ An implementation is free to support other (*implementation-defined*) *declarati
 
 **3.3.3.1 Shorthand notation for Type Declarations** 
 
-A *type specifier* can be used as a *declaration identifier* . (*type-specifier &#123;var&#125;*\*) is taken as shorthand for (type *type-specifier &#123;var&#125;*\*). 
+A *type specifier* can be used as a *declaration identifier* . (*type-specifier {var}*\*) is taken as shorthand for (type *type-specifier {var}*\*). 
 
 **3.3.4 Declaration Scope** 
 
@@ -1121,7 +1113,7 @@ There are several kinds of *lambda lists*.
 
 |**Context Kind of Lambda List**|
 | :- |
-|&#60;p&#62;**defun** *form ordinary lambda list* &#60;/p&#62;&#60;p&#62;**defmacro** *form macro lambda list* &#60;/p&#62;&#60;p&#62;*lambda expression ordinary lambda list* &#60;/p&#62;&#60;p&#62;**flet** local *function* definition *ordinary lambda list* &#60;/p&#62;&#60;p&#62;**labels** local *function* definition *ordinary lambda list* &#60;/p&#62;&#60;p&#62;**handler-case** *clause* specification *ordinary lambda list* &#60;/p&#62;&#60;p&#62;**restart-case** *clause* specification *ordinary lambda list* &#60;/p&#62;&#60;p&#62;**macrolet** local *macro* definition *macro lambda list* &#60;/p&#62;&#60;p&#62;**define-method-combination** *ordinary lambda list* &#60;/p&#62;&#60;p&#62;**define-method-combination** :arguments option *define-method-combination arguments lambda list***defstruct** :constructor option *boa lambda list* &#60;/p&#62;&#60;p&#62;**defgeneric** *form generic function lambda list* **defgeneric** *method* clause *specialized lambda list* &#60;/p&#62;&#60;p&#62;**defmethod** *form specialized lambda list* &#60;/p&#62;&#60;p&#62;**defsetf** *form defsetf lambda list* &#60;/p&#62;&#60;p&#62;**define-setf-expander** *form macro lambda list* &#60;/p&#62;&#60;p&#62;**deftype** *form deftype lambda list* &#60;/p&#62;&#60;p&#62;**destructuring-bind** *form destructuring lambda list* **define-compiler-macro** *form macro lambda list* &#60;/p&#62;&#60;p&#62;**define-modify-macro** *form define-modify-macro lambda list*&#60;/p&#62;|
+|<p>**defun** *form ordinary lambda list* </p><p>**defmacro** *form macro lambda list* </p><p>*lambda expression ordinary lambda list* </p><p>**flet** local *function* definition *ordinary lambda list* </p><p>**labels** local *function* definition *ordinary lambda list* </p><p>**handler-case** *clause* specification *ordinary lambda list* </p><p>**restart-case** *clause* specification *ordinary lambda list* </p><p>**macrolet** local *macro* definition *macro lambda list* </p><p>**define-method-combination** *ordinary lambda list* </p><p>**define-method-combination** :arguments option *define-method-combination arguments lambda list***defstruct** :constructor option *boa lambda list* </p><p>**defgeneric** *form generic function lambda list* **defgeneric** *method* clause *specialized lambda list* </p><p>**defmethod** *form specialized lambda list* </p><p>**defsetf** *form defsetf lambda list* </p><p>**define-setf-expander** *form macro lambda list* </p><p>**deftype** *form deftype lambda list* </p><p>**destructuring-bind** *form destructuring lambda list* **define-compiler-macro** *form macro lambda list* </p><p>**define-modify-macro** *form define-modify-macro lambda list*</p>|
 
 
 \* 
@@ -1142,7 +1134,7 @@ An *ordinary lambda list* is used to describe how a set of *arguments* is receiv
 
 
 
-|&#60;p&#62;**define-method-combination handler-case restart-case defun labels** &#60;/p&#62;&#60;p&#62;**flet lambda**&#60;/p&#62;|
+|<p>**define-method-combination handler-case restart-case defun labels** </p><p>**flet lambda**</p>|
 | :- |
 
 
@@ -1150,7 +1142,7 @@ An *ordinary lambda list* is used to describe how a set of *arguments* is receiv
 
 An *ordinary lambda list* can contain the *lambda list keywords* shown in Figure 3–13. 
 
-|&#60;p&#62;**&allow-other-keys &key &rest** &#60;/p&#62;&#60;p&#62;**&aux &optional**&#60;/p&#62;|
+|<p>**&allow-other-keys &key &rest** </p><p>**&aux &optional**</p>|
 | :- |
 
 
@@ -1160,23 +1152,23 @@ Each *element* of a *lambda list* is either a parameter specifier or a *lambda l
 
 The syntax for *ordinary lambda lists* is as follows: 
 
-*lambda-list::*=(*&#123;var&#125;*\* 
+*lambda-list::*=(*{var}*\* 
 
-[&optional *&#123;var |* (*var* [*init-form* [*supplied-p-parameter*]])*&#125;*\*] 
+[&optional *{var |* (*var* [*init-form* [*supplied-p-parameter*]])*}*\*] 
 
 [&rest *var*] 
 
-[&key *&#123;var |* (*&#123;var |* (*keyword-name var*)*&#125;* [*init-form* [*supplied-p-parameter*]])*&#125;*\* 
+[&key *{var |* (*{var |* (*keyword-name var*)*}* [*init-form* [*supplied-p-parameter*]])*}*\* 
 
 [&allow-other-keys]] 
 
-[&aux *&#123;var |* (*var* [*init-form*])*&#125;*\*]) 
+[&aux *{var |* (*var* [*init-form*])*}*\*]) 
 
 A *var* or *supplied-p-parameter* must be a *symbol* that is not the name of a *constant variable*. 
 
 An *init-form* can be any *form*. Whenever any *init-form* is evaluated for any parameter specifier, that *form* may refer to any parameter variable to the left of the specifier in which the *init-form* appears, including any *supplied-p-parameter* variables, and may rely on the fact that no other parameter variable has yet been bound (including its own parameter variable). 
 
-A *keyword-name* can be any *symbol*, but by convention is normally a *keyword* &#60;sub&#62;1&#60;/sub&#62;; all *standardized functions* follow that convention. 
+A *keyword-name* can be any *symbol*, but by convention is normally a *keyword* <sub>1</sub>; all *standardized functions* follow that convention. 
 
 An *ordinary lambda list* has five parts, any or all of which may be empty. For information about the treatment of argument mismatches, see Section 3.5 (Error Checking in Function Calls).  
 
@@ -1226,13 +1218,13 @@ Furthermore, if the receiving argument list specifies a regular argument which w
 
 **3.4.1.4.1 Suppressing Keyword Argument Checking** 
 
-If **&allow-other-keys** was specified in the *lambda list* of a *function*, *keyword* &#60;sub&#62;2&#60;/sub&#62; *argument* checking is suppressed in calls to that *function*.  
+If **&allow-other-keys** was specified in the *lambda list* of a *function*, *keyword* <sub>2</sub> *argument* checking is suppressed in calls to that *function*.  
 
 
 
-If the :allow-other-keys *argument* is *true* in a call to a *function*, *keyword* &#60;sub&#62;2&#60;/sub&#62; *argument* checking is suppressed in that call. 
+If the :allow-other-keys *argument* is *true* in a call to a *function*, *keyword* <sub>2</sub> *argument* checking is suppressed in that call. 
 
-The :allow-other-keys *argument* is permissible in all situations involving *keyword* &#60;sub&#62;2&#60;/sub&#62; *arguments*, even when its associated *value* is *false*. 
+The :allow-other-keys *argument* is permissible in all situations involving *keyword* <sub>2</sub> *arguments*, even when its associated *value* is *false*. 
 
 **3.4.1.4.1.1 Examples of Suppressing Keyword Argument Checking** 
 
@@ -1396,19 +1388,19 @@ A *generic function lambda list* is used by **defgeneric**.
 
 A *generic function lambda list* has the following syntax: 
 
-*lambda-list::*=(*&#123;var&#125;*\* 
+*lambda-list::*=(*{var}*\* 
 
-[&optional *&#123;var |* (*var*)*&#125;*\*] 
+[&optional *{var |* (*var*)*}*\*] 
 
 [&rest *var*] 
 
-[&key *&#123;var |* (*&#123;var |* (*keyword-name var*)*&#125;*)*&#125;*\* 
+[&key *{var |* (*{var |* (*keyword-name var*)*}*)*}*\* 
 
 [&allow-other-keys]]) 
 
 A *generic function lambda list* can contain the *lambda list keywords* shown in Figure 3–14. 
 
-|&#60;p&#62;**&allow-other-keys &optional** &#60;/p&#62;&#60;p&#62;**&key &rest**&#60;/p&#62;|
+|<p>**&allow-other-keys &optional** </p><p>**&key &rest**</p>|
 | :- |
 
 
@@ -1446,7 +1438,7 @@ A *specialized lambda list* is used to *specialize* a *method* for a particular 
 
 A *specialized lambda list* can contain the *lambda list keywords* shown in Figure 3–16. 
 
-|&#60;p&#62;**&allow-other-keys &key &rest** &#60;/p&#62;&#60;p&#62;**&aux &optional**&#60;/p&#62;|
+|<p>**&allow-other-keys &key &rest** </p><p>**&aux &optional**</p>|
 | :- |
 
 
@@ -1454,13 +1446,13 @@ A *specialized lambda list* can contain the *lambda list keywords* shown in Figu
 
 A *specialized lambda list* is syntactically the same as an *ordinary lambda list* except that each *required parameter* may optionally be associated with a *class* or *object* for which that *parameter* is *specialized*. 
 
-*lambda-list::*=(*&#123;var |* (*var* [*specializer*])*&#125;*\* 
+*lambda-list::*=(*{var |* (*var* [*specializer*])*}*\* 
 
-[&optional *&#123;var |* (*var* [*init-form* [*supplied-p-parameter*]])*&#125;*\*] 
+[&optional *{var |* (*var* [*init-form* [*supplied-p-parameter*]])*}*\*] 
 
 [&rest *var*] 
 
-[&key *&#123;var |* (*&#123;var |* (*keyword-name var*)*&#125;* [*init-form* [*supplied-p-parameter*]])*&#125;*\* [&allow-other-keys[&aux *&#123;var |* (*var* [*init-form*])*&#125;*\*])  
+[&key *{var |* (*{var |* (*keyword-name var*)*}* [*init-form* [*supplied-p-parameter*]])*}*\* [&allow-other-keys[&aux *{var |* (*var* [*init-form*])*}*\*])  
 
 
 
@@ -1468,7 +1460,7 @@ A *specialized lambda list* is syntactically the same as an *ordinary lambda lis
 
 A *macro lambda list* is used in describing *macros* defined by the *operators* in Figure 3–17. 
 
-|&#60;p&#62;**define-compiler-macro defmacro macrolet** &#60;/p&#62;&#60;p&#62;**define-setf-expander**&#60;/p&#62;|
+|<p>**define-compiler-macro defmacro macrolet** </p><p>**define-setf-expander**</p>|
 | :- |
 
 
@@ -1476,15 +1468,15 @@ A *macro lambda list* is used in describing *macros* defined by the *operators* 
 
 With the additional restriction that an *environment parameter* may appear only once (at any of the positions indicated), a *macro lambda list* has the following syntax: 
 
-*reqvars::*=*&#123;var | ↓pattern&#125;*\* 
+*reqvars::*=*{var | ↓pattern}*\* 
 
-*optvars::*=[&optional *&#123;var |* (*&#123;var | ↓pattern&#125;* [*init-form* [*supplied-p-parameter*]])*&#125;*\*] 
+*optvars::*=[&optional *{var |* (*{var | ↓pattern}* [*init-form* [*supplied-p-parameter*]])*}*\*] 
 
-*restvar::*=[*&#123;*&rest *|* &body*&#125; &#123;var | ↓pattern&#125;*] 
+*restvar::*=[*{*&rest *|* &body*} {var | ↓pattern}*] 
 
-*keyvars::*=[&key *&#123;var |* (*&#123;var |* (*keyword-name &#123;var | ↓pattern&#125;*)*&#125;* [*init-form* [*supplied-p-parameter*]])*&#125;*\* [&allow-other-keys]] 
+*keyvars::*=[&key *{var |* (*{var |* (*keyword-name {var | ↓pattern}*)*}* [*init-form* [*supplied-p-parameter*]])*}*\* [&allow-other-keys]] 
 
-*auxvars::*=[&aux *&#123;var |* (*var* [*init-form*])*&#125;*\*] 
+*auxvars::*=[&aux *{var |* (*var* [*init-form*])*}*\*] 
 
 *envvar::*=[&environment *var*] 
 
@@ -1502,7 +1494,7 @@ With the additional restriction that an *environment parameter* may appear only 
 
 A *macro lambda list* can contain the *lambda list keywords* shown in Figure 3–18. 
 
-|&#60;p&#62;**&allow-other-keys &environment &rest** &#60;/p&#62;&#60;p&#62;**&aux &key &whole** &#60;/p&#62;&#60;p&#62;**&body &optional**&#60;/p&#62;|
+|<p>**&allow-other-keys &environment &rest** </p><p>**&aux &key &whole** </p><p>**&body &optional**</p>|
 | :- |
 
 
@@ -1616,15 +1608,15 @@ A *destructuring lambda list* is used by **destructuring-bind**.
 
 A *destructuring lambda list* has the following syntax: 
 
-*reqvars::*=*&#123;var | ↓lambda-list&#125;*\* 
+*reqvars::*=*{var | ↓lambda-list}*\* 
 
-*optvars::*=[&optional *&#123;var |* (*&#123;var | ↓lambda-list&#125;* [*init-form* [*supplied-p-parameter*]])*&#125;*\*] 
+*optvars::*=[&optional *{var |* (*{var | ↓lambda-list}* [*init-form* [*supplied-p-parameter*]])*}*\*] 
 
-*restvar::*=[*&#123;*&rest *|* &body*&#125; &#123;var | ↓lambda-list&#125;*] 
+*restvar::*=[*{*&rest *|* &body*} {var | ↓lambda-list}*] 
 
-*keyvars::*=[&key *&#123;var |* (*&#123;var |* (*keyword-name &#123;var | ↓lambda-list&#125;*)*&#125;* [*init-form* [*supplied-p-parameter*]])*&#125;*\* [&allow-other-keys]] 
+*keyvars::*=[&key *{var |* (*{var |* (*keyword-name {var | ↓lambda-list}*)*}* [*init-form* [*supplied-p-parameter*]])*}*\* [&allow-other-keys]] 
 
-*auxvars::*=[&aux *&#123;var |* (*var* [*init-form*])*&#125;*\*] 
+*auxvars::*=[&aux *{var |* (*var* [*init-form*])*}*\*] 
 
 *envvar::*=[&environment *var*] 
 
@@ -1704,13 +1696,13 @@ A *defsetf lambda list* is used by **defsetf**.
 
 A *defsetf lambda list* has the following syntax: 
 
-*lambda-list::*=(*&#123;var&#125;*\* 
+*lambda-list::*=(*{var}*\* 
 
-[&optional *&#123;var |* (*var* [*init-form* [*supplied-p-parameter*]])*&#125;*\*] 
+[&optional *{var |* (*var* [*init-form* [*supplied-p-parameter*]])*}*\*] 
 
 [&rest *var*] 
 
-[&key *&#123;var |* (*&#123;var |* (*keyword-name var*)*&#125;* [*init-form* [*supplied-p-parameter*]])*&#125;*\* 
+[&key *{var |* (*{var |* (*keyword-name var*)*}* [*init-form* [*supplied-p-parameter*]])*}*\* 
 
 [&allow-other-keys]] 
 
@@ -1718,7 +1710,7 @@ A *defsetf lambda list* has the following syntax:
 
 A *defsetf lambda list* can contain the *lambda list keywords* shown in Figure 3–19. 
 
-|&#60;p&#62;**&allow-other-keys &key &rest** &#60;/p&#62;&#60;p&#62;**&environment &optional**&#60;/p&#62;|
+|<p>**&allow-other-keys &key &rest** </p><p>**&environment &optional**</p>|
 | :- |
 
 
@@ -1756,7 +1748,7 @@ A *define-method-combination arguments lambda list* is used by the :arguments op
 
 A *define-method-combination arguments lambda list* can contain the *lambda list keywords* shown in Figure 3–21. 
 
-|&#60;p&#62;**&allow-other-keys &key &rest** &#60;/p&#62;&#60;p&#62;**&aux &optional &whole**&#60;/p&#62;|
+|<p>**&allow-other-keys &key &rest** </p><p>**&aux &optional &whole**</p>|
 | :- |
 
 
@@ -1908,7 +1900,7 @@ Using it as an *argument* to the *function* **random**.
 
 **cons** 
 
-Changing the *car* &#60;sub&#62;1&#60;/sub&#62; or *cdr* &#60;sub&#62;1&#60;/sub&#62; of the *cons*, or performing a *destructive* operation on an *object* which is either the *car* &#60;sub&#62;2&#60;/sub&#62; or the *cdr* &#60;sub&#62;2&#60;/sub&#62; of the *cons*. 
+Changing the *car* <sub>1</sub> or *cdr* <sub>1</sub> of the *cons*, or performing a *destructive* operation on an *object* which is either the *car* <sub>2</sub> or the *cdr* <sub>2</sub> of the *cons*. 
 
 **array** 
 
@@ -1922,7 +1914,7 @@ Performing a *destructive* operation on another *array* that is displaced to the
 
 Performing a *destructive* operation on any *key*. 
 
-Storing a new *value*&#60;sub&#62;4&#60;/sub&#62; for any *key*, or performing a *destructive* operation on any *object* that is such a *value*. 
+Storing a new *value*<sub>4</sub> for any *key*, or performing a *destructive* operation on any *object* that is such a *value*. 
 
 Adding or removing entries from the *hash table*. 
 
@@ -1966,23 +1958,23 @@ The following examples illustrate some of the many ways in which the *implementa
 
 (let ((a (list 2 1 4 3 7 6 ’five))) 
 
-(ignore-errors (sort a #’&#60;)) 
+(ignore-errors (sort a #’<)) 
 
 a) 
 
 *→* (1 2 3 4 6 7 FIVE) 
 
-&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; (2 1 4 3 7 6 FIVE) 
+<i><sup>or</sup>→</i> (2 1 4 3 7 6 FIVE) 
 
-&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; (2) 
+<i><sup>or</sup>→</i> (2) 
 
 (prog foo ((a (list 1 2 3 4 5 6 7 8 9 10))) 
 
-(sort a #’(lambda (x y) (if (zerop (random 5)) (return-from foo a) (&#62; x y))))) *→* (1 2 3 4 5 6 7 8 9 10) 
+(sort a #’(lambda (x y) (if (zerop (random 5)) (return-from foo a) (> x y))))) *→* (1 2 3 4 5 6 7 8 9 10) 
 
-&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; (3 4 5 6 2 7 8 9 10 1) 
+<i><sup>or</sup>→</i> (3 4 5 6 2 7 8 9 10 1) 
 
-&#60;i&#62;&#60;sup&#62;or&#60;/sup&#62;→&#60;/i&#62; (1 2 4 3)  
+<i><sup>or</sup>→</i> (1 2 4 3)  
 
 
 
@@ -1990,7 +1982,7 @@ a)
 
 **Syntax:** 
 
-**lambda** *lambda-list* [[ *&#123;declaration&#125;*\* *| documentation* ]] *&#123;form&#125;*\* 
+**lambda** *lambda-list* [[ *{declaration}*\* *| documentation* ]] *{form}*\* 
 
 **Arguments:** 
 
@@ -2026,7 +2018,7 @@ is semantically equivalent to the *function form*
 
 **Syntax:** 
 
-**lambda** *lambda-list* [[ *&#123;declaration&#125;*\* *| documentation* ]] *&#123;form&#125;*\* *→ function* 
+**lambda** *lambda-list* [[ *{declaration}*\* *| documentation* ]] *{form}*\* *→ function* 
 
 **Arguments and Values:** 
 
@@ -2046,11 +2038,11 @@ is semantically equivalent to the *function form*
 
 Provides a shorthand notation for a **function** *special form* involving a *lambda expression* such that: 
 
-(lambda *lambda-list* [[ *&#123;declaration&#125;*\* *| documentation* ]] *&#123;form&#125;*\*) 
+(lambda *lambda-list* [[ *{declaration}*\* *| documentation* ]] *{form}*\*) 
 
-*≡* (function (lambda *lambda-list* [[ *&#123;declaration&#125;*\* *| documentation* ]] *&#123;form&#125;*\*)) 
+*≡* (function (lambda *lambda-list* [[ *{declaration}*\* *| documentation* ]] *{form}*\*)) 
 
-*≡* #’(lambda *lambda-list* [[ *&#123;declaration&#125;*\* *| documentation* ]] *&#123;form&#125;*\*) 
+*≡* #’(lambda *lambda-list* [[ *{declaration}*\* *| documentation* ]] *{form}*\*) 
 
 **Examples:** 
 
@@ -2120,7 +2112,7 @@ The *tertiary value*, *failure-p*, is *false* if no *conditions* of *type* **err
 
 (setf (symbol-function ’foo) 
 
-(compile nil ’(lambda () "replaced"))) *→* #&#60;Compiled-Function&#62; 
+(compile nil ’(lambda () "replaced"))) *→* #<Compiled-Function> 
 
 (foo) *→* "replaced" 
 
@@ -2150,7 +2142,7 @@ Situations in the Compiler).
 
 **Syntax:** 
 
-**eval** *form → &#123;result&#125;*\* 
+**eval** *form → {result}*\* 
 
 **Arguments and Values:** 
 
@@ -2200,7 +2192,7 @@ The *argument form* (list ’cdr (car ’((quote (a . b)) c))) is evaluated in t
 
 **Syntax:** 
 
-**eval-when** (*&#123;situation&#125;*\*) *&#123;form&#125;*\* *→ &#123;result&#125;*\* 
+**eval-when** (*{situation}*\*) *{form}*\* *→ {result}*\* 
 
 **Arguments and Values:** 
 
@@ -2586,7 +2578,7 @@ The consequences are undefined if *environment* is *non-nil* in a use of **setf*
 
 **Syntax:** 
 
-**define-compiler-macro** *name lambda-list* [[ *&#123;declaration&#125;*\* *| documentation* ]] *&#123;form&#125;*\* *→ name* 
+**define-compiler-macro** *name lambda-list* [[ *{declaration}*\* *| documentation* ]] *{form}*\* *→ name* 
 
 **Arguments and Values:** 
 
@@ -2752,7 +2744,7 @@ finally (return (values x1s y1s x2s y2s others)))
 
 ‘(distance-positional ,x1 ,y1 ,x2 ,y2)) 
 
-((and (&#60; x1s 2) (&#60; y1s 2) (&#60; x2s 2) (&#60; y2s 2) 
+((and (< x1s 2) (< y1s 2) (< x2s 2) (< y2s 2) 
 
 (zerop others)) 
 
@@ -2788,33 +2780,33 @@ append (list (key i) (nth i temps)))))))
 
 (print (funcall (compiler-macro-function ’distance) form nil))) 
 
-&#9655; (LET ((#:G6558 (SETQ X 7))  
+*.* (LET ((#:G6558 (SETQ X 7))  
 
 
 
-&#9655; (#:G6559 (DECF X)) 
+*.* (#:G6559 (DECF X)) 
 
-&#9655; (#:G6560 (DECF X)) 
+*.* (#:G6560 (DECF X)) 
 
-&#9655; (#:G6561 (DECF X))) 
+*.* (#:G6561 (DECF X))) 
 
-&#9655; (DISTANCE :X1 #:G6558 :X2 #:G6559 :Y1 #:G6560 :Y2 #:G6561)) 
+*.* (DISTANCE :X1 #:G6558 :X2 #:G6559 :Y1 #:G6560 :Y2 #:G6561)) 
 
-&#9655; (DISTANCE-POSITIONAL (SETQ X 7) (DECF X) (DECF X) (DECF X)) 
+*.* (DISTANCE-POSITIONAL (SETQ X 7) (DECF X) (DECF X) (DECF X)) 
 
-&#9655; (LET ((#:G6567 (SETQ X 7)) 
+*.* (LET ((#:G6567 (SETQ X 7)) 
 
-&#9655; (#:G6568 (INCF X))) 
+*.* (#:G6568 (INCF X))) 
 
-&#9655; (DISTANCE :X1 #:G6567 :Y1 #:G6568)) 
+*.* (DISTANCE :X1 #:G6567 :Y1 #:G6568)) 
 
-&#9655; (DISTANCE :X1 (SETQ X 7) :Y1 (INCF X) :X1 (INCF X)) 
+*.* (DISTANCE :X1 (SETQ X 7) :Y1 (INCF X) :X1 (INCF X)) 
 
-&#9655; (DISTANCE-POSITIONAL A1 B1 A2 B2) 
+*.* (DISTANCE-POSITIONAL A1 B1 A2 B2) 
 
-&#9655; (DISTANCE-POSITIONAL A1 B1 A2 B2) 
+*.* (DISTANCE-POSITIONAL A1 B1 A2 B2) 
 
-&#9655; (DISTANCE :X1 A1 :Y1 B1 :Z1 C1 :X2 A2 :Y2 B2 :Z2 C2) 
+*.* (DISTANCE :X1 A1 :Y1 B1 :Z1 C1 :X2 A2 :Y2 B2 :Z2 C2) 
 
 *→* NIL 
 
@@ -2830,7 +2822,7 @@ The consequences of writing a *compiler macro* definition for a function in the 
 
 **Syntax:** 
 
-**defmacro** *name lambda-list* [[ *&#123;declaration&#125;*\* *| documentation* ]] *&#123;form&#125;*\* 
+**defmacro** *name lambda-list* [[ *{declaration}*\* *| documentation* ]] *{form}*\* 
 
 *→ name* 
 
@@ -3006,7 +2998,7 @@ T
 
 **Description:** 
 
-Determines whether *symbol* has a function definition as a macro in the specified *environment*. 
+Determines whether *symbol* has a function definition as a macro in the specified *environment*. **3–72** Programming Language—Common Lisp
 
 
 
@@ -3248,13 +3240,13 @@ Globally establishes an expansion function for the *symbol macro* named by *symb
 
 
 
-Each global reference to *symbol* (*i.e.*, not *shadowed* &#60;sub&#62;2&#60;/sub&#62; by a *binding* for a *variable* or *symbol macro* named by the same *symbol*) is expanded by the normal macro expansion process; see Section 3.1.2.1.1 (Symbols as Forms). The expansion of a *symbol macro* is subject to further *macro expansion* in the same *lexical environment* as the *symbol macro* reference, exactly analogous to normal *macros*. 
+Each global reference to *symbol* (*i.e.*, not *shadowed* <sub>2</sub> by a *binding* for a *variable* or *symbol macro* named by the same *symbol*) is expanded by the normal macro expansion process; see Section 3.1.2.1.1 (Symbols as Forms). The expansion of a *symbol macro* is subject to further *macro expansion* in the same *lexical environment* as the *symbol macro* reference, exactly analogous to normal *macros*. 
 
-The consequences are unspecified if a **special** declaration is made for *symbol* while in the scope of this definition (*i.e.*, when it is not *shadowed* &#60;sub&#62;2&#60;/sub&#62; by a *binding* for a *variable* or *symbol macro* named by the same *symbol*). 
+The consequences are unspecified if a **special** declaration is made for *symbol* while in the scope of this definition (*i.e.*, when it is not *shadowed* <sub>2</sub> by a *binding* for a *variable* or *symbol macro* named by the same *symbol*). 
 
 Any use of **setq** to set the value of the *symbol* while in the scope of this definition is treated as if it were a **setf**. **psetq** of *symbol* is treated as if it were a **psetf**, and **multiple-value-setq** is treated as if it were a **setf** of **values**. 
 
-A *binding* for a *symbol macro* can be *shadowed* &#60;sub&#62;2&#60;/sub&#62; by **let** or **symbol-macrolet**. 
+A *binding* for a *symbol macro* can be *shadowed* <sub>2</sub> by **let** or **symbol-macrolet**. 
 
 **Examples:** 
 
@@ -3296,9 +3288,9 @@ If *symbol* is already defined as a *global variable*, an error of *type* **prog
 
 **Syntax:** 
 
-**symbol-macrolet** (*&#123;*(*symbol expansion*)*&#125;*\*) *&#123;declaration&#125;*\* *&#123;form&#125;*\* 
+**symbol-macrolet** (*{*(*symbol expansion*)*}*\*) *{declaration}*\* *{form}*\* 
 
-*→ &#123;result&#125;*\* 
+*→ {result}*\* 
 
 **Arguments and Values:** 
 
@@ -3331,1458 +3323,3 @@ The use of **symbol-macrolet** can be shadowed by **let**. In other words, **sym
 ;;; The following is equivalent to 
 
 ;;; (list ’foo (let ((x ’bar)) x)), 
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-;;; not 
-
-;;; (list ’foo (let ((’foo ’bar)) ’foo)) 
-
-(symbol-macrolet ((x ’foo)) 
-
-(list x (let ((x ’bar)) x))) 
-
-*!* (foo bar) 
-
-*not* 
-
-*!* (foo foo) 
-
-(symbol-macrolet ((x ’(foo x))) 
-
-(list x)) 
-
-*!* ((FOO X)) 
-
-**Exceptional Situations:** 
-
-If an attempt is made to bind a *symbol* that is defined as a *global variable*, an error of *type* **program-error** is signaled. 
-
-If *declaration* contains a **special** declaration that names one of the *symbols* being bound by **symbol-macrolet**, an error of *type* **program-error** is signaled. 
-
-**See Also:** 
-
-**with-slots**, **macroexpand** 
-
-**Notes:** 
-
-The special form **symbol-macrolet** is the basic mechanism that is used to implement **with-slots**. 
-
-If a **symbol-macrolet** *form* is a *top level form*, the *forms* are also processed as *top level forms*. See Section 3.2.3 (File Compilation). 
-
-*⇤***macroexpand-hook***⇤ Variable* 
-
-**Value Type:** 
-
-a *designator* for a *function* of three *arguments*: a *macro function*, a *macro form*, and an *environment object*. 
-
-**Initial Value:** 
-
-a *designator* for a function that is equivalent to the *function* **funcall**, but that might have additional *implementation-dependent* side-e↵ects. 
-
-**Description:** 
-
-Used as the expansion interface hook by **macroexpand-1** to control the *macro expansion* process. When a *macro form* is to be expanded, this *function* is called with three arguments: the *macro function*, the *macro form*, and the *environment* in which the *macro form* is to be expanded. The *environment object* has *dynamic extent*; the consequences are undefined if the *environment object* is referred to outside the *dynamic extent* of the macro expansion function. 
-
-Evaluation and Compilation **3–79**
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-**Examples:** 
-
-(defun hook (expander form env) 
-
-(format t "Now expanding: ~S~%" form) 
-
-(funcall expander form env)) *!* HOOK 
-
-(defmacro machook (x y) ‘(/ (+ ,x ,y) 2)) *!* MACHOOK 
-
-(macroexpand ’(machook 1 2)) *!* (/ (+ 1 2) 2), *true* 
-
-(let ((\*macroexpand-hook\* #’hook)) (macroexpand ’(machook 1 2))) 
-
-*.* Now expanding (MACHOOK 1 2) 
-
-*!* (/ (+ 1 2) 2), *true* 
-
-**See Also:** 
-
-**macroexpand**, **macroexpand-1**, **funcall**, Section 3.1 (Evaluation) 
-
-**Notes:** 
-
-The net e↵ect of the chosen initial value is to just invoke the *macro function*, giving it the *macro form* and *environment* as its two arguments. 
-
-Users or user programs can *assign* this *variable* to customize or trace the *macro expansion* mechanism. Note, however, that this *variable* is a global resource, potentially shared by multiple *programs*; as such, if any two *programs* depend for their correctness on the setting of this *variable*, those *programs* may not be able to run in the same *Lisp image*. For this reason, it is frequently best to confine its uses to debugging situations. 
-
-Users who put their own function into **\*macroexpand-hook\*** should consider saving the previous value of the hook, and calling that value from their own. 
-
-**proclaim** *Function* 
-
-**Syntax:** 
-
-**proclaim** *declaration-specifier ! implementation-dependent* 
-
-**Arguments and Values:** 
-
-*declaration-specifier*—a *declaration specifier* . 
-
-**Description:** 
-
-*Establishes* the *declaration* specified by *declaration-specifier* in the *global environment*. 
-
-Such a *declaration*, sometimes called a *global declaration* or a *proclamation*, is always in force unless locally *shadowed*. 
-
-*Names* of *variables* and *functions* within *declaration-specifier* refer to *dynamic variables* and global *function* definitions, respectively. 
-
-**3–80** Programming Language—Common Lisp
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-Figure 3–22 shows a list of *declaration identifiers* that can be used with **proclaim**. 
-
-|**declaration inline optimize type ftype notinline special**|
-| :- |
-
-
-**Figure 3–22. Global Declaration Specifiers** 
-
-An implementation is free to support other (*implementation-defined*) *declaration identifiers* as well. **Examples:** 
-
-(defun declare-variable-types-globally (type vars) 
-
-(proclaim ‘(type ,type ,@vars)) 
-
-type) 
-
-;; Once this form is executed, the dynamic variable \*TOLERANCE\* 
-
-;; must always contain a float. 
-
-(declare-variable-types-globally ’float ’(\*tolerance\*)) 
-
-*!* FLOAT 
-
-**See Also:** 
-
-**declaim**, **declare**, Section 3.2 (Compilation) 
-
-**Notes:** 
-
-Although the *execution* of a **proclaim** *form* has e↵ects that might a↵ect compilation, the compiler does not make any attempt to recognize and specially process **proclaim** *forms*. A *proclamation* such as the following, even if a *top level form*, does not have any e↵ect until it is executed: 
-
-(proclaim ’(special \*x\*)) 
-
-If compile time side e↵ects are desired, **eval-when** may be useful. For example: 
-
-(eval-when (:execute :compile-toplevel :load-toplevel) 
-
-(proclaim ’(special \*x\*))) 
-
-In most such cases, however, it is preferrable to use **declaim** for this purpose. 
-
-Since **proclaim** *forms* are ordinary *function forms*, *macro forms* can expand into them. **declaim** *Macro* 
-
-**Syntax:** 
-
-**declaim** *{declaration-specifier}*\* *! implementation-dependent* 
-
-Evaluation and Compilation **3–81**
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-**Arguments and Values:** 
-
-*declaration-specifier*—a *declaration specifier* ; not evaluated. 
-
-**Description:** 
-
-Establishes the *declarations* specified by the *declaration-specifiers*. 
-
-If a use of this macro appears as a *top level form* in a *file* being processed by the *file compiler* , the proclamations are also made at compile-time. As with other defining macros, it is unspecified whether or not the compile-time side-e↵ects of a **declaim** persist after the *file* has been *compiled*. 
-
-**Examples:** 
-
-**See Also:** 
-
-**declare**, **proclaim** 
-
-**declare** *Symbol* 
-
-**Syntax:** 
-
-**declare** *{declaration-specifier}*\* 
-
-**Arguments:** 
-
-*declaration-specifier*—a *declaration specifier* ; not evaluated. 
-
-**Description:** 
-
-A **declare** *expression*, sometimes called a *declaration*, can occur only at the beginning of the bodies of certain *forms*; that is, it may be preceded only by other **declare** *expressions*, or by a *documentation string* if the context permits. 
-
-A **declare** *expression* can occur in a *lambda expression* or in any of the *forms* listed in Figure 3–23. **3–82** Programming Language—Common Lisp
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-**declare** 
-
-|<p>**defgeneric do-external-symbols prog** </p><p>**define-compiler-macro do-symbols prog\*** </p><p>**define-method-combination dolist restart-case define-setf-expander dotimes symbol-macrolet defmacro flet with-accessors defmethod handler-case with-hash-table-iterator defsetf labels with-input-from-string deftype let with-open-file defun let\* with-open-stream destructuring-bind locally with-output-to-string do macrolet with-package-iterator do\* multiple-value-bind with-slots** </p><p>**do-all-symbols pprint-logical-block**</p>|
-| :- |
-
-
-**Figure 3–23. Standardized Forms In Which Declarations Can Occur** 
-
-A **declare** *expression* can only occur where specified by the syntax of these *forms*. The consequences of attempting to evaluate a **declare** *expression* are undefined. In situations where such *expressions* can appear, explicit checks are made for their presence and they are never actually evaluated; it is for this reason that they are called “**declare** *expressions*” rather than “**declare** *forms*.” 
-
-*Macro forms* cannot expand into declarations; **declare** *expressions* must appear as actual *subexpressions* of the *form* to which they refer. 
-
-Figure 3–24 shows a list of *declaration identifiers* that can be used with **declare**. 
-
-|<p>**dynamic-extent ignore optimize** </p><p>**ftype inline special** </p><p>**ignorable notinline type**</p>|
-| :- |
-
-
-**Figure 3–24. Local Declaration Specifiers** 
-
-An implementation is free to support other (*implementation-defined*) *declaration identifiers* as well. **Examples:** 
-
-(defun nonsense (k x z) 
-
-(foo z x) ;First call to foo 
-
-(let ((j (foo k x)) ;Second call to foo 
-
-(x (\* k k))) 
-
-(declare (inline foo) (special x z)) 
-
-(foo x j z))) ;Third call to foo 
-
-In this example, the **inline** declaration applies only to the third call to foo, but not to the first or second ones. The **special** declaration of x causes **let** to make a dynamic *binding* for x, and 
-
-Evaluation and Compilation **3–83**
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-causes the reference to x in the body of **let** to be a dynamic reference. The reference to x in the second call to foo is a local reference to the second parameter of nonsense. The reference to x in the first call to foo is a local reference, not a **special** one. The **special** declaration of z causes the 
-
-reference to z in the third call to foo to be a dynamic reference; it does not refer to the parameter to nonsense named z, because that parameter *binding* has not been declared to be **special**. (The **special** declaration of z does not appear in the body of **defun**, but in an inner *form*, and therefore does not a↵ect the *binding* of the *parameter* .) 
-
-**Exceptional Situations:** 
-
-The consequences of trying to use a **declare** *expression* as a *form* to be *evaluated* are undefined. 
-
-**See Also:** 
-
-**proclaim**, Section 4.2.3 (Type Specifiers), **declaration**, **dynamic-extent**, **ftype**, **ignorable**, **ignore**, **inline**, **notinline**, **optimize**, **type** 
-
-**ignore, ignorable** *Declaration* 
-
-**Syntax:** 
-
-(ignore *{var* | (**function** *fn*)*}*\*) 
-
-(ignorable *{var* | (**function** *fn*)*}*\*) 
-
-**Arguments:** 
-
-*var*—a *variable name*. 
-
-*fn*—a *function name*. 
-
-**Valid Context:** 
-
-*declaration* 
-
-**Binding Types Aected:** 
-
-*variable*, *function* 
-
-**Description:** 
-
-The **ignore** and **ignorable** declarations refer to *for-value references* to *variable bindings* for the *vars* and to *function bindings* for the *fns*. 
-
-An **ignore** *declaration* specifies that *for-value references* to the indicated *bindings* will not occur within the scope of the *declaration*. Within the *scope* of such a *declaration*, it is desirable for a compiler to issue a warning about the presence of either a *for-value reference* to any *var* or *fn*, or a **special** *declaration* for any *var*. 
-
-**3–84** Programming Language—Common Lisp
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-An **ignorable** *declaration* specifies that *for-value references* to the indicated *bindings* might or might not occur within the scope of the *declaration*. Within the *scope* of such a *declaration*, it is not desirable for a compiler to issue a warning about the presence or absence of either a *for-value reference* to any *var* or *fn*, or a **special** *declaration* for any *var*. 
-
-When not within the *scope* of a **ignore** or **ignorable** *declaration*, it is desirable for a compiler to issue a warning about any *var* for which there is neither a *for-value reference* nor a **special** *declaration*, or about any *fn* for which there is no *for-value reference*. 
-
-Any warning about a “used” or “unused” *binding* must be of *type* **style-warning**, and may not a↵ect program semantics. 
-
-The *stream variables* established by **with-open-file**, **with-open-stream**, **with-input-from-string**, and **with-output-to-string**, and all *iteration variables* are, by definition, always “used”. Using (declare (ignore *v*)), for such a *variable v* has unspecified consequences. 
-
-**See Also:** 
-
-**declare** 
-
-**dynamic-extent** *Declaration* 
-
-**Syntax:** 
-
-(dynamic-extent [[ *{var}*\* | (**function** *fn*)\* ]]) 
-
-**Arguments:** 
-
-*var*—a *variable name*. 
-
-*fn*—a *function name*. 
-
-**Valid Context:** 
-
-*declaration* 
-
-**Binding Types Aected:** 
-
-*variable*, *function* 
-
-**Description:** 
-
-In some containing <i>form</i>, <i>F</i>, this declaration asserts for each <i>var<sub>i</sub></i> (which need not be bound by <i>F</i>), and for each <i>value v<sub>ij</sub></i> that <i>var<sub>i</sub></i> takes on, and for each <i>object x<sub>ijk</sub></i> that is an <i>otherwise inaccessible part</i> of <i>v<sub>ij</sub></i> at any time when <i>v<sub>ij</sub></i> becomes the value of <i>var<sub>i</sub></i>, that just after the execution of <i>F</i> terminates, <i>x<sub>ijk</sub></i> is either <i>inaccessible</i> (if <i>F</i> established a <i>binding</i> for <i>var<sub>i</sub></i>) or still an <i>otherwise inaccessible part</i> of the current value of <i>var<sub>i</sub></i> (if <i>F</i> did not establish a <i>binding</i> for <i>var<sub>i</sub></i>). The same relation holds for each <i>fn<sub>i</sub></i>, except that the <i>bindings</i> are in the <i>function namespace</i>. 
-
-Evaluation and Compilation **3–85**
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-**dynamic-extent** 
-
-The compiler is permitted to use this information in any way that is appropriate to the *implementation* and that does not conflict with the semantics of Common Lisp. 
-
-**dynamic-extent** declarations can be *free declarations* or *bound declarations*. 
-
-The *vars* and *fns* named in a **dynamic-extent** declaration must not refer to *symbol macro* or *macro* bindings. 
-
-**Examples:** 
-
-Since stack allocation of the initial value entails knowing at the *object*’s creation time that the *object* can be *stack-allocated*, it is not generally useful to make a **dynamic-extent** *declaration* for *variables* which have no lexically apparent initial value. For example, it is probably useful to write: 
-
-(defun f () 
-
-(let ((x (list 1 2 3))) 
-
-(declare (dynamic-extent x)) 
-
-...)) 
-
-This would permit those compilers that wish to do so to *stack allocate* the list held by the local variable x. It is permissible, but in practice probably not as useful, to write: 
-
-(defun g (x) (declare (dynamic-extent x)) ...) 
-
-(defun f () (g (list 1 2 3))) 
-
-Most compilers would probably not *stack allocate* the *argument* to g in f because it would be a modularity violation for the compiler to assume facts about g from within f. Only an implementation that was willing to be responsible for recompiling f if the definition of g changed incompatibly could legitimately *stack allocate* the *list* argument to g in f. 
-
-Here is another example: 
-
-(declaim (inline g)) 
-
-(defun g (x) (declare (dynamic-extent x)) ...) 
-
-(defun f () (g (list 1 2 3))) 
-
-(defun f () 
-
-(flet ((g (x) (declare (dynamic-extent x)) ...)) 
-
-(g (list 1 2 3)))) 
-
-In the previous example, some compilers might determine that optimization was possible and others might not. 
-
-A variant of this is the so-called “stack allocated rest list” that can be achieved (in implementations supporting the optimization) by: 
-
-(defun f (&rest x) 
-
-(declare (dynamic-extent x)) 
-
-**3–86** Programming Language—Common Lisp
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-**dynamic-extent** 
-
-...) 
-
-Note that although the initial value of x is not explicit, the f function is responsible for assembling the list x from the passed arguments, so the f function can be optimized by the compiler to construct a *stack-allocated* list instead of a heap-allocated list in implementations that support such. 
-
-In the following example, 
-
-(let ((x (list ’a1 ’b1 ’c1)) 
-
-(y (cons ’a2 (cons ’b2 (cons ’c2 nil))))) 
-
-(declare (dynamic-extent x y)) 
-
-...) 
-
-The *otherwise inaccessible parts* of x are three *conses*, and the *otherwise inaccessible parts* of y are three other *conses*. None of the symbols a1, b1, c1, a2, b2, c2, or **nil** is an *otherwise inaccessible part* of x or y because each is *interned* and hence *accessible* by the *package* (or *packages*) in which it is *interned*. However, if a freshly allocated *uninterned symbol* had been used, it would have been an *otherwise inaccessible part* of the *list* which contained it. 
-
-;; In this example, the implementation is permitted to *stack allocate* 
-
-;; the list that is bound to X. 
-
-(let ((x (list 1 2 3))) 
-
-(declare (dynamic-extent x)) 
-
-(print x) 
-
-:done) 
-
-*.* (1 2 3) 
-
-*!* :DONE 
-
-;; In this example, the list to be bound to L can be *stack-allocated*. 
-
-(defun zap (x y z) 
-
-(do ((l (list x y z) (cdr l))) 
-
-((null l)) 
-
-(declare (dynamic-extent l)) 
-
-(prin1 (car l)))) *!* ZAP 
-
-(zap 1 2 3) 
-
-*.* 123 
-
-*!* NIL 
-
-;; Some implementations might open-code LIST-ALL-PACKAGES in a way 
-
-;; that permits using *stack allocation* of the list to be bound to L. 
-
-(do ((l (list-all-packages) (cdr l))) 
-
-((null l)) 
-
-(declare (dynamic-extent l)) 
-
-(let ((name (package-name (car l)))) 
-
-(when (string-search "COMMON-LISP" name) (print name)))) 
-
-*.* "COMMON-LISP" 
-
-Evaluation and Compilation **3–87**
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-*.* "COMMON-LISP-USER" 
-
-*!* NIL 
-
-;; Some implementations might have the ability to *stack allocate* 
-
-;; rest lists. A declaration such as the following should be a cue 
-
-;; to such implementations that stack-allocation of the rest list 
-
-;; would be desirable. 
-
-(defun add (&rest x) 
-
-(declare (dynamic-extent x)) 
-
-(apply #’+ x)) *!* ADD 
-
-(add 1 2 3) *!* 6 
-
-(defun zap (n m) 
-
-;; Computes (RANDOM (+ M 1)) at relative speed of roughly O(N). 
-
-;; It may be slow, but with a good compiler at least it 
-
-;; doesn’t waste much heap storage. :-} 
-
-(let ((a (make-array n))) 
-
-(declare (dynamic-extent a)) 
-
-(dotimes (i n) 
-
-(declare (dynamic-extent i)) 
-
-(setf (aref a i) (random (+ i 1)))) 
-
-(aref a m))) *!* ZAP 
-
-(< (zap 5 3) 3) *! true* 
-
-The following are in error, since the value of x is used outside of its *extent*: 
-
-(length (list (let ((x (list 1 2 3))) ; Invalid 
-
-(declare (dynamic-extent x)) 
-
-x))) 
-
-(progn (let ((x (list 1 2 3))) ; Invalid 
-
-(declare (dynamic-extent x)) 
-
-x) 
-
-nil) 
-
-**See Also:** 
-
-**declare** 
-
-**Notes:** 
-
-The most common optimization is to *stack allocate* the initial value of the *objects* named by the *vars*. 
-
-It is permissible for an implementation to simply ignore this declaration. 
-
-**3–88** Programming Language—Common Lisp
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-**type** 
-
-**type** *Declaration* 
-
-**Syntax:** 
-
-(type *typespec {var}*\*) 
-
-(*typespec {var}*\*) 
-
-**Arguments:** 
-
-*typespec*—a *type specifier* . 
-
-*var*—a *variable name*. 
-
-**Valid Context:** 
-
-*declaration* or *proclamation* 
-
-**Binding Types Aected:** 
-
-*variable* 
-
-**Description:** 
-
-A↵ects only variable *bindings* and specifies that the *vars* take on values only of the specified *typespec*. In particular, values assigned to the variables by **setq**, as well as the initial values of the *vars* must be of the specified *typespec*. **type** declarations never apply to function *bindings* (see **ftype**). 
-
-A type declaration of a *symbol* defined by **symbol-macrolet** is equivalent to wrapping a **the** expression around the expansion of that *symbol*, although the *symbol*’s *macro expansion* is not actually a↵ected. 
-
-The meaning of a type declaration is equivalent to changing each reference to a variable (*var*) within the scope of the declaration to (the *typespec var*), changing each expression assigned to the variable (*new-value*) within the scope of the declaration to (the *typespec new-value*), and executing (the *typespec var*) at the moment the scope of the declaration is entered. 
-
-A *type* declaration is valid in all declarations. The interpretation of a type declaration is as follows: 
-
-1\. During the execution of any reference to the declared variable within the scope of the declaration, the consequences are undefined if the value of the declared variable is not of the declared *type*. 
-
-2\. During the execution of any **setq** of the declared variable within the scope of the declaration, the consequences are undefined if the newly assigned value of the declared variable is not of the declared *type*. 
-
-3\. At the moment the scope of the declaration is entered, the consequences are undefined if the value of the declared variable is not of the declared *type*. 
-
-Evaluation and Compilation **3–89**
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-**type** 
-
-A *type* declaration a↵ects only variable references within its scope. 
-
-If nested *type* declarations refer to the same variable, then the value of the variable must be a member of the intersection of the declared *types*. 
-
-If there is a local type declaration for a dynamic variable, and there is also a global type proclamation for that same variable, then the value of the variable within the scope of the local declaration must be a member of the intersection of the two declared *types*. 
-
-**type** declarations can be *free declarations* or *bound declarations*. 
-
-A *symbol* cannot be both the name of a *type* and the name of a declaration. Defining a *symbol* as the *name* of a *class*, *structure*, *condition*, or *type*, when the *symbol* has been *declared* as a declaration name, or vice versa, signals an error. 
-
-Within the *lexical scope* of an **array** type declaration, all references to *array elements* are assumed to satisfy the *expressed array element type* (as opposed to the *upgraded array element type*). A compiler can treat the code within the scope of the **array** type declaration as if each *access* of an *array element* were surrounded by an appropriate **the** form. 
-
-**Examples:** 
-
-(defun f (x y) 
-
-(declare (type fixnum x y)) 
-
-(let ((z (+ x y))) 
-
-(declare (type fixnum z)) 
-
-z)) *!* F 
-
-(f 1 2) *!* 3 
-
-;; The previous definition of F is equivalent to 
-
-(defun f (x y) 
-
-;; This declaration is a shorthand form of the TYPE declaration 
-
-(declare (fixnum x y)) 
-
-;; To declare the type of a return value, it’s not necessary to 
-
-;; create a named variable. A THE special form can be used instead. 
-
-(the fixnum (+ x y))) *!* F 
-
-(f 1 2) *!* 3 
-
-(defvar \*one-array\* (make-array 10 :element-type ’(signed-byte 5))) 
-
-(defvar \*another-array\* (make-array 10 :element-type ’(signed-byte 8))) 
-
-(defun frob (an-array) 
-
-(declare (type (array (signed-byte 5) 1) an-array)) 
-
-(setf (aref an-array 1) 31) 
-
-(setf (aref an-array 2) 127) 
-
-(setf (aref an-array 3) (\* 2 (aref an-array 3))) 
-
-(let ((foo 0)) 
-
-**3–90** Programming Language—Common Lisp
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-**type** 
-
-(declare (type (signed-byte 5) foo)) 
-
-(setf foo (aref an-array 0)))) 
-
-(frob \*one-array\*) 
-
-(frob \*another-array\*) 
-
-The above definition of frob is equivalent to: 
-
-(defun frob (an-array) 
-
-(setf (the (signed-byte 5) (aref an-array 1)) 31) 
-
-(setf (the (signed-byte 5) (aref an-array 2)) 127) 
-
-(setf (the (signed-byte 5) (aref an-array 3)) 
-
-(\* 2 (the (signed-byte 5) (aref an-array 3)))) 
-
-(let ((foo 0)) 
-
-(declare (type (signed-byte 5) foo)) 
-
-(setf foo (the (signed-byte 5) (aref an-array 0))))) 
-
-Given an implementation in which *fixnums* are 29 bits but **fixnum** *arrays* are upgraded to signed 32-bit *arrays*, the following could be compiled with all *fixnum* arithmetic: 
-
-(defun bump-counters (counters) 
-
-(declare (type (array fixnum \*) bump-counters)) 
-
-(dotimes (i (length counters)) 
-
-(incf (aref counters i)))) 
-
-**See Also:** 
-
-**declare**, **declaim**, **proclaim** 
-
-**Notes:** 
-
-(*typespec {var}*\*) is an abbreviation for (type *typespec {var}*\*). 
-
-A **type** declaration for the arguments to a function does not necessarily imply anything about the type of the result. The following function is not permitted to be compiled using *implementation-dependent fixnum*-only arithmetic: 
-
-(defun f (x y) (declare (fixnum x y)) (+ x y)) 
-
-To see why, consider (f most-positive-fixnum 1). Common Lisp defines that F must return a *bignum* here, rather than signal an error or produce a mathematically incorrect result. If you have special knowledge such “*fixnum* overflow” cases will not come up, you can declare the result value to be in the *fixnum* range, enabling some compilers to use more ecient arithmetic: 
-
-(defun f (x y) 
-
-(declare (fixnum x y)) 
-
-(the fixnum (+ x y))) 
-
-Note, however, that in the three-argument case, because of the possibility of an implicit Evaluation and Compilation **3–91**
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-intermediate value growing too large, the following will not cause *implementation-dependent fixnum*-only arithmetic to be used: 
-
-(defun f (x y) 
-
-(declare (fixnum x y z)) 
-
-(the fixnum (+ x y z))) 
-
-To see why, consider (f most-positive-fixnum 1 -1). Although the arguments and the result are all *fixnums*, an intermediate value is not a *fixnum*. If it is important that *implementation-dependent fixnum*-only arithmetic be selected in *implementations* that provide it, consider writing something like this instead: 
-
-(defun f (x y) 
-
-(declare (fixnum x y z)) 
-
-(the fixnum (+ (the fixnum (+ x y)) z))) 
-
-**inline, notinline** *Declaration* 
-
-**Syntax:** 
-
-(inline *{function-name}*\*) 
-
-(notinline *{function-name}*\*) 
-
-**Arguments:** 
-
-*function-name*—a *function name*. 
-
-**Valid Context:** 
-
-*declaration* or *proclamation* 
-
-**Binding Types Aected:** 
-
-*function* 
-
-**Description:** 
-
-**inline** specifies that it is desirable for the compiler to produce inline calls to the *functions* named by *function-names*; that is, the code for a specified *function-name* should be integrated into the calling routine, appearing “in line” in place of a procedure call. A compiler is free to ignore this declaration. **inline** declarations never apply to variable *bindings*. 
-
-If one of the *functions* mentioned has a lexically apparent local definition (as made by **flet** or **labels**), then the declaration applies to that local definition and not to the global function definition. 
-
-**3–92** Programming Language—Common Lisp
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-**inline, notinline** 
-
-While no *conforming implementation* is required to perform inline expansion of user-defined functions, those *implementations* that do attempt to recognize the following paradigm: 
-
-To define a *function* f that is not **inline** by default but for which (declare (inline f)) will make *f* be locally inlined, the proper definition sequence is: 
-
-(declaim (inline f)) 
-
-(defun f ...) 
-
-(declaim (notinline f)) 
-
-The **inline** proclamation preceding the **defun** *form* ensures that the *compiler* has the opportunity save the information necessary for inline expansion, and the **notinline** proclamation following the **defun** *form* prevents f from being expanded inline everywhere. 
-
-**notinline** specifies that it is undesirable to compile the *functions* named by *function-names* in-line. A compiler is not free to ignore this declaration; calls to the specified functions must be implemented as out-of-line subroutine calls. 
-
-If one of the *functions* mentioned has a lexically apparent local definition (as made by **flet** or **labels**), then the declaration applies to that local definition and not to the global function definition. 
-
-In the presence of a *compiler macro* definition for *function-name*, a **notinline** declaration prevents that *compiler macro* from being used. An **inline** declaration may be used to encourage use of *compiler macro* definitions. **inline** and **notinline** declarations otherwise have no e↵ect when the lexically visible definition of *function-name* is a *macro* definition. 
-
-**inline** and **notinline** declarations can be *free declarations* or *bound declarations*. **inline** and **notinline** declarations of functions that appear before the body of a **flet** or **labels** *form* that defines that function are *bound declarations*. Such declarations in other contexts are *free declarations*. 
-
-**Examples:** 
-
-;; The globally defined function DISPATCH should be open-coded, 
-
-;; if the implementation supports inlining, unless a NOTINLINE 
-
-;; declaration overrides this effect. 
-
-(declaim (inline dispatch)) 
-
-(defun dispatch (x) (funcall (get (car x) ’dispatch) x)) 
-
-;; Here is an example where inlining would be encouraged. 
-
-(defun top-level-1 () (dispatch (read-command))) 
-
-;; Here is an example where inlining would be prohibited. 
-
-(defun top-level-2 () 
-
-(declare (notinline dispatch)) 
-
-(dispatch (read-command))) 
-
-;; Here is an example where inlining would be prohibited. 
-
-(declaim (notinline dispatch)) 
-
-(defun top-level-3 () (dispatch (read-command))) 
-
-;; Here is an example where inlining would be encouraged. 
-
-Evaluation and Compilation **3–93**
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-(defun top-level-4 () 
-
-(declare (inline dispatch)) 
-
-(dispatch (read-command))) 
-
-**See Also:** 
-
-**declare**, **declaim**, **proclaim** 
-
-**ftype** *Declaration* 
-
-**Syntax:** 
-
-(ftype *type {function-name}*\*) 
-
-**Arguments:** 
-
-*function-name*—a *function name*. 
-
-*type*—a *type specifier* . 
-
-**Valid Context:** 
-
-*declaration* or *proclamation* 
-
-**Binding Types Aected:** 
-
-*function* 
-
-**Description:** 
-
-Specifies that the *functions* named by *function-names* are of the functional type *type*. For example: 
-
-(declare (ftype (function (integer list) t) ith) 
-
-(ftype (function (number) float) sine cosine)) 
-
-If one of the *functions* mentioned has a lexically apparent local definition (as made by **flet** or **labels**), then the declaration applies to that local definition and not to the global function definition. **ftype** declarations never apply to variable *bindings* (see type). 
-
-The lexically apparent bindings of *function-names* must not be *macro* definitions. (This is because **ftype** declares the functional definition of each *function name* to be of a particular subtype of **function**, and *macros* do not denote *functions*.) 
-
-**ftype** declarations can be *free declarations* or *bound declarations*. **ftype** declarations of functions that appear before the body of a **flet** or **labels** *form* that defines that function are *bound declarations*. Such declarations in other contexts are *free declarations*. 
-
-**See Also:** 
-
-**declare**, **declaim**, **proclaim** 
-
-**3–94** Programming Language—Common Lisp
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-**declaration** *Declaration* 
-
-**Syntax:** 
-
-(declaration *{name}*\*) 
-
-**Arguments:** 
-
-*name*—a *symbol*. 
-
-**Valid Context:** 
-
-*proclamation* only 
-
-**Description:** 
-
-Advises the compiler that each *name* is a valid but potentially non-standard declaration name. The purpose of this is to tell one compiler not to issue warnings for declarations meant for another compiler or other program processor. 
-
-**Examples:** 
-
-(declaim (declaration author target-language target-machine)) 
-
-(declaim (target-language ada)) 
-
-(declaim (target-machine IBM-650)) 
-
-(defun strangep (x) 
-
-(declare (author "Harry Tweeker")) 
-
-(member x ’(strange weird odd peculiar))) 
-
-**See Also:** 
-
-**declaim**, **proclaim** 
-
-**optimize** *Declaration* 
-
-**Syntax:** 
-
-(optimize *{quality* | (*quality value*)*}*\*) 
-
-**Arguments:** 
-
-*quality*—an *optimize quality*. 
-
-*value*—one of the *integers* 0, 1, 2, or 3. 
-
-Evaluation and Compilation **3–95**
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-**optimize** 
-
-**Valid Context:** 
-
-*declaration* or *proclamation* 
-
-**Description:** 
-
-Advises the compiler that each *quality* should be given attention according to the specified corresponding *value*. Each *quality* must be a *symbol* naming an *optimize quality*; the names and meanings of the standard *optimize qualities* are shown in Figure 3–25. 
-
-|**Name Meaning**|
-| :- |
-|<p>**compilation-speed** speed of the compilation process </p><p>**debug** ease of debugging </p><p>**safety** run-time error checking </p><p>**space** both code size and run-time space </p><p>**speed** speed of the object code</p>|
-
-
-**Figure 3–25. Optimize qualities** 
-
-There may be other, *implementation-defined optimize qualities*. 
-
-A *value* 0 means that the corresponding *quality* is totally unimportant, and 3 that the *quality* is extremely important; 1 and 2 are intermediate values, with 1 the neutral value. (*quality* 3) can be abbreviated to *quality*. 
-
-Note that *code* which has the optimization (safety 3), or just **safety**, is called *safe code*. The consequences are unspecified if a *quality* appears more than once with *di↵erent values*. **Examples:** 
-
-(defun often-used-subroutine (x y) 
-
-(declare (optimize (safety 2))) 
-
-(error-check x y) 
-
-(hairy-setup x) 
-
-(do ((i 0 (+ i 1)) 
-
-(z x (cdr z))) 
-
-((null z)) 
-
-;; This inner loop really needs to burn. 
-
-(declare (optimize speed)) 
-
-(declare (fixnum i)) 
-
-)) 
-
-**See Also:** 
-
-**declare**, **declaim**, **proclaim**, Section 3.3.4 (Declaration Scope) 
-
-**Notes:** 
-
-An **optimize** declaration never applies to either a *variable* or a *function binding*. An **optimize 3–96** Programming Language—Common Lisp
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-declaration can only be a *free declaration*. For more information, see Section 3.3.4 (Declaration Scope). 
-
-**special** *Declaration* 
-
-**Syntax:** 
-
-(special *{var}*\*) 
-
-**Arguments:** 
-
-*var*—a *symbol*. 
-
-**Valid Context:** 
-
-*declaration* or *proclamation* 
-
-**Binding Types Aected:** 
-
-*variable* 
-
-**Description:** 
-
-Specifies that all of the *vars* named are dynamic. This specifier a↵ects variable *bindings* and a↵ects references. All variable *bindings* a↵ected are made to be dynamic *bindings*, and a↵ected variable references refer to the current dynamic *binding*. For example: 
-
-(defun hack (thing \*mod\*) ;The binding of the parameter 
-
-(declare (special \*mod\*)) ; \*mod\* is visible to hack1, 
-
-(hack1 (car thing))) ; but not that of thing. 
-
-(defun hack1 (arg) 
-
-(declare (special \*mod\*)) ;Declare references to \*mod\* 
-
-;within hack1 to be special. 
-
-(if (atom arg) \*mod\* 
-
-(cons (hack1 (car arg)) (hack1 (cdr arg))))) 
-
-A **special** declaration does not a↵ect inner *bindings* of a *var*; the inner *bindings* implicitly shadow a **special** declaration and must be explicitly re-declared to be **special**. **special** declarations never apply to function *bindings*. 
-
-**special** declarations can be either *bound declarations*, a↵ecting both a binding and references, or *free declarations*, a↵ecting only references, depending on whether the declaration is attached to a variable binding. 
-
-When used in a *proclamation*, a **special** *declaration specifier* applies to all *bindings* as well as to all references of the mentioned variables. For example, after 
-
-(declaim (special x)) 
-
-Evaluation and Compilation **3–97**
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-**special** 
-
-then in a function definition such as 
-
-(defun example (x) ...) 
-
-the parameter x is bound as a dynamic variable rather than as a lexical variable. 
-
-**Examples:** 
-
-(defun declare-eg (y) ;this y is special 
-
-(declare (special y)) 
-
-(let ((y t)) ;this y is lexical 
-
-(list y 
-
-(locally (declare (special y)) y)))) ;this y refers to the 
-
-;special binding of y 
-
-*!* DECLARE-EG 
-
-(declare-eg nil) *!* (T NIL) 
-
-(setf (symbol-value ’x) 6) 
-
-(defun foo (x) ;a lexical binding of x 
-
-(print x) 
-
-(let ((x (1+ x))) ;a special binding of x 
-
-(declare (special x)) ;and a lexical reference 
-
-(bar)) 
-
-(1+ x)) 
-
-(defun bar () 
-
-(print (locally (declare (special x)) 
-
-x))) 
-
-(foo 10) 
-
-*.* 10 
-
-*.* 11 
-
-*!* 11 
-
-(setf (symbol-value ’x) 6) 
-
-(defun bar (x y) ;[1] 1st occurrence of x 
-
-(let ((old-x x) ;[2] 2nd occurrence of x – same as 1st occurrence 
-
-(x y)) ;[3] 3rd occurrence of x 
-
-(declare (special x)) 
-
-(list old-x x))) 
-
-(bar ’first ’second) *!* (FIRST SECOND) 
-
-(defun few (x &optional (y \*foo\*)) 
-
-(declare (special \*foo\*)) 
-
-...) 
-
-The reference to \*foo\* in the first line of this example is not **special** even though there is a **special** declaration in the second line. 
-
-(declaim (special prosp)) *! implementation-dependent* 
-
-**3–98** Programming Language—Common Lisp
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-(setq prosp 1 reg 1) *!* 1 
-
-(let ((prosp 2) (reg 2)) ;the binding of prosp is special 
-
-(set ’prosp 3) (set ’reg 3) ;due to the preceding proclamation, 
-
-(list prosp reg)) ;whereas the variable reg is lexical 
-
-*!* (3 2) 
-
-(list prosp reg) *!* (1 3) 
-
-(declaim (special x)) ;x is always special. 
-
-(defun example (x y) 
-
-(declare (special y)) 
-
-(let ((y 3) (x (\* x 2))) 
-
-(print (+ y (locally (declare (special y)) y))) 
-
-(let ((y 4)) (declare (special y)) (foo x)))) *!* EXAMPLE 
-
-In the contorted code above, the outermost and innermost *bindings* of y are dynamic, but the middle binding is lexical. The two arguments to + are di↵erent, one being the value, which is 3, of the lexical variable y, and the other being the value of the dynamic variable named y (a *binding* of which happens, coincidentally, to lexically surround it at an outer level). All the *bindings* of x and references to x are dynamic, however, because of the proclamation that x is always **special**. 
-
-**See Also:** 
-
-**defparameter**, **defvar** 
-
-**locally** *Special Operator* 
-
-**Syntax:** 
-
-**locally** *{declaration}*\* *{form}*\* *! {result}*\* 
-
-**Arguments and Values:** 
-
-*Declaration*—a **declare** *expression*; not evaluated. 
-
-*forms*—an *implicit progn*. 
-
-*results*—the *values* of the *forms*. 
-
-**Description:** 
-
-Sequentially evaluates a body of *forms* in a *lexical environment* where the given *declarations* have e↵ect. 
-
-**Examples:** 
-
-(defun sample-function (y) ;this y is regarded as special 
-
-(declare (special y)) 
-
-Evaluation and Compilation **3–99**
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-(let ((y t)) ;this y is regarded as lexical 
-
-(list y 
-
-(locally (declare (special y)) 
-
-;; this next y is regarded as special 
-
-y)))) 
-
-*!* SAMPLE-FUNCTION 
-
-(sample-function nil) *!* (T NIL) 
-
-(setq x ’(1 2 3) y ’(4 . 5)) *!* (4 . 5) 
-
-;;; The following declarations are not notably useful in specific. 
-
-;;; They just offer a sample of valid declaration syntax using LOCALLY. 
-
-(locally (declare (inline floor) (notinline car cdr)) 
-
-(declare (optimize space)) 
-
-(floor (car x) (cdr y))) *!* 0, 1 
-
-;;; This example shows a definition of a function that has a particular set 
-
-;;; of OPTIMIZE settings made locally to that definition. 
-
-(locally (declare (optimize (safety 3) (space 3) (speed 0))) 
-
-(defun frob (w x y &optional (z (foo x y))) 
-
-(mumble x y z w))) 
-
-*!* FROB 
-
-;;; This is like the previous example, except that the optimize settings 
-
-;;; remain in effect for subsequent definitions in the same compilation unit. (declaim (optimize (safety 3) (space 3) (speed 0))) 
-
-(defun frob (w x y &optional (z (foo x y))) 
-
-(mumble x y z w)) 
-
-*!* FROB 
-
-**See Also:** 
-
-**declare** 
-
-**Notes:** 
-
-The **special** declaration may be used with **locally** to a↵ect references to, rather than *bindings* of, *variables*. 
-
-If a **locally** *form* is a *top level form*, the body *forms* are also processed as *top level forms*. See Section 3.2.3 (File Compilation). 
-
-**3–100** Programming Language—Common Lisp
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-**the** 
-
-**the** *Special Operator* 
-
-**Syntax:** 
-
-**the** *value-type form ! {result}*\* 
-
-**Arguments and Values:** 
-
-*value-type*—a *type specifier* ; not evaluated. 
-
-*form*—a *form*; evaluated. 
-
-*results*—the *values* resulting from the *evaluation* of *form*. These *values* must conform to the *type* supplied by *value-type*; see below. 
-
-**Description:** 
-
-<b>the</b> specifies that the <i>values</i><sub>1<i>a</i></sub> returned by <i>form</i> are of the <i>types</i> specified by <i>value-type</i>. The consequences are undefined if any <i>result</i> is not of the declared type. 
-
-It is permissible for *form* to *yield* a di↵erent number of *values* than are specified by *value-type*, provided that the values for which *types* are declared are indeed of those *types*. Missing values are treated as **nil** for the purposes of checking their *types*. 
-
-Regardless of number of *values* declared by *value-type*, the number of *values* returned by the **the** *special form* is the same as the number of *values* returned by *form*. 
-
-**Examples:** 
-
-(the symbol (car (list (gensym)))) *!* #:G9876 
-
-(the fixnum (+ 5 7)) *!* 12 
-
-(the (values) (truncate 3.2 2)) *!* 1, 1.2 
-
-(the integer (truncate 3.2 2)) *!* 1, 1.2 
-
-(the (values integer) (truncate 3.2 2)) *!* 1, 1.2 
-
-(the (values integer float) (truncate 3.2 2)) *!* 1, 1.2 
-
-(the (values integer float symbol) (truncate 3.2 2)) *!* 1, 1.2 
-
-(the (values integer float symbol t null list) 
-
-(truncate 3.2 2)) *!* 1, 1.2 
-
-(let ((i 100)) 
-
-(declare (fixnum i)) 
-
-(the fixnum (1+ i))) *!* 101 
-
-(let\* ((x (list ’a ’b ’c)) 
-
-(y 5)) 
-
-(setf (the fixnum (car x)) y) 
-
-x) *!* (5 B C) 
-
-Evaluation and Compilation **3–101**
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-**Exceptional Situations:** 
-
-The consequences are undefined if the *values yielded* by the *form* are not of the *type* specified by *value-type*. 
-
-**See Also:** 
-
-**values** 
-
-**Notes:** 
-
-The **values** *type specifier* can be used to indicate the types of *multiple values*: 
-
-(the (values integer integer) (floor x y)) 
-
-(the (values string t) 
-
-(gethash the-key the-string-table)) 
-
-**setf** can be used with **the** type declarations. In this case the declaration is transferred to the form that specifies the new value. The resulting **setf** *form* is then analyzed. 
-
-**special-operator-p** *Function* 
-
-**Syntax:** 
-
-**special-operator-p** *symbol ! generalized-boolean* 
-
-**Arguments and Values:** 
-
-*symbol*—a *symbol*. 
-
-*generalized-boolean*—a *generalized boolean*. 
-
-**Description:** 
-
-Returns *true* if *symbol* is a *special operator* ; otherwise, returns *false*. 
-
-**Examples:** 
-
-(special-operator-p ’if) *! true* 
-
-(special-operator-p ’car) *! false* 
-
-(special-operator-p ’one) *! false* 
-
-**Exceptional Situations:** 
-
-Should signal **type-error** if its argument is not a *symbol*. 
-
-**Notes:** 
-
-Historically, this function was called special-form-p. The name was finally declared a misnomer and changed, since it returned true for *special operators*, not *special forms*. 
-
-**3–102** Programming Language—Common Lisp
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-**constantp** 
-
-**constantp** *Function* 
-
-**Syntax:** 
-
-**constantp** *form* &optional *environment ! generalized-boolean* 
-
-**Arguments and Values:** 
-
-*form*—a *form*. 
-
-*environment*—an *environment object*. The default is **nil**. 
-
-*generalized-boolean*—a *generalized boolean*. 
-
-**Description:** 
-
-Returns *true* if *form* can be determined by the *implementation* to be a *constant form* in the indicated *environment*; otherwise, it returns *false* indicating either that the *form* is not a *constant form* or that it cannot be determined whether or not *form* is a *constant form*. 
-
-The following kinds of *forms* are considered *constant forms*: 
-
-*• Self-evaluating objects* (such as *numbers*, *characters*, and the various kinds of *arrays*) are always considered *constant forms* and must be recognized as such by **constantp**. 
-
-*• Constant variables*, such as *keywords*, symbols defined by Common Lisp as constant (such as **nil**, **t**, and **pi**), and symbols declared as constant by the user in the indicated *environment* using **defconstant** are always considered *constant forms* and must be recognized as such by **constantp**. 
-
-*•* **quote** *forms* are always considered *constant forms* and must be recognized as such by **constantp**. 
-
-*•* An *implementation* is permitted, but not required, to detect additional *constant forms*. If it does, it is also permitted, but not required, to make use of information in the *environment*. Examples of *constant forms* for which **constantp** might or might not return *true* are: (sqrt pi), (+ 3 2), (length ’(a b c)), and (let ((x 7)) (zerop x)). 
-
-If an *implementation* chooses to make use of the *environment* information, such actions as expanding *macros* or performing function inlining are permitted to be used, but not required; however, expanding *compiler macros* is not permitted. 
-
-**Examples:** 
-
-(constantp 1) *! true* 
-
-(constantp ’temp) *! false* 
-
-(constantp ”temp)) *! true* 
-
-(defconstant this-is-a-constant ’never-changing) *!* THIS-IS-A-CONSTANT 
-
-Evaluation and Compilation **3–103**
-
-Version 15.17R, X3J13/94-101R. 
-
-Fri 12-Aug-1994 6:35pm EDT 
-
-**constantp** 
-
-(constantp ’this-is-a-constant) *! true* 
-
-(constantp "temp") *! true* 
-
-(setq a 6) *!* 6 
-
-(constantp a) *! true* 
-
-(constantp ’(sin pi)) *! implementation-dependent* 
-
-(constantp ’(car ’(x))) *! implementation-dependent* 
-
-(constantp ’(eql x x)) *! implementation-dependent* 
-
-(constantp ’(typep x ’nil)) *! implementation-dependent* 
-
-(constantp ’(typep x ’t)) *! implementation-dependent* 
-
-(constantp ’(values this-is-a-constant)) *! implementation-dependent* 
-
-(constantp ’(values ’x ’y)) *! implementation-dependent* 
-
-(constantp ’(let ((a ’(a b c))) (+ (length a) 6))) *! implementation-dependent* 
-
-**Aected By:** 
-
-The state of the global environment (*e.g.*, which *symbols* have been declared to be the *names* of *constant variables*). 
-
-**See Also:** 
-
-**defconstant** 
-
-**3–104** Programming Language—Common Lisp

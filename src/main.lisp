@@ -484,11 +484,27 @@
 	 (label (get-chapter-label chapter-text))
 	 (category-path (uiop:merge-pathnames* *category-filename* chapter-dir))
 	 (section-list (get-chapter-sections chapter-text)))
-    (format T "~%chapter-name: ~A" chapter-name)
     (ensure-directories-exist chapter-dir)
     (str:to-file category-path (make-doc-category-json label))
-    (process-chapter-intro chapter-dir (car section-list))
-    (mapcar (lambda (x) (process-section chapter-dir x)) (cdr section-list))))
+    ;; check the intro text, if after triming it it's just the chapter title,
+    ;; then skip this step (only when or if..
+    (if (not (= 0
+		(length (str:trim
+			 (str:replace-first  (format NIL "**~A**" label)
+					     ""
+					     (car section-list))))))
+	(progn
+	  (format T "~%chapter-name: ~A" chapter-name)
+	  (format T "~%label: ~A" label)
+	  (if (< (length (car section-list)) 400)
+	      (format T "~%Intro No Change: ~A" (car section-list))))
+		(process-chapter-intro chapter-dir (car section-list)))
+;    (progn
+      ;; (format T "~%Intro: ~A" (str:trim
+      ;; 			       (str:replace-first  (format NIL "**~A**" label)
+      ;; 						   ""
+      ;; 						   (car section-list))))
+      (mapcar (lambda (x) (process-section chapter-dir x)) (cdr section-list))))
 
 ;; make function to replace symbols missing
 ;; *hh ii* *.*
@@ -677,6 +693,11 @@
     (setf md-lists (mapcar-to-second md-lists
 				     (lambda (x)
 				       (substitute  #\Newline  #\Return x))))
+
+    (format T "~%~%Replacing #\ZERO_WIDTH_NO-BREAK_SPACE with #\ ")
+    (setf md-lists (mapcar-to-second md-lists
+				     (lambda (x)
+				       (substitute #\Space #\ZERO_WIDTH_NO-BREAK_SPACE x))))
 
     (format T "~%~%Splitting and Saving Chapters to Output")
     (mapcar #'process-chapter-with-text md-lists)

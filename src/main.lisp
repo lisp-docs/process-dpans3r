@@ -33,6 +33,7 @@
     "\\w+(–\\d+)* Programming Language—Common Lisp"
     "\\*\\*\\w+(–\\d+)*\\*\\* Programming Language—Common Lisp"))
 
+(defvar *extra-headers-footers-regex* '("([A-Z][a-z]+ \\*\\*(\\w|\\d+)–\\d+\\*\\*)"))
 
 ;(defvar *chapter-sections* "\\n\\d\\+.\\d+.*?\\n")
 ;(defvar *chapter-sections* "\\n**\\d+\\.\\d+.*?**\\n")
@@ -511,6 +512,9 @@
    (remove-regex-list contents *headers-regex*)
   *headers-non-regex*))
 
+(defun remove-extra-headers-footers (contents)
+  (remove-regex-list contents *extra-headers-footers-regex*))
+
 (defun process-file (filepath)
   (let* ((chapter-contents (load-file filepath))
 	 (dir-path (get-directory-for-chapter filepath))
@@ -623,7 +627,7 @@
 ;;       by two asteriks ** to make it bold... so may have to remove those before
 ;;       then split, then to each one apply the asteriks, and turn into columns
 ;; clear headers and footers...
-;; clear extra footers not processed: Symbols **10–5**
+;; clear extra footers not processed: Symbols **10–5** Numbers **12–15**
 ;; #<FUNCTION anonymous> is problematic, but really only shows up inside a code block...
 ;;     so could use it to identify code blocks...
 ;; Every **Example** or whatever is a code block...
@@ -649,8 +653,8 @@
     (format T "~%Processing Titles")
     (setf md-lists (mapcar-to-second md-lists #'process-titles))
     
-    ;; (format T "~%Removing Headers")
-    ;; (setf md-lists (mapcar-to-second md-lists #'remove-headers))
+    (format T "~%Removing extra Headers nad Footers")
+    (setf md-lists (mapcar-to-second md-lists #'remove-extra-headers-footers))
 
     ;; (format T "~%Replacing HTML Characters")
     ;; (setf md-lists (mapcar-to-second md-lists #'replace-html-chars))

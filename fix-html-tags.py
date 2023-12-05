@@ -12,22 +12,27 @@ def process_all_md_files(given_dir):
                 process_file(filename, root)
 
 def fix_case(file_text, processed_text):
-    # file_text = text
-    # processed_text = text
-    # react_import_tag_regex = r"';\n\n<(\w+) />"
-    # import_tag_regex = r"';\n\n<(\w+)>"
     react_import_tag_regex = r"import \w+ from '[\.\/\-\w]+';\n\n<(\w+) />"
     import_tag_regex = r"import \w+ from '[\.\/\-\w]+';\n\n<(\w+)>"
-    # re.finditer(import_tag_regex, text)
-    # re.finditer(import_tag_regex, processed_text)
     html_tags = re.findall(import_tag_regex, processed_text)
     react_tags = re.findall(react_import_tag_regex, file_text)
-    # react_tags[0] in html_tags
-    # react_tags[0].lower() in html_tags
     html_close_tags = [f'</{tag.lower()}>' for tag in react_tags]
     for tag in html_close_tags:
         processed_text = processed_text.replace(tag, "")
     for tag in react_tags:
+        if tag.lower() in html_tags:
+            processed_text = processed_text.replace(f"<{tag.lower()}>", f"<{tag} />")
+    return processed_text
+
+def fix_case_lisp(file_text, processed_text):
+    cl_tag_regex = r'#<[A-Z\-]+ "[A-Z\-]+">'
+    html_tag_regex = r'#<[a-z\-]+ "[a-z\-]+"="">'
+    html_tags = re.findall(html_tag_regex, processed_text)
+    cl_tags = re.findall(cl_tag_regex, file_text)
+    html_close_tags = [f'</{tag.lower()}>' for tag in cl_tags]
+    for tag in html_close_tags:
+        processed_text = processed_text.replace(tag, "")
+    for tag in cl_tags:
         if tag.lower() in html_tags:
             processed_text = processed_text.replace(f"<{tag.lower()}>", f"<{tag} />")
     return processed_text
@@ -37,6 +42,7 @@ def process_file(filename, root):
     filepath = os.path.join(root, filename)
     file = open(filepath, "r")
     file_text = file.read()
+    file_text = file_text.replace("\\{", "{").replace("\\}", "}")
     div_text = f'<div>{file_text}</div>'
     file.close()
     # soup = BeautifulSoup(file_text, 'html5')
@@ -47,8 +53,8 @@ def process_file(filename, root):
     processed_text = fix_case(file_text, processed_text)
     # [].index()
     if processed_text.strip().lower() != file_text.strip().lower():
-        import pdb; pdb.set_trace()
         print(filepath)
+        # import pdb; pdb.set_trace()
         file = open(filepath, "w")
         file.write(processed_text)
         file.close()

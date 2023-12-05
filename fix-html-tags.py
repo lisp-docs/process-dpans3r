@@ -25,16 +25,19 @@ def fix_case(file_text, processed_text):
     return processed_text
 
 def fix_case_lisp(file_text, processed_text):
-    cl_tag_regex = r'#<[A-Z\-]+ "[A-Z\-]+">'
-    html_tag_regex = r'#<[a-z\-]+ "[a-z\-]+"="">'
+    cl_tag_regex = r'(#<[A-Z\-]+ "[A-Z\-]+">)'
+    html_tag_regex = r'(#<[a-z\-]+ "[a-z\-]+"="">)'
+    close_tag_regex = r'#<([a-z\-]+) "[a-z\-]+"="">'
     html_tags = re.findall(html_tag_regex, processed_text)
     cl_tags = re.findall(cl_tag_regex, file_text)
-    html_close_tags = [f'</{tag.lower()}>' for tag in cl_tags]
+    html_close_tags = re.findall(close_tag_regex, processed_text)
+    # html_close_tags = [f'</{tag.lower()}>' for tag in cl_tags]
     for tag in html_close_tags:
         processed_text = processed_text.replace(tag, "")
     for tag in cl_tags:
-        if tag.lower() in html_tags:
-            processed_text = processed_text.replace(f"<{tag.lower()}>", f"<{tag} />")
+        cl_to_html_tag = tag.lower().removesuffix(">") + '="">'
+        if cl_to_html_tag in html_tags:
+            processed_text = processed_text.replace(cl_to_html_tag, tag)
     return processed_text
 
 
@@ -51,6 +54,7 @@ def process_file(filename, root):
     cleaned_text = str(soup.div)
     processed_text = cleaned_text.strip().removeprefix("<div>").removesuffix("</div>")
     processed_text = fix_case(file_text, processed_text)
+    processed_text = fix_case_lisp(file_text, processed_text)
     # [].index()
     if processed_text.strip().lower() != file_text.strip().lower():
         print(filepath)

@@ -42,8 +42,8 @@ def fix_case_lisp(file_text, processed_text):
         # if cl_to_html_tag in html_tags:
         # import pdb; pdb.set_trace()
         processed_text = processed_text.replace(html_tags[index][0], tag[0])
-    if processed_text.strip().endswith(">"):
-        import pdb; pdb.set_trace()
+    # if processed_text.strip().endswith(">"):
+    #     import pdb; pdb.set_trace()
     return processed_text
 
 

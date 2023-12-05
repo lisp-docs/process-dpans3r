@@ -205,18 +205,19 @@ def apply_first_example_code_block(given_text):
         return given_text[:post_example_index] + begin_code + given_text[post_example_index:] + end_code
 
 def get_title_indices(title, given_text):
-    # title = "**Examples:**"
-    title_regex = f'({title})'
-    all_titles = re.findall(re.escape(title_regex), given_text)
-    indices = []
-    # curr_index = 0 - len(title)
-    offset = 0
-    for i in all_titles:
-        # offset = curr_index + len(title)
-        found_index = given_text[offset:].find(title) + offset
-        indices.append(found_index)
-        offset = found_index + len(title)
-    return indices
+    # # title = "**Examples:**"
+    # title_regex = f'({title})'
+    # all_titles = re.findall(re.escape(title_regex), given_text)
+    # indices = []
+    # # curr_index = 0 - len(title)
+    # offset = 0
+    # for i in all_titles:
+    #     # offset = curr_index + len(title)
+    #     found_index = given_text[offset:].find(title) + offset
+    #     indices.append(found_index)
+    #     offset = found_index + len(title)
+    # return indices
+    return [index for index in range(len(given_text)) if given_text.startswith(title, index)]
 
 def apply_example_code_blocks(given_text):
     example_title = "**Examples:**"
@@ -231,10 +232,12 @@ def apply_example_code_blocks(given_text):
 
     for i in range(len(all_indices)):
         text_with_escaped_code_block = apply_first_example_code_block(curr_text[all_indices[i]:])
-        if i -1 == len(all_indices):
+        if i +1 == len(all_indices):
             curr_text += text_with_escaped_code_block
         else:
-            curr_text += text_with_escaped_code_block[:all_indices[i+1]]
+            new_indices = get_title_indices(text_with_escaped_code_block)
+            # there has to be at least one more, so the array above should be at least of two elements
+            curr_text += text_with_escaped_code_block[:new_indices[1]]
     return curr_text
 
 def create_dicionary_entry_files(file_section, new_section_dir):

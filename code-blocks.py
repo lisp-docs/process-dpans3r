@@ -183,7 +183,7 @@ def get_new_item_name(names_used, curr_name):
             # found_name = True
             return new_name
 
-def apply_example_code_blocks(given_text):
+def apply_first_example_code_block(given_text):
     example_title = "**Examples:**"
     title_regex = r'(\*\*\w+(\w*\s*)*:\*\*\s*?\n)'
     begin_code = "\n```lisp\n"
@@ -202,6 +202,15 @@ def apply_example_code_blocks(given_text):
         return given_text[:post_example_index] + begin_code + given_text[post_example_index:next_title_index] + end_code + given_text[next_title_index:]
     else:
         return given_text[:post_example_index] + begin_code + given_text[post_example_index:] + end_code
+
+def apply_example_code_blocks(given_text):
+    example_title = "**Examples:**"
+
+    all_examples = re.findall(re.escape(example_title), given_text)
+    curr_text = given_text
+    
+    for i in range(len(all_examples)):
+        curr_text = apply_first_example_code_block(curr_text)
 
 def create_dicionary_entry_files(file_section, new_section_dir):
     # create _x.md, x.md filename,s import correctly... add first heading as title to x.md

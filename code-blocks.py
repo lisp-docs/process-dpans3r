@@ -204,14 +204,37 @@ def apply_first_example_code_block(given_text):
     else:
         return given_text[:post_example_index] + begin_code + given_text[post_example_index:] + end_code
 
+def get_title_indices(title, given_text):
+    # title = "**Examples:**"
+    title_regex = f'({title})'
+    all_titles = re.findall(re.escape(title_regex), given_text)
+    indices = []
+    # curr_index = 0 - len(title)
+    offset = 0
+    for i in all_titles:
+        # offset = curr_index + len(title)
+        found_index = given_text[offset:].find(title) + offset
+        indices.append(found_index)
+        offset = found_index + len(title)
+    return indices
+
 def apply_example_code_blocks(given_text):
     example_title = "**Examples:**"
 
-    all_examples = re.findall(re.escape(example_title), given_text)
-    curr_text = given_text
+    # all_examples = re.findall(re.escape(example_title), given_text)
+    all_indices = get_title_indices(example_title, given_text)
 
-    for i in range(len(all_examples)):
-        curr_text = apply_first_example_code_block(curr_text)
+    if len(all_indices) == 0:
+        return given_text
+
+    curr_text = given_text[0:all_indices[0]]
+
+    for i in range(len(all_indices)):
+        text_with_escaped_code_block = apply_first_example_code_block(curr_text[all_indices[i]:])
+        if i -1 == len(all_indices):
+            curr_text += text_with_escaped_code_block
+        else:
+            curr_text += text_with_escaped_code_block[:all_indices[i+1]]
     return curr_text
 
 def create_dicionary_entry_files(file_section, new_section_dir):

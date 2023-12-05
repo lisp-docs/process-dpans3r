@@ -1,7 +1,7 @@
 # Needs python >= 3.9 
 # fix-html-tags.py
 from bs4 import BeautifulSoup
-import os
+import os, re
 
 MD_DIR = "./output/"
 
@@ -10,6 +10,28 @@ def process_all_md_files(given_dir):
         for filename in filenames:
             if filename.endswith(".md"):
                 process_file(filename, root)
+
+def fix_case(file_text, processed_text):
+    # file_text = text
+    # processed_text = text
+    # react_import_tag_regex = r"';\n\n<(\w+) />"
+    # import_tag_regex = r"';\n\n<(\w+)>"
+    react_import_tag_regex = r"import \w+ from '[\.\/\-\w]+';\n\n<(\w+) />"
+    import_tag_regex = r"import \w+ from '[\.\/\-\w]+';\n\n<(\w+)>"
+    # re.finditer(import_tag_regex, text)
+    # re.finditer(import_tag_regex, processed_text)
+    html_tags = re.findall(import_tag_regex, processed_text)
+    react_tags = re.findall(react_import_tag_regex, file_text)
+    # react_tags[0] in html_tags
+    # react_tags[0].lower() in html_tags
+    html_close_tags = [f'</{tag.lower()}>' for tag in react_tags]
+    for tag in html_close_tags:
+        processed_text = processed_text.replace(tag, "")
+    for tag in react_tags:
+        if tag.lower() in html_tags:
+            processed_text = processed_text.replace(f"<{tag.lower()}>", f"<{tag} />")
+    return processed_text
+
 
 def process_file(filename, root):
     filepath = os.path.join(root, filename)
@@ -22,6 +44,8 @@ def process_file(filename, root):
     # soup = BeautifulSoup(div_text, 'xml')
     cleaned_text = str(soup.div)
     processed_text = cleaned_text.strip().removeprefix("<div>").removesuffix("</div>")
+    processed_text = fix_case(file_text, processed_text)
+    # [].index()
     if processed_text.strip().lower() != file_text.strip().lower():
         import pdb; pdb.set_trace()
         print(filepath)

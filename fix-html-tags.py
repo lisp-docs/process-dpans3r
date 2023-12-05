@@ -25,20 +25,25 @@ def fix_case(file_text, processed_text):
     return processed_text
 
 def fix_case_lisp(file_text, processed_text):
-    cl_tag_regex = r'(#<[A-Z\-]+ "[A-Z\-]+">)'
-    html_tag_regex = r'(#<[a-z\-]+ "[a-z\-]+"="">)'
-    close_tag_regex = r'#<([a-z\-]+) "[a-z\-]+"="">'
+    # cl_tag_regex = r'(#<[A-Z\-]+ "[A-Z\-]+">)'
+    # html_tag_regex = r'(#<[a-z\-]+ "[a-z\-]+"="">)'
+    # close_tag_regex = r'#<([A-Z\-]+) ["\w\d A-Z\-]+>'
+    # cl_tag_regex = r'(#<[A-Z\-]+ ["\w\d A-Z\-]+>)'
+    cl_tag_regex = r'(#<([A-Z\-]+) ["\w\d A-Z\-\W]+>)'
+    html_tag_regex = r'(#<[a-z\-]+ ([\d\w\s"a-z\-\W]+="")*>)'
     html_tags = re.findall(html_tag_regex, processed_text)
     cl_tags = re.findall(cl_tag_regex, file_text)
-    html_close_tags = re.findall(close_tag_regex, processed_text)
-    # html_close_tags = [f'</{tag.lower()}>' for tag in cl_tags]
+    # html_close_tags = re.findall(close_tag_regex, processed_text)
+    html_close_tags = [f'</{tag[1].lower()}>' for tag in cl_tags]
     for tag in html_close_tags:
         processed_text = processed_text.replace(tag, "")
-    for tag in cl_tags:
-        cl_to_html_tag = tag.lower().removesuffix(">") + '="">'
-        if cl_to_html_tag in html_tags:
-            processed_text = processed_text.replace(cl_to_html_tag, tag)
-    import pdb; pdb.set_trace()
+    for index, tag in enumerate(cl_tags):
+        # cl_to_html_tag = tag[0].lower().removesuffix(">") + '="">'
+        # if cl_to_html_tag in html_tags:
+        # import pdb; pdb.set_trace()
+        processed_text = processed_text.replace(html_tags[index][0], tag[0])
+    if processed_text.strip().endswith(">"):
+        import pdb; pdb.set_trace()
     return processed_text
 
 

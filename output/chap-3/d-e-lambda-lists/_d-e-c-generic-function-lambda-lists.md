@@ -14,23 +14,23 @@ A *generic function lambda list* has the following syntax:
 
 
 
-*lambda-list::*=(*\{var\}*\* 
+*lambda-list::*=(*\&#123;var\&#125;*\* 
 
 
 
-[&amp;optional *\{var |* (*var*)*\}*\*] 
+[&optional *\&#123;var |* (*var*)*\&#125;*\*] 
 
 
 
-[&amp;rest *var*] 
+[&rest *var*] 
 
 
 
-[&amp;key *\{var |* (*\{var |* (*keyword-name var*)*\}*)*\}*\* 
+[&key *\&#123;var |* (*\&#123;var |* (*keyword-name var*)*\&#125;*)*\&#125;*\* 
 
 
 
-[&amp;allow-other-keys]]) 
+[&allow-other-keys]]) 
 
 
 
@@ -38,7 +38,7 @@ A *generic function lambda list* can contain the *lambda list keywords* shown in
 
 
 
-|<p>**&amp;allow-other-keys &amp;optional** </p><p>**&amp;key &amp;rest**</p>|
+|<p>**&allow-other-keys &optional** </p><p>**&key &rest**</p>|
 
 | :- |
 
@@ -82,11 +82,11 @@ use supplied-p parameters.
 
 
 
-**Use of &amp;aux** 
+**Use of &aux** 
 
 
 
-The use of **&amp;aux** is not allowed. 
+The use of **&aux** is not allowed. 
 
 
 

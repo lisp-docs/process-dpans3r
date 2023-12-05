@@ -6,7 +6,7 @@
 
 
 
-**import** *symbols* &amp;optional *package →* **t** 
+**import** *symbols* &optional *package →* **t** 
 
 
 

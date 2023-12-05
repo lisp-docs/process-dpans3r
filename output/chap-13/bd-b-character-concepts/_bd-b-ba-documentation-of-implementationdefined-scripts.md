@@ -210,11 +210,11 @@ The *type* **extended-char** might have no *elements*<sub>4</sub> in *implementa
 
 
 
-**char=, char/=, char***&lt;***, char***&gt;***, char***&lt;***=, char***&gt;***=,** *. . .* 
+**char=, char/=, char***<***, char***>***, char***<***=, char***>***=,** *. . .* 
 
 
 
-<b>char=, char/=, char</b><i>&lt;</i><b>, char</b><i>&gt;</i><b>, char</b><i>&lt;</i><b>=, char</b><i>&gt;</i><b>=, <sup>char-equal, char-not-equal, char-lessp, char</sup> greaterp, char-not-greaterp, char-not-lessp</b> <i>Function</i> 
+<b>char=, char/=, char</b><i><</i><b>, char</b><i>></i><b>, char</b><i><</i><b>=, char</b><i>></i><b>=, <sup>char-equal, char-not-equal, char-lessp, char</sup> greaterp, char-not-greaterp, char-not-lessp</b> <i>Function</i> 
 
 
 
@@ -222,51 +222,51 @@ The *type* **extended-char** might have no *elements*<sub>4</sub> in *implementa
 
 
 
-**char**= &amp;rest *characters*<sup>+</sup> *→ generalized-boolean* 
+**char**= &rest *characters*<sup>+</sup> *→ generalized-boolean* 
 
 
 
-**char***/* = &amp;rest *characters*<sup>+</sup> *→ generalized-boolean* 
+**char***/* = &rest *characters*<sup>+</sup> *→ generalized-boolean* 
 
 
 
-**char**&lt; &amp;rest *characters*<sup>+</sup> *→ generalized-boolean* 
+**char**< &rest *characters*<sup>+</sup> *→ generalized-boolean* 
 
 
 
-**char**&gt; &amp;rest *characters*<sup>+</sup> *→ generalized-boolean* 
+**char**> &rest *characters*<sup>+</sup> *→ generalized-boolean* 
 
 
 
-**char**&lt;= &amp;rest *characters*<sup>+</sup> *→ generalized-boolean* 
+**char**<= &rest *characters*<sup>+</sup> *→ generalized-boolean* 
 
 
 
-**char**&gt;= &amp;rest *characters*<sup>+</sup> *→ generalized-boolean* 
+**char**>= &rest *characters*<sup>+</sup> *→ generalized-boolean* 
 
 
 
-**char-equal** &amp;rest *characters*<sup>+</sup> *→ generalized-boolean* 
+**char-equal** &rest *characters*<sup>+</sup> *→ generalized-boolean* 
 
 
 
-**char-not-equal** &amp;rest *characters*<sup>+</sup> *→ generalized-boolean* 
+**char-not-equal** &rest *characters*<sup>+</sup> *→ generalized-boolean* 
 
 
 
-**char-lessp** &amp;rest *characters*<sup>+</sup> *→ generalized-boolean* 
+**char-lessp** &rest *characters*<sup>+</sup> *→ generalized-boolean* 
 
 
 
-**char-greaterp** &amp;rest *characters*<sup>+</sup> *→ generalized-boolean* 
+**char-greaterp** &rest *characters*<sup>+</sup> *→ generalized-boolean* 
 
 
 
-**char-not-greaterp** &amp;rest *characters*<sup>+</sup> *→ generalized-boolean* 
+**char-not-greaterp** &rest *characters*<sup>+</sup> *→ generalized-boolean* 
 
 
 
-**char-not-lessp** &amp;rest *characters*<sup>+</sup> *→ generalized-boolean* 
+**char-not-lessp** &rest *characters*<sup>+</sup> *→ generalized-boolean* 
 
 
 
@@ -298,23 +298,19 @@ These predicates compare *characters*.
 
 
 
-**char**&lt; returns *true* if the *characters* are monotonically increasing; otherwise, it returns *false*. If two *characters* have *identical implementation-defined attributes*, then their ordering by **char**&lt; is consistent with the numerical ordering by the predicate &lt; on their *codes*. 
+**char**< returns *true* if the *characters* are monotonically increasing; otherwise, it returns *false*. If two *characters* have *identical implementation-defined attributes*, then their ordering by **char**< is consistent with the numerical ordering by the predicate < on their *codes*. 
 
 
 
-**char**&gt; returns *true* if the *characters* are monotonically decreasing; otherwise, it returns *false*. If two *characters* have *identical implementation-defined attributes*, then their ordering by **char**&gt; is consistent with the numerical ordering by the predicate &gt; on their *codes*. 
+**char**> returns *true* if the *characters* are monotonically decreasing; otherwise, it returns *false*. If two *characters* have *identical implementation-defined attributes*, then their ordering by **char**> is consistent with the numerical ordering by the predicate > on their *codes*. 
 
 
 
-**char**&lt;**=** returns *true* if the *characters* are monotonically nondecreasing; otherwise, it returns *false*. If two *characters* have *identical implementation-defined attributes*, then their ordering by **char**&lt;**=** is consistent with the numerical ordering by the predicate &lt;= on their *codes*. 
+**char**<**=** returns *true* if the *characters* are monotonically nondecreasing; otherwise, it returns *false*. If two *characters* have *identical implementation-defined attributes*, then their ordering by **char**<**=** is consistent with the numerical ordering by the predicate <= on their *codes*. 
 
 
 
-**char**&gt;**=** returns *true* if the *characters* are monotonically nonincreasing; otherwise, it returns *false*. 
-
-
-
- 
+**char**>**=** returns *true* if the *characters* are monotonically nonincreasing; otherwise, it returns *false*. 
 
 
 
@@ -322,15 +318,19 @@ These predicates compare *characters*.
 
 
 
-**char=, char/=, char***&lt;***, char***&gt;***, char***&lt;***=, char***&gt;***=,** *. . .* 
+ 
 
 
 
-If two *characters* have *identical implementation-defined attributes*, then their ordering by **char**&gt;**=** is consistent with the numerical ordering by the predicate &gt;= on their *codes*. 
+**char=, char/=, char***<***, char***>***, char***<***=, char***>***=,** *. . .* 
 
 
 
-**char-equal**, **char-not-equal**, **char-lessp**, **char-greaterp**, **char-not-greaterp**, and **char-not-lessp** are similar to **char=**, **char/=**, **char**&lt;, **char**&gt;, **char**&lt;**=**, **char**&gt;**=**, respectively, except that they ignore differences in *case* and might have an *implementation-defined* behavior for *non-simple characters*. For example, an *implementation* might define that **char-equal**, *etc.* ignore certain *implementation-defined attributes*. The effect, if any, of each *implementation-defined attribute* upon these functions must be specified as part of the definition of that *attribute*. 
+If two *characters* have *identical implementation-defined attributes*, then their ordering by **char**>**=** is consistent with the numerical ordering by the predicate >= on their *codes*. 
+
+
+
+**char-equal**, **char-not-equal**, **char-lessp**, **char-greaterp**, **char-not-greaterp**, and **char-not-lessp** are similar to **char=**, **char/=**, **char**<, **char**>, **char**<**=**, **char**>**=**, respectively, except that they ignore differences in *case* and might have an *implementation-defined* behavior for *non-simple characters*. For example, an *implementation* might define that **char-equal**, *etc.* ignore certain *implementation-defined attributes*. The effect, if any, of each *implementation-defined attribute* upon these functions must be specified as part of the definition of that *attribute*. 
 
 
 
@@ -398,75 +398,75 @@ If two *characters* have *identical implementation-defined attributes*, then the
 
 
 
-(char&lt; #\d #\x) *→ true* 
+(char< #\d #\x) *→ true* 
 
 
 
-(char&lt;= #\d #\x) *→ true* 
+(char<= #\d #\x) *→ true* 
 
 
 
-(char&lt; #\d #\d) *→ false* 
+(char< #\d #\d) *→ false* 
 
 
 
-(char&lt;= #\d #\d) *→ true* 
+(char<= #\d #\d) *→ true* 
 
 
 
-(char&lt; #\a #\e #\y #\z) *→ true* 
+(char< #\a #\e #\y #\z) *→ true* 
 
 
 
-(char&lt;= #\a #\e #\y #\z) *→ true* 
+(char<= #\a #\e #\y #\z) *→ true* 
 
 
 
-(char&lt; #\a #\e #\e #\y) *→ false* 
+(char< #\a #\e #\e #\y) *→ false* 
 
 
 
-(char&lt;= #\a #\e #\e #\y) *→ true* 
+(char<= #\a #\e #\e #\y) *→ true* 
 
 
 
-(char&gt; #\e #\d) *→ true* 
+(char> #\e #\d) *→ true* 
 
 
 
-(char&gt;= #\e #\d) *→ true* 
+(char>= #\e #\d) *→ true* 
 
 
 
-(char&gt; #\d #\c #\b #\a) *→ true* 
+(char> #\d #\c #\b #\a) *→ true* 
 
 
 
-(char&gt;= #\d #\c #\b #\a) *→ true* 
+(char>= #\d #\c #\b #\a) *→ true* 
 
 
 
-(char&gt; #\d #\d #\c #\a) *→ false* 
+(char> #\d #\d #\c #\a) *→ false* 
 
 
 
-(char&gt;= #\d #\d #\c #\a) *→ true* 
+(char>= #\d #\d #\c #\a) *→ true* 
 
 
 
-(char&gt; #\e #\d #\b #\c #\a) *→ false* 
+(char> #\e #\d #\b #\c #\a) *→ false* 
 
 
 
-(char&gt;= #\e #\d #\b #\c #\a) *→ false* 
+(char>= #\e #\d #\b #\c #\a) *→ false* 
 
 
 
-(char&gt; #\z #\A) *→ implementation-dependent* 
+(char> #\z #\A) *→ implementation-dependent* 
 
 
 
-(char&gt; #\Z #\a) *→ implementation-dependent* 
+(char> #\Z #\a) *→ implementation-dependent* 
 
 
 
@@ -494,7 +494,7 @@ If two *characters* have *identical implementation-defined attributes*, then the
 
 
 
-(stable-sort (list #\b #\A #\B #\a #\c #\C) #’char&lt;) 
+(stable-sort (list #\b #\A #\B #\a #\c #\C) #’char<) 
 
 
 
@@ -946,7 +946,7 @@ Alphanumeric characters are graphic as defined by **graphic-char-p**. The alphan
 
 
 
-**digit-char** *weight* &amp;optional *radix → char* 
+**digit-char** *weight* &optional *radix → char* 
 
 
 
@@ -1034,7 +1034,7 @@ If *weight* is greater than or equal to *radix*, **digit-char** returns *false*.
 
 
 
-**digit-char-p** *char* &amp;optional *radix → weight* 
+**digit-char-p** *char* &optional *radix → weight* 
 
 
 

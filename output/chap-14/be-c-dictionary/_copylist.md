@@ -142,11 +142,11 @@ The copy created is **equal** to *list*, but not **eq**.
 
 
 
-**list** &amp;rest *objects → list* 
+**list** &rest *objects → list* 
 
 
 
-**list\*** &amp;rest *objects*<sup>+</sup> *→ result* 
+**list\*** &rest *objects*<sup>+</sup> *→ result* 
 
 
 

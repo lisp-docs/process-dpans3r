@@ -37,7 +37,7 @@
 
 
 
-**defstruct** *name-and-options* [*documentation*] *\{↓slot-description\}*\* 
+**defstruct** *name-and-options* [*documentation*] *\&#123;↓slot-description\&#125;*\* 
 
 
 
@@ -53,7 +53,7 @@
 
 
 
-*\{↓constructor-option\}*\* *|* 
+*\&#123;↓constructor-option\&#125;*\* *|* 
 
 
 
@@ -113,7 +113,7 @@
 
 
 
-*include-option::*=(:include *included-structure-name \{↓slot-description\}*\*) 
+*include-option::*=(:include *included-structure-name \&#123;↓slot-description\&#125;*\*) 
 
 
 
@@ -657,7 +657,7 @@ The structure using :include can specify default values or slot-options for the 
 
 
 
-(:include *included-structure-name \{slot-description\}*\*) 
+(:include *included-structure-name \&#123;slot-description\&#125;*\*) 
 
 
 
@@ -1721,7 +1721,7 @@ load-limit
 
 
 
-(a &amp;optional b (c ’cc) &amp;rest d &amp;aux e (f ’ff)))) 
+(a &optional b (c ’cc) &rest d &aux e (f ’ff)))) 
 
 
 

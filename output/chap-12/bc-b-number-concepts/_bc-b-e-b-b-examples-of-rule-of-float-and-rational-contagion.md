@@ -50,15 +50,15 @@
 
 
 
-(&lt; 5/7 (float 5/7)) *→ true* 
+(< 5/7 (float 5/7)) *→ true* 
 
 
 
-(&lt; 5/7 (rational (float 5/7))) *→ true* 
+(< 5/7 (rational (float 5/7))) *→ true* 
 
 
 
-(&lt; (float 5/7) (float 5/7)) *→ false* 
+(< (float 5/7) (float 5/7)) *→ false* 
 
 
 

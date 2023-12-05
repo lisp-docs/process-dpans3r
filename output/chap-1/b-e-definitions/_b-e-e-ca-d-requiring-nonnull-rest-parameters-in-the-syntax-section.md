@@ -6,7 +6,7 @@ In some cases it is useful to refer to all arguments equally as a single aggrega
 
 
 
-**F** &amp;rest *arguments*<sup>+</sup> 
+**F** &rest *arguments*<sup>+</sup> 
 
 
 
@@ -14,7 +14,7 @@ means the same as
 
 
 
-**F** &amp;rest *arguments* 
+**F** &rest *arguments* 
 
 
 

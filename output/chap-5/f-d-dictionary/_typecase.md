@@ -267,4 +267,114 @@ x (typecase x
 
 
 
+
+ 
+
+
+
+ 
+
+
+
+▷ 2: Return to Lisp Toplevel. 
+
+
+
+▷ Debug> :CONTINUE 1 
+
+
+
+▷ Use value: 3.7 
+
+
+
+▷ Error: The value of X, 3.7, is neither an integer nor a symbol. 
+
+
+
+▷ To continue, type :CONTINUE followed by an option number: 
+
+
+
+▷ 1: Specify a value to use instead. 
+
+
+
+▷ 2: Return to Lisp Toplevel. 
+
+
+
+▷ Debug> :CONTINUE 1 
+
+
+
+▷ Use value: 12 
+
+
+
+*!* 48 
+
+
+
+x *!* 12 
+
+
+
+
 ```
+**Aected By:** 
+
+
+
+**ctypecase** and **etypecase**, since they might signal an error, are potentially a↵ected by existing *handlers* and **\*debug-io\***. 
+
+
+
+**Exceptional Situations:** 
+
+
+
+**ctypecase** and **etypecase** signal an error of *type* **type-error** if no *normal-clause* matches. 
+
+
+
+The *compiler* may choose to issue a warning of *type* **style-warning** if a *clause* will never be selected because it is completely shadowed by earlier clauses. 
+
+
+
+**See Also:** 
+
+
+
+**case**, **cond**, **setf**, Section 5.1 (Generalized Reference) 
+
+
+
+**Notes:** 
+
+
+
+(typecase *test-key* 
+
+
+
+*\&#123;*(*type \&#123;form\&#125;*\*)*\&#125;*\*) 
+
+
+
+*⌘* 
+
+
+
+(let ((#1=#:g0001 *test-key*)) 
+
+
+
+(cond *\&#123;*((typep #1# ’*type*) *\&#123;form\&#125;*\*)*\&#125;*\*)) 
+
+
+
+The specific error message used by **etypecase** and **ctypecase** can vary between implementations. In situations where control of the specific wording of the error message is important, it is better to use **typecase** with an *otherwise-clause* that explicitly signals an error with an appropriate message. 
+
+
+

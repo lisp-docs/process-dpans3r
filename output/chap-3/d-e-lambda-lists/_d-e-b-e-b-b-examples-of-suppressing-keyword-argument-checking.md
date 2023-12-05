@@ -6,15 +6,15 @@
 
 
 
-((lambda (&amp;key x) x) :x 1 :y 2 :allow-other-keys t) *→* 1 
+((lambda (&key x) x) :x 1 :y 2 :allow-other-keys t) *→* 1 
 
 
 
-;;; The callee can use &amp;ALLOW-OTHER-KEYS to suppress checking. 
+;;; The callee can use &ALLOW-OTHER-KEYS to suppress checking. 
 
 
 
-((lambda (&amp;key x &amp;allow-other-keys) x) :x 1 :y 2) *→* 1 
+((lambda (&key x &allow-other-keys) x) :x 1 :y 2) *→* 1 
 
 
 
@@ -22,7 +22,7 @@
 
 
 
-((lambda (&amp;key) t) :allow-other-keys nil) *→* T 
+((lambda (&key) t) :allow-other-keys nil) *→* T 
 
 
 
@@ -34,7 +34,7 @@
 
 
 
-((lambda (&amp;key x) x) 
+((lambda (&key x) x) 
 
 
 
@@ -58,7 +58,7 @@
 
 
 
-((lambda (&amp;key x) x) ;This call is not valid 
+((lambda (&key x) x) ;This call is not valid 
 
 
 

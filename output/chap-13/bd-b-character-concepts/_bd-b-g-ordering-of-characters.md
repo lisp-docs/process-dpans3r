@@ -6,7 +6,7 @@ The total ordering on *characters* is guaranteed to have the following propertie
 
 
 
-*•* If two *characters* have the same *implementation-defined attributes*, then their ordering by **char**&lt; is consistent with the numerical ordering by the predicate &lt; on their code *attributes*. 
+*•* If two *characters* have the same *implementation-defined attributes*, then their ordering by **char**< is consistent with the numerical ordering by the predicate < on their code *attributes*. 
 
 
 
@@ -18,7 +18,7 @@ The total ordering on *characters* is guaranteed to have the following propertie
 
 
 
-*•* While *alphabetic*<sub>1</sub> *standard characters* of a given *case* must obey a partial ordering, they need not be contiguous; it is permissible for *uppercase* and *lowercase characters* to be interleaved. Thus (char&lt;= #\a x #\z) is not a valid way of determining whether or not x is a *lowercase character* . 
+*•* While *alphabetic*<sub>1</sub> *standard characters* of a given *case* must obey a partial ordering, they need not be contiguous; it is permissible for *uppercase* and *lowercase characters* to be interleaved. Thus (char<= #\a x #\z) is not a valid way of determining whether or not x is a *lowercase character* . 
 
 
 

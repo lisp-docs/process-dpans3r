@@ -72,7 +72,7 @@ Returns *true* if *object* is a *keyword* <sub>1</sub>; otherwise, returns *fals
 
 
 
-(keywordp ’&amp;optional) *→ false* 
+(keywordp ’&optional) *→ false* 
 
 
 

@@ -74,7 +74,7 @@ In effect
 
 
 
-being *\{*each *|* the*\} \{*symbol *|* symbols *|* present-symbol *|* present-symbols *|* external-symbol *|* external-symbols*\} \{*in *|* of*\}* 
+being *\&#123;*each *|* the*\&#125; \&#123;*symbol *|* symbols *|* present-symbol *|* present-symbols *|* external-symbol *|* external-symbols*\&#125; \&#123;*in *|* of*\&#125;* 
 
 
 

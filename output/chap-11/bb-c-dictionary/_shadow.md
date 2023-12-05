@@ -6,7 +6,7 @@
 
 
 
-**shadow** *symbol-names* &amp;optional *package →* **t** 
+**shadow** *symbol-names* &optional *package →* **t** 
 
 
 

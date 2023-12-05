@@ -34,7 +34,7 @@
 
 
 
-(format t "~&amp;:~A~16T~A~24T~A" 
+(format t "~&:~A~16T~A~24T~A" 
 
 
 

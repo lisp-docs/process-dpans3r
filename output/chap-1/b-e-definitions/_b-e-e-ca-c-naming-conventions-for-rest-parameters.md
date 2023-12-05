@@ -10,7 +10,7 @@ For example, given a syntax description such as:
 
 
 
-**F** &amp;rest *arguments* 
+**F** &rest *arguments* 
 
 
 

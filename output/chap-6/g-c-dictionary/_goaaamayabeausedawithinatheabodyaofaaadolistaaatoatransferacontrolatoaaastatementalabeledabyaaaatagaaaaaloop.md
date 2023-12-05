@@ -10,7 +10,7 @@ The “simple” **loop** *form*:
 
 
 
-**loop** *\{compound-form\}*\* *→ \{result\}*\* 
+**loop** *\&#123;compound-form\&#125;*\* *→ \&#123;result\&#125;*\* 
 
 
 
@@ -18,7 +18,7 @@ The “extended” **loop** *form*:
 
 
 
-**loop** [*↓name-clause*] *\{↓variable-clause\}*\* *\{↓main-clause\}*\* *→ \{result\}*\* 
+**loop** [*↓name-clause*] *\&#123;↓variable-clause\&#125;*\* *\&#123;↓main-clause\&#125;*\* *→ \&#123;result\&#125;*\* 
 
 
 
@@ -30,15 +30,15 @@ The “extended” **loop** *form*:
 
 
 
-*with-clause::*=with *var1* [*type-spec*] [= *form1*] *\{*and *var2* [*type-spec*] [= *form2*]*\}*\* 
+*with-clause::*=with *var1* [*type-spec*] [= *form1*] *\&#123;*and *var2* [*type-spec*] [= *form2*]*\&#125;*\* 
 
 
 
-*main-clause::*=*↓unconditional | ↓accumulation | ↓conditional | ↓termination-test | ↓initial-final initial-final::*=initially *\{compound-form\}*<sup>+</sup>*|* finally *\{compound-form\}*<sup>+</sup> 
+*main-clause::*=*↓unconditional | ↓accumulation | ↓conditional | ↓termination-test | ↓initial-final initial-final::*=initially *\&#123;compound-form\&#125;*<sup>+</sup>*|* finally *\&#123;compound-form\&#125;*<sup>+</sup> 
 
 
 
-*unconditional::*=*\{*do *|* doing*\} \{compound-form\}*<sup>+</sup>*|* return *\{form |* it*\}* 
+*unconditional::*=*\&#123;*do *|* doing*\&#125; \&#123;compound-form\&#125;*<sup>+</sup>*|* return *\&#123;form |* it*\&#125;* 
 
 
 
@@ -46,7 +46,7 @@ The “extended” **loop** *form*:
 
 
 
-*list-accumulation::*=*\{*collect *|* collecting *|* append *|* appending *|* nconc *|* nconcing*\} \{form |* it*\}* [into *simple-var*] 
+*list-accumulation::*=*\&#123;*collect *|* collecting *|* append *|* appending *|* nconc *|* nconcing*\&#125; \&#123;form |* it*\&#125;* [into *simple-var*] 
 
 
 
@@ -66,11 +66,11 @@ The “extended” **loop** *form*:
 
 
 
-*numeric-accumulation::*=*\{*count *|* counting *|* sum *|* summing *|* 
+*numeric-accumulation::*=*\&#123;*count *|* counting *|* sum *|* summing *|* 
 
 
 
-maximize *|* maximizing *|* minimize *|* minimizing*\} \{form |* it*\}* 
+maximize *|* maximizing *|* minimize *|* minimizing*\&#125; \&#123;form |* it*\&#125;* 
 
 
 
@@ -78,11 +78,11 @@ maximize *|* maximizing *|* minimize *|* minimizing*\} \{form |* it*\}*
 
 
 
-*conditional::*=*\{*if *|* when *|* unless*\} form ↓selectable-clause \{*and *↓selectable-clause\}*\* 
+*conditional::*=*\&#123;*if *|* when *|* unless*\&#125; form ↓selectable-clause \&#123;*and *↓selectable-clause\&#125;*\* 
 
 
 
-[else *↓selectable-clause \{*and *↓selectable-clause\}*\*] 
+[else *↓selectable-clause \&#123;*and *↓selectable-clause\&#125;*\*] 
 
 
 
@@ -94,7 +94,7 @@ maximize *|* maximizing *|* minimize *|* minimizing*\} \{form |* it*\}*
 
 
 
-*termination-test::*=while *form |* until *form |* repeat *form |* always *form |* never *form |* thereis *form for-as-clause::*=*\{*for *|* as*\} ↓for-as-subclause \{*and *↓for-as-subclause\}*\* 
+*termination-test::*=while *form |* until *form |* repeat *form |* always *form |* never *form |* thereis *form for-as-clause::*=*\&#123;*for *|* as*\&#125; ↓for-as-subclause \&#123;*and *↓for-as-subclause\&#125;*\* 
 
 
 
@@ -106,15 +106,15 @@ maximize *|* maximizing *|* minimize *|* minimizing*\} \{form |* it*\}*
 
 
 
-*for-as-arithmetic-subclause::*=*↓arithmetic-up | ↓arithmetic-downto | ↓arithmetic-downfrom arithmetic-up::*=[[ *\{*from *|* upfrom*\} form1 | \{*to *|* upto *|* below*\} form2 |* by *form3* ]]<sup>+</sup> 
+*for-as-arithmetic-subclause::*=*↓arithmetic-up | ↓arithmetic-downto | ↓arithmetic-downfrom arithmetic-up::*=[[ *\&#123;*from *|* upfrom*\&#125; form1 | \&#123;*to *|* upto *|* below*\&#125; form2 |* by *form3* ]]<sup>+</sup> 
 
 
 
-*arithmetic-downto::*=[[ *\{*from *form1\}*<sup>1</sup>*| \{\{*downto *|* above*\} form2\}*<sup>1</sup>*|* by *form3* ]] 
+*arithmetic-downto::*=[[ *\&#123;*from *form1\&#125;*<sup>1</sup>*| \&#123;\&#123;*downto *|* above*\&#125; form2\&#125;*<sup>1</sup>*|* by *form3* ]] 
 
 
 
-*arithmetic-downfrom::*=[[ *\{*downfrom *form1\}*<sup>1</sup>*| \{*to *|* downto *|* above*\} form2 |* by *form3* ]] *for-as-in-list::*=*var* [*type-spec*] in *form1* [by *step-fun*] 
+*arithmetic-downfrom::*=[[ *\&#123;*downfrom *form1\&#125;*<sup>1</sup>*| \&#123;*to *|* downto *|* above*\&#125; form2 |* by *form3* ]] *for-as-in-list::*=*var* [*type-spec*] in *form1* [by *step-fun*] 
 
 
 
@@ -130,11 +130,11 @@ maximize *|* maximizing *|* minimize *|* minimizing*\} \{form |* it*\}*
 
 
 
-*for-as-hash::*=*var* [*type-spec*] being *\{*each *|* the*\}* 
+*for-as-hash::*=*var* [*type-spec*] being *\&#123;*each *|* the*\&#125;* 
 
 
 
-*\{\{*hash-key *|* hash-keys*\} \{*in *|* of*\} hash-table* 
+*\&#123;\&#123;*hash-key *|* hash-keys*\&#125; \&#123;*in *|* of*\&#125; hash-table* 
 
 
 
@@ -142,11 +142,11 @@ maximize *|* maximizing *|* minimize *|* minimizing*\} \{form |* it*\}*
 
 
 
-*\{*hash-value *|* hash-values*\} \{*in *|* of*\} hash-table* 
+*\&#123;*hash-value *|* hash-values*\&#125; \&#123;*in *|* of*\&#125; hash-table* 
 
 
 
-[using (hash-key *other-var*)]*\}* 
+[using (hash-key *other-var*)]*\&#125;* 
 
 
 
@@ -166,11 +166,11 @@ maximize *|* maximizing *|* minimize *|* minimizing*\} \{form |* it*\}*
 
 
 
-*for-as-package::*=*var* [*type-spec*] being *\{*each *|* the*\}* 
+*for-as-package::*=*var* [*type-spec*] being *\&#123;*each *|* the*\&#125;* 
 
 
 
-*\{*symbol *|* symbols *|* 
+*\&#123;*symbol *|* symbols *|* 
 
 
 
@@ -178,11 +178,11 @@ present-symbol *|* present-symbols *|*
 
 
 
-external-symbol *|* external-symbols*\}* 
+external-symbol *|* external-symbols*\&#125;* 
 
 
 
-[*\{*in *|* of*\} package*] 
+[*\&#123;*in *|* of*\&#125; package*] 
 
 
 
@@ -304,7 +304,7 @@ For details, see Section 6.1 (The LOOP Facility).
 
 
 
-(loop (format t "~&amp;Number: ") 
+(loop (format t "~&Number: ") 
 
 
 
@@ -316,7 +316,7 @@ For details, see Section 6.1 (The LOOP Facility).
 
 
 
-(format t "~&amp;The square root of ~D is ~D.~%" n (sqrt n))))) 
+(format t "~&The square root of ~D is ~D.~%" n (sqrt n))))) 
 
 
 
@@ -360,7 +360,7 @@ For details, see Section 6.1 (The LOOP Facility).
 
 
 
-(loop as n = (progn (format t "~&amp;Number: ") 
+(loop as n = (progn (format t "~&Number: ") 
 
 
 
@@ -372,7 +372,7 @@ while n
 
 
 
-do (format t "~&amp;The square of ~D is ~D.~%" n (\* n n)))) 
+do (format t "~&The square of ~D is ~D.~%" n (\* n n)))) 
 
 
 
@@ -458,7 +458,7 @@ Except that **loop-finish** cannot be used within a simple **loop** *form*, a si
 
 
 
-(loop *\{compound-form\}*\*) *≡* (loop do *\{compound-form\}*\*) 
+(loop *\&#123;compound-form\&#125;*\*) *≡* (loop do *\&#123;compound-form\&#125;*\*) 
 
 
 

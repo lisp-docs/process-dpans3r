@@ -26,7 +26,7 @@ An *ordinary lambda list* can contain the *lambda list keywords* shown in Figure
 
 
 
-|<p>**&amp;allow-other-keys &amp;key &amp;rest** </p><p>**&amp;aux &amp;optional**</p>|
+|<p>**&allow-other-keys &key &rest** </p><p>**&aux &optional**</p>|
 
 | :- |
 
@@ -46,27 +46,27 @@ The syntax for *ordinary lambda lists* is as follows:
 
 
 
-*lambda-list::*=(*\{var\}*\* 
+*lambda-list::*=(*\&#123;var\&#125;*\* 
 
 
 
-[&amp;optional *\{var |* (*var* [*init-form* [*supplied-p-parameter*]])*\}*\*] 
+[&optional *\&#123;var |* (*var* [*init-form* [*supplied-p-parameter*]])*\&#125;*\*] 
 
 
 
-[&amp;rest *var*] 
+[&rest *var*] 
 
 
 
-[&amp;key *\{var |* (*\{var |* (*keyword-name var*)*\}* [*init-form* [*supplied-p-parameter*]])*\}*\* 
+[&key *\&#123;var |* (*\&#123;var |* (*keyword-name var*)*\&#125;* [*init-form* [*supplied-p-parameter*]])*\&#125;*\* 
 
 
 
-[&amp;allow-other-keys]] 
+[&allow-other-keys]] 
 
 
 
-[&amp;aux *\{var |* (*var* [*init-form*])*\}*\*]) 
+[&aux *\&#123;var |* (*var* [*init-form*])*\&#125;*\*]) 
 
 
 

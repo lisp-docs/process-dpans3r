@@ -138,7 +138,7 @@ Chapter 12 (Numbers) 12–1. Operators relating to Arithmetic. . . . . . . . . .
 
 
 
-12–2. Defined names relating to Exponentials, Logarithms, and Trigonometry. . . . . . . . . . . 12–1 12–3. Operators for numeric comparison and predication. . . . . . . . . . . . . . . . . . . . . . . . . . . 12–1 12–4. Defined names relating to numeric type manipulation and coercion. . . . . . . . . . . . . . . 12–2 12–5. Defined names relating to logical operations on numbers. . . . . . . . . . . . . . . . . . . . . . 12–3 12–6. Defined names relating to byte manipulation. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12–4 12–7. Defined names relating to implementation-dependent details about numbers. . . . . . . . 12–4 12–8. Functions Affected by Rule of Float Substitutability . . . . . . . . . . . . . . . . . . . . . . . . . 12–6 12–9. Trigonometric Identities for Complex Domain . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12–9 12–10. Quadrant Numbering for Branch Cuts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12–9 12–11. Random-state defined names . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12–10 12–12. Recommended Minimum Floating-Point Precision and Exponent Size . . . . . . . . . . 12–14 12–13. Uses of /=, =, &lt;, &gt;, &lt;=, and &gt;= . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12–22 12–14. Mathematical definition of arc sine, arc cosine, and arc tangent . . . . . . . . . . . . . . . 12–29 12–15. Quadrant information for arc tangent . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12–31 12–16. Mathematical definitions for hyperbolic functions . . . . . . . . . . . . . . . . . . . . . . . . . 12–33 12–17. Bit-Wise Logical Operations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12–68 12–18. Bit-wise Logical Operations on Integers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12–72 
+12–2. Defined names relating to Exponentials, Logarithms, and Trigonometry. . . . . . . . . . . 12–1 12–3. Operators for numeric comparison and predication. . . . . . . . . . . . . . . . . . . . . . . . . . . 12–1 12–4. Defined names relating to numeric type manipulation and coercion. . . . . . . . . . . . . . . 12–2 12–5. Defined names relating to logical operations on numbers. . . . . . . . . . . . . . . . . . . . . . 12–3 12–6. Defined names relating to byte manipulation. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12–4 12–7. Defined names relating to implementation-dependent details about numbers. . . . . . . . 12–4 12–8. Functions Affected by Rule of Float Substitutability . . . . . . . . . . . . . . . . . . . . . . . . . 12–6 12–9. Trigonometric Identities for Complex Domain . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12–9 12–10. Quadrant Numbering for Branch Cuts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12–9 12–11. Random-state defined names . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12–10 12–12. Recommended Minimum Floating-Point Precision and Exponent Size . . . . . . . . . . 12–14 12–13. Uses of /=, =, <, >, <=, and >= . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12–22 12–14. Mathematical definition of arc sine, arc cosine, and arc tangent . . . . . . . . . . . . . . . 12–29 12–15. Quadrant information for arc tangent . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12–31 12–16. Mathematical definitions for hyperbolic functions . . . . . . . . . . . . . . . . . . . . . . . . . 12–33 12–17. Bit-Wise Logical Operations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12–68 12–18. Bit-wise Logical Operations on Integers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12–72 
 
 
 
@@ -302,7 +302,7 @@ Chapter 3 (Evaluation and Compilation)
 
 
 
-3\.4.1.2 Specifiers for optional parameters . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–35 3.4.1.3 A specifier for a rest parameter . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–35 3.4.1.4 Specifiers for keyword parameters . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–35 3.4.1.4.1 Suppressing Keyword Argument Checking . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–36 3.4.1.4.1.1Examples of Suppressing Keyword Argument Checking . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–37 3.4.1.5Specifiers for **&amp;aux** variables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–37 3.4.1.6Examples of Ordinary Lambda Lists . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–37 3.4.2 Generic Function Lambda Lists . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–39 3.4.3 Specialized Lambda Lists . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–40 3.4.4 Macro Lambda Lists . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–41 3.4.4.1 Destructuring by Lambda Lists . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–42 3.4.4.1.1 Data-directed Destructuring by Lambda Lists . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–43 3.4.4.1.1.1 Examples of Data-directed Destructuring by Lambda Lists . . . . . . . . . . . . . . . . . . . . . . . . 3–43 3.4.4.1.2 Lambda-list-directed Destructuring by Lambda Lists . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–43 3.4.5 Destructuring Lambda Lists . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–45 3.4.6 Boa Lambda Lists . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–45 3.4.7 Defsetf Lambda Lists . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–47 3.4.8 Deftype Lambda Lists . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–47 3.4.9 Define-modify-macro Lambda Lists . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–47 3.4.10 Define-method-combination Arguments Lambda Lists . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–48 3.4.11 Syntactic Interaction of Documentation Strings and Declarations . . . . . . . . . . . . . . . . . . . . . . . 3–48 3.5 Error Checking in Function Calls . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–49 3.5.1 Argument Mismatch Detection . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–49 3.5.1.1 Safe and Unsafe Calls . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–49 3.5.1.1.1 Error Detection Time in Safe Calls . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–50 3.5.1.2 Too Few Arguments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–50 3.5.1.3 Too Many Arguments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–50 3.5.1.4 Unrecognized Keyword Arguments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–50 3.5.1.5 Invalid Keyword Arguments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–50 3.5.1.6 Odd Number of Keyword Arguments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–51 3.5.1.7 Destructuring Mismatch . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–51 3.5.1.8 Errors When Calling a Next Method . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–51 3.6 Traversal Rules and Side Effects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–52 3.7 Destructive Operations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–53 3.7.1 Modification of Literal Objects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–53 3.7.2 Transfer of Control during a Destructive Operation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–54 3.7.2.1 Examples of Transfer of Control during a Destructive Operation . . . . . . . . . . . . . . . . . . . . . . . 3–54 3.8 Evaluation and Compilation Dictionary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–55 
+3\.4.1.2 Specifiers for optional parameters . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–35 3.4.1.3 A specifier for a rest parameter . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–35 3.4.1.4 Specifiers for keyword parameters . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–35 3.4.1.4.1 Suppressing Keyword Argument Checking . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–36 3.4.1.4.1.1Examples of Suppressing Keyword Argument Checking . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–37 3.4.1.5Specifiers for **&aux** variables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–37 3.4.1.6Examples of Ordinary Lambda Lists . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–37 3.4.2 Generic Function Lambda Lists . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–39 3.4.3 Specialized Lambda Lists . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–40 3.4.4 Macro Lambda Lists . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–41 3.4.4.1 Destructuring by Lambda Lists . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–42 3.4.4.1.1 Data-directed Destructuring by Lambda Lists . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–43 3.4.4.1.1.1 Examples of Data-directed Destructuring by Lambda Lists . . . . . . . . . . . . . . . . . . . . . . . . 3–43 3.4.4.1.2 Lambda-list-directed Destructuring by Lambda Lists . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–43 3.4.5 Destructuring Lambda Lists . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–45 3.4.6 Boa Lambda Lists . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–45 3.4.7 Defsetf Lambda Lists . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–47 3.4.8 Deftype Lambda Lists . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–47 3.4.9 Define-modify-macro Lambda Lists . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–47 3.4.10 Define-method-combination Arguments Lambda Lists . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–48 3.4.11 Syntactic Interaction of Documentation Strings and Declarations . . . . . . . . . . . . . . . . . . . . . . . 3–48 3.5 Error Checking in Function Calls . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–49 3.5.1 Argument Mismatch Detection . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–49 3.5.1.1 Safe and Unsafe Calls . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–49 3.5.1.1.1 Error Detection Time in Safe Calls . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–50 3.5.1.2 Too Few Arguments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–50 3.5.1.3 Too Many Arguments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–50 3.5.1.4 Unrecognized Keyword Arguments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–50 3.5.1.5 Invalid Keyword Arguments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–50 3.5.1.6 Odd Number of Keyword Arguments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–51 3.5.1.7 Destructuring Mismatch . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–51 3.5.1.8 Errors When Calling a Next Method . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–51 3.6 Traversal Rules and Side Effects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–52 3.7 Destructive Operations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–53 3.7.1 Modification of Literal Objects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–53 3.7.2 Transfer of Control during a Destructive Operation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–54 3.7.2.1 Examples of Transfer of Control during a Destructive Operation . . . . . . . . . . . . . . . . . . . . . . . 3–54 3.8 Evaluation and Compilation Dictionary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3–55 
 
 
 
@@ -626,35 +626,35 @@ A.1 Removed Language Features . . . . . . . . . . . . . . . . . . . . . . . . . 
 
 
 
-**&amp;allow-other-keys** 3–35 
+**&allow-other-keys** 3–35 
 
 
 
-**&amp;aux** 3–37 
+**&aux** 3–37 
 
 
 
-**&amp;body** 3–42 
+**&body** 3–42 
 
 
 
-**&amp;environment** 3–42 
+**&environment** 3–42 
 
 
 
-**&amp;key** 3–35 
+**&key** 3–35 
 
 
 
-**&amp;optional** 3–35 
+**&optional** 3–35 
 
 
 
-**&amp;rest** 3–35 
+**&rest** 3–35 
 
 
 
-**&amp;whole** 3–42 
+**&whole** 3–42 
 
 
 
@@ -966,11 +966,11 @@ Index**i**
 
 
 
-&lt; 12–20 
+< 12–20 
 
 
 
-&lt;**=** 12–20 
+<**=** 12–20 
 
 
 
@@ -978,11 +978,11 @@ Index**i**
 
 
 
-\&gt; 12–20 
+\> 12–20 
 
 
 
-\&gt;**=** 12–20 
+\>**=** 12–20 
 
 
 
@@ -1886,11 +1886,11 @@ char-meta-bit A–1 **char-name** 13–24
 
 
 
-**char**&lt; 13–10 
+**char**< 13–10 
 
 
 
-**char**&lt;**=** 13–10 
+**char**<**=** 13–10 
 
 
 
@@ -1898,11 +1898,11 @@ char-meta-bit A–1 **char-name** 13–24
 
 
 
-**char**&gt; 13–10 
+**char**> 13–10 
 
 
 
-**char**&gt;**=** 13–10 
+**char**>**=** 13–10 
 
 
 
@@ -6646,11 +6646,11 @@ string-char-p A–1
 
 
 
-**string**&lt; 16–10 
+**string**< 16–10 
 
 
 
-**string**&lt;**=** 16–10 
+**string**<**=** 16–10 
 
 
 
@@ -6658,11 +6658,11 @@ string-char-p A–1
 
 
 
-**string**&gt; 16–10 
+**string**> 16–10 
 
 
 
-**string**&gt;**=** 16–10 
+**string**>**=** 16–10 
 
 
 
@@ -8010,7 +8010,7 @@ Error and Condition System Pitman, Kent M.
 
 
 
-Graphics &amp; Windows Douglas Rand 
+Graphics & Windows Douglas Rand 
 
 
 
@@ -8062,7 +8062,7 @@ Public Review Ida, Masayuki
 
 
 
-Types &amp; Declarations Scherlis, William L. 
+Types & Declarations Scherlis, William L. 
 
 
 
@@ -8142,7 +8142,7 @@ Apple Computer MITRE Corporation Boeing Advanced Technology Center MSC
 
 
 
-Carnegie-Mellon University NASA Ames Research Center Chestnut Software National Bureau of Standards Computer Sciences Nihon Symbolics Computer &amp; Business Equipment Manufacturing Association (X3 Secretariat) CONTEL ParcPlace Systems, Inc. CSC Prime Computer DARPA Siemens 
+Carnegie-Mellon University NASA Ames Research Center Chestnut Software National Bureau of Standards Computer Sciences Nihon Symbolics Computer & Business Equipment Manufacturing Association (X3 Secretariat) CONTEL ParcPlace Systems, Inc. CSC Prime Computer DARPA Siemens 
 
 
 
@@ -8150,7 +8150,7 @@ Digital Equipment Corporation Southern Illinois University Encore Sperry
 
 
 
-Evans &amp; Sutherland SRI International Franz, Inc. Sun Microsystems Gigamos Symbolics 
+Evans & Sutherland SRI International Franz, Inc. Sun Microsystems Gigamos Symbolics 
 
 
 

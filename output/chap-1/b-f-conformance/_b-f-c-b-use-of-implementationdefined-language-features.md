@@ -18,7 +18,7 @@ Conforming code may run in all conforming implementations, but might have allowa
 
 
 
-(&gt; lambda-parameters-limit 93) *→ implementation-dependent* 
+(> lambda-parameters-limit 93) *→ implementation-dependent* 
 
 
 

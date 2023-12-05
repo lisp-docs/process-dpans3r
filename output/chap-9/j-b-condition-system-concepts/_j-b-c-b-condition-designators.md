@@ -6,7 +6,7 @@ A number of the functions in the condition system take arguments which are ident
 
 
 
-*datum* &amp;rest *arguments* 
+*datum* &rest *arguments* 
 
 
 

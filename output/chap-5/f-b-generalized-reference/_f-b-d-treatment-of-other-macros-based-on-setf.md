@@ -10,7 +10,7 @@ Specifically, each of these *operators* can be viewed as involving a *form* with
 
 
 
-(*operator \{preceding-form\}*\* *place \{following-form\}*\*) 
+(*operator \&#123;preceding-form\&#125;*\* *place \&#123;following-form\&#125;*\*) 
 
 
 

@@ -219,7 +219,7 @@ def get_title_indices(title, given_text):
     # return indices
     return [index for index in range(len(given_text)) if given_text.startswith(title, index)]
 
-def apply_example_code_blocks(given_text):
+def apply_example_code_blocks_old(given_text):
     example_title = "**Examples:**"
 
     # all_examples = re.findall(re.escape(example_title), given_text)
@@ -235,10 +235,27 @@ def apply_example_code_blocks(given_text):
         if i +1 == len(all_indices):
             curr_text += text_with_escaped_code_block
         else:
-            new_indices = get_title_indices(text_with_escaped_code_block)
+            # import pdb; pdb.set_trace()
+            new_indices = get_title_indices(example_title, text_with_escaped_code_block)
+            print(new_indices)
             # there has to be at least one more, so the array above should be at least of two elements
             curr_text += text_with_escaped_code_block[:new_indices[1]]
     return curr_text
+
+def apply_example_code_blocks(given_text):
+    example_title = "**Examples:**"
+    example_title_regex = f"({re.escape(example_title)})"
+    all_indices = [m.span()[0] for m in re.finditer(example_title_regex, given_text)]
+    if len(all_indices) == 0:
+        return given_text
+    start = 0
+    text_parts = []
+    for i in all_indices:
+        text_parts.append(given_text[start: i])
+        start = i
+    text_parts.append(given_text[start:])
+    # import pdb; pdb.set_trace()
+    return "".join([apply_first_example_code_block(text_part) for text_part in text_parts])
 
 def create_dicionary_entry_files(file_section, new_section_dir):
     # create _x.md, x.md filename,s import correctly... add first heading as title to x.md

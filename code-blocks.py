@@ -120,6 +120,7 @@ def split_dictionary_files(given_dir):
                 # print(last_section)
                 last_sec_dir = os.path.join(curr_root, last_section)
                 last_file = get_last_section(os.listdir(last_sec_dir))
+                # print(last_sec_dir)
                 # print(last_file)
                 curr_file_path = os.path.join(last_sec_dir, last_file)
                 curr_file = open(curr_file_path, "r")
@@ -195,7 +196,7 @@ def apply_first_example_code_block(given_text):
         return given_text
     
     post_example_index = example_index + len(example_title)
-    next_title_index = len(given_text)
+    # next_title_index = len(given_text)
     next_title_match = re.search(title_regex, given_text[post_example_index:])
     if next_title_match:
         next_title_index = next_title_match.span()[0] + post_example_index
@@ -208,9 +209,10 @@ def apply_example_code_blocks(given_text):
 
     all_examples = re.findall(re.escape(example_title), given_text)
     curr_text = given_text
-    
+
     for i in range(len(all_examples)):
         curr_text = apply_first_example_code_block(curr_text)
+    return curr_text
 
 def create_dicionary_entry_files(file_section, new_section_dir):
     # create _x.md, x.md filename,s import correctly... add first heading as title to x.md
@@ -238,6 +240,7 @@ def create_dicionary_entry_files(file_section, new_section_dir):
         import_component = f"<{component_name} />\n\n"
         expanded_reference = f"## Expanded Reference: {groups[1]}\n\n:::tip\nTODO: Please contribute to this page by adding explanations and examples\n:::\n\n```lisp\n({groups[1]} )\n```\n"
         markdown_contents = heading + import_statement + import_component + expanded_reference
+        # import pdb; pdb.set_trace()
         hidden_file = open(os.path.join(new_section_dir, hidden_filename), "w")
         hidden_file.write(hidden_file_text)
         hidden_file.close()

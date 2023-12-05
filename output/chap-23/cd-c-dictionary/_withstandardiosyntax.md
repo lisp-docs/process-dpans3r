@@ -140,7 +140,9 @@ The effect of **\*read-base\*** on the reading of any particular *rational* numb
 
 
 
-**Examples:** 
+**Examples:**
+```lisp
+ 
 
 
 
@@ -188,6 +190,8 @@ The effect of **\*read-base\*** on the reading of any particular *rational* numb
 
 
 
+
+```
 **Notes:** 
 
 
@@ -240,7 +244,9 @@ The printer uses **\*read-default-float-format\*** to guide the choice of *expon
 
 
 
-**Examples:** 
+**Examples:**
+```lisp
+ 
 
 
 
@@ -264,6 +270,8 @@ The printer uses **\*read-default-float-format\*** to guide the choice of *expon
 
 
 
+
+```
 **Value Type:** 
 
 
@@ -400,7 +408,9 @@ No matter what the *value* of **\*read-suppress\***, parentheses still continue 
 
 
 
-**Examples:** 
+**Examples:**
+```lisp
+ 
 
 
 
@@ -428,6 +438,8 @@ No matter what the *value* of **\*read-suppress\***, parentheses still continue 
 
 
 
+
+```
 **See Also:** 
 
 
@@ -472,7 +484,9 @@ The *value* of **\*readtable\*** is called the *current readtable*. It controls 
 
 
 
-**Examples:** 
+**Examples:**
+```lisp
+ 
 
 
 
@@ -520,6 +534,8 @@ zvar *→* 123
 
 
 
+
+```
 **Affected By:** 
 
 

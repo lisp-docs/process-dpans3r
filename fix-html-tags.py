@@ -38,6 +38,7 @@ def fix_case_lisp(file_text, processed_text):
         cl_to_html_tag = tag.lower().removesuffix(">") + '="">'
         if cl_to_html_tag in html_tags:
             processed_text = processed_text.replace(cl_to_html_tag, tag)
+    import pdb; pdb.set_trace()
     return processed_text
 
 
@@ -54,11 +55,11 @@ def process_file(filename, root):
     cleaned_text = str(soup.div)
     processed_text = cleaned_text.strip().removeprefix("<div>").removesuffix("</div>")
     processed_text = fix_case(file_text, processed_text)
-    processed_text = fix_case_lisp(file_text, processed_text)
     # [].index()
     if processed_text.strip().lower() != file_text.strip().lower():
         print(filepath)
         # import pdb; pdb.set_trace()
+        processed_text = fix_case_lisp(file_text, processed_text)
         file = open(filepath, "w")
         file.write(processed_text)
         file.close()

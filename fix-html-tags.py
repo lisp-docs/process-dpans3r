@@ -47,7 +47,9 @@ def fix_case_lisp(file_text, processed_text):
     return processed_text
 
 def fix_case_simple(file_text, processed_text):
-    simple_tag = r"(<\s*([\w\-\*\~,]+)\s*>)"
+    # problems because of deleted or added tags in the processed.. should first remove all standard tags, 
+    # then manage the rest...
+    simple_tag = r"(<\s*([\w\-\*\~,#&;\d]+)\s*>)"
     actual_html_tags = ["p", "i", "sub", "sup", "b"]
     tags = re.findall(simple_tag, processed_text)
     closed_tags = [(tag[0], tag[1], f'</{tag[1]}>') for tag in tags]

@@ -371,4 +371,5 @@ if __name__ == "__main__":
     # main(sys.argv[1:])
     # replace_code_blocks([], MD_DIR)
     split_dictionary_files(MD_DIR)
+    # TODO Something is broken which is causing _shadow.md in chapter 11 to have a section repeated...
     # clear_footers(MD_DIR)

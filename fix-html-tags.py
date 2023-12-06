@@ -113,7 +113,7 @@ def process_file(filename, root):
         # print(filepath)
         # import pdb; pdb.set_trace()
         processed_text = fix_case_lisp(file_text, processed_text)
-        processed_text = new_fix_lisp_tags(file_text, processed_text)
+        # processed_text = new_fix_lisp_tags(file_text, processed_text)
         file = open(filepath, "w")
         file.write(processed_text)
         file.close()

@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 import os, re
 
 MD_DIR = "./output/"
+STANDARD_HTML_TAGS = ["i", "b", "sub", "sup", "p"]
 
 def process_all_md_files(given_dir):
     for root, dirs, filenames in os.walk(given_dir):
@@ -24,6 +25,28 @@ def fix_case(file_text, processed_text):
             processed_text = processed_text.replace(f"<{tag.lower()}>", f"<{tag} />")
     return processed_text
 
+def new_fix_lisp_tags(file_text, processed_text):
+    # cl_tag_regex = r'(#<([A-Z\-]+) (["\w\d A-Z\-\W]+)>)'
+    cl_tag_regex = r'(#<([^>]+)>)'
+    all_tags_regex = r'(<([^>]+)>)'
+    html_tag_regex = r'(#<[a-z\-]+ ([\d\w\s"a-z\-\W]+="")*>)'
+    html_tags = re.findall(html_tag_regex, processed_text)
+    cl_tags = re.findall(cl_tag_regex, file_text)
+    all_tags = re.findall(all_tags_regex, processed_text)
+    import pdb; pdb.set_trace()
+    all_tags = [tag for tag in all_tags if not tag[1] in STANDARD_HTML_TAGS]
+    cl_tags = [tag for tag in cl_tags if not tag[1].split(" ") in STANDARD_HTML_TAGS]
+    # html_close_tags = [f'</{tag[1].lower()}>' for tag in cl_tags]
+    # for tag in html_close_tags:
+    #     processed_text = processed_text.replace(tag, "")
+    for index, tag in enumerate(cl_tags):
+        # here's the problem again, I'm not checking correctly....
+        import pdb; pdb.set_trace()
+        processed_text = processed_text.replace(html_tags[index][0], tag[0])
+    # if processed_text.strip().endswith(">"):
+    #     import pdb; pdb.set_trace()
+    return processed_text
+
 def fix_case_lisp(file_text, processed_text):
     # cl_tag_regex = r'(#<[A-Z\-]+ "[A-Z\-]+">)'
     # html_tag_regex = r'(#<[a-z\-]+ "[a-z\-]+"="">)'
@@ -38,6 +61,7 @@ def fix_case_lisp(file_text, processed_text):
     for tag in html_close_tags:
         processed_text = processed_text.replace(tag, "")
     for index, tag in enumerate(cl_tags):
+        # here's the problem again, I'm not checking correctly....
         # cl_to_html_tag = tag[0].lower().removesuffix(">") + '="">'
         # if cl_to_html_tag in html_tags:
         # import pdb; pdb.set_trace()
@@ -89,6 +113,7 @@ def process_file(filename, root):
         # print(filepath)
         # import pdb; pdb.set_trace()
         processed_text = fix_case_lisp(file_text, processed_text)
+        processed_text = new_fix_lisp_tags(file_text, processed_text)
         file = open(filepath, "w")
         file.write(processed_text)
         file.close()

@@ -42,11 +42,7 @@ Data and Control
 ```lisp
  
 
-
-
 (multiple-value-list (floor -3 4)) *!* (-1 1) 
-
-
 
 
 ```

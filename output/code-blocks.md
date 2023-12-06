@@ -1,13 +1,11 @@
 
 ```lisp
  (defun foo (&key radix (type 'integer)) ...)
-
 ```
 
 
 ```lisp
  (defun foo (&key ((:radix radix)) ((:type type) 'integer)) ...)
-
 ```
 
 
@@ -28,14 +26,12 @@
 ;;; debugger).  In unsafe code, the consequences are undefined.
  ((lambda (&key x) x)                   ;This call is not valid
   :x 1 :y 2 :allow-other-keys nil :allow-other-keys t)
-
 ```
 
 
 ```lisp
  (lambda (x y &aux (a (car x)) (b 2) c) (list x y a b c))
     \EQ (lambda (x y) (let* ((a (car x)) (b 2) c) (list x y a b c)))
-
 ```
 
 
@@ -54,7 +50,6 @@
  ((lambda (&optional (a 2 b) (c 3 d) &rest x) (list a b c d x))
   6 3 8 9 10 11)
 *→* (6 t 3 t (8 9 10 11))
-
 ```
 
 
@@ -68,7 +63,6 @@
  ((lambda (a b &key c d) (list a b c d)) :a :b :c :d) *→* (:a :b :d NIL)
  ((lambda (a b &key ((:sea c)) d) (list a b c d)) 1 2 :sea 6) *→* (1 2 6 NIL)
  ((lambda (a b &key ((c c)) d) (list a b c d)) 1 2 'c 6) *→* (1 2 6 NIL)
-
 ```
 
 
@@ -91,7 +85,6 @@
  ((lambda (a &optional (b 3) &rest x &key c (d a))
     (list a b c d x)) 1 6 :d 8 :c 9 :d 10)
 *→* (1 6 9 8 (:d 8 :c 9 :d 10))
-
 ```
 
 
@@ -102,14 +95,12 @@
           :initial-element (subseq str start end)
           :allow-other-keys t
           named-pairs))
-
 ```
 
 
 ```lisp
  (:constructor create-foo
          (a &optional b (c 'sea) &rest d &aux e (f 'eff)))
-
 ```
 
 
@@ -122,19 +113,16 @@
  (create-foo 10) *→* #S(FOO A 10 B 2 C SEA D 2 E \term{implemention-dependent} F EFF)
  (create-foo 10 'bee 'see :d 'dee) 
 *→* #S(FOO A 10 B BEE C SEE D DEE E \term{implemention-dependent} F EFF)
-
 ```
 
 
 ```lisp
  (create-foo 1 2)
-
 ```
 
 
 ```lisp
  (make-foo :a 1 :b 2)
-
 ```
 
 
@@ -143,7 +131,6 @@
                   (a &key (b 3 have-b) (c-token 'c) 
                           (c (list c-token (if have-b 7 2))))))
          a b c)
-
 ```
 
 
@@ -153,7 +140,6 @@
  0<1<2<3<4<5<6<7<8<9
  either 9<A or Z<0
  either 9<a or z<0                                                      
-
 ```
 
 
@@ -166,7 +152,6 @@
      ((S1 :initform 5 :type integer)
       (S2 :allocation :instance)
       (S3 :accessor C2-S3)))
-
 ```
 
 
@@ -178,11 +163,8 @@
  (defclass cinnamon (spice) ())
  
  (defclass fruit (food) ())
-
  (defclass spice (food) ())
-
  (defclass food () ())
-
 ```
 
 
@@ -190,7 +172,6 @@
  (defclass new-class (fruit apple) ())
  
  (defclass apple (fruit) ())
-
 ```
 
 
@@ -202,7 +183,6 @@
  (defclass apple () ())
  
  (defclass cinnamon () ())
-
 ```
 
 
@@ -224,13 +204,11 @@
 
 ```lisp
  (typep \param{c} 'condition) *→ true*
-
 ```
 
 
 ```lisp
  (apply #'make-condition \param{datum} \param{arguments})
-
 ```
 
 
@@ -238,7 +216,6 @@
  (make-condition \param{defaulted-type} 
                  :format-control \param{datum}
                  :format-arguments \param{arguments})
-
 ```
 
 
@@ -246,19 +223,15 @@
 (let ((c (make-condition 'arithmetic-error :operator '/ :operands '(7 0))))
   (error c))
 \EQ (error 'arithmetic-error :operator '/ :operands '(7 0))
-
 (error "Bad luck.")
 \EQ (error 'simple-error :format-control "Bad luck." :format-arguments '())
-
 ```
 
 
 ```lisp
  (error "This is a message")  ; Not recommended
  (error "this is a message.") ; Not recommended
-
  (error "This is a message.") ; Recommended instead
-
 ```
 
 
@@ -266,31 +239,25 @@
  (error "This is a message.~%")   ; Not recommended
  (error "~&This is a message.")   ; Not recommended
  (error "~&This is a message.~%") ; Not recommended
-
  (error "This is a message.")     ; Recommended instead
-
 ```
 
 
 ```lisp
  (defun test ()
    (error "This is an error message.~\%It has two lines."))
-
  ;; Implementation A
  (test)
  This is an error message.
  It has two lines.
-
  ;; Implementation B
  (test)
  ;; Error: This is an error message.
  ;;        It has two lines.
-
  ;; Implementation C
  (test)
  >> Error: This is an error message. 
            It has two lines.
-
 ```
 
 
@@ -299,7 +266,6 @@
  (random) *→* \term{implementation-dependent}
  (> lambda-parameters-limit 93) *→* \term{implementation-dependent}
  (char-name #\\A) *→* \term{implementation-dependent}
-
 ```
 
 
@@ -307,7 +273,6 @@
 (defun foo ()
   \#+ACME (acme:initialize-something)
   (print 'hello-there))
-
 ```
 
 
@@ -419,7 +384,6 @@
        (declare (special x)) ;[6] 6th occurrence of x
        (list old-x x))))     ;[7] 7th occurrence of x
 *→* (2 3)
-
 ```
 
 
@@ -427,7 +391,6 @@
  (lambda (&optional (x (foo 1))) ;[1]
    (declare (notinline foo))     ;[2]
    (foo x))                      ;[3]
-
 ```
 
 
@@ -435,7 +398,6 @@
  (locally (declare (notinline foo)) ;[1]
    (lambda (&optional (x (foo 1)))  ;[2]
      (foo x)))                      ;[3]
-
 ```
 
 
@@ -445,7 +407,6 @@
                  (foo 1))))                       ;[3]
    (declare (notinline foo))                      ;[4]
    (foo x))                                       ;[5]
-
 ```
 
 
@@ -456,7 +417,6 @@
        (dotimes (i x x)            ;[4]
          (declare (special x)))))  ;[5]
 *→* 1
-
 ```
 
 
@@ -465,14 +425,12 @@
  (x B A C y)
  (x A B B B B B C y)
  (x C B A B B B y)
-
 ```
 
 
 ```lisp
  (x B B A A C C y)
  (x C B C y)
-
 ```
 
 
@@ -481,7 +439,6 @@
  (x B A C y)
  (x A B B B B B C y)
  (x C B A B B B y)
-
 ```
 
 
@@ -489,7 +446,6 @@
  (x y)
  (x B B A A C C y)
  (x C B C y)
-
 ```
 
 
@@ -502,13 +458,11 @@
  (x B A y)
  (x C A B y)
  (x C B A y)
-
 ```
 
 
 ```lisp
  (+ 4 5) *→* 9 
-
 ```
 
 
@@ -520,7 +474,6 @@
    2
  (truncate 7 5)
 *→* 1, 2
-
 ```
 
 
@@ -530,13 +483,11 @@
 \OV "LOWERCASE-a"
 \OV "Small-A"
 \OV "LA01"
-
 ```
 
 
 ```lisp
  (char-name #\\a) *→* \term{implementation-dependent}
-
 ```
 
 
@@ -547,13 +498,11 @@
 \OV (LAMBDA () X), true, NIL
 \NV NIL, false, NIL
 \NV (LAMBDA () X), false, NIL
-
 ```
 
 
 ```lisp
  (gcd x (gcd y z)) \EQ (gcd (gcd x y) z)
-
 ```
 
 
@@ -562,7 +511,6 @@
 \OUT \IN{9 16 }
 \OUT 7
 *→* 8
-
 ```
 
 
@@ -570,7 +518,6 @@
  (progn (format t "~&Who? ") (read-line))
 \OUT Who? \IN{Fred, Mary, and Sally\CRLF}
 *→* "Fred, Mary, and Sally", false
-
 ```
 
 
@@ -583,7 +530,6 @@
  (append '() '()) *→* ()              ;Emphasize use of empty lists
  (not nil) *→ true*                   ;Emphasize use as Boolean false
  (get 'nil 'color)                   ;Emphasize use as a symbol
-
 ```
 
 
@@ -594,31 +540,26 @@
  (mapcar 'add-some '(1 2 3 4))
 *→* (2 3 4 5)
 \OV (2 4 5 6)
-
 ```
 
 
 ```lisp
  (defun foo (x) (+ x 1))
-
 ```
 
 
 ```lisp
  (find 'a '(a b . c))
-
 ```
 
 
 ```lisp
  (find 'd '(a b . c))
-
 ```
 
 
 ```lisp
  (find 'd '#1=(a b . #1#))
-
 ```
 
 
@@ -629,13 +570,11 @@
 *→* (1 2 3 4 6 7 FIVE)
 \OV (2 1 4 3 7 6 FIVE)
 \OV (2)
-
  (prog foo ((a (list 1 2 3 4 5 6 7 8 9 10)))
    (sort a #'(lambda (x y) (if (zerop (random 5)) (return-from foo a) (> x y)))))
 *→* (1 2 3 4 5 6 7 8 9 10)
 \OV (3 4 5 6 2 7 8 9 10 1)
 \OV (1 2 4 3)
-
 ```
 
 
@@ -647,7 +586,6 @@
         (locally (declare (special x))
                  x))))   ;Reads a special variable X
 *→* 3
-
 ```
 
 
@@ -655,7 +593,6 @@
  (defun foo (x) (+ x 3))
  (defun bar () (setf (symbol-function 'foo) #'(lambda (x) (+ x 4))))
  (foo (progn (bar) 20))
-
 ```
 
 
@@ -665,7 +602,6 @@
  #p"S:[BILL]OTHELLO.TXT" *→* #P"S:[BILL]OTHELLO.TXT"
  #(a b c) *→* #(A B C)
  "fred smith" *→* "fred smith"
-
 ```
 
 
@@ -677,7 +613,6 @@
  (funcall (car funs)) *→* 6
  (funcall (cadr funs) 43) *→* 43
  (funcall (car funs)) *→* 43
-
 ```
 
 
@@ -688,7 +623,6 @@
                (if (null z) (setq x 0) (+ x z)))
            funs))
    funs)
-
 ```
 
 
@@ -700,7 +634,6 @@
                         (if (null z) (setq x 0) (+ x z))))
              funs)))
   funs)
-
 ```
 
 
@@ -711,7 +644,6 @@
        (push (function (lambda (z) (+ x z)))
             funs)))
    funs)
-
 ```
 
 
@@ -721,13 +653,11 @@
      (push (function (lambda (z) (+ 5 z)))
            funs))
   funs)
-
 ```
 
 
 ```lisp
  (mapcar (function (lambda (x) (+ x 2))) y)
-
 ```
 
 
@@ -736,7 +666,6 @@
    (let ((z (* x 2)))
      (print z))
    z)
-
 ```
 
 
@@ -748,7 +677,6 @@
           (+ 5 (contorted-example g
                                   #'(lambda () (return-from here 4))
                                   (- x 1))))))
-
 ```
 
 
@@ -763,7 +691,6 @@
              (funcall f)
                     where f *→* #'(lambda () (return-from here\ssso 4))
                  (return-from here\ssso 4)
-
 ```
 
 
@@ -771,7 +698,6 @@
  (defun invalid-example ()
    (let ((y (block here #'(lambda (z) (return-from here z)))))
      (if (numberp y) y (funcall y 5))))
-
 ```
 
 
@@ -782,21 +708,18 @@
    (catch 'trap (* 5 (fun3 y))))
  (defun fun3 (z)
    (throw 'trap z))
-
 ```
 
 
 ```lisp
  (defun fun2 (y)
    (catch 'snare (* 5 (fun3 y))))
-
 ```
 
 
 ```lisp
  (format nil "~C" #\\A) *→* "A"
  (format nil "~C" #\\Space) *→* " "
-
 ```
 
 
@@ -807,13 +730,11 @@
  (format nil "~:C" #\\Control-Space)
 *→* "Control-Space"
 \OV "c-Space"
-
 ```
 
 
 ```lisp
  (format nil "~:@C" #\\Control-Partial) *→* "Control-{\Partial} (Top-F)"  
-
 ```
 
 
@@ -823,19 +744,16 @@
  (format nil "~19,0,' ,4:B" 3333) *→* "0000 1101 0000 0101"
  (format nil "~3,,,' ,2:R" 17) *→* "1 22"
  (format nil "~,,'|,2:D" #xFFFF) *→*  "6|55|35"
-
 ```
 
 
 ```lisp
  "~%;; ~\lbr\ ~<~%;; ~1:; ~S~>~\hat\ ,~\rbr\ .~%"
-
 ```
 
 
 ```lisp
  "~%;; ~\lbr\ ~<~%;; ~1,50:; ~S~>~\hat\ ,~\rbr \ .~%"
-
 ```
 
 
@@ -845,14 +763,12 @@
         "~@[ print level = ~D~]~@[ print length = ~D~]"
         *print-level* *print-length*)
 *→*  " print length = 5"
-
 ```
 
 
 ```lisp
  (format \param{stream} "...~@[\param{str}~]..." ...)
 \EQ (format \param{stream} "...~:[~;~:*\param{str}~]..." ...)
-
 ```
 
 
@@ -864,7 +780,6 @@
  (format nil foo 'foo 'bar) *→*  "Items: FOO and BAR."
  (format nil foo 'foo 'bar 'baz) *→*  "Items: FOO, BAR, and BAZ."
  (format nil foo 'foo 'bar 'baz 'quux) *→*  "Items: FOO, BAR, BAZ, and QUUX."
-
 ```
 
 
@@ -875,7 +790,6 @@
  (format nil "Pairs:~\{ <~S,~S>~\}." 
          '(a 1 b 2 c 3))
 *→* "Pairs: <A,1> <B,2> <C,3>."
-
 ```
 
 
@@ -883,14 +797,12 @@
  (format nil "Pairs:~:\lbr <~S,~S>~\rbr\ ." 
                  '((a 1) (b 2) (c 3)))
 *→* "Pairs: <A,1> <B,2> <C,3>."
-
 ```
 
 
 ```lisp
  (format nil "Pairs:~@\lbr <~S,~S>~\rbr\ ." 'a 1 'b 2 'c 3)
 *→* "Pairs: <A,1> <B,2> <C,3>."
-
 ```
 
 
@@ -898,28 +810,24 @@
  (format nil "Pairs:~:@\lbr <~S,~S>~\rbr\ ." 
               '(a 1) '(b 2) '(c 3)) 
 *→* "Pairs: <A,1> <B,2> <C,3>."
-
 ```
 
 
 ```lisp
     (apply #'format stream string arguments)
  \EQ (format stream "~1\{~:\}" string arguments)
-
 ```
 
 
 ```lisp
  (format nil "~? ~D" "<~A ~D>" '("Foo" 5) 7) *→* "<Foo 5> 7"
  (format nil "~? ~D" "<~A ~D>" '("Foo" 5 14) 7) *→* "<Foo 5> 7"
-
 ```
 
 
 ```lisp
  (format nil "~@? ~D" "<~A ~D>" "Foo" 5 7) *→* "<Foo 5> 7"
  (format nil "~@? ~D" "<~A ~D>" "Foo" 5 14 7) *→* "<Foo 5> 14"
-
 ```
 
 
@@ -930,7 +838,6 @@
  (f 0) *→* "Zero errors detected."
  (f 1) *→* "One error detected."
  (f 23) *→* "Twenty-three errors detected."
-
 ```
 
 
@@ -938,7 +845,6 @@
  (format nil "~@(how is ~:(BOB SMITH~)?~)")
  *→* "How is bob smith?"
  \NV "How is Bob Smith?"
-
 ```
 
 
@@ -946,7 +852,6 @@
  (format nil "~D tr~:@P/~D win~:P" 7 1) *→* "7 tries/1 win"
  (format nil "~D tr~:@P/~D win~:P" 1 0) *→* "1 try/0 wins"
  (format nil "~D tr~:@P/~D win~:P" 1 3) *→* "1 try/3 wins"
-
 ```
 
 
@@ -956,13 +861,11 @@
  (format nil donestr) *→* "Done."
  (format nil donestr 3) *→* "Done. 3 warnings."
  (format nil donestr 1 5) *→* "Done. 1 warning. 5 errors."
-
 ```
 
 
 ```lisp
  (format nil "~:\lbr\ ~@?~:\hat\ ...~\rbr\ " '(("a") ("b"))) *→* "a...b"
-
 ```
 
 
@@ -972,7 +875,6 @@
  (format nil tellstr 23) *→* "Twenty-three!"
  (format nil tellstr nil "losers") *→* " Losers!"
  (format nil tellstr 23 "losers") *→* "Twenty-three losers!"
-
 ```
 
 
@@ -983,7 +885,6 @@
 *→*  "FOO         BAR"
  (format nil "~15<~S~;~{\hat}~S~;~{\hat}~S~>" 'foo 'bar 'baz)
 *→*  "FOO   BAR   BAZ"
-
 ```
 
 
@@ -1002,20 +903,17 @@ NIL
 CAR requires its argument to be of type LIST,
 but it was called with an argument of type SHORT-FLOAT.
 NIL
-
 ```
 
 
 ```lisp
  (format nil "~:[abc~:@(def~;ghi~
 :@(jkl~]mno~)" x) ;Invalid!
-
 ```
 
 
 ```lisp
  (format nil "~@?ghi~)" "abc~@(def") ;Invalid!
-
 ```
 
 
@@ -1037,7 +935,6 @@ NIL
 *→* "three dogs are here."
  (format nil "Here ~[are~;is~:;are~] ~:*~R pupp~:@P." n)
 *→* "Here are three puppies."
-
 ```
 
 
@@ -1050,7 +947,6 @@ NIL
  (foo 100.0)    *→* "100.00|******|100.00| 100.0|100.00|100.0"
  (foo 1234.0)   *→* "1234.00|******|??????|1234.0|1234.00|1234.0"
  (foo 0.006)    *→* "  0.01|  0.06|  0.01| 0.006|0.01|0.006"
-
 ```
 
 
@@ -1067,7 +963,6 @@ NIL
  (foo 1.1E13)   *→* "*********| 11.00\$+12|+.001E+16| 1.10E+13"
  (foo 1.1L120)  *→* "*********|??????????|%%%%%%%%%|1.10L+120"
  (foo 1.1L1200) *→* "*********|??????????|%%%%%%%%%|1.10L+1200"
-
 ```
 
 
@@ -1075,7 +970,6 @@ NIL
  (dotimes (k 13)
    (format t "~%Scale factor ~2D: |~13,6,2,VE|"
            (- k 5) (- k 5) 3.14159))
-
 ```
 
 
@@ -1093,7 +987,6 @@ Scale factor  4: | 3141.590E-03|
 Scale factor  5: | 31415.90E-04|
 Scale factor  6: | 314159.0E-05|
 Scale factor  7: | 3141590.E-06|
-
 ```
 
 
@@ -1111,7 +1004,6 @@ Scale factor  7: | 3141590.E-06|
  (foo 3.14E12)   *→* "*********|314.0\$+10|0.314E+13| 3.14E+12"
  (foo 3.14L120)  *→* "*********|?????????|%%%%%%%%%|3.14L+120"
  (foo 3.14L1200) *→* "*********|?????????|%%%%%%%%%|3.14L+1200"
-
 ```
 
 
@@ -1123,14 +1015,12 @@ Scale factor  7: | 3141590.E-06|
  (format nil "~10:@<foo~;bar~>") *→* "  foo bar "
  (format nil "~10@<foobar~>")    *→* "foobar    "
  (format nil "~10:@<foobar~>")   *→* "  foobar  "
-
 ```
 
 
 ```lisp
   (FORMAT NIL "Written to ~A." #P"foo.bin")
   *→* "Written to foo.bin."
-
 ```
 
 
@@ -1138,7 +1028,6 @@ Scale factor  7: | 3141590.E-06|
  (defmethod width ((c character-class) &key font) ...)
  
  (defmethod width ((p picture-class) &key pixel-size) ...)
-
 ```
 
 
@@ -1170,7 +1059,6 @@ Scale factor  7: | 3141590.E-06|
  (gethash 'color a) *→* BROWN, true
  (gethash 'name a) *→* FRED, true
  (gethash 'pointy a) *→* NIL, false
-
 ```
 
 
@@ -1182,7 +1070,6 @@ Scale factor  7: | 3141590.E-06|
        when (evenp i)                            ; fifth clause
          do (format t "~D is a non-odd number" i)
        finally (format t "About to exit!"))      ; sixth clause
-
 ```
 
 
@@ -1192,11 +1079,9 @@ Scale factor  7: | 3141590.E-06|
  
 ;;; This expression uses the new syntax for type specifiers.
  (loop for i of-type fixnum upfrom 3 ...)
-
 ;; Declare X and Y to be of type VECTOR and FIXNUM respectively.
  (loop for (x y) of-type (vector fixnum) 
        in l do ...)
-
 ```
 
 
@@ -1208,7 +1093,6 @@ Scale factor  7: | 3141590.E-06|
        and c of-type float = (third numlist)
        collect (list c b a))
 *→* ((4.0 2 1) (8.3 6 5) (10.4 9 8))
-
 ```
 
 
@@ -1219,13 +1103,11 @@ Scale factor  7: | 3141590.E-06|
        collect (list c b a))
 *→* ((4.0 2 1) (8.3 6 5) (10.4 9 8))
  
-
 ;; If all the types are the same, this way is even simpler.
  (loop for (a b c) of-type float in
        '((1.0 2.0 4.0) (5.0 6.0 8.3) (8.0 9.0 10.4))
        collect (list c b a))
 *→* ((4.0 2.0 1.0) (8.3 6.0 5.0) (10.4 9.0 8.0))
-
 ```
 
 
@@ -1236,7 +1118,6 @@ Scale factor  7: | 3141590.E-06|
        and (e f)
        return (list a b c d e f))
 *→* (1.0 2.0 3 4 NIL NIL)
-
 ```
 
 
@@ -1244,7 +1125,6 @@ Scale factor  7: | 3141590.E-06|
  (loop for (a nil b) = '(1 2 3)
        do (return (list a b)))
 *→* (1 3)
-
 ```
 
 
@@ -1256,7 +1136,6 @@ Scale factor  7: | 3141590.E-06|
        '(((1.2 . 2.4) (3 . 4)) ((3.4 . 4.6) (5 . 6)))
        collect (list a b c d))
 *→* ((1.2 2.4 3 4) (3.4 4.6 5 6))
-
 ```
 
 
@@ -1265,7 +1144,6 @@ Scale factor  7: | 3141590.E-06|
 *→* (1 3 5 7 9)
 (let ((x 1)) (loop for i by (incf x) from x to 10 collect i))
 *→* (2 4 6 8 10)
-
 ```
 
 
@@ -1294,7 +1172,6 @@ Scale factor  7: | 3141590.E-06|
 \OUT 1
 \OUT 2
 *→* NIL
-
 ```
 
 
@@ -1318,7 +1195,6 @@ Scale factor  7: | 3141590.E-06|
  (loop for (item . x) of-type (t . fixnum) in '((A . 1) (B . 2) (C . 3))
        unless (eq item 'B) sum x)
 *→* 4
-
 ```
 
 
@@ -1336,7 +1212,6 @@ Scale factor  7: | 3141590.E-06|
 \OUT 3 
 *→* NIL
  
-
 ```
 
 
@@ -1363,14 +1238,12 @@ Scale factor  7: | 3141590.E-06|
        for iteration from 1 to 5
        collect item)
 *→* (1 11 21 31 41)
-
 ```
 
 
 ```lisp
  (loop for char across (the simple-string (find-message channel))
        do (write-char char stream))
-
 ```
 
 
@@ -1400,7 +1273,6 @@ Scale factor  7: | 3141590.E-06|
 \OUT THIS
 \OUT IS 
 *→* NIL
-
 ```
 
 
@@ -1410,7 +1282,6 @@ Scale factor  7: | 3141590.E-06|
        with c = (+ b 3)
        return (list a b c))
 *→* (1 3 6)
-
 ```
 
 
@@ -1423,7 +1294,6 @@ Scale factor  7: | 3141590.E-06|
          (next-loop (return (list a b c))
                     (go next-loop)
                     end-loop))))
-
 ```
 
 
@@ -1433,7 +1303,6 @@ Scale factor  7: | 3141590.E-06|
        and c = 3
        return (list a b c))
 *→* (1 2 3)
-
 ```
 
 
@@ -1446,7 +1315,6 @@ Scale factor  7: | 3141590.E-06|
          (next-loop (return (list a b c))
                     (go next-loop)
                     end-loop))))
-
 ```
 
 
@@ -1478,7 +1346,6 @@ Scale factor  7: | 3141590.E-06|
  (loop with (a b c) of-type float 
        return (format nil "~A ~A ~A" a b c))
 *→* "0.0 0.0 0.0"
-
 ```
 
 
@@ -1490,7 +1357,6 @@ Scale factor  7: | 3141590.E-06|
        collect name
        append kids)
 *→* (FRED BOB KEN SUE ALICE JOE KRIS SUNSHINE JUNE)
-
 ```
 
 
@@ -1527,7 +1393,6 @@ Scale factor  7: | 3141590.E-06|
        finally (print my-list))
 \OUT (A C) 
 *→* NIL
-
 ```
 
 
@@ -1543,7 +1408,6 @@ Scale factor  7: | 3141590.E-06|
         as x in '(a b (c))
         nconc (if (evenp i) (list x) nil))
 *→* (A (C))
-
 ```
 
 
@@ -1551,7 +1415,6 @@ Scale factor  7: | 3141590.E-06|
  (loop for i in '(a b nil c nil d e)
        count i)
 *→* 5
-
 ```
 
 
@@ -1576,7 +1439,6 @@ Scale factor  7: | 3141590.E-06|
        minimize (round v) into result of-type fixnum
        finally (return result))
 *→* 1
-
 ```
 
 
@@ -1589,7 +1451,6 @@ Scale factor  7: | 3141590.E-06|
  (loop for v in series 
        sum (* 2.0 v))
 *→* 22.4
-
 ```
 
 
@@ -1603,7 +1464,6 @@ Scale factor  7: | 3141590.E-06|
  (loop repeat -15
    do (format t "What you see is what you expect~%"))
 *→* NIL
-
 ```
 
 
@@ -1622,7 +1482,6 @@ Scale factor  7: | 3141590.E-06|
  (loop for i from 0
        thereis (when (> i 10) i) )
 *→* 11
-
 ;;; The FINALLY clause is not evaluated in these examples.
  (loop for i from 0 to 10
        always (< i 9)
@@ -1658,7 +1517,6 @@ Scale factor  7: | 3141590.E-06|
                          (loop for y below z
                                thereis (= (+ (expt x n) (expt y n))
                                           (expt z n))))))
-
 ```
 
 
@@ -1681,7 +1539,6 @@ Scale factor  7: | 3141590.E-06|
        when (oddp i) collect i
        while (< i 5))
 *→* (3 5)
-
 ```
 
 
@@ -1699,7 +1556,6 @@ Scale factor  7: | 3141590.E-06|
 \OUT 9 
 *→* NIL
 
-
 ```
 
 
@@ -1716,7 +1572,6 @@ Error: non-numeric value: A
         do (return 
             (cerror "Enter new value" "non-numeric value: ~s" item)))
 Error: non-numeric value: A
-
 ```
 
 
@@ -1739,7 +1594,6 @@ Error: non-numeric value: A
        finally (prin1 'got-here))
 \OUT GOT-HERE
 *→* (6 7 8 9 10) 
-
 ;; Return both the count of collected numbers and the numbers.
  (loop for i from 1 to 10
        when (> i 5)
@@ -1747,7 +1601,6 @@ Error: non-numeric value: A
          and count i into number-count
        finally (return (values number-count number-list)))
 *→* 5, (6 7 8 9 10)
-
 ```
 
 
@@ -1759,7 +1612,6 @@ Error: non-numeric value: A
        do (return-from max 'done))
 \OUT 1 
 *→* DONE
-
 ```
 
 
@@ -1771,7 +1623,6 @@ Error: non-numeric value: A
       (loop (incf j 3) (incf i) (if (= i 3) (go exit)))
       exit)
     j) *→* 9
-
 ```
 
 
@@ -1780,7 +1631,6 @@ Error: non-numeric value: A
        for y = nil then x 
        collect (list x y))
 *→* ((1 NIL) (2 2) (3 3) (4 4) (5 5) (6 6) (7 7) (8 8) (9 9) (10 10))
-
 ```
 
 
@@ -1789,7 +1639,6 @@ Error: non-numeric value: A
        and y = nil then x 
        collect (list x y))
 *→* ((1 NIL) (2 1) (3 2) (4 3) (5 4) (6 5) (7 6) (8 7) (9 8) (10 9))
-
 ```
 
 
@@ -1812,7 +1661,6 @@ Error: non-numeric value: A
 \OUT 
 \OUT 235 
 *→* (1 2345 323 235), (324 2 4 252)
-
 ;; Collect numbers larger than 3.
  (loop for i in '(1 2 3 4 5 6)
        when (and (> i 3) i)
@@ -1829,7 +1677,6 @@ Error: non-numeric value: A
  (loop for i in '(1 2 3 4 5 6)
        thereis (and (> i 3) i))
 *→* 4
-
 \medbreak
 ;; Nest conditional clauses.
  (let ((list '(0 3.0 apple 4 5 9.8 orange banana)))
@@ -1846,7 +1693,6 @@ Error: non-numeric value: A
              do (error "found a funny value in list ~S, value ~S~%" list i)
          finally (return (values float-numbers other-numbers symbol-list))))
 *→* (3.0 9.8), (0 4 5), (APPLE ORANGE BANANA)
-
 ;; Without the END preposition, the last AND would apply to the
 ;; inner IF rather than the outer one.
  (loop for x from 0 to 3 
@@ -1862,19 +1708,16 @@ Error: non-numeric value: A
 \OUT 2  a c
 \OUT 3 
 *→* NIL
-
 ```
 
 
 ```lisp
  (loop for \i{internal-variable} downfrom (- \i{n} 1) to 0 ...)
-
 ```
 
 
 ```lisp
  (a b c)
-
 ```
 
 
@@ -1891,25 +1734,21 @@ Error: non-numeric value: A
 
 ```lisp
  (a b c . d)
-
 ```
 
 
 ```lisp
  (cons 'a (cons 'b (cons 'c 'd)))
-
 ```
 
 
 ```lisp
  (cons 'this-one 'that-one) *→* (this-one . that-one)
-
 ```
 
 
 ```lisp
  (a b c d . (e f . (g))) \EQ (a b c d e f g)
-
 ```
 
 
@@ -1917,7 +1756,6 @@ Error: non-numeric value: A
  'foo *→* FOO
  ''foo *→* (QUOTE FOO)
  (car ''foo) *→* QUOTE
-
 ```
 
 
@@ -1925,16 +1763,13 @@ Error: non-numeric value: A
  (+ 3 ; three
     4)
 *→* 7    
-
 ```
 
 
 ```lisp
 ;;;; Math Utilities
-
 ;;; FIB computes the the Fibonacci function in the traditional
 ;;; recursive way.
-
 (defun fib (n)
   (check-type n integer)
   ;; At this point we're sure we have an integer argument.
@@ -1948,7 +1783,6 @@ Error: non-numeric value: A
         ;; Nothing more to do but recurse.
         (t (+ (fib (- n 1))     ;The traditional formula
               (fib (- n 2)))))) ; is fib[n-1]+fib[n-2].
-
 ```
 
 
@@ -1962,7 +1796,6 @@ Error: non-numeric value: A
  (list 'cond 
        (cons (list 'numberp x) y) 
        (list* 't (list 'print x) y))
-
 ```
 
 
@@ -1975,13 +1808,11 @@ Error: non-numeric value: A
 
 ```lisp
  (append \lbracket\ x1\rbracket \lbracket\ x2\rbracket \lbracket\ x3\rbracket ... \lbracket\ xn\rbracket (quote atom))
-
 ```
 
 
 ```lisp
  (append \lbracket\ x1\rbracket \lbracket\ x2\rbracket \lbracket\ x3\rbracket ... \lbracket\ xn\rbracket form)
-
 ```
 
 
@@ -1993,7 +1824,6 @@ Error: non-numeric value: A
 
 ```lisp
  (append (list (append (list a) (list 'b) '\nil)) (list c) d '\nil)
-
 ```
 
 
@@ -2004,13 +1834,11 @@ Error: non-numeric value: A
  (list* (cons a (list 'b)) c d)
  (append (list (cons a '(b))) (list c) d)
  (list* (cons a '(b)) c (copy-list d))
-
 ```
 
 
 ```lisp
 (apply #'+ l) \EQ (apply (function +) l)
-
 ```
 
 
@@ -2019,7 +1847,6 @@ Error: non-numeric value: A
  #6(a b c c c c)
  #6(a b c)
  #6(a b c c)
-
 ```
 
 
@@ -2028,7 +1855,6 @@ Error: non-numeric value: A
  #(2 3 5 7 11 13 17 19 23 29 31 37 41 43 47)
                         ;A vector containing the primes below 50
  #()                    ;An empty vector
-
 ```
 
 
@@ -2037,20 +1863,17 @@ Error: non-numeric value: A
  #6*101111
  #6*101
  #6*1011
-
 ```
 
 
 ```lisp
  #*         ;An empty bit-vector
-
 ```
 
 
 ```lisp
  #B1101 \EQ 13 ;1101\ssst
  #b101/11 \EQ 5/3
-
 ```
 
 
@@ -2058,45 +1881,38 @@ Error: non-numeric value: A
  #o37/15 \EQ 31/13
  #o777 \EQ 511
  #o105 \EQ 69 ;105\ssse
-
 ```
 
 
 ```lisp
  #xF00 \EQ 3840             
  #x105 \EQ 261 ;105\ssss
-
 ```
 
 
 ```lisp
  0       1       5
  foo     2       (hot dog)
-
 ```
 
 
 ```lisp
  (0 1 5) (foo 2 (hot dog))
-
 ```
 
 
 ```lisp
  ((0 1 5) (foo 2 (hot dog)))
-
 ```
 
 
 ```lisp
  #.(cm keyword1 'value1 keyword2 'value2 ...)
-
 ```
 
 
 ```lisp
  (intern (string slotj) (find-package 'keyword))
-
 ```
 
 
@@ -2104,25 +1920,21 @@ Error: non-numeric value: A
  (setq x (list 'p 'q))
  (setq y (list (list 'a 'b) x 'foo x))
  (rplacd (last y) (cdr y))
-
 ```
 
 
 ```lisp
  ((a b) . #1=(#2=(p q) foo #2# . #1#))
-
 ```
 
 
 ```lisp
  ((a b) (p q) foo (p q) (p q) foo (p q) (p q) foo (p q) ...)
-
 ```
 
 
 ```lisp
 #-\param{test} \param{expression} \EQ #+(not \param{test}) \param{expression}
-
 ```
 
 
@@ -2135,7 +1947,6 @@ Error: non-numeric value: A
  (defun add3 (n) #|(format t "~&Adding 3 to ~D." n)|# (+ n 3))
 \goodbreak
 ;;; The examples that follow show issues related to #| ... |# nesting.
-
 ;;; In this first example, #| and |# always occur properly paired,
 ;;; so nesting works naturally.
  (defun mention-fun-fact-1a ()
@@ -2181,31 +1992,26 @@ Error: non-numeric value: A
    (format t "Don't use |# unmatched or you'll get in trouble!"))
  |#
  (fboundp 'mention-fun-fact-3b) *→* NIL
-
 ```
 
 
 ```lisp
  #|| (+ #|| 3 ||# 4 5) ||# 
-
 ```
 
 
 ```lisp
  #| (+ #| 3 |# 4 5) |#
-
 ```
 
 
 ```lisp
  (+ 1/3 2/3 1.0d0 1.0 1.0e-15)
-
 ```
 
 
 ```lisp
  (+ (+ 1/3 2/3) (+ 1.0d0 1.0e-15) 1.0)
-
 ```
 
 
@@ -2218,7 +2024,6 @@ Error: non-numeric value: A
  (+ 1/2 0.5) *→* 1.0
  (- 1/2 0.5d0) *→* 0.0d0
  (+ 0.5 -0.5 1/2) *→* 0.5
-
  ;;;; Comparing rationals with floats.
  ;;; This example assumes an implementation in which the default float 
  ;;; format is IEEE single-float, IEEE double-float, or some other format
@@ -2226,7 +2031,6 @@ Error: non-numeric value: A
  (< 5/7 (float 5/7)) *→ true*
  (< 5/7 (rational (float 5/7))) *→ true*
  (< (float 5/7) (float 5/7)) *→ false*
-
 ```
 
 
@@ -2239,7 +2043,6 @@ Error: non-numeric value: A
  #c(0 0) *→* 0
  (typep #c(1 1) '(complex (eql 1))) *→ true*
  (typep #c(0 0) '(complex (eql 0))) *→ false*
-
 ```
 
 
@@ -2247,7 +2050,6 @@ Error: non-numeric value: A
  (defclass q () ((x :initarg a)))
  (defclass r (q) ((x :initarg b))
    (:default-initargs a 1 b 2))
-
 ```
 
 
@@ -2257,17 +2059,14 @@ Error: non-numeric value: A
    (let ((instance (apply #'allocate-instance class initargs)))
      (apply #'initialize-instance instance initargs)
      instance))
-
  (defmethod make-instance ((class-name symbol) &rest initargs)
    (apply #'make-instance (find-class class-name) initargs))
-
 ```
 
 
 ```lisp
  (defmethod initialize-instance ((instance standard-object) &rest initargs)
    (apply #'shared-initialize instance t initargs)))
-
 ```
 
 
@@ -2276,7 +2075,6 @@ Error: non-numeric value: A
  (NAMESTRING (MAKE-PATHNAME :HOST "OZ" :NAME "<TEST>"))
 *→* #P"OZ:PS:{\hat}V<TEST{\hat}V>"
 \NV #P"OZ:PS:<TEST>"
-
 ```
 
 
@@ -2295,7 +2093,6 @@ Error: non-numeric value: A
    (merge-pathnames (make-pathname :type :unspecific)
                     (make-pathname :type "LISP")))
 *→* :UNSPECIFIC
-
 ```
 
 
@@ -2307,13 +2104,11 @@ Error: non-numeric value: A
 
 ```lisp
  (push value (wrong-order place1 place2))
-
 ```
 
 
 ```lisp
  (setf place1 value1 place2 value2 ...)
-
 ```
 
 
@@ -2323,13 +2118,11 @@ Error: non-numeric value: A
          (car (progn (princ "2") ref2)))) 
 \OUT 12
 *→* (REF1)
-
  (let (x)
     (push (setq x (list 'a))
           (car (setq x (list 'b))))
      x)
 *→* (((A) . B))
-
 ```
 
 
@@ -2342,7 +2135,6 @@ Error: non-numeric value: A
 ;;; in an integer.  Note that the generalized variable of 
 ;;; interest here is just the (possibly local) program variable
 ;;; integer.
-
 ```
 
 
@@ -2357,26 +2149,22 @@ Error: non-numeric value: A
 ;;; a temporary variable as part of the step 1. Only the CAR
 ;;; of this value will be retrieved, and subsequently modified 
 ;;; after the value computation.
-
 ```
 
 
 ```lisp
  (setf (the integer (cadr x)) (+ y 3))
-
 ```
 
 
 ```lisp
  (setf (cadr x) (the integer (+ y 3)))
-
 ```
 
 
 ```lisp
  (setf (apply \#'\param{name} \starparam{arg}) \param{val})
  \EQ (apply \#'(setf \param{name}) \param{val} \starparam{arg})
-
 ```
 
 
@@ -2386,13 +2174,11 @@ Error: non-numeric value: A
        ...
        (#:temp-0 \param{new-value}))
    (funcall (function (setf \param{f})) #:temp-0 #:temp-1 #:temp-2...))
-
 ```
 
 
 ```lisp
  (\term{operator} \starparam{preceding-form} \param{place} \starparam{following-form})
-
 ```
 
 
@@ -2403,7 +2189,6 @@ Error: non-numeric value: A
            22 222
               333 3333
         44444444444444 44444
-
 ```
 
 
@@ -2422,20 +2207,17 @@ Error: non-numeric value: A
     (write-char #\\Space)
     (pprint-newline :linear)
     (write (fourth list))))
-
 ```
 
 
 ```lisp
 (simple-pprint-defun *standard-output* '(defun prod (x y) (* x y)))
-
 ```
 
 
 ```lisp
  (DEFUN PROD (X Y) 
    (* X Y))
-
 ```
 
 
@@ -2443,7 +2225,6 @@ Error: non-numeric value: A
 (DEFUN PROD
        (X Y)
   (* X Y))
-
 ```
 
 
@@ -2452,7 +2233,6 @@ Error: non-numeric value: A
   PROD
   (X Y)
   (* X Y))
-
 ```
 
 
@@ -2463,7 +2243,6 @@ Error: non-numeric value: A
  ;;; (DEFUN PROD
  ;;;        (X Y)
  ;;;   (* X Y))
-
 ```
 
 
@@ -2489,7 +2268,6 @@ Error: non-numeric value: A
            (write-char #\\Space)
            (pprint-newline :linear)
            (write (pprint-pop)))))
-
 ```
 
 
@@ -2498,7 +2276,6 @@ Error: non-numeric value: A
              '#1=(let (x (*print-length* (f (g 3))) 
                        (z . 2) (k (car y)))
                    (setq x (sqrt z)) #1#))
-
 ```
 
 
@@ -2506,7 +2283,6 @@ Error: non-numeric value: A
  #1=(LET (X (*PRINT-LENGTH* (F #)) (Z . 2) (K (CAR Y))) 
       (SETQ X (SQRT Z))
       #1#)
-
 ```
 
 
@@ -2515,7 +2291,6 @@ Error: non-numeric value: A
           (Z . 2) (K (CAR Y)))
       (SETQ X (SQRT Z))
       #1#)
-
 ```
 
 
@@ -2526,7 +2301,6 @@ Error: non-numeric value: A
        (Z . 2) ...)
    (SETQ X (SQRT Z))
    ...)
-
 ```
 
 
@@ -2540,7 +2314,6 @@ Error: non-numeric value: A
               (if (= (incf i) end) (return nil))
               (write-char #\\Space)
               (pprint-newline :fill))))))
-
 ```
 
 
@@ -2550,37 +2323,30 @@ Error: non-numeric value: A
  #(12 34 567 8 
    9012 34 567 
    89 0 1 23)
-
 ```
 
 
 ```lisp
 (defun simple-pprint-defun (*standard-output* list)
   (format T "~:<~W ~@_~:I~W ~:_~W~1I ~_~W~:>" list))
-
 (defun pprint-let (*standard-output* list)
   (format T "~:<~W~{\hat}~:<~@\{~:<~@\{~W~{\hat}~_~\}~:>~{\hat}~:_~\}~:>~1I~@\{~{\hat}~_~W~\}~:>" list)) 
-
 ```
 
 
 ```lisp
  (setq *print-pprint-dispatch* (copy-pprint-dispatch nil))
-
  (set-pprint-dispatch 'ratio
    #'(lambda (s obj)
        (format s "#.(/ ~W ~W)" 
                  (numerator obj) (denominator obj))))
-
  (set-pprint-dispatch '(and ratio (satisfies minusp))
    #'(lambda (s obj)
        (format s "#.(- (/ ~W ~W))" 
                (- (numerator obj)) (denominator obj)))
    5)
-
  (pprint '(1/3 -2/3))
  (#.(/ 1 3) \#.(- (/ 2 3)))
-
 ```
 
 
@@ -2593,7 +2359,6 @@ Error: non-numeric value: A
  
  (set-pprint-dispatch '(cons (member my-let)) 
                       (pprint-dispatch '(let) nil))
-
 ```
 
 
@@ -2606,7 +2371,6 @@ Error: non-numeric value: A
  (0 b c d
   e f g h
   i j k)
-
 ```
 
 
@@ -2617,7 +2381,6 @@ Error: non-numeric value: A
    #'(lambda (s f)
        (funcall (formatter "~@<#<~;~W and ~2I~_~/pprint-fill/~;>~:>")
                s (family-mom f) (family-kids f))))
-
 ```
 
 
@@ -2629,13 +2392,11 @@ Error: non-numeric value: A
  (PRINCIPAL-FAMILY
   #<Lucy and
       Mark Bob . Dan>)
-
 ```
 
 
 ```lisp
  27    27.    #o33    #x1B    #b11011    #.(* 3 3 3)    81/3
-
 ```
 
 
@@ -2644,13 +2405,11 @@ Error: non-numeric value: A
 (|\\A|
   B
 )
-
 ```
 
 
 ```lisp
  (let ((x (make-symbol "FOO"))) (list x x))
-
 ```
 
 
@@ -2671,7 +2430,6 @@ Error: non-numeric value: A
                    (string-upcase print-case)
                    (symbol-name symbol)
                    (prin1-to-string symbol)))))))
-
 ```
 
 
@@ -2714,14 +2472,12 @@ Error: non-numeric value: A
     :INVERT        :CAPITALIZE   ZEBRA        zebra
     :INVERT        :CAPITALIZE   Zebra        Zebra
     :INVERT        :CAPITALIZE   zebra        ZEBRA
-
 ```
 
 
 ```lisp
  (a . (b . ((c . (d . nil)) . (e . nil))))
  (a b (c d) e)
-
 ```
 
 
@@ -2742,7 +2498,6 @@ Error: non-numeric value: A
  (a |.| b)   ;A list of three elements a, ., and b
  (a \\... b)  ;A list of three elements a, ..., and b
  (a |...| b) ;A list of three elements a, ..., and b
-
 ```
 
 
@@ -2773,7 +2528,6 @@ Error: non-numeric value: A
 \OUT     ("<2,0>" "<2,1>" "<2,2>")) 
 \OUT #("<0,0>" "<0,1>" "<0,2>" "<1,0>" "<1,1>" "<1,2>" "<2,0>" "<2,1>" "<2,2>") 
 *→* #<ARRAY 9 indirect 36363476>
-
 ```
 
 
@@ -2785,13 +2539,11 @@ Error: non-numeric value: A
 
 ```lisp
  #S(RANDOM-STATE :DATA #(14 49 98436589 786345 8734658324 ... ))
-
 ```
 
 
 ```lisp
  #S(\param{structure-name} \star{\curly{\param{slot-key} \param{slot-value}}})
-
 ```
 
 
@@ -2846,7 +2598,6 @@ Error: non-numeric value: A
     (write 'write :stream s)
     (prin1 'prin1 s))
 *→* "WRITEPRIN1"
-
 ```
 
 
@@ -2863,7 +2614,6 @@ Error: non-numeric value: A
                  (string-upcase readtable-case)
                  input
                  (symbol-name (read-from-string input)))))))
-
 ```
 
 
@@ -2882,13 +2632,11 @@ Error: non-numeric value: A
     :INVERT         ZEBRA   zebra
     :INVERT         Zebra   Zebra
     :INVERT         zebra   ZEBRA
-
 ```
 
 
 ```lisp
  (cons '#3=(p q r) '(x y . #3#))
-
 ```
 
 
@@ -2897,7 +2645,6 @@ Error: non-numeric value: A
     #'(lambda (stream char)
          (declare (ignore char))
          (list 'quote (read stream))))
-
 ```
 
 
@@ -2906,7 +2653,6 @@ Error: non-numeric value: A
     #'(lambda (stream char)
          (declare (ignore char))
          (list 'quote (read stream t nil t))))
-
 ```
 
 
@@ -2917,7 +2663,6 @@ Error: non-numeric value: A
  (eq 'abc '|ABC|) *→ true*
  (eq 'abc 'a|B|c) *→ true*
  (eq 'abc '|abc|) *→ false*
-
 ```
 
 
@@ -2928,7 +2673,6 @@ Error: non-numeric value: A
  (eq 'abc 'a\\Bc) *→ true*
  (eq 'abc '\\ABC) *→ true*
  (eq 'abc '\\abc) *→ false*
-
 ```
 
 
@@ -2939,7 +2683,6 @@ Error: non-numeric value: A
            b)) *→* 2
  (+ 34) *→* 34
  (+ 3 4) *→* 7
-
 ```
 
 
@@ -2952,62 +2695,50 @@ Error: non-numeric value: A
 *→* (bar "BAR" "bar")
  (remove "FOO" '(foo bar "FOO" "BAR" "foo" "bar") :test #'string=)
 *→* (BAR "BAR" "foo" "bar")
-
  (remove 1 '(1 1.0 #C(1.0 0.0) 2 2.0 #C(2.0 0.0)) :test-not #'eql)
 *→* (1)
  (remove 1 '(1 1.0 #C(1.0 0.0) 2 2.0 #C(2.0 0.0)) :test-not #'=)
 *→* (1 1.0 #C(1.0 0.0))
  (remove 1 '(1 1.0 #C(1.0 0.0) 2 2.0 #C(2.0 0.0)) :test (complement #'=))
 *→* (1 1.0 #C(1.0 0.0))
-
  (count 1 '((one 1) (uno 1) (two 2) (dos 2)) :key #'cadr) *→* 2
-
  (count 2.0 '(1 2 3) :test #'eql :key #'float) *→* 1
-
  (count "FOO" (list (make-pathname :name "FOO" :type "X")  
                     (make-pathname :name "FOO" :type "Y"))
         :key #'pathname-name
         :test #'equal)
 *→* 2
-
 ```
 
 
 ```lisp
  (count-if #'zerop '(1 #C(0.0 0.0) 0 0.0d0 0.0s0 3)) *→* 4
-
  (remove-if-not #'symbolp '(0 1 2 3 4 5 6 7 8 9 A B C D E F))
 *→* (A B C D E F)
  (remove-if (complement #'symbolp) '(0 1 2 3 4 5 6 7 8 9 A B C D E F))
 *→* (A B C D E F)
-
  (count-if #'zerop '("foo" "" "bar" "" "" "baz" "quux") :key #'length)
 *→* 3
-
 ```
 
 
 ```lisp
  \\256   25\\64   1.0\\E6   |100|   3\\.14159   |3/4|   3\\/4   5||
-
 ```
 
 
 ```lisp
  (vector double-float 100)
-
 ```
 
 
 ```lisp
  (vector double-float *)
-
 ```
 
 
 ```lisp
  (vector * 100)                                      
-
 ```
 
 
@@ -3040,17 +2771,14 @@ Error: non-numeric value: A
               ((d e f) (3 1 2))
               ((g h i) (2 3 1))
               ((j k l) (0 0 0))))
-
 ```
 
 
 ```lisp
-
  (make-array 5) ;; Creates a one-dimensional array of five elements.
  (make-array '(3 4) :element-type '(mod 16)) ;; Creates a 
                 ;;two-dimensional array, 3 by 4, with four-bit elements.
  (make-array 5 :element-type 'single-float) ;; Creates an array of single-floats.
-
 ```
 
 
@@ -3065,7 +2793,6 @@ Error: non-numeric value: A
               :element-type 'character 
               :initial-element #\\a 
               :fill-pointer 3) *→* "aaa"
-
 ```
 
 
@@ -3090,7 +2817,6 @@ Error: non-numeric value: A
 \OUT (6 (2 X 2 = 4)) 
 \OUT (7 (3 X 0 = 0)) 
 *→* NIL
-
 ```
 
 
@@ -3100,14 +2826,12 @@ Error: non-numeric value: A
  (setq b1 (make-array 20 :displaced-to a1 :displaced-index-offset 10))
 *→* #<ARRAY 20 indirect 32563346>
  (length b1) *→* 20
-
  (setq a2 (make-array 50 :fill-pointer 10))
 *→* #<ARRAY 50 fill-pointer 10 46100216>
  (setq b2 (make-array 20 :displaced-to a2 :displaced-index-offset 10))
 *→* #<ARRAY 20 indirect 46104010>
  (length a2) *→* 10
  (length b2) *→* 20
-
  (setq a3 (make-array 50 :fill-pointer 10))
 *→* #<ARRAY 50 fill-pointer 10 46105663>
  (setq b3 (make-array 20 :displaced-to a3 :displaced-index-offset 10
@@ -3115,33 +2839,28 @@ Error: non-numeric value: A
 *→* #<ARRAY 20 indirect, fill-pointer 5 46107432>
  (length a3) *→* 10
  (length b3) *→* 5
-
 ```
 
 
 ```lisp
  (adjust-array A ...)
-
 ```
 
 
 ```lisp
  (adjust-array A ... :displaced-to C)
-
 ```
 
 
 ```lisp
  (adjust-array A ... :displaced-to B)
  (adjust-array A ... :displaced-to C)
-
 ```
 
 
 ```lisp
  (adjust-array A ... :displaced-to B)
  (adjust-array A ... :displaced-to nil)
-
 ```
 
 
@@ -3163,7 +2882,6 @@ Error: non-numeric value: A
        (NIL NIL NIL NIL NIL NIL))
  (array-dimensions beta) *→* (4 6)
  (aref beta 1 1) *→* 2 
-
 ```
 
 
@@ -3172,13 +2890,11 @@ Error: non-numeric value: A
     ( epsilon   zeta      eta       theta )
     ( iota      kappa     lambda    mu    )
     ( nu        xi        omicron   pi    ))
-
 ```
 
 
 ```lisp
  (adjust-array m '(3 5) :initial-element 'baz)
-
 ```
 
 
@@ -3186,7 +2902,6 @@ Error: non-numeric value: A
 #2A(( alpha     beta      gamma     delta     baz )
     ( epsilon   zeta      eta       theta     baz )
     ( iota      kappa     lambda    mu        baz ))
-
 ```
 
 
@@ -3197,7 +2912,6 @@ Error: non-numeric value: A
                :adjustable t 
                :fill-pointer 3)) *→ true*
  (adjustable-array-p (make-array 4)) *→* \term{implementation-dependent}
-
 ```
 
 
@@ -3214,20 +2928,17 @@ Error: non-numeric value: A
  (setf (apply #'aref beta gamma) 3) *→* 3
  (apply #'aref beta gamma) *→* 3
  (aref beta 0 2) *→* 3
-
 ```
 
 
 ```lisp
  (array-dimension (make-array 4) 0) *→* 4
  (array-dimension (make-array '(2 3)) 1) *→* 3
-
 ```
 
 
 ```lisp
  (array-dimension array n) \EQ (nth n (array-dimensions array))
-
 ```
 
 
@@ -3235,7 +2946,6 @@ Error: non-numeric value: A
  (array-dimensions (make-array 4)) *→* (4)
  (array-dimensions (make-array '(2 3))) *→* (2 3)
  (array-dimensions (make-array 4 :fill-pointer 2)) *→* (4)
-
 ```
 
 
@@ -3245,13 +2955,11 @@ Error: non-numeric value: A
 *→* \term{implementation-dependent}
  (array-element-type (make-array 12 :element-type '(unsigned-byte 5)))
 *→* \term{implementation-dependent}
-
 ```
 
 
 ```lisp
  (array-element-type (make-array 5 :element-type '(mod 5)))
-
 ```
 
 
@@ -3262,7 +2970,6 @@ Error: non-numeric value: A
    (make-array 8 
                :fill-pointer 2 
                :initial-element 'filler)) *→ true*
-
 ```
 
 
@@ -3278,7 +2985,6 @@ Error: non-numeric value: A
 *→* #<ARRAY 2 indirect 46122527>
  (array-displacement a3)
 *→* #<ARRAY 4 indirect 46117134>, 2
-
 ```
 
 
@@ -3289,7 +2995,6 @@ Error: non-numeric value: A
  (array-in-bounds-p a 0 -1) *→ false*
  (array-in-bounds-p a 0 11) *→ false*
  (array-in-bounds-p a 7  0) *→ false*
-
 ```
 
 
@@ -3297,7 +3002,6 @@ Error: non-numeric value: A
  (array-in-bounds-p array subscripts)   
  \EQ (and (not (some #'minusp (list subscripts)))
          (every #'< (list subscripts) (array-dimensions array)))
-
 ```
 
 
@@ -3306,7 +3010,6 @@ Error: non-numeric value: A
  (array-rank (make-array 4)) *→* 1
  (array-rank (make-array '(4))) *→* 1
  (array-rank (make-array '(2 3))) *→* 2
-
 ```
 
 
@@ -3319,7 +3022,6 @@ Error: non-numeric value: A
                 :displaced-to a
                 :displaced-index-offset 4)
     0 2 1) *→* 9
-
 ```
 
 
@@ -3329,7 +3031,6 @@ Error: non-numeric value: A
                             (* (car x) (apply #'* (cdr y))))
                        subscripts
                        (array-dimensions a))))
-
 ```
 
 
@@ -3340,7 +3041,6 @@ Error: non-numeric value: A
  (array-total-size (make-array '(4 2))) *→* 8
  (array-total-size (make-array '(4 0))) *→* 0
  (array-total-size (make-array '())) *→* 1
-
 ```
 
 
@@ -3348,7 +3048,6 @@ Error: non-numeric value: A
  (array-total-size x)
     \EQ (apply #'* (array-dimensions x))
     \EQ (reduce #'* (array-dimensions x))
-
 ```
 
 
@@ -3359,13 +3058,11 @@ Error: non-numeric value: A
  (arrayp "hi") *→ true*
  (arrayp 'hi) *→ false*
  (arrayp 12) *→ false*
-
 ```
 
 
 ```lisp
  (arrayp \param{object}) \EQ (typep \param{object} 'array)
-
 ```
 
 
@@ -3379,7 +3076,6 @@ Error: non-numeric value: A
  a *→* #(0 1 4)
  (setf (fill-pointer a) 8) *→* 8
  a *→* #(0 1 4 9 NIL NIL NIL NIL)
-
 ```
 
 
@@ -3389,17 +3085,14 @@ Error: non-numeric value: A
                      :displaced-to array
                      :element-type (array-element-type array))
          index)
-
  (aref array i1 i2 ...) \EQ
      (row-major-aref array (array-row-major-index array i1 i2))
-
 ```
 
 
 ```lisp
  (defun upgraded-array-element-type (type &optional environment)
    (array-element-type (make-array 0 :element-type type)))
-
 ```
 
 
@@ -3407,13 +3100,11 @@ Error: non-numeric value: A
  (simple-vector-p (make-array 6)) *→ true*
  (simple-vector-p "aaaaaa") *→ false*
  (simple-vector-p (make-array 6 :fill-pointer t)) *→ false*
-
 ```
 
 
 ```lisp
  (simple-vector-p \param{object}) \EQ (typep \param{object} 'simple-vector)
-
 ```
 
 
@@ -3423,13 +3114,11 @@ Error: non-numeric value: A
  (svref v 2) *→* SIRENS
  (setf (svref v 1) 'newcomer) *→* NEWCOMER               
  v *→* #(1 NEWCOMER SIRENS)
-
 ```
 
 
 ```lisp
  (svref \param{v} \param{i}) \EQ (aref (the simple-vector \param{v}) \param{i})
-
 ```
 
 
@@ -3438,7 +3127,6 @@ Error: non-numeric value: A
  (vectorp v) *→ true*
  (simple-vector-p v) *→ true*         
  (length v) *→* 3
-
 ```
 
 
@@ -3447,7 +3135,6 @@ Error: non-numeric value: A
   \EQ (make-array (list \i{n}) :element-type t
                           :initial-contents 
                             (list a\ssso a\ssst ... a\sssn))
-
 ```
 
 
@@ -3460,7 +3147,6 @@ Error: non-numeric value: A
  (eq (vector-pop fa) fable) *→ true*
  (vector-pop fa) *→* SISYPHUS 
  (fill-pointer fa) *→* 1 
-
 ```
 
 
@@ -3482,7 +3168,6 @@ Error: non-numeric value: A
  (array-total-size aa) *→* at least 5 
  (vector-push-extend #\\Z aa 4) *→* 5 
  (array-total-size aa) *→* 9 ;(or more)
-
 ```
 
 
@@ -3492,13 +3177,11 @@ Error: non-numeric value: A
  (vectorp (make-array '(2 3 4))) *→ false*
  (vectorp #*11) *→ true*
  (vectorp #b11) *→ false*
-
 ```
 
 
 ```lisp
  (vectorp \param{object}) \EQ (typep \param{object} 'vector)
-
 ```
 
 
@@ -3512,7 +3195,6 @@ Error: non-numeric value: A
  (sbit ba 5) *→* 1
  (setf (sbit ba 5) 1) *→* 1
  (sbit ba 5) *→* 1
-
 ```
 
 
@@ -3529,7 +3211,6 @@ Error: non-numeric value: A
 *→* #*00010101
  (equal rba tba) *→ true*
  (bit-xor #*1100 #*1010) *→* #*0110
-
 ```
 
 
@@ -3539,26 +3220,22 @@ Error: non-numeric value: A
                            :fill-pointer t)) *→ true*
  (bit-vector-p #*) *→ true*
  (bit-vector-p (make-array 6)) *→ false*
-
 ```
 
 
 ```lisp
  (bit-vector-p \param{object}) \EQ (typep \param{object} 'bit-vector)
-
 ```
 
 
 ```lisp
  (simple-bit-vector-p (make-array 6)) *→ false*
  (simple-bit-vector-p #*) *→ true*
-
 ```
 
 
 ```lisp
  (simple-bit-vector-p \param{object}) \EQ (typep \param{object} 'simple-bit-vector)
-
 ```
 
 
@@ -3605,7 +3282,6 @@ Error: non-numeric value: A
 *→* (#\\a #\\A #\\b #\\B #\\c #\\C) ;Implementation C
 *→* (#\\A #\\a #\\B #\\b #\\C #\\c) ;Implementation D
 *→* (#\\A #\\B #\\a #\\b #\\C #\\c) ;Implementation E
-
 ```
 
 
@@ -3616,13 +3292,11 @@ Error: non-numeric value: A
  (character '\\a) *→* #\\a
  (character 65.) is an error.
  (character 'apple) is an error.
-
 ```
 
 
 ```lisp
  (character \param{object}) \EQ (coerce \param{object} 'character)
-
 ```
 
 
@@ -3635,13 +3309,11 @@ Error: non-numeric value: A
  ;; This next example presupposes an implementation 
  ;; in which #\\Rubout is an implementation-defined character.
  (characterp #\\Rubout) *→ true*
-
 ```
 
 
 ```lisp
  (characterp \param{object}) \EQ (typep \param{object} 'character)
-
 ```
 
 
@@ -3652,7 +3324,6 @@ Error: non-numeric value: A
  ;; This next example presupposes an implementation
  ;; in which #\\\alfa is a defined character.
  (alpha-char-p #\\\alfa) *→* \term{implementation-dependent}
-
 ```
 
 
@@ -3661,14 +3332,12 @@ Error: non-numeric value: A
  (alphanumericp #\\9) *→ true*
  (alphanumericp #\\Newline) *→ false*
  (alphanumericp #\\#) *→ false*
-
 ```
 
 
 ```lisp
  (alphanumericp x)
    \EQ (or (alpha-char-p x) (not (null (digit-char-p x))))
-
 ```
 
 
@@ -3681,7 +3350,6 @@ Error: non-numeric value: A
  (digit-char 12 16) *→* #\\C  ;not #\\c
  (digit-char 6 2) *→ false*
  (digit-char 1 2) *→* #\\1
-
 ```
 
 
@@ -3701,7 +3369,6 @@ Error: non-numeric value: A
      (0 5 9 NIL NIL NIL NIL NIL)
      (0 5 9 10 10 15 NIL NIL)
      (0 5 9 10 10 15 16 35))
-
 ```
 
 
@@ -3710,7 +3377,6 @@ Error: non-numeric value: A
  (graphic-char-p #\\#) *→ true*
  (graphic-char-p #\\Space) *→ true*
  (graphic-char-p #\\Newline) *→ false*
-
 ```
 
 
@@ -3720,7 +3386,6 @@ Error: non-numeric value: A
  ;; This next example presupposes an implementation
  ;; in which #\\Bell is a defined character.
  (standard-char-p #\\Bell) *→ false*
-
 ```
 
 
@@ -3745,7 +3410,6 @@ Error: non-numeric value: A
                              (char= (char-downcase (char-upcase char)) char))))
          (return char)))))
 *→* NIL
-
 ```
 
 
@@ -3759,7 +3423,6 @@ Error: non-numeric value: A
  ;; This next example presupposes an implementation 
  ;; in which #\\Bell is an implementation-defined character.
  (lower-case-p #\\Bell) *→ false*
-
 ```
 
 
@@ -3768,13 +3431,11 @@ Error: non-numeric value: A
 ;; might return these values:
 (char-code #\\$) *→* 36
 (char-code #\\a) *→* 97
-
 ```
 
 
 ```lisp
  (char= \i{c1} \i{c2}) \EQ (= (char-int \i{c1}) (char-int \i{c2}))
-
 ```
 
 
@@ -3782,14 +3443,12 @@ Error: non-numeric value: A
  (char-int #\\A) *→* 65       ; implementation A
  (char-int #\\A) *→* 577      ; implementation B
  (char-int #\\A) *→* 262145   ; implementation C
-
 ```
 
 
 ```lisp
 (code-char 65.) *→* #\\A  ;in an implementation using ASCII codes
 (code-char (char-code #\\Space)) *→* #\\Space  ;in any implementation
-
 ```
 
 
@@ -3797,23 +3456,19 @@ Error: non-numeric value: A
  (char-name #\\ ) *→* "Space"
  (char-name #\\Space) *→* "Space"
  (char-name #\\Page) *→* "Page"
-
  (char-name #\\a)
 *→* NIL
 \OV "LOWERCASE-a"
 \OV "Small-A"
 \OV "LA01"
-
  (char-name #\\A)
 *→* NIL
 \OV "UPPERCASE-A"
 \OV "Capital-A"
 \OV "LA02"
-
  ;; Even though its CHAR-NAME can vary, #\\A prints as #\\A
  (prin1-to-string (read-from-string (format nil "#\\\\~A" (or (char-name #\\A) "A"))))
 *→* "#\\\\A"
-
 ```
 
 
@@ -3823,7 +3478,6 @@ Error: non-numeric value: A
 (name-char "Space") *→* #\\Space
 (let ((x (char-name #\\a)))
   (or (not x) (eql (name-char x) #\\a))) *→ true*
-
 ```
 
 
@@ -3853,7 +3507,6 @@ Error: non-numeric value: A
        (54 54 54 54 54)
        (54 54 54 54 54)
        (54 54 54 54 54))
-
 ```
 
 
@@ -3870,7 +3523,6 @@ Error: non-numeric value: A
 \OUT Debug> \IN{:continue 1}
 \OUT Value for X: \IN{7}
 *→* 14
-
 ```
 
 
@@ -3888,7 +3540,6 @@ Error: non-numeric value: A
 \OUT To continue, type :CONTINUE followed by an option number:
 \OUT  1: Return to Lisp Toplevel.
 \OUT Debug> 
-
 ```
 
 
@@ -3915,7 +3566,6 @@ Error: non-numeric value: A
 \OUT  1: Return to Lisp Toplevel.
 \OUT Debug> \IN{:Continue 1}
 \OUT Return to Lisp Toplevel.
-
 ```
 
 
@@ -3923,7 +3573,6 @@ Error: non-numeric value: A
  (defun wargames:no-win-scenario ()
    (if (error "pushing the button would be stupid."))
    (push-the-button))
-
 ```
 
 
@@ -3933,10 +3582,8 @@ Error: non-numeric value: A
      (setq n (- n))
      (cerror "Return sqrt(~D) instead." "Tried to take sqrt(-~D)." n))
    (sqrt n))
-
  (real-sqrt 4)
 *→* 2.0
-
  (real-sqrt -9)
 \OUT Correctable error in REAL-SQRT: Tried to take sqrt(-9).
 \OUT Restart options:
@@ -3958,7 +3605,6 @@ Error: non-numeric value: A
          (format t "~&Type a number: ")
          (setq n (read))
          (fresh-line)))
-
  (assure-number 'a)
 \OUT Correctable error in ASSURE-NUMBER: A is not a number.
 \OUT Restart options:
@@ -3967,7 +3613,6 @@ Error: non-numeric value: A
 \OUT Debug> \IN{:continue 1}
 \OUT Type a number: \IN{1/2}
 *→* 1/2
-
  (defun assure-large-number (n)
    (loop (when (and (numberp n) (> n 73)) (return n))
          (cerror "Enter a number~:[~; a bit larger than ~D~]."
@@ -3979,7 +3624,6 @@ Error: non-numeric value: A
  
  (assure-large-number 10000)
 *→* 10000
-
  (assure-large-number 'a)
 \OUT Correctable error in ASSURE-LARGE-NUMBER: A is not a large number.
 \OUT Restart options:
@@ -3988,7 +3632,6 @@ Error: non-numeric value: A
 \OUT Debug> \IN{:continue 1}
 \OUT Type a large number: \IN{88}
 *→* 88
-
  (assure-large-number 37)
 \OUT Correctable error in ASSURE-LARGE-NUMBER: 37 is not a large number.
 \OUT Restart options:
@@ -4016,7 +3659,6 @@ Error: non-numeric value: A
          (setq n (read))
          (fresh-line)))
  
-
  (assure-large-number 'a)
 \OUT Correctable error in ASSURE-LARGE-NUMBER: A is not a large number.
 \OUT Restart options:
@@ -4034,7 +3676,6 @@ Error: non-numeric value: A
 \OUT Debug> \IN{:continue 1}
 \OUT Type a large number: \IN{259}
 *→* 259
-
 ```
 
 
@@ -4042,7 +3683,6 @@ Error: non-numeric value: A
 (cerror "enter a new value to replace ~*~s" 
         'not-a-number
         :argument a)
-
 ```
 
 
@@ -4070,7 +3710,6 @@ Error: non-numeric value: A
 \OUT  1: Specify a value to use instead.
 \OUT  2: Top level.
 \OUT Debug> \IN{:CONTINUE 2}
-
 ```
 
 
@@ -4110,7 +3749,6 @@ Error: non-numeric value: A
  (check-type \param{place} \param{typespec})
  \EQ (assert (typep \param{place} '\param{typespec}) (\param{place})
             'type-error :datum \param{place} :expected-type '\param{typespec})
-
 ```
 
 
@@ -4142,7 +3780,6 @@ NIL
 Considering condition for division condition handling
 Considering condition for arithmetic condition handling
 Back to Lisp Toplevel
-
 ```
 
 
@@ -4154,7 +3791,6 @@ Back to Lisp Toplevel
  (apply #'format nil (simple-condition-format-control foo)
                      (simple-condition-format-arguments foo))
 *→* "Hi HO"
-
 ```
 
 
@@ -4184,7 +3820,6 @@ Back to Lisp Toplevel
 \OUT Debug> :continue 1
 \OUT Warning: You're using very big numbers.
 *→* 4294967294
-
 ```
 
 
@@ -4196,7 +3831,6 @@ Debug: Foo.
 To continue, type :CONTINUE followed by an option number:
  1: Return to Lisp Toplevel.
 Debug>
-
 ```
 
 
@@ -4210,7 +3844,6 @@ Debug>
 \OUT Return from BREAK.
 *→* NIL
  
-
 ```
 
 
@@ -4223,7 +3856,6 @@ Debug>
                            :format-control format-control
                            :format-arguments format-arguments))))
    nil)
-
 ```
 
 
@@ -4268,7 +3900,6 @@ Debug>
  *break-on-signals* *→* NIL
  (ignore-errors (error 'simple-error :format-control "Fooey!"))
 *→* NIL, #<SIMPLE-ERROR 32207172>
-
  (let ((*break-on-signals* 'error))
    (ignore-errors (error 'simple-error :format-control "Fooey!")))
 \OUT Break: Fooey!
@@ -4279,7 +3910,6 @@ Debug>
 \OUT Debug> \IN{:CONTINUE 1}
 \OUT Continue to signal.
 *→* NIL, #<SIMPLE-ERROR 32212257>
-
  (let ((*break-on-signals* 'error))
    (error 'simple-error :format-control "Fooey!"))
 \OUT Break: Fooey!
@@ -4294,7 +3924,6 @@ Debug>
 \OUT  1: Top level.
 \OUT Debug> \IN{:CONTINUE 1}
 \OUT Top level.
-
 ```
 
 
@@ -4302,7 +3931,6 @@ Debug>
  (handler-bind ((unbound-variable #'(lambda ...))
                 (error #'(lambda ...)))
    ...)
-
 ```
 
 
@@ -4329,13 +3957,11 @@ Debug>
   (handler-case \i{form}
     (\i{typespec1} (\i{var1}) \i{form1})
     (\i{typespec2} (\i{var2}) \i{form2}))
-
 ```
 
 
 ```lisp
   (\param{typespec} (\param{var}) (declare (ignore \param{var})) \param{form})
-
 ```
 
 
@@ -4359,7 +3985,6 @@ Debug>
 *→* RANDOM-CONDITION
  (assess-condition (make-condition 'random-condition))
 *→* "Hardly worth mentioning."
-
 ```
 
 
@@ -4367,7 +3992,6 @@ Debug>
  (handler-case form
    (\i{type1} (\i{var1}) . \i{body1})
    (\i{type2} (\i{var2}) . \i{body2}) ...)
-
 ```
 
 
@@ -4384,7 +4008,6 @@ Debug>
        (return-from #1# form))
          #3# (return-from #1# (let ((\i{var1} #2#)) . \i{body1}))
          #4# (return-from #1# (let ((\i{var2} #2#)) . \i{body2})) ...)))
-
 ```
 
 
@@ -4393,19 +4016,16 @@ Debug>
    (\i{type1} \i{(var1)} . \i{body1})
    ...
    (:no-error (\i{varN-1} \i{varN-2} ...) . \i{bodyN}))
-
 ```
 
 
 ```lisp
-
  (block #1=#:error-return
   (multiple-value-call #'(lambda (\i{varN-1} \i{varN-2} ...) . \i{bodyN})
      (block #2=#:normal-return
        (return-from #1#
          (handler-case (return-from #2# form)
            (\i{type1} (\i{var1}) . \i{body1}) ...)))))
-
 ```
 
 
@@ -4422,27 +4042,23 @@ Debug>
  (load-init-file "no-such-program")
 \OUT Init file failed to load.
 NIL
-
 ```
 
 
 ```lisp
  (ignore-errors . \i{forms})
-
 ```
 
 
 ```lisp
  (handler-case (progn . \i{forms})
    (error (condition) (values nil condition)))
-
 ```
 
 
 ```lisp
  (defmethod print-object ((x c) stream)
    (if *print-escape* (call-next-method) (\param{report-name} x stream)))
-
 ```
 
 
@@ -4450,7 +4066,6 @@ NIL
  (lambda (condition stream)
    (declare (ignore condition))
    (write-string \param{report-name} stream))
-
 ```
 
 
@@ -4465,7 +4080,6 @@ NIL
              (format stream "A ~A peg cannot go in a ~A hole."
                      (peg/hole-mismatch-peg-shape  condition)
                      (peg/hole-mismatch-hole-shape condition)))))
-
 ```
 
 
@@ -4477,7 +4091,6 @@ NIL
   (:report (lambda (condition stream)
              (format stream "There is a problem with ~A."
                      (machine-error-machine-name condition)))))
-
 ```
 
 
@@ -4486,7 +4099,6 @@ NIL
   (:report (lambda (condition stream)
              (format stream "The machine ~A is not available."
                      (machine-error-machine-name condition)))))
-
 ```
 
 
@@ -4494,7 +4106,6 @@ NIL
 (define-condition my-favorite-machine-not-available-error
                   (machine-not-available-error)
   ((machine-name :initform "mc.lcs.mit.edu")))
-
 ```
 
 
@@ -4523,13 +4134,11 @@ NIL
  (format t "~A" *)
 \OUT FRED ate too much CHOCOLATE ice-cream
 *→* NIL
-
 ```
 
 
 ```lisp
  (defvar *oops-count* 0)
-
  (setq a (make-condition 'simple-error
                          :format-control "This is your ~:R error."
                          :format-arguments (list (incf *oops-count*))))
@@ -4544,7 +4153,6 @@ NIL
 \OUT To continue, type :CONTINUE followed by an option number:
 \OUT  1: Return to Lisp Toplevel.
 \OUT Debug> 
-
 ```
 
 
@@ -4562,7 +4170,6 @@ NIL
              (setq n (read))
              (fresh-line))
        (invoke-restart-interactively (nth n restarts)))))
-
  (restart-case (invoke-a-restart)
    (one () 1)
    (two () 2)
@@ -4582,7 +4189,6 @@ NIL
  ;; also returns information about any system-supplied restarts, such as
  ;; the "Return to Lisp Toplevel" restart offered above.
  
-
 ```
 
 
@@ -4595,14 +4201,12 @@ NIL
 *→* NIL
  (find-restart 'my-restart)
 *→* NIL
-
 ```
 
 
 ```lisp
  (find-restart \param{identifier})
  \EQ (find \param{identifier} (compute-restarts) :key :restart-name)
-
 ```
 
 
@@ -4616,13 +4220,11 @@ NIL
 \OUT  2: Return to Lisp Toplevel.
 \OUT Debug> \IN{(invoke-restart 'store-value 7)}
 *→* 10
-
 ```
 
 
 ```lisp
  (apply #'invoke-restart \i{restart} \i{arguments})
-
 ```
 
 
@@ -4637,7 +4239,6 @@ NIL
 \OUT Debug> \IN{(invoke-restart-interactively 'store-value)}
 \OUT Type a form to evaluate and use: \IN{7}
 *→* 10
-
 ```
 
 
@@ -4682,19 +4283,16 @@ NIL
 
 ```lisp
  (lambda (stream) (write-string value stream))
-
 ```
 
 
 ```lisp
  (format t "~&~S -- ~A~%" ':continue some-restart)
-
 ```
 
 
 ```lisp
  :CONTINUE -- Return to command level
-
 ```
 
 
@@ -4706,7 +4304,6 @@ NIL
        (error "Foo."))
    (my-restart (&optional v) v))
 *→* 7
-
  (define-condition food-error (error) ())
 *→* FOOD-ERROR
  (define-condition bad-tasting-sundae (food-error) 
@@ -4761,7 +4358,6 @@ NIL
 \OUT Use a new ice cream.
 \OUT Enter a new ice cream: \IN{'chocolate}
 *→* CHOCOLATE, CARAMEL, CHERRY
-
 ```
 
 
@@ -4769,7 +4365,6 @@ NIL
  (restart-case \i{expression}
     (\i{name1} \i{arglist1} ...\i{options1}... . \i{body1})
     (\i{name2} \i{arglist2} ...\i{options2}... . \i{body2}))
-
 ```
 
 
@@ -4790,7 +4385,6 @@ NIL
                   (apply #'(lambda \i{arglist1} . \i{body1}) #2#))
           #4# (return-from #1#
                   (apply #'(lambda \i{arglist2} . \i{body2}) #2#)))))
-
 ```
 
 
@@ -4806,7 +4400,6 @@ NIL
        (signal fred))
    (a ...)
    (b ...))
-
 ```
 
 
@@ -4821,7 +4414,6 @@ NIL
 *→* (CASE1 NIL CASE3 CASE1 ABORT)
  ;; In the example above the restart named ABORT was not created
  ;; explicitly, but was implicitly supplied by the system.
-
 ```
 
 
@@ -4842,7 +4434,6 @@ NIL
 \OUT  2: Return to command level 1.
 \OUT  3: Exit command level 1.
 \OUT  4: Return to Lisp Toplevel.
-
 ```
 
 
@@ -4867,7 +4458,6 @@ COMPUTE-POWER-OF-2
 \OUT  2: Return to Lisp Toplevel
 \OUT Debug> \IN{:continue 1}
 *→* SOMETHING-BIG
-
 ```
 
 
@@ -4893,7 +4483,6 @@ COMPUTE-POWER-OF-2
             (cerror "Try floating it." "~D is not a float." x)
             (float x))
            (t x)))) *→* 3.0
-
 ```
 
 
@@ -4942,7 +4531,6 @@ COMPUTE-POWER-OF-2
    (handler-bind ((type-error #'type-error-auto-coerce))
      (check-type x float)
      x)) *→* 3.0
-
 ```
 
 
@@ -5066,7 +4654,6 @@ COMPUTE-POWER-OF-2
  (continue)        \EQ (let ((r (find-restart 'continue))) (if r (invoke-restart r)))
  (use-value \param{x}) \EQ (let ((r (find-restart 'use-value))) (if r (invoke-restart r \param{x})))
  (store-value x) \EQ (let ((r (find-restart 'store-value))) (if r (invoke-restart r \param{x})))
-
 ```
 
 
@@ -5079,26 +4666,22 @@ COMPUTE-POWER-OF-2
  (cons 'a 'b) *→* (A . B)
  (cons 'a (cons 'b (cons 'c '\empty))) *→* (A B C)
  (cons 'a '(b c d)) *→* (A B C D)
-
 ```
 
 
 ```lisp
  (consp nil) *→ false*
  (consp (cons 1 2)) *→ true*
-
 ```
 
 
 ```lisp
  (consp '()) \EQ (consp 'nil) *→ false*
-
 ```
 
 
 ```lisp
  (consp \param{object}) \EQ (typep \param{object} 'cons) \EQ (not (typep \param{object} 'atom)) \EQ (typep \param{object} '(not atom))
-
 ```
 
 
@@ -5108,14 +4691,12 @@ COMPUTE-POWER-OF-2
  (atom nil) *→ true*
  (atom '()) *→ true*
  (atom 3) *→ true*
-
 ```
 
 
 ```lisp
  (atom \param{object}) \EQ (typep \param{object} 'atom) \EQ (not (consp \param{object}))
  \EQ (not (typep \param{object} 'cons)) \EQ (typep \param{object} '(not cons))
-
 ```
 
 
@@ -5126,7 +4707,6 @@ COMPUTE-POWER-OF-2
  *some-list* *→* (UNO TWO THREE . FOUR)
  (rplacd (last *some-list*) (list 'IV)) *→* (THREE IV)
  *some-list* *→* (UNO TWO THREE IV)
-
 ```
 
 
@@ -5137,7 +4717,6 @@ COMPUTE-POWER-OF-2
  (cadr '(1 2)) *→* 2 
  (car '(a b c)) *→* A
  (cdr '(a b c)) *→* (B C)
-
 ```
 
 
@@ -5146,7 +4725,6 @@ COMPUTE-POWER-OF-2
 (cadr \i{x})   \EQ (second \i{x}) \EQ (car (cdr \i{x}))
 (caddr \i{x})  \EQ (third \i{x})  \EQ (car (cdr (cdr \i{x})))
 (cadddr \i{x}) \EQ (fourth \i{x}) \EQ (car (cdr (cdr (cdr \i{x}))))
-
 ```
 
 
@@ -5170,7 +4748,6 @@ COMPUTE-POWER-OF-2
  copy-as-list *→* ((1 . "one") ("two" "a" B C))
  copy-as-alist *→* ((1 . "one") (2 "a" B C))
  copy-as-tree *→* ((1 . "one") (2 A B C)) 
-
 ```
 
 
@@ -5198,12 +4775,10 @@ COMPUTE-POWER-OF-2
  tree2 *→* ("one" ("one" "two") (("one" "Two" "three"))) 
  (sublis '(("two" . 2)) tree2 :test 'equal) 
 *→* ("one" ("one" 2) (("one" "Two" "three"))) 
-
  (nsublis '((t . 'temp))
            tree1
            :key #'(lambda (x) (or (atom x) (< (list-length x) 3))))
 *→* ((QUOTE TEMP) (QUOTE TEMP) QUOTE TEMP) 
-
 ```
 
 
@@ -5214,7 +4789,6 @@ COMPUTE-POWER-OF-2
      (funcall fn '((a . b) (b . a)) data)))
  (test-it #'sublis) *→* ((B A) (B A))
  (test-it #'nsublis) *→* ((A B) (A B))
-
 ```
 
 
@@ -5232,16 +4806,13 @@ COMPUTE-POWER-OF-2
         '((old . spice) ((old . shoes) old . pair) (old . pair))
         :test #'equal)
 *→* ((OLD . SPICE) ((OLD . SHOES) A . CONS) (A . CONS))
-
  (subst-if 5 #'listp tree1) *→* 5
  (subst-if-not '(x) #'consp tree1) 
 *→* (1 X)
-
  tree1 *→* (1 (1 2) (1 2 3) (1 2 3 4))
  (nsubst 'x 3 tree1 :key #'(lambda (y) (and (listp y) (third y)))) 
 *→* (1 (1 2) X X)
  tree1 *→* (1 (1 2) X X)
-
 ```
 
 
@@ -5257,7 +4828,6 @@ COMPUTE-POWER-OF-2
                        (eql d (cdr tree)))
                   tree
                   (cons a d))))))
-
 ```
 
 
@@ -5270,7 +4840,6 @@ COMPUTE-POWER-OF-2
        tree2 '('a ('b 'c))) *→* ('a ('b 'c)) 
 *→* ((QUOTE A) ((QUOTE B) (QUOTE C)))
  (tree-equal tree1 tree2 :test 'eq) *→ true*
-
 ```
 
 
@@ -5288,7 +4857,6 @@ COMPUTE-POWER-OF-2
  lst *→* ("one" ("two" 3))
  slst *→* ("one" ("two" 3))
  clst *→* (1 ("two" 3))
-
 ```
 
 
@@ -5306,13 +4874,11 @@ COMPUTE-POWER-OF-2
  (list 3 4 'a (car '(b . c)) (+ 6 -2)) *→* (3 4 A B 4)
  (list* 'a 'b 'c 'd) \EQ (cons 'a (cons 'b (cons 'c 'd))) *→* (A B C . D)
  (list* 'a 'b 'c '(d e f)) *→* (A B C D E F)
-
 ```
 
 
 ```lisp
  (list* \param{x}) \EQ \param{x}
-
 ```
 
 
@@ -5327,7 +4893,6 @@ COMPUTE-POWER-OF-2
  (list-length (circular-list 'a 'b)) *→* NIL
  (list-length (circular-list 'a)) *→* NIL
  (list-length (circular-list)) *→* 0
-
 ```
 
 
@@ -5348,7 +4913,6 @@ COMPUTE-POWER-OF-2
      ;;  That fact justifies this implementation.)
      (when (and (eq fast slow) (> n 0)) (return nil))))
  
-
 ```
 
 
@@ -5357,13 +4921,11 @@ COMPUTE-POWER-OF-2
  (listp (cons 1 2)) *→ true*
  (listp (make-array 6)) *→ false*
  (listp t) *→ false*
-
 ```
 
 
 ```lisp
  (listp \param{object}) \EQ (typep \param{object} 'list) \EQ (typep \param{object} '(or cons null))
-
 ```
 
 
@@ -5373,7 +4935,6 @@ COMPUTE-POWER-OF-2
  (make-list 2 :initial-element '(1 2 3)) *→* ((1 2 3) (1 2 3))
  (make-list 0) *→* NIL ;\ie ()
  (make-list 0 :initial-element 'new-element) *→* NIL 
-
 ```
 
 
@@ -5386,13 +4947,11 @@ COMPUTE-POWER-OF-2
  (setq x '(a (b c) d)) *→* (A (B C) D)
  (push 5 (cadr x)) *→* (5 B C)  
  x *→* (A (5 B C) D)
-
 ```
 
 
 ```lisp
  (setf place (cons \i{item} \i{place}))
-
 ```
 
 
@@ -5403,13 +4962,11 @@ COMPUTE-POWER-OF-2
  (setq llst '((1 2 3 4))) *→* ((1 2 3 4))
  (pop (car llst)) *→* 1
  llst *→* ((2 3 4))
-
 ```
 
 
 ```lisp
  (prog1 (car \param{place}) (setf \param{place} (cdr \param{place})))
-
 ```
 
 
@@ -5424,13 +4981,11 @@ COMPUTE-POWER-OF-2
  (eighth \param{list})   \EQ  (car (cdddr (cddddr \param{list})))
  (ninth \param{list})    \EQ  (car (cddddr (cddddr \param{list})))
  (tenth \param{list})    \EQ  (car (cdr (cddddr (cddddr \param{list}))))
-
 ```
 
 
 ```lisp
  (setf (fifth \param{list}) \param{new-object}) \EQ (setf (car (cddddr \param{list})) \param{new-object})
-
 ```
 
 
@@ -5444,25 +4999,21 @@ COMPUTE-POWER-OF-2
  (sixth '(1 2 3)) *→* NIL
  (setf (fourth lst) "four") *→* "four"
  lst *→* (1 2 3 "four" ((V)) VI 7 8 9 10)
-
 ```
 
 
 ```lisp
  (fifth x) \EQ (nth 4 x)
-
 ```
 
 
 ```lisp
  (nth \param{n} \param{list}) \EQ (car (nthcdr \param{n} \param{list}))
-
 ```
 
 
 ```lisp
  (setf (nth \param{n} \param{list}) \param{new-object}) \EQ (setf (car (nthcdr \param{n} \param{list})) \param{new-object})
-
 ```
 
 
@@ -5473,7 +5024,6 @@ COMPUTE-POWER-OF-2
  (setq 0-to-3 (list 0 1 2 3)) *→* (0 1 2 3)
  (setf (nth 2 0-to-3) "two") *→* "two"
  0-to-3 *→* (0 1 "two" 3)
-
 ```
 
 
@@ -5481,7 +5031,6 @@ COMPUTE-POWER-OF-2
  (endp nil) *→ true*
  (endp '(1 2)) *→ false*
  (endp (cddr '(1 2))) *→ true*
-
 ```
 
 
@@ -5490,13 +5039,11 @@ COMPUTE-POWER-OF-2
  (null nil) *→* T
  (null t) *→* NIL
  (null 1) *→* NIL
-
 ```
 
 
 ```lisp
  (null \param{object}) \EQ (typep \param{object} 'null) \EQ (eq \param{object} '\empty)
-
 ```
 
 
@@ -5506,7 +5053,6 @@ COMPUTE-POWER-OF-2
  (nconc \param{list}) *→* \param{list}
  (nconc \param{list-1} \param{list-2}) \EQ (progn (rplacd (last \param{list-1}) \param{list-2}) \param{list-1})
  (nconc \param{list-1} \param{list-2} . \param{lists}) \EQ (nconc (nconc \param{list-1} \param{list-2}) . \param{lists})
-
 ```
 
 
@@ -5516,7 +5062,6 @@ COMPUTE-POWER-OF-2
  (setq y '(d e f)) *→* (D E F)
  (nconc x y) *→* (A B C D E F)
  x *→* (A B C D E F)
-
 ```
 
 
@@ -5528,7 +5073,6 @@ COMPUTE-POWER-OF-2
  foo *→* (A B C D E F G H I J K L M)
  bar *→* (F G H I J K L M)
  baz *→* (K L M)
-
  (setq foo (list 'a 'b 'c 'd 'e)
        bar (list 'f 'g 'h 'i 'j)
        baz (list 'k 'l 'm)) *→* (K L M)
@@ -5536,7 +5080,6 @@ COMPUTE-POWER-OF-2
  foo *→* (A B C D E F G H I J K L M)
  bar *→* (F G H I J K L M)
  baz *→* (K L M)
-
 ```
 
 
@@ -5548,7 +5091,6 @@ COMPUTE-POWER-OF-2
  lst *→* (A B C)
  (append) *→* NIL
  (append 'a) *→* A
-
 ```
 
 
@@ -5562,13 +5104,11 @@ COMPUTE-POWER-OF-2
 \OUT T
 \OUT T
 *→* T
-
  (revappend '(1 2 3) '()) *→* (3 2 1)
  (revappend '(1 2 3) '(a . b)) *→* (3 2 1 A . B)
  (revappend '() '(a b c)) *→* (A B C)
  (revappend '(1 2 3) 'a) *→* (3 2 1 . A)
  (revappend '() 'a) *→* A   ;degenerate case
-
  (let ((list-1 '(1 2 3))
        (list-2 '(a b c)))
    (print (nreconc list-1 list-2))
@@ -5579,20 +5119,17 @@ COMPUTE-POWER-OF-2
 \OUT T
 *→* T
 
-
 ```
 
 
 ```lisp
  (nconc (nreverse \param{list}) \param{tail})
-
 ```
 
 
 ```lisp
  (revappend \param{list} \param{tail}) \EQ (nconc (reverse \param{list}) \param{tail})
  (nreconc \param{list} \param{tail}) \EQ (nconc (nreverse \param{list}) \param{tail})
-
 ```
 
 
@@ -5658,13 +5195,11 @@ COMPUTE-POWER-OF-2
  foo *→* (A B C)
  (nbutlast (list 'a)) *→* NIL
  (nbutlast '()) *→* NIL
-
 ```
 
 
 ```lisp
  (butlast \param{list} \param{n}) \EQ (ldiff \param{list} (last \param{list} \param{n}))
-
 ```
 
 
@@ -5676,19 +5211,15 @@ COMPUTE-POWER-OF-2
  (last x) *→* (D)
  (rplacd (last x) (list 'e 'f)) x *→* (A B C D E F)
  (last x) *→* (F)
-
  (last '(a b c))   *→* (C)
-
  (last '(a b c) 0) *→* ()
  (last '(a b c) 1) *→* (C)
  (last '(a b c) 2) *→* (B C)
  (last '(a b c) 3) *→* (A B C)
  (last '(a b c) 4) *→* (A B C)
-
  (last '(a . b) 0) *→* B
  (last '(a . b) 1) *→* (A . B)
  (last '(a . b) 2) *→* (A . B)
-
 ```
 
 
@@ -5700,7 +5231,6 @@ COMPUTE-POWER-OF-2
         (i 0 (+ i 1)))
        ((atom l) r)
      (if (>= i n) (pop r))))
-
 ```
 
 
@@ -5735,7 +5265,6 @@ COMPUTE-POWER-OF-2
 \OUT  object=D            T                      (A B C)
 \OUT  object=X            NIL                    (A B C . D)
 *→* NIL
-
 ```
 
 
@@ -5745,7 +5274,6 @@ COMPUTE-POWER-OF-2
        ((atom list) (eql list object))
       (if (eql object list)
           (return t))))
-
 ```
 
 
@@ -5757,7 +5285,6 @@ COMPUTE-POWER-OF-2
        (if (eql list object) (nreverse r) (nreconc r list)))
     (when (eql object list)
       (return (nreverse r)))))
-
 ```
 
 
@@ -5798,18 +5325,15 @@ COMPUTE-POWER-OF-2
  (nthcdr 2 '(a b c)) *→* (C)
  (nthcdr 4 '(a b c)) *→* ()
  (nthcdr 1 '(0 . 1)) *→* 1
-
  (locally (declare (optimize (safety 3)))
    (nthcdr 3 '(0 . 1)))
  Error: Attempted to take CDR of 1.
-
 ```
 
 
 ```lisp
  (rest \param{list}) \EQ (cdr \param{list})
  (setf (rest \param{list}) \param{new-tail}) \EQ (setf (cdr \param{list}) \param{new-tail})
-
 ```
 
 
@@ -5820,7 +5344,6 @@ COMPUTE-POWER-OF-2
  (setq *cons* '(1 . 2)) *→* (1 . 2)
  (setf (rest *cons*) "two") *→* "two"
  *cons* *→* (1 . "two")
-
 ```
 
 
@@ -5828,7 +5351,6 @@ COMPUTE-POWER-OF-2
  (member 2 '(1 2 3)) *→* (2 3)                                 
  (member 2 '((1 . 2) (3 . 4)) :test-not #'= :key #'cdr) *→* ((3 . 4))
  (member 'e '(a b c d)) *→* NIL
-
 ```
 
 
@@ -5838,20 +5360,17 @@ COMPUTE-POWER-OF-2
  (member-if-not #'zerop 
                  '(3 6 9 11 . 12)
                  :key #'(lambda (x) (mod x 3))) *→* (11 . 12)
-
 ```
 
 
 ```lisp
  (member 'a '(g (a y) c a d e a f)) *→* (A D E A F)
-
 ```
 
 
 ```lisp
  (mapcon f x1 ... xn)
    \EQ (apply #'nconc (maplist f x1 ... xn))
-
 ```
 
 
@@ -5859,7 +5378,6 @@ COMPUTE-POWER-OF-2
  (mapcar #'car '((1 a) (2 b) (3 c))) *→* (1 2 3) 
  (mapcar #'abs '(3 -4 2 -5 -6)) *→* (3 4 2 5 6)
  (mapcar #'cons '(a b c) '(1 2 3)) *→* ((A . 1) (B . 2) (C . 3))
-
  (maplist #'append '(1 2 3 4) '(1 2) '(1 2 3)) 
 *→* ((1 2 3 4 1 2 1 2 3) (2 3 4 2 2 3)) 
  (maplist #'(lambda (x) (cons 'foo x)) '(a b c d))
@@ -5868,31 +5386,26 @@ COMPUTE-POWER-OF-2
 *→* (0 0 1 0 1 1 1)
 ;An entry is 1 if the corresponding element of the input
 ;  list was the last instance of that element in the input list.
-
  (setq dummy nil) *→* NIL 
  (mapc #'(lambda (&rest x) (setq dummy (append dummy x)))
         '(1 2 3 4)
         '(a b c d e)
         '(x y z)) *→* (1 2 3 4) 
  dummy *→* (1 A X 2 B Y 3 C Z)                   
-
  (setq dummy nil) *→* NIL 
  (mapl #'(lambda (x) (push x dummy)) '(1 2 3 4)) *→* (1 2 3 4) 
  dummy *→* ((4) (3 4) (2 3 4) (1 2 3 4)) 
-
  (mapcan #'(lambda (x y) (if (null x) nil (list x y)))
           '(nil nil nil d e)
           '(1 2 3 4 5 6)) *→* (D 4 E 5) 
  (mapcan #'(lambda (x) (and (numberp x) (list x)))
           '(a 1 b c 3 4 d 5))
 *→* (1 3 4 5)
-
 ```
 
 
 ```lisp
  (mapcon #'list '(1 2 3 4)) *→* ((1 2 3 4) (2 3 4) (3 4) (4)) 
-
 ```
 
 
@@ -5904,13 +5417,11 @@ COMPUTE-POWER-OF-2
  (assoc 1 alist) *→* (1 . "one")
  (setq alist (acons 1 "uno" alist)) *→* ((1 . "uno") (1 . "one") (2 . "two"))
  (assoc 1 alist) *→* (1 . "uno")
-
 ```
 
 
 ```lisp
 (acons \param{key} \param{datum} \param{alist}) \EQ (cons (cons \param{key} \param{datum}) \param{alist})
-
 ```
 
 
@@ -5936,19 +5447,16 @@ COMPUTE-POWER-OF-2
 *→* (("one" . 1) ("2" . 2) ("three" . 3))
  (assoc-if-not #'alpha-char-p alist
                :key #'(lambda (x) (char x 0))) *→* ("2" . 2)
-
 ```
 
 
 ```lisp
  (assoc item list :test fn)
-
 ```
 
 
 ```lisp
  (find item list :test fn :key #'car)
-
 ```
 
 
@@ -5965,25 +5473,21 @@ COMPUTE-POWER-OF-2
 (setf (cdr (assoc 1 *list-copy*)) "uno") *→* "uno"
 *list-copy* *→* ((1 . "uno") (2 . "two"))
 *alist* *→* ((1 . "uno") (2 . "two"))
-
 ```
 
 
 ```lisp
  (pairlis '(one two) '(1 2) '((three . 3) (four . 19)))
-
 ```
 
 
 ```lisp
  ((one . 1) (two . 2) (three . 3) (four . 19))
-
 ```
 
 
 ```lisp
  ((two . 2) (one . 1) (three . 3) (four . 19))
-
 ```
 
 
@@ -5995,7 +5499,6 @@ COMPUTE-POWER-OF-2
  (pairlis keys data alist)
 *→* ((3 . "three") (2 . "two") (1 . "one") (4 . "four"))
  alist *→* ((4 . "four"))
-
 ```
 
 
@@ -6009,19 +5512,16 @@ COMPUTE-POWER-OF-2
  (rassoc 'a '((a . b) (b . c) (c . a) (z . a))) *→* (C . A)
  (rassoc-if #'stringp alist) *→* (1 . "one")
  (rassoc-if-not #'vectorp alist) *→* (3 . 3)
-
 ```
 
 
 ```lisp
  (rassoc item list :test fn)
-
 ```
 
 
 ```lisp
  (find item list :test fn :key #'cdr)
-
 ```
 
 
@@ -6033,7 +5533,6 @@ COMPUTE-POWER-OF-2
  (eq (getf x 'prop1) 'val1) *→ true*
  (get-properties x *indicator-list*) *→* PROP1, VAL1, (PROP1 VAL1)
  x *→* (PROP1 VAL1)
-
 ```
 
 
@@ -6047,7 +5546,6 @@ COMPUTE-POWER-OF-2
  (getf x 'prop1) *→* VAL1
  (getf x 'prop1 7) *→* VAL1
  x *→* (PROP1 VAL1)
-
 ;; Examples of implementation variation permitted.
  (setq foo (list 'a 'b 'c 'd 'e 'f)) *→* (A B C D E F)
  (setq bar (cddr foo)) *→* (C D E F)
@@ -6059,7 +5557,6 @@ COMPUTE-POWER-OF-2
 \OV (NIL)
 \OV (C NIL)
 \OV (C D)
-
 ```
 
 
@@ -6067,7 +5564,6 @@ COMPUTE-POWER-OF-2
  (let ((plist '()))
    (incf (getf plist 'count 0))
    plist) *→* (COUNT 1)
-
 ```
 
 
@@ -6076,7 +5572,6 @@ COMPUTE-POWER-OF-2
  (setf (getf (car x) 'prop1) 'val1) *→* VAL1
  (remf (car x) 'prop1) *→ true*
  (remf (car x) 'prop1) *→ false*
-
 ```
 
 
@@ -6097,7 +5592,6 @@ COMPUTE-POWER-OF-2
  (nintersection list1 list2 :key #'cdr) *→* ((2 . 3) (3 . 4)) 
  list1 *→* \term{implementation-dependent} ;\eg ((1 . 2) (2 . 3) (3 . 4)) 
  list2 *→* \term{implementation-dependent} ;\eg ((1 . 3) (2 . 4) (3 . 6) (4 . 8)) 
-
 ```
 
 
@@ -6110,14 +5604,12 @@ COMPUTE-POWER-OF-2
  (adjoin '(test-item 1) slist :test 'equal) *→* ((TEST-ITEM 1)) 
  (adjoin '(new-test-item 1) slist :key #'cadr) *→* ((TEST-ITEM 1)) 
  (adjoin '(new-test-item 1) slist) *→* ((NEW-TEST-ITEM 1) (TEST-ITEM 1)) 
-
 ```
 
 
 ```lisp
  (adjoin item list :key fn)
    \EQ (if (member (fn item) list :key fn) list (cons item list))
-
 ```
 
 
@@ -6132,19 +5624,16 @@ COMPUTE-POWER-OF-2
  (pushnew '(1) lst) *→* ((1) (2) (1) (1 2) (1 2 3))
  (pushnew '(1) lst :test 'equal) *→* ((1) (2) (1) (1 2) (1 2 3))
  (pushnew '(1) lst :key #'car) *→* ((1) (2) (1) (1 2) (1 2 3)) 
-
 ```
 
 
 ```lisp
  (pushnew item place :test p)
-
 ```
 
 
 ```lisp
  (setf place (adjoin item place :test p))
-
 ```
 
 
@@ -6163,7 +5652,6 @@ COMPUTE-POWER-OF-2
 *→* (("c" . "d") ("e" . "f")) 
  lst1 *→* (("a" . "b") ("c" . "d") ("e" . "f")) 
  lst2 *→* (("c" . "a") ("e" . "b") ("d" . "a")) 
-
 ```
 
 
@@ -6174,7 +5662,6 @@ COMPUTE-POWER-OF-2
           '(#\\c #\\w)
           :test #'(lambda (s c) (find c s)))
 *→* ("banana" "rhubarb" "lemon")    ;One possible ordering.
-
 ```
 
 
@@ -6193,7 +5680,6 @@ COMPUTE-POWER-OF-2
 *→* (("c" . "d") ("e" . "f") ("c" . "a") ("d" . "a")) 
  lst1 *→* (("a" . "b") ("c" . "d") ("e" . "f"))
  lst2 *→* (("c" . "a") ("d" . "a")) 
-
 ```
 
 
@@ -6205,7 +5691,6 @@ COMPUTE-POWER-OF-2
  (subsetp '(1 "A") cosmos :test #'equalp) *→ true*
  (subsetp '((1) (2)) '((1) (2))) *→ false*
  (subsetp '((1) (2)) '((1) (2)) :key #'car) *→ true*
-
 ```
 
 
@@ -6217,24 +5702,20 @@ COMPUTE-POWER-OF-2
  (union '((x 5) (y 6)) '((z 2) (x 4)) :key #'car)
 *→* ((X 5) (Y 6) (Z 2))
 \OV ((X 4) (Y 6) (Z 2))
-
  (setq lst1 (list 1 2 '(1 2) "a" "b")
        lst2 (list 2 3 '(2 3) "B" "C"))
 *→* (2 3 (2 3) "B" "C")
  (nunion lst1 lst2)
 *→* (1 (1 2) "a" "b" 2 3 (2 3) "B" "C") 
 \OV (1 2 (1 2) "a" "b" "C" "B" (2 3) 3)
-
 ```
 
 
 ```lisp
  (decode-universal-time 0 0) *→* 0, 0, 0, 1, 1, 1900, 0, false, 0
-
 ;; The next two examples assume Eastern Daylight Time.
  (decode-universal-time 2414296800 5) *→* 0, 0, 1, 4, 7, 1976, 6, false, 5
  (decode-universal-time 2414293200) *→* 0, 0, 1, 4, 7, 1976, 6, true, 5
-
 ;; This example assumes that the time zone is Eastern Daylight Time
 ;; (and that the time zone is constant throughout the example).
  (let* ((here (nth 8 (multiple-value-list (get-decoded-time)))) ;Time zone
@@ -6242,7 +5723,6 @@ COMPUTE-POWER-OF-2
         (a (nthcdr 7 (multiple-value-list (decode-universal-time recently))))
         (b (nthcdr 7 (multiple-value-list (decode-universal-time recently here)))))
    (list a b (equal a b))) *→* ((T 5) (NIL 5) NIL)
-
 ```
 
 
@@ -6251,7 +5731,6 @@ COMPUTE-POWER-OF-2
  (encode-universal-time 0 0 1 4 7 1976 5) *→* 2414296800
 ;; The next example assumes Eastern Daylight Time.
  (encode-universal-time 0 0 1 4 7 1976) *→* 2414293200
-
 ```
 
 
@@ -6264,19 +5743,16 @@ COMPUTE-POWER-OF-2
  (get-universal-time) *→* 2414333100
 ;; The difference is 300 seconds (five minutes)
  (- * **) *→* 300
-
 ```
 
 
 ```lisp
  (get-decoded-time) \EQ (decode-universal-time (get-universal-time))
-
 ```
 
 
 ```lisp
  (sleep 1) *→* NIL 
-
 ;; Actually, since SLEEP is permitted to use approximate timing, 
 ;; this might not always yield true, but it will often enough that
 ;; we felt it to be a productive example of the intent.
@@ -6284,7 +5760,6 @@ COMPUTE-POWER-OF-2
        (now  (progn (sleep 10) (get-universal-time))))
    (>= (- now then) 10))
 *→ true*
-
 ```
 
 
@@ -6304,26 +5779,21 @@ COMPUTE-POWER-OF-2
  (defclass spaceship ()
    ((captain :initarg :captain :accessor spaceship-captain)
     (serial# :initarg :serial-number :accessor spaceship-serial-number)))
-
  (defclass federation-starship (spaceship) ())
-
  (defmethod describe-object ((s spaceship) stream)
    (with-slots (captain serial#) s
      (format stream "~&~S is a spaceship of type ~S,~
                      ~%with ~A at the helm ~
                        and with serial number ~D.~%"
              s (type-of s) captain serial#)))
-
  (make-instance 'federation-starship
                 :captain "Rachel Garrett"
                 :serial-number "NCC-1701-C")
 *→* #<FEDERATION-STARSHIP 26312465>
-
  (describe *)
 \OUT #<FEDERATION-STARSHIP 26312465> is a spaceship of type FEDERATION-STARSHIP,
 \OUT with Rachel Garrett at the helm and with serial number NCC-1701-C.
 *→* \novalues
-
 ```
 
 
@@ -6343,7 +5813,6 @@ COMPUTE-POWER-OF-2
 \OUT | 2 Exit FACT 2
 \OUT 1 Exit FACT 6
 *→* 6
-
 ```
 
 
@@ -6352,7 +5821,6 @@ COMPUTE-POWER-OF-2
  (eq (symbol-function 'f)
      (progn (disassemble 'f)
             (symbol-function 'f))) *→ true*
-
 ```
 
 
@@ -6360,7 +5828,6 @@ COMPUTE-POWER-OF-2
 (format t "~&Evaluating ~S~%" -)
 \OUT Evaluating (FORMAT T "~&Evaluating ~S~%" -)
 *→* NIL
-
 ```
 
 
@@ -6383,12 +5850,10 @@ COMPUTE-POWER-OF-2
 'b *→* B
 (values 'c1 'c2 'c3) *→* C1, C2, C3
 (list * ** ***) *→* (C1 B A1)
-
 (defun cube-root (x) (expt x 1/3)) *→* CUBE-ROOT
 (compile *) *→* CUBE-ROOT
 (setq a (cube-root 27.0)) *→* 3.0
 (* * 9.0) *→* 27.0
-
 ```
 
 
@@ -6396,14 +5861,12 @@ COMPUTE-POWER-OF-2
  *   \EQ (car /)
  **  \EQ (car //)
  *** \EQ (car ///)
-
 ```
 
 
 ```lisp
  (floor 22 7) *→* 3, 1
  (+ (* (car /) 7) (cadr /)) *→* 22
-
 ```
 
 
@@ -6415,7 +5878,6 @@ COMPUTE-POWER-OF-2
 *→* "1.3a"
 *→* "V2"
 \OV "Release 17.3, ECO #6"
-
 ```
 
 
@@ -6426,7 +5888,6 @@ COMPUTE-POWER-OF-2
  (long-site-name)
 *→* "MIT Artificial Intelligence Laboratory"
 \OV "CMU Computer Science Department"
-
 ```
 
 
@@ -6436,7 +5897,6 @@ COMPUTE-POWER-OF-2
 \OV "S/N 123231"
 \OV "18.26.0.179"
 \OV "AA-00-04-00-A7-A4"
-
 ```
 
 
@@ -6444,38 +5904,32 @@ COMPUTE-POWER-OF-2
  (machine-type)
 *→* "DEC PDP-10"
 \OV "Symbolics LM-2"
-
 ```
 
 
 ```lisp
  (machine-version) *→* "KL-10, microcode 9"
-
 ```
 
 
 ```lisp
  (software-type) *→* "Multics"
  (software-version) *→* "1.3x"
-
 ```
 
 
 ```lisp
  (pathnamep (user-homedir-pathname)) *→ true*
-
 ```
 
 
 ```lisp
  ((lambda \param{lambda-list} . \param{body}) . \param{arguments})
-
 ```
 
 
 ```lisp
  (funcall #'(lambda \param{lambda-list} . \param{body}) . \param{arguments})
-
 ```
 
 
@@ -6483,13 +5937,11 @@ COMPUTE-POWER-OF-2
     (lambda \param{lambda-list} {\DeclsAndDoc} \starparam{form})
  \EQ (function (lambda \param{lambda-list} {\DeclsAndDoc} \starparam{form}))
  \EQ #'(lambda \param{lambda-list} {\DeclsAndDoc} \starparam{form})
-
 ```
 
 
 ```lisp
  (funcall (lambda (x) (+ x 3)) 4) *→* 7
-
 ```
 
 
@@ -6509,7 +5961,6 @@ COMPUTE-POWER-OF-2
  (setf (symbol-function 'foo)
        (compile nil '(lambda () "replaced"))) *→* #<Compiled-Function>
  (foo) *→* "replaced"
-
 ```
 
 
@@ -6519,13 +5970,11 @@ COMPUTE-POWER-OF-2
  (eval 'form) *→* (1+ A)
  (let ((a '(this would break if eval used local value))) (eval form))
 *→* 1000
-
 ```
 
 
 ```lisp
  (eval (list 'cdr (car '((quote (a . b)) c)))) *→* b
-
 ```
 
 
@@ -6544,7 +5993,6 @@ COMPUTE-POWER-OF-2
    (set-macro-character #\\$ #'(lambda (stream char)
                                 (declare (ignore char))
                                 (list 'dollar (read stream))))) *→* T
-
 ```
 
 
@@ -6558,7 +6006,6 @@ COMPUTE-POWER-OF-2
  (let ((x 1))
    (eval-when (:execute :load-toplevel :compile-toplevel)
      (setf (symbol-function 'foo1) #'(lambda () x))))
-
 ;;;     If this expression occurs at the toplevel of a file to be compiled,
 ;;;     it has BOTH a compile time AND a load-time effect of setting
 ;;;     (SYMBOL-FUNCTION 'FOO2) to a function which returns 2.
@@ -6566,7 +6013,6 @@ COMPUTE-POWER-OF-2
    (let ((x 2))
      (eval-when (:execute :load-toplevel :compile-toplevel)
        (setf (symbol-function 'foo2) #'(lambda () x)))))
-
 ;;;     If this expression occurs at the toplevel of a file to be compiled,
 ;;;     it has BOTH a compile time AND a load-time effect of setting the
 ;;;     function cell of FOO3 to a function which returns 3.
@@ -6577,7 +6023,6 @@ COMPUTE-POWER-OF-2
  (eval-when (:compile-toplevel)
    (eval-when (:compile-toplevel) 
      (print 'foo4)))
-
 ;;;     If this form occurs at toplevel of a file to be compiled, FOO5 is
 ;;;     printed at compile time. If this form occurs in a non-top-level
 ;;;     position, nothing is printed at compile time. Regardless of context,
@@ -6593,7 +6038,6 @@ COMPUTE-POWER-OF-2
  (eval-when (:execute :load-toplevel)
    (eval-when (:compile-toplevel)
      (print 'foo6)))
-
 ```
 
 
@@ -6615,13 +6059,11 @@ COMPUTE-POWER-OF-2
 ```lisp
  (let ((x 3))
    (eval-when (:execute :load-toplevel :compile-toplevel) (print x)))
-
 ```
 
 
 ```lisp
  (defun bar (x) (defun foo () (+ x 3)))
-
 ```
 
 
@@ -6631,14 +6073,12 @@ COMPUTE-POWER-OF-2
             (compiler::notice-function-definition 'foo '(x)))
           (eval-when (:execute :load-toplevel)
             (setf (symbol-function 'foo) #'(lambda () (+ x 3))))))
-
 ```
 
 
 ```lisp
  (defun bar (x) 
    (setf (symbol-function 'foo) #'(lambda () (+ x 3))))
-
 ```
 
 
@@ -6648,7 +6088,6 @@ COMPUTE-POWER-OF-2
 ;;; but the value it returns might vary from image to image.
 (defun incr1 (x) (+ x #.(random 17)))
 (defun incr2 (x) (+ x (load-time-value (random 17))))
-
 ;;; The function FOO1-REF references the nth element of the first of 
 ;;; the *FOO-ARRAYS* that is available at load time.  It is permissible for
 ;;; that array to be modified (e.g., by SET-FOO1-REF); FOO1-REF will see the
@@ -6657,14 +6096,12 @@ COMPUTE-POWER-OF-2
 (defun foo1-ref (n) (aref (load-time-value (first *my-arrays*) nil) n))
 (defun set-foo1-ref (n val) 
   (setf (aref (load-time-value (first *my-arrays*) nil) n) val))
-
 ;;; The function BAR1-REF references the nth element of the first of 
 ;;; the *BAR-ARRAYS* that is available at load time.  The programmer has
 ;;; promised that the array will be treated as read-only, so the system 
 ;;; can copy or coalesce the array.
 (defvar *bar-arrays* (list (make-array 7) (make-array 8)))
 (defun bar1-ref (n) (aref (load-time-value (first *my-arrays*) t) n))
-
 ;;; This use of LOAD-TIME-VALUE permits the indicated vector to be coalesced
 ;;; even though NIL was specified, because the object was already read-only
 ;;; when it was written as a literal vector rather than created by a constructor.
@@ -6672,14 +6109,12 @@ COMPUTE-POWER-OF-2
 (defun baz-ref (n)
   (let ((v (load-time-value #(A B C) nil)))
     (values (svref v n) v)))
-
 ;;; This use of LOAD-TIME-VALUE permits the indicated vector to be coalesced
 ;;; even though NIL was specified in the outer situation because T was specified
 ;;; in the inner situation.  User programs must treat the vector v as read-only.
 (defun baz-ref (n)
   (let ((v (load-time-value (load-time-value (vector 1 2 3) t) nil)))
     (values (svref v n) v)))
-
 ```
 
 
@@ -6701,7 +6136,6 @@ COMPUTE-POWER-OF-2
  '(car '(a b)) *→* (CAR (QUOTE (A B)))
  #(car '(a b)) *→* #(CAR (QUOTE (A B)))
  '#(car '(a b)) *→* #(CAR (QUOTE (A B)))
-
 ```
 
 
@@ -6945,34 +6379,29 @@ COMPUTE-POWER-OF-2
 ```lisp
  (defmacro loser (x &optional (a b &rest c) &rest z)
    ...)
-
 ```
 
 
 ```lisp
  (defmacro loser (x &optional ((a b &rest c)) &rest z)
    ...)
-
 ```
 
 
 ```lisp
  (defmacro loser (x &optional ((a b &rest c) '(nil nil)) &rest z)
    ...)
-
 ```
 
 
 ```lisp
  (defmacro loser (x &optional ((&optional a b &rest c)) &rest z)
    ...)
-
 ```
 
 
 ```lisp
  (loser (car pool) ((+ x 1)))
-
 ```
 
 
@@ -7018,7 +6447,6 @@ COMPUTE-POWER-OF-2
 ```lisp
  (defmacro macfun (x) '(macro-function 'macfun)) *→* MACFUN 
  (not (macro-function 'macfun)) *→ false* 
-
 ```
 
 
@@ -7032,13 +6460,11 @@ COMPUTE-POWER-OF-2
              (foo))))
  
 *→* (NO YES)
-
 ```
 
 
 ```lisp
  (setf (macro-function symbol) fn)
-
 ```
 
 
@@ -7109,20 +6535,16 @@ COMPUTE-POWER-OF-2
 
 ```lisp
 (defvar *things* (list 'alpha 'beta 'gamma)) *→* *THINGS*
-
 (define-symbol-macro thing1 (first *things*)) *→* THING1
 (define-symbol-macro thing2 (second *things*)) *→* THING2
 (define-symbol-macro thing3 (third *things*)) *→* THING3
-
 thing1 *→* ALPHA
 (setq thing1 'ONE) *→* ONE
 *things* *→* (ONE BETA GAMMA)
 (multiple-value-setq (thing2 thing3) (values 'two 'three)) *→* TWO
 thing3 *→* THREE
 *things* *→* (ONE TWO THREE)
-
 (list thing2 (let ((thing2 2)) thing2)) *→* (TWO 2)
-
 ```
 
 
@@ -7139,7 +6561,6 @@ thing3 *→* THREE
  (symbol-macrolet ((x '(foo x)))
    (list x))
 *→* ((FOO X))
-
 ```
 
 
@@ -7171,14 +6592,12 @@ thing3 *→* THREE
 
 ```lisp
 (proclaim '(special *x*))
-
 ```
 
 
 ```lisp
  (eval-when (:execute :compile-toplevel :load-toplevel)
    (proclaim '(special *x*)))
-
 ```
 
 
@@ -7189,7 +6608,6 @@ thing3 *→* THREE
          (x (* k k)))
      (declare (inline foo) (special x z))
      (foo x j z)))               ;Third call to foo
-
 ```
 
 
@@ -7198,14 +6616,12 @@ thing3 *→* THREE
    (let ((x (list 1 2 3)))
      (declare (dynamic-extent x))
          ...))
-
 ```
 
 
 ```lisp
  (defun g (x) (declare (dynamic-extent x)) ...)
  (defun f () (g (list 1 2 3)))
-
 ```
 
 
@@ -7218,7 +6634,6 @@ thing3 *→* THREE
    (flet ((g (x) (declare (dynamic-extent x)) ...))
      (g (list 1 2 3))))
  
-
 ```
 
 
@@ -7226,7 +6641,6 @@ thing3 *→* THREE
  (defun f (&rest x)
    (declare (dynamic-extent x))
    ...)
-
 ```
 
 
@@ -7235,7 +6649,6 @@ thing3 *→* THREE
        (y (cons 'a2 (cons 'b2 (cons 'c2 nil)))))
    (declare (dynamic-extent x y))
    ...)
-
 ```
 
 
@@ -7258,7 +6671,6 @@ thing3 *→* THREE
  (zap 1 2 3)
 \OUT 123
 *→* NIL
-
 ;; Some implementations might open-code LIST-ALL-PACKAGES in a way
 ;; that permits using \term{stack allocation} of the list to be bound to L.
  (do ((l (list-all-packages) (cdr l)))
@@ -7269,7 +6681,6 @@ thing3 *→* THREE
 \OUT "COMMON-LISP"
 \OUT "COMMON-LISP-USER"
 *→* NIL
-
 ;; Some implementations might have the ability to \term{stack allocate} 
 ;; rest lists.  A declaration such as the following should be a cue
 ;; to such implementations that stack-allocation of the rest list
@@ -7278,7 +6689,6 @@ thing3 *→* THREE
    (declare (dynamic-extent x))
    (apply #'+ x)) *→* ADD
  (add 1 2 3) *→* 6
-
  (defun zap (n m)
    ;; Computes (RANDOM (+ M 1)) at relative speed of roughly O(N).
    ;; It may be slow, but with a good compiler at least it
@@ -7290,7 +6700,6 @@ thing3 *→* THREE
        (setf (aref a i) (random (+ i 1))))
      (aref a m))) *→* ZAP
  (< (zap 5 3) 3) *→ true*
-
 ```
 
 
@@ -7298,12 +6707,10 @@ thing3 *→* THREE
  (length (list (let ((x (list 1 2 3)))  ; Invalid
                 (declare (dynamic-extent x))
                 x)))
-
  (progn (let ((x (list 1 2 3)))  ; Invalid
           (declare (dynamic-extent x))
           x)
         nil)
-
 ```
 
 
@@ -7322,7 +6729,6 @@ thing3 *→* THREE
    ;; create a named variable.  A THE special form can be used instead.
    (the fixnum (+ x y))) *→* F
  (f 1 2) *→* 3
-
 ```
 
 
@@ -7341,7 +6747,6 @@ thing3 *→* THREE
   
  (frob *one-array*)
  (frob *another-array*)
-
 ```
 
 
@@ -7354,7 +6759,6 @@ thing3 *→* THREE
    (let ((foo 0))
      (declare (type (signed-byte 5) foo))
      (setf foo (the (signed-byte 5) (aref an-array 0)))))
-
 ```
 
 
@@ -7363,13 +6767,11 @@ thing3 *→* THREE
    (declare (type (array fixnum *) bump-counters))
    (dotimes (i (length counters))
      (incf (aref counters i))))
-
 ```
 
 
 ```lisp
  (defun f (x y) (declare (fixnum x y)) (+ x y))
-
 ```
 
 
@@ -7377,7 +6779,6 @@ thing3 *→* THREE
  (defun f (x y)
    (declare (fixnum x y))
    (the fixnum (+ x y)))
-
 ```
 
 
@@ -7385,7 +6786,6 @@ thing3 *→* THREE
  (defun f (x y)
    (declare (fixnum x y z))
    (the fixnum (+ x y z)))
-
 ```
 
 
@@ -7393,7 +6793,6 @@ thing3 *→* THREE
  (defun f (x y)
    (declare (fixnum x y z))
    (the fixnum (+ (the fixnum (+ x y)) z)))
-
 ```
 
 
@@ -7401,7 +6800,6 @@ thing3 *→* THREE
  (declaim (inline f))
  (defun f ...)
  (declaim (notinline f))
-
 ```
 
 
@@ -7424,14 +6822,12 @@ thing3 *→* THREE
  (defun top-level-4 () 
    (declare (inline dispatch))
    (dispatch (read-command)))
-
 ```
 
 
 ```lisp
  (declare (ftype (function (integer list) t) ith)
           (ftype (function (number) float) sine cosine))
-
 ```
 
 
@@ -7442,7 +6838,6 @@ thing3 *→* THREE
  (defun strangep (x)
    (declare (author "Harry Tweeker"))
    (member x '(strange weird odd peculiar)))
-
 ```
 
 
@@ -7458,7 +6853,6 @@ thing3 *→* THREE
      (declare (optimize speed))
      (declare (fixnum i))
      ))
-
 ```
 
 
@@ -7471,19 +6865,16 @@ thing3 *→* THREE
                               ;within hack1 to be special.
    (if (atom arg) *mod*
        (cons (hack1 (car arg)) (hack1 (cdr arg)))))
-
 ```
 
 
 ```lisp
  (declaim (special x))
-
 ```
 
 
 ```lisp
  (defun example (x) ...)
-
 ```
 
 
@@ -7496,7 +6887,6 @@ thing3 *→* THREE
                                                  ;special binding of y
 *→* DECLARE-EG 
  (declare-eg nil) *→* (T NIL) 
-
 ```
 
 
@@ -7515,7 +6905,6 @@ thing3 *→* THREE
 \OUT 10
 \OUT 11
 *→* 11
-
 ```
 
 
@@ -7527,7 +6916,6 @@ thing3 *→* THREE
     (declare (special x))
     (list old-x x)))
 (bar 'first 'second) *→* (FIRST SECOND)
-
 ```
 
 
@@ -7535,7 +6923,6 @@ thing3 *→* THREE
  (defun few (x &optional (y *foo*))
    (declare (special *foo*))
    ...)
-
 ```
 
 
@@ -7547,14 +6934,12 @@ thing3 *→* THREE
     (list prosp reg))             ;whereas the variable reg is lexical
 *→* (3 2)
  (list prosp reg) *→* (1 3)
-
  (declaim (special x))          ;x is always special.
  (defun example (x y)                                 
    (declare (special y))
    (let ((y 3) (x (* x 2)))
      (print (+ y (locally (declare (special y)) y)))
      (let ((y 4)) (declare (special y)) (foo x)))) *→* EXAMPLE
-
 ```
 
 
@@ -7569,13 +6954,11 @@ thing3 *→* THREE
 *→* SAMPLE-FUNCTION
  (sample-function nil) *→* (T NIL) 
  (setq x '(1 2 3) y '(4 . 5)) *→* (4 . 5)
-
 ;;; The following declarations are not notably useful in specific.
 ;;; They just offer a sample of valid declaration syntax using LOCALLY.
  (locally (declare (inline floor) (notinline car cdr))
           (declare (optimize space))
     (floor (car x) (cdr y))) *→* 0, 1
-
 ```
 
 
@@ -7586,14 +6969,12 @@ thing3 *→* THREE
    (defun frob (w x y &optional (z (foo x y)))
      (mumble x y z w)))
 *→* FROB
-
 ;;; This is like the previous example, except that the optimize settings
 ;;; remain in effect for subsequent definitions in the same compilation unit.
  (declaim (optimize (safety 3) (space 3) (speed 0)))
  (defun frob (w x y &optional (z (foo x y)))
    (mumble x y z w))
 *→* FROB
-
 ```
 
 
@@ -7624,7 +7005,6 @@ thing3 *→* THREE
         (y 5))
     (setf (the fixnum (car x)) y)
     x) *→* (5 B C)
-
 ```
 
 
@@ -7632,7 +7012,6 @@ thing3 *→* THREE
  (the (values integer integer) (floor x y))
  (the (values string t)
       (gethash the-key the-string-table))
-
 ```
 
 
@@ -7640,7 +7019,6 @@ thing3 *→* THREE
  (special-operator-p 'if) *→ true*
  (special-operator-p 'car) *→ false*
  (special-operator-p 'one) *→ false*
-
 ```
 
 
@@ -7661,7 +7039,6 @@ thing3 *→* THREE
  (constantp '(values this-is-a-constant)) *→* \term{implementation-dependent}
  (constantp '(values 'x 'y)) *→* \term{implementation-dependent}
  (constantp '(let ((a '(a b c))) (+ (length a) 6))) *→* \term{implementation-dependent}
-
 ```
 
 
@@ -7674,7 +7051,6 @@ thing3 *→* THREE
 *→* #P"S:>vistor>test.text.newest", #P"S:>vistor>test.text.1"
 \OV #P"S:>vistor>test.text.newest", #P"S:>vistor>test.text.newest"
 \OV #P"S:>vistor>test.text.newest", #P"S:>vistor>_temp_._temp_.1"
-
 ;; In this case, the file is closed when the truename is tried, so the
 ;; truename information is reliable.
  (with-open-file (stream ">vistor>test.text.newest")
@@ -7682,7 +7058,6 @@ thing3 *→* THREE
    (values (pathname stream)
            (truename stream)))
 *→* #P"S:>vistor>test.text.newest", #P"S:>vistor>test.text.1"
-
 ;; An example involving TOP-20's implementation-dependent concept 
 ;; of logical devices -- in this case, "DOC:" is shorthand for
 ;; "PS:<DOCUMENTATION>" ...
@@ -7690,7 +7065,6 @@ thing3 *→* THREE
    (values (pathname stream)
            (truename stream)))
 *→* #P"CMUC::DOC:DUMPER.HLP", #P"CMUC::PS:<DOCUMENTATION>DUMPER.HLP.13"
-
 ```
 
 
@@ -7698,7 +7072,6 @@ thing3 *→* THREE
  (with-open-file (stream ">relativity>general.text")
    (file-author s))
 *→* "albert"
-
 ```
 
 
@@ -7713,7 +7086,6 @@ thing3 *→* THREE
  (with-open-file (s "noel.text")
    (file-write-date s))
 *→* 2902600800
-
 ```
 
 
@@ -7728,7 +7100,6 @@ thing3 *→* THREE
 *→* #P"SYS:CHEMISTRY;GOLD.TEXT.NEWEST",
    #P"Q:>sys>chem>lead.text.1",
    #P"Q:>sys>chem>gold.text.1"
-
 ```
 
 
@@ -7742,7 +7113,6 @@ thing3 *→* THREE
    (delete-file s))
 *→* T
  (probe-file "delete-me.text") *→ false*
-
 ```
 
 
@@ -7754,15 +7124,12 @@ thing3 *→* THREE
  (apply #'max 3 5 '(2 7 3)) *→* 7
  (apply 'cons '((+ 2 3) 4)) *→* ((+ 2 3) . 4)
  (apply #'+ '()) *→* 0
-
  (defparameter *some-list* '(a b c))
  (defun strange-test (&rest x) (eq x *some-list*))
  (apply #'strange-test *some-list*) *→* \term{implementation-dependent}
-
  (defun bad-boy (&rest x) (rplacd x 'y))
  (bad-boy 'a 'b 'c) has undefined consequences.
  (apply #'bad-boy *some-list*) has undefined consequences.
-
 ```
 
 
@@ -7772,7 +7139,6 @@ thing3 *→* THREE
      (if double (concatenate (type-of v) v v) v)))
  (foo 4 :initial-contents '(a b c d) :double t)
     *→* #(A B C D A B C D)
-
 ```
 
 
@@ -7780,7 +7146,6 @@ thing3 *→* THREE
  (lambda \param{lambda-list}
    {\DeclsAndDoc}
    (block \param{block-name} \starparam{form}))
-
 ```
 
 
@@ -7794,7 +7159,6 @@ thing3 *→* THREE
  (ex 1 2 3 4 :test 'equal :start 50) 
 *→* (1 2 3 4 (:TEST EQUAL :START 50) EQUAL 50)
  (ex :test 1 :start 2) *→* (:TEST 1 :START 2 NIL NIL 0)
-
  ;; This function assumes its callers have checked the types of the
  ;; arguments, and authorizes the compiler to build in that assumption.
  (defun discriminant (a b c)
@@ -7802,7 +7166,6 @@ thing3 *→* THREE
    "Compute the discriminant for a quadratic equation."
    (- (* b b) (* 4 a c))) *→* DISCRIMINANT
  (discriminant 1 2/3 -2) *→* 76/9
-
  ;; This function assumes its callers have not checked the types of the
  ;; arguments, and performs explicit type checks before making any assumptions. 
  (defun careful-discriminant (a b c)
@@ -7813,7 +7176,6 @@ thing3 *→* THREE
    (locally (declare (number a b c))
      (- (* b b) (* 4 a c)))) *→* CAREFUL-DISCRIMINANT
  (careful-discriminant 1 2/3 -2) *→* 76/9
-
 ```
 
 
@@ -7842,7 +7204,6 @@ thing3 *→* THREE
 
 ```lisp
 (if (fboundp x) (symbol-function x))
-
 ```
 
 
@@ -7853,7 +7214,6 @@ thing3 *→* THREE
     (fmakunbound 'add-some)
     (add-some 1)) *→* 38
  (fboundp 'add-some) *→ false*
-
 ```
 
 
@@ -7873,7 +7233,6 @@ thing3 *→* THREE
    (+ x
       (if flag (* x x) x)
       (if flag (* (+ x 1) (+ x 1)) (+ x 1))))
-
 ```
 
 
@@ -7918,7 +7277,6 @@ thing3 *→* THREE
   ;; The safesqrt function is used in two places.
    (safesqrt (apply #'+ (map 'list #'safesqrt '(1 2 3 4 5 6)))))
 *→* 3.291173
-
 ```
 
 
@@ -7936,7 +7294,6 @@ thing3 *→* THREE
               (cond ((evenp k) (expt1 (* x x) (floor k 2) a))
                     (t (expt0 (* x x) (floor k 2) (* x a))))))
     (expt0 n k 1))) *→* INTEGER-POWER
-
 ```
 
 
@@ -7949,11 +7306,9 @@ thing3 *→* THREE
        (unless (null (cdr x))
          (attach x)))
      l))
-
  (example '((a apple apricot) (b banana) (c cherry) (d) (e))
           '((1) (2) (3) (4 2) (5) (6 3 2)))
 *→* ((1) (2) (3) (4 2) (5) (6 3 2) (A APPLE APRICOT) (B BANANA) (C CHERRY))
-
 ```
 
 
@@ -7976,20 +7331,17 @@ thing3 *→* THREE
  (funcall \param{function} \param{arg1} \param{arg2} ...)
  \EQ (apply \param{function} \param{arg1} \param{arg2} ... nil)
  \EQ (apply \param{function} (list \param{arg1} \param{arg2} ...))
-
 ```
 
 
 ```lisp
  (defun adder (x) (function (lambda (y) (+ x y))))
-
 ```
 
 
 ```lisp
  (setq add3 (adder 3))
  (funcall add3 5) *→* 8
-
 ```
 
 
@@ -7999,7 +7351,6 @@ thing3 *→* THREE
 \OV NIL, true, NIL
 \OV (LAMBDA (X) X), true, NIL
 \OV (LAMBDA (X) X), false, NIL
-
  (function-lambda-expression
     (funcall #'(lambda () #'(lambda (x) x))))
 *→* NIL, false, NIL
@@ -8032,7 +7383,6 @@ thing3 *→* THREE
 \OV (LAMBDA (X) (BLOCK BAR X)), true, NIL
 \OV (LAMBDA (X) (BLOCK BAR X)), true, (:INTERNAL FOO 0 BAR)
 \OV (LAMBDA (X) (BLOCK BAR X)), false, "BAR in FOO"
-
 ```
 
 
@@ -8046,13 +7396,11 @@ thing3 *→* THREE
  (functionp 12) *→ false*
  (functionp '(lambda (x) (* x x))) *→ false*
  (functionp #'(lambda (x) (* x x))) *→ true*
-
 ```
 
 
 ```lisp
  (functionp \param{object}) \EQ (typep \param{object} 'function)
-
 ```
 
 
@@ -8071,13 +7419,11 @@ thing3 *→* THREE
 *→ false*
 \OV true
  (compiled-function-p '(lambda (x) x)) *→ false*
-
 ```
 
 
 ```lisp
  (compiled-function-p \param{object}) \EQ (typep \param{object} 'compiled-function)
-
 ```
 
 
@@ -8092,7 +7438,6 @@ thing3 *→* THREE
 ```lisp
  (setf (symbol-value '\i{name}) \i{initial-value})
  (setf (documentation '\i{name} 'variable) '\i{documentation})
-
 ```
 
 
@@ -8101,7 +7446,6 @@ thing3 *→* THREE
 this-is-a-constant *→* NEVER-CHANGING
  (documentation 'this-is-a-constant 'variable) *→* "for a test"
  (constantp 'this-is-a-constant) *→ true*
-
 ```
 
 
@@ -8112,20 +7456,17 @@ this-is-a-constant *→* NEVER-CHANGING
  (setq *p* 2) *→* 2
  (defparameter *p* 3) *→* *P*
  *p* *→* 3
-
  (defvar *v* 1) *→* *V*
  *v* *→* 1
  (constantp '*v*) *→ false*
  (setq *v* 2) *→* 2
  (defvar *v* 3) *→* *V*
  *v* *→* 2
-
  (defun foo ()
    (let ((*p* 'p) (*v* 'v))
      (bar))) *→* FOO
  (defun bar () (list *p* *v*)) *→* BAR
  (foo) *→* (P V)
-
 ```
 
 
@@ -8145,7 +7486,6 @@ this-is-a-constant *→* NEVER-CHANGING
  (defparameter *default-beep-count* 3)
  (defun beep (&optional (n *default-beep-count*))
    (dotimes (i n) (si:%beep 1000. 100000.) (sleep 0.1)))
-
 ```
 
 
@@ -8193,7 +7533,6 @@ this-is-a-constant *→* NEVER-CHANGING
    \param{form2}
    ...
    \param{formn})
-
 ```
 
 
@@ -8210,7 +7549,6 @@ this-is-a-constant *→* NEVER-CHANGING
    \param{form2}
    ...
    \param{formn})
-
 ```
 
 
@@ -8232,7 +7570,6 @@ this-is-a-constant *→* NEVER-CHANGING
  (let ((a 'inside) (b a))
     (declare (special a))
     (format nil "~S ~S ~S" a b (dummy-function))) *→* "INSIDE TOP INSIDE"
-
 ```
 
 
@@ -8241,7 +7578,6 @@ this-is-a-constant *→* NEVER-CHANGING
    (declare (integer x))
    (setq x (gcd y z))
    ...)
-
 ```
 
 
@@ -8249,13 +7585,10 @@ this-is-a-constant *→* NEVER-CHANGING
  (setq *x* 1) *→* 1
  (progv '(*x*) '(2) *x*) *→* 2
  *x* *→* 1
-
 Assuming *x* is not globally special,
-
  (let ((*x* 3)) 
     (progv '(*x*) '(4) 
       (list *x* (symbol-value '*x*)))) *→* (3 4)
-
 ```
 
 
@@ -8265,20 +7598,17 @@ Assuming *x* is not globally special,
  a *→* 1
  b *→* 2
  c *→* 3
-
  ;; Use of SETQ to update values by sequential assignment.
  (setq a (1+ b) b (1+ a) c (+ a b)) *→* 7
  a *→* 3
  b *→* 4
  c *→* 7
-
  ;; This illustrates the use of SETQ on a symbol macro.
  (let ((x (list 10 20 30)))
    (symbol-macrolet ((y (car x)) (z (cadr x)))
      (setq y (1+ z) z (1+ y))
      (list x y z)))
 *→* ((21 22 30) 21 22)
-
 ```
 
 
@@ -8291,27 +7621,23 @@ Assuming *x* is not globally special,
  a *→* 1
  b *→* 2
  c *→* 3
-
  ;; Use of PSETQ to update values by parallel assignment.
  ;; The effect here is very different than if SETQ had been used.
  (psetq a (1+ b) b (1+ a) c (+ a b)) *→* NIL
  a *→* 3
  b *→* 2
  c *→* 3
-
  ;; Use of PSETQ on a symbol macro.
  (let ((x (list 10 20 30)))
    (symbol-macrolet ((y (car x)) (z (cadr x)))
      (psetq y (1+ z) z (1+ y))
      (list x y z)))
 *→* ((21 11 30) 21 11)
-
  ;; Use of parallel assignment to swap values of A and B.
  (let ((a 1) (b 2))
    (psetq a b  b a)
    (values a b))
 *→* 2, 1
-
 ```
 
 
@@ -8340,7 +7666,6 @@ Assuming *x* is not globally special,
    (flet ((b1 () (return-from b 1)))
      (block b (b1) (print 'unreachable))
      2)) *→* 1
-
 ```
 
 
@@ -8349,13 +7674,11 @@ Assuming *x* is not globally special,
  (catch 'dummy-tag 1 2 3 4) *→* 4
  (defun throw-back (tag) (throw tag t)) *→* THROW-BACK
  (catch 'dummy-tag (throw-back 'dummy-tag) 2) *→* T
-
  ;; Contrast behavior of this example with corresponding example of BLOCK.
  (catch 'c
    (flet ((c1 () (throw 'c 1)))
      (catch 'c (c1) (print 'unreachable))
      2)) *→* 2
-
 ```
 
 
@@ -8366,7 +7689,6 @@ Assuming *x* is not globally special,
    (incf val 3)
    lp (incf val 4)) *→* NIL
  val *→* 6 
-
 ```
 
 
@@ -8374,14 +7696,12 @@ Assuming *x* is not globally special,
  (let ((a nil)) 
    (tagbody t (setq a #'(lambda () (go t))))
    (funcall a))
-
 ```
 
 
 ```lisp
  (funcall (block nil
             (tagbody a (return #'(lambda () (go a))))))
-
 ```
 
 
@@ -8430,13 +7750,11 @@ Assuming *x* is not globally special,
 \OUT 5
 \OUT HERE
 *→* NIL
-
 ```
 
 
 ```lisp
  (funcall (block nil #'(lambda () (return-from nil)))) is an error.
-
 ```
 
 
@@ -8447,14 +7765,12 @@ Assuming *x* is not globally special,
  (block nil (block alpha (return 1) 2)) *→* 1
  (block alpha (block nil (return 1)) 2) *→* 2
  (block nil (block nil (return 1) 2)) *→* 1
-
 ```
 
 
 ```lisp
  (return) \EQ (return-from nil)
  (return \param{form}) \EQ (return-from nil \param{form})
-
 ```
 
 
@@ -8492,7 +7808,6 @@ Assuming *x* is not globally special,
  (f1 t)
 \OUT 1
 *→* NIL
-
 ```
 
 
@@ -8502,7 +7817,6 @@ Assuming *x* is not globally special,
     (loop (incf j 3) (incf i)
           (if (= i 3) (throw 'result (values i j))))) *→* 3, 9
 
-
 ```
 
 
@@ -8510,7 +7824,6 @@ Assuming *x* is not globally special,
  (catch nil 
    (unwind-protect (throw nil 1)
      (throw nil 2))) *→* 2
-
 ```
 
 
@@ -8519,7 +7832,6 @@ Assuming *x* is not globally special,
    (catch 'b
      (unwind-protect (throw 'a 1)
        (throw 'b 2))))
-
 ```
 
 
@@ -8532,7 +7844,6 @@ Assuming *x* is not globally special,
          :outer-catch)
 \OUT The inner catch returns :SECOND-THROW
 *→* :OUTER-CATCH
-
 ```
 
 
@@ -8554,7 +7865,6 @@ Assuming *x* is not globally special,
        (print x)))
   out
    ...)
-
 ```
 
 
@@ -8570,7 +7880,6 @@ Assuming *x* is not globally special,
  (catch 'abort (unwind-protect (dummy-function 'trash) 
                   (setq state 'aborted))) *→* NOT-A-NUMBER
  state *→* ABORTED
-
 ```
 
 
@@ -8579,7 +7888,6 @@ Assuming *x* is not globally special,
    (progn (incf *access-count*)
           (perform-access))
    (decf *access-count*))
-
 ```
 
 
@@ -8589,7 +7897,6 @@ Assuming *x* is not globally special,
      (progn (incf *access-count*)
             (perform-access))
      (setq *access-count* old-count)))
-
 ```
 
 
@@ -8664,13 +7971,11 @@ Assuming *x* is not globally special,
      (declare (special x))
      (unwind-protect (return)
        (print x))))          
-
 ```
 
 
 ```lisp
  nil *→* NIL 
-
 ```
 
 
@@ -8681,7 +7986,6 @@ Assuming *x* is not globally special,
  (not (integerp 1)) *→* NIL
  (not 3.7) *→* NIL
  (not 'apple) *→* NIL
-
 ```
 
 
@@ -8700,7 +8004,6 @@ Assuming *x* is not globally special,
  (prin1 'hello t)
 \OUT HELLO
 *→* HELLO
-
 ```
 
 
@@ -8738,7 +8041,6 @@ Assuming *x* is not globally special,
  (let ((x 5)) (eq x x))
 *→ true*
 \OV false
-
 ```
 
 
@@ -8763,7 +8065,6 @@ Assuming *x* is not globally special,
 \OV false
  (eql "Foo" (copy-seq "Foo")) *→ false*
  (eql "FOO" "foo") *→ false*
-
 ```
 
 
@@ -8784,7 +8085,6 @@ Assuming *x* is not globally special,
  (equal "FOO" "foo") *→ false*
  (equal "This-string" "This-string") *→ true*
  (equal "This-string" "this-string") *→ false*
-
 ```
 
 
@@ -8803,7 +8103,6 @@ Assuming *x* is not globally special,
  (equalp "Foo" "Foo") *→ true*
  (equalp "Foo" (copy-seq "Foo")) *→ true*
  (equalp "FOO" "foo") *→ true*
-
 ```
 
 
@@ -8818,20 +8117,17 @@ Assuming *x* is not globally special,
  (equalp array1 array2) *→ true*
  (setq vector1 (vector 1 1 1 3 5 7)) *→* #(1 1 1 3 5 7)
  (equalp array1 vector1) *→ true* 
-
 ```
 
 
 ```lisp
  (identity 101) *→* 101
  (mapcan #'identity (list (list 1 2 3) '(4 5 6))) *→* (1 2 3 4 5 6)
-
 ```
 
 
 ```lisp
 (defun identity (x) x)
-
 ```
 
 
@@ -8840,26 +8136,22 @@ Assuming *x* is not globally special,
  (funcall (complement #'characterp) #\\A) *→ false*
  (funcall (complement #'member) 'a '(a b c)) *→ false*
  (funcall (complement #'member) 'd '(a b c)) *→ true*
-
 ```
 
 
 ```lisp
  (complement \i{x}) \EQ #'(lambda (&rest arguments) (not (apply \i{x} arguments)))
-
 ```
 
 
 ```lisp
 (\i{xxx}-if-not \i{f} . \i{arguments}) \EQ (\i{xxx}-if (complement \i{f}) . \i{arguments})
-
 ```
 
 
 ```lisp
  (find-if-not #'zerop '(0 0 3)) \EQ
  (find-if (complement #'zerop) '(0 0 3)) *→* 3
-
 ```
 
 
@@ -8877,7 +8169,6 @@ Assuming *x* is not globally special,
 ```lisp
  (defun constantly (object)
    #'(lambda (&rest arguments) object))
-
 ```
 
 
@@ -8886,14 +8177,12 @@ Assuming *x* is not globally special,
  (some #'= '(1 2 3 4 5) '(5 4 3 2 1)) *→ true*
  (notevery #'< '(1 2 3 4) '(5 6 7 8) '(9 10 11 12)) *→ false*
  (notany #'> '(1 2 3 4) '(5 6 7 8) '(9 10 11 12)) *→ true* 
-
 ```
 
 
 ```lisp
  (notany \param{predicate} \starparam{sequence}) \EQ (not (some \param{predicate} \starparam{sequence}))
  (notevery \param{predicate} \starparam{sequence}) \EQ (not (every \param{predicate} \starparam{sequence}))
-
 ```
 
 
@@ -8902,7 +8191,6 @@ Assuming *x* is not globally special,
           (< n (length a-simple-vector))
           (eq (elt a-simple-vector n) 'foo))
      (princ "Foo!"))
-
 ```
 
 
@@ -8914,7 +8202,6 @@ Assuming *x* is not globally special,
  (and (decf temp1) (decf temp2) (eq temp3 'nil) (decf temp3)) *→* NIL 
  (and (eql temp1 temp2) (eql temp2 temp3)) *→ true*
  (and) *→* T 
-
 ```
 
 
@@ -8928,7 +8215,6 @@ Assuming *x* is not globally special,
 ```lisp
  (and \param{form}) \EQ (let () \param{form})
  (and \param{form1} \param{form2} ...) \EQ (when \param{form1} (and \param{form2} ...))
-
 ```
 
 
@@ -8946,7 +8232,6 @@ Assuming *x* is not globally special,
  (select-options) *→* 1
  (setq a 5) *→* 5
  (select-options) *→* 1, 2
-
 ```
 
 
@@ -8963,14 +8248,12 @@ Assuming *x* is not globally special,
 \OUT TRUE 1
 \OUT TRUE (A B C)
 *→* NIL
-
 ```
 
 
 ```lisp
  (if \param{test-form} \param{then-form} \param{else-form})
  \EQ (cond (\param{test-form} \param{then-form}) (t \param{else-form}))
-
 ```
 
 
@@ -8987,7 +8270,6 @@ Assuming *x* is not globally special,
  (or (values temp1 temp2) temp3) *→* 11
  (or temp0 (values temp1 temp2)) *→* 11, 20
  (or (values temp0 temp1) (values temp2 temp3)) *→* 20, 30
-
 ```
 
 
@@ -9016,7 +8298,6 @@ Assuming *x* is not globally special,
          (if (not (oddp x)) (incf x) (list x)) 
          (if (not (oddp x)) (incf x) (list x))))
 *→* ((4) NIL (5) NIL 6 (6) 7 (7))
-
 ```
 
 
@@ -9028,7 +8309,6 @@ Assuming *x* is not globally special,
  (unless \param{test} \plus{\curly{\param{form}}}) \EQ (cond ((not \param{test}) \plus{\curly{\param{form}}}))
  (unless \param{test} \plus{\curly{\param{form}}}) \EQ (if \param{test} nil (progn \plus{\curly{\param{form}}}))
  (unless \param{test} \plus{\curly{\param{form}}}) \EQ (when (not \param{test}) \plus{\curly{\param{form}}})
-
 ```
 
 
@@ -9062,7 +8342,6 @@ Assuming *x* is not globally special,
 \OUT Debug> \IN{:CONTINUE 1}
 \OUT Value to evaluate and use for X: \IN{'IV}
 *→* 5
-
 ```
 
 
@@ -9072,7 +8351,6 @@ Assuming *x* is not globally special,
 \EQ
 (let ((#1=#:g0001 \param{test-key}))
   (cond \star{\curly{((member #1# '(\starparam{key})) \starparam{form})}}))
-
 ```
 
 
@@ -9113,7 +8391,6 @@ Assuming *x* is not globally special,
 \OUT Use value: \IN{12}
 *→* 48
  x *→* 12
-
 ```
 
 
@@ -9123,7 +8400,6 @@ Assuming *x* is not globally special,
 \EQ
 (let ((#1=#:g0001 \param{test-key}))
   (cond \star{\curly{((typep #1# '\param{type}) \starparam{form})}}))
-
 ```
 
 
@@ -9131,7 +8407,6 @@ Assuming *x* is not globally special,
  (multiple-value-bind (f r) 
      (floor 130 11)
    (list f r)) *→* (11 9)
-
 ```
 
 
@@ -9141,7 +8416,6 @@ Assuming *x* is not globally special,
                              (declare (ignore #1#))
                              \starparam{form})
                          \param{values-form})
-
 ```
 
 
@@ -9152,19 +8426,16 @@ Assuming *x* is not globally special,
 *→* 5
  (multiple-value-call #'+ (floor 5 3) (floor 19 4)) \EQ (+ 1 2 4 3)
 *→* 10
-
 ```
 
 
 ```lisp
  (multiple-value-list (floor -3 4)) *→* (-1 1)
-
 ```
 
 
 ```lisp
  (multiple-value-list form) \EQ (multiple-value-call #'list form)
-
 ```
 
 
@@ -9174,19 +8445,16 @@ Assuming *x* is not globally special,
     (values-list temp)
     (setq temp nil)
     (values-list temp)) *→* 1, 2, 3
-
 ```
 
 
 ```lisp
  (multiple-value-setq (\i{symbol}\subOne ... \i{symbol}\subN) \i{value-producing-form})
-
 ```
 
 
 ```lisp
  (values (setf (values \i{symbol}\subOne ... \i{symbol}\subN) \i{value-producing-form}))
-
 ```
 
 
@@ -9201,7 +8469,6 @@ Assuming *x* is not globally special,
  (multiple-value-setq (a b) (values 4 5 6)) *→* 4
  a *→* 4
  b *→* 5
-
 ```
 
 
@@ -9216,21 +8483,18 @@ Assuming *x* is not globally special,
  (multiple-value-bind (r theta) (polar 3.0 4.0)
    (vector r theta))
 *→* #(5.0 0.927295)
-
 ```
 
 
 ```lisp
  (defun foo (x y)
    (floor (+ x y) y)) *→* FOO
-
 ```
 
 
 ```lisp
  (defun foo (x y)
    (values (floor (+ x y) y))) *→* FOO
-
 ```
 
 
@@ -9239,13 +8503,11 @@ Assuming *x* is not globally special,
  (values-list '(1)) *→* 1
  (values-list '(1 2)) *→* 1, 2
  (values-list '(1 2 3)) *→* 1, 2, 3
-
 ```
 
 
 ```lisp
  (values-list \param{list}) \EQ (apply #'values \param{list})
-
 ```
 
 
@@ -9259,13 +8521,11 @@ Assuming *x* is not globally special,
         (b (mod x y)))
    (values a b (= a b)))
 *→* 3332987528, 3332987528, true
-
 ```
 
 
 ```lisp
  (nth-value \param{n} \param{form}) \EQ (nth \param{n} (multiple-value-list \param{form}))
-
 ```
 
 
@@ -9281,14 +8541,12 @@ Assuming *x* is not globally special,
        statement5
        ...
        )
-
 ```
 
 
 ```lisp
 (prog* ((y z) (x (car y)))
        (return x))
-
 ```
 
 
@@ -9297,7 +8555,6 @@ Assuming *x* is not globally special,
  (prog ((a 2) (b a)) (return (if (= a b) '= '/=))) *→* /=
  (prog* ((a 2) (b a)) (return (if (= a b) '= '/=))) *→* =
  (prog () 'no-return-value) *→* NIL
-
 ```
 
 
@@ -9319,7 +8576,6 @@ Assuming *x* is not globally special,
                 "Mismatch - gleep!  ~S" y)
         (setq z y)
         (go rejoin))) *→* KING-OF-CONFUSION 
-
 ```
 
 
@@ -9335,14 +8591,12 @@ Assuming *x* is not globally special,
        (cerror "Will self-pair extraneous items"
               "Mismatch - gleep!  ~S" y)
        (setq z y)))) *→* PRINCE-OF-CLARITY 
-
 ```
 
 
 ```lisp
  (prog \param{variable-list} \param{declaration} . \param{body})
     \EQ (block nil (let \param{variable-list} \param{declaration} (tagbody . \param{body})))
-
 ```
 
 
@@ -9371,7 +8625,6 @@ Assuming *x* is not globally special,
  (prog2 (incf temp) (incf temp) (incf temp)) *→* 3
  temp *→* 4
  (prog2 1 (values 2 3 4) 5) *→* 2
-
 ```
 
 
@@ -9385,7 +8638,6 @@ Assuming *x* is not globally special,
 ```lisp
  (prog1 \starparam{form}) \EQ (values (multiple-value-prog1 \starparam{form}))
  (prog2 \param{form1} \starparam{form}) \EQ (let () \param{form1} (prog1 \starparam{form}))
-
 ```
 
 
@@ -9398,7 +8650,6 @@ Assuming *x* is not globally special,
       (progn (setq a nil) 'here)
       (progn (setq a t) 'there)) *→* HERE
  a *→* NIL
-
 ```
 
 
@@ -9407,7 +8658,6 @@ Assuming *x* is not globally special,
    \param{documentation}
    \bq(setf ,reference
           (\param{function} ,reference ,\i{arg1} ,\i{arg2} ...)))
-
 ```
 
 
@@ -9420,7 +8670,6 @@ Assuming *x* is not globally special,
  y *→* (A B C)
  (define-modify-macro new-incf (&optional (delta 1)) +)
  (define-modify-macro unionf (other-set &rest keywords) union)
-
 ```
 
 
@@ -9438,13 +8687,11 @@ Assuming *x* is not globally special,
 
 ```lisp
  (defsetf symbol-value set)
-
 ```
 
 
 ```lisp
  (defsetf car rplaca)
-
 ```
 
 
@@ -9464,7 +8711,6 @@ Assuming *x* is not globally special,
  a *→* (A 3 C D)
  b *→* (7)
  c *→* (1 2 3 (4 MIDDLEGUY-SYMBOL 6) 7 8 9)
-
 ```
 
 
@@ -9550,14 +8796,12 @@ Assuming *x* is not globally special,
                   ,store)               ;Storing form.
                \bq(ldb ,btemp ,access-form) ;Accessing form.
               ))))
-
 ```
 
 
 ```lisp
  (get-setf-expansion 'x)
 *→* NIL, NIL, (#:G0001), (SETQ X #:G0001), X 
-
 ```
 
 
@@ -9611,7 +8855,6 @@ Assuming *x* is not globally special,
        place-2 newvalue-2
        ...
        place-N newvalue-N)
-
 ```
 
 
@@ -9620,7 +8863,6 @@ Assuming *x* is not globally special,
         (setf place-2 newvalue-2)
         ...
         (setf place-N newvalue-N))
-
 ```
 
 
@@ -9633,7 +8875,6 @@ Assuming *x* is not globally special,
  (psetf (car x) 'x (cadr y) (car x) (cdr x) y) *→* NIL 
  x *→* (X 1 A 3) 
  y *→* (1 A 3) 
-
 ```
 
 
@@ -9642,7 +8883,6 @@ Assuming *x* is not globally special,
  (shiftf y x (cdr x) '(hi there)) *→* TRASH
  x *→* (2 3)
  y *→* (1 HI THERE)
-
  (setq x (list 'a 'b 'c)) *→* (A B C)
  (shiftf (cadr x) 'z) *→* B
  x *→* (A Z C)
@@ -9652,7 +8892,6 @@ Assuming *x* is not globally special,
  (setq x (list 'a 'b 'c 'd)) *→* (A B C D)
  (shiftf (nth (setq n (+ n 1)) x) 'z) *→* B
  x *→* (A Z C D)
-
 ```
 
 
@@ -9667,7 +8906,6 @@ Assuming *x* is not globally special,
    ...
    (setf \param{placen} var0)
    var1)
-
 ```
 
 
@@ -9677,7 +8915,6 @@ Assuming *x* is not globally special,
  (prog1 (nth (setq n (+ n 1)) x)
         (setf (nth (setq n (+ n 1)) x) 'z)) *→* B
  x *→* (A B Z D)
-
 ```
 
 
@@ -9688,7 +8925,6 @@ Assuming *x* is not globally special,
              (nth (incf n) x)
              (nth (incf n) x))
     x) *→* (A C D B E F G)
-
 ```
 
 
@@ -9697,7 +8933,6 @@ Assuming *x* is not globally special,
         \param{place2} \param{place3}
         ...
         \param{placen} \param{place1})
-
 ```
 
 
@@ -9710,7 +8945,6 @@ Assuming *x* is not globally special,
  (gethash "one" table) *→* 1, T
  (make-hash-table :rehash-size 1.5 :rehash-threshold 0.7) 
 *→* #<HASH-TABLE EQL 0/120 46156620>
-
 ```
 
 
@@ -9719,13 +8953,11 @@ Assuming *x* is not globally special,
  (hash-table-p table) *→ true*
  (hash-table-p 37) *→ false*
  (hash-table-p '((a . 1) (b . 2))) *→ false*
-
 ```
 
 
 ```lisp
  (hash-table-p \param{object}) \EQ (typep \param{object} 'hash-table)
-
 ```
 
 
@@ -9736,7 +8968,6 @@ Assuming *x* is not globally special,
  (hash-table-count table) *→* 1
  (dotimes (i 100) (setf (gethash i table) i)) *→* NIL
  (hash-table-count table) *→* 100
-
 ```
 
 
@@ -9749,7 +8980,6 @@ Assuming *x* is not globally special,
                 (incf total))
             \param{table})
    total)
-
 ```
 
 
@@ -9757,7 +8987,6 @@ Assuming *x* is not globally special,
  (setq table (make-hash-table :size 100 :rehash-size 1.4))
 *→* #<HASH-TABLE EQL 0/100 2556371>
  (hash-table-rehash-size table) *→* 1.4
-
 ```
 
 
@@ -9765,7 +8994,6 @@ Assuming *x* is not globally special,
  (setq table (make-hash-table :size 100 :rehash-threshold 0.5))
 *→* #<HASH-TABLE EQL 0/100 2562446>
  (hash-table-rehash-threshold table) *→* 0.5
-
 ```
 
 
@@ -9800,7 +9028,6 @@ Assuming *x* is not globally special,
  (remhash 100 table) *→ true*
  (gethash 100 table) *→* NIL, false
  (remhash 100 table) *→ false*
-
 ```
 
 
@@ -9826,7 +9053,6 @@ Assuming *x* is not globally special,
 (6 36) 
 (4 16) 
 *→* NIL
-
 ```
 
 
@@ -9850,7 +9076,6 @@ Assuming *x* is not globally special,
                                :key #'car :test (hash-table-test hash-table))))
        (error "Generated entries and Maphash entries don't correspond"))
      t))
-
 ```
 
 
@@ -9860,7 +9085,6 @@ Assuming *x* is not globally special,
      (loop (multiple-value-bind (more key value) (next-entry)
              (unless more (return nil))
              (funcall function key value)))))
-
 ```
 
 
@@ -9872,7 +9096,6 @@ Assuming *x* is not globally special,
  (clrhash table) *→* #<HASH-TABLE EQL 0/120 32004073>
  (hash-table-count table) *→* 0
  (gethash 57 table) *→* NIL, false
-
 ```
 
 
@@ -9882,7 +9105,6 @@ Assuming *x* is not globally special,
  (let ((r (make-random-state)))
    (= (sxhash r) (sxhash (make-random-state r))))
 *→* \term{implementation-dependent}
-
 ```
 
 
@@ -9890,15 +9112,12 @@ Assuming *x* is not globally special,
  (do ((temp-one 1 (1+ temp-one))
        (temp-two 0 (1- temp-two)))
       ((> (- temp-one temp-two) 5) temp-one)) *→* 4
-
  (do ((temp-one 1 (1+ temp-one))
        (temp-two 0 (1+ temp-one)))     
       ((= 3 temp-two) temp-one)) *→* 3
-
  (do* ((temp-one 1 (1+ temp-one))
         (temp-two 0 (1+ temp-one)))
        ((= 3 temp-two) temp-one)) *→* 2                     
-
  (do ((j 0 (+ j 1)))
      (nil)                       ;Do forever.
    (format t "~%Input ~D:" j)
@@ -9911,7 +9130,6 @@ Assuming *x* is not globally special,
 \OUT Output 1: (57 BOXES)
 \OUT Input 2: \IN{NIL}
 *→* NIL
-
  (setq a-vector (vector 1 nil 3 nil))
  (do ((i 0 (+ i 1))     ;Sets every null element of a-vector to zero.
       (n (array-dimension a-vector 0)))
@@ -9919,7 +9137,6 @@ Assuming *x* is not globally special,
    (when (null (aref a-vector i))
      (setf (aref a-vector i) 0))) *→* NIL
 a-vector *→* #(1 0 3 0)
-
 ```
 
 
@@ -9928,7 +9145,6 @@ a-vector *→* #(1 0 3 0)
       (oldx x x))
      ((null x))
    body)
-
 ```
 
 
@@ -9938,7 +9154,6 @@ a-vector *→* #(1 0 3 0)
       (z '() (cons (f (car x) (car y)) z)))
      ((or (null x) (null y))
       (nreverse z)))
-
 ```
 
 
@@ -9947,7 +9162,6 @@ a-vector *→* #(1 0 3 0)
         (do ((x list (cdr x))
              (y '() (cons (car x) y)))
             ((endp x) y)))
-
 ```
 
 
@@ -9960,7 +9174,6 @@ a-vector *→* #(1 0 3 0)
               ((null s))
             (when (eq (car s) sym)
               (return-from ribcage-lookup (car v)))))) *→* RIBCAGE-LOOKUP
-
 ```
 
 
@@ -9977,7 +9190,6 @@ a-vector *→* #(1 0 3 0)
                   var2 step2
                   ...
                   varn stepn))))
-
 ```
 
 
@@ -9986,7 +9198,6 @@ a-vector *→* #(1 0 3 0)
  (setq temp-two 0) *→* 0
  (dotimes (temp-one 10 t) (incf temp-two)) *→* T
  temp-two *→* 10
-
 ```
 
 
@@ -10017,22 +9228,18 @@ a-vector *→* #(1 0 3 0)
    #'alpha-char-p
    "A man, a plan, a cat, a ham, a yak,
                   a yam, a hat, a canal--Panama!")) *→* T
-
 ```
 
 
 ```lisp
  (setq temp-two '()) *→* NIL
  (dolist (temp-one '(1 2 3 4) temp-two) (push temp-one temp-two)) *→* (4 3 2 1)
-
  (setq temp-two 0) *→* 0
  (dolist (temp-one '(1 2 3 4)) (incf temp-two)) *→* NIL
  temp-two *→* 4
-
  (dolist (x '(a b c d)) (prin1 x) (princ " ")) 
 \OUT A B C D 
 *→* NIL
-
 ```
 
 
@@ -10051,7 +9258,6 @@ a-vector *→* #(1 0 3 0)
 \OUT The square root of 4 is 2.
 \OUT Number: \IN{done\CRLF}
 *→* NIL
-
 ;; An example of the extended form of LOOP.
  (defun square-advisor ()
    (loop as n = (progn (format t "~&Number: ")
@@ -10066,19 +9272,16 @@ a-vector *→* #(1 0 3 0)
 \OUT The square of 23 is 529.
 \OUT Number: \IN{done\CRLF}
 *→* NIL
-
 ;; Another example of the extended form of LOOP.
  (loop for n from 1 to 10
        when (oddp n)
          collect n)
 *→* (1 3 5 7 9)
-
 ```
 
 
 ```lisp
  (loop \starparam{compound-form}) \EQ (loop do \starparam{compound-form})
-
 ```
 
 
@@ -10171,7 +9374,6 @@ a-vector *→* #(1 0 3 0)
 *→* 1
 \OV 1.0s0 
 \OV 1.0d0
-
 ```
 
 
@@ -10179,7 +9381,6 @@ a-vector *→* #(1 0 3 0)
  (minusp -1) *→ true*
  (plusp 0) *→ false*
  (plusp least-positive-single-float) *→ true*
-
 ```
 
 
@@ -10189,13 +9390,11 @@ a-vector *→* #(1 0 3 0)
  (zerop -0.0) *→ true*
  (zerop 0/100) *→ true*
  (zerop #c(0 0.0)) *→ true*
-
 ```
 
 
 ```lisp
  (zerop \param{number}) \EQ (= \param{number} 0)
-
 ```
 
 
@@ -10225,14 +9424,12 @@ a-vector *→* #(1 0 3 0)
 \OUT -2.5 -3 -2 -2 -2
 \OUT -2.6 -3 -2 -2 -3
 *→* NIL
-
 ```
 
 
 ```lisp
  (floor 5 2) *→* 2, 1
  (floor (/ 5 2)) *→* 2, 1/2
-
 ```
 
 
@@ -10240,7 +9437,6 @@ a-vector *→* #(1 0 3 0)
  (sin 0) *→* 0.0
  (cos 0.7853982) *→* 0.707107
  (tan #c(0 1)) *→* #C(0.0 0.761594)
-
 ```
 
 
@@ -10249,7 +9445,6 @@ a-vector *→* #(1 0 3 0)
  (acos #c(0 1))  *→* #C(1.5707963267948966 -0.8813735870195432)
  (/ (atan 1 (sqrt 3)) 6)  *→* 0.087266 
  (atan #c(0 2)) *→* #C(-1.5707964 0.54930615)
-
 ```
 
 
@@ -10272,7 +9467,6 @@ a-vector *→* #(1 0 3 0)
 ```lisp
  (sinh 0) *→* 0.0 
  (cosh (complex 0 -1)) *→* #C(0.540302 -0.0)
-
 ```
 
 
@@ -10280,7 +9474,6 @@ a-vector *→* #(1 0 3 0)
  (*) *→* 1
  (* 3 5) *→* 15
  (* 1.0 #c(22 33) 55/98) *→* #C(12.346938775510203 18.520408163265305)
-
 ```
 
 
@@ -10289,7 +9482,6 @@ a-vector *→* #(1 0 3 0)
  (+ 1) *→* 1
  (+ 31/100 69/100) *→* 1
  (+ 1/5 0.8) *→* 1.0
-
 ```
 
 
@@ -10300,7 +9492,6 @@ a-vector *→* #(1 0 3 0)
  (eql (- 0.0) -0.0) *→ true*
  (- #c(100 45) #c(0 45)) *→* 100
  (- 10 1 2 3 4) *→* 0
-
 ```
 
 
@@ -10314,7 +9505,6 @@ a-vector *→* #(1 0 3 0)
  (/ 5 20) *→* 1/4
  (/ 60 -2 3 5.0) *→* -2.0
  (/ 2 #c(2 2)) *→* #C(1/2 -1/2)
-
 ```
 
 
@@ -10323,14 +9513,12 @@ a-vector *→* #(1 0 3 0)
  (1- 100) *→* 99 
  (1+ (complex 0.0)) *→* #C(1.0 0.0) 
  (1- 5/3) *→* 2/3 
-
 ```
 
 
 ```lisp
  (1+ \param{number}) \EQ (+ \param{number} 1)
  (1- \param{number}) \EQ (- \param{number} 1)
-
 ```
 
 
@@ -10342,7 +9530,6 @@ a-vector *→* #(1 0 3 0)
  (abs #c(5 5)) *→* 7.071068
  (abs #c(3/5 4/5)) *→* 1 or approximately 1.0
  (eql (abs -0.0) -0.0) *→ true*
-
 ```
 
 
@@ -10350,20 +9537,17 @@ a-vector *→* #(1 0 3 0)
  (evenp 0) *→ true*
  (oddp 10000000000000000000000) *→ false*
  (oddp -1) *→ true*
-
 ```
 
 
 ```lisp
  (evenp \param{integer}) \EQ (not (oddp \param{integer}))
  (oddp \param{integer})  \EQ (not (evenp \param{integer}))
-
 ```
 
 
 ```lisp
  (expt x 0) \EQ (coerce 1 (type-of x))
-
 ```
 
 
@@ -10376,7 +9560,6 @@ a-vector *→* #(1 0 3 0)
  (expt #c(0 1) 2) *→* -1
  (expt #c(2 2) 3) *→* #C(-16 16)
  (expt #c(2 2) 4) *→* -64 
-
 ```
 
 
@@ -10385,7 +9568,6 @@ a-vector *→* #(1 0 3 0)
  (expt x 3) *→* 1 ;except for round-off error
  (sqrt (expt x 3)) *→* 1 ;except for round-off error
  (expt x 3/2) *→* -1 ;except for round-off error
-
 ```
 
 
@@ -10398,13 +9580,11 @@ a-vector *→* #(1 0 3 0)
  (gcd 63 -42 35) *→* 7
  (gcd 5) *→* 5
  (gcd -4) *→* 4
-
 ```
 
 
 ```lisp
  (gcd b c ... z) \EQ (gcd (gcd a b) c ... z)
-
 ```
 
 
@@ -10419,7 +9599,6 @@ a-vector *→* #(1 0 3 0)
  (incf n 0.5) *→* 2.5
  (decf n) *→* 1.5
  n *→* 1.5
-
 ```
 
 
@@ -10431,19 +9610,16 @@ a-vector *→* #(1 0 3 0)
 
 ```lisp
  (lcm a b) \EQ (/ (abs (* a b)) (gcd a b))
-
 ```
 
 
 ```lisp
  (lcm a 0) \EQ (lcm 0 a) \EQ 0
-
 ```
 
 
 ```lisp
  (lcm a b c ... z) \EQ (lcm (lcm a b) c ... z)
-
 ```
 
 
@@ -10454,13 +9630,11 @@ a-vector *→* #(1 0 3 0)
  (lcm 14 35) *→* 70
  (lcm 0 5) *→* 0
  (lcm 1 2 3 4 5 6) *→* 60
-
 ```
 
 
 ```lisp
  (log -1.0) \EQ (complex 0.0 (float pi 0.0))
-
 ```
 
 
@@ -10473,14 +9647,12 @@ a-vector *→* #(1 0 3 0)
 
 ```lisp
 (log \i{x}) \EQ (complex (log (abs \i{x})) (phase \i{x}))
-
 ```
 
 
 ```lisp
  (log \param{base} \param{number})
  \EQ (/ (log \param{number}) (log \param{base}))
-
 ```
 
 
@@ -10493,14 +9665,12 @@ a-vector *→* #(1 0 3 0)
 *→* #C(-1.0 0.0)
 \OV #C(-1 0)
  (log 8.0 2) *→* 3.0
-
 ```
 
 
 ```lisp
  (log #c(-16 16) #c(2 2)) *→* 3 or approximately #c(3.0 0.0)
                                or approximately 3.0 (unlikely)
-
 ```
 
 
@@ -10519,7 +9689,6 @@ a-vector *→* #(1 0 3 0)
  (rem 13.4 1) *→* 0.4
  (mod -13.4 1) *→* 0.6
  (rem -13.4 1) *→* -0.4
-
 ```
 
 
@@ -10533,13 +9702,11 @@ a-vector *→* #(1 0 3 0)
  (signum #c(7.5 10.0)) *→* #C(0.6 0.8)
  (signum #c(0.0 -14.7)) *→* #C(0.0 -1.0)
  (eql (signum -0.0) -0.0) *→ true*
-
 ```
 
 
 ```lisp
  (signum x) \EQ (if (zerop x) x (/ x (abs x)))
-
 ```
 
 
@@ -10557,13 +9724,11 @@ a-vector *→* #(1 0 3 0)
  (isqrt 25) *→* 5
  (sqrt -1) *→* #C(0.0 1.0)
  (sqrt #c(0 2)) *→* #C(1.0 1.0)
-
 ```
 
 
 ```lisp
  (isqrt x) \EQ (values (floor (sqrt x))) 
-
 ```
 
 
@@ -10585,7 +9750,6 @@ a-vector *→* #(1 0 3 0)
     (93 85 53 99 58 62 2 23 23 59)
     (93 85 53 99 58 62 2 23 23 59)
     (68 24 35 54 65 54 55 50 59 49))
-
 ```
 
 
@@ -10594,7 +9758,6 @@ a-vector *→* #(1 0 3 0)
  (let ((state1 (make-random-state))
        (state2 (make-random-state)))
    (= (random 1000 state1) (random 1000 state2))) *→ true*
-
 ```
 
 
@@ -10602,13 +9765,11 @@ a-vector *→* #(1 0 3 0)
  (random-state-p *random-state*) *→ true*
  (random-state-p (make-random-state)) *→ true*
  (random-state-p 'test-function) *→ false*
-
 ```
 
 
 ```lisp
  (random-state-p \param{object}) \EQ (typep \param{object} 'random-state)
-
 ```
 
 
@@ -10627,7 +9788,6 @@ a-vector *→* #(1 0 3 0)
     (19 16 44 19 96 15 76 96 13 61)
     (16 67 0 43 70 79 58 5 63 50)
     (16 67 0 43 70 79 58 5 63 50))
-
 ```
 
 
@@ -10637,19 +9797,16 @@ a-vector *→* #(1 0 3 0)
  (numberp #c(5/3 7.2)) *→ true*
  (numberp nil) *→ false*
  (numberp (cons 1 2)) *→ false*
-
 ```
 
 
 ```lisp
  (numberp \param{object}) \EQ (typep \param{object} 'number)
-
 ```
 
 
 ```lisp
  (cis 0) *→* #C(1.0 0.0)
-
 ```
 
 
@@ -10659,7 +9816,6 @@ a-vector *→* #(1 0 3 0)
  (complex 1 1/2) *→* #C(1 1/2)
  (complex 1 .99) *→* #C(1.0 0.99)
  (complex 3/2 0.0) *→* #C(1.5 0.0)
-
 ```
 
 
@@ -10673,13 +9829,11 @@ a-vector *→* #(1 0 3 0)
  (complexp 1.2d2) *→ false*
  (complexp #c(5/3 7.2)) *→ true*
 
-
 ```
 
 
 ```lisp
  (complexp \param{object}) \EQ (typep \param{object} 'complex)
-
 ```
 
 
@@ -10690,13 +9844,11 @@ a-vector *→* #(1 0 3 0)
  (conjugate #C(3/5 4/5)) *→* #C(3/5 -4/5)
  (conjugate #C(0.0D0 -1.0D0)) *→* #C(0.0D0 1.0D0)
  (conjugate 3.7) *→* 3.7
-
 ```
 
 
 ```lisp
  (conjugate z) \EQ (complex (realpart z) (- (imagpart z)))
-
 ```
 
 
@@ -10705,7 +9857,6 @@ a-vector *→* #(1 0 3 0)
  (phase 0) *→* 0.0s0
  (phase (cis 30)) *→* -1.4159266
  (phase #c(0 1)) *→* 1.5707964
-
 ```
 
 
@@ -10714,7 +9865,6 @@ a-vector *→* #(1 0 3 0)
  (imagpart #c(23 41.0)) *→* 41.0
  (realpart #c(23 41.0)) *→* 23.0
  (imagpart 23.0) *→* 0.0
-
 ```
 
 
@@ -10723,13 +9873,11 @@ a-vector *→* #(1 0 3 0)
  (realp #c(5/3 7.2)) *→ false*
  (realp nil) *→ false*
  (realp (cons 1 2)) *→ false*
-
 ```
 
 
 ```lisp
  (realp \param{object}) \EQ (typep \param{object} 'real)
-
 ```
 
 
@@ -10740,13 +9888,11 @@ a-vector *→* #(1 0 3 0)
  (denominator (/ -33)) *→* 33
  (numerator (/ 8 -6)) *→* -4
  (denominator (/ 8 -6)) *→* 3
-
 ```
 
 
 ```lisp
  (gcd (numerator x) (denominator x)) *→* 1
-
 ```
 
 
@@ -10755,19 +9901,16 @@ a-vector *→* #(1 0 3 0)
  (rationalize -11/100) *→* -11/100
  (rational .1) *→* 13421773/134217728 ;implementation-dependent
  (rationalize .1) *→* 1/10
-
 ```
 
 
 ```lisp
  (float (rational x) x) \EQ x
-
 ```
 
 
 ```lisp
  (float (rationalize x) x) \EQ x
-
 ```
 
 
@@ -10775,13 +9918,11 @@ a-vector *→* #(1 0 3 0)
  (rationalp 12) *→ true*
  (rationalp 6/5) *→ true*
  (rationalp 1.212) *→ false*
-
 ```
 
 
 ```lisp
  (rationalp \param{object}) \EQ (typep \param{object} 'rational)
-
 ```
 
 
@@ -10790,14 +9931,12 @@ a-vector *→* #(1 0 3 0)
  (ash 16 0) *→* 16
  (ash 16 -1) *→* 8
  (ash -100000000000000000000000000000000 -100) *→* -79
-
 ```
 
 
 ```lisp
  (logbitp \param{j} (ash \param{n} \param{k}))
  \EQ (and (>= \param{j} \param{k}) (logbitp (- \param{j} \param{k}) \param{n}))
-
 ```
 
 
@@ -10815,7 +9954,6 @@ a-vector *→* #(1 0 3 0)
  (integer-length (1- (expt 2 9))) *→* 9
  (integer-length (- (expt 2 9))) *→* 9
  (integer-length (- (1+ (expt 2 9)))) *→* 10
-
 ```
 
 
@@ -10825,7 +9963,6 @@ a-vector *→* #(1 0 3 0)
                     (- integer)
                     (1+ integer))
                 2)))
-
 ```
 
 
@@ -10835,13 +9972,11 @@ a-vector *→* #(1 0 3 0)
  (integerp 6/5) *→ false*
  (integerp nil) *→ false*
 
-
 ```
 
 
 ```lisp
  (integerp \param{object}) \EQ (typep \param{object} 'integer)
-
 ```
 
 
@@ -10849,7 +9984,6 @@ a-vector *→* #(1 0 3 0)
  (parse-integer "123") *→* 123, 3
  (parse-integer "123" :start 1 :radix 5) *→* 13, 3
  (parse-integer "no-integer" :junk-allowed t) *→* NIL, 0
-
 ```
 
 
@@ -10857,7 +9991,6 @@ a-vector *→* #(1 0 3 0)
  (boole boole-ior 1 16) *→* 17
  (boole boole-and -2 5) *→* 4
  (boole boole-eqv 17 15) *→* -31
-
 ;;; These examples illustrate the result of applying BOOLE and each
 ;;; of the possible values of OP to each possible combination of bits.
  (progn
@@ -10889,13 +10022,11 @@ a-vector *→* #(1 0 3 0)
 \OUT  BOOLE-SET    -1          -1    ...1111
 \OUT  BOOLE-XOR     6         110    ...0110
 *→* NIL
-
 ```
 
 
 ```lisp
  (boole boole-and x y) \EQ (logand x y)
-
 ```
 
 
@@ -10926,7 +10057,6 @@ a-vector *→* #(1 0 3 0)
  (boole boole-ior 1 16) *→* 17
  (boole boole-and -2 5) *→* 4
  (boole boole-eqv 17 15) *→* -31
-
 ```
 
 
@@ -10939,7 +10069,6 @@ a-vector *→* #(1 0 3 0)
  (lognot 1) *→* -2
  (lognot -1) *→* 0
  (lognot (1+ (lognot 1000))) *→* 999
-
 ;;; In the following example, m is a mask.  For each bit in
 ;;; the mask that is a 1, the corresponding bits in x and y are
 ;;; exchanged.  For each bit in the mask that is a 0, the 
@@ -10963,7 +10092,6 @@ a-vector *→* #(1 0 3 0)
 \OUT x = #o457426
 \OUT y = #o312557
 *→* NIL
-
 ```
 
 
@@ -10975,7 +10103,6 @@ a-vector *→* #(1 0 3 0)
  (logiorc1 \param{n1} \param{n2}) \EQ (logior (lognot \param{n1}) \param{n2})
  (logiorc2 \param{n1} \param{n2}) \EQ (logior \param{n1} (lognot \param{n2}))
  (logbitp \param{j} (lognot \param{x})) \EQ (not (logbitp \param{j} \param{x}))
-
 ```
 
 
@@ -10986,13 +10113,11 @@ a-vector *→* #(1 0 3 0)
  (logbitp 1000000 -1) *→ true*
  (logbitp 2 6) *→ true*
  (logbitp 0 6) *→ false*
-
 ```
 
 
 ```lisp
  (logbitp \param{k} \param{n}) \EQ (ldb-test (byte 1 \param{k}) \param{n})
-
 ```
 
 
@@ -11007,7 +10132,6 @@ a-vector *→* #(1 0 3 0)
  (logcount (expt 2 100)) *→* 1
  (logcount (- (expt 2 100))) *→* 100
  (logcount (- (1+ (expt 2 100)))) *→* 1
-
 ```
 
 
@@ -11015,7 +10139,6 @@ a-vector *→* #(1 0 3 0)
     (logcount \param{x})
  \EQ (logcount (- (+ \param{x} 1)))
  \EQ (logcount (lognot \param{x}))
-
 ```
 
 
@@ -11024,13 +10147,11 @@ a-vector *→* #(1 0 3 0)
  (logtest 1 2) *→ false*
  (logtest -2 -1) *→ true*
  (logtest 0 -1) *→ false*
-
 ```
 
 
 ```lisp
  (logtest \param{x} \param{y}) \EQ (not (zerop (logand \param{x} \param{y})))
-
 ```
 
 
@@ -11038,21 +10159,18 @@ a-vector *→* #(1 0 3 0)
  (setq b (byte 100 200)) *→* #<BYTE-SPECIFIER size 100 position 200>
  (byte-size b) *→* 100
  (byte-position b) *→* 200
-
 ```
 
 
 ```lisp
  (byte-size (byte \param{j} \param{k})) \EQ \param{j}
  (byte-position (byte \param{j} \param{k})) \EQ \param{k}
-
 ```
 
 
 ```lisp
  (ldb (byte 0 3) #o7777) *→* 0
  (dpb #o7777 (byte 0 3) 0) *→* 0
-
 ```
 
 
@@ -11060,7 +10178,6 @@ a-vector *→* #(1 0 3 0)
  (deposit-field 7 (byte 2 1) 0) *→* 6
  (deposit-field -1 (byte 4 0) 0) *→* 15
  (deposit-field 0 (byte 2 1) -3) *→* -7
-
 ```
 
 
@@ -11069,7 +10186,6 @@ a-vector *→* #(1 0 3 0)
  \EQ (if (and (>= \param{j} \param{p}) (< \param{j} (+ \param{p} \param{s})))
         (logbitp \param{j} \param{m})
         (logbitp \param{j} \param{n}))
-
 ```
 
 
@@ -11077,7 +10193,6 @@ a-vector *→* #(1 0 3 0)
  (dpb 1 (byte 1 10) 0) *→* 1024
  (dpb -2 (byte 2 10) 0) *→* 2048
  (dpb 1 (byte 2 10) 2048) *→* 1024
-
 ```
 
 
@@ -11086,13 +10201,11 @@ a-vector *→* #(1 0 3 0)
  \EQ (if (and (>= \param{j} \param{p}) (< \param{j} (+ \param{p} \param{s})))
         (logbitp (- \param{j} \param{p}) \param{m})
         (logbitp \param{j} \param{n}))
-
 ```
 
 
 ```lisp
  (dpb \param{x} (byte 0 \param{y}) \param{z}) *→* \param{z}
-
 ```
 
 
@@ -11101,20 +10214,17 @@ a-vector *→* #(1 0 3 0)
  (setq a (list 8)) *→* (8)
  (setf (ldb (byte 2 1) (car a)) 1) *→* 1
  a *→* (10)
-
 ```
 
 
 ```lisp
  (logbitp \param{j} (ldb (byte \param{s} \param{p}) \param{n}))
     \EQ (and (< \param{j} \param{s}) (logbitp (+ \param{j} \param{p}) \param{n}))
-
 ```
 
 
 ```lisp
  (ldb (byte 0 \param{x}) \param{y}) *→* 0
-
 ```
 
 
@@ -11122,7 +10232,6 @@ a-vector *→* #(1 0 3 0)
  (ldb-test (byte 4 1) 16) *→ true*
  (ldb-test (byte 3 1) 16) *→ false*
  (ldb-test (byte 3 2) 16) *→ true*
-
 ```
 
 
@@ -11130,7 +10239,6 @@ a-vector *→* #(1 0 3 0)
  (ldb-test bytespec n) \EQ
  (not (zerop (ldb bytespec n))) \EQ
  (logtest (ldb bytespec -1) n)
-
 ```
 
 
@@ -11141,7 +10249,6 @@ a-vector *→* #(1 0 3 0)
  a *→* 15
  (setf (mask-field (byte 2 0) a) 1) *→* 1
  a *→* 13
-
 ```
 
 
@@ -11150,7 +10257,6 @@ a-vector *→* #(1 0 3 0)
  (logbitp \param{j} (mask-field (byte \param{s} \param{p}) \param{n}))
    \EQ (and (>= \param{j} \param{p}) (< \param{j} \param{s}) (logbitp \param{j} \param{n}))
  (mask-field \param{bs} \param{n}) \EQ (logand \param{n} (dpb -1 \param{bs} 0))
-
 ```
 
 
@@ -11158,7 +10264,6 @@ a-vector *→* #(1 0 3 0)
  (multiple-value-bind (signif expon sign)
                       (integer-decode-float f)
    (scale-float (float signif f) expon)) \EQ (abs f)
-
 ```
 
 
@@ -11183,7 +10288,6 @@ a-vector *→* #(1 0 3 0)
  (float-precision 1.0) *→* 24
  (float-precision least-positive-single-float) *→* 1
  (integer-decode-float 1.0) *→* 8388608, -23, 1
-
 ```
 
 
@@ -11192,7 +10296,6 @@ a-vector *→* #(1 0 3 0)
                       (decode-float f)
    (scale-float signif expon))
 \EQ (abs f)
-
 ```
 
 
@@ -11201,7 +10304,6 @@ a-vector *→* #(1 0 3 0)
                       (decode-float f)
    (* (scale-float signif expon) sign))
 \EQ f
-
 ```
 
 
@@ -11213,7 +10315,6 @@ a-vector *→* #(1 0 3 0)
 *→* 1.0d0
 \OV 1.0
  (eql (float 1.0 1.0d0) 1.0d0) *→ true*
-
 ```
 
 
@@ -11222,13 +10323,11 @@ a-vector *→* #(1 0 3 0)
  (floatp 1.212) *→ true*
  (floatp 1.2s2) *→ true*
  (floatp (expt 2 130)) *→ false*
-
 ```
 
 
 ```lisp
  (floatp \param{object}) \EQ (typep \param{object} 'float)
-
 ```
 
 
@@ -11250,7 +10349,6 @@ a-vector *→* #(1 0 3 0)
    (list a b c d e f))
  (function-keywords *)
 *→* (:B :C :D), true
-
 ```
 
 
@@ -11304,7 +10402,6 @@ a-vector *→* #(1 0 3 0)
               theta (atan new-y x))
         new-y)))
  
-
 ```
 
 
@@ -11344,7 +10441,6 @@ a-vector *→* #(1 0 3 0)
 ;;; on the value of the x and y slots, which were maintained by
 ;;; the old instance.
  
-
 ```
 
 
@@ -11353,7 +10449,6 @@ a-vector *→* #(1 0 3 0)
                \i{instance}
                \i{slot-name}
                'slot-boundp)
-
 ```
 
 
@@ -11362,7 +10457,6 @@ a-vector *→* #(1 0 3 0)
               \i{instance}
               \i{slot-name}
               'slot-makunbound)
-
 ```
 
 
@@ -11383,7 +10477,6 @@ a-vector *→* #(1 0 3 0)
    (slot-value x 'a))
 *→* #<STANDARD-METHOD FOO-METHOD (FOO) 42720573>
  (foo-method foo1) *→* UNO
-
 ```
 
 
@@ -11392,7 +10485,6 @@ a-vector *→* #(1 0 3 0)
                \i{instance}
                \i{slot-name}
                'slot-value)
-
 ```
 
 
@@ -11402,7 +10494,6 @@ a-vector *→* #(1 0 3 0)
                \i{slot-name}
                'setf
                \i{new-value})
-
 ```
 
 
@@ -11410,7 +10501,6 @@ a-vector *→* #(1 0 3 0)
  (defmethod some-gf :before ((a integer)) a)
 *→* #<STANDARD-METHOD SOME-GF (:BEFORE) (INTEGER) 42736540>
  (method-qualifiers *) *→* (:BEFORE)
-
 ```
 
 
@@ -11455,7 +10545,6 @@ a-vector *→* #(1 0 3 0)
       (SETF (SLOT-VALUE '#<OBJ 26274136> 'X) '3.0)
       (SETF (SLOT-VALUE '#<OBJ 26274136> 'Y) '4.0)
       (INITIALIZE-INSTANCE '#<OBJ 26274136>))
-
 ```
 
 
@@ -11487,7 +10576,6 @@ a-vector *→* #(1 0 3 0)
  (defstruct my-struct a b c)
  (defmethod make-load-form ((s my-struct) &optional environment)
     (make-load-form-saving-slots s :environment environment))
-
 ```
 
 
@@ -11520,7 +10608,6 @@ a-vector *→* #(1 0 3 0)
      (9 9 2 2 7 7 8 8) 
      (9)
      (9 9 2 2 (9) (9) 8 8))
-
 ```
 
 
@@ -11555,7 +10642,6 @@ a-vector *→* #(1 0 3 0)
      (9 9 2 2 7 7 8 8) 
      (9)
      (9 9 2 2 (9) (9) 8 8))
-
 ```
 
 
@@ -11700,7 +10786,6 @@ a-vector *→* #(1 0 3 0)
 \OUT Error: No matching method
  (find-method #'some-operation '() (mapcar #'find-class '(integer integer)) nil)
 *→* NIL
-
 ```
 
 
@@ -11713,10 +10798,8 @@ a-vector *→* #(1 0 3 0)
  
  (defclass novel (book) ()) *→* #<STANDARD-CLASS NOVEL 33424764>
  (class-of (make-instance 'novel)) *→* #<STANDARD-CLASS NOVEL 33424764>
-
  (defstruct kons kar kdr) *→* KONS
  (class-of (make-kons :kar 3 :kdr 4)) *→* #<STRUCTURE-CLASS KONS 250020317>
-
 ```
 
 
@@ -11727,7 +10810,6 @@ a-vector *→* #(1 0 3 0)
  (find-symbol "TEMP-SYM") *→* NIL, NIL
  (export (find-symbol "TEMP-SYM" 'temp) 'temp) *→* T
  (find-symbol "TEMP-SYM") *→* TEMP-SYM, :INHERITED
-
 ```
 
 
@@ -11751,7 +10833,6 @@ a-vector *→* #(1 0 3 0)
 *→* NIL, NIL
 \OV :NIL, :EXTERNAL
  (find-symbol (symbol-name :nil) "KEYWORD") *→* :NIL, :EXTERNAL
-
 ```
 
 
@@ -11759,7 +10840,6 @@ a-vector *→* #(1 0 3 0)
  (find-package 'common-lisp) *→* #<PACKAGE "COMMON-LISP">
  (find-package "COMMON-LISP-USER") *→* #<PACKAGE "COMMON-LISP-USER">
  (find-package 'not-there) *→* NIL
-
 ```
 
 
@@ -11774,7 +10854,6 @@ a-vector *→* #(1 0 3 0)
 \OV (CAR TEMP::CAR)
 \OV (TEMP::CAR CAR VEHICLES:CAR)
 \OV (CAR TEMP::CAR VEHICLES:CAR)
-
 ```
 
 
@@ -11782,7 +10861,6 @@ a-vector *→* #(1 0 3 0)
  (import 'common-lisp::car (make-package 'temp :use nil)) *→* T
  (find-symbol "CAR" 'temp) *→* CAR, :INTERNAL
  (find-symbol "CDR" 'temp) *→* NIL, NIL 
-
 ```
 
 
@@ -11790,7 +10868,6 @@ a-vector *→* #(1 0 3 0)
  (let ((before (list-all-packages)))
     (make-package 'temp)
     (set-difference (list-all-packages) before)) *→* (#<PACKAGE "TEMP">)
-
 ```
 
 
@@ -11802,7 +10879,6 @@ a-vector *→* #(1 0 3 0)
  (rename-package 'ephemeral 'temporary '(temp fleeting))
 *→* #<PACKAGE "TEMPORARY">
  (package-nicknames (find-package 'temp)) *→* ("TEMP" "FLEETING")
-
 ```
 
 
@@ -11812,7 +10888,6 @@ a-vector *→* #(1 0 3 0)
  (shadow 'car 'temp) *→* T
  (find-symbol 'car 'temp) *→* TEMP::CAR, :INTERNAL
  (package-shadowing-symbols 'temp) *→* (TEMP::CAR)
-
 ```
 
 
@@ -11829,7 +10904,6 @@ a-vector *→* #(1 0 3 0)
  (export 'test-2::test (find-package 'test-2)) *→* T
  (use-package 'test-2 (find-package 'test-1))    ;should not error
  
-
 ```
 
 
@@ -11840,7 +10914,6 @@ a-vector *→* #(1 0 3 0)
  (package-shadowing-symbols 'temp) *→* NIL
  (shadowing-import sym 'temp) *→* T 
  (package-shadowing-symbols 'temp) *→* (CONFLICT)
-
 ```
 
 
@@ -11848,41 +10921,30 @@ a-vector *→* #(1 0 3 0)
  (setq *foo-package* (make-package "FOO" :use nil))
  (setq *foo-symbol*  (intern "FOO" *foo-package*))
  (export *foo-symbol* *foo-package*)
-
  (setq *bar-package* (make-package "BAR" :use '("FOO")))
  (setq *bar-symbol*  (intern "BAR" *bar-package*))
  (export *foo-symbol* *bar-package*)
  (export *bar-symbol* *bar-package*)
-
  (setq *baz-package* (make-package "BAZ" :use '("BAR")))
-
  (symbol-package *foo-symbol*) *→* #<PACKAGE "FOO">
  (symbol-package *bar-symbol*) *→* #<PACKAGE "BAR">
-
  (prin1-to-string *foo-symbol*) *→* "FOO:FOO"
  (prin1-to-string *bar-symbol*) *→* "BAR:BAR"
-
  (find-symbol "FOO" *bar-package*) *→* FOO:FOO, :EXTERNAL
-
  (find-symbol "FOO" *baz-package*) *→* FOO:FOO, :INHERITED
  (find-symbol "BAR" *baz-package*) *→* BAR:BAR, :INHERITED
-
  (packagep *foo-package*) *→ true*
  (packagep *bar-package*) *→ true*
  (packagep *baz-package*) *→ true*
-
  (package-name *foo-package*) *→* "FOO"
  (package-name *bar-package*) *→* "BAR"
  (package-name *baz-package*) *→* "BAZ"
-
  (package-use-list *foo-package*) *→* ()
  (package-use-list *bar-package*) *→* (#<PACKAGE "FOO">)
  (package-use-list *baz-package*) *→* (#<PACKAGE "BAR">)
-
  (package-used-by-list *foo-package*) *→* (#<PACKAGE "BAR">)
  (package-used-by-list *bar-package*) *→* (#<PACKAGE "BAZ">)
  (package-used-by-list *baz-package*) *→* ()
-
  (delete-package *bar-package*)
 \OUT Error: Package BAZ uses package BAR.
 \OUT If continued, BAZ will be made to unuse-package BAR,
@@ -11890,34 +10952,25 @@ a-vector *→* #(1 0 3 0)
 \OUT Type :CONTINUE to continue.
 \OUT Debug> \IN{:CONTINUE}
 *→* T
-
  (symbol-package *foo-symbol*) *→* #<PACKAGE "FOO">
  (symbol-package *bar-symbol*) is unspecified
-
  (prin1-to-string *foo-symbol*) *→* "FOO:FOO"
  (prin1-to-string *bar-symbol*) is unspecified
-
  (find-symbol "FOO" *bar-package*) is unspecified
-
  (find-symbol "FOO" *baz-package*) *→* NIL, NIL
  (find-symbol "BAR" *baz-package*) *→* NIL, NIL
-
  (packagep *foo-package*) *→* T
  (packagep *bar-package*) *→* T
  (packagep *baz-package*) *→* T
-
  (package-name *foo-package*) *→* "FOO"
  (package-name *bar-package*) *→* NIL
  (package-name *baz-package*) *→* "BAZ"
-
  (package-use-list *foo-package*) *→* ()
  (package-use-list *bar-package*) is unspecified
  (package-use-list *baz-package*) *→* ()
-
  (package-used-by-list *foo-package*) *→* ()
  (package-used-by-list *bar-package*) is unspecified
  (package-used-by-list *baz-package*) *→* ()
-
 ```
 
 
@@ -11926,7 +10979,6 @@ a-vector *→* #(1 0 3 0)
  (make-package "OWNER" :use '("temp")) *→* #<PACKAGE "OWNER">
  (package-used-by-list 'temp) *→* (#<PACKAGE "OWNER">)
  (package-use-list 'owner) *→* (#<PACKAGE "TEMPORARY">)
-
 ```
 
 
@@ -11956,7 +11008,6 @@ a-vector *→* #(1 0 3 0)
                   (subsetp generated-entries all-entries :test #'equal))
       (error "Generated entries and Do-Symbols entries don't correspond"))
      t))
-
 ```
 
 
@@ -11969,7 +11020,6 @@ a-vector *→* #(1 0 3 0)
          (if more? 
             (print symbol)
             (return))))))
-
 ```
 
 
@@ -11981,7 +11031,6 @@ a-vector *→* #(1 0 3 0)
  (find-symbol "CONTRABAND") *→* CONTRABAND, :INHERITED
  (unexport 'contraband 'temp) *→* T
  (find-symbol "CONTRABAND") *→* NIL, NIL
-
 ```
 
 
@@ -11991,7 +11040,6 @@ a-vector *→* #(1 0 3 0)
  (unintern temps-unpack 'temp) *→* T
  (find-symbol "UNPACK" 'temp) *→* NIL, NIL 
  temps-unpack *→* #:UNPACK 
-
 ```
 
 
@@ -12004,7 +11052,6 @@ a-vector *→* #(1 0 3 0)
  (find (find-package 'temp) (package-use-list 'common-lisp-user)) *→* #<PACKAGE "TEMP">
  (unuse-package 'temp) *→* T
  (find-symbol "SHOES") *→* NIL, NIL
-
 ```
 
 
@@ -12015,7 +11062,6 @@ a-vector *→* #(1 0 3 0)
  (use-package 'trash 'temp) *→* T
  (package-use-list 'temp) *→* (#<PACKAGE "TEMP"> #<PACKAGE "TRASH">)
  (find-symbol "LAND-FILL" 'temp) *→* TRASH:LAND-FILL, :INHERITED
-
 ```
 
 
@@ -12036,7 +11082,6 @@ a-vector *→* #(1 0 3 0)
    (:shadow CAR :cdr #:cons)                              
    (:export "CONS")            ; this is the shadowed one.
    )
-
 ```
 
 
@@ -12048,7 +11093,6 @@ a-vector *→* #(1 0 3 0)
    (:use common-lisp)
    (:import-from my-package "MY-FUN") ;requires my-package to exist first
    (:export "MY-FUN"))
-
 ```
 
 
@@ -12072,7 +11116,6 @@ a-vector *→* #(1 0 3 0)
    lst)
 *→* (TEMP::SHY TEMP:BOLD)
 \OV (TEMP:BOLD TEMP::SHY)
-
 ```
 
 
@@ -12082,7 +11125,6 @@ a-vector *→* #(1 0 3 0)
  (intern "Never-Before") *→* |Never-Before|, :INTERNAL 
  (intern "NEVER-BEFORE" "KEYWORD") *→* :NEVER-BEFORE, NIL
  (intern "NEVER-BEFORE" "KEYWORD") *→* :NEVER-BEFORE, :EXTERNAL
-
 ```
 
 
@@ -12091,7 +11133,6 @@ a-vector *→* #(1 0 3 0)
  (package-name *package*) *→* "COMMON-LISP-USER"
  (package-name (symbol-package :test)) *→* "KEYWORD"
  (package-name (find-package 'common-lisp)) *→* "COMMON-LISP"
-
 ```
 
 
@@ -12099,7 +11140,6 @@ a-vector *→* #(1 0 3 0)
  (defvar *foo-package* (make-package "FOO"))
  (rename-package "FOO" "FOO0")
  (package-name *foo-package*) *→* "FOO0"
-
 ```
 
 
@@ -12107,7 +11147,6 @@ a-vector *→* #(1 0 3 0)
  (package-nicknames (make-package 'temporary
                                    :nicknames '("TEMP" "temp")))
 *→* ("temp" "TEMP") 
-
 ```
 
 
@@ -12118,7 +11157,6 @@ a-vector *→* #(1 0 3 0)
  (intern "PILL" 'temp) *→* TEMP::PILL, NIL
  (shadowing-import 'pill 'temp) *→* T
  (package-shadowing-symbols 'temp) *→* (PILL TEMP::CDR)
-
 ```
 
 
@@ -12126,7 +11164,6 @@ a-vector *→* #(1 0 3 0)
  (package-use-list (make-package 'temp)) *→* (#<PACKAGE "COMMON-LISP">)
  (use-package 'common-lisp-user 'temp) *→* T
  (package-use-list 'temp) *→* (#<PACKAGE "COMMON-LISP"> #<PACKAGE "COMMON-LISP-USER">)
-
 ```
 
 
@@ -12134,7 +11171,6 @@ a-vector *→* #(1 0 3 0)
  (package-used-by-list (make-package 'temp)) *→* ()
  (make-package 'trash :use '(temp)) *→* #<PACKAGE "TRASH">
  (package-used-by-list 'temp) *→* (#<PACKAGE "TRASH">)
-
 ```
 
 
@@ -12142,13 +11178,11 @@ a-vector *→* #(1 0 3 0)
  (packagep *package*) *→ true* 
  (packagep 'common-lisp) *→ false* 
  (packagep (find-package 'common-lisp)) *→ true* 
-
 ```
 
 
 ```lisp
  (packagep \param{object}) \EQ (typep \param{object} 'package)
-
 ```
 
 
@@ -12170,7 +11204,6 @@ a-vector *→* #(1 0 3 0)
  (eq 'foo (let ((*package* (find-package 'sample-package)))
             (intern "FOO")))
 *→ false*
-
 ```
 
 
@@ -12179,7 +11212,6 @@ a-vector *→* #(1 0 3 0)
    (make-condition 'package-error
      :package (find-package "COMMON-LISP")))
 *→* #<Package "COMMON-LISP">
-
 ```
 
 
@@ -12273,13 +11305,11 @@ a-vector *→* #(1 0 3 0)
  (setq q (logical-pathname "SYS:SITE;FOO.SYSTEM"))
 *→* #P"SYS:SITE;FOO.SYSTEM"
  (pathnamep q) *→ true*
-
 ```
 
 
 ```lisp
  (pathnamep \param{object}) \EQ (typep \param{object} 'pathname)
-
 ```
 
 
@@ -12291,7 +11321,6 @@ a-vector *→* #(1 0 3 0)
  (pathname-host q) *→* "KATHY"
  (pathname-name q) *→* "LOGIN"
  (pathname-type q) *→* "COM"
-
  ;; Because namestrings are used, the results shown in the remaining
  ;; examples are not necessarily the only possible results.  Mappings
  ;; from namestring representation to pathname representation are 
@@ -12301,13 +11330,11 @@ a-vector *→* #(1 0 3 0)
  ;; to agree on all details). Consult the documentation for each
  ;; implementation for specific information on how namestrings are treated
  ;; that implementation.
-
  ;; VMS
  (pathname-directory (parse-namestring "[FOO.*.BAR]BAZ.LSP"))
 *→* (:ABSOLUTE "FOO" "BAR")
  (pathname-directory (parse-namestring "[FOO.*.BAR]BAZ.LSP") :case :common)
 *→* (:ABSOLUTE "FOO" "BAR")
-
  ;; Unix
  (pathname-directory "foo.l") *→* NIL
  (pathname-device "foo.l") *→* :UNSPECIFIC
@@ -12335,7 +11362,6 @@ a-vector *→* #(1 0 3 0)
 *→* (:ABSOLUTE "foo" :WILD "bar")
  (PATHNAME-DIRECTORY (PARSE-NAMESTRING "/foo/*/bar/baz.l") :case :common)
 *→* (:ABSOLUTE "FOO" :WILD "BAR")
-
  ;; Symbolics LMFS
  (pathname-directory (parse-namestring ">foo>**>bar>baz.lisp"))
 *→* (:ABSOLUTE "foo" :WILD-INFERIORS "bar")
@@ -12344,7 +11370,6 @@ a-vector *→* #(1 0 3 0)
  (pathname-directory (parse-namestring ">foo>*>bar>baz.lisp") :case :common)
 *→* (:ABSOLUTE "FOO" :WILD "BAR")
  (pathname-device (parse-namestring ">foo>baz.lisp")) *→* :UNSPECIFIC
-
 ```
 
 
@@ -12359,7 +11384,6 @@ a-vector *→* #(1 0 3 0)
 *→* #P"HELIUM:[SHARED.HACKS.WEATHER]BAROMETER.LSP;0"
  (load-logical-pathname-translations "HACKS")
 *→ false*
-
 ```
 
 
@@ -12487,14 +11511,12 @@ a-vector *→* #(1 0 3 0)
  (let ((*default-pathname-defaults* (pathname "<MARY>")))
    (merge-pathnames (make-pathname :name "CALENDAR")))
 *→* #P"<MARY>CALENDAR"
-
 ```
 
 
 ```lisp
  (merge-pathnames (enough-namestring pathname defaults) defaults)
 \EQ (merge-pathnames (parse-namestring pathname nil defaults) defaults)
-
 ```
 
 
@@ -12510,7 +11532,6 @@ a-vector *→* #(1 0 3 0)
  (file-namestring q) *→* "getty"
  (directory-namestring q) *→* \i{directory-name}
  (host-namestring q) *→* "kathy" 
-
 ```
 
 
@@ -12541,7 +11562,6 @@ a-vector *→* #(1 0 3 0)
                        "U:/usr/d*/hacks/fr*.l"
                        "V:SYS$DISK:[D*.BACKUP.HACKS]BACKUP-*.*"))
 *→* "V:SYS$DISK:[DMR.BACKUP.HACKS]BACKUP-OB.LSP"
-
 ```
 
 
@@ -12561,7 +11581,6 @@ a-vector *→* #(1 0 3 0)
  *→* #S(PATHNAME ...), 15
  (parse-namestring "foo.lisp")
 *→* #P"foo.lisp"
-
 ```
 
 
@@ -12576,7 +11595,6 @@ a-vector *→* #(1 0 3 0)
  (wild-pathname-p (make-pathname :name :wild) :type) *→ false*
  (wild-pathname-p (pathname "s:>foo>**>")) *→ true* ;Lispm
  (wild-pathname-p (pathname :name "F*O")) *→ true* ;Most places
-
 ```
 
 
@@ -12591,7 +11609,6 @@ a-vector *→* #(1 0 3 0)
  (pathname-name (translate-pathname "foobar" "*"    "foo*")) *→* "foofoobar"
  (pathname-name (translate-pathname "bar"    "*"    "foo*")) *→* "foobar"
  (pathname-name (translate-pathname "foobar" "foo*" "baz*")) *→* "bazbar"
-
  (defun translate-logical-pathname-1 (pathname rules)
    (let ((rule (assoc pathname rules :test #'pathname-match-p)))
      (unless rule (error "No translation rule for ~A" pathname))
@@ -12601,7 +11618,6 @@ a-vector *→* #(1 0 3 0)
                          ("FOO:CODE;"          "MY-UNIX:/lib/foo/")
                          ("FOO:PATCHES;*;"     "MY-UNIX:/lib/foo/patch/*/")))
 *→* #P"MY-UNIX:/lib/foo/basic.l"
-
 ;;;This example assumes one particular set of wildcard conventions
 ;;;Not all file systems will run this example exactly as written
  (defun rename-files (from to)
@@ -12621,7 +11637,6 @@ a-vector *→* #(1 0 3 0)
    ;Renames /usr/joe/lamb-recipes.text to /usr/jim/cookbook/joe's-lamb-rec.text
    ;Renames /usr/joe/pork-recipes.text to /usr/jim/cookbook/joe's-pork-rec.text
    ;Renames /usr/joe/veg-recipes.text to /usr/jim/cookbook/joe's-veg-rec.text
-
 ```
 
 
@@ -12629,7 +11644,6 @@ a-vector *→* #(1 0 3 0)
  (append (pathname-directory \param{default-pathname})
          (cdr  ;remove :relative from the front
            (pathname-directory \param{pathname})))
-
 ```
 
 
@@ -12637,7 +11651,6 @@ a-vector *→* #(1 0 3 0)
  (merge-pathnames "CMUC::FORMAT"
                   "CMUC::PS:<LISPIO>.FASL")
 *→* #P"CMUC::PS:<LISPIO>FORMAT.FASL.0"
-
 ```
 
 
@@ -12645,7 +11658,6 @@ a-vector *→* #(1 0 3 0)
   #'(lambda (*standard-output* &rest arguments)
       (apply #'format t \i{control-string} arguments)
       \i{arguments-tail})
-
 ```
 
 
@@ -12653,7 +11665,6 @@ a-vector *→* #(1 0 3 0)
 %((formatter "~&~A~A") *standard-output* 'a 'b 'c)
 %\OUT AB
 %*→* (C)
-
 ```lisp
 (funcall (formatter "~&~A~A") *standard-output* 'a 'b 'c)
 \OUT AB
@@ -12670,7 +11681,6 @@ a-vector *→* #(1 0 3 0)
 (let ((*print-pretty* t))
   (write object :stream s))
 \EQ (funcall (pprint-dispatch object) s object)
-
 ```
 
 
@@ -12679,7 +11689,6 @@ a-vector *→* #(1 0 3 0)
        (pprint-tabular *standard-output* '(elm main maple center) nil nil 8))
 Roads ELM     MAIN
       MAPLE   CENTER
-
 ```
 
 
@@ -12695,7 +11704,6 @@ Roads ELM     MAIN
           (write-char #\\Space s)
           (pprint-tab :section-relative 0 tabsize s)
           (pprint-newline :fill s))))
-
 ```
 
 
@@ -12703,17 +11711,14 @@ Roads ELM     MAIN
  (defmethod print-object ((obj airplane) stream)
    (print-unreadable-object (obj stream :type t :identity t)
      (princ (tail-number obj) stream)))
-
  (prin1-to-string my-airplane)
 *→* "#<Airplane NW0773 36000123135>"
 \OV "#<FAA:AIRPLANE NW0773 17>"
-
 ```
 
 
 ```lisp
  (cons \param{car-type} \param{cdr-type})
-
 ```
 
 
@@ -12726,14 +11731,12 @@ Roads ELM     MAIN
 ```lisp
  (prin1 object output-stream)
 \EQ (write object :stream output-stream :escape t)
-
 ```
 
 
 ```lisp
  (princ object output-stream)
 \EQ (write object stream output-stream :escape nil :readably nil)
-
 ```
 
 
@@ -12743,21 +11746,18 @@ Roads ELM     MAIN
            (write object :stream output-stream
                          :escape t)
            (write-char #\\space output-stream))
-
 ```
 
 
 ```lisp
  (pprint object output-stream)
 \EQ (write object :stream output-stream :escape t :pretty t)
-
 ```
 
 
 ```lisp
  (prin1-to-string "abc") *→* "\\"abc\\""
  (princ-to-string "abc") *→* "abc"
-
 ```
 
 
@@ -12765,15 +11765,12 @@ Roads ELM     MAIN
  (write-to-string \param{object} \star{\curly{\param{key} \param{argument}}})
 \EQ (with-output-to-string (#1=#:string-stream) 
      (write object :stream #1# \star{\curly{\param{key} \param{argument}}}))
-
  (princ-to-string \param{object})
 \EQ (with-output-to-string (string-stream)
      (princ \param{object} string-stream))
-
  (prin1-to-string \param{object})
 \EQ (with-output-to-string (string-stream)
      (prin1 \param{object} string-stream))
-
 ```
 
 
@@ -12804,7 +11801,6 @@ Roads ELM     MAIN
 \OUT 10.  #10r1/10
 \OUT #xA  #x1/A
 *→* NIL
-
 ```
 
 
@@ -12828,7 +11824,6 @@ Roads ELM     MAIN
 \OUT this-and-that a|nd-something-el|se
 \OUT This-And-That A|nd-something-el|se
 *→* NIL
-
 ```
 
 
@@ -12840,7 +11835,6 @@ Roads ELM     MAIN
      :done))
 \OUT #1=(1 2 3 . #1#)
 *→* :DONE
-
 ```
 
 
@@ -12851,7 +11845,6 @@ Roads ELM     MAIN
  (let ((*print-escape* nil)) (write #\\a))
 \OUT a
 *→* #\\a
-
 ```
 
 
@@ -12860,7 +11853,6 @@ Roads ELM     MAIN
    (print (gensym)))
 \OUT G6040 
 *→* #:G6040
-
 ```
 
 
@@ -12911,7 +11903,6 @@ Roads ELM     MAIN
 \OUT 3 3 -- (IF (MEMBER X Y) (+ (CAR X) 3) ...)
 \OUT 3 4 -- (IF (MEMBER X Y) (+ (CAR X) 3) '(FOO . #(A B C D ...)))
 *→* NIL
-
 ```
 
 
@@ -12922,7 +11913,6 @@ Roads ELM     MAIN
 \OUT              B 2
 \OUT              C 3 ..))
 *→* \novalues
-
 ```
 
 
@@ -12957,7 +11947,6 @@ Roads ELM     MAIN
 \OUT #'(LAMBDA ()
 \OUT     (LIST a b 'C #'D))
 *→* NIL
-
 ```
 
 
@@ -12975,24 +11964,20 @@ Roads ELM     MAIN
 \OUT (a a G4581 ((A #) D E ...))
 \OUT ("a" |a| #:G4581 ((A (B (C))) D E F G))
 *→* :DONE
-
 ;; This is setup code is shared between the examples
 ;; of three hypothetical implementations which follow.
  (setq table (make-hash-table)) *→* #<HASH-TABLE EQL 0/120 32005763> 
  (setf (gethash table 1) 'one) *→* ONE
  (setf (gethash table 2) 'two) *→* TWO
-
 ;; Implementation A
  (let ((*print-readably* t)) (print table))
  Error: Can't print #<HASH-TABLE EQL 0/120 32005763> readably.
-
 ;; Implementation B
 ;; No standardized #S notation for hash tables is defined, 
 ;; but there might be an implementation-defined notation.
  (let ((*print-readably* t)) (print table))
 \OUT #S(HASH-TABLE :TEST EQL :SIZE 120 :CONTENTS (1 ONE 2 TWO))
 *→* #<HASH-TABLE EQL 0/120 32005763>
-
 ;; Implementation C
 ;; Note that #. notation can only be used if *READ-EVAL* is true.
 ;; If *READ-EVAL* were false, this same implementation might have to
@@ -13004,7 +11989,6 @@ Roads ELM     MAIN
 \OUT     (SETF (GETHASH 2 HASH-TABLE) TWO)
 \OUT     HASH-TABLE)
 *→* #<HASH-TABLE EQL 0/120 32005763>
-
 ```
 
 
@@ -13018,25 +12002,21 @@ Roads ELM     MAIN
  zvar *→* VAR
  (setq *readtable* (copy-readtable nil)) *→* #<READTABLE 46302670>
  zvar *→* 123
-
 ```
 
 
 ```lisp
 (setq *readtable* (copy-readtable nil))
-
 ```
 
 
 ```lisp
 (setq *readtable* (copy-readtable))
-
 ```
 
 
 ```lisp
 (let ((*readtable* (copy-readtable))) ...)
-
 ```
 
 
@@ -13044,7 +12024,6 @@ Roads ELM     MAIN
  (get-macro-character #\\\lbr) *→* NIL, false
  (make-dispatch-macro-character #\\\lbr) *→* T
  (not (get-macro-character #\\\lbr)) *→ false*
-
 ```
 
 
@@ -13061,7 +12040,6 @@ Roads ELM     MAIN
     (set-dispatch-macro-character #\\# #\\\} #'skip-then-read-char)
     (with-input-from-string (is "#\{123 x #\}123 y")
       (format t "~S ~S" (read is) (read is)))) *→* #\\x, #\\Space, NIL
-
 ```
 
 
@@ -13080,32 +12058,27 @@ Roads ELM     MAIN
 
 ```lisp
  (zyedh /usr/games/zork /usr/games/boggle)
-
 ```
 
 
 ```lisp
  (zyedh (path usr games zork) (path usr games boggle))
-
 ```
 
 
 ```lisp
  (zyedh (path usr games zork usr games boggle))
-
 ```
 
 
 ```lisp
  (read-delimited-list #\\\rbracket) 1 2 3 4 5 6 \rbracket
 *→* (1 2 3 4 5 6)
-
 ```
 
 
 ```lisp
  #\{p q z a\}  reads as  ((p q) (p z) (p a) (q z) (q a) (z a))
-
 ```
 
 
@@ -13115,29 +12088,24 @@ Roads ELM     MAIN
    (mapcon #'(lambda (x)
               (mapcar #'(lambda (y) (list (car x) y)) (cdr x)))
           (read-delimited-list #\\\} stream t))) *→* |#\{-reader|
-
  (set-dispatch-macro-character #\\# #\\\{ #'|#\{-reader|) *→* T 
  (set-macro-character #\\\} (get-macro-character #\\) \nil))
-
 ```
 
 
 ```lisp
  (set-macro-character #\\\} (get-macro-character #\\) \nil))
-
 ```
 
 
 ```lisp
  #\{ p q z a\}
-
 ```
 
 
 ```lisp
  (read-from-string " 1 3 5" t nil :start 2) *→* 3, 5
  (read-from-string "(a b c)") *→* (A B C), 7
-
 ```
 
 
@@ -13145,13 +12113,11 @@ Roads ELM     MAIN
  (readtablep *readtable*) *→ true*
  (readtablep (copy-readtable)) *→ true*
  (readtablep '*readtable*) *→ false*
-
 ```
 
 
 ```lisp
  (readtablep \param{object}) \EQ (typep \param{object} 'readtable) 
-
 ```
 
 
@@ -13167,7 +12133,6 @@ Roads ELM     MAIN
  #\{(1 2 3 4) *→* 1
  #3\{(0 1 2 3) *→* 3
  #\{123 *→* 123
-
 ```
 
 
@@ -13176,7 +12141,6 @@ Roads ELM     MAIN
    (declare (ignore subchar arg))
    (list 'dollars (read stream t nil t))) *→* |#$-reader|
  (set-dispatch-macro-character #\\# #\\\$ #'|#\$-reader|) *→* T
-
 ```
 
 
@@ -13201,7 +12165,6 @@ Roads ELM     MAIN
 ```lisp
  (get-macro-character #\\\lbr) *→* NIL, false
  (not (get-macro-character #\\;)) *→ false*
-
 ```
 
 
@@ -13210,7 +12173,6 @@ Roads ELM     MAIN
    (declare (ignore char))
    (list 'quote (read stream t nil t))) *→* SINGLE-QUOTE-READER
  (set-macro-character #\\' #'single-quote-reader) *→* T
-
 ```
 
 
@@ -13223,14 +12185,12 @@ Roads ELM     MAIN
    ;; Return zero values.
    (values)) *→* SEMICOLON-READER
  (set-macro-character #\\; #'semicolon-reader) *→* T
-
 ```
 
 
 ```lisp
  (set-syntax-from-char #\\7 #\\;) *→* T
  123579 *→* 1235
-
 ```
 
 
@@ -13238,13 +12198,10 @@ Roads ELM     MAIN
  (with-open-file (file pathname :direction :output)
    (with-standard-io-syntax
      (print data file)))
-
 ;;; ... Later, in another Lisp:
-
  (with-open-file (file pathname :direction :input)
    (with-standard-io-syntax
      (setq data (read file))))
-
 ```
 
 
@@ -13260,7 +12217,6 @@ Roads ELM     MAIN
 \OUT (14 (DAD 2701 BEE BEE 123 227))
 \OUT (15 (DAD 3088 BEE 2699 123 258))
 *→* NIL
-
 ```
 
 
@@ -13273,7 +12229,6 @@ Roads ELM     MAIN
 *→* (1.0d0 1.0d0 1.0s0 1.0 1.0d0 1.0d0) ;Implementation has float formats S, F, D.
 *→* (1.0d0 1.0d0 1.0   1.0 1.0d0 1.0L0) ;Implementation has float formats F, D, L.
 *→* (1.0d0 1.0d0 1.0s0 1.0 1.0d0 1.0L0) ;Implementation has formats S, F, D, L.
-
 ```
 
 
@@ -13302,7 +12257,6 @@ Roads ELM     MAIN
              "#.(PRINT 'FOO)" "#3AHELLO" "#S(INTEGER)"
              "#*ABC" "#\\GARBAGE" "#RALPHA" "#3R444")))
 *→* (NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL)
-
 ```
 
 
@@ -13315,7 +12269,6 @@ Roads ELM     MAIN
  zvar *→* VAR
  (setq *readtable* (copy-readtable nil)) *→* #<READTABLE>
  zvar *→* 123
-
 ```
 
 
@@ -13323,13 +12276,11 @@ Roads ELM     MAIN
  (setq str "a string") *→* "a string"
  (equalp str (copy-seq str)) *→ true*
  (eql str (copy-seq str)) *→ false*
-
 ```
 
 
 ```lisp
  (copy-seq x) \EQ (subseq x 0)
-
 ```
 
 
@@ -13338,7 +12289,6 @@ Roads ELM     MAIN
  (elt str 6) *→* #\\6
  (setf (elt str 0) #\\#) *→* #\\#
  str *→* "#123456789"
-
 ```
 
 
@@ -13350,7 +12300,6 @@ Roads ELM     MAIN
  x *→* #(A Z Z D E)
  (fill x 'p) *→* #(P P P P P)
  x *→* #(P P P P P)
-
 ```
 
 
@@ -13361,20 +12310,17 @@ Roads ELM     MAIN
  (make-sequence '(vector double-float) 2
                 :initial-element 1d0)
 *→* #(1.0d0 1.0d0)
-
 ```
 
 
 ```lisp
  (make-sequence '(vector * 2) 3) should signal an error
  (make-sequence '(vector * 4) 3) should signal an error
-
 ```
 
 
 ```lisp
  (make-sequence 'string 5) \EQ (make-string 5)               
-
 ```
 
 
@@ -13386,7 +12332,6 @@ Roads ELM     MAIN
  str *→* "0123ab"
  (setf (subseq str 0 2) "A") *→* "A"
  str *→* "A123ab"
-
 ```
 
 
@@ -13402,13 +12347,11 @@ Roads ELM     MAIN
  (map 'string
       #'(lambda (x) (if (oddp x) #\\1 #\\0))
       '(1 2 3 4)) *→* "1010"
-
 ```
 
 
 ```lisp
  (map '(vector * 4) #'cons "abc" "de") should signal an error
-
 ```
 
 
@@ -13421,7 +12364,6 @@ Roads ELM     MAIN
  (map-into a #'cons k a) *→* ((ONE . 11) (TWO . 12) (THREE . 13) 14)
  (map-into a #'gensym) *→* (#:G9090 #:G9091 #:G9092 #:G9093)
  a *→* (#:G9090 #:G9091 #:G9092 #:G9093)
-
 ```
 
 
@@ -13435,7 +12377,6 @@ Roads ELM     MAIN
                          (mapcar #'(lambda (seq) (elt seq index))
                                  sequences))))
    result-sequence)
-
 ```
 
 
@@ -13455,7 +12396,6 @@ Roads ELM     MAIN
  (reduce #'list '(1 2 3 4) :initial-value 'foo) *→* ((((foo 1) 2) 3) 4)
  (reduce #'list '(1 2 3 4)
         :from-end t :initial-value 'foo) *→* (1 (2 (3 (4 foo))))
-
 ```
 
 
@@ -13463,7 +12403,6 @@ Roads ELM     MAIN
  (count #\\a "how many A's are there in here?") *→* 2
  (count-if-not #'oddp '((1) (2) (3) (4)) :key #'car) *→* 2
  (count-if #'upper-case-p "The Crying of Lot 49" :start 4) *→* 2 
-
 ```
 
 
@@ -13475,7 +12414,6 @@ Roads ELM     MAIN
  (length str) *→* 3
  (setf (fill-pointer str) 2) *→* 2
  (length str) *→* 2
-
 ```
 
 
@@ -13489,7 +12427,6 @@ Roads ELM     MAIN
  (setq l (list 1 2 3)) *→* (1 2 3)
  (nreverse l) *→* (3 2 1)
  l *→* \term{implementation-dependent}
-
 ```
 
 
@@ -13545,7 +12482,6 @@ Roads ELM     MAIN
  (find-if-not #'complexp                                    
              '#(3.5 2 #C(1.0 0.0) #C(0.0 1.0))
              :start 2) *→* NIL 
-
 ```
 
 
@@ -13561,14 +12497,12 @@ Roads ELM     MAIN
  (position-if #'oddp '((1) (2) (3) (4)) :start 1 :key #'car) *→* 2
  (position 595 '()) *→* NIL
  (position-if-not #'integerp '(1 2 3 4 5.0)) *→* 4 
-
 ```
 
 
 ```lisp
  (search "dog" "it's a dog's life") *→* 7
  (search '(0 1) '(2 4 6 1 3 5) :key #'oddp) *→* 2
-
 ```
 
 
@@ -13577,13 +12511,11 @@ Roads ELM     MAIN
  (mismatch '(3 2 1 1 2 3) '(1 2 3) :from-end t) *→* 3
  (mismatch '(1 2 3) '(2 3 4) :test-not #'eq :key #'oddp) *→* NIL
  (mismatch '(1 2 3 4 5 6) '(3 4 5 6 7) :start1 2 :end2 4) *→* NIL 
-
 ```
 
 
 ```lisp
  (min (- \i{end1} \i{start1}) (- \i{end2} \i{start2}))
-
 ```
 
 
@@ -13593,7 +12525,6 @@ Roads ELM     MAIN
  (setq lst "012345678") *→* "012345678"
  (replace lst lst :start1 2 :start2 0) *→* "010123456"
  lst *→* "010123456"
-
 ```
 
 
@@ -13604,13 +12535,11 @@ Roads ELM     MAIN
  (substitute 9 4 '(1 2 4 1 3 4 5) :count 1 :from-end t)
 *→* (1 2 4 1 3 9 5)
  (substitute 9 3 '(1 2 4 1 3 4 5) :test #'>) *→* (9 9 4 9 3 4 5)
-
  (substitute-if 0 #'evenp '((1) (2) (3) (4)) :start 2 :key #'car)
 *→* ((1) (2) (3) 0)
  (substitute-if 9 #'oddp '(1 2 4 1 3 4 5)) *→* (9 2 4 9 9 4 9)
  (substitute-if 9 #'evenp '(1 2 4 1 3 4 5) :count 1 :from-end t)
 *→* (1 2 4 1 3 9 5)
-
  (setq some-things (list 'a 'car 'b 'cdr 'c)) *→* (A CAR B CDR C)
  (nsubstitute-if "function was here" #'fboundp some-things
                  :count 1 :from-end t) *→* (A CAR B "function was here" C)
@@ -13618,7 +12547,6 @@ Roads ELM     MAIN
  (setq alpha-tester (copy-seq "ab ")) *→* "ab "
  (nsubstitute-if-not #\\z #'alpha-char-p alpha-tester) *→* "abz"
  alpha-tester *→* "abz"
-
 ```
 
 
@@ -13629,7 +12557,6 @@ Roads ELM     MAIN
      (funcall fn 'a 'b x :count 1)))
  (test-it #'substitute) *→* (A . #1=(B . #1#))
  (test-it #'nsubstitute) *→* (A . #1#)
-
 ```
 
 
@@ -13638,13 +12565,11 @@ Roads ELM     MAIN
 (concatenate 'list "ABC" '(d e f) #(1 2 3) #*1011)
 *→* (#\\A #\\B #\\C D E F 1 2 3 1 0 1 1)
 (concatenate 'list) *→* NIL
-
 ```
 
 
 ```lisp
   (concatenate '(vector * 2) "a" "bc") should signal an error
-
 ```
 
 
@@ -13659,13 +12584,11 @@ Roads ELM     MAIN
  (setq test2 (vector ((yellow . 2) (green . 7))))
  (merge 'vector test1 test2 #'< :key #'cdr) 
 *→* #((RED . 1) (YELLOW . 2) (BLUE . 4) (GREEN . 7)) 
-
 ```
 
 
 ```lisp
  (merge '(vector * 4) '(1 5) '(2 4 6) #'<) should signal an error
-
 ```
 
 
@@ -13673,7 +12596,6 @@ Roads ELM     MAIN
  (delete nil \i{sequence}
              :test #'(lambda (ignore \i{item}) (funcall \i{test} \i{item}))
              ...)
-
 ```
 
 
@@ -13707,7 +12629,6 @@ Roads ELM     MAIN
  (setq tester (list 1 2 3 4 5 6)) *→* (1 2 3 4 5 6) 
  (delete-if #'evenp tester) *→* (1 3 5) 
  tester *→* \term{implementation-dependent}
-
 ```
 
 
@@ -13717,7 +12638,6 @@ Roads ELM     MAIN
  (setq foo (delete 'b foo)) *→* (A C)
  bar *→* ((C)) or ...
  (eq (cdr foo) (car bar)) *→* T or ...
-
 ```
 
 
@@ -13731,7 +12651,6 @@ Roads ELM     MAIN
      :test #'char-equal :key #'cadr :from-end t) *→* ((FOO #\\a) (BAR #\\%))
  (setq tester (list 0 1 2 3 4 5 6))
  (delete-duplicates tester :key #'oddp :start 1 :end 6) *→* (0 4 5 6)
-
 ```
 
 
@@ -13739,11 +12658,9 @@ Roads ELM     MAIN
  (input-stream-p *standard-input*) *→ true*
  (input-stream-p *terminal-io*) *→ true*
  (input-stream-p (make-string-output-stream)) *→ false*
-
  (output-stream-p *standard-output*) *→ true*
  (output-stream-p *terminal-io*) *→ true*
  (output-stream-p (make-string-input-stream "jr")) *→ false*
-
 ```
 
 
@@ -13756,13 +12673,11 @@ Roads ELM     MAIN
                                Is it safe to proceed? " error)
                  (< error 15))  ;15% is acceptable
        (error "The frammis is out of tolerance by ~D%." error))))
-
 ```
 
 
 ```lisp
  (open-stream-p *standard-input*) *→ true*
-
 ```
 
 
@@ -13782,20 +12697,17 @@ Roads ELM     MAIN
 \OV (UNSIGNED-BYTE 1)
 \OV (INTEGER 0 1)
 \OV (INTEGER 0 (2))
-
 ```
 
 
 ```lisp
  (streamp *terminal-io*) *→ true*
  (streamp 1) *→ false*
-
 ```
 
 
 ```lisp
  (streamp \param{object}) \EQ (typep \param{object} 'stream)
-
 ```
 
 
@@ -13808,7 +12720,6 @@ Roads ELM     MAIN
     (format t "~S ~S" (read-byte s) (read-byte s nil 'eof)))
 \OUT 101 EOF
 *→* NIL
-
 ```
 
 
@@ -13817,7 +12728,6 @@ Roads ELM     MAIN
                     :direction :output
                     :element-type 'unsigned-byte)
     (write-byte 101 s)) *→* 101
-
 ```
 
 
@@ -13829,7 +12739,6 @@ Roads ELM     MAIN
             (peek-char nil input-stream)))
 \OUT #\\1 #\\4 #\\4
 *→* NIL
-
 ```
 
 
@@ -13840,7 +12749,6 @@ Roads ELM     MAIN
      (format t "~S " c)))
 \OUT #\\0 #\\1 #\\2 #\\3
 *→* NIL
-
 ```
 
 
@@ -13864,7 +12772,6 @@ Roads ELM     MAIN
  (test-it)
 \OUT \IN{a\CRLF}
 *→* (#\\a #\\Newline NIL)
-
 ```
 
 
@@ -13875,7 +12782,6 @@ Roads ELM     MAIN
     (terpri s)
     (write-string "more text" s))
 *→* "some text
-
 more text"
  (with-output-to-string (s)
     (write-string "some text" s)
@@ -13884,13 +12790,11 @@ more text"
     (write-string "more text" s))
 *→* "some text
 more text"
-
 ```
 
 
 ```lisp
  (write-char #\\Newline output-stream)
-
 ```
 
 
@@ -13903,7 +12807,6 @@ more text"
 \OUT 2 #\\1
 \OUT 4 #\\2
 *→* NIL
-
 ```
 
 
@@ -13916,7 +12819,6 @@ more text"
    (write-char #\\Space s)
    (write-char #\\b s))
 *→* "a b"
-
 ```
 
 
@@ -13931,7 +12833,6 @@ more text"
 *→* "line2", true
  (read-line input-stream nil nil)
 *→* NIL, true
-
 ```
 
 
@@ -13948,7 +12849,6 @@ more text"
 \OUT *test2
 \OUT *
 *→* NIL
-
 ```
 
 
@@ -13956,10 +12856,8 @@ more text"
  (write-string string)
 \EQ (dotimes (i (length string)
       (write-char (char string i)))
-
  (write-line string)
 \EQ (prog1 (write-string string) (terpri))
-
 ```
 
 
@@ -13967,7 +12865,6 @@ more text"
  (defvar *data* (make-array 15 :initial-element nil))
  (values (read-sequence *data* (make-string-input-stream "test string")) *data*)
  *→* 11, #(#\\t #\\e #\\s #\\t #\\Space #\\s #\\t #\\r #\\i #\\n #\\g NIL NIL NIL NIL)
-
 ```
 
 
@@ -13975,7 +12872,6 @@ more text"
  (write-sequence "bookworms" *standard-output* :end 4)
  \OUT book
  *→* "bookworms"
-
 ```
 
 
@@ -13988,7 +12884,6 @@ more text"
  (with-open-file (s "decimal-digits.text")
    (file-length s))
 *→* 10
-
 ```
 
 
@@ -14024,7 +12919,6 @@ more text"
 *→* (0 2 T 2 0 2 5 7)
 \OV (0 2 NIL 3 0 3 5 6 7)
 \OV (NIL NIL NIL NIL NIL NIL)
-
 ```
 
 
@@ -14052,7 +12946,6 @@ more text"
  (truename s) *→* #<PATHNAME :HOST NIL :DEVICE \i{device-name} :DIRECTORY
     \i{directory-name} :NAME \i{filespec} :TYPE \i{extension} :VERSION 1>
  (open s :direction :output :if-exists nil) *→* NIL 
-
 ```
 
 
@@ -14064,7 +12957,6 @@ more text"
 \OV (:ASCII :SAIL)
 \OV ACME::PROPRIETARY-FILE-FORMAT-17
 \OV #<FILE-FORMAT :ISO646-1983 2343673>
-
 ```
 
 
@@ -14081,7 +12973,6 @@ more text"
 \OUT *** Here are a couple
 \OUT *** of test data lines
 *→* "Reached end of file."
-
 ```
 
 
@@ -14105,12 +12996,10 @@ more text"
    (read foo))
 \OUT \IN{hello?}
 *→* HELLO? ;This value was read from the terminal, not a file!
-
 ;; Here's another bug to avoid...
  (with-open-file (foo "no-such-file" :direction :output :if-does-not-exist nil)
    (format foo "Hello"))
 *→* "Hello" ;FORMAT got an argument of NIL!
-
 ```
 
 
@@ -14118,14 +13007,12 @@ more text"
  (setq s (make-broadcast-stream)) *→* #<BROADCAST-STREAM>
  (close s) *→* T
  (output-stream-p s) *→ true*
-
 ```
 
 
 ```lisp
  (with-open-stream (s (make-string-input-stream "1 2 3 4"))
     (+ (read s) (read s) (read s))) *→* 6
-
 ```
 
 
@@ -14135,7 +13022,6 @@ more text"
 *→* (T #\\1)
  (progn (clear-input) (listen))
 *→* NIL ;Unless you're a very fast typist!
-
 ```
 
 
@@ -14144,7 +13030,6 @@ more text"
 ;; to implementation depending on the kind of interactive buffering that
 ;; occurs.  (The call to SLEEP here is intended to help even out the 
 ;; differences in implementations which do not do line-at-a-time buffering.)
-
 (defun read-sleepily (&optional (clear-p nil) (zzz 0))
   (list (progn (print '>) (read))
         ;; Note that input typed within the first ZZZ seconds 
@@ -14154,25 +13039,21 @@ more text"
                (print '>>)
                (if clear-p (clear-input))
                (read))))
-
 (read-sleepily)
 \OUT > \IN{10}
 \OUT >
 \OUT >> \IN{20}
 *→* (10 20)
-
 (read-sleepily t)
 \OUT > \IN{10}
 \OUT >
 \OUT >> \IN{20}
 *→* (10 20)
-
 (read-sleepily t 10)
 \OUT > \IN{10}
 \OUT > \IN{20}  ; Some implementations won't echo typeahead here.
 \OUT >> \IN{30}
 *→* (10 30)
-
 ```
 
 
@@ -14180,12 +13061,10 @@ more text"
 ;; Implementation A
  (progn (princ "am i seen?") (clear-output))
 *→* NIL
-
 ;; Implementation B
  (progn (princ "am i seen?") (clear-output))
 \OUT am i seen?
 *→* NIL
-
 ```
 
 
@@ -14200,7 +13079,6 @@ more text"
 \OUT Produce listing file?
 \OUT Please respond with Y or N. \IN{n}
 *→ false*
-
 ```
 
 
@@ -14216,7 +13094,6 @@ more text"
  (setq c-stream b-stream)
 *→* #<String Input Stream> 
  (read s-stream) *→* B-STREAM
-
 ```
 
 
@@ -14227,7 +13104,6 @@ more text"
           "this will go to both streams") *→* NIL
  (get-output-stream-string a-stream) *→* "this will go to both streams"
  (get-output-stream-string b-stream) *→* "this will go to both streams"
-
 ```
 
 
@@ -14238,7 +13114,6 @@ more text"
         (format two "output...")
         (setq what-is-read (read two))))) *→* "output..."
  what-is-read *→* INPUT... 
-
 ```
 
 
@@ -14252,7 +13127,6 @@ more text"
       (format s " * this-is-direct-output")
       (get-output-stream-string out)))
 *→* "this-is-read-and-echoed * this-is-direct-output"
-
 ```
 
 
@@ -14260,7 +13134,6 @@ more text"
  (read (make-concatenated-stream
          (make-string-input-stream "1")
          (make-string-input-stream "2"))) *→* 12
-
 ```
 
 
@@ -14270,7 +13143,6 @@ more text"
  (write-string a-string a-stream) *→* "abcdefghijklm"
  (get-output-stream-string a-stream) *→* "abcdefghijklm"
  (get-output-stream-string a-stream) *→* ""
-
 ```
 
 
@@ -14280,9 +13152,7 @@ more text"
          (read string-stream nil nil)
          (read string-stream nil nil)))
 *→* (1 ONE NIL)
-
  (read (make-string-input-stream "prefixtargetsuffix" 6 12)) *→* TARGET
-
 ```
 
 
@@ -14292,7 +13162,6 @@ more text"
    (prin1 1234 s)
    (get-output-stream-string s))
 *→* "testing... 1234"
-
 ```
 
 
@@ -14304,7 +13173,6 @@ more text"
  ind *→* 9
  (with-input-from-string (s "Animal Crackers" :index j :start 6)
    (read s)) *→* CRACKERS
-
 ```
 
 
@@ -14315,7 +13183,6 @@ more text"
     (format s "here's some output")
     (input-stream-p s)) *→ false*
  fstr *→* "here's some output"
-
 ```
 
 
@@ -14422,7 +13289,6 @@ more text"
 |   3 Exit FACT 1
 | 2 Exit FACT 2
 1 Exit FACT 6"
-
 ```
 
 
@@ -14435,7 +13301,6 @@ more text"
    (prin1 'bar *terminal-io*))
 \OUT BAR
 *→* "FOO"
-
 ```
 
 
@@ -14445,7 +13310,6 @@ more text"
      (end-of-file (c)
        (format nil "~&End of file on ~S." (stream-error-stream c)))))
 "End of file on #<String Stream>."
-
 ```
 
 
@@ -14454,13 +13318,11 @@ more text"
  (simple-string-p (make-array 6 
                               :element-type 'character 
                               :fill-pointer t)) *→ false*
-
 ```
 
 
 ```lisp
  (simple-string-p \param{object}) \EQ (typep \param{object} 'simple-string)
-
 ```
 
 
@@ -14480,13 +13342,11 @@ more text"
  (setf (char my-filled-string 5) #\\D) *→* #\\D
  (setf (fill-pointer my-filled-string) 6) *→* 6
  my-filled-string *→* "AAACBD"
-
 ```
 
 
 ```lisp
  (char s j) \EQ (aref (the string s) j)
-
 ```
 
 
@@ -14494,7 +13354,6 @@ more text"
  (string "already a string") *→* "already a string"
  (string 'elm) *→* "ELM"
  (string #\\c) *→* "c"
-
 ```
 
 
@@ -14506,7 +13365,6 @@ more text"
 *→* "Dr. LiVINGston, I presume?"
  (string-downcase "Dr. Livingston, I presume?")
 *→* "dr. livingston, i presume?"
-
  (string-capitalize "elm 13c arthur;fig don't") *→* "Elm 13c Arthur;Fig Don'T"
  (string-capitalize " hello ") *→* " Hello "
  (string-capitalize "occlUDeD cASEmenTs FOreSTAll iNADVertent DEFenestraTION")
@@ -14514,11 +13372,9 @@ more text"
  (string-capitalize 'kludgy-hash-search) *→* "Kludgy-Hash-Search"
  (string-capitalize "DON'T!") *→* "Don'T!"    ;not "Don't!"
  (string-capitalize "pipe 13a, foo16c") *→* "Pipe 13a, Foo16c"
-
  (setq str (copy-seq "0123ABCD890a")) *→* "0123ABCD890a"
  (nstring-downcase str :start 5 :end 7) *→* "0123AbcD890a"
  str *→* "0123AbcD890a"
-
 ```
 
 
@@ -14528,14 +13384,11 @@ more text"
         ") *→* "garbanzo beans"
  (string-trim " (*)" " ( *three (silly) words* ) ")
 *→* "three (silly) words"
-
  (string-left-trim "abc" "labcabcabc") *→* "labcabcabc"
  (string-left-trim " (*)" " ( *three (silly) words* ) ")
 *→* "three (silly) words* ) "
-
  (string-right-trim " (*)" " ( *three (silly) words* ) ") 
 *→* " ( *three (silly) words"
-
 ```
 
 
@@ -14558,27 +13411,23 @@ more text"
  (string-lessp "012AAAA789" "01aaab6" :start1 3 :end1 7
                                       :start2 2 :end2 6) *→* 6
  (string-not-equal "AAAA" "aaaA") *→ false*
-
 ```
 
 
 ```lisp
  (stringp "aaaaaa") *→ true*
  (stringp #\\a) *→ false*
-
 ```
 
 
 ```lisp
  (stringp \param{object}) \EQ (typep \param{object} 'string)
-
 ```
 
 
 ```lisp
  (make-string 10 :initial-element #\\5) *→* "5555555555"
  (length (make-string 10)) *→* 10
-
 ```
 
 
@@ -14586,7 +13435,6 @@ more text"
  (defstruct person (name 007 :type string)) 
  (make-person :name "James")
  (make-person)
-
 ```
 
 
@@ -14597,7 +13445,6 @@ more text"
    (x-velocity 0.0 :type short-float)
    (y-velocity 0.0 :type short-float)
    (mass *default-ship-mass* :type short-float :read-only t))
-
 ```
 
 
@@ -14619,19 +13466,16 @@ more text"
  (dr-width my-door) *→* 5.0
  (setf (dr-width my-door) 43.7) *→* 43.7
  (dr-width my-door) *→* 43.7
-
 ```
 
 
 ```lisp
  (\param{copier-name} x) = (copy-structure (the \param{structure-name} x))
-
 ```
 
 
 ```lisp
  (defstruct person name age sex)
-
 ```
 
 
@@ -14640,7 +13484,6 @@ more text"
                        (:conc-name astro-))
     helmet-size
     (favorite-beverage 'tang))
-
 ```
 
 
@@ -14652,7 +13495,6 @@ more text"
  (person-name x) *→* BUZZ
  (astro-name x) *→* BUZZ
  (astro-favorite-beverage x) *→* TANG
-
 ```
 
 
@@ -14660,19 +13502,16 @@ more text"
  (reduce #'+ astros :key #'person-age) ; obtains the total of the ages 
                                        ; of the possibly empty
                                        ; sequence of astros
-
 ```
 
 
 ```lisp
  (typep (make-astronaut) 'person) *→ true*
-
 ```
 
 
 ```lisp
  (:include \param{included-structure-name} \starparam{slot-description})
-
 ```
 
 
@@ -14680,7 +13519,6 @@ more text"
  (defstruct (astronaut (:include person (age 45)))
     helmet-size
     (favorite-beverage 'tang))
-
 ```
 
 
@@ -14700,7 +13538,6 @@ more text"
                        :associative t
                        :identity 1)
    *→* (NIL NIL BINOP * X 5 NIL NIL NIL T T 1)
-
 ```
 
 
@@ -14709,7 +13546,6 @@ more text"
    (operator '? :type symbol)
    operand-1
    operand-2) *→* BINOP
-
 ```
 
 
@@ -14718,7 +13554,6 @@ more text"
 *→* (NIL NIL + X 5)
  (make-binop :operand-2 4 :operator '*)
 *→* (NIL NIL * NIL 4)
-
 ```
 
 
@@ -14727,14 +13562,12 @@ more text"
    (operator '? :type symbol)
    operand-1
    operand-2) *→* BINOP
-
 ```
 
 
 ```lisp
  (make-binop :operator '+ :operand-1 'x :operand-2 5) *→* (NIL NIL BINOP + X 5)
  (make-binop :operand-2 4 :operator '*) *→* (NIL NIL BINOP * NIL 4)
-
 ```
 
 
@@ -14743,14 +13576,12 @@ more text"
    (operator '? :type symbol)
    operand-1
    operand-2) *→* BINOP
-
 ```
 
 
 ```lisp
  (make-binop :operator '+ :operand-1 'x :operand-2 5) *→* (+ X 5)  
  (make-binop :operand-2 4 :operator '*) *→* (* NIL 4)
-
 ```
 
 
@@ -14759,59 +13590,50 @@ more text"
    (operator '? :type symbol)
    operand-1
    operand-2) *→* BINOP
-
 ```
 
 
 ```lisp
  (make-binop :operator '+ :operand-1 'x :operand-2 5) *→* (BINOP + X 5)
  (make-binop :operand-2 4 :operator '*) *→* (BINOP * NIL 4)
-
 ```
 
 
 ```lisp
  (defun binop-p (x)
    (and (consp x) (eq (car x) 'binop))) *→* BINOP-P
-
 ```
 
 
 ```lisp
  (defmethod print-object ((object \param{structure-name}) stream)
    (funcall (function \param{printer-name}) object stream \metaparam{current-print-depth}))
-
 ```
 
 
 ```lisp
  (defmethod print-object ((object \param{structure-name}) stream)
    (funcall (function \param{printer-name}) object stream))
-
 ```
 
 
 ```lisp
  (defstruct (quux (:type list) :named) x y)
-
 ```
 
 
 ```lisp
  (deftype quux () '(satisfies quux-p))
-
 ```
 
 
 ```lisp
  (typep (make-quux) 'quux)
-
 ```
 
 
 ```lisp
  (typep (list 'quux nil nil) 'quux)
-
 ```
 
 
@@ -14822,13 +13644,11 @@ more text"
    x-velocity
    y-velocity
    mass)
-
 ```
 
 
 ```lisp
  (setq ship2 (make-ship))
-
 ```
 
 
@@ -14836,13 +13656,11 @@ more text"
  (setq ship2 (make-ship :mass *default-ship-mass*
                         :x-position 0
                         :y-position 0))
-
 ```
 
 
 ```lisp
  (setf (ship-x-position ship2) 100)
-
 ```
 
 
@@ -14936,7 +13754,6 @@ more text"
 ;a, b, and c set, and the rest are collected into d
  (setq x (create-dfs-boa 1 2 3 4 5 6)) *→* #(DFS-BOA...)
  (dfs-boa-d x) *→* (4 5 6)
-
 ```
 
 
@@ -14947,13 +13764,11 @@ more text"
  (symbolp '()) *→ true*
  (symbolp :test) *→ true*
  (symbolp "hello") *→ false*
-
 ```
 
 
 ```lisp
  (symbolp \param{object}) \EQ (typep \param{object} 'symbol)
-
 ```
 
 
@@ -14968,7 +13783,6 @@ more text"
  (keywordp "hello") *→ false*
  (keywordp ":hello") *→ false*
  (keywordp '&optional) *→ false*
-
 ```
 
 
@@ -14979,7 +13793,6 @@ more text"
  (eq (symbol-name temp-symbol) temp-string) *→* \term{implementation-dependent}
  (find-symbol "temp") *→* NIL, NIL
  (eq (make-symbol temp-string) (make-symbol temp-string)) *→ false*
-
 ```
 
 
@@ -15006,7 +13819,6 @@ more text"
  (fboundp fred) *→ true*
  (fboundp fred-clone-1a) *→ false*
  (fboundp fred-clone-2a) *→ false*
-
 ```
 
 
@@ -15025,7 +13837,6 @@ more text"
  (find-symbol "G100") *→* NIL, NIL
  (gensym "T") *→* #:T3143
  (gensym) *→* #:G3144
-
 ```
 
 
@@ -15038,7 +13849,6 @@ more text"
  (intern "FOO1301") *→* FOO1301, :INTERNAL
  (gentemp "FOO") *→* FOO1302
  (gentemp) *→* T1303
-
 ```
 
 
@@ -15075,13 +13885,11 @@ more text"
        nil)) *→* SYMBOL-FUNCTION-OR-NIL
  (symbol-function-or-nil 'car) *→* #<FUNCTION CAR>
  (symbol-function-or-nil 'defun) *→* NIL
-
 ```
 
 
 ```lisp
 (symbol-function \param{symbol}) \EQ (fdefinition \param{symbol})
-
 ```
 
 
@@ -15089,7 +13897,6 @@ more text"
  (symbol-name 'temp) *→* "TEMP" 
  (symbol-name :start) *→* "START"
  (symbol-name (gensym)) *→* "G1234" ;for example
-
 ```
 
 
@@ -15117,7 +13924,6 @@ more text"
  (unintern s3 'pk1) *→* T
  (symbol-package s3) *→* NIL
  (eq s3 'pk2::sample3) *→* T
-
 ```
 
 
@@ -15130,7 +13936,6 @@ more text"
  (symbol-plist sym) *→* (PROP2 VAL2 PROP1 VAL1)
  (setf (symbol-plist sym) (list 'prop3 'val3)) *→* (PROP3 VAL3)
  (symbol-plist sym) *→* (PROP3 VAL3)
-
 ```
 
 
@@ -15164,7 +13969,6 @@ more text"
  (symbol-value '()) *→* NIL
  ;; The precision of this next one is \term{implementation-dependent}.
  (symbol-value 'pi) *→* 3.141592653589793d0  
-
 ```
 
 
@@ -15203,7 +14007,6 @@ more text"
 
 ```lisp
  (get x y) \EQ (getf (symbol-plist x) y)
-
 ```
 
 
@@ -15237,7 +14040,6 @@ more text"
 
 ```lisp
  (remprop \i{x} \i{y}) \EQ (remf (symbol-plist \i{x}) \i{y})
-
 ```
 
 
@@ -15264,7 +14066,6 @@ more text"
  (setf (get test 'approximation) 3) *→* 3
  (symbol-plist test)
 *→* (APPROXIMATION 3 CONSTANT T)
-
 ```
 
 
@@ -15275,7 +14076,6 @@ more text"
  (boundp 'x) *→ false*
  (let ((x 2)) (boundp 'x)) *→ false*
  (let ((x 2)) (declare (special x)) (boundp 'x)) *→ true*
-
 ```
 
 
@@ -15285,13 +14085,11 @@ more text"
  a *→* 1
  (makunbound 'a) *→* A
  (boundp 'a) *→ false*
-
 ```
 
 
 ```lisp
 (set \param{symbol} \param{value}) \EQ (setf (symbol-value \param{symbol}) \param{value})
-
 ```
 
 
@@ -15328,7 +14126,6 @@ more text"
  (tally-list '(1 9 4 3 2 7)) *→* NIL
  *even-count* *→* 6
  *odd-count* *→* 20
-
 ```
 
 
@@ -15349,7 +14146,6 @@ more text"
 ;  888
 ; Finished loading /fred/data.in
 *→ true*
-
 ```
 
 
@@ -15373,7 +14169,6 @@ more text"
 
 ```lisp
  (with-compilation-unit (:override nil) ...)
-
 ```
 
 
@@ -15381,9 +14176,7 @@ more text"
  (defun compile-files (&rest files)
    (with-compilation-unit ()
      (mapcar #'(lambda (file) (compile-file file)) files)))
-
  (compile-files "A" "B" "C")
-
 ```
 
 
@@ -15413,61 +14206,47 @@ more text"
 ```lisp
 ;;; This illustrates a nonportable use of REQUIRE, because it
 ;;; depends on the implementation-dependent file-loading mechanism.
-
 (require "CALCULUS")
-
 ;;; This use of REQUIRE is nonportable because of the literal 
 ;;; physical pathname.  
-
 (require "CALCULUS" "/usr/lib/lisp/calculus")
-
 ;;; One form of portable usage involves supplying a logical pathname,
 ;;; with appropriate translations defined elsewhere.
-
 (require "CALCULUS" "lib:calculus")
-
 ;;; Another form of portable usage involves using a variable or
 ;;; table lookup function to determine the pathname, which again
 ;;; must be initialized elsewhere.
-
 (require "CALCULUS" *calculus-module-pathname*)
-
 ```
 
 
 ```lisp
  (function ((integer 0) &key (:initial-element t)) list)
-
 ```
 
 
 ```lisp
  (ftype (function (arg0-type arg1-type ...) val-type) f))
-
 ```
 
 
 ```lisp
  (the val-type (f (the arg0-type arg0) (the arg1-type arg1) ...))
-
 ```
 
 
 ```lisp
  (type (function (arg0-type arg1-type ...) val-type) fn-valued-variable)
-
 ```
 
 
 ```lisp
  (ftype (function (arg0-type1 arg1-type1 ...) val-type1) f))
-
 ```
 
 
 ```lisp
  (ftype (function (arg0-type2 arg1-type2 ...) val-type2) f))
-
 ```
 
 
@@ -15475,7 +14254,6 @@ more text"
  (ftype (function ((and arg0-type1 arg0-type2) (and arg1-type1 arg1-type2 ...) ...)
                   (and val-type1 val-type2)) 
         f))
-
 ```
 
 
@@ -15495,7 +14273,6 @@ more text"
  (coerce 3.5L0 'float) *→* 3.5L0
  (coerce 7/2 'float) *→* 3.5
  (coerce (cons 1 2) t) *→* (1 . 2)
-
 ```
 
 
@@ -15507,13 +14284,11 @@ more text"
  (coerce "foo" '(string 2))
  (coerce #(#\\a #\\b #\\c) '(string 2))
  (coerce '(0 1) '(simple-bit-vector 3))
-
 ```
 
 
 ```lisp
  (coerce x 't) \EQ (identity x) \EQ x
-
 ```
 
 
@@ -15530,32 +14305,27 @@ more text"
 
 ```lisp
  (subtypep '(array T1) '(array T2)) *→ true*
-
 ```
 
 
 ```lisp
  (upgraded-array-element-type 'T1)  and
  (upgraded-array-element-type 'T2)  
-
 ```
 
 
 ```lisp
  (subtypep '(complex T1) '(complex T2)) *→ true*, true
-
 ```
 
 
 ```lisp
  (subtypep '(complex single-float) '(complex float))
-
 ```
 
 
 ```lisp
  (subtypep '(array single-float) '(array float))
-
 ```
 
 
@@ -15571,7 +14341,6 @@ more text"
  (subtypep '(integer (0) (0)) '(member)) *→ true*, true ;or false, false
  (subtypep '(member) 'nil) *→ true*, true ;or false, false
  (subtypep 'nil '(member)) *→ true*, true ;or false, false
-
 ```
 
 
@@ -15583,20 +14352,17 @@ more text"
   (subtypep (array-element-type (make-array 0 :element-type '<aet-y>))
             (array-element-type (make-array 0 :element-type '<aet-x>)))
 *→ true*, true
-
 ```
 
 
 ```lisp
  (subtypep '(array <aet-x>) '(array <aet-y>)) *→ true*, true
  (subtypep '(array <aet-y>) '(array <aet-x>)) *→ true*, true
-
 ```
 
 
 ```lisp
  (subtypep (type-of \param{object}) (class-of \param{object})) *→ true*, true
-
 ```
 
 
@@ -15609,7 +14375,6 @@ more text"
 
 
 ```lisp
-
 ```
 
 
@@ -15639,14 +14404,12 @@ more text"
  (type-of *foo*)
 *→* VECTOR
 \OV (VECTOR T 5)
-
 ```
 
 
 ```lisp
  (typep realpart 'type-specifier)
  (typep imagpart 'type-specifier)
-
 ```
 
 
@@ -15660,19 +14423,16 @@ more text"
 ;; To understand this next example, you might need to refer to
 ;; \secref\RuleOfCanonRepForComplexRationals.
  (typep #c(0 0) '(complex (eql 0))) *→ false*
-
 ```
 
 
 ```lisp
  (upgraded-array-element-type 'A\sssx)
-
 ```
 
 
 ```lisp
  (upgraded-array-element-type 'A\sssy)
-
 ```
 
 
@@ -15681,12 +14441,10 @@ more text"
  (typep (make-array 0 :element-type 'A\sssy) '(array A\sssy)) *→ true*
  (typep (make-array 0 :element-type 'A\sssx) '(array A\sssy)) *→ true*
  (typep (make-array 0 :element-type 'A\sssy) '(array A\sssx)) *→ true*
-
 ```
 
 
 ```lisp
-
 
 ```
 
@@ -15707,7 +14465,6 @@ more text"
  
  (foo 'seven)
 *→* 10
-
 ```
 
 

@@ -50,7 +50,7 @@ def remove_double_lines_from_code_blocks(filename, root):
         file.close()
 
 def fix_symbols_in_code_blocks(filename, root):
-    print("&lt;")
+    # print("&lt;")
     # TODO see ▷
     # TODO see http://localhost:3000/cl-language-reference/docs/chap-5/f-b-generalized-reference#51121-examples-of-setf-expansions
     # The example named sections may have figures, each figure is a code block... should not be hard to parse...

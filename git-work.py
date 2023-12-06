@@ -16,6 +16,7 @@ def get_shell_command_output(command_string):
 def execute_shell_command(command_string):
     process = subprocess.Popen(command_string, shell=True)
     # stdout, stderr = process.communicate()
+    process.communicate()
     # return stdout.decode("utf-8").splitlines()
     
 def stage(word_count=20):

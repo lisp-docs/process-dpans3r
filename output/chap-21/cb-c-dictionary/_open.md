@@ -6,7 +6,7 @@
 
 
 
-**open** *filespec* &key *direction element-type* 
+**open** *filespec* &amp;key *direction element-type* 
 
 
 

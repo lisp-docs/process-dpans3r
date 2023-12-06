@@ -10,7 +10,7 @@ Note that the meaning of **nil** and **t** as destinations to **format** are dif
 
 
 
-The ~<i><sup>∧</sup></i> should appear only at the beginning of a ~< clause, because it aborts the entire clause in which it appears (as well as all following clauses). 
+The &#126;<i><sup>∧</sup></i> should appear only at the beginning of a &#126;&lt; clause, because it aborts the entire clause in which it appears (as well as all following clauses). 
 
 
 
@@ -34,7 +34,7 @@ The ~<i><sup>∧</sup></i> should appear only at the beginning of a ~< clause, b
 
 
 
-**copy-pprint-dispatch** &optional *table → new-table* 
+**copy-pprint-dispatch** &amp;optional *table → new-table* 
 
 
 
@@ -98,7 +98,7 @@ Returns a *function* which has behavior equivalent to:
 
 
 
-#’(lambda (\*standard-output\* &rest arguments) 
+#’(lambda (\*standard-output\* &amp;rest arguments) 
 
 
 
@@ -118,7 +118,7 @@ where *arguments-tail* is either the tail of *arguments* which has as its *car* 
 
 
 
-(funcall (formatter "~&~A~A") \*standard-output\* ’a ’b ’c) 
+(funcall (formatter "&#126;&amp;&#126;A&#126;A") \*standard-output\* ’a ’b ’c) 
 
 
 
@@ -142,7 +142,7 @@ where *arguments-tail* is either the tail of *arguments* which has as its *car* 
 
 
 
-(format t (formatter "~&~A~A") ’a ’b ’c) 
+(format t (formatter "&#126;&amp;&#126;A&#126;A") ’a ’b ’c) 
 
 
 
@@ -178,7 +178,7 @@ Might signal an error (at macro expansion time or at run time) if the argument i
 
 
 
-**pprint-dispatch** *object* &optional *table → function, found-p* 
+**pprint-dispatch** *object* &amp;optional *table → function, found-p* 
 
 
 
@@ -318,15 +318,15 @@ An error is signaled (at macro expansion time or at run time) if **pprint-exit-i
 
 
 
-**pprint-fill** *stream object* &optional *colon-p at-sign-p →* **nil** 
+**pprint-fill** *stream object* &amp;optional *colon-p at-sign-p →* **nil** 
 
 
 
-**pprint-linear** *stream object* &optional *colon-p at-sign-p →* **nil** 
+**pprint-linear** *stream object* &amp;optional *colon-p at-sign-p →* **nil** 
 
 
 
-**pprint-tabular** *stream object* &optional *colon-p at-sign-p tabsize →* **nil** 
+**pprint-tabular** *stream object* &amp;optional *colon-p at-sign-p tabsize →* **nil** 
 
 
 
@@ -358,7 +358,7 @@ An error is signaled (at macro expansion time or at run time) if **pprint-exit-i
 
 
 
-The functions **pprint-fill**, **pprint-linear**, and **pprint-tabular** specify particular ways of *pretty printing* a *list* to *stream*. Each function prints parentheses around the output if and only if *colon-p* is *true*. Each function ignores its *at-sign-p* argument. (Both arguments are included even though only one is needed so that these functions can be used via ~/.../ and as **set-pprint-dispatch** functions, as well as directly.) Each function handles abbreviation and the detection of circularity and sharing correctly, and uses **write** to print *object* when it is a *non-list*. 
+The functions **pprint-fill**, **pprint-linear**, and **pprint-tabular** specify particular ways of *pretty printing* a *list* to *stream*. Each function prints parentheses around the output if and only if *colon-p* is *true*. Each function ignores its *at-sign-p* argument. (Both arguments are included even though only one is needed so that these functions can be used via &#126;/.../ and as **set-pprint-dispatch** functions, as well as directly.) Each function handles abbreviation and the detection of circularity and sharing correctly, and uses **write** to print *object* when it is a *non-list*. 
 
 
 
@@ -438,7 +438,7 @@ The *function* **pprint-tabular** could be defined as follows:
 
 
 
-(defun pprint-tabular (s list &optional (colon-p t) at-sign-p (tabsize nil)) 
+(defun pprint-tabular (s list &amp;optional (colon-p t) at-sign-p (tabsize nil)) 
 
 
 
@@ -482,7 +482,7 @@ The *function* **pprint-tabular** could be defined as follows:
 
 
 
-Note that it would have been inconvenient to specify this function using **format**, because of the need to pass its *tabsize* argument through to a ~:T format directive nested within an iteration over a list. 
+Note that it would have been inconvenient to specify this function using **format**, because of the need to pass its *tabsize* argument through to a &#126;:T format directive nested within an iteration over a list. 
 
 
 
@@ -494,7 +494,7 @@ Note that it would have been inconvenient to specify this function using **forma
 
 
 
-**pprint-indent** *relative-to n* &optional *stream →* **nil** 
+**pprint-indent** *relative-to n* &amp;optional *stream →* **nil** 
 
 
 
@@ -566,11 +566,11 @@ Section 22.3.5.3 (Tilde I: Indent)
 
 
 
-**pprint-logical-block** (*stream-symbol object* &key *prefix per-line-prefix suffix*) 
+**pprint-logical-block** (*stream-symbol object* &amp;key *prefix per-line-prefix suffix*) 
 
 
 
-*\&#123;declaration\&#125;*\* *\&#123;form\&#125;*\* 
+*\{declaration\}*\* *\{form\}*\* 
 
 
 
@@ -654,7 +654,7 @@ If either of the three conditions above occurs, the indicated output is printed 
 
 
 
-In addition to the *object* argument of **pprint-logical-block**, the arguments of the standard printing functions (such as **write**, **print**, **prin1**, and **pprint**, as well as the arguments of the standard *format directives* such as ~A, ~S, (and ~W) are all checked (when necessary) for circularity and sharing. However, such checking is not applied to the arguments of the functions **write-line**, **write-string**, and **write-char** or to the literal text output by **format**. A consequence of this is that you must use one of the latter functions if you want to print some literal text in the output that is not supposed to be checked for circularity or sharing. 
+In addition to the *object* argument of **pprint-logical-block**, the arguments of the standard printing functions (such as **write**, **print**, **prin1**, and **pprint**, as well as the arguments of the standard *format directives* such as &#126;A, &#126;S, (and &#126;W) are all checked (when necessary) for circularity and sharing. However, such checking is not applied to the arguments of the functions **write-line**, **write-string**, and **write-char** or to the literal text output by **format**. A consequence of this is that you must use one of the latter functions if you want to print some literal text in the output that is not supposed to be checked for circularity or sharing. 
 
 
 
@@ -734,7 +734,7 @@ Detection of circularity and sharing is supported by the *pretty printer* by in 
 
 
 
-**pprint-newline** *kind* &optional *stream →* **nil** 
+**pprint-newline** *kind* &amp;optional *stream →* **nil** 
 
 
 
@@ -982,7 +982,7 @@ It is frequently a good idea to call **pprint-exit-if-list-exhausted** before ca
 
 
 
-**pprint-tab** *kind colnum colinc* &optional *stream →* **nil** 
+**pprint-tab** *kind colnum colinc* &amp;optional *stream →* **nil** 
 
 
 
@@ -1022,11 +1022,11 @@ It is frequently a good idea to call **pprint-exit-if-list-exhausted** before ca
 
 
 
-Specifies tabbing to *stream* as performed by the standard ~T format directive. If *stream* is a *pretty printing stream* and the *value* of **\*print-pretty\*** is *true*, tabbing is performed; otherwise, **pprint-tab** has no effect. 
+Specifies tabbing to *stream* as performed by the standard &#126;T format directive. If *stream* is a *pretty printing stream* and the *value* of **\*print-pretty\*** is *true*, tabbing is performed; otherwise, **pprint-tab** has no effect. 
 
 
 
-The arguments *colnum* and *colinc* correspond to the two *parameters* to ~T and are in terms of *ems*. The *kind* argument specifies the style of tabbing. It must be one of :line (tab as by ~T), :section (tab as by ~:T, but measuring horizontal positions relative to the start of the dynamically enclosing section), :line-relative (tab as by ~@T), or :section-relative (tab as by ~:@T, but measuring 
+The arguments *colnum* and *colinc* correspond to the two *parameters* to &#126;T and are in terms of *ems*. The *kind* argument specifies the style of tabbing. It must be one of :line (tab as by &#126;T), :section (tab as by &#126;:T, but measuring horizontal positions relative to the start of the dynamically enclosing section), :line-relative (tab as by &#126;@T), or :section-relative (tab as by &#126;:@T, but measuring 
 
 
 
@@ -1222,7 +1222,7 @@ In some implementations the *stream* argument passed to a **print-object** *meth
 
 
 
-**print-unreadable-object** (*object stream* &key *type identity*) *\&#123;form\&#125;*\* *→* **nil** 
+**print-unreadable-object** (*object stream* &amp;key *type identity*) *\{form\}*\* *→* **nil** 
 
 
 
@@ -1266,7 +1266,7 @@ In some implementations the *stream* argument passed to a **print-object** *meth
 
 
 
-Outputs a printed representation of *object* on *stream*, beginning with “#<” and ending with “>”. Everything output to *stream* by the body *forms* is enclosed in the the angle brackets. If *type* is *true*, the output from *forms* is preceded by a brief description of the *object*’s *type* and a space character. If *identity* is *true*, the output from *forms* is followed by a space character and a representation of the *object*’s identity, typically a storage address. 
+Outputs a printed representation of *object* on *stream*, beginning with “#&lt;” and ending with “&gt;”. Everything output to *stream* by the body *forms* is enclosed in the the angle brackets. If *type* is *true*, the output from *forms* is preceded by a brief description of the *object*’s *type* and a space character. If *identity* is *true*, the output from *forms* is followed by a space character and a representation of the *object*’s identity, typically a storage address. 
 
 
 

@@ -225,7 +225,7 @@
 - [bit](./output/chap-12/bc-c-dictionary/bit.md)
 - [fixnum](./output/chap-12/bc-c-dictionary/fixnum.md)
 - [bignum](./output/chap-12/bc-c-dictionary/bignum.md)
-- [=, /=,** *<***,** *>***,** *<***=,** *>***=](./output/chap-12/bc-c-dictionary/a.md)
+- [=, /=,** *&lt;***,** *&gt;***,** *&lt;***=,** *&gt;***=](./output/chap-12/bc-c-dictionary/a.md)
 - [max, min](./output/chap-12/bc-c-dictionary/max.md)
 - [minusp, plusp](./output/chap-12/bc-c-dictionary/minusp.md)
 - [zerop](./output/chap-12/bc-c-dictionary/zerop.md)

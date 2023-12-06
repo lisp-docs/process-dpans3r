@@ -47,18 +47,20 @@ def fix_case_lisp(file_text, processed_text):
     return processed_text
 
 def fix_case_simple(file_text, processed_text):
-    simple_tag = r"(<\s*([\w\-\*\~]+)\s*>)"
+    simple_tag = r"(<\s*([\w\-\*\~,]+)\s*>)"
     actual_html_tags = ["p", "i", "sub", "sup", "b"]
     tags = re.findall(simple_tag, processed_text)
-    closed_tags = [f'</{tag[1]}>' for tag in tags]
+    closed_tags = [(tag[0], tag[1], f'</{tag[1]}>') for tag in tags]
     original_tags = re.findall(simple_tag, file_text)
     for tag in closed_tags:
-        processed_text = processed_text.replace(tag, "")
+        if not tag[1] in actual_html_tags:
+            processed_text = processed_text.replace(tag[2], "")
     for index, tag in enumerate(tags):
         if not tag[1] in actual_html_tags:
             if tag[0] != original_tags[index][0] and tag[0].lower() == original_tags[index][0].lower():
-                import pdb; pdb.set_trace()
-                processed_text = processed_text.replace(tag[0], original_tags[index][0])
+                # import pdb; pdb.set_trace()
+                new_tag = original_tags[index][0].replace("<", "&lt;").replace(">", "&gt;")
+                processed_text = processed_text.replace(tag[0], new_tag)
     return processed_text
 
 def fix_tildes(text):
@@ -66,7 +68,7 @@ def fix_tildes(text):
 
 def process_file(filename, root):
     filepath = os.path.join(root, filename)
-    print(filepath)
+    # print(filepath)
     file = open(filepath, "r")
     file_text = file.read()
     file_text = file_text.replace("\\{", "{").replace("\\}", "}")
@@ -82,7 +84,7 @@ def process_file(filename, root):
     processed_text = fix_tildes(processed_text)
     # [].index()
     if processed_text.strip().lower() != file_text.strip().lower():
-        print(filepath)
+        # print(filepath)
         # import pdb; pdb.set_trace()
         processed_text = fix_case_lisp(file_text, processed_text)
         file = open(filepath, "w")

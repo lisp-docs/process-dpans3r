@@ -74,9 +74,7 @@ def fix_symbols_in_code_blocks(filename, root):
         file.close()
 
 def main():
-    # process_all_md_files(MD_DIR, remove_double_lines_from_code_blocks)
-    process_all_md_files(MD_DIR, fix_symbols_in_code_blocks)
-    # find_non_ascii_chars_in_dir("../../../../../Learning/LISP/cl-drafts/lisp-docs-spec/new-spec/spec-source-pdf/output/chapters/docx/")
+    process_all_md_files(MD_DIR, remove_double_lines_from_code_blocks)
 
 if __name__ == "__main__":
     main()

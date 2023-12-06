@@ -9,18 +9,25 @@ def process_all_md_files(given_dir, given_function):
             if filename.endswith(".md"):
                 given_function(filename, root)
 
-def find_non_ascii_characters(filename, root):
+
+def find_non_ascii_chars_in_dir(given_dir):
+    found_non_ascii = []
+    for root, dirs, filenames in os.walk(given_dir):
+        for filename in filenames:
+            find_non_ascii_characters(filename, root, found_non_ascii)
+    pprint(found_non_ascii)
+
+
+def find_non_ascii_characters(filename, root, found_non_ascii):
     filepath = os.path.join(root, filename)
-    # print(filepath)
+    print(filepath)
     file = open(filepath, "r")
     file_text = file.read()
     file.close()
-    found_non_ascii = []
     for e in file_text:
         if re.sub(r'[ -~]', '', e) != "":
             if not e in found_non_ascii:
                 found_non_ascii.append(e)
-    pprint(found_non_ascii)
 
 
 def remove_double_lines_from_code_blocks(filename, root):
@@ -44,6 +51,7 @@ def remove_double_lines_from_code_blocks(filename, root):
 
 def main():
     process_all_md_files(MD_DIR, remove_double_lines_from_code_blocks)
+    # find_non_ascii_chars_in_dir("../../../../../Learning/LISP/cl-drafts/lisp-docs-spec/new-spec/spec-source-pdf/output/chapters/docx/")
 
 if __name__ == "__main__":
     main()

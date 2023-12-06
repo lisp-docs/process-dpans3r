@@ -40,7 +40,7 @@ Returns a *broadcast stream*.
 
 
 
-b-stream (make-string-output-stream)) *→* #<String Output Stream> 
+b-stream (make-string-output-stream)) *→* #\<String Output Stream\> 
 
 
 

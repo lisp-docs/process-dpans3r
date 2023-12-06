@@ -44,7 +44,7 @@ b-stream (make-string-input-stream "b-stream"))
 
 
 
-*→* #<String Input Stream> 
+*→* #\<String Input Stream\> 
 
 
 
@@ -60,7 +60,7 @@ b-stream (make-string-input-stream "b-stream"))
 
 
 
-*→* #<String Input Stream> 
+*→* #\<String Input Stream\> 
 
 
 
@@ -72,7 +72,7 @@ b-stream (make-string-input-stream "b-stream"))
 
 
 
-*→* #<String Input Stream> 
+*→* #\<String Input Stream\> 
 
 
 
@@ -95,6 +95,5 @@ Should signal **type-error** if its argument is not a *symbol*.
 
 
 Section 21.1 (Stream Concepts) 
-
 
 

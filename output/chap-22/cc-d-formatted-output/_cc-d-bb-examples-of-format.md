@@ -238,7 +238,7 @@ Scale factor 7: | 3141590.E-06|
 
 
 
-(format nil "~9,2,1„’\*G|~9,3,2,3,’?„’$G|~9,3,2,0,’%G|~9,2G" x x x x)) 
+(format nil "&#126;9,2,1„’\*G|&#126;9,3,2,3,’?„’$G|&#126;9,3,2,0,’%G|&#126;9,2G" x x x x)) 
 
 
 
@@ -246,35 +246,35 @@ Scale factor 7: | 3141590.E-06|
 
 
 
-(format nil "~10<foo~;bar~>") *→* "foo bar" 
+(format nil "&#126;10\<foo&#126;;bar&#126;\>") *→* "foo bar" 
 
 
 
-(format nil "~10:<foo~;bar~>") *→* " foo bar" 
+(format nil "&#126;10:\<foo&#126;;bar&#126;\>") *→* " foo bar" 
 
 
 
-(format nil "~10<foobar~>") *→* " foobar" 
+(format nil "&#126;10\<foobar&#126;\>") *→* " foobar" 
 
 
 
-(format nil "~10:<foobar~>") *→* " foobar" 
+(format nil "&#126;10:\<foobar&#126;\>") *→* " foobar" 
 
 
 
-(format nil "~10:@<foo~;bar~>") *→* " foo bar " 
+(format nil "&#126;10:@\<foo&#126;;bar&#126;\>") *→* " foo bar " 
 
 
 
-(format nil "~10@<foobar~>") *→* "foobar " 
+(format nil "&#126;10@\<foobar&#126;\>") *→* "foobar " 
 
 
 
-(format nil "~10:@<foobar~>") *→* " foobar " 
+(format nil "&#126;10:@\<foobar&#126;\>") *→* " foobar " 
 
 
 
-(FORMAT NIL "Written to ~A." #P"foo.bin") 
+(FORMAT NIL "Written to &#126;A." #P"foo.bin") 
 
 
 

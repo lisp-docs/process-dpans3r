@@ -340,7 +340,7 @@ For information about opening relative pathnames, see Section 19.2.3 (Merging Pa
 
 
 
-(open *filespec* :direction :probe) *→* #<Closed Probe File Stream...> 
+(open *filespec* :direction :probe) *→* #\<Closed Probe File Stream...\> 
 
 
 
@@ -360,7 +360,7 @@ For information about opening relative pathnames, see Section 19.2.3 (Merging Pa
 
 
 
-(setq s (open *filespec* :direction :probe)) *→* #<Closed Probe File Stream...> 
+(setq s (open *filespec* :direction :probe)) *→* #\<Closed Probe File Stream...\> 
 
 
 

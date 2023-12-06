@@ -192,7 +192,7 @@ The consequences are undefined if an attempt is made to *assign* the *stream var
 
 
 
-*→* #<PATHNAME :HOST NIL :DEVICE *device-name* :DIRECTORY *directory-name* 
+*→* #\<PATHNAME :HOST NIL :DEVICE *device-name* :DIRECTORY *directory-name* 
 
 
 

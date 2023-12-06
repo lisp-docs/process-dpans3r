@@ -6,7 +6,7 @@
 
 
 
-**get-setf-expansion** *place* &optional *environment* 
+**get-setf-expansion** *place* &amp;optional *environment* 
 
 
 
@@ -68,7 +68,7 @@ If *environment* is not supplied or **nil**, the environment is the *null lexica
 
 
 
-(defmacro xpop (place &environment env) 
+(defmacro xpop (place &amp;environment env) 
 
 
 

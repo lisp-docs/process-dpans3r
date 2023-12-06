@@ -6,7 +6,7 @@
 
 
 
-**multiple-value-prog1** *first-form \&#123;form\&#125;*\* *! first-form-results* 
+**multiple-value-prog1** *first-form \{form\}*\* *! first-form-results* 
 
 
 

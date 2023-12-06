@@ -6,11 +6,11 @@
 
 
 
-**values** &rest *object ! \&#123;object\&#125;*\* 
+**values** &amp;rest *object ! \{object\}*\* 
 
 
 
-**(setf (values** &rest *place***)** *new-values***)** 
+**(setf (values** &amp;rest *place***)** *new-values***)** 
 
 
 

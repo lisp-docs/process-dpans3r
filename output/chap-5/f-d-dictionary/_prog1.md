@@ -6,11 +6,11 @@
 
 
 
-**prog1** *first-form \&#123;form\&#125;*\* *! result-1* 
+**prog1** *first-form \{form\}*\* *! result-1* 
 
 
 
-**prog2** *first-form second-form \&#123;form\&#125;*\* *! result-2* 
+**prog2** *first-form second-form \{form\}*\* *! result-2* 
 
 
 
@@ -186,11 +186,11 @@ temp *!* 4
 
 
 
-(prog1 *\&#123;form\&#125;*\*) *⌘* (values (multiple-value-prog1 *\&#123;form\&#125;*\*)) 
+(prog1 *\{form\}*\*) *⌘* (values (multiple-value-prog1 *\{form\}*\*)) 
 
 
 
-(prog2 *form1 \&#123;form\&#125;*\*) *⌘* (let () *form1* (prog1 *\&#123;form\&#125;*\*)) 
+(prog2 *form1 \{form\}*\*) *⌘* (let () *form1* (prog1 *\{form\}*\*)) 
 
 
 

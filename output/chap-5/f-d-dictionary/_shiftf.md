@@ -6,7 +6,7 @@
 
 
 
-**shiftf** *\&#123;place\&#125;*<sup>+</sup> *newvalue ! old-value-1* 
+**shiftf** *\{place\}*<sup>+</sup> *newvalue ! old-value-1* 
 
 
 

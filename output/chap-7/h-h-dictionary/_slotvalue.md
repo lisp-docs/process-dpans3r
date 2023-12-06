@@ -202,3 +202,4 @@ Implementations may optimize **slot-value** by compiling it inline.
 
 
 
+</standard-method></foo>

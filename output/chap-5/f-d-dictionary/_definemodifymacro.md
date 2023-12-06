@@ -100,7 +100,7 @@ If a **define-modify-macro** *form* appears as a *top level form*, the *compiler
 
 
 
-(define-modify-macro appendf (&rest args) 
+(define-modify-macro appendf (&amp;rest args) 
 
 
 
@@ -124,11 +124,11 @@ y *!* (A B C)
 
 
 
-(define-modify-macro new-incf (&optional (delta 1)) +) 
+(define-modify-macro new-incf (&amp;optional (delta 1)) +) 
 
 
 
-(define-modify-macro unionf (other-set &rest keywords) union) 
+(define-modify-macro unionf (other-set &amp;rest keywords) union) 
 
 
 

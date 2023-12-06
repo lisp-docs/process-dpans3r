@@ -6,7 +6,7 @@
 
 
 
-**find-method** *generic-function method-qualifiers specializers* &optional *errorp* 
+**find-method** *generic-function method-qualifiers specializers* &amp;optional *errorp* 
 
 
 
@@ -22,7 +22,7 @@
 
 
 
-*method-qualifiers specializers* &optional *errorp* 
+*method-qualifiers specializers* &amp;optional *errorp* 
 
 
 

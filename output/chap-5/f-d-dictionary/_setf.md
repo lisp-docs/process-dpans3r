@@ -6,11 +6,11 @@
 
 
 
-**setf** *\&#123;#pair\&#125;*\* *! \&#123;result\&#125;*\* 
+**setf** *\{#pair\}*\* *! \{result\}*\* 
 
 
 
-**psetf** *\&#123;#pair\&#125;*\* *!* **nil** 
+**psetf** *\{#pair\}*\* *!* **nil** 
 
 
 
@@ -58,7 +58,7 @@ Data and Control
 
 
 
-(setf place newvalue) expands into an update form that stores the result of evaluating *newvalue* into the location referred to by *place*. Some *place* forms involve uses of accessors that take optional arguments. Whether those optional arguments are permitted by **setf**, or what their use is, is up to the **setf** expander function and is not under the control of **setf**. The documentation for any *function* that accepts **&optional**, **&rest**, or &key arguments and that claims to be usable with **setf** must specify how those arguments are treated. 
+(setf place newvalue) expands into an update form that stores the result of evaluating *newvalue* into the location referred to by *place*. Some *place* forms involve uses of accessors that take optional arguments. Whether those optional arguments are permitted by **setf**, or what their use is, is up to the **setf** expander function and is not under the control of **setf**. The documentation for any *function* that accepts **&amp;optional**, **&amp;rest**, or &amp;key arguments and that claims to be usable with **setf** must specify how those arguments are treated. 
 
 
 

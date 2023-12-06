@@ -6,11 +6,11 @@
 
 
 
-**typecase** *keyform \&#123;↓normal-clause\&#125;*\* [*↓otherwise-clause*] *→ \&#123;result\&#125;*\* 
+**typecase** *keyform \{↓normal-clause\}*\* [*↓otherwise-clause*] *→ \{result\}*\* 
 
 
 
-**ctypecase** *keyplace \&#123;↓normal-clause\&#125;*\* *→ \&#123;result\&#125;*\* 
+**ctypecase** *keyplace \{↓normal-clause\}*\* *→ \{result\}*\* 
 
 
 
@@ -30,15 +30,15 @@
 
 
 
-**etypecase** *keyform \&#123;↓normal-clause\&#125;*\* *→ \&#123;result\&#125;*\* 
+**etypecase** *keyform \{↓normal-clause\}*\* *→ \{result\}*\* 
 
 
 
-*normal-clause::*=(*type \&#123;form\&#125;*\*) 
+*normal-clause::*=(*type \{form\}*\*) 
 
 
 
-*otherwise-clause::*=(*\&#123;otherwise | t\&#125; \&#123;form\&#125;*\*) 
+*otherwise-clause::*=(*\{otherwise | t\} \{form\}*\*) 
 
 
 
@@ -176,7 +176,7 @@ In all three cases, is permissible for more than one *clause* to specify a match
 
 
 
-(format t "~&~S is ~A.~%" 
+(format t "&#126;&amp;&#126;S is &#126;A.&#126;%" 
 
 
 
@@ -196,7 +196,7 @@ x (typecase x
 
 
 
-(t (format nil "a(n) ~(~A~)" (type-of x)))))) 
+(t (format nil "a(n) &#126;(&#126;A&#126;)" (type-of x)))))) 
 
 
 
@@ -280,7 +280,7 @@ x (typecase x
 
 
 
-▷ Debug> :CONTINUE 1 
+▷ Debug&gt; :CONTINUE 1 
 
 
 
@@ -304,7 +304,7 @@ x (typecase x
 
 
 
-▷ Debug> :CONTINUE 1 
+▷ Debug&gt; :CONTINUE 1 
 
 
 
@@ -358,7 +358,7 @@ The *compiler* may choose to issue a warning of *type* **style-warning** if a *c
 
 
 
-*\&#123;*(*type \&#123;form\&#125;*\*)*\&#125;*\*) 
+*\{*(*type \{form\}*\*)*\}*\*) 
 
 
 
@@ -370,7 +370,7 @@ The *compiler* may choose to issue a warning of *type* **style-warning** if a *c
 
 
 
-(cond *\&#123;*((typep #1# ’*type*) *\&#123;form\&#125;*\*)*\&#125;*\*)) 
+(cond *\{*((typep #1# ’*type*) *\{form\}*\*)*\}*\*)) 
 
 
 

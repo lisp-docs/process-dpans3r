@@ -6,7 +6,7 @@
 
 
 
-**the** *value-type form ! \&#123;result\&#125;*\* 
+**the** *value-type form ! \{result\}*\* 
 
 
 

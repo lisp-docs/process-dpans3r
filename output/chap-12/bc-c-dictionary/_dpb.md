@@ -86,7 +86,7 @@ Let s be the size specified by *bytespec*; then the low s bits of *newbyte* appe
 
 
 
-*≡* (if (and (>= *j p*) (< *j* (+ *p s*))) 
+*≡* (if (and (&gt;= *j p*) (&lt; *j* (+ *p s*))) 
 
 
 

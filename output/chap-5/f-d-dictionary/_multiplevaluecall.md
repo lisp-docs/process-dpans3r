@@ -6,7 +6,7 @@
 
 
 
-**multiple-value-call** *function-form form*\* *! \&#123;result\&#125;*\* 
+**multiple-value-call** *function-form form*\* *! \{result\}*\* 
 
 
 

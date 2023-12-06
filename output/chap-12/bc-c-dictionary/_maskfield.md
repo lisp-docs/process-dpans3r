@@ -94,7 +94,7 @@ a *!* 13
 
 
 
-*⌘* (and (>= *j p*) (< *j s*) (logbitp *j n*)) 
+*⌘* (and (&gt;= *j p*) (&lt; *j s*) (logbitp *j n*)) 
 
 
 

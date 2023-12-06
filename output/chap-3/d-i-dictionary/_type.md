@@ -6,11 +6,11 @@
 
 
 
-(type *typespec \&#123;var\&#125;*\*) 
+(type *typespec \{var\}*\*) 
 
 
 
-(*typespec \&#123;var\&#125;*\*) 
+(*typespec \{var\}*\*) 
 
 
 
@@ -310,7 +310,7 @@ Given an implementation in which *fixnums* are 29 bits but **fixnum** *arrays* a
 
 
 
-(*typespec \&#123;var\&#125;*\*) is an abbreviation for (type *typespec \&#123;var\&#125;*\*). 
+(*typespec \{var\}*\*) is an abbreviation for (type *typespec \{var\}*\*). 
 
 
 

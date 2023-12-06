@@ -6,7 +6,7 @@
 
 
 
-**rotatef** *\&#123;place\&#125;*\* *!* **nil** 
+**rotatef** *\{place\}*\* *!* **nil** 
 
 
 

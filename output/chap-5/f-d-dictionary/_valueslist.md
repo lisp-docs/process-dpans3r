@@ -6,7 +6,7 @@
 
 
 
-**values-list** *list ! \&#123;element\&#125;*\* 
+**values-list** *list ! \{element\}*\* 
 
 
 

@@ -6,11 +6,11 @@
 
 
 
-**multiple-value-bind** (*\&#123;var\&#125;*\*) *values-form \&#123;declaration\&#125;*\* *\&#123;form\&#125;*\* 
+**multiple-value-bind** (*\{var\}*\*) *values-form \{declaration\}*\* *\{form\}*\* 
 
 
 
-*! \&#123;result\&#125;*\* 
+*! \{result\}*\* 
 
 
 
@@ -98,11 +98,11 @@ The *scopes* of the name binding and *declarations* do not include the *values-f
 
 
 
-(multiple-value-bind (*\&#123;var\&#125;*\*) *values-form \&#123;form\&#125;*\*) 
+(multiple-value-bind (*\{var\}*\*) *values-form \{form\}*\*) 
 
 
 
-*⌘* (multiple-value-call #’(lambda (&optional *\&#123;var\&#125;*\* &rest #1=#:ignore) 
+*⌘* (multiple-value-call #’(lambda (&amp;optional *\{var\}*\* &amp;rest #1=#:ignore) 
 
 
 
@@ -110,7 +110,7 @@ The *scopes* of the name binding and *declarations* do not include the *values-f
 
 
 
-*\&#123;form\&#125;*\*) 
+*\{form\}*\*) 
 
 
 

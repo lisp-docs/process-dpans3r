@@ -6,7 +6,7 @@
 
 
 
-(optimize *\&#123;quality* | (*quality value*)*\&#125;*\*) 
+(optimize *\{quality* | (*quality value*)*\}*\*) 
 
 
 

@@ -6,7 +6,7 @@
 
 
 
-**locally** *\&#123;declaration\&#125;*\* *\&#123;form\&#125;*\* *! \&#123;result\&#125;*\* 
+**locally** *\{declaration\}*\* *\{form\}*\* *! \{result\}*\* 
 
 
 
@@ -124,7 +124,7 @@ y))))
 
 
 
-(defun frob (w x y &optional (z (foo x y))) 
+(defun frob (w x y &amp;optional (z (foo x y))) 
 
 
 
@@ -144,7 +144,7 @@ y))))
 
 
 
-(defun frob (w x y &optional (z (foo x y))) 
+(defun frob (w x y &amp;optional (z (foo x y))) 
 
 
 

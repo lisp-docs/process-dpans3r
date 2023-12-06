@@ -94,11 +94,11 @@ finally
 
 
 
-when (and (> i 3) i) 
+when (and (&gt; i 3) i) 
 
 
 
-collect it) ; IT refers to (and (> i 3) i). 
+collect it) ; IT refers to (and (&gt; i 3) i). 
 
 
 
@@ -114,7 +114,7 @@ collect it) ; IT refers to (and (> i 3) i).
 
 
 
-when (and (> i 3) i) 
+when (and (&gt; i 3) i) 
 
 
 
@@ -134,7 +134,7 @@ return it)
 
 
 
-thereis (and (> i 3) i)) 
+thereis (and (&gt; i 3) i)) 
 
 
 
@@ -190,7 +190,7 @@ else ; Not (symbolp i)
 
 
 
-do (error "found a funny value in list ~S, value ~S~%" list i) 
+do (error "found a funny value in list &#126;S, value &#126;S&#126;%" list i) 
 
 
 

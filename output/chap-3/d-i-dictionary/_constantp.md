@@ -6,7 +6,7 @@
 
 
 
-**constantp** *form* &optional *environment ! generalized-boolean* 
+**constantp** *form* &amp;optional *environment ! generalized-boolean* 
 
 
 

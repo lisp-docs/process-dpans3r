@@ -18,7 +18,7 @@
 
 
 
-**float-sign** *float-1* &optional *float-2 ! signed-float* 
+**float-sign** *float-1* &amp;optional *float-2 ! signed-float* 
 
 
 

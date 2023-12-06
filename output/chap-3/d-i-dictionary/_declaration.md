@@ -6,7 +6,7 @@
 
 
 
-(declaration *\&#123;name\&#125;*\*) 
+(declaration *\{name\}*\*) 
 
 
 

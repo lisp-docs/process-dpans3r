@@ -30,7 +30,7 @@
 
 
 
-(cond ((< n 0) 
+(cond ((&lt; n 0) 
 
 
 
@@ -42,11 +42,11 @@
 
 
 
-(error "FIB got ~D as an argument." n)) 
+(error "FIB got &#126;D as an argument." n)) 
 
 
 
-((< n 2) n) ;fib[0]=0 and fib[1]=1 
+((&lt; n 2) n) ;fib[0]=0 and fib[1]=1 
 
 
 

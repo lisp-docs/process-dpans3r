@@ -6,7 +6,7 @@
 
 
 
-**float** *number* &optional *prototype ! float* 
+**float** *number* &amp;optional *prototype ! float* 
 
 
 

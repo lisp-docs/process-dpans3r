@@ -2,7 +2,7 @@
 
 
 
-~\&#125; terminates a ~\&#123;. The consequences of using it elsewhere are undefined. 
+&#126;\} terminates a &#126;\{. The consequences of using it elsewhere are undefined. 
 
 
 

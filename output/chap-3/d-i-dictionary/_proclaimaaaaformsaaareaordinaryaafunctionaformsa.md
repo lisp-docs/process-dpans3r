@@ -6,7 +6,7 @@
 
 
 
-**declaim** *\&#123;declaration-specifier\&#125;*\* *! implementation-dependent* 
+**declaim** *\{declaration-specifier\}*\* *! implementation-dependent* 
 
 
 

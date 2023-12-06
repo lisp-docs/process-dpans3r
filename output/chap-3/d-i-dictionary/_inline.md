@@ -6,11 +6,11 @@
 
 
 
-(inline *\&#123;function-name\&#125;*\*) 
+(inline *\{function-name\}*\*) 
 
 
 
-(notinline *\&#123;function-name\&#125;*\*) 
+(notinline *\{function-name\}*\*) 
 
 
 

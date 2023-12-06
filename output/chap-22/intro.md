@@ -110,7 +110,7 @@ Returns the *object* that could not be printed readably in the situation represe
 
 
 
-**format** *destination control-string* &rest *args ! result* 
+**format** *destination control-string* &amp;rest *args ! result* 
 
 
 

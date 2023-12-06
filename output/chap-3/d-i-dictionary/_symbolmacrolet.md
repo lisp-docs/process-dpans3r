@@ -6,11 +6,11 @@
 
 
 
-**symbol-macrolet** (*\&#123;*(*symbol expansion*)*\&#125;*\*) *\&#123;declaration\&#125;*\* *\&#123;form\&#125;*\* 
+**symbol-macrolet** (*\{*(*symbol expansion*)*\}*\*) *\{declaration\}*\* *\{form\}*\* 
 
 
 
-*→ \&#123;result\&#125;*\* 
+*→ \{result\}*\* 
 
 
 
@@ -212,7 +212,7 @@ Evaluation and
 
 
 
-(format t "Now expanding: ~S~%" form) 
+(format t "Now expanding: &#126;S&#126;%" form) 
 
 
 

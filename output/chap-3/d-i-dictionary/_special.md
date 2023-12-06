@@ -6,7 +6,7 @@
 
 
 
-(special *\&#123;var\&#125;*\*) 
+(special *\{var\}*\*) 
 
 
 
@@ -240,7 +240,7 @@ x)))
 
 
 
-(defun few (x &optional (y \*foo\*)) 
+(defun few (x &amp;optional (y \*foo\*)) 
 
 
 

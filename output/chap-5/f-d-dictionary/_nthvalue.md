@@ -118,19 +118,19 @@ Operationally, the following relationship is true, although **nth-value** might 
 
 
 
-**prog** (*\&#123;var |* (*var* [*init-form*])*\&#125;*\*) *\&#123;declaration\&#125;*\* *\&#123;tag | statement\&#125;*\* 
+**prog** (*\{var |* (*var* [*init-form*])*\}*\*) *\{declaration\}*\* *\{tag | statement\}*\* 
 
 
 
-*! \&#123;result\&#125;*\* 
+*! \{result\}*\* 
 
 
 
-**prog\*** (*\&#123;var |* (*var* [*init-form*])*\&#125;*\*) *\&#123;declaration\&#125;*\* *\&#123;tag | statement\&#125;*\* 
+**prog\*** (*\{var |* (*var* [*init-form*])*\}*\*) *\{declaration\}*\* *\{tag | statement\}*\* 
 
 
 
-*! \&#123;result\&#125;*\* 
+*! \{result\}*\* 
 
 
 
@@ -174,7 +174,7 @@ Three distinct operations are performed by **prog** and **prog\***: they bind lo
 
 
 
-*\&#123;declaration\&#125;*\* 
+*\{declaration\}*\* 
 
 
 
@@ -348,7 +348,7 @@ err
 
 
 
-"Mismatch - gleep! ~S" y) 
+"Mismatch - gleep! &#126;S" y) 
 
 
 
@@ -400,7 +400,7 @@ Think of this function as being like a zipper."
 
 
 
-"Mismatch - gleep! ~S" y) 
+"Mismatch - gleep! &#126;S" y) 
 
 
 

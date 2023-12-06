@@ -6,7 +6,7 @@
 
 
 
-**make-load-form** *object* &optional *environment → creation-form*[*, initialization-form*] 
+**make-load-form** *object* &amp;optional *environment → creation-form*[*, initialization-form*] 
 
 
 
@@ -14,19 +14,19 @@
 
 
 
-**make-load-form** (*object* **standard-object**) &optional *environment* 
+**make-load-form** (*object* **standard-object**) &amp;optional *environment* 
 
 
 
-**make-load-form** (*object* **structure-object**) &optional *environment* 
+**make-load-form** (*object* **structure-object**) &amp;optional *environment* 
 
 
 
-**make-load-form** (*object* **condition**) &optional *environment* 
+**make-load-form** (*object* **condition**) &amp;optional *environment* 
 
 
 
-**make-load-form** (*object* **class**) &optional *environment* 
+**make-load-form** (*object* **class**) &amp;optional *environment* 
 
 
 
@@ -324,7 +324,7 @@ In the following example, *instances* of my-frob are “interned” in some way.
 
 
 
-(defmethod make-load-form ((self my-frob) &optional environment) 
+(defmethod make-load-form ((self my-frob) &amp;optional environment) 
 
 
 
@@ -352,7 +352,7 @@ At this point none of the parent *slots* have been filled in. The initialization
 
 
 
-(defmethod make-load-form ((x tree-with-parent) &optional environment) 
+(defmethod make-load-form ((x tree-with-parent) &amp;optional environment) 
 
 
 
@@ -388,7 +388,7 @@ In the following example, the data structure to be dumped has no special propert
 
 
 
-(defmethod make-load-form ((s my-struct) &optional environment) 
+(defmethod make-load-form ((s my-struct) &amp;optional environment) 
 
 
 

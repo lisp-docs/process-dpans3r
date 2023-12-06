@@ -106,7 +106,7 @@ a *!* (10)
 
 
 
-*⌘* (and (< *j s*) (logbitp (+ *j p*) *n*)) 
+*⌘* (and (&lt; *j s*) (logbitp (+ *j p*) *n*)) 
 
 
 

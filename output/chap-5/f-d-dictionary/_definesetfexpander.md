@@ -10,7 +10,7 @@
 
 
 
-[[ *\&#123;declaration\&#125;*\* *| documentation* ]] *\&#123;form\&#125;*\* 
+[[ *\{declaration\}*\* *| documentation* ]] *\{form\}*\* 
 
 
 
@@ -104,7 +104,7 @@ If a **define-setf-expander** *form* appears as a *top level form*, the *compile
 
 
 
-(define-setf-expander lastguy (x &environment env) 
+(define-setf-expander lastguy (x &amp;environment env) 
 
 
 
@@ -188,7 +188,7 @@ c *!* (1 2 3 (4 5 LASTGUY-SYMBOL))
 
 
 
-(define-setf-expander ldb (bytespec int &environment env) 
+(define-setf-expander ldb (bytespec int &amp;environment env) 
 
 
 

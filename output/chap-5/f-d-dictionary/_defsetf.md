@@ -22,7 +22,7 @@ The “long form”:
 
 
 
-**defsetf** *access-fn lambda-list* (*\&#123;store-variable\&#125;*\*) [[ *\&#123;declaration\&#125;*\* *| documentation* ]] *\&#123;form\&#125;*\* *! access-fn* 
+**defsetf** *access-fn lambda-list* (*\{store-variable\}*\*) [[ *\{declaration\}*\* *| documentation* ]] *\{form\}*\* *! access-fn* 
 
 
 
@@ -224,7 +224,7 @@ An example of the use of the long form of **defsetf**:
 
 
 
-(defsetf subseq (sequence start &optional end) (new-sequence) 
+(defsetf subseq (sequence start &amp;optional end) (new-sequence) 
 
 
 
@@ -244,11 +244,11 @@ An example of the use of the long form of **defsetf**:
 
 
 
-(defun xy (&key ((x x) 0) ((y y) 0)) (aref \*xy\* x y)) *!* XY 
+(defun xy (&amp;key ((x x) 0) ((y y) 0)) (aref \*xy\* x y)) *!* XY 
 
 
 
-(defun set-xy (new-value &key ((x x) 0) ((y y) 0)) 
+(defun set-xy (new-value &amp;key ((x x) 0) ((y y) 0)) 
 
 
 
@@ -256,7 +256,7 @@ An example of the use of the long form of **defsetf**:
 
 
 
-(defsetf xy (&key ((x x) 0) ((y y) 0)) (store) 
+(defsetf xy (&amp;key ((x x) 0) ((y y) 0)) (store) 
 
 
 
@@ -280,7 +280,7 @@ An example of the use of the long form of **defsetf**:
 
 
 
-((lambda (&key ((x #:x)) ((y #:y))) 
+((lambda (&amp;key ((x #:x)) ((y #:y))) 
 
 
 

@@ -6,7 +6,7 @@
 
 
 
-**make-broadcast-stream** &rest *streams → broadcast-stream* 
+**make-broadcast-stream** &amp;rest *streams → broadcast-stream* 
 
 
 

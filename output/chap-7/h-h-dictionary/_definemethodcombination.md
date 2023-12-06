@@ -18,7 +18,7 @@
 
 
 
-(*\&#123;method-group-specifier\&#125;*\*) 
+(*\{method-group-specifier\}*\*) 
 
 
 
@@ -30,11 +30,11 @@
 
 
 
-[[ *\&#123;declaration\&#125;*\* *| documentation* ]] 
+[[ *\{declaration\}*\* *| documentation* ]] 
 
 
 
-*\&#123;form\&#125;*\* 
+*\{form\}*\* 
 
 
 
@@ -54,7 +54,7 @@
 
 
 
-*method-group-specifier::*=(*name \&#123;\&#123;qualifier-pattern\&#125;*<sup>+</sup>*| predicate\&#125;* [[ *↓long-form-option* ]]) 
+*method-group-specifier::*=(*name \{\{qualifier-pattern\}*<sup>+</sup>*| predicate\}* [[ *↓long-form-option* ]]) 
 
 
 
@@ -390,11 +390,11 @@ When an e↵ective method has no e↵ect other than to call a single method, som
 
 
 
-The list (:arguments . *lambda-list*) can appear before any declarations or *documentation string*. This form is useful when the method combination type performs some specific behavior as part of the combined method and that behavior needs access to the arguments to the *generic function*. Each parameter variable defined by *lambda-list* is bound to a *form* that can be inserted into the e↵ective method. When this *form* is evaluated during execution of the e↵ective method, its value is the corresponding argument to the *generic function*; the consequences of using such a *form* as the *place* in a **setf** *form* are undefined. Argument correspondence is computed by dividing the :arguments *lambda-list* and the *generic function lambda-list* into three sections: the *required parameters*, the *optional parameters*, and the *keyword* and *rest parameters*. The *arguments* supplied to the *generic function* for a particular *call* are also divided into three sections; the required *arguments* section contains as many *arguments* as the *generic function* has *required parameters*, the optional *arguments* section contains as many arguments as the *generic function* has *optional parameters*, and the keyword/rest *arguments* section contains the remaining arguments. Each *parameter* in the required and optional sections of the :arguments *lambda-list* accesses the argument at the same position in the corresponding section of the *arguments*. If the section of the :arguments *lambda-list* is shorter, extra *arguments* are ignored. If the section of the :arguments *lambda-list* is longer, excess *required parameters* are bound to forms that evaluate to **nil** and excess *optional parameters* are *bound* to their initforms. The *keyword parameters* and *rest parameters* in the :arguments *lambda-list* access the keyword/rest section of the *arguments*. If the :arguments *lambda-list* contains **&key**, it behaves as if it also contained **&allow-other-keys**. 
+The list (:arguments . *lambda-list*) can appear before any declarations or *documentation string*. This form is useful when the method combination type performs some specific behavior as part of the combined method and that behavior needs access to the arguments to the *generic function*. Each parameter variable defined by *lambda-list* is bound to a *form* that can be inserted into the e↵ective method. When this *form* is evaluated during execution of the e↵ective method, its value is the corresponding argument to the *generic function*; the consequences of using such a *form* as the *place* in a **setf** *form* are undefined. Argument correspondence is computed by dividing the :arguments *lambda-list* and the *generic function lambda-list* into three sections: the *required parameters*, the *optional parameters*, and the *keyword* and *rest parameters*. The *arguments* supplied to the *generic function* for a particular *call* are also divided into three sections; the required *arguments* section contains as many *arguments* as the *generic function* has *required parameters*, the optional *arguments* section contains as many arguments as the *generic function* has *optional parameters*, and the keyword/rest *arguments* section contains the remaining arguments. Each *parameter* in the required and optional sections of the :arguments *lambda-list* accesses the argument at the same position in the corresponding section of the *arguments*. If the section of the :arguments *lambda-list* is shorter, extra *arguments* are ignored. If the section of the :arguments *lambda-list* is longer, excess *required parameters* are bound to forms that evaluate to **nil** and excess *optional parameters* are *bound* to their initforms. The *keyword parameters* and *rest parameters* in the :arguments *lambda-list* access the keyword/rest section of the *arguments*. If the :arguments *lambda-list* contains **&amp;key**, it behaves as if it also contained **&amp;allow-other-keys**. 
 
 
 
-In addition, **&whole** *var* can be placed first in the :arguments *lambda-list*. It causes *var* to 
+In addition, **&amp;whole** *var* can be placed first in the :arguments *lambda-list*. It causes *var* to 
 
 
 
@@ -410,7 +410,7 @@ In addition, **&whole** *var* can be placed first in the :arguments *lambda-list
 
 
 
-be *bound* to a *form* that *evaluates* to a *list* of all of the *arguments* supplied to the *generic function*. This is di↵erent from **&rest** because it accesses all of the arguments, not just the keyword/rest *arguments*. 
+be *bound* to a *form* that *evaluates* to a *list* of all of the *arguments* supplied to the *generic function*. This is di↵erent from **&amp;rest** because it accesses all of the arguments, not just the keyword/rest *arguments*. 
 
 
 
@@ -492,7 +492,7 @@ Most examples of the long form of **define-method-combination** also illustrate 
 
 
 
-(&optional (order :most-specific-first)) 
+(&amp;optional (order :most-specific-first)) 
 
 
 
@@ -684,7 +684,7 @@ methods)))
 
 
 
-(&optional (order ’:most-specific-first)) 
+(&amp;optional (order ’:most-specific-first)) 
 
 
 
@@ -712,7 +712,7 @@ methods)))
 
 
 
-(otherwise (method-combination-error "~S is an invalid order.~@ 
+(otherwise (method-combination-error "&#126;S is an invalid order.&#126;@ 
 
 
 
@@ -788,7 +788,7 @@ form)))
 
 
 
-(&optional (order ’:most-specific-first)) 
+(&amp;optional (order ’:most-specific-first)) 
 
 
 
@@ -888,7 +888,7 @@ form)))
 
 
 
-(stable-sort methods #’< 
+(stable-sort methods #’&lt; 
 
 
 

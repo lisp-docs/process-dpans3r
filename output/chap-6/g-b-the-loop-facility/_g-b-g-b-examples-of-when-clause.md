@@ -14,7 +14,7 @@ when (not (numberp item))
 
 
 
-return (cerror "enter new value" "non-numeric value: ~s" item)) Error: non-numeric value: A 
+return (cerror "enter new value" "non-numeric value: &#126;s" item)) Error: non-numeric value: A 
 
 
 
@@ -34,7 +34,7 @@ do (return
 
 
 
-(cerror "Enter new value" "non-numeric value: ~s" item))) 
+(cerror "Enter new value" "non-numeric value: &#126;s" item))) 
 
 
 
@@ -78,7 +78,7 @@ return i))
 
 
 
-when (> i 5) 
+when (&gt; i 5) 
 
 
 
@@ -102,7 +102,7 @@ finally (prin1 ’got-here))
 
 
 
-when (> i 5) 
+when (&gt; i 5) 
 
 
 

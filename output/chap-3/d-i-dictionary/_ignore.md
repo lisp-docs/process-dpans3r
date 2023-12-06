@@ -6,11 +6,11 @@
 
 
 
-(ignore *\&#123;var* | (**function** *fn*)*\&#125;*\*) 
+(ignore *\{var* | (**function** *fn*)*\}*\*) 
 
 
 
-(ignorable *\&#123;var* | (**function** *fn*)*\&#125;*\*) 
+(ignorable *\{var* | (**function** *fn*)*\}*\*) 
 
 
 

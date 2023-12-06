@@ -6,7 +6,7 @@
 
 
 
-**declare** *\&#123;declaration-specifier\&#125;*\* 
+**declare** *\{declaration-specifier\}*\* 
 
 
 

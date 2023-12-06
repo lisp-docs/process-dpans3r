@@ -6,7 +6,7 @@
 
 
 
-**with-output-to-string** (*var* &optional *string-form* &key *element-type*) *\&#123;declaration\&#125;*\* *\&#123;form\&#125;*\* *→ \&#123;result\&#125;*\* 
+**with-output-to-string** (*var* &amp;optional *string-form* &amp;key *element-type*) *\{declaration\}*\* *\{form\}*\* *→ \{result\}*\* 
 
 
 
@@ -154,7 +154,7 @@ The consequences are undefined if destructive modifications are performed direct
 
 
 
-<b>make-string-output-stream</b>, <b>vector-push-extend</b>, Section 3.6 (Traversal Rules and Side Effects) <sup><i>∗</i><b>debug-io</b><i>∗</i><b>,</b> <i>∗</i><b>error-output</b><i>∗</i><b>,</b> <i>∗</i><b>query-io</b><i>∗</i><b>,</b> <i>∗</i><b>standard</b></sup> input</b><i>∗</i><b>,</b> <i>∗</i><b>standard-output</b><i>∗</i><b>,</b> <i>∗</i><b>trace-output</b><i>∗ Variable</i> 
+<b>make-string-output-stream</b>, <b>vector-push-extend</b>, Section 3.6 (Traversal Rules and Side Effects) <sup><i>∗</i><b>debug-io</b><i>∗</i><b>,</b> <i>∗</i><b>error-output</b><i>∗</i><b>,</b> <i>∗</i><b>query-io</b><i>∗</i><b>,</b> <i>∗</i><b>standard</b></sup> input<i>∗</i><b>,</b> <i>∗</i><b>standard-output</b><i>∗</i><b>,</b> <i>∗</i><b>trace-output</b><i>∗ Variable</i> 
 
 
 
@@ -292,7 +292,7 @@ out
 
 
 
-(defun fact (n) (if (< n 2) 1 (\* n (fact (- n 1))))) 
+(defun fact (n) (if (&lt; n 2) 1 (\* n (fact (- n 1))))) 
 
 
 

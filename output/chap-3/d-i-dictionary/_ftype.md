@@ -6,7 +6,7 @@
 
 
 
-(ftype *type \&#123;function-name\&#125;*\*) 
+(ftype *type \{function-name\}*\*) 
 
 
 

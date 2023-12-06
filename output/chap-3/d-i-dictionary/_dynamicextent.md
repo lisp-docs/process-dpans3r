@@ -6,7 +6,7 @@
 
 
 
-(dynamic-extent [[ *\&#123;var\&#125;*\* | (**function** *fn*)\* ]]) 
+(dynamic-extent [[ *\{var\}*\* | (**function** *fn*)\* ]]) 
 
 
 
@@ -152,7 +152,7 @@ A variant of this is the so-called “stack allocated rest list” that can be a
 
 
 
-(defun f (&rest x) 
+(defun f (&amp;rest x) 
 
 
 
@@ -344,7 +344,7 @@ Evaluation and
 
 
 
-(defun add (&rest x) 
+(defun add (&amp;rest x) 
 
 
 
@@ -372,7 +372,7 @@ Evaluation and
 
 
 
-;; doesn’t waste much heap storage. :-\&#125; 
+;; doesn’t waste much heap storage. :-\} 
 
 
 
@@ -400,7 +400,7 @@ Evaluation and
 
 
 
-(< (zap 5 3) 3) *! true* 
+(&lt; (zap 5 3) 3) *! true* 
 
 
 

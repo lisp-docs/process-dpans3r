@@ -92,14 +92,21 @@ def fix_symbols_in_code_blocks(filename, root):
         file.write(curr_text)
         file.close()
 
+def get_glossary_toc(sections):
+    toc = "\n\n"
+    for section in sections:
+        toc += f"\n- [{section[0]}](/docs/chap-26/cg-b-glossary/{section[0]})"
+    toc += "\n\n"
+    return toc
+
 def add_header(text, name):
     if name == "intro":
-        return "---\ntitle: 26.1 Glossary\nposition: 0\n---\n\n" + text
+        return "---\ntitle: 26.1 Glossary - Introduction\nsidebar_position: 0\n---\n\n" + text
     else:
-        return f"---\ntitle: {name.upper()}\n---\n\n" + text
+        return f"---\ntitle: {name.upper()}\nsidebar_position: {ord(name)}\n---\n\n" + text
 
-def split_glossary(filepath):
-    file = open(filepath, "r")
+def split_glossary(source_filepath, target_filepath):
+    file = open(source_filepath, "r")
     text = file.read()
     file.close()
     section_matches = re.finditer(r'(\*\*([A-Z])\*\* )', text)
@@ -114,17 +121,21 @@ def split_glossary(filepath):
     sections.append((curr_name, text[curr_index:]))
     # import pdb; pdb.set_trace()
     for section in sections:
-        base_dir = "/".join(filepath.split("/")[:-1])
+        base_dir = "/".join(target_filepath.split("/")[:-1])
         curr_path = os.path.join(base_dir, section[0]) + ".md"
         file = open(curr_path, "w")
-        curr_text = add_header(section[1], section[0])
+        if section[0] == "intro":
+            curr_text = add_header(section[1] + get_glossary_toc(sections), section[0])
+        else:
+            curr_text = add_header(section[1], section[0])
         text = file.write(curr_text)
         file.close()
     
 
 def main():
     # process_all_md_files(MD_DIR, remove_double_lines_from_code_blocks)
-    split_glossary("./output/chap-26/cg-b-glossary/_cg-b-glossary.md")
+    # split_glossary("./output/chap-26/cg-b-glossary/_cg-b-glossary.md", "./output/chap-26/cg-b-glossary/_cg-b-glossary.md")
+    split_glossary("./output/chap-26/cg-b-glossary/_cg-b-glossary.md", "../../../reactjs/lisp-docs/cl-language-reference/docs/chap-26/cg-b-glossary/_cg-b-glossary.md")
 
 if __name__ == "__main__":
     main()

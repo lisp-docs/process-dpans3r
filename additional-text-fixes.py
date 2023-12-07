@@ -2,6 +2,25 @@ import re, os
 from pprint import pprint
 
 MD_DIR = "./output/"
+# REGEXES_USED_BY_HAND_IN_EDITOR
+r'([\w<>/\*\.,\-]+)(\s*\n+\s*)([\w<>/\*\.,\-]+)'
+r'([\w,\. ]*)(\n+)( ?\*\w)'
+r'([\w,\. ]*\*? ?)(\n+)( ?\*\w)'
+r'([\(\)\w,\. ]*\*? ?)(\n+)( ?\*?[\w\(\)])'
+r'([\(\)\w,\. "\']*\*? ?)(\n+)( ?\*?[\w\(\)"\'])'
+r'([\(\)\w,\.:; "\']*\*? ?)(\n+)( ?\*?[\w:;\(\)"\'])'
+r'([\(\)\w,\.:; "\']*\*?)( *\n+ *)(\*?[\w:;\(\)"\'])'
+r''
+r'(\w+)(\s*\n+\s*)(\w+)'
+r'$1 $3'
+r''
+r''
+r'<b>((?:(?!</b>).)*)</b>'
+r'$1'
+r''
+r'(\*\*A\*\* )'
+r'(\*\*[A-Z]\*\* )'
+
 
 def process_all_md_files(given_dir, given_function):
     for root, dirs, filenames in os.walk(given_dir):
@@ -73,8 +92,24 @@ def fix_symbols_in_code_blocks(filename, root):
         file.write(curr_text)
         file.close()
 
+def split_glossary(filepath, dir):
+    file = open(filepath, "r")
+    text = file.read()
+    file.close()
+    section_matches = re.finditer(r'(\*\*([A-Z])\*\* )', text)
+    sections = []
+    curr_index = 0
+    curr_name = filepath.split("/")[-1].removesuffix(".md")
+    for match in section_matches:
+        sections.append((curr_name, text[curr_index:match.start()]))
+        curr_index = match.start()
+        curr_name = match.lastgroup()
+    sections.append((curr_name, text[curr_index:]))
+    import pdb; pdb.set_trace()
+
 def main():
-    process_all_md_files(MD_DIR, remove_double_lines_from_code_blocks)
+    # process_all_md_files(MD_DIR, remove_double_lines_from_code_blocks)
+    split_glossary("./output/chap-26/cg-b-glossary/_cg-b-glossary.md")
 
 if __name__ == "__main__":
     main()

@@ -93,9 +93,12 @@ def fix_symbols_in_code_blocks(filename, root):
         file.close()
 
 def get_glossary_toc(sections):
-    toc = "\n\n"
+    toc = "\n\n## Table of Contents\n\n"
     for section in sections:
-        toc += f"\n- [{section[0]}](/docs/chap-26/cg-b-glossary/{section[0]})"
+        if section[0] == "intro":
+            toc += f"\n- [26.1 Glossary - Introduction](/docs/chap-26/cg-b-glossary/{section[0]})"
+        else:
+            toc += f"\n- [{section[0]}](/docs/chap-26/cg-b-glossary/{section[0]})"
     toc += "\n\n"
     return toc
 
@@ -105,8 +108,8 @@ def add_header(text, name):
     else:
         return f"---\ntitle: {name.upper()}\nsidebar_position: {ord(name)}\n---\n\n" + text
 
-def split_glossary(source_filepath, target_filepath):
-    file = open(source_filepath, "r")
+def split_glossary(target_filepath):
+    file = open(target_filepath, "r")
     text = file.read()
     file.close()
     section_matches = re.finditer(r'(\*\*([A-Z])\*\* )', text)
@@ -134,8 +137,8 @@ def split_glossary(source_filepath, target_filepath):
 
 def main():
     # process_all_md_files(MD_DIR, remove_double_lines_from_code_blocks)
-    # split_glossary("./output/chap-26/cg-b-glossary/_cg-b-glossary.md", "./output/chap-26/cg-b-glossary/_cg-b-glossary.md")
-    split_glossary("./output/chap-26/cg-b-glossary/_cg-b-glossary.md", "../../../reactjs/lisp-docs/cl-language-reference/docs/chap-26/cg-b-glossary/_cg-b-glossary.md")
+    split_glossary("./output/chap-26/cg-b-glossary/_cg-b-glossary.md")
+    
 
 if __name__ == "__main__":
     main()

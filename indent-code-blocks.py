@@ -48,8 +48,8 @@ def indent_code_blocks(filepath):
         write_to_file(TEMP_FILE, code_block_contents)
         execute_indent_for_file(TEMP_FILE, 0, len(code_block_contents))
         indented_code = get_file_text(TEMP_FILE)
-        final_contents = text[:start] + indented_code + text[end:]
-        write_to_file(filepath, final_contents)
+        new_text = text[:start] + indented_code + text[end:]
+    write_to_file(filepath, new_text)
 
         # import pdb; pdb.set_trace()
         # return quantity_code_blocks_in_file

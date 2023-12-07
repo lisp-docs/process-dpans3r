@@ -8,6 +8,7 @@ EMACS_COMMAND = "emacs --batch {} --eval '(indent-region {} {})' -f 'save-buffer
 REGEX_MATCH_UNTIL = r"(?:(?!X)[\w\W\s\S\d\D.])*"
 START_CODE_BLOCK = "```lisp"
 END_CODE_BLOCK = "```"
+TEMP_FILE = "./temp_processing/cl-code.lisp"
 
 def get_shell_command_output(command_string):
     process = subprocess.Popen(command_string, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
@@ -38,6 +39,18 @@ def indent_code_blocks(filepath):
         print(EMACS_COMMAND.format(filepath, start, end))
 
         print(text[code_block.start():code_block.end()].replace("\n\n", "\n"))
+        print(os.path.abspath(filepath))
+        code_block_contents = text[start:end]
+        print(code_block_contents)
+        # IMPORTANT NOTE: EMACS WAS NOT INDENTING THE CODE BECAUSE WHEN IT READS THE FILE 
+        # IT DOESN'T DO LISP CODE EVEN THOUGH THE WHOLE REGION IS LISP, THEREFORE THE CODE
+        # HAS TO BE IN A NEW FILE FOR EMACS TO INDENT IT
+        write_to_file(TEMP_FILE, code_block_contents)
+        execute_indent_for_file(TEMP_FILE, 0, len(code_block_contents))
+        indented_code = get_file_text(TEMP_FILE)
+        final_contents = text[:start] + indented_code + start[end:]
+        write_to_file(filepath, final_contents)
+
         # import pdb; pdb.set_trace()
         # return quantity_code_blocks_in_file
     # return quantity_code_blocks_in_file

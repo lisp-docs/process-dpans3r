@@ -1,4 +1,4 @@
-import re, sys, os
+import re, sys, os, subprocess
 from pprint import pprint
 # indent-code-blocks.py
 
@@ -8,6 +8,18 @@ EMACS_COMMAND = "emacs --batch {} --eval '(indent-region {} {})' -f 'save-buffer
 REGEX_MATCH_UNTIL = r"(?:(?!X)[\w\W\s\S\d\D.])*"
 START_CODE_BLOCK = "```lisp"
 END_CODE_BLOCK = "```"
+
+def get_shell_command_output(command_string):
+    process = subprocess.Popen(command_string, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+    stdout, stderr = process.communicate()
+    return stdout.decode("utf-8").splitlines()
+    
+def execute_shell_command(command_string):
+    process = subprocess.Popen(command_string, shell=True)
+    process.communicate()
+
+def execute_indent_for_file(given_path, start, end):
+    execute_shell_command(EMACS_COMMAND.format(given_path, start, end))
 
 def indent_code_blocks(filepath):
     file = open(filepath, "r")

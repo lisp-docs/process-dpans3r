@@ -23,7 +23,7 @@ def replace_double_lines_in_code_blocks(filepath):
     start_index = 0
     for code_block in code_blocks_in_file:
         # (start,end) = (code_block.start() + len(START_CODE_BLOCK), code_block.end() - len(END_CODE_BLOCK))
-        print(text[code_block.start():code_block.end()].replace("\n\n", "\n"))
+        # print(text[code_block.start():code_block.end()].replace("\n\n", "\n"))
         new_text += text[start_index:code_block.start()] + text[code_block.start():code_block.end()].replace("\n\n", "\n")
         start_index = code_block.end()
     new_text += text[start_index:]

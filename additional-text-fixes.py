@@ -92,7 +92,7 @@ def fix_symbols_in_code_blocks(filename, root):
         file.write(curr_text)
         file.close()
 
-def split_glossary(filepath, dir):
+def split_glossary(filepath):
     file = open(filepath, "r")
     text = file.read()
     file.close()
@@ -100,12 +100,19 @@ def split_glossary(filepath, dir):
     sections = []
     curr_index = 0
     curr_name = filepath.split("/")[-1].removesuffix(".md")
-    for match in section_matches:
-        sections.append((curr_name, text[curr_index:match.start()]))
-        curr_index = match.start()
-        curr_name = match.lastgroup()
+    for curr_match in section_matches:
+        sections.append((curr_name, text[curr_index:curr_match.start()]))
+        curr_index = curr_match.start()
+        curr_name = curr_match.groups()[-1].lower()
     sections.append((curr_name, text[curr_index:]))
-    import pdb; pdb.set_trace()
+    # import pdb; pdb.set_trace()
+    for section in sections:
+        base_dir = "/".join(filepath.split("/")[:-1])
+        curr_path = os.path.join(base_dir, section[0]) + ".md"
+        file = open(curr_path, "w")
+        text = file.write(section[1])
+        file.close()
+    
 
 def main():
     # process_all_md_files(MD_DIR, remove_double_lines_from_code_blocks)

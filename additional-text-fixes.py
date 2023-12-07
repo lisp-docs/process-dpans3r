@@ -92,6 +92,12 @@ def fix_symbols_in_code_blocks(filename, root):
         file.write(curr_text)
         file.close()
 
+def add_header(text, name):
+    if name == "intro":
+        return "---\ntitle: 26.1 Glossary\nposition: 0\n---\n\n" + text
+    else:
+        return f"---\ntitle: {name.upper()}\n---\n\n" + text
+
 def split_glossary(filepath):
     file = open(filepath, "r")
     text = file.read()
@@ -99,7 +105,8 @@ def split_glossary(filepath):
     section_matches = re.finditer(r'(\*\*([A-Z])\*\* )', text)
     sections = []
     curr_index = 0
-    curr_name = filepath.split("/")[-1].removesuffix(".md")
+    # curr_name = filepath.split("/")[-1].removesuffix(".md")
+    curr_name = "intro"
     for curr_match in section_matches:
         sections.append((curr_name, text[curr_index:curr_match.start()]))
         curr_index = curr_match.start()
@@ -110,7 +117,8 @@ def split_glossary(filepath):
         base_dir = "/".join(filepath.split("/")[:-1])
         curr_path = os.path.join(base_dir, section[0]) + ".md"
         file = open(curr_path, "w")
-        text = file.write(section[1])
+        curr_text = add_header(section[1], section[0])
+        text = file.write(curr_text)
         file.close()
     
 

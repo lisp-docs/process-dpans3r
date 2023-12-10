@@ -59,17 +59,18 @@ def make_glossary(given_dir):
                 if filename.endswith(".md"):
                     filepath = os.path.join(root, filename)
                     (temp_glossary, temp_not_matched) = make_glossary_for_file(filepath)
-                    for k in temp_glossary.keys():
-                        if k in glossary:
-                            print(filename)
-                            print(k)
-                            print(glossary[k])
-                            print(temp_glossary[k])
-                            not_matched.append([filepath, k + " " + temp_glossary[k]])
-                            # import pdb; pdb.set_trace()
-                            # raise Exception("item already in dictionary!")
-                        else:
-                            glossary[k] = temp_glossary[k]
+                    # for k in temp_glossary.keys():
+                    #     if k in glossary:
+                    #         print(filename)
+                    #         print(k)
+                    #         print(glossary[k])
+                    #         print(temp_glossary[k])
+                    #         not_matched.append([filepath, k + " " + temp_glossary[k]])
+                    #         # import pdb; pdb.set_trace()
+                    #         # raise Exception("item already in dictionary!")
+                    #     else:
+                    #         glossary[k] = temp_glossary[k]
+                    glossary[filename.replace(".md", "")] = temp_glossary
                     not_matched = not_matched + temp_not_matched
         file = open(GLOSSARY_FILE, "w")
         file.write(json.dumps(glossary))

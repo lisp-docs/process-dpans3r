@@ -1,7 +1,7 @@
 import re, sys, os, subprocess, json
 from pprint import pprint
 
-DEFINITION_REGEX = r'\n(\s*(\*\*[\w\\/ \-]+\*\*)((?:(?!\n)[\w\W.])+))\n'
+DEFINITION_REGEX = r'\n(\s*(\*\*([\w\\/ \-]+)\*\*)((?:(?!\n)[\w\W.])+))\n'
 # HEADER_REGEX = r'(\n*---\n+\w+:["\' \w\*]\n+---\n+\s*\*\*\w\*\*\s*)'
 # HEADER_REGEX = r'(\n*\---\n+(\w+\:[\"\' \w\*_]+\n+)+\---\n+\s*\*\*\w\*\*\s*)'
 HEADER_REGEX = r'(\n*\---\n+(\w+\:[\"\' \w\*_]+\n+)+\---\n+\s*\*\*\w\*\*\s*)'
@@ -26,20 +26,22 @@ def make_glossary_for_file(filepath):
     # quantity_code_blocks_in_file = len(re.findall(code_blocks_regex, text))
     glossary = {}
     for definition in definitions_in_file:
-        if definition.groups()[2].strip() != "":
-            print(len(definition.groups()))
-            print(definition.groups()[0])
-            print(definition.groups()[1])
-            print(definition.groups()[2])
-            import pdb; pdb.set_trace()
-            glossary[definition.groups()[1]] = definition.groups()[2]
+        if definition.groups()[3].strip() != "":
+            # print(len(definition.groups()))
+            # print(definition.groups())
+            # print(definition.groups()[0])
+            # print(definition.groups()[1])
+            # print(definition.groups()[2])
+            # print(definition.groups()[3])
+            # import pdb; pdb.set_trace()
+            glossary[definition.groups()[2]] = definition.groups()[3]
             new_text = new_text.replace(definition.groups()[0].strip(), "", 1)
     new_text = new_text.strip()
     not_matched = []
     if len(new_text) != 0:
-        print(filepath)
-        print(len(new_text))
-        print(new_text)
+        # print(filepath)
+        # print(len(new_text))
+        # print(new_text)
         not_matched.append([filepath, new_text])
         # import pdb; pdb.set_trace()
         # new_text = new_text.replace(definition.group)
@@ -59,11 +61,15 @@ def make_glossary(given_dir):
                     (temp_glossary, temp_not_matched) = make_glossary_for_file(filepath)
                     for k in temp_glossary.keys():
                         if k in glossary:
+                            print(filename)
                             print(k)
                             print(glossary[k])
                             print(temp_glossary[k])
-                            raise Exception("item already in dictionary!")
-                        glossary[k] = temp_glossary[k]
+                            not_matched.append([filepath, k + " " + temp_glossary[k]])
+                            # import pdb; pdb.set_trace()
+                            # raise Exception("item already in dictionary!")
+                        else:
+                            glossary[k] = temp_glossary[k]
                     not_matched = not_matched + temp_not_matched
         file = open(GLOSSARY_FILE, "w")
         file.write(json.dumps(glossary))
@@ -71,6 +77,8 @@ def make_glossary(given_dir):
         file = open(NOT_MATCHED_FILE, "w")
         file.write(json.dumps(not_matched))
         file.close()
+        pprint(not_matched)
+        print(f"Items Note Matched: {len(not_matched)}")
 
 
 def main(args=[]):

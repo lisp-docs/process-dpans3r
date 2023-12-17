@@ -11,6 +11,7 @@ This project is for processing the files from <https://github.com/lisp-docs/cl-s
    - clear footers by running [clear_footers.py](/clear_footers.py)
    - add markdown code blocks with [add-md-code-blocks.py](/add-md-code-blocks.py)
    - split the dictionary files for files not already split with code blocks [split-dictionary.py](/split-dictionary.py)
+     - Note that the above file is incomplete, the functionality has to be merged with code-blocks to do the proper split...
    - remove double lines in markdown code blocks: [clean_double_lines.py](/clean_double_lines.py)
    - indent code blocks [indent-code-blocks.py](/indent-code-blocks.py)
    - make the glossary [make-glossary.py](/make-glossary.py)

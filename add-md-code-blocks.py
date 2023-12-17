@@ -8,7 +8,8 @@ MD_CODE_END = '```'
 def process_files_in_dir(given_dir):
     for root, dirs, filenames in os.walk(given_dir):
         for filename in filenames:
-            add_md_code_blocks(filename, root)
+            if filename != ".DS_Store":
+                add_md_code_blocks(filename, root)
 
 def apply_first_example_code_block(given_text):
     # There are markdown code blocks in the text already
@@ -36,7 +37,7 @@ def apply_first_example_code_block(given_text):
 
 def conditionally_add_filename_codeblock(filename, root):
     if "example" in filename.lower():
-        filepath = os.path.join(filename, root)
+        filepath = os.path.join(root, filename)
         file = open(filepath, "r")
         text = file.read()
         file.close()
@@ -49,7 +50,8 @@ def conditionally_add_filename_codeblock(filename, root):
     return False
 
 def conditionally_add_section_codeblock(filename, root):
-    filepath = os.path.join(filename, root)
+    filepath = os.path.join(root, filename)
+    print(filepath)
     file = open(filepath, "r")
     given_text = file.read()
     file.close()

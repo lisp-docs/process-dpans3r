@@ -9,13 +9,17 @@ from pprint import pprint
 VARIABLE_ITEM_REGEX = r'(\*\*\w+(-\w+)*\*\*[\s\n]*\*\w+([\s\n]*\w+)*\*[\s\n]*\*\*\w+([\s\n]*\w+)*:\*\*)'
 # VARIABLE_ITEM_SYNTAX_REGEX = r'(\*\*\w+(-\w+)*\*\*[\s\n]*\*\w+([\s\n]*\w+)*\*[\s\n]*\*\*Syntax*:\*\*)'
 # ITEM_EXPLICIT_REGEX = r'(\*\*(\w+(-\w+)*)\*\*[\s\n]*\*\w+([\s\n]*\w+)*\*[\s\n]*\*\*(Syntax|(Class Precedence List))*:\*\*)'
-ITEM_EXPLICIT_REGEX = r'((\*\∗\*)?\*\*(?P<item_name>(\w+(-\w+)*)(, (\w+(-\w+)*))*)\*\*[\s\n]*\*(\∗ )?(?P<item_type>\w+([\s\n]*\w+)*)\*[\s\n]*\*\*(Syntax|(Class Precedence List)|(Value Type)|Supertypes)*:\*\*)'
+ITEM_EXPLICIT_REGEX = r'((\*\∗\*)?\*\*(?P<item_name>([\w=/<>\-+\\]+(-[\w=/<>\-+\\]+)*)(, ([\w=/<>\-+\\]+(-[\w=/<>\-+\\]+)*))*)\*\*[\s\n]*\*(\∗ )?(?P<item_type>\w+([\s\n]*\w+)*)\*[\s\n]*\*\*(Syntax|(Class Precedence List)|(Value Type)|Supertypes|(Constant Value))*:\*\*)'
 
 
 # FUNCTION_REGEX = r'(\*\*(\w+(-\w+)*)\*\*[\s\n]*\*\w+([\s\n]*\w+)*\*[\s\n]*\*\*(Syntax|(Class Precedence List)|(Value Type))*:\*\*)'
 # VARIABLE_REGEX = r'(\*\*(\w+(-\w+)*)\*\*[\s\n]*\*\w+([\s\n]*\w+)*\*[\s\n]*\*\*(Syntax|(Class Precedence List)|(Value Type))*:\*\*)'
 
 ITEM_FILE_TEMPLATE = "# {}\n\nimport {} from './_{}';\n\n<{} />\n\n## Expanded Reference: {}\n\n:::tip\nTODO: Please contribute to this page by adding explanations and examples\n:::\n\n```lisp\n{}\n```\n"
+
+def replace_special_chars(given_string):
+    temp_string = given_string.replace("=", "equal").replace("/", "slash").replace("<", "lt")
+    return temp_string.replace(">", "gt").replace("+", "plus").replace("\\", "back-slash")
 
 def split_dictionary_for_file(filepath):
     print(filepath)
@@ -50,10 +54,11 @@ def split_dictionary_for_file(filepath):
         item_title = item_name if definition.groups()[1] == None else f"\*{item_name}\*"
         lisp_item_name = f"({item_name} )" if definition.groups()[1] == None else f"*{item_name}*"
         item_name_for_path = item_name.replace(", ", "_")
+        item_name_for_path = replace_special_chars(item_name_for_path)
         # variable_path_suffix = "" if definition.groups()[1] == None else f"_variable"
         variable_react_name = definition.groupdict()["item_type"].strip().replace(" ", "")
         item_filename = f"{item_name_for_path}_{item_type}.md"
-        react_item_component = "".join([part.capitalize()for part in item_name.split(",")[0].split("-")])
+        react_item_component = "".join([part.capitalize() for part in replace_special_chars(item_name).split(",")[0].split("-")])
         react_item_component += variable_react_name
         md_file = ITEM_FILE_TEMPLATE.format( item_title, react_item_component, item_filename, react_item_component, item_title, lisp_item_name)
         final_items.append({"filepath": item_filename, "start_index": definition.start(), "md_text": md_file})

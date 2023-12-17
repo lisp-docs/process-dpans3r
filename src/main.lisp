@@ -665,6 +665,7 @@
 (defun replace-unicode-special-chars (given-string)
   (str:replace-using
    '("*.*" "▷"
+     "✏" "ε"
      "*hh" "⟨"
      "ii*" "⟩"
      "}" "&#125;"

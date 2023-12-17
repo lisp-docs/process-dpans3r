@@ -9,13 +9,13 @@ from pprint import pprint
 VARIABLE_ITEM_REGEX = r'(\*\*\w+(-\w+)*\*\*[\s\n]*\*\w+([\s\n]*\w+)*\*[\s\n]*\*\*\w+([\s\n]*\w+)*:\*\*)'
 # VARIABLE_ITEM_SYNTAX_REGEX = r'(\*\*\w+(-\w+)*\*\*[\s\n]*\*\w+([\s\n]*\w+)*\*[\s\n]*\*\*Syntax*:\*\*)'
 # ITEM_EXPLICIT_REGEX = r'(\*\*(\w+(-\w+)*)\*\*[\s\n]*\*\w+([\s\n]*\w+)*\*[\s\n]*\*\*(Syntax|(Class Precedence List))*:\*\*)'
-ITEM_EXPLICIT_REGEX = r'((\*\∗\*)?\*\*((\w+(-\w+)*)(, (\w+(-\w+)*))*)\*\*[\s\n]*\*(\∗ )?\w+([\s\n]*\w+)*\*[\s\n]*\*\*(Syntax|(Class Precedence List)|(Value Type))*:\*\*)'
+ITEM_EXPLICIT_REGEX = r'((\*\∗\*)?\*\*(?P<item_name>(\w+(-\w+)*)(, (\w+(-\w+)*))*)\*\*[\s\n]*\*(\∗ )?(?P<item_type>\w+([\s\n]*\w+)*)\*[\s\n]*\*\*(Syntax|(Class Precedence List)|(Value Type)|Supertypes)*:\*\*)'
 
 
 # FUNCTION_REGEX = r'(\*\*(\w+(-\w+)*)\*\*[\s\n]*\*\w+([\s\n]*\w+)*\*[\s\n]*\*\*(Syntax|(Class Precedence List)|(Value Type))*:\*\*)'
 # VARIABLE_REGEX = r'(\*\*(\w+(-\w+)*)\*\*[\s\n]*\*\w+([\s\n]*\w+)*\*[\s\n]*\*\*(Syntax|(Class Precedence List)|(Value Type))*:\*\*)'
 
-ITEM_FILE_TEMPLATE = "# {}\n\nimport {} from './_{}.md';\n\n<{} />\n\n## Expanded Reference: {}\n\n:::tip\nTODO: Please contribute to this page by adding explanations and examples\n:::\n\n```lisp\n{}\n```\n"
+ITEM_FILE_TEMPLATE = "# {}\n\nimport {} from './_{}';\n\n<{} />\n\n## Expanded Reference: {}\n\n:::tip\nTODO: Please contribute to this page by adding explanations and examples\n:::\n\n```lisp\n{}\n```\n"
 
 def split_dictionary_for_file(filepath):
     print(filepath)
@@ -41,19 +41,21 @@ def split_dictionary_for_file(filepath):
     #     import pdb; pdb.set_trace()
     final_items = [{"filepath": filepath, "start_index": 0}]
     for definition in definitions_in_file_w_syntax:
-        # import pdb; pdb.set_trace()
+        if definition.groups()[2] != definition.groupdict()["item_name"]:
+            import pdb; pdb.set_trace()
         # TODO fix react component names for multiple variables case
         # TODO make sure not overwriting same file?
-        item_name = definition.groups()[2]
+        item_name = definition.groupdict()["item_name"]
+        item_type = definition.groupdict()["item_type"].strip().replace(" ", "-").lower()
         item_title = item_name if definition.groups()[1] == None else f"\*{item_name}\*"
         lisp_item_name = f"({item_name} )" if definition.groups()[1] == None else f"*{item_name}*"
         item_name_for_path = item_name.replace(", ", "_")
-        variable_path_suffix = "" if definition.groups()[1] == None else f"_variable"
-        variable_react_name = "" if definition.groups()[1] == None else f"Variable"
-        item_filename = f"{item_name_for_path}{variable_path_suffix}.md"
+        # variable_path_suffix = "" if definition.groups()[1] == None else f"_variable"
+        variable_react_name = definition.groupdict()["item_type"].strip().replace(" ", "")
+        item_filename = f"{item_name_for_path}_{item_type}.md"
         react_item_component = "".join([part.capitalize()for part in item_name.split(",")[0].split("-")])
         react_item_component += variable_react_name
-        md_file = ITEM_FILE_TEMPLATE.format( item_title, react_item_component, item_name, react_item_component, item_title, lisp_item_name)
+        md_file = ITEM_FILE_TEMPLATE.format( item_title, react_item_component, item_filename, react_item_component, item_title, lisp_item_name)
         final_items.append({"filepath": item_filename, "start_index": definition.start(), "md_text": md_file})
         # if definition.groups() != None and "print-array" in definition.groups()[0]:
         #     import pdb; pdb.set_trace()

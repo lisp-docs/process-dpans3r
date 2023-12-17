@@ -8,7 +8,8 @@ This project is for processing the files from <https://github.com/lisp-docs/cl-s
 2. Then execute the python scripts to:
    - fix all html tags by running [fix-html-tags.py](/fix-html-tags.py)
    - additional text fixes running [additional-text-fixes.py](/additional-text-fixes.py)
-   - code blocks
+   - clear footers by running [clear_footers.py](/clear_footers.py)
+   - add markdown code blocks with [add-md-code-blocks.py](/add-md-code-blocks.py)
    - split the dictionary files for files not already split with code blocks [split-dictionary.py](/split-dictionary.py)
    - remove double lines in markdown code blocks: [clean_double_lines.py](/clean_double_lines.py)
    - indent code blocks [indent-code-blocks.py](/indent-code-blocks.py)

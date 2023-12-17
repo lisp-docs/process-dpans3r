@@ -3,7 +3,9 @@ from pprint import pprint
 
 MD_DIR = "./output/"
 MD_CODE_BEGIN = '```lisp'
+MD_CODE_BLOCK_TITLE = '\n```lisp title="{}"\n{}\n```\n'
 MD_CODE_END = '```'
+LOOK_AHEAD_REGEX = r'(?:(?!X).)*'
 
 def process_files_in_dir(given_dir):
     for root, dirs, filenames in os.walk(given_dir):
@@ -18,11 +20,29 @@ def apply_first_example_code_block(given_text):
     example_title = "**Examples:**"
     example_index = given_text.find(example_title)
     title_regex = r'(\*\*\w+(\w*\s*)*:\*\*\s*?\n)'
-
     # No examples section
     if example_index == -1:
         return given_text
     
+    # figure_regex = r'\|(?:(?!\|)[^\|])*\|[\s\n]*\|\s*:-\s*\|[\s\n]+\*\*Figure \d+(–\d+)*\.[\w\s]*\*\*'
+    figure_regex = r'\|(?P<lisp_code>(?:(?!\|)[^\|])*)\|[\s\n]*\|\s*:-\s*\|[\s\n]+\*\*(?P<figure_name>Figure \d+(–\d+)*\.[\w\s]*)\*\*'
+    
+    # case where there are Figure examples
+    matches = [match for match in re.finditer(figure_regex, given_text)]
+    if len(matches) > 0:
+        new_text = ""
+        prev_end = 0
+        for match in matches:
+            (start, end) = match.span()
+            title = match.groupdict()["figure_name"]
+            lisp_code = match.groupdict()["lisp_code"]
+            new_text += given_text[prev_end: start]
+            new_text += MD_CODE_BLOCK_TITLE.format(title, lisp_code)
+            prev_end = end
+        new_text += given_text[prev_end:]
+        return new_text
+    
+    # Regular case
     post_example_index = example_index + len(example_title)
     next_title_match = re.search(title_regex, given_text[post_example_index:])
     pre_example_text = given_text[:post_example_index]

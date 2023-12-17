@@ -82,6 +82,7 @@ def fix_symbols_in_code_blocks(filename, root):
     curr_text = file_text
     for code_block in code_blocks_found:
         new_code_block = code_block.replace("&lt;", "<")
+        new_code_block = code_block.replace("&#126;", "~")
         new_code_block = new_code_block.replace("&gt;", ">")
         curr_text = curr_text.replace(code_block, new_code_block)
 

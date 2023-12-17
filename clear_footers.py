@@ -22,8 +22,12 @@ def clear_footers(given_dir):
                         curr_file.write(curr_text)
                         curr_file.close()
                         
-def main(args=[]):
-    clear_footers(MD_DIR)
+def main(args=[MD_DIR]):
+    for dir in args:
+        clear_footers(dir)
 
 if __name__ == "__main__":
-    main()
+    if len(sys.argv) == 1:
+        main()
+    else:
+        main(sys.argv[1:])

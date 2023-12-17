@@ -50,7 +50,7 @@ def main(args=[]):
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("Please provide a directory with markdown files containing lisp code blocks to indent")
+        print("Please provide a directory with markdown files containing lisp code blocks to remove the double lines")
         print("Note that the code blocks must be formatted as:\n\n```lisp\n\n...\n\n```\n\n")
     else:
         main(sys.argv[1:])

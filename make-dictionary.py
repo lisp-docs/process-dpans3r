@@ -4,6 +4,7 @@ from pprint import pprint
 TEX_DIR = "./tex-files"
 MD_DIR = "./output/"
 CODE_BLOCKS_JSON = "./output/code-blocks.json"
+ITEM_EXPLICIT_REGEX = r'((\*\∗\*)?\*\*(?P<item_name>([\w=/<>\-+\\]+(-[\w=/<>\-+\\]+)*)(, ([\w=/<>\-+\\]+(-[\w=/<>\-+\\]+)*))*)\*\*[\s\n]*\*(\∗ )?(?P<item_type>\w+([\s\n]*\w+)*)\*[\s\n]*\*\*(Syntax|(Class Precedence List)|(Value Type)|Supertypes|(Constant Value))*:\*\*)'
 
 def replace_code_blocks(code_blocks, given_dir):
     # print(os.listdir(given_dir))
@@ -63,23 +64,10 @@ def get_section_number(section_filename):
     raise Exception("Invalid Section Name " + section_filename)
 
 def get_new_section_name(last_section_filename):
-    # print(last_section_filename)
-    # section_name_regex = r'_?((\w+-)+).*'
-    # section_number_regex = r'^\w+-\w+'
-    # section_name_match = re.search(section_name_regex, last_section_filename)
-    # if section_name_match:
-    #     # print(section_name_match)
-    #     section_name_matched_string = section_name_match.groups()[0]
-        # section_number_match = re.search(section_number_regex, section_name_matched_string).group()
     section_number_match = get_section_number(last_section_filename)
-        # print(section_name_matched_string)
-        # print(section_number_match)
     new_section_number = section_number_match[:-1] + chr(ord(section_number_match[-1]) + 1)
     new_section_name = new_section_number + "-dictionary"
-        # print(section_number_match[:-1] + chr(ord(section_number_match[-1]) + 1))
-        # print(new_section_name)
     return new_section_name
-    # raise Exception("Could not find section name for " + last_section_filename)
     
 
 def split_dictionary_files(given_dir):
@@ -105,11 +93,11 @@ def split_dictionary_files(given_dir):
                 curr_file = open(curr_file_path, "r")
                 curr_text = curr_file.read()
                 curr_file.close()
-                if is_dictionary_file_content(curr_text):
-                    process_dictionary_file(curr_root, last_section, curr_file_path, curr_text)
+                # TODO get dictionary path if it exists... pass it to process file below
+                process_dictionary_file(curr_root, last_section, curr_file_path, curr_text)
         break
 
-def process_dictionary_file(root, last_section, curr_file_path, curr_text):
+def process_dictionary_file(root, last_section, curr_file_path, curr_text, dictionary_dir=None):
     # Create Folder
     # Create _category_.json file
     # Open category json file, parse, get name without r'\d+\. ', add " Dictionary"...
@@ -120,35 +108,32 @@ def process_dictionary_file(root, last_section, curr_file_path, curr_text):
     # Parse all dictionary items appropiately...
     # print("hello")
     # os.mkdir()
-    new_section_name = get_new_section_name(last_section)
-    new_section_dir = os.path.join(root, new_section_name)
-    # print(new_section_dir)
-    # print(os.path.join(root, new_section_name))
-    os.mkdir(new_section_dir)
-    make_category_json_file(new_section_name, root)
-    new_file_sections = split_dictionary_text(curr_text)
-    if len(new_file_sections) > 1:
-        last_file_before_dictionary_section = open(curr_file_path, "w")
-        last_file_before_dictionary_section.write(new_file_sections[0])
-        last_file_before_dictionary_section.close()
-        for file_section in new_file_sections[1:]:
-            # print(file_section)
-            create_dicionary_entry_files(file_section, new_section_dir)
+    # TODO only if there is no existing dictionary
+    if dictionary_dir == None:
+        new_section_name = get_new_section_name(last_section)
+        dictionary_dir = os.path.join(root, new_section_name)
+        os.mkdir(dictionary_dir)
+        make_category_json_file(new_section_name, root)
+    # TODO If there is a dicionary section already, initialize the necessary variables
+    if is_dictionary_file_content(curr_text): # DONE
+        new_file_sections = split_dictionary_text(curr_text) # DONE
+        if len(new_file_sections) > 1:
+            last_file_before_dictionary_section = open(curr_file_path, "w")
+            last_file_before_dictionary_section.write(new_file_sections[0])
+            last_file_before_dictionary_section.close()
+            for file_section in new_file_sections[1:]:
+                # print(file_section)
+                create_dicionary_entry_files(file_section, dictionary_dir)
 
 def split_dictionary_text(curr_text):
     # item_regex = r'\*\*.*?\*\* \*\w+(\s+\w+)*\* \n\n\*\*Class Precedence List:\*\* \n'
-    item_regex = r'(\*\*.*?\*\* \*[A-Z][a-z]*(\s+\w+)*\*\s*\n)'
-    matches = re.findall(item_regex, curr_text)
-    start_indices = [m.start(0) for m in re.finditer(item_regex, curr_text)]
-    # pprint(matches)
-    # pprint(start_indices)
-    # print(curr_text[:start_indices[0]])
+    # item_regex = r'(\*\*.*?\*\* \*[A-Z][a-z]*(\s+\w+)*\*\s*\n)'
+    ITEM_EXPLICIT_REGEX
+    # matches = re.findall(ITEM_EXPLICIT_REGEX, curr_text)
+    start_indices = [m.start(0) for m in re.finditer(ITEM_EXPLICIT_REGEX, curr_text)]
     split_items = [curr_text[0:start_indices[0]]] 
     split_items += [curr_text[start_indices[i]:start_indices[i+1]] for i in range(len(start_indices)-1)]
-    split_items += [curr_text[start_indices[-1]:]] 
-    # print(len(start_indices))
-    # print(len(split_items))
-    # print(split_items[2])
+    split_items += [curr_text[start_indices[-1]:]]
     return split_items
 
 def get_new_item_name(names_used, curr_name):
@@ -309,14 +294,10 @@ def char_to_num_decode(char_string):
     return "".join([str(ord(curr_char) - ord("a")) for curr_char in char_string])
 
 def is_dictionary_file_content(content):
-    dic_file_regex = r'(\*\*Class Precedence List:\*\*)|(\*\*Syntax:\*\*)'
-    matches = re.search(dic_file_regex, content)
+    matches = re.search(ITEM_EXPLICIT_REGEX, content)
     if matches:
-        # print(matches.span())
-        # print(matches.group())
         return True
     return False
-        # print("is_dictionary_file")
 
 # def split_dictionary_content(content):
 #     print("split_dictionary_content")

@@ -208,7 +208,7 @@ ITEM_FILE_TEMPLATE = "---\ntitle: \"{}\"\n---\n\n# {}\n\nimport {} from './_{}';
 def replace_special_chars(given_string):
     temp_string = given_string.replace("=", "equal").replace("/", "slash").replace("<", "lt")
     temp_string = temp_string.replace(">", "gt").replace("+", "plus").replace("\\", "back-slash")
-    temp_string = temp_string.replace("*", "asterisk")
+    temp_string = temp_string.replace("*", "asterisk").replace("#", "hash")
     return temp_string
 
 def create_dicionary_entry_files(file_section, dictionary_path):
@@ -252,18 +252,20 @@ def create_dicionary_entry_files(file_section, dictionary_path):
         # Visible Markdown File
         visible_md_path = f"{dictionary_path}/{item_filename}"
         if os.path.exists(visible_md_path):
-            print("Problem! This path should not exist!")
-            print(visible_md_path)
-            import pdb; pdb.set_trace()
+            # print("Problem! This path should not exist!")
+            # print(visible_md_path)
+            print(f"+ Overwriting: {visible_md_path}")
+            # import pdb; pdb.set_trace()
         file = open(visible_md_path, "w")
         file.write(md_file)
         file.close()
         # Hidden Markdown File
         hidden_md_path = f"{dictionary_path}/_{item_filename}"
         if os.path.exists(hidden_md_path):
-            print("Problem! This path should not exist!")
-            print(hidden_md_path)
-            import pdb; pdb.set_trace()
+            # print("Problem! This path should not exist!")
+            # print(hidden_md_path)
+            print(f"+ Overwriting: {hidden_md_path}")
+            # import pdb; pdb.set_trace()
         file = open(hidden_md_path, "w")
         file.write(file_section)
         file.close()

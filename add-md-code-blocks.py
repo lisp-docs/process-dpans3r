@@ -47,8 +47,8 @@ def conditionally_add_filename_codeblock(filename, root):
         figure_regex = r'\|(?P<lisp_code>(?:(?!\|)[^\|])*)\|[\s\n]*\|\s*:-\s*\|[\s\n]+\*\*(?P<figure_name>Figure \d+(–\d+)*\.[\w\s]*)\*\*'
         
         # case where there are Figure examples
-        if "_c-d-b-b-c-examples-of-potential-numbers" in filename:
-            import pdb; pdb.set_trace()
+        # if "_c-d-b-b-c-examples-of-potential-numbers" in filename:
+        #     import pdb; pdb.set_trace()
         matches = [match for match in re.finditer(figure_regex, text)]
         code_block_wrapped_text = ""
         if len(matches) > 0:

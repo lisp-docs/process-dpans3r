@@ -26,7 +26,11 @@ def execute_indent_for_file(given_path, start, end):
     execute_shell_command(EMACS_COMMAND.format(given_path, start, end))
 
 def indent_code_blocks(filepath):
-    # TODO include title in new code block... wihtout indenting it...
+    # ensure temp file directory and file exist
+    if not os.path.exists(TEMP_FILE):
+        temp_dir = "/".join(TEMP_FILE.split("/")[:-1])
+        os.makedirs(temp_dir)
+
     file = open(filepath, "r")
     text = file.read()
     file.close()

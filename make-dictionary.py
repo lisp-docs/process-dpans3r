@@ -48,6 +48,10 @@ def ensure_dictionary_exists(current_dictionary, chapter_dir):
     if not os.path.isfile(category_file_path):
         make_category_json_file(current_dictionary, chapter_dir)
 
+# TODO creating dictionary in wrong directory!
+    # 'output/chap-13/bd-b-character-concepts/bd-c-dictionary'
+# TODO not always should I make a dictionary...
+
 def split_dictionary_files(given_dir):
     current_dictionary = None
     chapter_dir = None
@@ -58,14 +62,18 @@ def split_dictionary_files(given_dir):
             # We potentially are inside a chapter directory or lower
             if len(chapter_parts) > 0:
                 curr_chapter = chapter_parts[0]
-                if not curr_chapter in current_dictionary:
+                if not curr_chapter in chapter_dir:
                     current_dictionary = None
+                    chapter_dir = None
                 if len(dictionary_dirs) > 1 and current_dictionary == None:
                     print("Weird, multiple dictionary directories found. Please check what's going on.")
                     import pdb; pdb.set_trace()
                 elif len(dictionary_dirs) == 0 and current_dictionary == None:
-                    section_dir_names = dirs
-                    last_section = get_last_section(section_dir_names)
+                    # section_dir_names = dirs
+                    print(root)
+                    print(filenames)
+                    import pdb; pdb.set_trace()
+                    last_section = get_last_section(filenames)
                     dictionary_section_name = get_new_section_name(last_section)
                     current_dictionary = dictionary_section_name
                     chapter_dir = root
@@ -75,7 +83,7 @@ def split_dictionary_files(given_dir):
                     chapter_dir = root
                 for filename in [filename for filename in filenames if ".md" in filename]:
                     filepath = os.path.join(root, filename)
-                    process_dictionary_file(filepath, dictionary_dir=dictionary_dir, chapter_dir=chapter_dir)
+                    process_dictionary_file(filepath, dictionary_dir=current_dictionary, chapter_dir=chapter_dir)
 
 
 def process_dictionary_file(curr_file_path, dictionary_dir=None, chapter_dir=None):
@@ -250,7 +258,7 @@ def create_dicionary_entry_files(file_section, dictionary_path):
         file.write(file_section)
         file.close()
 
-        print(f"- [{item_name}]({os.path.join(dictionary_path, item_filename)})")
+        print(f"- [{item_filename}]({os.path.join(dictionary_path, item_filename)})")
     else:
         print("This should be a valid dictionary entry because it was already checked! This code should not execute! ERROR")
         import pdb; pdb.set_trace()

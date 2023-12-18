@@ -92,7 +92,7 @@ def process_dictionary_file(curr_file_path, dictionary_dir=None, chapter_dir=Non
             last_file_before_dictionary_section.close()
             for file_section in new_file_sections[1:]:
                 dictionary_path = os.path.join(chapter_dir, dictionary_dir)
-                create_dicionary_entry_files(file_section, dictionary_path) # TODO check not overwriting file
+                create_dicionary_entry_files(file_section, dictionary_path) 
 
 def split_dictionary_text(curr_text):
     ITEM_EXPLICIT_REGEX
@@ -194,19 +194,15 @@ def replace_special_chars(given_string):
     return temp_string.replace(">", "gt").replace("+", "plus").replace("\\", "back-slash")
 
 def create_dicionary_entry_files(file_section, dictionary_path):
-    # TODO bring new naming logic...
     # create _x.md, x.md filenames import correctly... add first heading as title to x.md
     # avoid name conflicts, make a dic, +a to filenames...
 
-    # item_regex = r'(\*\*(.*?)\*\* \*[A-Z][a-z]*(\s+\w+)*\*\s*\n)'
-    # definitions_in_file_w_syntax = [match for match in re.finditer(ITEM_EXPLICIT_REGEX, text)]
     matches = re.match(ITEM_EXPLICIT_REGEX, file_section)
     names_used = {}
     if matches:
         definition = matches
         if definition.groups()[2] != definition.groupdict()["item_name"]:
             import pdb; pdb.set_trace()
-        # TODO make sure not overwriting same file?
         item_name = definition.groupdict()["item_name"]
         item_type = definition.groupdict()["item_type"].strip().replace(" ", "-").lower()
         item_title = item_name if definition.groups()[1] == None else f"\*{item_name}\*"

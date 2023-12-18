@@ -207,7 +207,9 @@ ITEM_FILE_TEMPLATE = "---\ntitle: \"{}\"\n---\n\n# {}\n\nimport {} from './_{}';
 
 def replace_special_chars(given_string):
     temp_string = given_string.replace("=", "equal").replace("/", "slash").replace("<", "lt")
-    return temp_string.replace(">", "gt").replace("+", "plus").replace("\\", "back-slash")
+    temp_string = temp_string.replace(">", "gt").replace("+", "plus").replace("\\", "back-slash")
+    temp_string = temp_string.replace("*", "asterisk")
+    return temp_string
 
 def create_dicionary_entry_files(file_section, dictionary_path):
     # create _x.md, x.md filenames import correctly... add first heading as title to x.md

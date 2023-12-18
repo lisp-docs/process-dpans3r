@@ -43,13 +43,8 @@ def get_last_section(filenames):
             all_matches_dict[section_number] = filename
             all_matches_list.append(section_number)
     if len(all_matches_list) > 0:
-        # print(all_matches_list)
         all_matches_list.sort()
-        # print(all_matches_list)
-        # print(all_matches_list[-1])
-        # print(all_matches_dict[all_matches_list[-1]])
         return all_matches_dict[all_matches_list[-1]]
-    # print(all_matches_dict[all_matches_list.sort()[-1]])
     return None
 
 def get_section_number(section_filename):
@@ -106,15 +101,11 @@ def process_dictionary_file(root, last_section, curr_file_path, curr_text, dicti
     #   and add there the first heading 
     # Add a first heading, get the name from the dicionary item...
     # Parse all dictionary items appropiately...
-    # print("hello")
-    # os.mkdir()
-    # TODO only if there is no existing dictionary
     if dictionary_dir == None:
         new_section_name = get_new_section_name(last_section)
         dictionary_dir = os.path.join(root, new_section_name)
         os.mkdir(dictionary_dir)
         make_category_json_file(new_section_name, root)
-    # TODO If there is a dicionary section already, initialize the necessary variables
     if is_dictionary_file_content(curr_text): # DONE
         new_file_sections = split_dictionary_text(curr_text) # DONE
         if len(new_file_sections) > 1:
@@ -122,8 +113,7 @@ def process_dictionary_file(root, last_section, curr_file_path, curr_text, dicti
             last_file_before_dictionary_section.write(new_file_sections[0])
             last_file_before_dictionary_section.close()
             for file_section in new_file_sections[1:]:
-                # print(file_section)
-                create_dicionary_entry_files(file_section, dictionary_dir)
+                create_dicionary_entry_files(file_section, dictionary_dir) # TODO check not overwriting file
 
 def split_dictionary_text(curr_text):
     # item_regex = r'\*\*.*?\*\* \*\w+(\s+\w+)*\* \n\n\*\*Class Precedence List:\*\* \n'

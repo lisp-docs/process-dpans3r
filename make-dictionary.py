@@ -8,7 +8,7 @@ ITEM_EXPLICIT_REGEX = r'((\*\∗\*)?\*\*(?P<item_name>([\w=/<>\-+\\]+(-[\w=/<>\-
 
 def get_last_section(filenames):
     # section_name_regex = r'_((\w-)+).*\.md'
-    section_name_regex = r'_?((\w-)+).*'
+    section_name_regex = r'_?((\w\w?-)+).*'
     all_matches_list = []
     all_matches_dict = {}
     for filename in filenames:
@@ -40,53 +40,54 @@ def get_new_section_name(last_section_filename):
     new_section_name = new_section_number + "-dictionary"
     return new_section_name
     
+def ensure_dictionary_exists(current_dictionary, chapter_dir):
+    dictionary_dir_path = os.path.join(chapter_dir, current_dictionary)
+    if not os.path.isdir(dictionary_dir_path):
+        os.mkdir(dictionary_dir_path)
+    category_file_path = os.path.join(chapter_dir, current_dictionary + "/_category_.json")
+    if not os.path.isfile(category_file_path):
+        make_category_json_file(current_dictionary, chapter_dir)
 
 def split_dictionary_files(given_dir):
     current_dictionary = None
+    chapter_dir = None
     for root, dirs, filenames in os.walk(given_dir):
         if len([filename for filename in filenames if ".md" in filename]) > 0:
             dictionary_dirs = [dir for dir in dirs if "dictionary" in dir]
-            if len(dictionary_dirs) > 1:
-                print("Weird, multiple dictionary directories found. Please check what's going on.")
-                import pdb; pdb.set_trace()
-            elif len(dictionary_dirs) == 0:
-                # current_dictionary
-                # TODO actually, change of plans
-                # Check if within a chapter. Check if current_dictionary within the same chapter
-                chapter_parts = [part for part in root.split("/") if "chap" in part]
-                if len(chapter_parts) > 0:
-                    curr_chapter = chapter_parts[0]
-                import pdb; pdb.set_trace()
-                # [part for part in root.split("/") if part != "" and part != "."]
+            chapter_parts = [part for part in root.split("/") if "chap" in part]
+            # We are inside a chapter directory
+            if len(chapter_parts) > 0:
+                curr_chapter = chapter_parts[0]
+                if not curr_chapter in current_dictionary:
+                    current_dictionary = None
+                if len(dictionary_dirs) > 1 and current_dictionary == None:
+                    print("Weird, multiple dictionary directories found. Please check what's going on.")
+                    import pdb; pdb.set_trace()
+                elif len(dictionary_dirs) == 0 and current_dictionary == None:
+                    section_dir_names = dirs
+                    last_section = get_last_section(section_dir_names)
+                    dictionary_section_name = get_new_section_name(last_section)
+                    current_dictionary = dictionary_section_name
+                    chapter_dir = root
+                    # TODO pass this line below to the process files function, only to be called if there are
+                    # todo dictionary items...
+                    ensure_dictionary_exists(current_dictionary, chapter_dir)
+                    import pdb; pdb.set_trace()
+                elif len(dictionary_dirs) == 1 and current_dictionary == None: # Must be len(dictionary_dirs) == 1
+                    dictionary_dir = dictionary_dirs[0]
+                    # current_dictionary = os.path.join(root, dictionary_dir)
+                    current_dictionary = dictionary_dir
+                    chapter_dir = root
+                    # dictionary_section_name = dictionary_dir
+                    # TODO should actually read each file, not just the last one...
+                    # TODO and check if there's a dictionary directory in the file's directory...
+                for filename in [filename for filename in filenames if ".md" in filename]:
+                    filepath = os.path.join(root, filename)
+                    # TODO get dictionary path if it exists... pass it to process file below
+                    process_dictionary_file(filepath, dictionary_dir=dictionary_dir)
 
 
-                # TODO OLD
-                # TODO will need to create a dictionary directory etc
-                # TODO
-                # for dir in dirs:
-                curr_root = os.path.join(given_dir, dir)
-                section_dir_names = [filename for filename in os.listdir(curr_root) if os.path.isdir(os.path.join(curr_root, filename))]
-                last_section = get_last_section(section_dir_names)
-                new_section_name = get_new_section_name(last_section)
-                dictionary_dir = os.path.join(root, new_section_name)
-                os.mkdir(dictionary_dir)
-                make_category_json_file(new_section_name, root)
-            else: # Must be len(dictionary_dirs) == 1
-                dictionary_dir = dictionary_dirs[0]
-                # TODO should actually read each file, not just the last one...
-                # TODO and check if there's a dictionary directory in the file's directory...
-            # TODO for loop over all files...
-            last_sec_dir = os.path.join(curr_root, last_section)
-            last_file = get_last_section(os.listdir(last_sec_dir))
-            curr_file_path = os.path.join(last_sec_dir, last_file)
-            curr_file = open(curr_file_path, "r")
-            curr_text = curr_file.read()
-            curr_file.close()
-            # TODO get dictionary path if it exists... pass it to process file below
-            process_dictionary_file(curr_root, last_section, curr_file_path, curr_text, dictionary_dir=dictionary_dir)
-
-
-def process_dictionary_file(root, last_section, curr_file_path, curr_text, dictionary_dir=None):
+def process_dictionary_file(curr_file_path, dictionary_dir=None):
     # Create Folder
     # Create _category_.json file
     # Open category json file, parse, get name without r'\d+\. ', add " Dictionary"...
@@ -95,6 +96,10 @@ def process_dictionary_file(root, last_section, curr_file_path, curr_text, dicti
     #   and add there the first heading 
     # Add a first heading, get the name from the dicionary item...
     # Parse all dictionary items appropiately...
+    file = open(curr_file_path, "r")
+    curr_text = file.read()
+    file.close()
+
     if is_dictionary_file_content(curr_text): # DONE
         new_file_sections = split_dictionary_text(curr_text) # DONE
         if len(new_file_sections) > 1:

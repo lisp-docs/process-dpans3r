@@ -7,6 +7,8 @@ This project is for processing the files from <https://github.com/lisp-docs/cl-s
 1. First Step is to esecute `(run-project)` in [main.lisp](/src/main.lisp)
 2. The following scripts can only be executed in this project's `output` folder:
    - fix all html tags by running [fix-html-tags.py](/fix-html-tags.py)
+     - Note: This should be executed after making adding code blocks
+     - This should be modified to only parse things outside the code blocks.
    - [split-glossary.py](/split-glossary.py)
 3. Then execute the python scripts to:
    - additional text fixes running [additional-text-fixes.py](/additional-text-fixes.py)

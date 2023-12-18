@@ -1,2 +1,0 @@
-
-(simple-string-p )

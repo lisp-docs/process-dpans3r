@@ -187,44 +187,77 @@ def apply_example_code_blocks(given_text):
     # import pdb; pdb.set_trace()
     return "".join([apply_first_example_code_block(text_part) for text_part in text_parts])
 
-ITEM_FILE_TEMPLATE = "# {}\n\nimport {} from './_{}';\n\n<{} />\n\n## Expanded Reference: {}\n\n:::tip\nTODO: Please contribute to this page by adding explanations and examples\n:::\n\n```lisp\n{}\n```\n"
+ITEM_FILE_TEMPLATE = "---\ntitle: \"{}\"\n---\n\n# {}\n\nimport {} from './_{}';\n\n<{} />\n\n## Expanded Reference: {}\n\n:::tip\nTODO: Please contribute to this page by adding explanations and examples\n:::\n\n```lisp\n{}\n```\n"
 
 def replace_special_chars(given_string):
     temp_string = given_string.replace("=", "equal").replace("/", "slash").replace("<", "lt")
     return temp_string.replace(">", "gt").replace("+", "plus").replace("\\", "back-slash")
 
-
-def create_dicionary_entry_files(file_section, new_section_dir):
+def create_dicionary_entry_files(file_section, dictionary_path):
     # TODO bring new naming logic...
-    # create _x.md, x.md filename,s import correctly... add first heading as title to x.md
+    # create _x.md, x.md filenames import correctly... add first heading as title to x.md
     # avoid name conflicts, make a dic, +a to filenames...
-    item_regex = r'(\*\*(.*?)\*\* \*[A-Z][a-z]*(\s+\w+)*\*\s*\n)'
-    matches = re.match(item_regex, file_section)
+
+    # item_regex = r'(\*\*(.*?)\*\* \*[A-Z][a-z]*(\s+\w+)*\*\s*\n)'
+    # definitions_in_file_w_syntax = [match for match in re.finditer(ITEM_EXPLICIT_REGEX, text)]
+    matches = re.match(ITEM_EXPLICIT_REGEX, file_section)
     names_used = {}
     if matches:
-        groups = matches.groups()
-        item_name = re.sub("\W", "a", "".join([name_part for name_part in groups[1].split(",")[0].split("-")]))
-        if item_name in names_used:
-            item_name = get_new_item_name(names_used, item_name)
-        names_used[item_name] = True
-        heading = "# " + groups[1] + "\n\n"
-        component_name = "".join([re.sub("\W", "a", item).capitalize() for item in groups[1].split("-")])
-        filename = item_name + ".md"
-        hidden_filename = "_" + filename
-        hidden_file_text = apply_example_code_blocks(file_section)
-        import_statement = f"import {component_name} from './{hidden_filename}';\n\n"
-        import_component = f"<{component_name} />\n\n"
-        expanded_reference = f"## Expanded Reference: {groups[1]}\n\n:::tip\nTODO: Please contribute to this page by adding explanations and examples\n:::\n\n```lisp\n({groups[1]} )\n```\n"
-        markdown_contents = heading + import_statement + import_component + expanded_reference
-        hidden_file = open(os.path.join(new_section_dir, hidden_filename), "w")
-        hidden_file.write(hidden_file_text)
-        hidden_file.close()
+        definition = matches
+        if definition.groups()[2] != definition.groupdict()["item_name"]:
+            import pdb; pdb.set_trace()
+        # TODO make sure not overwriting same file?
+        item_name = definition.groupdict()["item_name"]
+        item_type = definition.groupdict()["item_type"].strip().replace(" ", "-").lower()
+        item_title = item_name if definition.groups()[1] == None else f"\*{item_name}\*"
+        lisp_item_name = f"({item_name} )" if definition.groups()[1] == None else f"*{item_name}*"
+        item_name_for_path = item_name.replace(", ", "_")
+        item_name_for_path = replace_special_chars(item_name_for_path)
+        variable_react_name = definition.groupdict()["item_type"].strip().replace(" ", "")
+        item_filename = f"{item_name_for_path}_{item_type}.md"
+        react_item_component = "".join([part.capitalize() for part in replace_special_chars(item_name).split(",")[0].split("-")])
+        react_item_component += variable_react_name
+        md_file = ITEM_FILE_TEMPLATE.format(f"*{item_name}*", item_title, react_item_component, item_filename, react_item_component, item_title, lisp_item_name)
+        # final_items.append({"filepath": item_filename, "start_index": definition.start(), "md_text": md_file})
 
-        display_file = open(os.path.join(new_section_dir, filename), "w")
-        display_file.write(markdown_contents)
-        display_file.close()
+        # groups = matches.groups()
+        # item_name = re.sub("\W", "a", "".join([name_part for name_part in groups[1].split(",")[0].split("-")]))
+        # if item_name in names_used:
+        #     item_name = get_new_item_name(names_used, item_name)
+        # names_used[item_name] = True
+        # heading = "# " + groups[1] + "\n\n"
+        # component_name = "".join([re.sub("\W", "a", item).capitalize() for item in groups[1].split("-")])
+        # filename = item_name + ".md"
+        # hidden_filename = "_" + filename
+        # hidden_file_text = apply_example_code_blocks(file_section)
+        # import_statement = f"import {component_name} from './{hidden_filename}';\n\n"
+        # import_component = f"<{component_name} />\n\n"
+        # expanded_reference = f"## Expanded Reference: {groups[1]}\n\n:::tip\nTODO: Please contribute to this page by adding explanations and examples\n:::\n\n```lisp\n({groups[1]} )\n```\n"
+        # markdown_contents = heading + import_statement + import_component + expanded_reference
 
-        print(f"- [{groups[1]}]({os.path.join(new_section_dir, filename)})")
+        # Visible Markdown File
+        visible_md_path = f"{dictionary_path}/{item_filename}"
+        if os.path.exists(visible_md_path):
+            print("Problem! This path should not exist!")
+            print(visible_md_path)
+            import pdb; pdb.set_trace()
+        file = open(visible_md_path, "w")
+        file.write(md_file)
+        file.close()
+        # Hidden Markdown File
+        hidden_md_path = f"{dictionary_path}/_{item_filename}"
+        if os.path.exists(hidden_md_path):
+            print("Problem! This path should not exist!")
+            print(hidden_md_path)
+            import pdb; pdb.set_trace()
+        file = open(hidden_md_path, "w")
+        file.write(file_section)
+        file.close()
+
+        print(f"- [{item_name}]({os.path.join(dictionary_path, item_filename)})")
+    else:
+        print("This should be a valid dictionary entry because it was already checked! This code should not execute! ERROR")
+        import pdb; pdb.set_trace()
 
 def make_category_json_file(section_name, root):
     CATEGORY_JSON = '{\n  "label": "1. Introduction",\n  "link": {\n    "type": "generated-index",\n    "description": "1. Introduction"\n  }\n}\n'

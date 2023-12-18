@@ -55,7 +55,7 @@ def split_dictionary_files(given_dir):
         if len([filename for filename in filenames if ".md" in filename]) > 0:
             dictionary_dirs = [dir for dir in dirs if "dictionary" in dir]
             chapter_parts = [part for part in root.split("/") if "chap" in part]
-            # We are inside a chapter directory
+            # We potentially are inside a chapter directory or lower
             if len(chapter_parts) > 0:
                 curr_chapter = chapter_parts[0]
                 if not curr_chapter in current_dictionary:
@@ -69,45 +69,30 @@ def split_dictionary_files(given_dir):
                     dictionary_section_name = get_new_section_name(last_section)
                     current_dictionary = dictionary_section_name
                     chapter_dir = root
-                    # TODO pass this line below to the process files function, only to be called if there are
-                    # todo dictionary items...
-                    ensure_dictionary_exists(current_dictionary, chapter_dir)
-                    import pdb; pdb.set_trace()
-                elif len(dictionary_dirs) == 1 and current_dictionary == None: # Must be len(dictionary_dirs) == 1
+                elif len(dictionary_dirs) == 1 and current_dictionary == None:
                     dictionary_dir = dictionary_dirs[0]
-                    # current_dictionary = os.path.join(root, dictionary_dir)
                     current_dictionary = dictionary_dir
                     chapter_dir = root
-                    # dictionary_section_name = dictionary_dir
-                    # TODO should actually read each file, not just the last one...
-                    # TODO and check if there's a dictionary directory in the file's directory...
                 for filename in [filename for filename in filenames if ".md" in filename]:
                     filepath = os.path.join(root, filename)
-                    # TODO get dictionary path if it exists... pass it to process file below
-                    process_dictionary_file(filepath, dictionary_dir=dictionary_dir)
+                    process_dictionary_file(filepath, dictionary_dir=dictionary_dir, chapter_dir=chapter_dir)
 
 
-def process_dictionary_file(curr_file_path, dictionary_dir=None):
-    # Create Folder
-    # Create _category_.json file
-    # Open category json file, parse, get name without r'\d+\. ', add " Dictionary"...
-    # create files (make sure no name conflicts! error if exists!) as _name.md
-    # Create name.md files importing the _name.md and adding "\n\n## Expanded Reference: "
-    #   and add there the first heading 
-    # Add a first heading, get the name from the dicionary item...
-    # Parse all dictionary items appropiately...
+def process_dictionary_file(curr_file_path, dictionary_dir=None, chapter_dir=None):
     file = open(curr_file_path, "r")
     curr_text = file.read()
     file.close()
 
-    if is_dictionary_file_content(curr_text): # DONE
-        new_file_sections = split_dictionary_text(curr_text) # DONE
+    if is_dictionary_file_content(curr_text): 
+        new_file_sections = split_dictionary_text(curr_text)
         if len(new_file_sections) > 1:
+            ensure_dictionary_exists(dictionary_dir, chapter_dir)
             last_file_before_dictionary_section = open(curr_file_path, "w")
             last_file_before_dictionary_section.write(new_file_sections[0])
             last_file_before_dictionary_section.close()
             for file_section in new_file_sections[1:]:
-                create_dicionary_entry_files(file_section, dictionary_dir) # TODO check not overwriting file
+                dictionary_path = os.path.join(chapter_dir, dictionary_dir)
+                create_dicionary_entry_files(file_section, dictionary_path) # TODO check not overwriting file
 
 def split_dictionary_text(curr_text):
     ITEM_EXPLICIT_REGEX
@@ -202,7 +187,15 @@ def apply_example_code_blocks(given_text):
     # import pdb; pdb.set_trace()
     return "".join([apply_first_example_code_block(text_part) for text_part in text_parts])
 
+ITEM_FILE_TEMPLATE = "# {}\n\nimport {} from './_{}';\n\n<{} />\n\n## Expanded Reference: {}\n\n:::tip\nTODO: Please contribute to this page by adding explanations and examples\n:::\n\n```lisp\n{}\n```\n"
+
+def replace_special_chars(given_string):
+    temp_string = given_string.replace("=", "equal").replace("/", "slash").replace("<", "lt")
+    return temp_string.replace(">", "gt").replace("+", "plus").replace("\\", "back-slash")
+
+
 def create_dicionary_entry_files(file_section, new_section_dir):
+    # TODO bring new naming logic...
     # create _x.md, x.md filename,s import correctly... add first heading as title to x.md
     # avoid name conflicts, make a dic, +a to filenames...
     item_regex = r'(\*\*(.*?)\*\* \*[A-Z][a-z]*(\s+\w+)*\*\s*\n)'

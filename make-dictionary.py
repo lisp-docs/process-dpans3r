@@ -6,30 +6,6 @@ MD_DIR = "./output/"
 CODE_BLOCKS_JSON = "./output/code-blocks.json"
 ITEM_EXPLICIT_REGEX = r'((\*\∗\*)?\*\*(?P<item_name>([\w=/<>\-+\\]+(-[\w=/<>\-+\\]+)*)(, ([\w=/<>\-+\\]+(-[\w=/<>\-+\\]+)*))*)\*\*[\s\n]*\*(\∗ )?(?P<item_type>\w+([\s\n]*\w+)*)\*[\s\n]*\*\*(Syntax|(Class Precedence List)|(Value Type)|Supertypes|(Constant Value))*:\*\*)'
 
-def replace_code_blocks(code_blocks, given_dir):
-    # print(os.listdir(given_dir))
-    for root, dirs, filenames in os.walk(given_dir):
-        # print(root)
-        # print(dirs)
-        # print`([os.path.join(given_dir, dir) for dir in dirs].)
-        for dir in dirs:
-            for curr_root, chap_dirs, section_filenames in os.walk(os.path.join(given_dir, dir)):
-                # print(os.path.join(given_dir, dir))
-                # print(section_filenames)
-                last_section = get_last_section(section_filenames)
-                # print(last_section)
-            break
-        break
-        for filename in filenames:
-            if filename.endswith(".md"):
-                # print(filename)
-                filepath = os.path.join(root, filename)
-                # print(filepath)
-                # curr_file = open(filepath, "r")
-                # curr_text = curr_file.read()
-                # curr_file.close()
-        break
-
 def get_last_section(filenames):
     # section_name_regex = r'_((\w-)+).*\.md'
     section_name_regex = r'_?((\w-)+).*'
@@ -68,7 +44,7 @@ def get_new_section_name(last_section_filename):
 def split_dictionary_files(given_dir):
     # Loop through all files up to one depth
     # get the last file _x-x- or _x-x-x- where x.x.x would be the section number
-    # check if it has a dictionary
+    # check if it has a dictionary item
     # TODO check if dictionary already exists!
     # if it does: create a new file _x-(x+1)-dictionary.md
     # add title: make title be Chapter_name + Dictionary
@@ -77,9 +53,21 @@ def split_dictionary_files(given_dir):
     # the subsections always end with a colon **Notes:**. The titles don't have colons
     for root, dirs, filenames in os.walk(given_dir):
         # Chapters
+        dictionary_dirs = [dir for dir in dirs if "dictionary" in dir]
+        if len(dictionary_dirs) > 1:
+            print("Weird, multiple dictionary directories found. Please check what's going on.")
+            import pdb; pdb.set_trace()
+        elif len(dictionary_dirs) == 0:
+            # TODO will need to create a dictionary directory etc
+            print("create dictionary dir")
+            dictionary_dir = "" # TODO
+        else: # Must be len(dictionary_dirs) == 1
+            dictionary_dir = dictionary_dirs[0]
         for dir in dirs:
             curr_root = os.path.join(given_dir, dir)
             section_dir_names = [filename for filename in os.listdir(curr_root) if os.path.isdir(os.path.join(curr_root, filename))]
+            # TODO should actually read each file, not just the last one...
+            # TODO and check if there's a dictionary directory in the file's directory...
             last_section = get_last_section(section_dir_names)
             if last_section:
                 last_sec_dir = os.path.join(curr_root, last_section)
@@ -101,6 +89,7 @@ def process_dictionary_file(root, last_section, curr_file_path, curr_text, dicti
     #   and add there the first heading 
     # Add a first heading, get the name from the dicionary item...
     # Parse all dictionary items appropiately...
+    # TODO probably move this into whoever called this function
     if dictionary_dir == None:
         new_section_name = get_new_section_name(last_section)
         dictionary_dir = os.path.join(root, new_section_name)
@@ -116,10 +105,7 @@ def process_dictionary_file(root, last_section, curr_file_path, curr_text, dicti
                 create_dicionary_entry_files(file_section, dictionary_dir) # TODO check not overwriting file
 
 def split_dictionary_text(curr_text):
-    # item_regex = r'\*\*.*?\*\* \*\w+(\s+\w+)*\* \n\n\*\*Class Precedence List:\*\* \n'
-    # item_regex = r'(\*\*.*?\*\* \*[A-Z][a-z]*(\s+\w+)*\*\s*\n)'
     ITEM_EXPLICIT_REGEX
-    # matches = re.findall(ITEM_EXPLICIT_REGEX, curr_text)
     start_indices = [m.start(0) for m in re.finditer(ITEM_EXPLICIT_REGEX, curr_text)]
     split_items = [curr_text[0:start_indices[0]]] 
     split_items += [curr_text[start_indices[i]:start_indices[i+1]] for i in range(len(start_indices)-1)]
@@ -214,30 +200,24 @@ def apply_example_code_blocks(given_text):
 def create_dicionary_entry_files(file_section, new_section_dir):
     # create _x.md, x.md filename,s import correctly... add first heading as title to x.md
     # avoid name conflicts, make a dic, +a to filenames...
-    # print("create_dicionary_entry_files(file_section, new_section_dir)")
     item_regex = r'(\*\*(.*?)\*\* \*[A-Z][a-z]*(\s+\w+)*\*\s*\n)'
     matches = re.match(item_regex, file_section)
     names_used = {}
     if matches:
         groups = matches.groups()
-        # print(groups)
         item_name = re.sub("\W", "a", "".join([name_part for name_part in groups[1].split(",")[0].split("-")]))
-        # print(item_name)
         if item_name in names_used:
             item_name = get_new_item_name(names_used, item_name)
         names_used[item_name] = True
-        # heading = "# " + groups[0].strip() + "\n\n"
         heading = "# " + groups[1] + "\n\n"
         component_name = "".join([re.sub("\W", "a", item).capitalize() for item in groups[1].split("-")])
         filename = item_name + ".md"
         hidden_filename = "_" + filename
-        # hidden_file_text = file_section.replace(groups[0].strip(), "", 1)
         hidden_file_text = apply_example_code_blocks(file_section)
         import_statement = f"import {component_name} from './{hidden_filename}';\n\n"
         import_component = f"<{component_name} />\n\n"
         expanded_reference = f"## Expanded Reference: {groups[1]}\n\n:::tip\nTODO: Please contribute to this page by adding explanations and examples\n:::\n\n```lisp\n({groups[1]} )\n```\n"
         markdown_contents = heading + import_statement + import_component + expanded_reference
-        # import pdb; pdb.set_trace()
         hidden_file = open(os.path.join(new_section_dir, hidden_filename), "w")
         hidden_file.write(hidden_file_text)
         hidden_file.close()
@@ -247,12 +227,6 @@ def create_dicionary_entry_files(file_section, new_section_dir):
         display_file.close()
 
         print(f"- [{groups[1]}]({os.path.join(new_section_dir, filename)})")
-        # print(groups[0].strip())
-        # print(groups[1])
-        # print(os.path.join(new_section_dir, filename))
-        # print(hidden_file_text)
-        # print(markdown_contents)
-        # print(file_section)
 
 def make_category_json_file(section_name, root):
     CATEGORY_JSON = '{\n  "label": "1. Introduction",\n  "link": {\n    "type": "generated-index",\n    "description": "1. Introduction"\n  }\n}\n'

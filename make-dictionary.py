@@ -42,43 +42,49 @@ def get_new_section_name(last_section_filename):
     
 
 def split_dictionary_files(given_dir):
-    # Loop through all files up to one depth
-    # get the last file _x-x- or _x-x-x- where x.x.x would be the section number
-    # check if it has a dictionary item
-    # TODO check if dictionary already exists!
-    # if it does: create a new file _x-(x+1)-dictionary.md
-    # add title: make title be Chapter_name + Dictionary
-    # save file
-    # then later on modify the content and save the file...
-    # the subsections always end with a colon **Notes:**. The titles don't have colons
+    current_dictionary = None
     for root, dirs, filenames in os.walk(given_dir):
-        # Chapters
-        dictionary_dirs = [dir for dir in dirs if "dictionary" in dir]
-        if len(dictionary_dirs) > 1:
-            print("Weird, multiple dictionary directories found. Please check what's going on.")
-            import pdb; pdb.set_trace()
-        elif len(dictionary_dirs) == 0:
-            # TODO will need to create a dictionary directory etc
-            print("create dictionary dir")
-            dictionary_dir = "" # TODO
-        else: # Must be len(dictionary_dirs) == 1
-            dictionary_dir = dictionary_dirs[0]
-        for dir in dirs:
-            curr_root = os.path.join(given_dir, dir)
-            section_dir_names = [filename for filename in os.listdir(curr_root) if os.path.isdir(os.path.join(curr_root, filename))]
-            # TODO should actually read each file, not just the last one...
-            # TODO and check if there's a dictionary directory in the file's directory...
-            last_section = get_last_section(section_dir_names)
-            if last_section:
-                last_sec_dir = os.path.join(curr_root, last_section)
-                last_file = get_last_section(os.listdir(last_sec_dir))
-                curr_file_path = os.path.join(last_sec_dir, last_file)
-                curr_file = open(curr_file_path, "r")
-                curr_text = curr_file.read()
-                curr_file.close()
-                # TODO get dictionary path if it exists... pass it to process file below
-                process_dictionary_file(curr_root, last_section, curr_file_path, curr_text)
-        break
+        if len([filename for filename in filenames if ".md" in filename]) > 0:
+            dictionary_dirs = [dir for dir in dirs if "dictionary" in dir]
+            if len(dictionary_dirs) > 1:
+                print("Weird, multiple dictionary directories found. Please check what's going on.")
+                import pdb; pdb.set_trace()
+            elif len(dictionary_dirs) == 0:
+                # current_dictionary
+                # TODO actually, change of plans
+                # Check if within a chapter. Check if current_dictionary within the same chapter
+                chapter_parts = [part for part in root.split("/") if "chap" in part]
+                if len(chapter_parts) > 0:
+                    curr_chapter = chapter_parts[0]
+                import pdb; pdb.set_trace()
+                # [part for part in root.split("/") if part != "" and part != "."]
+
+
+                # TODO OLD
+                # TODO will need to create a dictionary directory etc
+                # TODO
+                # for dir in dirs:
+                curr_root = os.path.join(given_dir, dir)
+                section_dir_names = [filename for filename in os.listdir(curr_root) if os.path.isdir(os.path.join(curr_root, filename))]
+                last_section = get_last_section(section_dir_names)
+                new_section_name = get_new_section_name(last_section)
+                dictionary_dir = os.path.join(root, new_section_name)
+                os.mkdir(dictionary_dir)
+                make_category_json_file(new_section_name, root)
+            else: # Must be len(dictionary_dirs) == 1
+                dictionary_dir = dictionary_dirs[0]
+                # TODO should actually read each file, not just the last one...
+                # TODO and check if there's a dictionary directory in the file's directory...
+            # TODO for loop over all files...
+            last_sec_dir = os.path.join(curr_root, last_section)
+            last_file = get_last_section(os.listdir(last_sec_dir))
+            curr_file_path = os.path.join(last_sec_dir, last_file)
+            curr_file = open(curr_file_path, "r")
+            curr_text = curr_file.read()
+            curr_file.close()
+            # TODO get dictionary path if it exists... pass it to process file below
+            process_dictionary_file(curr_root, last_section, curr_file_path, curr_text, dictionary_dir=dictionary_dir)
+
 
 def process_dictionary_file(root, last_section, curr_file_path, curr_text, dictionary_dir=None):
     # Create Folder
@@ -89,12 +95,6 @@ def process_dictionary_file(root, last_section, curr_file_path, curr_text, dicti
     #   and add there the first heading 
     # Add a first heading, get the name from the dicionary item...
     # Parse all dictionary items appropiately...
-    # TODO probably move this into whoever called this function
-    if dictionary_dir == None:
-        new_section_name = get_new_section_name(last_section)
-        dictionary_dir = os.path.join(root, new_section_name)
-        os.mkdir(dictionary_dir)
-        make_category_json_file(new_section_name, root)
     if is_dictionary_file_content(curr_text): # DONE
         new_file_sections = split_dictionary_text(curr_text) # DONE
         if len(new_file_sections) > 1:
@@ -284,7 +284,16 @@ def clear_footers(given_dir):
                         curr_file = open(curr_filepath, "w")
                         curr_file.write(curr_text)
                         curr_file.close()
-                        
+
+def main(args=[MD_DIR]):
+    for arg in args:
+        split_dictionary_files(arg)
 
 if __name__ == "__main__":
-    split_dictionary_files(MD_DIR)
+    if len(sys.argv) < 2:
+        # print("Please provide a directory with markdown files")
+        print("No directory with markdown files provided")
+        print(f"Defaulting to run on {MD_DIR}")
+        main()
+    else:
+        main(sys.argv[1:])

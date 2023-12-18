@@ -62,7 +62,7 @@ def split_dictionary_files(given_dir):
             # We potentially are inside a chapter directory or lower
             if len(chapter_parts) > 0:
                 curr_chapter = chapter_parts[0]
-                if not curr_chapter in chapter_dir:
+                if chapter_dir != None and not curr_chapter in chapter_dir:
                     current_dictionary = None
                     chapter_dir = None
                 if len(dictionary_dirs) > 1 and current_dictionary == None:

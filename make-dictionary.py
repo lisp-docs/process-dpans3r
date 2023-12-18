@@ -34,11 +34,18 @@ def get_section_number(section_filename):
         return section_number_match
     raise Exception("Invalid Section Name " + section_filename)
 
-def get_new_section_name(last_section_filename):
-    section_number_match = get_section_number(last_section_filename)
-    new_section_number = section_number_match[:-1] + chr(ord(section_number_match[-1]) + 1)
-    new_section_name = new_section_number + "-dictionary"
-    return new_section_name
+def get_char_key_for_chapter_name(chapter_name):
+    return chr(ord("a") + int(chapter_name.split("-")[-1]))
+
+def get_new_section_name(last_section_filename, chapter_name):
+    if last_section_filename == None:
+        chapter_key = get_char_key_for_chapter_name(chapter_name)
+        return  f"{chapter_key}-b-dictionary"
+    else:
+        section_number_match = get_section_number(last_section_filename)
+        new_section_number = section_number_match[:-1] + chr(ord(section_number_match[-1]) + 1)
+        new_section_name = new_section_number + "-dictionary"
+        return new_section_name
     
 def ensure_dictionary_exists(current_dictionary, chapter_dir):
     dictionary_dir_path = os.path.join(chapter_dir, current_dictionary)
@@ -69,11 +76,11 @@ def split_dictionary_files(given_dir):
                     print("Weird, multiple dictionary directories found. Please check what's going on.")
                     import pdb; pdb.set_trace()
                 elif len(dictionary_dirs) == 0 and current_dictionary == None:
+                    chapter_dir = root
                     try:
                         last_section = get_last_section(filenames)
-                        dictionary_section_name = get_new_section_name(last_section)
+                        dictionary_section_name = get_new_section_name(last_section, curr_chapter)
                         current_dictionary = dictionary_section_name
-                        chapter_dir = root
                     except:
                         print(root)
                         print(filenames)

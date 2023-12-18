@@ -69,14 +69,15 @@ def split_dictionary_files(given_dir):
                     print("Weird, multiple dictionary directories found. Please check what's going on.")
                     import pdb; pdb.set_trace()
                 elif len(dictionary_dirs) == 0 and current_dictionary == None:
-                    # section_dir_names = dirs
-                    print(root)
-                    print(filenames)
-                    import pdb; pdb.set_trace()
-                    last_section = get_last_section(filenames)
-                    dictionary_section_name = get_new_section_name(last_section)
-                    current_dictionary = dictionary_section_name
-                    chapter_dir = root
+                    try:
+                        last_section = get_last_section(filenames)
+                        dictionary_section_name = get_new_section_name(last_section)
+                        current_dictionary = dictionary_section_name
+                        chapter_dir = root
+                    except:
+                        print(root)
+                        print(filenames)
+                        import pdb; pdb.set_trace()
                 elif len(dictionary_dirs) == 1 and current_dictionary == None:
                     dictionary_dir = dictionary_dirs[0]
                     current_dictionary = dictionary_dir

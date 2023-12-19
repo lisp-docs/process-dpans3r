@@ -5,12 +5,29 @@ import os, re
 
 MD_DIR = "./output/"
 STANDARD_HTML_TAGS = ["i", "b", "sub", "sup", "p"]
+REGEX_MATCH_UNTIL = r"(?:(?!X)[\w\W\s\S\d\D.])*"
+LOOK_AHEAD_REGEX = '(?:(?!{})[^\n])*'
+# UNTIL_NEW_LINE_REGEX = LOOK_AHEAD_REGEX.format("\n")
+START_CODE_BLOCK = f"```lisp{LOOK_AHEAD_REGEX}"
+# START_CODE_BLOCK = f"```lisp"
+END_CODE_BLOCK = "```"
+
+def get_file_text(filepath):
+    file = open(filepath, "r")
+    text = file.read()
+    file.close()
+    return text
+
+def write_to_file(filepath, text):
+    file = open(filepath, "w")
+    file.write(text)
+    file.close()
 
 def process_all_md_files(given_dir):
     for root, dirs, filenames in os.walk(given_dir):
         for filename in filenames:
             if filename.endswith(".md"):
-                process_file(filename, root)
+                process_file_without_codeblocks(filename, root)
 
 def fix_case(file_text, processed_text):
     react_import_tag_regex = r"import \w+ from '[\.\/\-\w]+';\n\n<(\w+) />"
@@ -92,13 +109,37 @@ def fix_case_simple(file_text, processed_text):
 def fix_tildes(text):
     return text.replace("~", "&#126;")
 
-def process_file(filename, root):
+def process_file_without_codeblocks(filename, root):
     filepath = os.path.join(root, filename)
-    file = open(filepath, "r")
-    file_text = file.read()
+    text = get_file_text(filepath)
+    code_blocks_regex = f'(?P<code_block_start>{START_CODE_BLOCK}){REGEX_MATCH_UNTIL.replace("X", END_CODE_BLOCK)}{END_CODE_BLOCK}'
+    code_blocks_in_file = re.finditer(code_blocks_regex, text)
+    text_parts = []
+    start_index = 0
+    for code_block in code_blocks_in_file:
+        groupdict = code_block.groupdict()
+        code_block_start_string = groupdict["code_block_start"]
+        (start_code,end_code) = (code_block.start() + len(code_block_start_string), code_block.end() - len(END_CODE_BLOCK))
+        # Non code block text
+        pre_code_block_text = text[start_index:start_code]
+        text_parts.append({"match": None, "text": pre_code_block_text})
+        # code block text
+        code_block_contents = text[start_code:end_code]
+        text_parts.append({"match": code_block, "text": code_block_contents})
+        # to catch next non code block text
+        start_index = end_code
+    # From last code block until the end of the file
+    text_parts.append({"match": code_block, "text": text[start_index:]})
+    # here will need to do the html processing, then build a string and save to file
+    for text_part in text_parts:
+        if text_part["match"] == None:
+            text_part["text"] = process_html_tags(text_part["text"])
+    final_text = "".join([text_part["text"] for text_part in text_parts])
+    write_to_file(filepath, final_text)
+
+def process_html_tags(file_text):
     file_text = file_text.replace("\\{", "{").replace("\\}", "}")
     div_text = f'<div>{file_text}</div>'
-    file.close()
     # soup = BeautifulSoup(file_text, 'html5')
     soup = BeautifulSoup(div_text, 'html5lib')
     # soup = BeautifulSoup(div_text, 'xml')
@@ -110,9 +151,7 @@ def process_file(filename, root):
     if processed_text.strip().lower() != file_text.strip().lower():
         processed_text = fix_case_lisp(file_text, processed_text)
         # processed_text = new_fix_lisp_tags(file_text, processed_text)
-        file = open(filepath, "w")
-        file.write(processed_text)
-        file.close()
+    return processed_text
 
 def main():
     process_all_md_files(MD_DIR)

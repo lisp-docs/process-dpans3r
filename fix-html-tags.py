@@ -6,6 +6,7 @@ import os, re, sys
 MD_DIR = "./output/"
 STANDARD_HTML_TAGS = ["i", "b", "sub", "sup", "p"]
 REGEX_MATCH_UNTIL = r"(?:(?!X)[\w\W\s\S\d\D.])*"
+LOOK_AHEAD_REGEX_MATCH_OPEN = '(?:(?!{}){})*'
 LOOK_AHEAD_REGEX = '(?:(?!{})[^\n])*'
 UNTIL_NEW_LINE_REGEX = LOOK_AHEAD_REGEX.format("\n")
 START_CODE_BLOCK = f"```lisp{UNTIL_NEW_LINE_REGEX}"
@@ -69,23 +70,61 @@ def fix_case_lisp(file_text, processed_text):
     # html_tag_regex = r'(#<[a-z\-]+ "[a-z\-]+"="">)'
     # close_tag_regex = r'#<([A-Z\-]+) ["\w\d A-Z\-]+>'
     # cl_tag_regex = r'(#<[A-Z\-]+ ["\w\d A-Z\-]+>)'
-    cl_tag_regex = r'(#<([A-Z\-]+) ["\w\d A-Z\-\W]+>)'
-    html_tag_regex = r'(#<[a-z\-]+ ([\d\w\s"a-z\-\W]+="")*>)'
-    html_tags = re.findall(html_tag_regex, processed_text)
-    cl_tags = re.findall(cl_tag_regex, file_text)
+    # cl_tag_regex = r'(#<([A-Z\-]+) ["\w\d A-Z\-\W]+>)'
+    # html_tag_regex = r'(#<[a-z\-]+ ([\d\w\s"a-z\-\W]+="")*>)'
+    # cl_tags = re.findall(cl_tag_regex, file_text)
+    # html_tags = re.findall(html_tag_regex, processed_text)
+    
+    new_cl_tag_regex = f'(?P<tag_name>#<([A-Z\-]+) {LOOK_AHEAD_REGEX_MATCH_OPEN.format(">", "[^>]")}>)'
+    new_html_tag_regex = f'(#<(?P<tag_name>[a-zA-Z\-]+) {LOOK_AHEAD_REGEX_MATCH_OPEN.format(">", "[^>]")}>)'
+    # html_attributes = r'(\w+="")'
+    html_attributes = r'((?P<attr_name>[^ ]+?)="")'
+    # re.findall(new_cl_tag_regex, file_text)
+    # re.findall(new_html_tag_regex, processed_text)
+    cl_tags_matches = re.finditer(new_cl_tag_regex, file_text)
+    html_tags_matches = re.finditer(new_html_tag_regex, processed_text)
+    # re.findall(html_attributes, html_tags[0][0])
+    # re.findall(html_attributes, html_tags[0][0])
+
     # html_close_tags = re.findall(close_tag_regex, processed_text)
-    html_close_tags = [f'</{tag[1].lower()}>' for tag in cl_tags]
-    for tag in html_close_tags:
-        processed_text = processed_text.replace(tag, "")
-    for index, tag in enumerate(cl_tags):
-        # here's the problem again, I'm not checking correctly....
-        # cl_to_html_tag = tag[0].lower().removesuffix(">") + '="">'
-        # if cl_to_html_tag in html_tags:
-        # import pdb; pdb.set_trace()
-        processed_text = processed_text.replace(html_tags[index][0], tag[0])
-    # if processed_text.strip().endswith(">"):
-    #     import pdb; pdb.set_trace()
+    # html_close_tags = [f'</{tag[1].lower()}>' for tag in cl_tags]
+
+    for tag in cl_tags_matches:
+        found_html_tag = None
+        for html_tag in html_tags_matches:
+            is_match = True
+            if html_tag.groupdict()["tag_name"].lower() != tag.groupdict()["tag_name"].lower():
+                is_match = False
+            else:
+                all_attributes = re.finditer(html_attributes, html_tag.groups()[0])
+                for attr in all_attributes:
+                    if is_match and not attr.groupdict()["attr_name"] in tag.groups()[0]:
+                        is_match = False
+            if is_match:
+                found_html_tag = html_tag
+                break
+        close_tag = f'</{tag.groupdict()["tag_name"].lower()}>'
+        processed_text = processed_text.replace(close_tag, "")
+        if found_html_tag:
+            processed_text = processed_text.replace(found_html_tag.groups()[0], tag.groups()[0])
+            
+    if "can only associate one value with a given key. If an attempt is made to add a second value for a given key," in file_text:
+        import pdb; pdb.set_trace()
+
     return processed_text
+        
+
+    # for tag in html_close_tags:
+    #     processed_text = processed_text.replace(tag, "")
+    # for index, tag in enumerate(cl_tags):
+    #     # here's the problem again, I'm not checking correctly....
+    #     # cl_to_html_tag = tag[0].lower().removesuffix(">") + '="">'
+    #     # if cl_to_html_tag in html_tags:
+    #     # import pdb; pdb.set_trace()
+    #     processed_text = processed_text.replace(html_tags[index][0], tag[0])
+    # # if processed_text.strip().endswith(">"):
+    # #     import pdb; pdb.set_trace()
+    # return processed_text
 
 def fix_case_simple(file_text, processed_text):
     # problems because of deleted or added tags in the processed.. should first remove all standard tags, 

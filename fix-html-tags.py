@@ -1,7 +1,7 @@
 # Needs python >= 3.9 
 # fix-html-tags.py
 from bs4 import BeautifulSoup
-import os, re
+import os, re, sys
 
 MD_DIR = "./output/"
 STANDARD_HTML_TAGS = ["i", "b", "sub", "sup", "p"]
@@ -129,7 +129,7 @@ def process_file_without_codeblocks(filename, root):
         # to catch next non code block text
         start_index = end_code
     # From last code block until the end of the file
-    text_parts.append({"match": code_block, "text": text[start_index:]})
+    text_parts.append({"match": None, "text": text[start_index:]})
     # here will need to do the html processing, then build a string and save to file
     for text_part in text_parts:
         if text_part["match"] == None:
@@ -138,7 +138,7 @@ def process_file_without_codeblocks(filename, root):
     write_to_file(filepath, final_text)
 
 def process_html_tags(file_text):
-    file_text = file_text.replace("\\{", "{").replace("\\}", "}")
+    # file_text = file_text.replace("\\{", "{").replace("\\}", "}")
     div_text = f'<div>{file_text}</div>'
     # soup = BeautifulSoup(file_text, 'html5')
     soup = BeautifulSoup(div_text, 'html5lib')
@@ -154,7 +154,12 @@ def process_html_tags(file_text):
     return processed_text
 
 def main():
-    process_all_md_files(MD_DIR)
+    if (sys.version_info.major == 3 and sys.version_info.minor >= 9) or sys.version_info.major > 3:
+        process_all_md_files(MD_DIR)
+    else:
+        print("This script can only use Python Versions >= 3.9")
+        print(f"Your current version is {sys.version}")
+        print("Please get an appropiate version to run this script")
 
 if __name__ == "__main__":
     main()

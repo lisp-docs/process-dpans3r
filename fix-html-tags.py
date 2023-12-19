@@ -75,7 +75,7 @@ def fix_case_lisp(file_text, processed_text):
     # cl_tags = re.findall(cl_tag_regex, file_text)
     # html_tags = re.findall(html_tag_regex, processed_text)
     
-    new_cl_tag_regex = f'(?P<tag_name>#<([A-Z\-]+) {LOOK_AHEAD_REGEX_MATCH_OPEN.format(">", "[^>]")}>)'
+    new_cl_tag_regex = f'(#<(?P<tag_name>[A-Z\-]+) {LOOK_AHEAD_REGEX_MATCH_OPEN.format(">", "[^>]")}>)'
     new_html_tag_regex = f'(#<(?P<tag_name>[a-zA-Z\-]+) {LOOK_AHEAD_REGEX_MATCH_OPEN.format(">", "[^>]")}>)'
     # html_attributes = r'(\w+="")'
     html_attributes = r'((?P<attr_name>[^ ]+?)="")'
@@ -98,18 +98,29 @@ def fix_case_lisp(file_text, processed_text):
             else:
                 all_attributes = re.finditer(html_attributes, html_tag.groups()[0])
                 for attr in all_attributes:
-                    if is_match and not attr.groupdict()["attr_name"] in tag.groups()[0]:
+                    if is_match and not attr.groupdict()["attr_name"].lower() in tag.groups()[0].lower():
                         is_match = False
             if is_match:
                 found_html_tag = html_tag
-                break
+                # break
         close_tag = f'</{tag.groupdict()["tag_name"].lower()}>'
         processed_text = processed_text.replace(close_tag, "")
         if found_html_tag:
             processed_text = processed_text.replace(found_html_tag.groups()[0], tag.groups()[0])
             
-    if "can only associate one value with a given key. If an attempt is made to add a second value for a given key," in file_text:
-        import pdb; pdb.set_trace()
+    # if "can only associate one value with a given key. If an attempt is made to add a second value for a given key," in file_text:
+    #     file_text
+    #     processed_text
+    #     cl_match = re.search(new_cl_tag_regex, file_text)
+    #     html_match = re.search(new_html_tag_regex, processed_text)
+    #     html_match.groupdict()["tag_name"].lower() != cl_match.groupdict()["tag_name"].lower()
+    #     re.findall(html_attributes, html_match.groups()[0])
+    #     [match.groupdict()["attr_name"] for match in re.finditer(html_attributes, html_match.groups()[0])]
+    #     re.search(html_attributes, html_match.groups()[0])
+    #     attr.groupdict()["attr_name"] in tag.groups()[0]
+    #     # re.search(html_attributes, html_match.groups()[0]).groupdict()["attr_name"].lower() in cl_match.groups()[0].lower()
+    #     all_attributes = re.finditer(html_attributes, html_match.groups()[0])
+    #     import pdb; pdb.set_trace()
 
     return processed_text
         

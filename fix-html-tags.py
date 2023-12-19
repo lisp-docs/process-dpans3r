@@ -7,8 +7,8 @@ MD_DIR = "./output/"
 STANDARD_HTML_TAGS = ["i", "b", "sub", "sup", "p"]
 REGEX_MATCH_UNTIL = r"(?:(?!X)[\w\W\s\S\d\D.])*"
 LOOK_AHEAD_REGEX = '(?:(?!{})[^\n])*'
-# UNTIL_NEW_LINE_REGEX = LOOK_AHEAD_REGEX.format("\n")
-START_CODE_BLOCK = f"```lisp{LOOK_AHEAD_REGEX}"
+UNTIL_NEW_LINE_REGEX = LOOK_AHEAD_REGEX.format("\n")
+START_CODE_BLOCK = f"```lisp{UNTIL_NEW_LINE_REGEX}"
 # START_CODE_BLOCK = f"```lisp"
 END_CODE_BLOCK = "```"
 
@@ -147,7 +147,7 @@ def process_html_tags(file_text):
     processed_text = cleaned_text.strip().removeprefix("<div>").removesuffix("</div>")
     processed_text = fix_case(file_text, processed_text)
     processed_text = fix_case_simple(file_text, processed_text)
-    processed_text = fix_tildes(processed_text)
+    # processed_text = fix_tildes(processed_text)
     if processed_text.strip().lower() != file_text.strip().lower():
         processed_text = fix_case_lisp(file_text, processed_text)
         # processed_text = new_fix_lisp_tags(file_text, processed_text)

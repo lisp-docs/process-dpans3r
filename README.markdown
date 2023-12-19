@@ -8,7 +8,7 @@ This project is for processing the files from <https://github.com/lisp-docs/cl-s
 2. The following scripts can only be executed in this project's `output` folder:
    - fix all html tags by running [fix-html-tags.py](/fix-html-tags.py)
      - Note: This should be executed after making adding code blocks
-     - This should be modified to only parse things outside the code blocks.
+     - TODO: This should be modified to only parse things outside the code blocks.
    - [split-glossary.py](/split-glossary.py)
 3. Then execute the python scripts to:
    - additional text fixes running [additional-text-fixes.py](/additional-text-fixes.py)
@@ -24,6 +24,5 @@ This project is for processing the files from <https://github.com/lisp-docs/cl-s
 
 1. Test all the scripts
 2. Produce new json files for glossary and dictionary (glossary, convert to html from markdown?)
-3. Fix the `split-dictionary.py` and `code-blocks.py` to have the functionality in one file (`split-dictionary.py`) and make it work everywhere even if directory seems to be working properly. Add check for dictionary directory...
-4. Do Tables Fix
-5. In Code Blocks that have `<p></p>` tags, replace them with new lines...
+3. Do Tables Fix
+4. In Code Blocks that have `<p></p>` tags, replace them with new lines...

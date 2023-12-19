@@ -1,6 +1,5 @@
 import re, sys, os, subprocess
 from pprint import pprint
-# indent-code-blocks.py
 
 # emacs --batch MY_FILE --eval '(indent-region (point-min) (point-max))' -f 'save-buffer'
 # emacs --batch output/chap-5/f-d-dictionary/_progn.md --eval '(indent-region 506 704)' -f 'save-buffer'
@@ -36,22 +35,12 @@ def indent_code_blocks(filepath):
     file.close()
     code_blocks_regex = f'(?P<code_block_start>{START_CODE_BLOCK}){REGEX_MATCH_UNTIL.replace("X", END_CODE_BLOCK)}{END_CODE_BLOCK}'
     code_blocks_in_file = re.finditer(code_blocks_regex, text)
-    # quantity_code_blocks_in_file = len(re.findall(code_blocks_regex, text))
     new_text = text
-    # import pdb; pdb.set_trace()
-    # print(filepath)
     for code_block in code_blocks_in_file:
-        # print(f"code block: {code_block.span()}")
-        # print(text[code_block.start():code_block.end()])
         groupdict = code_block.groupdict()
         code_block_start_string = groupdict["code_block_start"]
         (start,end) = (code_block.start() + len(code_block_start_string), code_block.end() - len(END_CODE_BLOCK))
-        # print(EMACS_COMMAND.format(filepath, start, end))
-
-        # print(text[code_block.start():code_block.end()].replace("\n\n", "\n"))
-        # print(os.path.abspath(filepath))
         code_block_contents = text[start:end]
-        # print(code_block_contents)
         # IMPORTANT NOTE: EMACS WAS NOT INDENTING THE CODE BECAUSE WHEN IT READS THE FILE 
         # IT DOESN'T DO LISP CODE EVEN THOUGH THE WHOLE REGION IS LISP, THEREFORE THE CODE
         # HAS TO BE IN A NEW FILE FOR EMACS TO INDENT IT
@@ -61,12 +50,6 @@ def indent_code_blocks(filepath):
         new_text = text[:start] + indented_code + text[end:]
     write_to_file(filepath, new_text)
 
-        # import pdb; pdb.set_trace()
-        # return quantity_code_blocks_in_file
-    # return quantity_code_blocks_in_file
-    
-    # if len(code_blocks_in_file) > 0:
-    #   write_to_file(new_text)
 def get_file_text(filepath):
     file = open(filepath, "r")
     text = file.read()

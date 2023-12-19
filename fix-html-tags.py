@@ -94,7 +94,6 @@ def fix_tildes(text):
 
 def process_file(filename, root):
     filepath = os.path.join(root, filename)
-    # print(filepath)
     file = open(filepath, "r")
     file_text = file.read()
     file_text = file_text.replace("\\{", "{").replace("\\}", "}")
@@ -108,26 +107,15 @@ def process_file(filename, root):
     processed_text = fix_case(file_text, processed_text)
     processed_text = fix_case_simple(file_text, processed_text)
     processed_text = fix_tildes(processed_text)
-    # [].index()
     if processed_text.strip().lower() != file_text.strip().lower():
-        # print(filepath)
-        # import pdb; pdb.set_trace()
         processed_text = fix_case_lisp(file_text, processed_text)
         # processed_text = new_fix_lisp_tags(file_text, processed_text)
         file = open(filepath, "w")
         file.write(processed_text)
         file.close()
 
-    # import pdb; pdb.set_trace()
-    # file = open(filepath, "w")
-    # file.write(str(soup.))
-    # file.close()
-
 def main():
     process_all_md_files(MD_DIR)
-    # sample_problem = "_b-e-b-c-b-splicing-in-modified-bnf-syntax.md"
-    # sample_root = "./output/chap-1/b-e-definitions/"
-    # process_file(sample_problem, sample_root)
-    # filepath = "./ou"
+
 if __name__ == "__main__":
     main()

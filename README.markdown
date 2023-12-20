@@ -7,10 +7,11 @@ This project is for processing the files from <https://github.com/lisp-docs/cl-s
 1. First Step is to execute `(run-project)` in [main.lisp](/src/main.lisp)
 2. Run any of the following scripts:
    - The following scripts can only be executed in this project's `output` folder:
+      - [split-glossary.py](/split-glossary.py)
+        - Note that the glossary file path is hard coded.
+   - The following python scripts can be executed with a given directory:
       - fix all html tags by running [fix-html-tags.py](/fix-html-tags.py)
         - Note: This should be executed after making adding code blocks
-      - [split-glossary.py](/split-glossary.py)
-   - The following python scripts can be executed with a given directory:
       - additional text fixes running [text-fixes-for-code-blocks.py](/text-fixes-for-code-blocks.py)
       - clear footers by running [clear_footers.py](/clear_footers.py)
       - add markdown code blocks with [add-md-code-blocks.py](/add-md-code-blocks.py)

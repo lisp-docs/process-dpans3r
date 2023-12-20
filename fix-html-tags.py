@@ -203,13 +203,19 @@ def process_html_tags(file_text):
         # processed_text = new_fix_lisp_tags(file_text, processed_text)
     return processed_text
 
-def main():
-    if (sys.version_info.major == 3 and sys.version_info.minor >= 9) or sys.version_info.major > 3:
-        process_all_md_files(MD_DIR)
-    else:
+
+def main(args=[MD_DIR]):
+    for arg in args:
+        process_all_md_files(arg)
+
+if __name__ == "__main__":
+    if not ((sys.version_info.major == 3 and sys.version_info.minor >= 9) or sys.version_info.major > 3):
         print("This script can only use Python Versions >= 3.9")
         print(f"Your current version is {sys.version}")
         print("Please get an appropiate version to run this script")
-
-if __name__ == "__main__":
-    main()
+    if len(sys.argv) < 2:
+        print("No directory with markdown files provided")
+        print(f"Defaulting to run on {MD_DIR}")
+        main()
+    else:
+        main(sys.argv[1:])

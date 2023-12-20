@@ -74,7 +74,7 @@ def conditionally_add_filename_codeblock(filename, root):
 
 def conditionally_add_section_codeblock(filename, root):
     filepath = os.path.join(root, filename)
-    print(filepath)
+    # print(filepath)
     file = open(filepath, "r")
     given_text = file.read()
     file.close()

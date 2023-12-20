@@ -80,7 +80,8 @@ def make_glossary(given_dir):
         file = open(NOT_MATCHED_FILE, "w")
         file.write(json.dumps(not_matched))
         file.close()
-        pprint(not_matched)
+        # TODO deal with not_matched
+        # pprint(not_matched)
         print(f"Items Note Matched: {len(not_matched)}")
 
 

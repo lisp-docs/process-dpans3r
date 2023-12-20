@@ -18,7 +18,7 @@ def get_shell_command_output(command_string):
     return stdout.decode("utf-8").splitlines()
     
 def execute_shell_command(command_string):
-    process = subprocess.Popen(command_string, shell=True)
+    process = subprocess.Popen(command_string, shell=True, stdout=subprocess.PIPE)
     process.communicate()
 
 def execute_indent_for_file(given_path, start, end):

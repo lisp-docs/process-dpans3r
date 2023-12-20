@@ -231,7 +231,7 @@ def create_dicionary_entry_files(file_section, dictionary_path):
         item_filename = f"{item_name_for_path}_{item_type}.md"
         react_item_component = "".join([part.capitalize() for part in replace_special_chars(item_name).split(",")[0].split("-")])
         react_item_component += variable_react_name
-        md_file = ITEM_FILE_TEMPLATE.format(f"*{item_name}*", item_title, react_item_component, item_filename, react_item_component, item_title, lisp_item_name)
+        md_file = ITEM_FILE_TEMPLATE.format(f"{item_name}", item_title, react_item_component, item_filename, react_item_component, item_title, lisp_item_name)
         # final_items.append({"filepath": item_filename, "start_index": definition.start(), "md_text": md_file})
 
         # groups = matches.groups()

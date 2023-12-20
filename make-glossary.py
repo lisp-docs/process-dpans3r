@@ -1,6 +1,8 @@
 import re, sys, os, subprocess, json
 from pprint import pprint
 
+MD_DIR = "./output/chap-26/"
+
 DEFINITION_REGEX = r'\n(\s*(\*\*([\w\\/ \-]+)\*\*)((?:(?!\n)[\w\W.])+))\n'
 # HEADER_REGEX = r'(\n*---\n+\w+:["\' \w\*]\n+---\n+\s*\*\*\w\*\*\s*)'
 # HEADER_REGEX = r'(\n*\---\n+(\w+\:[\"\' \w\*_]+\n+)+\---\n+\s*\*\*\w\*\*\s*)'
@@ -17,7 +19,7 @@ def make_glossary_for_file(filepath):
     file.close()
     # code_blocks_regex = f'{START_CODE_BLOCK}{REGEX_MATCH_UNTIL.replace("X", END_CODE_BLOCK)}{END_CODE_BLOCK}'
     definitions_in_file = re.finditer(DEFINITION_REGEX, text)
-    re.findall(DEFINITION_REGEX, text)[-1]
+    # re.findall(DEFINITION_REGEX, text)[-1]
     header = re.findall(HEADER_REGEX, text)
     new_text = text
     if len(header) != 0:
@@ -82,7 +84,7 @@ def make_glossary(given_dir):
         print(f"Items Note Matched: {len(not_matched)}")
 
 
-def main(args=[]):
+def main(args=[MD_DIR]):
     for arg in args:
         make_glossary(arg)
 

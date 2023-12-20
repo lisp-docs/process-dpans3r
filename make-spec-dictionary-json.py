@@ -3,7 +3,7 @@ from pprint import pprint
 
 DICTIONARY_FILE = "./glossary_output/dictionary.json"
 
-
+# TODO delete this function???
 def make_dictionary_items_dict_for_file(filepath):
     file = open(filepath, "r")
     text = file.read()

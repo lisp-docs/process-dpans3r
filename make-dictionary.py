@@ -1,9 +1,11 @@
 import os, sys, json, re
 from pprint import pprint 
 
-TEX_DIR = "./tex-files"
+# TEX_DIR = "./tex-files"
 MD_DIR = "./output/"
-CODE_BLOCKS_JSON = "./output/code-blocks.json"
+# CODE_BLOCKS_JSON = "./output/code-blocks.json"
+DICTIONARY_LINKS = "./output/dictionary-entries.md"
+DICTIONARY_TEXT = []
 ITEM_EXPLICIT_REGEX = r'((\*\∗\*)?\*\*(?P<item_name>([\w=/<>\-+\\]+(-[\w=/<>\-+\\]+)*)(, ([\w=/<>\-+\\]+(-[\w=/<>\-+\\]+)*))*)\*\*[\s\n]*\*(\∗ )?(?P<item_type>\w+([\s\n]*\w+)*)\*[\s\n]*\*\*(Syntax|(Class Precedence List)|(Value Type)|Supertypes|(Constant Value))*:\*\*)'
 
 def get_last_section(filenames):
@@ -92,7 +94,11 @@ def split_dictionary_files(given_dir):
                 for filename in [filename for filename in filenames if ".md" in filename]:
                     filepath = os.path.join(root, filename)
                     process_dictionary_file(filepath, dictionary_dir=current_dictionary, chapter_dir=chapter_dir)
-
+    if len(DICTIONARY_TEXT) > 0:
+        print("Rewriting dictionary links file {DICTIONARY_LINKS}")
+        file = open(DICTIONARY_LINKS, "w")
+        file.write("\n".join(DICTIONARY_TEXT))
+        file.close()
 
 def process_dictionary_file(curr_file_path, dictionary_dir=None, chapter_dir=None):
     file = open(curr_file_path, "r")
@@ -270,7 +276,8 @@ def create_dicionary_entry_files(file_section, dictionary_path):
         file.write(file_section)
         file.close()
 
-        print(f"- [{item_filename}]({os.path.join(dictionary_path, item_filename)})")
+        # print(f"- [{item_filename}]({os.path.join(dictionary_path, item_filename)})")
+        DICTIONARY_TEXT.append(f"- [{item_filename}]({os.path.join(dictionary_path, item_filename)})")
     else:
         print("This should be a valid dictionary entry because it was already checked! This code should not execute! ERROR")
         import pdb; pdb.set_trace()

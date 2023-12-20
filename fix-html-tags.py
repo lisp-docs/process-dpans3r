@@ -197,7 +197,7 @@ def process_html_tags(file_text):
     processed_text = cleaned_text.strip().removeprefix("<div>").removesuffix("</div>")
     processed_text = fix_case(file_text, processed_text)
     processed_text = fix_case_simple(file_text, processed_text)
-    # processed_text = fix_tildes(processed_text)
+    processed_text = fix_tildes(processed_text)
     if processed_text.strip().lower() != file_text.strip().lower():
         processed_text = fix_case_lisp(file_text, processed_text)
         # processed_text = new_fix_lisp_tags(file_text, processed_text)

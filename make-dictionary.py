@@ -95,7 +95,7 @@ def split_dictionary_files(given_dir):
                     filepath = os.path.join(root, filename)
                     process_dictionary_file(filepath, dictionary_dir=current_dictionary, chapter_dir=chapter_dir)
     if len(DICTIONARY_TEXT) > 0:
-        print("Rewriting dictionary links file {DICTIONARY_LINKS}")
+        print(f"Rewriting dictionary links file {DICTIONARY_LINKS}")
         file = open(DICTIONARY_LINKS, "w")
         file.write("\n".join(DICTIONARY_TEXT))
         file.close()
@@ -257,20 +257,20 @@ def create_dicionary_entry_files(file_section, dictionary_path):
 
         # Visible Markdown File
         visible_md_path = f"{dictionary_path}/{item_filename}"
-        if os.path.exists(visible_md_path):
+        # if os.path.exists(visible_md_path):
             # print("Problem! This path should not exist!")
             # print(visible_md_path)
-            print(f"+ Overwriting: {visible_md_path}")
+            # print(f"+ Overwriting: {visible_md_path}")
             # import pdb; pdb.set_trace()
         file = open(visible_md_path, "w")
         file.write(md_file)
         file.close()
         # Hidden Markdown File
         hidden_md_path = f"{dictionary_path}/_{item_filename}"
-        if os.path.exists(hidden_md_path):
+        # if os.path.exists(hidden_md_path):
             # print("Problem! This path should not exist!")
             # print(hidden_md_path)
-            print(f"+ Overwriting: {hidden_md_path}")
+            # print(f"+ Overwriting: {hidden_md_path}")
             # import pdb; pdb.set_trace()
         file = open(hidden_md_path, "w")
         file.write(file_section)

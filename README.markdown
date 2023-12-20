@@ -33,8 +33,9 @@ To get the same results as in <https://lisp-docs.github.io/cl-language-reference
 7. Split the dictionary files [make-dictionary.py](/make-dictionary.py)
 8. Split Glossary [split-glossary.py](/split-glossary.py)
 9. Fix all html tags by running [fix-html-tags.py](/fix-html-tags.py)
-10. Make the glossary [make-glossary.py](/make-glossary.py)
-11. Make dictionary json [make-spec-dictionary-json.py](/make-spec-dictionary-json.py)
+10. Fix the glossary [fix-glossary.py](/fix-glossary.py)
+11. Make the glossary [make-glossary.py](/make-glossary.py)
+12. Make dictionary json [make-spec-dictionary-json.py](/make-spec-dictionary-json.py)
 
 ## TODO
 

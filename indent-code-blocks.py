@@ -18,7 +18,7 @@ def get_shell_command_output(command_string):
     return stdout.decode("utf-8").splitlines()
     
 def execute_shell_command(command_string):
-    process = subprocess.Popen(command_string, shell=True, stdout=subprocess.PIPE)
+    process = subprocess.Popen(command_string, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, shell=True)
     process.communicate()
 
 def execute_indent_for_file(given_path, start, end):
@@ -71,8 +71,8 @@ def indent_code_blocks_in_dir(given_dir):
                 if filename.endswith(".md"):
                     filepath = os.path.join(root, filename)
                     indent_code_blocks(filepath)
-                    # if indent_code_blocks(filepath) > 0:
-                    #     return True
+                    print(".", end="", flush=True)
+        print("\n")
 
 
 def main(args=[]):

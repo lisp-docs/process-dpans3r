@@ -42,7 +42,7 @@ def fix_glossary(filepath):
 def process_dir(given_dir):
     for root, dirs, filenames in os.walk(given_dir):
         for filename in filenames:
-            if "glossary" not in filename:
+            if "glossary" not in filename and ".DS_Store" not in filename:
                 filepath = os.path.join(root, filename)
                 fix_glossary(filepath)
 

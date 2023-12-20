@@ -10,8 +10,10 @@ LOOK_AHEAD_REGEX = r'(?:(?!X).)*'
 def process_files_in_dir(given_dir):
     for root, dirs, filenames in os.walk(given_dir):
         for filename in filenames:
-            if filename != ".DS_Store":
+            if filename.endswith(".md"):
                 add_md_code_blocks(filename, root)
+                print(".", end="", flush=True)
+    print("\n")
 
 def apply_first_example_code_block(given_text, filename):
     # There are markdown code blocks in the text already

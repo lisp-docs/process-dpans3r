@@ -10,6 +10,7 @@ clear_footers_module = importlib.import_module("clear_footers")
 make_dictionary_module = importlib.import_module("make-dictionary")
 split_glossary_module = importlib.import_module("split-glossary")
 fix_html_tags_module = importlib.import_module("fix-html-tags")
+fix_glossary_module = importlib.import_module("fix-glossary")
 make_glossary_module = importlib.import_module("make-glossary")
 make_spec_dictionary_json_module = importlib.import_module("make-spec-dictionary-json")
 
@@ -17,6 +18,7 @@ MD_DIR = "./output/"
 
 
 def process_dpans3r_lisp_output(dir_path):
+    print("For slower running scripts a dot \".\" will be printed for each processed file to show progress.")
     print("The following steps are being taken:")
     # 2. Add markdown code blocks with [add-md-code-blocks.py](/add-md-code-blocks.py)
     print("\t- Add markdown code blocks with [add-md-code-blocks.py](/add-md-code-blocks.py)")
@@ -44,6 +46,8 @@ def process_dpans3r_lisp_output(dir_path):
     # 9. Fix all html tags by running [fix-html-tags.py](/fix-html-tags.py)
     print("\t- Fix all html tags by running [fix-html-tags.py](/fix-html-tags.py)")
     fix_html_tags_module.main([dir_path])
+    print("\t- Fix glossary [fix-glossary.py](/fix-glossary.py)")
+    fix_glossary_module.main([dir_path])
     # 10. Make the glossary [make-glossary.py](/make-glossary.py)
     print("\t- Make the glossary [make-glossary.py](/make-glossary.py)")
     make_glossary_module.main([f"{dir_path}/chap-26/"])

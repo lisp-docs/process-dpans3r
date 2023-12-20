@@ -54,7 +54,7 @@ to be recursively printed has components and is at a level equal to or greater t
 
 
 
-(format t "~&~D – ~S~%" i a))) 
+(format t "~&amp;~D – ~S~%" i a))) 
 
 
 
@@ -118,7 +118,7 @@ to be recursively printed has components and is at a level equal to or greater t
 
 
 
-(format t "~&~D – ~S~%" i a))) 
+(format t "~&amp;~D – ~S~%" i a))) 
 
 
 
@@ -170,7 +170,7 @@ to be recursively printed has components and is at a level equal to or greater t
 
 
 
-(format t "~&~D ~D – ~S~%" 
+(format t "~&amp;~D ~D – ~S~%" 
 
 
 

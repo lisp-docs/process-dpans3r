@@ -164,11 +164,11 @@ Existing handler bindings.
 
 
 
-If *datum* is a *condition type* rather than a *string*, the **format** directive &#126;\* may be especially useful in the *continue-format-control* in order to ignore the *keywords* in the *initialization argument list*. For example: 
+If *datum* is a *condition type* rather than a *string*, the **format** directive ~\* may be especially useful in the *continue-format-control* in order to ignore the *keywords* in the *initialization argument list*. For example: 
 
 
 
-(cerror "enter a new value to replace &#126;\*&#126;s" 
+(cerror "enter a new value to replace ~\*~s" 
 
 
 

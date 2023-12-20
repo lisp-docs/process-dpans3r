@@ -126,7 +126,7 @@ If the *value* of **\*print-radix\*** is *true*, the printer will print a radix 
 
 
 
-(format t "~&~S ~S~%" 10 1/10))) ;3, 8, 10, 16 
+(format t "~&amp;~S ~S~%" 10 1/10))) ;3, 8, 10, 16 
 
 
 

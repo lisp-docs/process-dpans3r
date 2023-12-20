@@ -38,7 +38,7 @@ Returns *true* if *character* is of *type* **standard-char**; otherwise, returns
 
 
 
-(standard-char-p #\&#126;) *→ true* 
+(standard-char-p #\~) *→ true* 
 
 
 

@@ -6,7 +6,7 @@
 
 
 
-do (format t "&#126;&amp;What I say three times is true.&#126;%")) 
+do (format t "~&amp;What I say three times is true.~%")) 
 
 
 
@@ -30,7 +30,7 @@ do (format t "&#126;&amp;What I say three times is true.&#126;%"))
 
 
 
-do (format t "What you see is what you expect&#126;%")) 
+do (format t "What you see is what you expect~%")) 
 
 
 

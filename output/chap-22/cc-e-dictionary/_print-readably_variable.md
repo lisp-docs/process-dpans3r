@@ -38,7 +38,7 @@ a *generalized boolean*.
 
 
 
-If **\*print-readably\*** is *true*, some special rules for printing *objects* go into effect. Specifically, printing any *object O*<sub>1</sub> produces a printed representation that, when seen by the *Lisp reader* while the *standard readtable* is in effect, will produce an *object O*<sub>2</sub> that is *similar* to *O*<sub>1</sub>. The printed representation produced might or might not be the same as the printed representation produced when **\*print-readably\*** is *false*. If printing an *object readably* is not possible, an error of *type* **print-not-readable** is signaled rather than using a syntax (*e.g.*, the “#<” syntax) that would not be readable by the same *implementation*. If the *value* of some other *printer control variable* is such that these requirements would be violated, the *value* of that other *variable* is ignored. 
+If **\*print-readably\*** is *true*, some special rules for printing *objects* go into effect. Specifically, printing any *object O*<sub>1</sub> produces a printed representation that, when seen by the *Lisp reader* while the *standard readtable* is in effect, will produce an *object O*<sub>2</sub> that is *similar* to *O*<sub>1</sub>. The printed representation produced might or might not be the same as the printed representation produced when **\*print-readably\*** is *false*. If printing an *object readably* is not possible, an error of *type* **print-not-readable** is signaled rather than using a syntax (*e.g.*, the “#&lt;” syntax) that would not be readable by the same *implementation*. If the *value* of some other *printer control variable* is such that these requirements would be violated, the *value* of that other *variable* is ignored. 
 
 
 

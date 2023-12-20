@@ -162,7 +162,7 @@ When **\*print-escape\*** is **nil**, the printer uses the report information fo
 
 
 
-(format t "&#126;&amp;&#126;S – &#126;A&#126;%" ’:continue some-restart) 
+(format t "~&amp;~S – ~A~%" ’:continue some-restart) 
 
 
 

@@ -6,7 +6,7 @@
 
 
 
-**write-to-string** *object* &key *array base case circle escape gensym* 
+**write-to-string** *object* &amp;key *array base case circle escape gensym* 
 
 
 
@@ -190,7 +190,7 @@ The meanings and defaults for the keyword arguments to **write-to-string** are t
 
 
 
-(write-to-string *object \&#123;key argument\&#125;*\*) 
+(write-to-string *object \{key argument\}*\*) 
 
 
 
@@ -198,7 +198,7 @@ The meanings and defaults for the keyword arguments to **write-to-string** are t
 
 
 
-(write object :stream #1# *\&#123;key argument\&#125;*\*)) 
+(write object :stream #1# *\{key argument\}*\*)) 
 
 
 

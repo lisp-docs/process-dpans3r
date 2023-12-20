@@ -98,7 +98,7 @@ The *standard characters hNewlinei* and *hSpacei* have the respective names "New
 
 
 
-(prin1-to-string (read-from-string (format nil "#\\&#126;A" (or (char-name #\A) "A")))) *→* "#\\A" 
+(prin1-to-string (read-from-string (format nil "#\\~A" (or (char-name #\A) "A")))) *→* "#\\A" 
 
 
 

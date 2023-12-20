@@ -6,7 +6,7 @@
 
 
 
-**with-open-file** (*stream filespec \&#123;options\&#125;*\*) *\&#123;declaration\&#125;*\* *\&#123;form\&#125;*\* 
+**with-open-file** (*stream filespec \{options\}*\*) *\{declaration\}*\* *\{form\}*\* 
 
 
 

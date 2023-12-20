@@ -50,7 +50,7 @@ where *arguments-tail* is either the tail of *arguments* which has as its *car* 
 
 
 
-(funcall (formatter "&#126;&amp;&#126;A&#126;A") \*standard-output\* ’a ’b ’c) 
+(funcall (formatter "~&amp;~A~A") \*standard-output\* ’a ’b ’c) 
 
 
 
@@ -74,7 +74,7 @@ where *arguments-tail* is either the tail of *arguments* which has as its *car* 
 
 
 
-(format t (formatter "&#126;&amp;&#126;A&#126;A") ’a ’b ’c) 
+(format t (formatter "~&amp;~A~A") ’a ’b ’c) 
 
 
 

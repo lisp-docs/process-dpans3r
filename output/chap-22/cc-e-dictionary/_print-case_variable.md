@@ -42,7 +42,7 @@ The *value* of **\*print-case\*** controls the case (upper, lower, or mixed) in 
 
 
 
-(format t "~&~S ~S~%" ’this-and-that ’|And-something-elSE|))) 
+(format t "~&amp;~S ~S~%" ’this-and-that ’|And-something-elSE|))) 
 
 
 

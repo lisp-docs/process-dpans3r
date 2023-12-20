@@ -202,7 +202,7 @@ An *implicit block* named **nil** surrounds the entire **do** (or **do\***) form
 
 
 
-(format t "&#126;%Input &#126;D:" j) 
+(format t "~%Input ~D:" j) 
 
 
 
@@ -214,7 +214,7 @@ An *implicit block* named **nil** surrounds the entire **do** (or **do\***) form
 
 
 
-(format t "&#126;&amp;Output &#126;D: &#126;S" j item)))) 
+(format t "~&amp;Output ~D: ~S" j item)))) 
 
 
 

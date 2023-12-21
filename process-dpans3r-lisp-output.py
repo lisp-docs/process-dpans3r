@@ -38,6 +38,12 @@ def process_dpans3r_lisp_output(dir_path):
     # 7. Split the dictionary files [make-dictionary.py](/make-dictionary.py)
     print("\t- Split the dictionary files [make-dictionary.py](/make-dictionary.py)")
     make_dictionary_module.main([dir_path])
+    
+    print("\t-Running again to remove double lines in markdown code blocks: [clean_double_lines.py](/clean_double_lines.py)")
+    clean_double_lines_module.main([dir_path])
+    print("\t- Running again to indent code blocks [indent-code-blocks.py](/indent-code-blocks.py)")
+    indent_code_blocks_module.main([dir_path])
+
     # 8. Split Glossary [split-glossary.py](/split-glossary.py)
     print("\t- Split Glossary [split-glossary.py](/split-glossary.py)")
     # TODO right now the path in output is hard coded! Maybe change this??

@@ -8,7 +8,7 @@ LOOK_AHEAD_REGEX = '(?:(?!{})[^\n])*'
 UNTIL_NEW_LINE_REGEX = LOOK_AHEAD_REGEX.format("\n")
 START_CODE_BLOCK = f"```lisp{UNTIL_NEW_LINE_REGEX}"
 END_CODE_BLOCK = "```"
-DICTIONARY_ITEM_NAME = LOOK_AHEAD_REGEX_MATCH_OPEN.format("\\*\\*", "\\S")
+DICTIONARY_ITEM_NAME = LOOK_AHEAD_REGEX_MATCH_OPEN.format("\\*\\*)", "\\S")
 GLOSSARY_ITEM_NAME = LOOK_AHEAD_REGEX_MATCH_OPEN.format("\\*", "\\S")
 DICTIONARY_ITEM_REGEX = f'\*\*(?P<item>{DICTIONARY_ITEM_NAME})\*\*'
 GLOSSARY_ITEM_REGEX = f'\*(?P<item>{GLOSSARY_ITEM_NAME})\*'
@@ -68,15 +68,19 @@ def add_cl_links(file_text):
     text_array = []
     start_index = 0
     for match in all_items:
-        in_titles = [match.start() > title.start() and match.start() < title.end() for title in title_lines_matches]
-        in_title = functools.reduce(lambda x,y: x or y, in_titles)
+        # import pdb; pdb.set_trace()
+        if len(title_lines_matches) > 0:
+            in_titles = [match.start() > title.start() and match.start() < title.end() for title in title_lines_matches]
+            in_title = functools.reduce(lambda x,y: x or y, in_titles)
+        else:
+            in_title = False
         if not in_title and match.end() - match.start() <= 32:
             cl_link = '<ClLink styled={true}>'  + match.group("item") + '</ClLink>'
             text_array.append(file_text[start_index:match.start()])
             text_array.append(cl_link)
             start_index = match.end()
     text_array.append(file_text[start_index:])
-    processed_text = file_text
+    processed_text = "".join(text_array)
     return processed_text
 
 

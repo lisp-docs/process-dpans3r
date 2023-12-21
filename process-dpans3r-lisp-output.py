@@ -47,10 +47,11 @@ def process_dpans3r_lisp_output(dir_path):
     print("\t- Fix all html tags by running [fix-html-tags.py](/fix-html-tags.py)")
     fix_html_tags_module.main([dir_path])
     print("\t- Fix glossary [fix-glossary.py](/fix-glossary.py)")
-    fix_glossary_module.main([dir_path])
+    GLOSSARY_PATH = os.path.join(dir_path, "/chap-26/cg-b-glossary/")
+    fix_glossary_module.main([GLOSSARY_PATH])
     # 10. Make the glossary [make-glossary.py](/make-glossary.py)
     print("\t- Make the glossary [make-glossary.py](/make-glossary.py)")
-    make_glossary_module.main([f"{dir_path}/chap-26/"])
+    make_glossary_module.main([GLOSSARY_PATH])
     # 11. Make dictionary json [make-spec-dictionary-json.py](/make-spec-dictionary-json.py)
     print("\t- Make dictionary json [make-spec-dictionary-json.py](/make-spec-dictionary-json.py)")
     make_spec_dictionary_json_module.main([dir_path])
@@ -61,10 +62,15 @@ def main(args=[MD_DIR]):
         process_dpans3r_lisp_output(arg)
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        # print("Please provide a directory with markdown files")
-        print("No directory with markdown files provided")
-        print(f"Defaulting to run on {MD_DIR}")
-        main()
+    if not ((sys.version_info.major == 3 and sys.version_info.minor >= 9) or sys.version_info.major > 3):
+        print("This script can only use Python Versions >= 3.9")
+        print(f"Your current version is {sys.version}")
+        print("Please get an appropiate version to run this script")
     else:
-        main(sys.argv[1:])
+        if len(sys.argv) < 2:
+            # print("Please provide a directory with markdown files")
+            print("No directory with markdown files provided")
+            print(f"Defaulting to run on {MD_DIR}")
+            main()
+        else:
+            main(sys.argv[1:])

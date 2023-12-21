@@ -213,9 +213,10 @@ if __name__ == "__main__":
         print("This script can only use Python Versions >= 3.9")
         print(f"Your current version is {sys.version}")
         print("Please get an appropiate version to run this script")
-    if len(sys.argv) < 2:
-        print("No directory with markdown files provided")
-        print(f"Defaulting to run on {MD_DIR}")
-        main()
     else:
-        main(sys.argv[1:])
+        if len(sys.argv) < 2:
+            print("No directory with markdown files provided")
+            print(f"Defaulting to run on {MD_DIR}")
+            main()
+        else:
+            main(sys.argv[1:])

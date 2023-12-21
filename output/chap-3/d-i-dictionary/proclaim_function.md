@@ -1,5 +1,5 @@
 ---
-title: "*proclaim*"
+title: "proclaim"
 ---
 
 # proclaim

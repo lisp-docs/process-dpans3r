@@ -1,5 +1,5 @@
 ---
-title: "*file-write-date*"
+title: "file-write-date"
 ---
 
 # file-write-date

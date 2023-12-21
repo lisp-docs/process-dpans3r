@@ -1,5 +1,5 @@
 ---
-title: "*character*"
+title: "character"
 ---
 
 # character

@@ -1,5 +1,5 @@
 ---
-title: "*defconstant*"
+title: "defconstant"
 ---
 
 # defconstant

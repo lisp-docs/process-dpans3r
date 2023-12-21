@@ -1,5 +1,5 @@
 ---
-title: "*defun*"
+title: "defun"
 ---
 
 # defun

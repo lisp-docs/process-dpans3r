@@ -1,5 +1,5 @@
 ---
-title: "*with-package-iterator*"
+title: "with-package-iterator"
 ---
 
 # with-package-iterator

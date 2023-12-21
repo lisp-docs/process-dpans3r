@@ -1,5 +1,5 @@
 ---
-title: "*slot-unbound*"
+title: "slot-unbound"
 ---
 
 # slot-unbound

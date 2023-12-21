@@ -1,5 +1,5 @@
 ---
-title: "*stream-element-type*"
+title: "stream-element-type"
 ---
 
 # stream-element-type

@@ -1,5 +1,5 @@
 ---
-title: "*with-accessors*"
+title: "with-accessors"
 ---
 
 # with-accessors

@@ -1,5 +1,5 @@
 ---
-title: "*floating-point-invalid-operation*"
+title: "floating-point-invalid-operation"
 ---
 
 # floating-point-invalid-operation

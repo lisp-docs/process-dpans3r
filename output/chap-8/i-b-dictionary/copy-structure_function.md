@@ -1,5 +1,5 @@
 ---
-title: "*copy-structure*"
+title: "copy-structure"
 ---
 
 # copy-structure

@@ -1,5 +1,5 @@
 ---
-title: "*float*"
+title: "float"
 ---
 
 # float

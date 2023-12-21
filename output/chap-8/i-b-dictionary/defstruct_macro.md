@@ -1,5 +1,5 @@
 ---
-title: "*defstruct*"
+title: "defstruct"
 ---
 
 # defstruct

@@ -1,5 +1,5 @@
 ---
-title: "*nth-value*"
+title: "nth-value"
 ---
 
 # nth-value

@@ -1,5 +1,5 @@
 ---
-title: "*standard-generic-function*"
+title: "standard-generic-function"
 ---
 
 # standard-generic-function

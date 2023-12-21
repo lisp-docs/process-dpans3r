@@ -1,5 +1,5 @@
 ---
-title: "*get*"
+title: "get"
 ---
 
 # get

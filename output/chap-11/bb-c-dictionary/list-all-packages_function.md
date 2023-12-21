@@ -1,5 +1,5 @@
 ---
-title: "*list-all-packages*"
+title: "list-all-packages"
 ---
 
 # list-all-packages

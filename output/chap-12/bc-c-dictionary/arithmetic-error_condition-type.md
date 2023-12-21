@@ -1,5 +1,5 @@
 ---
-title: "*arithmetic-error*"
+title: "arithmetic-error"
 ---
 
 # arithmetic-error

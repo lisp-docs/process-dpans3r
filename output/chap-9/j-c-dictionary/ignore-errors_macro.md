@@ -1,5 +1,5 @@
 ---
-title: "*ignore-errors*"
+title: "ignore-errors"
 ---
 
 # ignore-errors

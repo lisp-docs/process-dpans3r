@@ -1,5 +1,5 @@
 ---
-title: "*sleep*"
+title: "sleep"
 ---
 
 # sleep

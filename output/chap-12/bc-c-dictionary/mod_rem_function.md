@@ -1,5 +1,5 @@
 ---
-title: "*mod, rem*"
+title: "mod, rem"
 ---
 
 # mod, rem

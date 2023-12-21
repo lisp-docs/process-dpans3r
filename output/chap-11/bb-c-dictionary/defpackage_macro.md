@@ -1,5 +1,5 @@
 ---
-title: "*defpackage*"
+title: "defpackage"
 ---
 
 # defpackage

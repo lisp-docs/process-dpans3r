@@ -1,5 +1,5 @@
 ---
-title: "*get-properties*"
+title: "get-properties"
 ---
 
 # get-properties

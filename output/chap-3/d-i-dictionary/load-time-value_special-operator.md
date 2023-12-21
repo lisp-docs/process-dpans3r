@@ -1,5 +1,5 @@
 ---
-title: "*load-time-value*"
+title: "load-time-value"
 ---
 
 # load-time-value

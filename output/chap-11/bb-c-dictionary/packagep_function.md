@@ -1,5 +1,5 @@
 ---
-title: "*packagep*"
+title: "packagep"
 ---
 
 # packagep

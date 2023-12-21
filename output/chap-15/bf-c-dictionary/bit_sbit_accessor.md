@@ -1,5 +1,5 @@
 ---
-title: "*bit, sbit*"
+title: "bit, sbit"
 ---
 
 # bit, sbit

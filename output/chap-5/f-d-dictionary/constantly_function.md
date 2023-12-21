@@ -1,5 +1,5 @@
 ---
-title: "*constantly*"
+title: "constantly"
 ---
 
 # constantly

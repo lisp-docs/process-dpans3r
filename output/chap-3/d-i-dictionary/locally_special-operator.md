@@ -1,5 +1,5 @@
 ---
-title: "*locally*"
+title: "locally"
 ---
 
 # locally

@@ -1,5 +1,5 @@
 ---
-title: "*array-has-fill-pointer-p*"
+title: "array-has-fill-pointer-p"
 ---
 
 # array-has-fill-pointer-p

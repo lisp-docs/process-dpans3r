@@ -1,5 +1,5 @@
 ---
-title: "*disassemble*"
+title: "disassemble"
 ---
 
 # disassemble

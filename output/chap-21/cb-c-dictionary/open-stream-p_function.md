@@ -1,5 +1,5 @@
 ---
-title: "*open-stream-p*"
+title: "open-stream-p"
 ---
 
 # open-stream-p

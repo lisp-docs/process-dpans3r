@@ -1,5 +1,5 @@
 ---
-title: "*hash-table-rehash-threshold*"
+title: "hash-table-rehash-threshold"
 ---
 
 # hash-table-rehash-threshold

@@ -1,5 +1,5 @@
 ---
-title: "*char-upcase, char-downcase*"
+title: "char-upcase, char-downcase"
 ---
 
 # char-upcase, char-downcase

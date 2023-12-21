@@ -1,5 +1,5 @@
 ---
-title: "*map*"
+title: "map"
 ---
 
 # map

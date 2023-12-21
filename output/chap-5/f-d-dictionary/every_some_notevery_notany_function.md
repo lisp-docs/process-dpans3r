@@ -1,5 +1,5 @@
 ---
-title: "*every, some, notevery, notany*"
+title: "every, some, notevery, notany"
 ---
 
 # every, some, notevery, notany

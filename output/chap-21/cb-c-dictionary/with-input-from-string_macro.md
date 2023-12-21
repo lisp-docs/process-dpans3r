@@ -1,5 +1,5 @@
 ---
-title: "*with-input-from-string*"
+title: "with-input-from-string"
 ---
 
 # with-input-from-string

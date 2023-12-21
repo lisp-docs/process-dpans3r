@@ -1,5 +1,5 @@
 ---
-title: "*declaim*"
+title: "declaim"
 ---
 
 # declaim

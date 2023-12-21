@@ -1,5 +1,5 @@
 ---
-title: "*define-condition*"
+title: "define-condition"
 ---
 
 # define-condition

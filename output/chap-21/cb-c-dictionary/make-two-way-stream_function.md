@@ -1,5 +1,5 @@
 ---
-title: "*make-two-way-stream*"
+title: "make-two-way-stream"
 ---
 
 # make-two-way-stream

@@ -1,5 +1,5 @@
 ---
-title: "*features*"
+title: "features"
 ---
 
 # \*features\*

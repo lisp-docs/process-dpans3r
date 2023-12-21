@@ -1,5 +1,5 @@
 ---
-title: "*multiple-value-setq*"
+title: "multiple-value-setq"
 ---
 
 # multiple-value-setq

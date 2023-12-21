@@ -1,5 +1,5 @@
 ---
-title: "*parse-namestring*"
+title: "parse-namestring"
 ---
 
 # parse-namestring

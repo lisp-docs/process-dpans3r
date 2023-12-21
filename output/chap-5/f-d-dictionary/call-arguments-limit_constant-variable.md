@@ -1,5 +1,5 @@
 ---
-title: "*call-arguments-limit*"
+title: "call-arguments-limit"
 ---
 
 # call-arguments-limit

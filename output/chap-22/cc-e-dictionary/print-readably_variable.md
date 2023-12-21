@@ -1,5 +1,5 @@
 ---
-title: "*print-readably*"
+title: "print-readably"
 ---
 
 # \*print-readably\*

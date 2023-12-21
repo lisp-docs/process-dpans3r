@@ -1,5 +1,5 @@
 ---
-title: "*with-simple-restart*"
+title: "with-simple-restart"
 ---
 
 # with-simple-restart

@@ -1,5 +1,5 @@
 ---
-title: "*shadow*"
+title: "shadow"
 ---
 
 # shadow

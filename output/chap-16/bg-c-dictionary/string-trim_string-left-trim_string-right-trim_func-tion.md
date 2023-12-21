@@ -1,5 +1,5 @@
 ---
-title: "*string-trim, string-left-trim, string-right-trim*"
+title: "string-trim, string-left-trim, string-right-trim"
 ---
 
 # string-trim, string-left-trim, string-right-trim

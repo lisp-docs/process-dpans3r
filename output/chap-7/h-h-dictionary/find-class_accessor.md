@@ -1,5 +1,5 @@
 ---
-title: "*find-class*"
+title: "find-class"
 ---
 
 # find-class

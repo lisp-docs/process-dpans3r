@@ -1,5 +1,5 @@
 ---
-title: "*defmacro*"
+title: "defmacro"
 ---
 
 # defmacro

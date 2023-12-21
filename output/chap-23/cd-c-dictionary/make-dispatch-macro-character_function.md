@@ -1,5 +1,5 @@
 ---
-title: "*make-dispatch-macro-character*"
+title: "make-dispatch-macro-character"
 ---
 
 # make-dispatch-macro-character

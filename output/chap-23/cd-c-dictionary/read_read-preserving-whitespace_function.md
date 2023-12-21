@@ -1,5 +1,5 @@
 ---
-title: "*read, read-preserving-whitespace*"
+title: "read, read-preserving-whitespace"
 ---
 
 # read, read-preserving-whitespace

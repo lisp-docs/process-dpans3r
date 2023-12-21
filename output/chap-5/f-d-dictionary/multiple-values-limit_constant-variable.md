@@ -1,5 +1,5 @@
 ---
-title: "*multiple-values-limit*"
+title: "multiple-values-limit"
 ---
 
 # multiple-values-limit

@@ -1,5 +1,5 @@
 ---
-title: "*destructuring-bind*"
+title: "destructuring-bind"
 ---
 
 # destructuring-bind

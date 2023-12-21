@@ -1,5 +1,5 @@
 ---
-title: "*atom*"
+title: "atom"
 ---
 
 # atom

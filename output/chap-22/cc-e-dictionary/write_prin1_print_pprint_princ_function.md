@@ -1,5 +1,5 @@
 ---
-title: "*write, prin1, print, pprint, princ*"
+title: "write, prin1, print, pprint, princ"
 ---
 
 # write, prin1, print, pprint, princ

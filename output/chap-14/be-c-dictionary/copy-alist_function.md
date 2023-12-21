@@ -1,5 +1,5 @@
 ---
-title: "*copy-alist*"
+title: "copy-alist"
 ---
 
 # copy-alist

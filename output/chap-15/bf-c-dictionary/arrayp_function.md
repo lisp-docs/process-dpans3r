@@ -1,5 +1,5 @@
 ---
-title: "*arrayp*"
+title: "arrayp"
 ---
 
 # arrayp

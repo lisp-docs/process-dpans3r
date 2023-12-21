@@ -1,5 +1,5 @@
 ---
-title: "*lambda-list-keywords*"
+title: "lambda-list-keywords"
 ---
 
 # lambda-list-keywords

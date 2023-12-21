@@ -1,5 +1,5 @@
 ---
-title: "*phase*"
+title: "phase"
 ---
 
 # phase

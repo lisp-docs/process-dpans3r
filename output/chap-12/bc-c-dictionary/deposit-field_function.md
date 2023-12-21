@@ -1,5 +1,5 @@
 ---
-title: "*deposit-field*"
+title: "deposit-field"
 ---
 
 # deposit-field

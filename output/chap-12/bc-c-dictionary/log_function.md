@@ -1,5 +1,5 @@
 ---
-title: "*log*"
+title: "log"
 ---
 
 # log

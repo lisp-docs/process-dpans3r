@@ -43,7 +43,7 @@ If a *normal return* from the *forms* occurs, any *values* returned are returned
       (load (merge-pathnames (make-pathname :name program :type :lisp) 
 			     (user-homedir-pathname))) 
       (setq win t)) 
-    (unless win (format t "&#126;&amp;Init file failed to load.&#126;%")) 
+    (unless win (format t "~&Init file failed to load.~%")) 
     win)) 
 
 

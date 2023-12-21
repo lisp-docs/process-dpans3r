@@ -1,5 +1,5 @@
 ---
-title: "*read-delimited-list*"
+title: "read-delimited-list"
 ---
 
 # read-delimited-list

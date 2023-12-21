@@ -1,5 +1,5 @@
 ---
-title: "*adjoin*"
+title: "adjoin"
 ---
 
 # adjoin

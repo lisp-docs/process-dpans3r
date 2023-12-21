@@ -1,5 +1,5 @@
 ---
-title: "*logtest*"
+title: "logtest"
 ---
 
 # logtest

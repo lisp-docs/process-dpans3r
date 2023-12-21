@@ -1,5 +1,5 @@
 ---
-title: "*or*"
+title: "or"
 ---
 
 # or

@@ -1,5 +1,5 @@
 ---
-title: "*defclass*"
+title: "defclass"
 ---
 
 # defclass

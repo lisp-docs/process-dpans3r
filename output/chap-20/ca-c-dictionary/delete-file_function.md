@@ -1,5 +1,5 @@
 ---
-title: "*delete-file*"
+title: "delete-file"
 ---
 
 # delete-file

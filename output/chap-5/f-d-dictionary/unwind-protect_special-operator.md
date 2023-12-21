@@ -1,5 +1,5 @@
 ---
-title: "*unwind-protect*"
+title: "unwind-protect"
 ---
 
 # unwind-protect

@@ -1,5 +1,5 @@
 ---
-title: "*print-circle*"
+title: "print-circle"
 ---
 
 # \*print-circle\*

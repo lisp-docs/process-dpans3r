@@ -1,5 +1,5 @@
 ---
-title: "*dolist*"
+title: "dolist"
 ---
 
 # dolist

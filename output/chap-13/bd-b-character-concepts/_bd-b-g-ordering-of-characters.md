@@ -26,27 +26,7 @@ Of the *standard characters*, those which are *alphanumeric* obey the following 
 
 
 
-A<B<C<D<E<F<G<H<I<J<K<L<M<N<O<P<Q<R<S<T<U<V<W<X<Y<Z 
-
-
-
-a<b<c<d<e<f<g<h<i<j<k<l<m<n<o<p<q<r<s<t<u<v<w<x<y<z 
-
-
-
-0<1<2<3<4<5<6<7<8<9 
-
-
-
-either 9<A or Z<0 
-
-
-
-either 9<a or z<0 
-
-
-
-This implies that, for *standard characters*, *alphabetic*<sub>1</sub> ordering holds within each *case* (*uppercase* and *lowercase*), and that the *numeric characters* as a group are not interleaved with *alphabetic characters*. However, the ordering or possible interleaving of *uppercase characters* and *lowercase characters* is *implementation-defined*. 
+A<b<c<d<e<f<g<h<i<j<k<l<m<n<o<p<q<r<s<t<u<v<w<x<y<z *alphabetic*<sub="" *standard="" 0<1<2<3<4<5<6<7<8<9="" 9<a="" a<b<c<d<e<f<g<h<i<j<k<l<m<n<o<p<q<r<s<t<u<v<w<x<y<z="" characters*,="" either="" for="" implies="" or="" that,="" this="" z<0="">1 ordering holds within each *case* (*uppercase* and *lowercase*), and that the *numeric characters* as a group are not interleaved with *alphabetic characters*. However, the ordering or possible interleaving of *uppercase characters* and *lowercase characters* is *implementation-defined*. 
 
 
 
@@ -62,3 +42,4 @@ This implies that, for *standard characters*, *alphabetic*<sub>1</sub> ordering 
 
 
 
+</b<c<d<e<f<g<h<i<j<k<l<m<n<o<p<q<r<s<t<u<v<w<x<y<z>

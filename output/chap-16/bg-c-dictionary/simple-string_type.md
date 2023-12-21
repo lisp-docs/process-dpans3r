@@ -1,5 +1,5 @@
 ---
-title: "*simple-string*"
+title: "simple-string"
 ---
 
 # simple-string

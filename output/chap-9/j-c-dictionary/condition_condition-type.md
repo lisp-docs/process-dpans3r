@@ -1,5 +1,5 @@
 ---
-title: "*condition*"
+title: "condition"
 ---
 
 # condition

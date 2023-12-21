@@ -1,5 +1,5 @@
 ---
-title: "*vectorp*"
+title: "vectorp"
 ---
 
 # vectorp

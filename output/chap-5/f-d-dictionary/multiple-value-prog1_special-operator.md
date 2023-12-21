@@ -1,5 +1,5 @@
 ---
-title: "*multiple-value-prog1*"
+title: "multiple-value-prog1"
 ---
 
 # multiple-value-prog1

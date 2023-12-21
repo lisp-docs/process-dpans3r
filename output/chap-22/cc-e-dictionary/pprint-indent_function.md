@@ -1,5 +1,5 @@
 ---
-title: "*pprint-indent*"
+title: "pprint-indent"
 ---
 
 # pprint-indent

@@ -337,12 +337,12 @@ A file can be deleted, renamed, or destructively modified by **open**.
 For information about opening relative pathnames, see Section 19.2.3 (Merging Pathnames). **Examples:**
 ```lisp
 
-(open *filespec* :direction :probe) *→* #\<Closed Probe File Stream...\> 
+(open *filespec* :direction :probe) *→* #<Closed Probe File Stream...> 
 (setq q (merge-pathnames (user-homedir-pathname) "test")) 
 *→* #<PATHNAME :HOST NIL :DEVICE *device-name* :DIRECTORY *directory-name* 
 :NAME "test" :TYPE NIL :VERSION :NEWEST> 
 (open *filespec* :if-does-not-exist :create) *→* #<Input File Stream...> 
-(setq s (open *filespec* :direction :probe)) *→* #\<Closed Probe File Stream...\> 
+(setq s (open *filespec* :direction :probe)) *→* #<Closed Probe File Stream...> 
 (truename s) *→* #<PATHNAME :HOST NIL :DEVICE *device-name* :DIRECTORY 
 *directory-name* :NAME *filespec* :TYPE *extension* :VERSION 1> 
 (open s :direction :output :if-exists nil) *→* NIL 
@@ -428,4 +428,4 @@ When *element-type* is a *subtype* of *integer* , **read-byte** and/or **write-b
 
 
 
-When *element-type* is :default, the *type* can be determined by using 
+When *element-type* is :default, the *type* can be determined by using **stream-element-type**. 

@@ -1,5 +1,5 @@
 ---
-title: "*tagbody*"
+title: "tagbody"
 ---
 
 # tagbody

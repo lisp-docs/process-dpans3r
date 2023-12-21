@@ -1,5 +1,5 @@
 ---
-title: "*evenp, oddp*"
+title: "evenp, oddp"
 ---
 
 # evenp, oddp

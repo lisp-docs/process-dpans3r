@@ -1,5 +1,5 @@
 ---
-title: "*print-lines*"
+title: "print-lines"
 ---
 
 # \*print-lines\*

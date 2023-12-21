@@ -1,5 +1,5 @@
 ---
-title: "*initialize-instance*"
+title: "initialize-instance"
 ---
 
 # initialize-instance

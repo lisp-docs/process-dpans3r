@@ -1,5 +1,5 @@
 ---
-title: "*defmethod*"
+title: "defmethod"
 ---
 
 # defmethod

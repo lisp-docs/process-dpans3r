@@ -1,5 +1,5 @@
 ---
-title: "*terminal-io*"
+title: "terminal-io"
 ---
 
 # \*terminal-io\*

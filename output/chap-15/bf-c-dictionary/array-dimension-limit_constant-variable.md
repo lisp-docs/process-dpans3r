@@ -1,5 +1,5 @@
 ---
-title: "*array-dimension-limit*"
+title: "array-dimension-limit"
 ---
 
 # array-dimension-limit

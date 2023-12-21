@@ -1,5 +1,5 @@
 ---
-title: "*compile-file-pathname*"
+title: "compile-file-pathname"
 ---
 
 # compile-file-pathname

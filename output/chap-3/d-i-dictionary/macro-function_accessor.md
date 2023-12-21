@@ -1,5 +1,5 @@
 ---
-title: "*macro-function*"
+title: "macro-function"
 ---
 
 # macro-function

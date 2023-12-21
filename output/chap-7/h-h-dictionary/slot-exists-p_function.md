@@ -1,5 +1,5 @@
 ---
-title: "*slot-exists-p*"
+title: "slot-exists-p"
 ---
 
 # slot-exists-p

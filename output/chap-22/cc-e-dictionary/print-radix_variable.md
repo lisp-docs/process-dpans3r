@@ -1,5 +1,5 @@
 ---
-title: "*print-radix*"
+title: "print-radix"
 ---
 
 # \*print-radix\*

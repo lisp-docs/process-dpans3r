@@ -1,5 +1,5 @@
 ---
-title: "*get-output-stream-string*"
+title: "get-output-stream-string"
 ---
 
 # get-output-stream-string

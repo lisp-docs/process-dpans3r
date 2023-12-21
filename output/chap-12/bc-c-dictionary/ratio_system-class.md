@@ -1,5 +1,5 @@
 ---
-title: "*ratio*"
+title: "ratio"
 ---
 
 # ratio

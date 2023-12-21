@@ -1,5 +1,5 @@
 ---
-title: "*tree-equal*"
+title: "tree-equal"
 ---
 
 # tree-equal

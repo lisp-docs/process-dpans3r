@@ -1,5 +1,5 @@
 ---
-title: "*read-char-no-hang*"
+title: "read-char-no-hang"
 ---
 
 # read-char-no-hang

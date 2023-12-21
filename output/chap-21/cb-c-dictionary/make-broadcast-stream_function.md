@@ -1,5 +1,5 @@
 ---
-title: "*make-broadcast-stream*"
+title: "make-broadcast-stream"
 ---
 
 # make-broadcast-stream

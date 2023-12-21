@@ -1,5 +1,5 @@
 ---
-title: "*multiple-value-bind*"
+title: "multiple-value-bind"
 ---
 
 # multiple-value-bind

@@ -1,5 +1,5 @@
 ---
-title: "*restart-name*"
+title: "restart-name"
 ---
 
 # restart-name

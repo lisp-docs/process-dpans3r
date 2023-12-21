@@ -1,5 +1,5 @@
 ---
-title: "*control-error*"
+title: "control-error"
 ---
 
 # control-error

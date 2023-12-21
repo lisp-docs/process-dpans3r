@@ -1,5 +1,5 @@
 ---
-title: "*with-compilation-unit*"
+title: "with-compilation-unit"
 ---
 
 # with-compilation-unit

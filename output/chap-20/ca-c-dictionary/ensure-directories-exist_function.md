@@ -1,5 +1,5 @@
 ---
-title: "*ensure-directories-exist*"
+title: "ensure-directories-exist"
 ---
 
 # ensure-directories-exist

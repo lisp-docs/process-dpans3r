@@ -1,5 +1,5 @@
 ---
-title: "*bignum*"
+title: "bignum"
 ---
 
 # bignum

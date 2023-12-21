@@ -1,5 +1,5 @@
 ---
-title: "*let, let*"
+title: "let, let"
 ---
 
 # let, let

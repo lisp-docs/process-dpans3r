@@ -1,5 +1,5 @@
 ---
-title: "*assoc, assoc-if, assoc-if-not*"
+title: "assoc, assoc-if, assoc-if-not"
 ---
 
 # assoc, assoc-if, assoc-if-not

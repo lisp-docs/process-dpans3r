@@ -1,5 +1,5 @@
 ---
-title: "*psetq*"
+title: "psetq"
 ---
 
 # psetq

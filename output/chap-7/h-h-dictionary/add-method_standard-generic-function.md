@@ -1,5 +1,5 @@
 ---
-title: "*add-method*"
+title: "add-method"
 ---
 
 # add-method

@@ -1,5 +1,5 @@
 ---
-title: "*concatenated-stream*"
+title: "concatenated-stream"
 ---
 
 # concatenated-stream

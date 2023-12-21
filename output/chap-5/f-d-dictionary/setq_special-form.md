@@ -1,5 +1,5 @@
 ---
-title: "*setq*"
+title: "setq"
 ---
 
 # setq

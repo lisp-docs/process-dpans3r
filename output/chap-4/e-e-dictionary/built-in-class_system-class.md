@@ -1,5 +1,5 @@
 ---
-title: "*built-in-class*"
+title: "built-in-class"
 ---
 
 # built-in-class

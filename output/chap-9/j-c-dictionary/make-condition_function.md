@@ -1,5 +1,5 @@
 ---
-title: "*make-condition*"
+title: "make-condition"
 ---
 
 # make-condition

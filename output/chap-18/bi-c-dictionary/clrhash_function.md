@@ -1,5 +1,5 @@
 ---
-title: "*clrhash*"
+title: "clrhash"
 ---
 
 # clrhash

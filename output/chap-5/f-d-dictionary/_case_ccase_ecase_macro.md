@@ -134,7 +134,7 @@ Note that in contrast with **ccase**, the caller of **ecase** may rely on the fa
 ```lisp
 
 (dolist (k ’(1 2 3 :four #\v () t ’other)) 
-  (format t "&#126;S " 
+  (format t "~S " 
 	  (case k ((1 2) ’clause1) 
 		(3 ’clause2) 
 		(nil ’no-keys-so-never-seen) 

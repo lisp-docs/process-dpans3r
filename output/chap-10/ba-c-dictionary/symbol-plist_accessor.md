@@ -1,5 +1,5 @@
 ---
-title: "*symbol-plist*"
+title: "symbol-plist"
 ---
 
 # symbol-plist

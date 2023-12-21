@@ -1,5 +1,5 @@
 ---
-title: "*define-modify-macro*"
+title: "define-modify-macro"
 ---
 
 # define-modify-macro

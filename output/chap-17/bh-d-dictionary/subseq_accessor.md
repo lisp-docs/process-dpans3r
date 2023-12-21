@@ -1,5 +1,5 @@
 ---
-title: "*subseq*"
+title: "subseq"
 ---
 
 # subseq

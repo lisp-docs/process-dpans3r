@@ -1,5 +1,5 @@
 ---
-title: "*ensure-generic-function*"
+title: "ensure-generic-function"
 ---
 
 # ensure-generic-function

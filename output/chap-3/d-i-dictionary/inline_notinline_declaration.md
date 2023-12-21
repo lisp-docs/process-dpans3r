@@ -1,5 +1,5 @@
 ---
-title: "*inline, notinline*"
+title: "inline, notinline"
 ---
 
 # inline, notinline

@@ -1,5 +1,5 @@
 ---
-title: "*characterp*"
+title: "characterp"
 ---
 
 # characterp

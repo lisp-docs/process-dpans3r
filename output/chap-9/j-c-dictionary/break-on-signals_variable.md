@@ -1,5 +1,5 @@
 ---
-title: "*break-on-signals*"
+title: "break-on-signals"
 ---
 
 # \*break-on-signals\*

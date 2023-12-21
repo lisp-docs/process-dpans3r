@@ -1,5 +1,5 @@
 ---
-title: "*function-lambda-expression*"
+title: "function-lambda-expression"
 ---
 
 # function-lambda-expression

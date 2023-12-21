@@ -1,5 +1,5 @@
 ---
-title: "*handler-case*"
+title: "handler-case"
 ---
 
 # handler-case

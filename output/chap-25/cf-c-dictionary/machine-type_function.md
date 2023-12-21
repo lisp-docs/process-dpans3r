@@ -1,5 +1,5 @@
 ---
-title: "*machine-type*"
+title: "machine-type"
 ---
 
 # machine-type

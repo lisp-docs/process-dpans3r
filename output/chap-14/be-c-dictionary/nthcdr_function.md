@@ -1,5 +1,5 @@
 ---
-title: "*nthcdr*"
+title: "nthcdr"
 ---
 
 # nthcdr

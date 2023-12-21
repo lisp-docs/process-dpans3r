@@ -1,5 +1,5 @@
 ---
-title: "*slot-boundp*"
+title: "slot-boundp"
 ---
 
 # slot-boundp

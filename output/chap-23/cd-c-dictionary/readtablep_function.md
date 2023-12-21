@@ -1,5 +1,5 @@
 ---
-title: "*readtablep*"
+title: "readtablep"
 ---
 
 # readtablep

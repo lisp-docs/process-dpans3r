@@ -1,5 +1,5 @@
 ---
-title: "*compute-restarts*"
+title: "compute-restarts"
 ---
 
 # compute-restarts

@@ -30,30 +30,16 @@ Returns the *character object* whose *name* is *name* (as determined by **string
 
 
 
-**Examples:** 
-
-
+**Examples:**
+```lisp
 
 (name-char ’space) *→* #\Space 
-
-
-
 (name-char "space") *→* #\Space 
-
-
-
 (name-char "Space") *→* #\Space 
-
-
-
 (let ((x (char-name #\a))) 
+  (or (not x) (eql (name-char x) #\a))) *→ true* 
 
-
-
-(or (not x) (eql (name-char x) #\a))) *→ true* 
-
-
-
+```
 **Exceptional Situations:** 
 
 

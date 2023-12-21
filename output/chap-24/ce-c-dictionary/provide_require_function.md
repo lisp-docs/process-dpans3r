@@ -1,5 +1,5 @@
 ---
-title: "*provide, require*"
+title: "provide, require"
 ---
 
 # provide, require

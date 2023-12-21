@@ -1,5 +1,5 @@
 ---
-title: "*array*"
+title: "array"
 ---
 
 # array

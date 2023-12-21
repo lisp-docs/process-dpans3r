@@ -1,5 +1,5 @@
 ---
-title: "*machine-instance*"
+title: "machine-instance"
 ---
 
 # machine-instance

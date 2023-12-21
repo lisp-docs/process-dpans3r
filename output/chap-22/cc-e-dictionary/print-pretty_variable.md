@@ -1,5 +1,5 @@
 ---
-title: "*print-pretty*"
+title: "print-pretty"
 ---
 
 # \*print-pretty\*

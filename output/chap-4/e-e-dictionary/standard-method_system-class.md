@@ -1,5 +1,5 @@
 ---
-title: "*standard-method*"
+title: "standard-method"
 ---
 
 # standard-method

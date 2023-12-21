@@ -1,5 +1,5 @@
 ---
-title: "*catch*"
+title: "catch"
 ---
 
 # catch

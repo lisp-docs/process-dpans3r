@@ -1,1 +1,0 @@
-**defstruct** are *instances* of the *class* **structure-class**. 

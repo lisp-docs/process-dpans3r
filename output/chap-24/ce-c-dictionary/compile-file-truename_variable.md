@@ -1,5 +1,5 @@
 ---
-title: "*compile-file-truename*"
+title: "compile-file-truename"
 ---
 
 # \*compile-file-truename\*

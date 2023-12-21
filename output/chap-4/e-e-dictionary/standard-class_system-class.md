@@ -1,5 +1,5 @@
 ---
-title: "*standard-class*"
+title: "standard-class"
 ---
 
 # standard-class

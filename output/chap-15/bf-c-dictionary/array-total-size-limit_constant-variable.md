@@ -1,5 +1,5 @@
 ---
-title: "*array-total-size-limit*"
+title: "array-total-size-limit"
 ---
 
 # array-total-size-limit

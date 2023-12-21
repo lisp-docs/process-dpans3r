@@ -1,5 +1,5 @@
 ---
-title: "*listp*"
+title: "listp"
 ---
 
 # listp

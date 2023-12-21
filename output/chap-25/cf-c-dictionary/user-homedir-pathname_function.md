@@ -1,5 +1,5 @@
 ---
-title: "*user-homedir-pathname*"
+title: "user-homedir-pathname"
 ---
 
 # user-homedir-pathname

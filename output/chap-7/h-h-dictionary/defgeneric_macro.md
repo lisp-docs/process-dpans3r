@@ -1,5 +1,5 @@
 ---
-title: "*defgeneric*"
+title: "defgeneric"
 ---
 
 # defgeneric

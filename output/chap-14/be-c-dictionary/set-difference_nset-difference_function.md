@@ -1,5 +1,5 @@
 ---
-title: "*set-difference, nset-difference*"
+title: "set-difference, nset-difference"
 ---
 
 # set-difference, nset-difference

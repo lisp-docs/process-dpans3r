@@ -1,5 +1,5 @@
 ---
-title: "*print-array*"
+title: "print-array"
 ---
 
 # \*print-array\*

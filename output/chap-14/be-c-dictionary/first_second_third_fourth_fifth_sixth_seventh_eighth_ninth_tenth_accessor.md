@@ -1,5 +1,5 @@
 ---
-title: "*first, second, third, fourth, fifth, sixth, seventh, eighth, ninth, tenth*"
+title: "first, second, third, fourth, fifth, sixth, seventh, eighth, ninth, tenth"
 ---
 
 # first, second, third, fourth, fifth, sixth, seventh, eighth, ninth, tenth

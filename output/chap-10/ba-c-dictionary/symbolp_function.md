@@ -1,5 +1,5 @@
 ---
-title: "*symbolp*"
+title: "symbolp"
 ---
 
 # symbolp

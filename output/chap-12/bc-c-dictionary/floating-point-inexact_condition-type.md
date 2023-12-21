@@ -1,5 +1,5 @@
 ---
-title: "*floating-point-inexact*"
+title: "floating-point-inexact"
 ---
 
 # floating-point-inexact

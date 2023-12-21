@@ -1,5 +1,5 @@
 ---
-title: "*cell-error-name*"
+title: "cell-error-name"
 ---
 
 # cell-error-name

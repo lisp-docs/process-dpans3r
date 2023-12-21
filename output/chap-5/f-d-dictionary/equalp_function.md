@@ -1,5 +1,5 @@
 ---
-title: "*equalp*"
+title: "equalp"
 ---
 
 # equalp

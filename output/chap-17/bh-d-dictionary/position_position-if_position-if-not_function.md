@@ -1,5 +1,5 @@
 ---
-title: "*position, position-if, position-if-not*"
+title: "position, position-if, position-if-not"
 ---
 
 # position, position-if, position-if-not

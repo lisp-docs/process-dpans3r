@@ -1,5 +1,5 @@
 ---
-title: "*step*"
+title: "step"
 ---
 
 # step

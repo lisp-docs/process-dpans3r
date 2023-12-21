@@ -1,5 +1,5 @@
 ---
-title: "*remove, remove-if, remove-if-not, delete, delete-if, delete-if-not*"
+title: "remove, remove-if, remove-if-not, delete, delete-if, delete-if-not"
 ---
 
 # remove, remove-if, remove-if-not, delete, delete-if, delete-if-not

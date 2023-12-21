@@ -1,5 +1,5 @@
 ---
-title: "*update-instance-for-redefined-class*"
+title: "update-instance-for-redefined-class"
 ---
 
 # update-instance-for-redefined-class

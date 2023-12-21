@@ -1,5 +1,5 @@
 ---
-title: "*pprint-fill, pprint-linear, pprint-tabular*"
+title: "pprint-fill, pprint-linear, pprint-tabular"
 ---
 
 # pprint-fill, pprint-linear, pprint-tabular

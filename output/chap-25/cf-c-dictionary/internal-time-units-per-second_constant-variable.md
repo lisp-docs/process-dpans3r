@@ -1,5 +1,5 @@
 ---
-title: "*internal-time-units-per-second*"
+title: "internal-time-units-per-second"
 ---
 
 # internal-time-units-per-second

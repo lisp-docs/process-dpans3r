@@ -1,5 +1,5 @@
 ---
-title: "*signum*"
+title: "signum"
 ---
 
 # signum

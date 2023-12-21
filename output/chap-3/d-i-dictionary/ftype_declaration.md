@@ -1,5 +1,5 @@
 ---
-title: "*ftype*"
+title: "ftype"
 ---
 
 # ftype

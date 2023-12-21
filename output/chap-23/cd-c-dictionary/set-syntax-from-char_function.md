@@ -1,5 +1,5 @@
 ---
-title: "*set-syntax-from-char*"
+title: "set-syntax-from-char"
 ---
 
 # set-syntax-from-char

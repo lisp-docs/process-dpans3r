@@ -1,5 +1,5 @@
 ---
-title: "*with-output-to-string*"
+title: "with-output-to-string"
 ---
 
 # with-output-to-string

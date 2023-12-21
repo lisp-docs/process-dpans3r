@@ -1,5 +1,5 @@
 ---
-title: "*acons*"
+title: "acons"
 ---
 
 # acons

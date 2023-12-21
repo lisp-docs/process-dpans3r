@@ -1,5 +1,5 @@
 ---
-title: "*upgraded-array-element-type*"
+title: "upgraded-array-element-type"
 ---
 
 # upgraded-array-element-type

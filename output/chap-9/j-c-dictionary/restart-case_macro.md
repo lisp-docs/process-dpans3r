@@ -1,5 +1,5 @@
 ---
-title: "*restart-case*"
+title: "restart-case"
 ---
 
 # restart-case

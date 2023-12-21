@@ -1,5 +1,5 @@
 ---
-title: "*make-random-state*"
+title: "make-random-state"
 ---
 
 # make-random-state

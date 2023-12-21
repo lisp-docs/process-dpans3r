@@ -1,5 +1,5 @@
 ---
-title: "*shared-initialize*"
+title: "shared-initialize"
 ---
 
 # shared-initialize

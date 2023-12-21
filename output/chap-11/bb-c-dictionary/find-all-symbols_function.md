@@ -1,5 +1,5 @@
 ---
-title: "*find-all-symbols*"
+title: "find-all-symbols"
 ---
 
 # find-all-symbols

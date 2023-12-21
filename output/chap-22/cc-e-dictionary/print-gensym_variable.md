@@ -1,5 +1,5 @@
 ---
-title: "*print-gensym*"
+title: "print-gensym"
 ---
 
 # \*print-gensym\*

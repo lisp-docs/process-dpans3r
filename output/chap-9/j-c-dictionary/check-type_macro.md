@@ -1,5 +1,5 @@
 ---
-title: "*check-type*"
+title: "check-type"
 ---
 
 # check-type

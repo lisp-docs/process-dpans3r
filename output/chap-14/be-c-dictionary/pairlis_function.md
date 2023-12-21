@@ -1,5 +1,5 @@
 ---
-title: "*pairlis*"
+title: "pairlis"
 ---
 
 # pairlis

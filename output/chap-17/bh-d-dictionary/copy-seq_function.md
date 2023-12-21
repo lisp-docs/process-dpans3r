@@ -1,5 +1,5 @@
 ---
-title: "*copy-seq*"
+title: "copy-seq"
 ---
 
 # copy-seq

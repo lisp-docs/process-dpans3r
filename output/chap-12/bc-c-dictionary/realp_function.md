@@ -1,5 +1,5 @@
 ---
-title: "*realp*"
+title: "realp"
 ---
 
 # realp

@@ -1,5 +1,5 @@
 ---
-title: "*apropos, apropos-list*"
+title: "apropos, apropos-list"
 ---
 
 # apropos, apropos-list

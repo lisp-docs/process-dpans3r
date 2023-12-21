@@ -220,38 +220,38 @@ Note that if an *array A* is displaced to another *array B*, and *B* is displace
 
 **Examples:**
 ```lisp
-
+ 
 (adjustable-array-p 
- (setq ada (adjust-array 
-	    (make-array ’(2 3) 
-			 :adjustable t 
-			 :initial-contents ’((a b c) (1 2 3))) 
-	    ’(4 6)))) *→* T 
+(setq ada (adjust-array 
+(make-array ’(2 3) 
+:adjustable t 
+:initial-contents ’((a b c) (1 2 3))) 
+’(4 6)))) *→* T 
 (array-dimensions ada) *→* (4 6) 
 (aref ada 1 1) *→* 2 
 (setq beta (make-array ’(2 3) :adjustable t)) 
 *→* #2A((NIL NIL NIL) (NIL NIL NIL)) 
 (adjust-array beta ’(4 6) :displaced-to ada) 
 *→* #2A((A B C NIL NIL NIL) 
-	(1 2 3 NIL NIL NIL) 
-	(NIL NIL NIL NIL NIL NIL) 
-	(NIL NIL NIL NIL NIL NIL)) 
+(1 2 3 NIL NIL NIL) 
+(NIL NIL NIL NIL NIL NIL) 
+(NIL NIL NIL NIL NIL NIL)) 
 
-
-
+ 
+ 
 (array-dimensions beta) *→* (4 6) 
 (aref beta 1 1) *→* 2 
 Suppose that the 4-by-4 array in m looks like this: 
 #2A(( alpha beta gamma delta ) 
-    ( epsilon zeta eta theta ) 
-    ( iota kappa lambda mu ) 
-    ( nu xi omicron pi )) 
+( epsilon zeta eta theta ) 
+( iota kappa lambda mu ) 
+( nu xi omicron pi )) 
 Then the result of 
 (adjust-array m ’(3 5) :initial-element ’baz) 
 is a 3-by-5 array with contents 
 #2A(( alpha beta gamma delta baz ) 
-    ( epsilon zeta eta theta baz ) 
-    ( iota kappa lambda mu baz )) 
+( epsilon zeta eta theta baz ) 
+( iota kappa lambda mu baz )) 
 
 ```
 **Exceptional Situations:** 
@@ -263,6 +263,68 @@ An error of *type* **error** is signaled if *fill-pointer* is supplied and *non-
 
 
 **See Also:** 
+
+
+
+**adjustable-array-p**, **make-array**, **array-dimension-limit**, **array-total-size-limit**, **array adjustable-array-p** *Function* 
+
+
+
+**Syntax:** 
+
+
+
+**adjustable-array-p** *array → generalized-boolean* 
+
+
+
+**Arguments and Values:** 
+
+
+
+*array*—an *array*. 
+
+
+
+*generalized-boolean*—a *generalized boolean*. 
+
+
+
+**Description:** 
+
+
+
+Returns true if and only if **adjust-array** could return a *value* which is *identical* to *array* when given that *array* as its first *argument*. 
+
+
+
+**Examples:**
+```lisp
+
+(adjustable-array-p 
+ (make-array 5 
+	     :element-type ’character 
+
+	     
+	     
+	     :adjustable t 
+	     :fill-pointer 3)) *→ true* 
+(adjustable-array-p (make-array 4)) *→ implementation-dependent* 
+
+```
+**Exceptional Situations:** 
+
+
+
+Should signal an error of *type* **type-error** if its argument is not an *array*. 
+
+
+
+**See Also:** 
+
+
+
+**adjust-array**, **make-array** 
 
 
 

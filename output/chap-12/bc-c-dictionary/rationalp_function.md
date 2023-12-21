@@ -1,5 +1,5 @@
 ---
-title: "*rationalp*"
+title: "rationalp"
 ---
 
 # rationalp

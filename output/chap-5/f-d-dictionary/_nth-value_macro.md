@@ -234,7 +234,7 @@ Think of this function as being like a zipper."
      
      
      (cerror "Will self-pair extraneous items" 
-	     "Mismatch - gleep! &#126;S" y) 
+	     "Mismatch - gleep! ~S" y) 
      (setq z y) 
      (go rejoin))) *!* KING-OF-CONFUSION 
 This can be accomplished more perspicuously as follows: 
@@ -247,7 +247,7 @@ Think of this function as being like a zipper."
       ((null y) x) 
     (when (null z) 
       (cerror "Will self-pair extraneous items" 
-	      "Mismatch - gleep! &#126;S" y) 
+	      "Mismatch - gleep! ~S" y) 
       (setq z y)))) *!* PRINCE-OF-CLARITY 
 
 ```

@@ -1,5 +1,5 @@
 ---
-title: "*software-type, software-version*"
+title: "software-type, software-version"
 ---
 
 # software-type, software-version

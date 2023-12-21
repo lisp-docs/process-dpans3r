@@ -1,5 +1,5 @@
 ---
-title: "*digit-char*"
+title: "digit-char"
 ---
 
 # digit-char

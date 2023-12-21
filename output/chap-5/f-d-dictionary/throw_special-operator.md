@@ -1,5 +1,5 @@
 ---
-title: "*throw*"
+title: "throw"
 ---
 
 # throw

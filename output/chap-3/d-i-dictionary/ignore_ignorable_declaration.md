@@ -1,5 +1,5 @@
 ---
-title: "*ignore, ignorable*"
+title: "ignore, ignorable"
 ---
 
 # ignore, ignorable

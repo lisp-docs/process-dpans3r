@@ -1,5 +1,5 @@
 ---
-title: "*method-qualifiers*"
+title: "method-qualifiers"
 ---
 
 # method-qualifiers

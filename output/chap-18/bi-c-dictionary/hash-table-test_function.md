@@ -1,5 +1,5 @@
 ---
-title: "*hash-table-test*"
+title: "hash-table-test"
 ---
 
 # hash-table-test

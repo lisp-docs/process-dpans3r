@@ -1,5 +1,5 @@
 ---
-title: "*multiple-value-call*"
+title: "multiple-value-call"
 ---
 
 # multiple-value-call

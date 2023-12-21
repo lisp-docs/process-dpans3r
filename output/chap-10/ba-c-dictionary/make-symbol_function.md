@@ -1,5 +1,5 @@
 ---
-title: "*make-symbol*"
+title: "make-symbol"
 ---
 
 # make-symbol

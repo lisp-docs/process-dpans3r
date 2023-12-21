@@ -1,5 +1,5 @@
 ---
-title: "*method-combination-error*"
+title: "method-combination-error"
 ---
 
 # method-combination-error

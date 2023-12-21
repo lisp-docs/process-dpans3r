@@ -1,5 +1,5 @@
 ---
-title: "*read-from-string*"
+title: "read-from-string"
 ---
 
 # read-from-string

@@ -1,5 +1,5 @@
 ---
-title: "*copy-tree*"
+title: "copy-tree"
 ---
 
 # copy-tree

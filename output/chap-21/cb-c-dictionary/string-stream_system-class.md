@@ -1,5 +1,5 @@
 ---
-title: "*string-stream*"
+title: "string-stream"
 ---
 
 # string-stream

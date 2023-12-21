@@ -1,5 +1,5 @@
 ---
-title: "*digit-char-p*"
+title: "digit-char-p"
 ---
 
 # digit-char-p

@@ -1,5 +1,5 @@
 ---
-title: "*sin, cos, tan*"
+title: "sin, cos, tan"
 ---
 
 # sin, cos, tan

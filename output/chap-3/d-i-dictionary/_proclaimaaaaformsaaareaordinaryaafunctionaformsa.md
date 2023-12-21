@@ -1,1 +1,0 @@
-**proclaim** *forms* are ordinary *function forms*, *macro forms* can expand into them. 

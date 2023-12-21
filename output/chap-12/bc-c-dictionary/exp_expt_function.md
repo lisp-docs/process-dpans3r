@@ -1,5 +1,5 @@
 ---
-title: "*exp, expt*"
+title: "exp, expt"
 ---
 
 # exp, expt

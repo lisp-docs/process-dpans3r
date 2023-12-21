@@ -1,5 +1,5 @@
 ---
-title: "*rename-package*"
+title: "rename-package"
 ---
 
 # rename-package

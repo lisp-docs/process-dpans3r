@@ -1,5 +1,5 @@
 ---
-title: "*truename*"
+title: "truename"
 ---
 
 # truename

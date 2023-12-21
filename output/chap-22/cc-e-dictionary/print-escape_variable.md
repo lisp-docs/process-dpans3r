@@ -1,5 +1,5 @@
 ---
-title: "*print-escape*"
+title: "print-escape"
 ---
 
 # \*print-escape\*

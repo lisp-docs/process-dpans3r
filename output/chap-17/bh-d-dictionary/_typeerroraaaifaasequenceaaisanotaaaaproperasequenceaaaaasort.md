@@ -1,1 +1,0 @@
-**type-error** if *sequence* is not a *proper sequence*. 

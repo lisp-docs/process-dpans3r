@@ -1,5 +1,5 @@
 ---
-title: "*defparameter, defvar*"
+title: "defparameter, defvar"
 ---
 
 # defparameter, defvar

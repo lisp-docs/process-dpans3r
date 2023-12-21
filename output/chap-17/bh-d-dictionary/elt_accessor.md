@@ -1,5 +1,5 @@
 ---
-title: "*elt*"
+title: "elt"
 ---
 
 # elt

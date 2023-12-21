@@ -1,5 +1,5 @@
 ---
-title: "*string*"
+title: "string"
 ---
 
 # string

@@ -1,5 +1,5 @@
 ---
-title: "*invalid-method-error*"
+title: "invalid-method-error"
 ---
 
 # invalid-method-error

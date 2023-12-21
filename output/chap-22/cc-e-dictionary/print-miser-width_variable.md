@@ -1,5 +1,5 @@
 ---
-title: "*print-miser-width*"
+title: "print-miser-width"
 ---
 
 # \*print-miser-width\*

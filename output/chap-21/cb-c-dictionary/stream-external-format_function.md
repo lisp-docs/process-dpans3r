@@ -1,5 +1,5 @@
 ---
-title: "*stream-external-format*"
+title: "stream-external-format"
 ---
 
 # stream-external-format

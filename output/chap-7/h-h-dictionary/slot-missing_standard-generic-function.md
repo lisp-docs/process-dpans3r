@@ -1,5 +1,5 @@
 ---
-title: "*slot-missing*"
+title: "slot-missing"
 ---
 
 # slot-missing

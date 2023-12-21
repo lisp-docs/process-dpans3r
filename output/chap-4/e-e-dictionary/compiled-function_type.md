@@ -1,5 +1,5 @@
 ---
-title: "*compiled-function*"
+title: "compiled-function"
 ---
 
 # compiled-function

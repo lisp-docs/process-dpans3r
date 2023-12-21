@@ -1,5 +1,5 @@
 ---
-title: "*symbol-function*"
+title: "symbol-function"
 ---
 
 # symbol-function

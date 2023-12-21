@@ -1,5 +1,5 @@
 ---
-title: "*define-method-combination*"
+title: "define-method-combination"
 ---
 
 # define-method-combination

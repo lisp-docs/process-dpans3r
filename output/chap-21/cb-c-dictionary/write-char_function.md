@@ -1,5 +1,5 @@
 ---
-title: "*write-char*"
+title: "write-char"
 ---
 
 # write-char

@@ -1,5 +1,5 @@
 ---
-title: "*simple-bit-vector-p*"
+title: "simple-bit-vector-p"
 ---
 
 # simple-bit-vector-p

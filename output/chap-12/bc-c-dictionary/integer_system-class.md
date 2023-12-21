@@ -1,5 +1,5 @@
 ---
-title: "*integer*"
+title: "integer"
 ---
 
 # integer

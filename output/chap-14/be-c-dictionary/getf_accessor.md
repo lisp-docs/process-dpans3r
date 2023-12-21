@@ -1,5 +1,5 @@
 ---
-title: "*getf*"
+title: "getf"
 ---
 
 # getf

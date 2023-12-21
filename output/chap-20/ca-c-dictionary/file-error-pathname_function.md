@@ -1,5 +1,5 @@
 ---
-title: "*file-error-pathname*"
+title: "file-error-pathname"
 ---
 
 # file-error-pathname

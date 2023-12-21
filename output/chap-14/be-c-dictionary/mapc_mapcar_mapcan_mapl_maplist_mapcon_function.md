@@ -1,5 +1,5 @@
 ---
-title: "*mapc, mapcar, mapcan, mapl, maplist, mapcon*"
+title: "mapc, mapcar, mapcan, mapl, maplist, mapcon"
 ---
 
 # mapc, mapcar, mapcan, mapl, maplist, mapcon

@@ -1,5 +1,5 @@
 ---
-title: "*file-length*"
+title: "file-length"
 ---
 
 # file-length

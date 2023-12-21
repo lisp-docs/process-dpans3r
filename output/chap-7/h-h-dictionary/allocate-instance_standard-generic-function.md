@@ -1,5 +1,5 @@
 ---
-title: "*allocate-instance*"
+title: "allocate-instance"
 ---
 
 # allocate-instance

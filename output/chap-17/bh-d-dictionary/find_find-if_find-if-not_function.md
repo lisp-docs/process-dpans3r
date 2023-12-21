@@ -1,5 +1,5 @@
 ---
-title: "*find, find-if, find-if-not*"
+title: "find, find-if, find-if-not"
 ---
 
 # find, find-if, find-if-not

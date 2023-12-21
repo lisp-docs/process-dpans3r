@@ -1,5 +1,5 @@
 ---
-title: "*abs*"
+title: "abs"
 ---
 
 # abs

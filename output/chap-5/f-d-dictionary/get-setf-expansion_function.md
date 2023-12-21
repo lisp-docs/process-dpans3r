@@ -1,5 +1,5 @@
 ---
-title: "*get-setf-expansion*"
+title: "get-setf-expansion"
 ---
 
 # get-setf-expansion

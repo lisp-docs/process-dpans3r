@@ -1,5 +1,5 @@
 ---
-title: "*readtable-case*"
+title: "readtable-case"
 ---
 
 # readtable-case

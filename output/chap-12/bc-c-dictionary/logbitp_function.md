@@ -1,5 +1,5 @@
 ---
-title: "*logbitp*"
+title: "logbitp"
 ---
 
 # logbitp

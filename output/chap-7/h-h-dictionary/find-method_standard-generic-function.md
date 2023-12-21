@@ -1,5 +1,5 @@
 ---
-title: "*find-method*"
+title: "find-method"
 ---
 
 # find-method

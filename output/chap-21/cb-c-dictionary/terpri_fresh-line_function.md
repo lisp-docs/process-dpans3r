@@ -1,5 +1,5 @@
 ---
-title: "*terpri, fresh-line*"
+title: "terpri, fresh-line"
 ---
 
 # terpri, fresh-line

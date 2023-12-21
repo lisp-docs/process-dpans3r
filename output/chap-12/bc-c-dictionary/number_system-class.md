@@ -1,5 +1,5 @@
 ---
-title: "*number*"
+title: "number"
 ---
 
 # number

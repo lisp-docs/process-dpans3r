@@ -1,5 +1,5 @@
 ---
-title: "*subst, subst-if, subst-if-not, nsubst, nsubst-if, nsubst-if-not*"
+title: "subst, subst-if, subst-if-not, nsubst, nsubst-if, nsubst-if-not"
 ---
 
 # subst, subst-if, subst-if-not, nsubst, nsubst-if, nsubst-if-not

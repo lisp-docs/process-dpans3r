@@ -58,38 +58,18 @@ Note that implementations should not use #*n*# notation when the *Lisp reader* w
 
 
 
-**Examples:** 
-
-
+**Examples:**
+```lisp
 
 (let ((a (list 1 2 3))) 
-
-
-
-(setf (cdddr a) a) 
-
-
-
-(let ((\*print-circle\* t)) 
-
-
-
-(write a) 
-
-
-
-:done)) 
-
-
-
+  (setf (cdddr a) a) 
+  (let ((\*print-circle\* t)) 
+    (write a) 
+    :done)) 
 ▷ #1=(1 2 3 . #1#) 
-
-
-
 *→* :DONE 
 
-
-
+```
 **See Also:** 
 
 

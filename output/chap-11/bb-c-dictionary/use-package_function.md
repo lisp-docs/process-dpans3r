@@ -1,5 +1,5 @@
 ---
-title: "*use-package*"
+title: "use-package"
 ---
 
 # use-package

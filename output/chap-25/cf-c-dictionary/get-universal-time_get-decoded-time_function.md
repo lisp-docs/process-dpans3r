@@ -1,5 +1,5 @@
 ---
-title: "*get-universal-time, get-decoded-time*"
+title: "get-universal-time, get-decoded-time"
 ---
 
 # get-universal-time, get-decoded-time

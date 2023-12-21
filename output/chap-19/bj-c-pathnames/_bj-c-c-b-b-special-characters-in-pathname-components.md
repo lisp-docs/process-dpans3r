@@ -14,11 +14,12 @@
 
 
 
-<i>→</i> #P"OZ:PS:<i><sup>∧</sup></i>V&lt;TEST<i><sup>∧</sup>V&gt;" 
+<i>→</i> #P"OZ:PS:<i><sup>∧</sup></i>V<test<i><sup>∧</sup>V&gt;" 
 
 
 
 <i><sup>not</sup> →</i> #P"OZ:PS:&lt;TEST&gt;" 
 
 
-</i>
+
+</test<i>

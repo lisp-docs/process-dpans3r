@@ -1,5 +1,5 @@
 ---
-title: "*logcount*"
+title: "logcount"
 ---
 
 # logcount

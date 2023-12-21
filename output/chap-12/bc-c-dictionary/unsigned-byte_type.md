@@ -1,5 +1,5 @@
 ---
-title: "*unsigned-byte*"
+title: "unsigned-byte"
 ---
 
 # unsigned-byte

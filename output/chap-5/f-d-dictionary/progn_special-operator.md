@@ -1,5 +1,5 @@
 ---
-title: "*progn*"
+title: "progn"
 ---
 
 # progn

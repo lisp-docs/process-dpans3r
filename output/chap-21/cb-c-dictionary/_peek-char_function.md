@@ -66,7 +66,7 @@ When *input-stream* is an *echo stream*, characters that are only peeked at are 
 ```lisp
 
 (with-input-from-string (input-stream " 1 2 3 4 5") 
-  (format t "&#126;S &#126;S &#126;S" 
+  (format t "~S ~S ~S" 
 	  (peek-char t input-stream) 
 
 	  
@@ -97,4 +97,4 @@ If *peek-type* is a *character* , an *end of file*<sub>2</sub> occurs, and *eof-
 
 
 
-If *recursive-p* is *true* and an *end of file*<sub>2</sub> occurs, an error of *type* 
+If *recursive-p* is *true* and an *end of file*<sub>2</sub> occurs, an error of *type* **end-of-file** is signaled. 

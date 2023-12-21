@@ -1,5 +1,5 @@
 ---
-title: "*trace, untrace*"
+title: "trace, untrace"
 ---
 
 # trace, untrace

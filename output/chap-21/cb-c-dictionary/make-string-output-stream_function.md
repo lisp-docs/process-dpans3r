@@ -1,5 +1,5 @@
 ---
-title: "*make-string-output-stream*"
+title: "make-string-output-stream"
 ---
 
 # make-string-output-stream

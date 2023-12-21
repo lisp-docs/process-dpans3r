@@ -1,5 +1,5 @@
 ---
-title: "*sequence*"
+title: "sequence"
 ---
 
 # sequence

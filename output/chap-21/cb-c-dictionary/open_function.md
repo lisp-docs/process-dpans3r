@@ -1,5 +1,5 @@
 ---
-title: "*open*"
+title: "open"
 ---
 
 # open

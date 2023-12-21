@@ -1,5 +1,5 @@
 ---
-title: "*class-of*"
+title: "class-of"
 ---
 
 # class-of

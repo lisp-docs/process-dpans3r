@@ -1,5 +1,5 @@
 ---
-title: "*make-package*"
+title: "make-package"
 ---
 
 # make-package

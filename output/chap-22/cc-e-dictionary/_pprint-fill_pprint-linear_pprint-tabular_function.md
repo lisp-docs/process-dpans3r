@@ -46,7 +46,7 @@
 
 
 
-The functions **pprint-fill**, **pprint-linear**, and **pprint-tabular** specify particular ways of *pretty printing* a *list* to *stream*. Each function prints parentheses around the output if and only if *colon-p* is *true*. Each function ignores its *at-sign-p* argument. (Both arguments are included even though only one is needed so that these functions can be used via ~/.../ and as **set-pprint-dispatch** functions, as well as directly.) Each function handles abbreviation and the detection of circularity and sharing correctly, and uses **write** to print *object* when it is a *non-list*. 
+The functions **pprint-fill**, **pprint-linear**, and **pprint-tabular** specify particular ways of *pretty printing* a *list* to *stream*. Each function prints parentheses around the output if and only if *colon-p* is *true*. Each function ignores its *at-sign-p* argument. (Both arguments are included even though only one is needed so that these functions can be used via &#126;/.../ and as **set-pprint-dispatch** functions, as well as directly.) Each function handles abbreviation and the detection of circularity and sharing correctly, and uses **write** to print *object* when it is a *non-list*. 
 
 
 
@@ -66,42 +66,19 @@ If *object* is a *list* and if the *value* of **\*print-pretty\*** is *false*, e
 
 
 
-**Examples:** 
-
-
+**Examples:**
+```lisp
 
 Evaluating the following with a line length of 25 produces the output shown. 
-
-
-
 (progn (princ "Roads ") 
 
-
-
-
-
-
-
- 
-
-
-
- 
-
-
-
-(pprint-tabular \*standard-output\* ’(elm main maple center) nil nil 8)) 
-
-
-
+       
+       
+       (pprint-tabular \*standard-output\* ’(elm main maple center) nil nil 8)) 
 Roads ELM MAIN 
-
-
-
 MAPLE CENTER 
 
-
-
+```
 **Side Effects:** 
 
 
@@ -170,7 +147,7 @@ The *function* **pprint-tabular** could be defined as follows:
 
 
 
-Note that it would have been inconvenient to specify this function using **format**, because of the need to pass its *tabsize* argument through to a ~:T format directive nested within an iteration over a list. 
+Note that it would have been inconvenient to specify this function using **format**, because of the need to pass its *tabsize* argument through to a &#126;:T format directive nested within an iteration over a list. 
 
 
 

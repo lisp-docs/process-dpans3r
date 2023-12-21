@@ -1,5 +1,5 @@
 ---
-title: "*bit-vector*"
+title: "bit-vector"
 ---
 
 # bit-vector

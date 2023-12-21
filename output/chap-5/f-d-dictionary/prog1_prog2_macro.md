@@ -1,5 +1,5 @@
 ---
-title: "*prog1, prog2*"
+title: "prog1, prog2"
 ---
 
 # prog1, prog2

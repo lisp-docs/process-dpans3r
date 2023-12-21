@@ -1,5 +1,5 @@
 ---
-title: "*hash-table-count*"
+title: "hash-table-count"
 ---
 
 # hash-table-count

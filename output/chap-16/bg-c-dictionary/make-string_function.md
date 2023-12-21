@@ -1,5 +1,5 @@
 ---
-title: "*make-string*"
+title: "make-string"
 ---
 
 # make-string

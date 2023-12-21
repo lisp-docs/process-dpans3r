@@ -1,5 +1,5 @@
 ---
-title: "*serious-condition*"
+title: "serious-condition"
 ---
 
 # serious-condition

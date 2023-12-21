@@ -1,5 +1,5 @@
 ---
-title: "*real*"
+title: "real"
 ---
 
 # real

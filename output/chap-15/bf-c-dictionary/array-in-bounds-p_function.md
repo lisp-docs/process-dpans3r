@@ -1,5 +1,5 @@
 ---
-title: "*array-in-bounds-p*"
+title: "array-in-bounds-p"
 ---
 
 # array-in-bounds-p

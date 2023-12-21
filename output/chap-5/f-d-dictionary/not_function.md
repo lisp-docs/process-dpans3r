@@ -1,5 +1,5 @@
 ---
-title: "*not*"
+title: "not"
 ---
 
 # not

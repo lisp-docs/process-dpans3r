@@ -1,5 +1,5 @@
 ---
-title: "*code-char*"
+title: "code-char"
 ---
 
 # code-char

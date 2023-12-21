@@ -1,5 +1,5 @@
 ---
-title: "*delete-package*"
+title: "delete-package"
 ---
 
 # delete-package

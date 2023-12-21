@@ -1,5 +1,5 @@
 ---
-title: "*make-hash-table*"
+title: "make-hash-table"
 ---
 
 # make-hash-table

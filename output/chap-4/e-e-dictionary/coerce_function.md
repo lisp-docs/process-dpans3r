@@ -1,5 +1,5 @@
 ---
-title: "*coerce*"
+title: "coerce"
 ---
 
 # coerce

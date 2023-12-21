@@ -1,5 +1,5 @@
 ---
-title: "*package*"
+title: "package"
 ---
 
 # \*package\*

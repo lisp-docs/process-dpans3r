@@ -1,5 +1,5 @@
 ---
-title: "*next-method-p*"
+title: "next-method-p"
 ---
 
 # next-method-p

@@ -1,5 +1,5 @@
 ---
-title: "*update-instance-for-different-class*"
+title: "update-instance-for-different-class"
 ---
 
 # update-instance-for-different-class

@@ -1,5 +1,5 @@
 ---
-title: "*rest*"
+title: "rest"
 ---
 
 # rest

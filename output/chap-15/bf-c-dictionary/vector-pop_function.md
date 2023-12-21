@@ -1,5 +1,5 @@
 ---
-title: "*vector-pop*"
+title: "vector-pop"
 ---
 
 # vector-pop

@@ -1,5 +1,5 @@
 ---
-title: "*ed*"
+title: "ed"
 ---
 
 # ed

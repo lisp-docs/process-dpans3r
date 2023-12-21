@@ -1,5 +1,5 @@
 ---
-title: "*make-synonym-stream*"
+title: "make-synonym-stream"
 ---
 
 # make-synonym-stream

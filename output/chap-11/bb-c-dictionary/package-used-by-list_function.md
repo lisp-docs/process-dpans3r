@@ -1,5 +1,5 @@
 ---
-title: "*package-used-by-list*"
+title: "package-used-by-list"
 ---
 
 # package-used-by-list

@@ -1,5 +1,5 @@
 ---
-title: "*machine-version*"
+title: "machine-version"
 ---
 
 # machine-version

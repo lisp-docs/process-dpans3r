@@ -1,5 +1,5 @@
 ---
-title: "*read-byte*"
+title: "read-byte"
 ---
 
 # read-byte

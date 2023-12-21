@@ -1,5 +1,5 @@
 ---
-title: "*intersection, nintersection*"
+title: "intersection, nintersection"
 ---
 
 # intersection, nintersection

@@ -1,5 +1,5 @@
 ---
-title: "*copy-pprint-dispatch*"
+title: "copy-pprint-dispatch"
 ---
 
 # copy-pprint-dispatch

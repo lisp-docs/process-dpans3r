@@ -1,5 +1,5 @@
 ---
-title: "*define-compiler-macro*"
+title: "define-compiler-macro"
 ---
 
 # define-compiler-macro

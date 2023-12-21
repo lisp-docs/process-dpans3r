@@ -1,5 +1,5 @@
 ---
-title: "*interactive-stream-p*"
+title: "interactive-stream-p"
 ---
 
 # interactive-stream-p

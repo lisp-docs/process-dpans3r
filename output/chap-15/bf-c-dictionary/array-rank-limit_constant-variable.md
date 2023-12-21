@@ -1,5 +1,5 @@
 ---
-title: "*array-rank-limit*"
+title: "array-rank-limit"
 ---
 
 # array-rank-limit

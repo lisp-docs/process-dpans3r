@@ -1,5 +1,5 @@
 ---
-title: "*member, member-if, member-if-not*"
+title: "member, member-if, member-if-not"
 ---
 
 # member, member-if, member-if-not

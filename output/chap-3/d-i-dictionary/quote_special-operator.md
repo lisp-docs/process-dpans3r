@@ -1,5 +1,5 @@
 ---
-title: "*quote*"
+title: "quote"
 ---
 
 # quote

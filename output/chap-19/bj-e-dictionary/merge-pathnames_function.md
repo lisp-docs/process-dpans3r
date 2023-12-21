@@ -1,5 +1,5 @@
 ---
-title: "*merge-pathnames*"
+title: "merge-pathnames"
 ---
 
 # merge-pathnames

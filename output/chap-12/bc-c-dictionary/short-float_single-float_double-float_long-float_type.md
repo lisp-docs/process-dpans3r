@@ -1,5 +1,5 @@
 ---
-title: "*short-float, single-float, double-float, long-float*"
+title: "short-float, single-float, double-float, long-float"
 ---
 
 # short-float, single-float, double-float, long-float

@@ -1,5 +1,5 @@
 ---
-title: "*echo-stream*"
+title: "echo-stream"
 ---
 
 # echo-stream

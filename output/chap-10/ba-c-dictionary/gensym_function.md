@@ -1,5 +1,5 @@
 ---
-title: "*gensym*"
+title: "gensym"
 ---
 
 # gensym

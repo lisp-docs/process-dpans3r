@@ -1,5 +1,5 @@
 ---
-title: "*package-shadowing-symbols*"
+title: "package-shadowing-symbols"
 ---
 
 # package-shadowing-symbols

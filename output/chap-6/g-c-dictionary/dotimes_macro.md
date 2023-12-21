@@ -1,5 +1,5 @@
 ---
-title: "*dotimes*"
+title: "dotimes"
 ---
 
 # dotimes

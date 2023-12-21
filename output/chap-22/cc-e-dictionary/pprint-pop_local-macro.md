@@ -1,5 +1,5 @@
 ---
-title: "*pprint-pop*"
+title: "pprint-pop"
 ---
 
 # pprint-pop

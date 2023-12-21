@@ -26,26 +26,15 @@ Controls whether the prefix “#:” is printed before *apparently uninterned sy
 
 
 
-**Examples:** 
-
-
+**Examples:**
+```lisp
 
 (let ((\*print-gensym\* nil)) 
-
-
-
-(print (gensym))) 
-
-
-
+  (print (gensym))) 
 ▷ G6040 
-
-
-
 *→* #:G6040 
 
-
-
+```
 **See Also:** 
 
 

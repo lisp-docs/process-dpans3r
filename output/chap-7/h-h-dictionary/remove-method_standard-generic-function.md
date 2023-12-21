@@ -1,5 +1,5 @@
 ---
-title: "*remove-method*"
+title: "remove-method"
 ---
 
 # remove-method

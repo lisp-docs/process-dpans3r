@@ -1,5 +1,5 @@
 ---
-title: "*floor, ffloor, ceiling, fceiling, truncate, ftruncate, round, fround*"
+title: "floor, ffloor, ceiling, fceiling, truncate, ftruncate, round, fround"
 ---
 
 # floor, ffloor, ceiling, fceiling, truncate, ftruncate, round, fround

@@ -1,5 +1,5 @@
 ---
-title: "*setf, psetf*"
+title: "setf, psetf"
 ---
 
 # setf, psetf

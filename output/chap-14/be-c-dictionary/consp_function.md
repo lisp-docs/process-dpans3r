@@ -1,5 +1,5 @@
 ---
-title: "*consp*"
+title: "consp"
 ---
 
 # consp

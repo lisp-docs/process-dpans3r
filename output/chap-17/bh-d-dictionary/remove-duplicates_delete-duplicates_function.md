@@ -1,5 +1,5 @@
 ---
-title: "*remove-duplicates, delete-duplicates*"
+title: "remove-duplicates, delete-duplicates"
 ---
 
 # remove-duplicates, delete-duplicates

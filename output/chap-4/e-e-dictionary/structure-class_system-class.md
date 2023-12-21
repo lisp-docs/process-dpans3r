@@ -1,5 +1,5 @@
 ---
-title: "*structure-class*"
+title: "structure-class"
 ---
 
 # structure-class

@@ -1,5 +1,5 @@
 ---
-title: "*logical-pathname*"
+title: "logical-pathname"
 ---
 
 # logical-pathname

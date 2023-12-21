@@ -1,5 +1,5 @@
 ---
-title: "*do, do*"
+title: "do, do"
 ---
 
 # do, do

@@ -1,5 +1,5 @@
 ---
-title: "*namestring, file-namestring, directory-namestring, host-namestring, enough-namestring*"
+title: "namestring, file-namestring, directory-namestring, host-namestring, enough-namestring"
 ---
 
 # namestring, file-namestring, directory-namestring, host-namestring, enough-namestring

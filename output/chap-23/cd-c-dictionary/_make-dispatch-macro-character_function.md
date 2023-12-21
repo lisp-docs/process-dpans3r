@@ -57,10 +57,10 @@ If *non-terminating-p* is *true*, the *dispatching macro character* is made a *n
 **Examples:**
 ```lisp
 
-(get-macro-character #\\{) *→* NIL, *false* 
-(make-dispatch-macro-character #\\{) *→* T 
-(not (get-macro-character #\\{)) *→ false* 
-The *readtable* is altered. 
+(get-macro-character #\\&#123;) *→* NIL, *false* 
+		     (make-dispatch-macro-character #\\&#123;) *→* T 
+						    (not (get-macro-character #\\&#123;)) *→ false* 
+									      The *readtable* is altered. 
 
 ```
 **See Also:** 

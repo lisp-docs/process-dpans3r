@@ -1,5 +1,5 @@
 ---
-title: "*no-applicable-method*"
+title: "no-applicable-method"
 ---
 
 # no-applicable-method

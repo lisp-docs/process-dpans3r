@@ -1,5 +1,5 @@
 ---
-title: "*remhash*"
+title: "remhash"
 ---
 
 # remhash

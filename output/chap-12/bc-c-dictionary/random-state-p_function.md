@@ -1,5 +1,5 @@
 ---
-title: "*random-state-p*"
+title: "random-state-p"
 ---
 
 # random-state-p

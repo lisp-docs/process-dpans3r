@@ -1,5 +1,5 @@
 ---
-title: "*get-internal-run-time*"
+title: "get-internal-run-time"
 ---
 
 # get-internal-run-time

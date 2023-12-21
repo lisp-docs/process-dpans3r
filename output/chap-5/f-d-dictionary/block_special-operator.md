@@ -1,5 +1,5 @@
 ---
-title: "*block*"
+title: "block"
 ---
 
 # block

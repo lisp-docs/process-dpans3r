@@ -1,5 +1,5 @@
 ---
-title: "*define-symbol-macro*"
+title: "define-symbol-macro"
 ---
 
 # define-symbol-macro

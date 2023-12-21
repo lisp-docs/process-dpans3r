@@ -1,5 +1,5 @@
 ---
-title: "*reverse, nreverse*"
+title: "reverse, nreverse"
 ---
 
 # reverse, nreverse

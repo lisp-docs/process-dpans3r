@@ -1,5 +1,5 @@
 ---
-title: "*asin, acos, atan*"
+title: "asin, acos, atan"
 ---
 
 # asin, acos, atan

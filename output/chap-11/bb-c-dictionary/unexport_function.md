@@ -1,5 +1,5 @@
 ---
-title: "*unexport*"
+title: "unexport"
 ---
 
 # unexport

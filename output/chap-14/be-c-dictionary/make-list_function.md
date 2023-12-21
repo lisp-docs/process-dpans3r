@@ -1,5 +1,5 @@
 ---
-title: "*make-list*"
+title: "make-list"
 ---
 
 # make-list

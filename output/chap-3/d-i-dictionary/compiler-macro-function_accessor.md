@@ -1,5 +1,5 @@
 ---
-title: "*compiler-macro-function*"
+title: "compiler-macro-function"
 ---
 
 # compiler-macro-function

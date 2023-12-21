@@ -1,5 +1,5 @@
 ---
-title: "*reinitialize-instance*"
+title: "reinitialize-instance"
 ---
 
 # reinitialize-instance

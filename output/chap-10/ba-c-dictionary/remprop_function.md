@@ -1,5 +1,5 @@
 ---
-title: "*remprop*"
+title: "remprop"
 ---
 
 # remprop

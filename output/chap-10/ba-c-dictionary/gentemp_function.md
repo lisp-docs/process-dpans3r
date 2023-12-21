@@ -1,5 +1,5 @@
 ---
-title: "*gentemp*"
+title: "gentemp"
 ---
 
 # gentemp

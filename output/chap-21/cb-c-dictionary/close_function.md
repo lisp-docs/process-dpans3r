@@ -1,5 +1,5 @@
 ---
-title: "*close*"
+title: "close"
 ---
 
 # close

@@ -1,5 +1,5 @@
 ---
-title: "*t*"
+title: "t"
 ---
 
 # t

@@ -1,5 +1,5 @@
 ---
-title: "*return-from*"
+title: "return-from"
 ---
 
 # return-from

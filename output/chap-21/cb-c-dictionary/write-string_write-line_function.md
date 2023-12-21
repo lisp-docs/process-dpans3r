@@ -1,5 +1,5 @@
 ---
-title: "*write-string, write-line*"
+title: "write-string, write-line"
 ---
 
 # write-string, write-line

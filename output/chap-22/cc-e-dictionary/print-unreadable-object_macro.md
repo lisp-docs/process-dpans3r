@@ -1,5 +1,5 @@
 ---
-title: "*print-unreadable-object*"
+title: "print-unreadable-object"
 ---
 
 # print-unreadable-object

@@ -1,5 +1,5 @@
 ---
-title: "*make-instance*"
+title: "make-instance"
 ---
 
 # make-instance

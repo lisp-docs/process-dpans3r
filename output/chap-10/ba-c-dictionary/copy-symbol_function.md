@@ -1,5 +1,5 @@
 ---
-title: "*copy-symbol*"
+title: "copy-symbol"
 ---
 
 # copy-symbol

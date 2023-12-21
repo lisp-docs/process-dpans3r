@@ -1,5 +1,5 @@
 ---
-title: "*typep*"
+title: "typep"
 ---
 
 # typep

@@ -1,5 +1,5 @@
 ---
-title: "*sinh, cosh, tanh, asinh, acosh, atanh*"
+title: "sinh, cosh, tanh, asinh, acosh, atanh"
 ---
 
 # sinh, cosh, tanh, asinh, acosh, atanh

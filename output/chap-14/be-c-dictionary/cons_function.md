@@ -1,5 +1,5 @@
 ---
-title: "*cons*"
+title: "cons"
 ---
 
 # cons

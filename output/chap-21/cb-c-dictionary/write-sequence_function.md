@@ -1,5 +1,5 @@
 ---
-title: "*write-sequence*"
+title: "write-sequence"
 ---
 
 # write-sequence

@@ -1,5 +1,5 @@
 ---
-title: "*file-stream*"
+title: "file-stream"
 ---
 
 # file-stream

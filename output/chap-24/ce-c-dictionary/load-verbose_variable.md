@@ -1,5 +1,5 @@
 ---
-title: "*load-verbose*"
+title: "load-verbose"
 ---
 
 # \*load-verbose\*

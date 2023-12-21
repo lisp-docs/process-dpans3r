@@ -1,5 +1,5 @@
 ---
-title: "*ash*"
+title: "ash"
 ---
 
 # ash

@@ -1,5 +1,5 @@
 ---
-title: "*cis*"
+title: "cis"
 ---
 
 # cis

@@ -1,5 +1,5 @@
 ---
-title: "*file-author*"
+title: "file-author"
 ---
 
 # file-author

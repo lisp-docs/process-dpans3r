@@ -1,5 +1,5 @@
 ---
-title: "*array-element-type*"
+title: "array-element-type"
 ---
 
 # array-element-type

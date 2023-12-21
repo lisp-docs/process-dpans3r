@@ -1,5 +1,5 @@
 ---
-title: "*get-internal-real-time*"
+title: "get-internal-real-time"
 ---
 
 # get-internal-real-time

@@ -1,5 +1,5 @@
 ---
-title: "*rotatef*"
+title: "rotatef"
 ---
 
 # rotatef

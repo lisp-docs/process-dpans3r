@@ -1,5 +1,5 @@
 ---
-title: "*print-case*"
+title: "print-case"
 ---
 
 # \*print-case\*

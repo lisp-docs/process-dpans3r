@@ -1,5 +1,5 @@
 ---
-title: "*most-positive-fixnum, most-negative-fixnum*"
+title: "most-positive-fixnum, most-negative-fixnum"
 ---
 
 # most-positive-fixnum, most-negative-fixnum

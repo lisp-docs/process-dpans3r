@@ -1,5 +1,5 @@
 ---
-title: "*room*"
+title: "room"
 ---
 
 # room

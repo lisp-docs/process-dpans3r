@@ -1,5 +1,5 @@
 ---
-title: "*handler-bind*"
+title: "handler-bind"
 ---
 
 # handler-bind

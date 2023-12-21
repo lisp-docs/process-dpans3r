@@ -42,22 +42,14 @@ for characters *c1* and *c2*.
 
 
 
-**Examples:** 
-
-
+**Examples:**
+```lisp
 
 (char-int #\A) *→* 65 ; implementation A 
-
-
-
 (char-int #\A) *→* 577 ; implementation B 
-
-
-
 (char-int #\A) *→* 262145 ; implementation C 
 
-
-
+```
 **See Also:** 
 
 

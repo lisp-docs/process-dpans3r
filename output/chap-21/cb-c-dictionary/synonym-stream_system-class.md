@@ -1,5 +1,5 @@
 ---
-title: "*synonym-stream*"
+title: "synonym-stream"
 ---
 
 # synonym-stream

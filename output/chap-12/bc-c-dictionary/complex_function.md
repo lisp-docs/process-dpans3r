@@ -1,5 +1,5 @@
 ---
-title: "*complex*"
+title: "complex"
 ---
 
 # complex

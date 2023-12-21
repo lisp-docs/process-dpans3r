@@ -1,5 +1,5 @@
 ---
-title: "*null*"
+title: "null"
 ---
 
 # null

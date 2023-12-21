@@ -1,5 +1,5 @@
 ---
-title: "*realpart, imagpart*"
+title: "realpart, imagpart"
 ---
 
 # realpart, imagpart

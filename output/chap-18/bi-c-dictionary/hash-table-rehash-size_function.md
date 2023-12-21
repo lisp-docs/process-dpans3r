@@ -1,5 +1,5 @@
 ---
-title: "*hash-table-rehash-size*"
+title: "hash-table-rehash-size"
 ---
 
 # hash-table-rehash-size

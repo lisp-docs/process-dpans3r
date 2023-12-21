@@ -1,5 +1,5 @@
 ---
-title: "*eq*"
+title: "eq"
 ---
 
 # eq

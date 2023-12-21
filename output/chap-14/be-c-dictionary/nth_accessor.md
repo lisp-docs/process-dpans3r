@@ -1,5 +1,5 @@
 ---
-title: "*nth*"
+title: "nth"
 ---
 
 # nth

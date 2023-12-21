@@ -1,5 +1,5 @@
 ---
-title: "*map-into*"
+title: "map-into"
 ---
 
 # map-into

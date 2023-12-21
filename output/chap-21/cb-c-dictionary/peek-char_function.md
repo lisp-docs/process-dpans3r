@@ -1,5 +1,5 @@
 ---
-title: "*peek-char*"
+title: "peek-char"
 ---
 
 # peek-char

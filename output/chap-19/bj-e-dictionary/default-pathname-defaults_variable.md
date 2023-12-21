@@ -1,5 +1,5 @@
 ---
-title: "*default-pathname-defaults*"
+title: "default-pathname-defaults"
 ---
 
 # \*default-pathname-defaults\*

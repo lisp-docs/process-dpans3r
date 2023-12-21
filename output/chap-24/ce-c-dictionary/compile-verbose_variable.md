@@ -1,5 +1,5 @@
 ---
-title: "*compile-verbose*"
+title: "compile-verbose"
 ---
 
 # \*compile-verbose\*

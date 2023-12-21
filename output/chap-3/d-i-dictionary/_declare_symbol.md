@@ -42,15 +42,11 @@ A **declare** *expression* can occur in a *lambda expression* or in any of the *
 
 
 
-|<p>**defgeneric do-external-symbols prog** </p><p>**define-compiler-macro do-symbols prog\*** </p><p>**define-method-combination dolist restart-case define-setf-expander dotimes symbol-macrolet defmacro flet with-accessors defmethod handler-case with-hash-table-iterator defsetf labels with-input-from-string deftype let with-open-file defun let\* with-open-stream destructuring-bind locally with-output-to-string do macrolet with-package-iterator do\* multiple-value-bind with-slots** </p><p>**do-all-symbols pprint-logical-block**</p>|
 
-| :- |
-
-
-
-
-
-**Figure 3–23. Standardized Forms In Which Declarations Can Occur** 
+```lisp title="Figure 3–23. Standardized Forms In Which Declarations Can Occur"
+<p>**defgeneric do-external-symbols prog** </p><p>**define-compiler-macro do-symbols prog\*** </p><p>**define-method-combination dolist restart-case define-setf-expander dotimes symbol-macrolet defmacro flet with-accessors defmethod handler-case with-hash-table-iterator defsetf labels with-input-from-string deftype let with-open-file defun let\* with-open-stream destructuring-bind locally with-output-to-string do macrolet with-package-iterator do\* multiple-value-bind with-slots** </p><p>**do-all-symbols pprint-logical-block**</p>
+```
+ 
 
 
 
@@ -66,15 +62,11 @@ Figure 3–24 shows a list of *declaration identifiers* that can be used with **
 
 
 
-|<p>**dynamic-extent ignore optimize** </p><p>**ftype inline special** </p><p>**ignorable notinline type**</p>|
 
-| :- |
-
-
-
-
-
-**Figure 3–24. Local Declaration Specifiers** 
+```lisp title="Figure 3–24. Local Declaration Specifiers"
+<p>**dynamic-extent ignore optimize** </p><p>**ftype inline special** </p><p>**ignorable notinline type**</p>
+```
+ 
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: "*char-int*"
+title: "char-int"
 ---
 
 # char-int

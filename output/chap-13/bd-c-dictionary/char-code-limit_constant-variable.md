@@ -1,5 +1,5 @@
 ---
-title: "*char-code-limit*"
+title: "char-code-limit"
 ---
 
 # char-code-limit

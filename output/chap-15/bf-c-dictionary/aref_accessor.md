@@ -1,5 +1,5 @@
 ---
-title: "*aref*"
+title: "aref"
 ---
 
 # aref

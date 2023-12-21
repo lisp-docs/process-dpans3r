@@ -50,15 +50,11 @@ Figure 3–22 shows a list of *declaration identifiers* that can be used with **
 
 
 
-|**declaration inline optimize type ftype notinline special**|
 
-| :- |
-
-
-
-
-
-**Figure 3–22. Global Declaration Specifiers** 
+```lisp title="Figure 3–22. Global Declaration Specifiers"
+**declaration inline optimize type ftype notinline special**
+```
+ 
 
 
 
@@ -110,4 +106,4 @@ In most such cases, however, it is preferrable to use **declaim** for this purpo
 
 
 
-Since 
+Since **proclaim** *forms* are ordinary *function forms*, *macro forms* can expand into them. 

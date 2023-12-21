@@ -1,5 +1,5 @@
 ---
-title: "*numerator, denominator*"
+title: "numerator, denominator"
 ---
 
 # numerator, denominator

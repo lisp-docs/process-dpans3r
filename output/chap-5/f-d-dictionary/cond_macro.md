@@ -1,5 +1,5 @@
 ---
-title: "*cond*"
+title: "cond"
 ---
 
 # cond

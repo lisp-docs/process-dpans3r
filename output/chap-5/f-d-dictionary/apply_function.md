@@ -1,5 +1,5 @@
 ---
-title: "*apply*"
+title: "apply"
 ---
 
 # apply

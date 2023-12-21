@@ -1,5 +1,5 @@
 ---
-title: "*compute-applicable-methods*"
+title: "compute-applicable-methods"
 ---
 
 # compute-applicable-methods

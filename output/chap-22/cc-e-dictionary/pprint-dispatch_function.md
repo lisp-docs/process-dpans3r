@@ -1,5 +1,5 @@
 ---
-title: "*pprint-dispatch*"
+title: "pprint-dispatch"
 ---
 
 # pprint-dispatch

@@ -1,5 +1,5 @@
 ---
-title: "*slot-value*"
+title: "slot-value"
 ---
 
 # slot-value

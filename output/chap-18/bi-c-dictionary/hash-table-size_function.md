@@ -1,5 +1,5 @@
 ---
-title: "*hash-table-size*"
+title: "hash-table-size"
 ---
 
 # hash-table-size

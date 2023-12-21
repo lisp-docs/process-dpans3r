@@ -1,5 +1,5 @@
 ---
-title: "*make-array*"
+title: "make-array"
 ---
 
 # make-array

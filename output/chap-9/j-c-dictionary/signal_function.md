@@ -1,5 +1,5 @@
 ---
-title: "*signal*"
+title: "signal"
 ---
 
 # signal

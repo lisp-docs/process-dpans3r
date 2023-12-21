@@ -1,5 +1,5 @@
 ---
-title: "*fill-pointer*"
+title: "fill-pointer"
 ---
 
 # fill-pointer

@@ -1,5 +1,5 @@
 ---
-title: "*unbound-slot-instance*"
+title: "unbound-slot-instance"
 ---
 
 # unbound-slot-instance

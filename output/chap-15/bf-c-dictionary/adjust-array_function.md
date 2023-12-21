@@ -1,5 +1,5 @@
 ---
-title: "*adjust-array*"
+title: "adjust-array"
 ---
 
 # adjust-array

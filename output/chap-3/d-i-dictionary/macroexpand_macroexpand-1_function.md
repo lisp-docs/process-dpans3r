@@ -1,5 +1,5 @@
 ---
-title: "*macroexpand, macroexpand-1*"
+title: "macroexpand, macroexpand-1"
 ---
 
 # macroexpand, macroexpand-1

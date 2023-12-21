@@ -1,5 +1,5 @@
 ---
-title: "*symbol-package*"
+title: "symbol-package"
 ---
 
 # symbol-package

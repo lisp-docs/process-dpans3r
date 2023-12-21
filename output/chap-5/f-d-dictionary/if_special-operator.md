@@ -1,5 +1,5 @@
 ---
-title: "*if*"
+title: "if"
 ---
 
 # if

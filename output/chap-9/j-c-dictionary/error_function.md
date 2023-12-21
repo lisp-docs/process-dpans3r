@@ -1,5 +1,5 @@
 ---
-title: "*error*"
+title: "error"
 ---
 
 # error

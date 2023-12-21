@@ -1,5 +1,5 @@
 ---
-title: "*file-string-length*"
+title: "file-string-length"
 ---
 
 # file-string-length

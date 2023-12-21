@@ -1,5 +1,5 @@
 ---
-title: "*parse-integer*"
+title: "parse-integer"
 ---
 
 # parse-integer

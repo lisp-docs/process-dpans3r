@@ -1,5 +1,5 @@
 ---
-title: "*set-exclusive-or, nset-exclusive-or*"
+title: "set-exclusive-or, nset-exclusive-or"
 ---
 
 # set-exclusive-or, nset-exclusive-or

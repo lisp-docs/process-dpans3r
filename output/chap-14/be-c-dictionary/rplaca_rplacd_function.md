@@ -1,5 +1,5 @@
 ---
-title: "*rplaca, rplacd*"
+title: "rplaca, rplacd"
 ---
 
 # rplaca, rplacd

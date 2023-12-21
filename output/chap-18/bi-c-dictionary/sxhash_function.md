@@ -1,5 +1,5 @@
 ---
-title: "*sxhash*"
+title: "sxhash"
 ---
 
 # sxhash

@@ -1,5 +1,5 @@
 ---
-title: "*stream*"
+title: "stream"
 ---
 
 # stream

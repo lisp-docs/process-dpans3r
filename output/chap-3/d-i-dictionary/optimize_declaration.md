@@ -1,5 +1,5 @@
 ---
-title: "*optimize*"
+title: "optimize"
 ---
 
 # optimize

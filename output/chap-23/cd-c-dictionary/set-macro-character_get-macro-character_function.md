@@ -1,5 +1,5 @@
 ---
-title: "*set-macro-character, get-macro-character*"
+title: "set-macro-character, get-macro-character"
 ---
 
 # set-macro-character, get-macro-character

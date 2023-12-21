@@ -1,5 +1,5 @@
 ---
-title: "*make-concatenated-stream*"
+title: "make-concatenated-stream"
 ---
 
 # make-concatenated-stream

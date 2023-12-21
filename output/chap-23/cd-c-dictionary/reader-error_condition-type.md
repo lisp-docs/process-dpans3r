@@ -1,5 +1,5 @@
 ---
-title: "*reader-error*"
+title: "reader-error"
 ---
 
 # reader-error

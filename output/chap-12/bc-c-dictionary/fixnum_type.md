@@ -1,5 +1,5 @@
 ---
-title: "*fixnum*"
+title: "fixnum"
 ---
 
 # fixnum

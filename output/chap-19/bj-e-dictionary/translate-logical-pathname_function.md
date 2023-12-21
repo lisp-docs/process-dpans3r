@@ -1,5 +1,5 @@
 ---
-title: "*translate-logical-pathname*"
+title: "translate-logical-pathname"
 ---
 
 # translate-logical-pathname

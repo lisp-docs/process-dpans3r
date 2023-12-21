@@ -1,5 +1,5 @@
 ---
-title: "*gethash*"
+title: "gethash"
 ---
 
 # gethash

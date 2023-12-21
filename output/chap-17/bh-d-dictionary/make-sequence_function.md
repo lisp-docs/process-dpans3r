@@ -1,5 +1,5 @@
 ---
-title: "*make-sequence*"
+title: "make-sequence"
 ---
 
 # make-sequence

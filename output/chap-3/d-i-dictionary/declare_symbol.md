@@ -1,5 +1,5 @@
 ---
-title: "*declare*"
+title: "declare"
 ---
 
 # declare

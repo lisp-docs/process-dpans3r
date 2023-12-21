@@ -32,7 +32,7 @@ Returns a *designator* for the offending *package* in the *situation* represente
 (package-error-package 
  (make-condition ’package-error 
 		  :package (find-package "COMMON-LISP"))) 
-*→* #\<Package "COMMON-LISP"\> 
+*→* #<Package "COMMON-LISP"> 
 
 ```
 **See Also:** 

@@ -1,5 +1,5 @@
 ---
-title: "*fboundp*"
+title: "fboundp"
 ---
 
 # fboundp

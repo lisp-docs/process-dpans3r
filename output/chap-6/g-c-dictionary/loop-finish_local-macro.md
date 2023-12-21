@@ -1,5 +1,5 @@
 ---
-title: "*loop-finish*"
+title: "loop-finish"
 ---
 
 # loop-finish

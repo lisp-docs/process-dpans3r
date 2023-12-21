@@ -1,5 +1,5 @@
 ---
-title: "*y-or-n-p, yes-or-no-p*"
+title: "y-or-n-p, yes-or-no-p"
 ---
 
 # y-or-n-p, yes-or-no-p

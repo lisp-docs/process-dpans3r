@@ -1,5 +1,5 @@
 ---
-title: "*print-object*"
+title: "print-object"
 ---
 
 # print-object

@@ -1,5 +1,5 @@
 ---
-title: "*directory*"
+title: "directory"
 ---
 
 # directory

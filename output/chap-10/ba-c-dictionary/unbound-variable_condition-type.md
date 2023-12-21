@@ -1,5 +1,5 @@
 ---
-title: "*unbound-variable*"
+title: "unbound-variable"
 ---
 
 # unbound-variable

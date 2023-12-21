@@ -1,5 +1,5 @@
 ---
-title: "*pprint-exit-if-list-exhausted*"
+title: "pprint-exit-if-list-exhausted"
 ---
 
 # pprint-exit-if-list-exhausted

@@ -1,5 +1,5 @@
 ---
-title: "*change-class*"
+title: "change-class"
 ---
 
 # change-class

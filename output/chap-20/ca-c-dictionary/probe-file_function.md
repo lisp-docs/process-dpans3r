@@ -1,5 +1,5 @@
 ---
-title: "*probe-file*"
+title: "probe-file"
 ---
 
 # probe-file

@@ -1,5 +1,5 @@
 ---
-title: "*incf, decf*"
+title: "incf, decf"
 ---
 
 # incf, decf

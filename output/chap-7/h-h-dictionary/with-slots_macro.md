@@ -1,5 +1,5 @@
 ---
-title: "*with-slots*"
+title: "with-slots"
 ---
 
 # with-slots

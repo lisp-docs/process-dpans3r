@@ -1,5 +1,5 @@
 ---
-title: "*butlast, nbutlast*"
+title: "butlast, nbutlast"
 ---
 
 # butlast, nbutlast

@@ -1,5 +1,5 @@
 ---
-title: "*minusp, plusp*"
+title: "minusp, plusp"
 ---
 
 # minusp, plusp

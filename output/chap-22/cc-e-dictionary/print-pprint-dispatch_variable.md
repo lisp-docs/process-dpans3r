@@ -1,5 +1,5 @@
 ---
-title: "*print-pprint-dispatch*"
+title: "print-pprint-dispatch"
 ---
 
 # \*print-pprint-dispatch\*

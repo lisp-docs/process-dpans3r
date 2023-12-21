@@ -111,7 +111,7 @@ The *values* of **/**, **//**, and **///** are updated immediately prior to prin
 
 If no appropriate and relevant result can be produced, **nil** is returned instead of a *string*. **Examples:**
 ```lisp
-
+ 
 (lisp-implementation-type) 
 *→* "ACME Lisp" 
 <i><sup>or</sup>→</i> "Joe’s Common Lisp" 
@@ -119,5 +119,65 @@ If no appropriate and relevant result can be produced, **nil** is returned inste
 *→* "1.3a" 
 *→* "V2" 
 <i><sup>or</sup>→</i> "Release 17.3, ECO #6" 
+**short-site-name, long-site-name** *Function* 
 
 ```
+**Syntax:** 
+
+
+
+**short-site-name** *hno argumentsi → description* 
+
+
+
+**long-site-name** *hno argumentsi → description* 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+**Arguments and Values:** 
+
+
+
+*description*—a *string* or **nil**. 
+
+
+
+**Description:** 
+
+
+
+**short-site-name** and **long-site-name** return a *string* that identifies the physical location of the computer hardware, or **nil** if no appropriate *description* can be produced. 
+
+
+
+**Examples:**
+```lisp
+
+(short-site-name) 
+*→* "MIT AI Lab" 
+<i><sup>or</sup>→</i> "CMU-CSD" 
+(long-site-name) 
+*→* "MIT Artificial Intelligence Laboratory" 
+<i><sup>or</sup>→</i> "CMU Computer Science Department" 
+
+```
+**Affected By:** 
+
+
+
+The implementation, the location of the computer hardware, and the installation/configuration process. 
+
+
+

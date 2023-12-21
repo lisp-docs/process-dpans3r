@@ -1,5 +1,5 @@
 ---
-title: "*define-setf-expander*"
+title: "define-setf-expander"
 ---
 
 # define-setf-expander

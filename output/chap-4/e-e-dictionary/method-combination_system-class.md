@@ -1,5 +1,5 @@
 ---
-title: "*method-combination*"
+title: "method-combination"
 ---
 
 # method-combination

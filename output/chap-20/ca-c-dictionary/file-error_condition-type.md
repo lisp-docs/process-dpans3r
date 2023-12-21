@@ -1,5 +1,5 @@
 ---
-title: "*file-error*"
+title: "file-error"
 ---
 
 # file-error

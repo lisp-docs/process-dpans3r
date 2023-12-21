@@ -1,5 +1,5 @@
 ---
-title: "*package-error-package*"
+title: "package-error-package"
 ---
 
 # package-error-package

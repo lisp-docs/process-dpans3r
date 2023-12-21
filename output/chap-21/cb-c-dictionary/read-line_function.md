@@ -1,5 +1,5 @@
 ---
-title: "*read-line*"
+title: "read-line"
 ---
 
 # read-line

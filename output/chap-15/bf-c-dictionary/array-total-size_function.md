@@ -1,5 +1,5 @@
 ---
-title: "*array-total-size*"
+title: "array-total-size"
 ---
 
 # array-total-size

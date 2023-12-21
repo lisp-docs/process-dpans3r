@@ -1,5 +1,5 @@
 ---
-title: "*funcall*"
+title: "funcall"
 ---
 
 # funcall

@@ -1,5 +1,5 @@
 ---
-title: "*gensym-counter*"
+title: "gensym-counter"
 ---
 
 # \*gensym-counter\*

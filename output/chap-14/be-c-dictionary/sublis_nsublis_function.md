@@ -1,5 +1,5 @@
 ---
-title: "*sublis, nsublis*"
+title: "sublis, nsublis"
 ---
 
 # sublis, nsublis

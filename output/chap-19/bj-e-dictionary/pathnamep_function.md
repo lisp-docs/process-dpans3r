@@ -1,5 +1,5 @@
 ---
-title: "*pathnamep*"
+title: "pathnamep"
 ---
 
 # pathnamep

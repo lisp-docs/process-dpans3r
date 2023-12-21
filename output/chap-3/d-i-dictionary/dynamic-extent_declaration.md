@@ -1,5 +1,5 @@
 ---
-title: "*dynamic-extent*"
+title: "dynamic-extent"
 ---
 
 # dynamic-extent

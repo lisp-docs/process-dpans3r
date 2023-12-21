@@ -1,5 +1,5 @@
 ---
-title: "*merge*"
+title: "merge"
 ---
 
 # merge

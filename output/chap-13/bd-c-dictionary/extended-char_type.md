@@ -1,5 +1,5 @@
 ---
-title: "*extended-char*"
+title: "extended-char"
 ---
 
 # extended-char

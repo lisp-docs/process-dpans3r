@@ -1,5 +1,5 @@
 ---
-title: "*inspect*"
+title: "inspect"
 ---
 
 # inspect

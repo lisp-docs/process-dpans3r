@@ -1,5 +1,5 @@
 ---
-title: "*time*"
+title: "time"
 ---
 
 # time

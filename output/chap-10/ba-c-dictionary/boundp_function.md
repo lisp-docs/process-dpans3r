@@ -1,5 +1,5 @@
 ---
-title: "*boundp*"
+title: "boundp"
 ---
 
 # boundp

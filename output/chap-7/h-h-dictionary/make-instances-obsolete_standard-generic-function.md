@@ -1,5 +1,5 @@
 ---
-title: "*make-instances-obsolete*"
+title: "make-instances-obsolete"
 ---
 
 # make-instances-obsolete

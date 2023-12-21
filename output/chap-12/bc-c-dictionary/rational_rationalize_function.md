@@ -1,5 +1,5 @@
 ---
-title: "*rational, rationalize*"
+title: "rational, rationalize"
 ---
 
 # rational, rationalize

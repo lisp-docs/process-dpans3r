@@ -1,5 +1,5 @@
 ---
-title: "*division-by-zero*"
+title: "division-by-zero"
 ---
 
 # division-by-zero

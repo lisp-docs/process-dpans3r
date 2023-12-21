@@ -1,5 +1,5 @@
 ---
-title: "*describe*"
+title: "describe"
 ---
 
 # describe

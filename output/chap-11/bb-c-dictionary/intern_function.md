@@ -1,5 +1,5 @@
 ---
-title: "*intern*"
+title: "intern"
 ---
 
 # intern

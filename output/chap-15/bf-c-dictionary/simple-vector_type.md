@@ -1,5 +1,5 @@
 ---
-title: "*simple-vector*"
+title: "simple-vector"
 ---
 
 # simple-vector

@@ -1,5 +1,5 @@
 ---
-title: "*deftype*"
+title: "deftype"
 ---
 
 # deftype

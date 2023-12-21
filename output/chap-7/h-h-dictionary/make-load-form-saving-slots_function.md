@@ -1,5 +1,5 @@
 ---
-title: "*make-load-form-saving-slots*"
+title: "make-load-form-saving-slots"
 ---
 
 # make-load-form-saving-slots

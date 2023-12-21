@@ -1,5 +1,5 @@
 ---
-title: "*with-standard-io-syntax*"
+title: "with-standard-io-syntax"
 ---
 
 # with-standard-io-syntax

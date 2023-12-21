@@ -1,5 +1,5 @@
 ---
-title: "*sort, stable-sort*"
+title: "sort, stable-sort"
 ---
 
 # sort, stable-sort

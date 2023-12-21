@@ -1,5 +1,5 @@
 ---
-title: "*list-length*"
+title: "list-length"
 ---
 
 # list-length

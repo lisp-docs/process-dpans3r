@@ -77,7 +77,7 @@ The first time *place* is *evaluated*, it is *evaluated* by normal evaluation ru
 ▷ Use Value: #(SAM FRED HARRY) 
 *→* NIL 
 aardvarks 
-*→* #<array-t-3 13571=""> 
+*→* #<ARRAY-T-3 13571> 
 (map ’list #’identity aardvarks) 
 *→* (SAM FRED HARRY) 
 (setq aardvark-count ’foo) 

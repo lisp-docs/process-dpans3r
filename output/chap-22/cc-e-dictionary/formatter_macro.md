@@ -1,5 +1,5 @@
 ---
-title: "*formatter*"
+title: "formatter"
 ---
 
 # formatter

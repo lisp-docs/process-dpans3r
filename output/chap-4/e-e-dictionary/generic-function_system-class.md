@@ -1,5 +1,5 @@
 ---
-title: "*generic-function*"
+title: "generic-function"
 ---
 
 # generic-function

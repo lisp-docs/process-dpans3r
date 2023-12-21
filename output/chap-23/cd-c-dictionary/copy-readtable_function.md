@@ -1,5 +1,5 @@
 ---
-title: "*copy-readtable*"
+title: "copy-readtable"
 ---
 
 # copy-readtable

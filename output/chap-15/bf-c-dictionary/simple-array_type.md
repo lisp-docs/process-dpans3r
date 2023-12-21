@@ -1,5 +1,5 @@
 ---
-title: "*simple-array*"
+title: "simple-array"
 ---
 
 # simple-array

@@ -1,5 +1,5 @@
 ---
-title: "*undefined-function*"
+title: "undefined-function"
 ---
 
 # undefined-function

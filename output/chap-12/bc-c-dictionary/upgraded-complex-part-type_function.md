@@ -1,5 +1,5 @@
 ---
-title: "*upgraded-complex-part-type*"
+title: "upgraded-complex-part-type"
 ---
 
 # upgraded-complex-part-type

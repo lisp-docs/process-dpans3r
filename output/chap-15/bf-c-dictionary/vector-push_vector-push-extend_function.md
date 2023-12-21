@@ -1,5 +1,5 @@
 ---
-title: "*vector-push, vector-push-extend*"
+title: "vector-push, vector-push-extend"
 ---
 
 # vector-push, vector-push-extend

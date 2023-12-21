@@ -1,1 +1,0 @@
-**bit**. The *type* (integer 0 \*) is also called **unsigned-byte**. 

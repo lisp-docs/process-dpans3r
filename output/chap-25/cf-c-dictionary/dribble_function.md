@@ -1,5 +1,5 @@
 ---
-title: "*dribble*"
+title: "dribble"
 ---
 
 # dribble

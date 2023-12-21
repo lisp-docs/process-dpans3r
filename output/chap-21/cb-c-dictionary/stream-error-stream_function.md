@@ -1,5 +1,5 @@
 ---
-title: "*stream-error-stream*"
+title: "stream-error-stream"
 ---
 
 # stream-error-stream

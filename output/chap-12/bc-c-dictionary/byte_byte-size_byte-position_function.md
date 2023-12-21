@@ -1,5 +1,5 @@
 ---
-title: "*byte, byte-size, byte-position*"
+title: "byte, byte-size, byte-position"
 ---
 
 # byte, byte-size, byte-position

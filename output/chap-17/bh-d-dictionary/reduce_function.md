@@ -1,5 +1,5 @@
 ---
-title: "*reduce*"
+title: "reduce"
 ---
 
 # reduce

@@ -1,5 +1,5 @@
 ---
-title: "*storage-condition*"
+title: "storage-condition"
 ---
 
 # storage-condition

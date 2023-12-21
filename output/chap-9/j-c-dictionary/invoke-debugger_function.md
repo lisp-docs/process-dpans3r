@@ -1,5 +1,5 @@
 ---
-title: "*invoke-debugger*"
+title: "invoke-debugger"
 ---
 
 # invoke-debugger

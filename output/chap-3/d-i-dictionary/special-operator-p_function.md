@@ -1,5 +1,5 @@
 ---
-title: "*special-operator-p*"
+title: "special-operator-p"
 ---
 
 # special-operator-p

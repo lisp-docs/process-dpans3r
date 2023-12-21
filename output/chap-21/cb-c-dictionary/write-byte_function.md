@@ -1,5 +1,5 @@
 ---
-title: "*write-byte*"
+title: "write-byte"
 ---
 
 # write-byte

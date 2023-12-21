@@ -1,5 +1,5 @@
 ---
-title: "*pop*"
+title: "pop"
 ---
 
 # pop

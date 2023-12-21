@@ -1,5 +1,5 @@
 ---
-title: "*restart-bind*"
+title: "restart-bind"
 ---
 
 # restart-bind

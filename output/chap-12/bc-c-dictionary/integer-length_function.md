@@ -1,5 +1,5 @@
 ---
-title: "*integer-length*"
+title: "integer-length"
 ---
 
 # integer-length

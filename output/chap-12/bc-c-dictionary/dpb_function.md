@@ -1,5 +1,5 @@
 ---
-title: "*dpb*"
+title: "dpb"
 ---
 
 # dpb

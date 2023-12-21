@@ -1,5 +1,5 @@
 ---
-title: "*find-package*"
+title: "find-package"
 ---
 
 # find-package

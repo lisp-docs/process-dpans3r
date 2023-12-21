@@ -1,5 +1,5 @@
 ---
-title: "*type-error-datum, type-error-expected-type*"
+title: "type-error-datum, type-error-expected-type"
 ---
 
 # type-error-datum, type-error-expected-type

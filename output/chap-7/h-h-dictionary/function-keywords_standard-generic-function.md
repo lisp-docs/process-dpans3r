@@ -1,5 +1,5 @@
 ---
-title: "*function-keywords*"
+title: "function-keywords"
 ---
 
 # function-keywords

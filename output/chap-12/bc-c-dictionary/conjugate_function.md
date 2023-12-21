@@ -1,5 +1,5 @@
 ---
-title: "*conjugate*"
+title: "conjugate"
 ---
 
 # conjugate

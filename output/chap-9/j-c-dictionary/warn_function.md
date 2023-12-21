@@ -1,5 +1,5 @@
 ---
-title: "*warn*"
+title: "warn"
 ---
 
 # warn

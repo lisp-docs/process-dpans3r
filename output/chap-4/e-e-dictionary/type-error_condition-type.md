@@ -1,5 +1,5 @@
 ---
-title: "*type-error*"
+title: "type-error"
 ---
 
 # type-error

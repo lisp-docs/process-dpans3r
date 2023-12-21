@@ -1,5 +1,5 @@
 ---
-title: "*with-hash-table-iterator*"
+title: "with-hash-table-iterator"
 ---
 
 # with-hash-table-iterator

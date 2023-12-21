@@ -1,5 +1,5 @@
 ---
-title: "*with-condition-restarts*"
+title: "with-condition-restarts"
 ---
 
 # with-condition-restarts

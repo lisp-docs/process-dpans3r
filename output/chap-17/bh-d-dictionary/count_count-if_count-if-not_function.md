@@ -1,5 +1,5 @@
 ---
-title: "*count, count-if, count-if-not*"
+title: "count, count-if, count-if-not"
 ---
 
 # count, count-if, count-if-not

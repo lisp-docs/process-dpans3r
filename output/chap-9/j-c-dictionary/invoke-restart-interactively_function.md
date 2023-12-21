@@ -1,5 +1,5 @@
 ---
-title: "*invoke-restart-interactively*"
+title: "invoke-restart-interactively"
 ---
 
 # invoke-restart-interactively

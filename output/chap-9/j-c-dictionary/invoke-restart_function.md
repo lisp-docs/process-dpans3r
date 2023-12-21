@@ -1,5 +1,5 @@
 ---
-title: "*invoke-restart*"
+title: "invoke-restart"
 ---
 
 # invoke-restart

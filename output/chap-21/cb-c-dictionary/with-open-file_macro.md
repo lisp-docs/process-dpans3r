@@ -1,5 +1,5 @@
 ---
-title: "*with-open-file*"
+title: "with-open-file"
 ---
 
 # with-open-file

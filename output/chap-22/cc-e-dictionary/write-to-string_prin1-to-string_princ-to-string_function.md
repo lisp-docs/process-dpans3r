@@ -1,5 +1,5 @@
 ---
-title: "*write-to-string, prin1-to-string, princ-to-string*"
+title: "write-to-string, prin1-to-string, princ-to-string"
 ---
 
 # write-to-string, prin1-to-string, princ-to-string

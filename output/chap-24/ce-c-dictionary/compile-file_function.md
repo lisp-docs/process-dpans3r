@@ -1,5 +1,5 @@
 ---
-title: "*compile-file*"
+title: "compile-file"
 ---
 
 # compile-file

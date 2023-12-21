@@ -1,5 +1,5 @@
 ---
-title: "*standard-char-p*"
+title: "standard-char-p"
 ---
 
 # standard-char-p

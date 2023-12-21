@@ -1,5 +1,5 @@
 ---
-title: "*translate-pathname*"
+title: "translate-pathname"
 ---
 
 # translate-pathname

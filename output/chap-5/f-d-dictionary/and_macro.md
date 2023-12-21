@@ -1,5 +1,5 @@
 ---
-title: "*and*"
+title: "and"
 ---
 
 # and

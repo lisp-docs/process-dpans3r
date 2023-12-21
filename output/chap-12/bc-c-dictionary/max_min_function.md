@@ -1,5 +1,5 @@
 ---
-title: "*max, min*"
+title: "max, min"
 ---
 
 # max, min

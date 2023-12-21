@@ -1,5 +1,5 @@
 ---
-title: "*class-name*"
+title: "class-name"
 ---
 
 # class-name

@@ -1,5 +1,5 @@
 ---
-title: "*concatenate*"
+title: "concatenate"
 ---
 
 # concatenate

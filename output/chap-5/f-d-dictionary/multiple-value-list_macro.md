@@ -1,5 +1,5 @@
 ---
-title: "*multiple-value-list*"
+title: "multiple-value-list"
 ---
 
 # multiple-value-list

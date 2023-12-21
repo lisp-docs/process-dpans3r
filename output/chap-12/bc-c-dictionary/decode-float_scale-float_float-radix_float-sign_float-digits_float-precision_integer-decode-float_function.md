@@ -1,5 +1,5 @@
 ---
-title: "*decode-float, scale-float, float-radix, float-sign, float-digits, float-precision, integer-decode-float*"
+title: "decode-float, scale-float, float-radix, float-sign, float-digits, float-precision, integer-decode-float"
 ---
 
 # decode-float, scale-float, float-radix, float-sign, float-digits, float-precision, integer-decode-float

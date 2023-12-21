@@ -1,5 +1,5 @@
 ---
-title: "*nconc*"
+title: "nconc"
 ---
 
 # nconc

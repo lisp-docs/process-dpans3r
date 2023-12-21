@@ -1,5 +1,5 @@
 ---
-title: "*upper-case-p, lower-case-p, both-case-p*"
+title: "upper-case-p, lower-case-p, both-case-p"
 ---
 
 # upper-case-p, lower-case-p, both-case-p

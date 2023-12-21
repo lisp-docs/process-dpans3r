@@ -1,5 +1,5 @@
 ---
-title: "*random*"
+title: "random"
 ---
 
 # random

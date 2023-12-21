@@ -1,5 +1,5 @@
 ---
-title: "*make-pathname*"
+title: "make-pathname"
 ---
 
 # make-pathname

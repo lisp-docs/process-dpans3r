@@ -1,5 +1,5 @@
 ---
-title: "*flet, labels, macrolet*"
+title: "flet, labels, macrolet"
 ---
 
 # flet, labels, macrolet

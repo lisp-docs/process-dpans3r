@@ -1,5 +1,5 @@
 ---
-title: "*svref*"
+title: "svref"
 ---
 
 # svref

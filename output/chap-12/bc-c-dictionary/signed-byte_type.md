@@ -1,5 +1,5 @@
 ---
-title: "*signed-byte*"
+title: "signed-byte"
 ---
 
 # signed-byte

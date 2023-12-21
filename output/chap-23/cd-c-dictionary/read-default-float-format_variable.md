@@ -1,5 +1,5 @@
 ---
-title: "*read-default-float-format*"
+title: "read-default-float-format"
 ---
 
 # \*read-default-float-format\*

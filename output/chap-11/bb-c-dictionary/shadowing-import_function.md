@@ -1,5 +1,5 @@
 ---
-title: "*shadowing-import*"
+title: "shadowing-import"
 ---
 
 # shadowing-import

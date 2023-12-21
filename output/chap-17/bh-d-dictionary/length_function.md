@@ -1,5 +1,5 @@
 ---
-title: "*length*"
+title: "length"
 ---
 
 # length

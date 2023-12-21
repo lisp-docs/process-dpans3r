@@ -1,5 +1,5 @@
 ---
-title: "*case, ccase, ecase*"
+title: "case, ccase, ecase"
 ---
 
 # case, ccase, ecase

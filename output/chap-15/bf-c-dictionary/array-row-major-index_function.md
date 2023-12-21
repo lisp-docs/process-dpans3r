@@ -1,5 +1,5 @@
 ---
-title: "*array-row-major-index*"
+title: "array-row-major-index"
 ---
 
 # array-row-major-index

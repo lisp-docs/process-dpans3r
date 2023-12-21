@@ -1,5 +1,5 @@
 ---
-title: "*with-open-stream*"
+title: "with-open-stream"
 ---
 
 # with-open-stream

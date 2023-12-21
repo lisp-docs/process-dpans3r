@@ -1,5 +1,5 @@
 ---
-title: "*type-of*"
+title: "type-of"
 ---
 
 # type-of

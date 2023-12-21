@@ -1,5 +1,5 @@
 ---
-title: "*encode-universal-time*"
+title: "encode-universal-time"
 ---
 
 # encode-universal-time

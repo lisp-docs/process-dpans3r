@@ -1,5 +1,5 @@
 ---
-title: "*in-package*"
+title: "in-package"
 ---
 
 # in-package

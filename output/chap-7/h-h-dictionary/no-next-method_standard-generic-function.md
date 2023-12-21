@@ -1,5 +1,5 @@
 ---
-title: "*no-next-method*"
+title: "no-next-method"
 ---
 
 # no-next-method

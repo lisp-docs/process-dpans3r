@@ -1,5 +1,5 @@
 ---
-title: "*array-displacement*"
+title: "array-displacement"
 ---
 
 # array-displacement

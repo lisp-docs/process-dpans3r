@@ -1,5 +1,5 @@
 ---
-title: "*read-char*"
+title: "read-char"
 ---
 
 # read-char

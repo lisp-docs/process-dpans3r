@@ -1,5 +1,5 @@
 ---
-title: "*alphanumericp*"
+title: "alphanumericp"
 ---
 
 # alphanumericp

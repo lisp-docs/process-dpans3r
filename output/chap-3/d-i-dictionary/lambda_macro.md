@@ -1,5 +1,5 @@
 ---
-title: "*lambda*"
+title: "lambda"
 ---
 
 # lambda

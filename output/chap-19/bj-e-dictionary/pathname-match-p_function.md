@@ -1,5 +1,5 @@
 ---
-title: "*pathname-match-p*"
+title: "pathname-match-p"
 ---
 
 # pathname-match-p

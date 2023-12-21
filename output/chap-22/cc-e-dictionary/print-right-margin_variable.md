@@ -1,5 +1,5 @@
 ---
-title: "*print-right-margin*"
+title: "print-right-margin"
 ---
 
 # \*print-right-margin\*

@@ -1,5 +1,5 @@
 ---
-title: "*wild-pathname-p*"
+title: "wild-pathname-p"
 ---
 
 # wild-pathname-p

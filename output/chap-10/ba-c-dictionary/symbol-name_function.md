@@ -1,5 +1,5 @@
 ---
-title: "*symbol-name*"
+title: "symbol-name"
 ---
 
 # symbol-name

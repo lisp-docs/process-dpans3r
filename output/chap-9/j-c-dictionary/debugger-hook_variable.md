@@ -1,5 +1,5 @@
 ---
-title: "*debugger-hook*"
+title: "debugger-hook"
 ---
 
 # \*debugger-hook\*

@@ -1,5 +1,5 @@
 ---
-title: "*clear-input*"
+title: "clear-input"
 ---
 
 # clear-input

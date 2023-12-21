@@ -1,5 +1,5 @@
 ---
-title: "*make-echo-stream*"
+title: "make-echo-stream"
 ---
 
 # make-echo-stream

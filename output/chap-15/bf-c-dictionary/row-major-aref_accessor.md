@@ -1,5 +1,5 @@
 ---
-title: "*row-major-aref*"
+title: "row-major-aref"
 ---
 
 # row-major-aref

@@ -1,5 +1,5 @@
 ---
-title: "*call-method, make-method*"
+title: "call-method, make-method"
 ---
 
 # call-method, make-method

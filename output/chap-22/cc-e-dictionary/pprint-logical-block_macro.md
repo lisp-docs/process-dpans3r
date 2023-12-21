@@ -1,5 +1,5 @@
 ---
-title: "*pprint-logical-block*"
+title: "pprint-logical-block"
 ---
 
 # pprint-logical-block

@@ -1,5 +1,5 @@
 ---
-title: "*values-list*"
+title: "values-list"
 ---
 
 # values-list

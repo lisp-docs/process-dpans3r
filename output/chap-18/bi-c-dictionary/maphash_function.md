@@ -1,5 +1,5 @@
 ---
-title: "*maphash*"
+title: "maphash"
 ---
 
 # maphash

@@ -1,5 +1,5 @@
 ---
-title: "*gcd*"
+title: "gcd"
 ---
 
 # gcd

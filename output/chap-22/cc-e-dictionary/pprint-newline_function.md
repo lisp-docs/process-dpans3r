@@ -1,5 +1,5 @@
 ---
-title: "*pprint-newline*"
+title: "pprint-newline"
 ---
 
 # pprint-newline

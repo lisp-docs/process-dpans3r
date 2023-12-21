@@ -1,5 +1,5 @@
 ---
-title: "*lambda-parameters-limit*"
+title: "lambda-parameters-limit"
 ---
 
 # lambda-parameters-limit

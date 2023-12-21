@@ -1,5 +1,5 @@
 ---
-title: "*replace*"
+title: "replace"
 ---
 
 # replace

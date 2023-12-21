@@ -1,5 +1,5 @@
 ---
-title: "*listen*"
+title: "listen"
 ---
 
 # listen

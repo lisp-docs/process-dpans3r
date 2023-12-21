@@ -295,10 +295,10 @@ For details, see Section 6.1 (The LOOP Facility).
 
 ;; An example of the simple form of LOOP. 
 (defun sqrt-advisor () 
-  (loop (format t "&#126;&amp;Number: ") 
+  (loop (format t "~&Number: ") 
    (let ((n (parse-integer (read-line) :junk-allowed t))) 
      (when (not n) (return)) 
-     (format t "&#126;&amp;The square root of &#126;D is &#126;D.&#126;%" n (sqrt n))))) 
+     (format t "~&The square root of ~D is ~D.~%" n (sqrt n))))) 
 *→* SQRT-ADVISOR 
 (sqrt-advisor) 
 ▷ Number: 5*←-* 
@@ -309,10 +309,10 @@ For details, see Section 6.1 (The LOOP Facility).
 *→* NIL 
 ;; An example of the extended form of LOOP. 
 (defun square-advisor () 
-  (loop as n = (progn (format t "&#126;&amp;Number: ") 
+  (loop as n = (progn (format t "~&Number: ") 
 		      (parse-integer (read-line) :junk-allowed t)) 
 	while n 
-	do (format t "&#126;&amp;The square of &#126;D is &#126;D.&#126;%" n (\* n n)))) 
+	do (format t "~&The square of ~D is ~D.~%" n (\* n n)))) 
 *→* SQUARE-ADVISOR 
 (square-advisor) 
 ▷ Number: 4*←-* 

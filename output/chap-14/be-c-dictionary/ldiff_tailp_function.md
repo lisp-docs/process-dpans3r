@@ -1,5 +1,5 @@
 ---
-title: "*ldiff, tailp*"
+title: "ldiff, tailp"
 ---
 
 # ldiff, tailp

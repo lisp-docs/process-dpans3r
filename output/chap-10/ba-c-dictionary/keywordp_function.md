@@ -1,5 +1,5 @@
 ---
-title: "*keywordp*"
+title: "keywordp"
 ---
 
 # keywordp

@@ -98,14 +98,12 @@ There are a variety of ways unconditional newlines can be introduced into the ou
 
 
 
-**Examples:** 
-
-
+**Examples:**
+```lisp
 
 See Section 22.2.2 (Examples of using the Pretty Printer). 
 
-
-
+```
 **Side Effects:** 
 
 

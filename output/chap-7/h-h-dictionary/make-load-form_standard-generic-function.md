@@ -1,5 +1,5 @@
 ---
-title: "*make-load-form*"
+title: "make-load-form"
 ---
 
 # make-load-form

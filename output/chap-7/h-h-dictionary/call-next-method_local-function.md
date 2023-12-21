@@ -1,5 +1,5 @@
 ---
-title: "*call-next-method*"
+title: "call-next-method"
 ---
 
 # call-next-method

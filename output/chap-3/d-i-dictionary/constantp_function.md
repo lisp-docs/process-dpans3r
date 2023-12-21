@@ -1,5 +1,5 @@
 ---
-title: "*constantp*"
+title: "constantp"
 ---
 
 # constantp

@@ -1,5 +1,5 @@
 ---
-title: "*array-dimension*"
+title: "array-dimension"
 ---
 
 # array-dimension

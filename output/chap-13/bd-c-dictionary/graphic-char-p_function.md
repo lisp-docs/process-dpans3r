@@ -1,5 +1,5 @@
 ---
-title: "*graphic-char-p*"
+title: "graphic-char-p"
 ---
 
 # graphic-char-p

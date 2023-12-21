@@ -1,5 +1,5 @@
 ---
-title: "*boole*"
+title: "boole"
 ---
 
 # boole

@@ -1,5 +1,5 @@
 ---
-title: "*read-sequence*"
+title: "read-sequence"
 ---
 
 # read-sequence

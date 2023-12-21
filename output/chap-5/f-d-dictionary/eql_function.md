@@ -1,5 +1,5 @@
 ---
-title: "*eql*"
+title: "eql"
 ---
 
 # eql

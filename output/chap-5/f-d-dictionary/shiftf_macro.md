@@ -1,5 +1,5 @@
 ---
-title: "*shiftf*"
+title: "shiftf"
 ---
 
 # shiftf

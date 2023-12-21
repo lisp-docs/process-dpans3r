@@ -1,5 +1,5 @@
 ---
-title: "*union, nunion*"
+title: "union, nunion"
 ---
 
 # union, nunion

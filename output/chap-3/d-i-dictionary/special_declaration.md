@@ -1,5 +1,5 @@
 ---
-title: "*special*"
+title: "special"
 ---
 
 # special

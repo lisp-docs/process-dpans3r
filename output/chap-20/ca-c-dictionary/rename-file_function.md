@@ -1,5 +1,5 @@
 ---
-title: "*rename-file*"
+title: "rename-file"
 ---
 
 # rename-file

@@ -1,5 +1,5 @@
 ---
-title: "*standard-object*"
+title: "standard-object"
 ---
 
 # standard-object

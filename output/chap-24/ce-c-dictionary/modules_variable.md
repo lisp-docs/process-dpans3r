@@ -1,5 +1,5 @@
 ---
-title: "*modules*"
+title: "modules"
 ---
 
 # \*modules\*

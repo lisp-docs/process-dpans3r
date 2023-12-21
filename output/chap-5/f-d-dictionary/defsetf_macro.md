@@ -1,5 +1,5 @@
 ---
-title: "*defsetf*"
+title: "defsetf"
 ---
 
 # defsetf

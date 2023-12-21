@@ -1,5 +1,5 @@
 ---
-title: "*subtypep*"
+title: "subtypep"
 ---
 
 # subtypep

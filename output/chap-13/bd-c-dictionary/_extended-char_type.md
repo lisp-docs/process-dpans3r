@@ -162,190 +162,56 @@ If two *characters* have *identical implementation-defined attributes*, then the
 
 
 
-**Examples:** 
-
-
+**Examples:**
+```lisp
 
 (char= #\d #\d) *→ true* 
-
-
-
 (char= #\A #\a) *→ false* 
-
-
-
 (char= #\d #\x) *→ false* 
-
-
-
 (char= #\d #\D) *→ false* 
-
-
-
 (char/= #\d #\d) *→ false* 
-
-
-
 (char/= #\d #\x) *→ true* 
-
-
-
 (char/= #\d #\D) *→ true* 
-
-
-
 (char= #\d #\d #\d #\d) *→ true* 
-
-
-
 (char/= #\d #\d #\d #\d) *→ false* 
-
-
-
 (char= #\d #\d #\x #\d) *→ false* 
-
-
-
 (char/= #\d #\d #\x #\d) *→ false* 
-
-
-
 (char= #\d #\y #\x #\c) *→ false* 
-
-
-
 (char/= #\d #\y #\x #\c) *→ true* 
-
-
-
 (char= #\d #\c #\d) *→ false* 
-
-
-
 (char/= #\d #\c #\d) *→ false* 
-
-
-
-(char&lt; #\d #\x) *→ true* 
-
-
-
-(char&lt;= #\d #\x) *→ true* 
-
-
-
-(char&lt; #\d #\d) *→ false* 
-
-
-
-(char&lt;= #\d #\d) *→ true* 
-
-
-
-(char&lt; #\a #\e #\y #\z) *→ true* 
-
-
-
-(char&lt;= #\a #\e #\y #\z) *→ true* 
-
-
-
-(char&lt; #\a #\e #\e #\y) *→ false* 
-
-
-
-(char&lt;= #\a #\e #\e #\y) *→ true* 
-
-
-
-(char&gt; #\e #\d) *→ true* 
-
-
-
-(char&gt;= #\e #\d) *→ true* 
-
-
-
-(char&gt; #\d #\c #\b #\a) *→ true* 
-
-
-
-(char&gt;= #\d #\c #\b #\a) *→ true* 
-
-
-
-(char&gt; #\d #\d #\c #\a) *→ false* 
-
-
-
-(char&gt;= #\d #\d #\c #\a) *→ true* 
-
-
-
-(char&gt; #\e #\d #\b #\c #\a) *→ false* 
-
-
-
-(char&gt;= #\e #\d #\b #\c #\a) *→ false* 
-
-
-
-(char&gt; #\z #\A) *→ implementation-dependent* 
-
-
-
-(char&gt; #\Z #\a) *→ implementation-dependent* 
-
-
-
+(char< #\d #\x) *→ true* 
+(char<= #\d #\x) *→ true* 
+(char< #\d #\d) *→ false* 
+(char<= #\d #\d) *→ true* 
+(char< #\a #\e #\y #\z) *→ true* 
+(char<= #\a #\e #\y #\z) *→ true* 
+(char< #\a #\e #\e #\y) *→ false* 
+(char<= #\a #\e #\e #\y) *→ true* 
+(char> #\e #\d) *→ true* 
+(char>= #\e #\d) *→ true* 
+(char> #\d #\c #\b #\a) *→ true* 
+(char>= #\d #\c #\b #\a) *→ true* 
+(char> #\d #\d #\c #\a) *→ false* 
+(char>= #\d #\d #\c #\a) *→ true* 
+(char> #\e #\d #\b #\c #\a) *→ false* 
+(char>= #\e #\d #\b #\c #\a) *→ false* 
+(char> #\z #\A) *→ implementation-dependent* 
+(char> #\Z #\a) *→ implementation-dependent* 
 (char-equal #\A #\a) *→ true* 
 
 
 
-
-
-
-
- 
-
-
-
- 
-
-
-
 (stable-sort (list #\b #\A #\B #\a #\c #\C) #’char-lessp) 
-
-
-
 *→* (#\A #\a #\b #\B #\c #\C) 
-
-
-
-(stable-sort (list #\b #\A #\B #\a #\c #\C) #’char&lt;) 
-
-
-
+(stable-sort (list #\b #\A #\B #\a #\c #\C) #’char<) 
 *→* (#\A #\B #\C #\a #\b #\c) ;Implementation A 
-
-
-
 *→* (#\a #\b #\c #\A #\B #\C) ;Implementation B 
-
-
-
 *→* (#\a #\A #\b #\B #\c #\C) ;Implementation C 
-
-
-
 *→* (#\A #\a #\B #\b #\C #\c) ;Implementation D 
-
-
-
 *→* (#\A #\B #\a #\b #\C #\c) ;Implementation E 
 
-
-
+```
 **Exceptional Situations:** 
 
 
@@ -374,7 +240,4 @@ There is no requirement that (eq c1 c2) be true merely because (char= c1 c2) is 
 
 
 
-The manner in which *case* is used by **char-equal**, **char-not-equal**, **char-lessp**, **char-greaterp**, **char-not-greaterp**, and **char-not-lessp** implies an ordering for *standard characters* such that A=a, B=b, and so on, up to Z=z, and furthermore either 9<A or Z<0. 
-
-
-
+The manner in which *case* is used by **char-equal**, **char-not-equal**, **char-lessp**, **char-greaterp**, **char-not-greaterp**, and **char-not-lessp** implies an ordering for *standard characters* such that A=a, B=b, and so on, up to Z=z, and furthermore either 9<a <="" div="" or="" z<0.=""></a>

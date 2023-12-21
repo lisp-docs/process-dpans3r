@@ -1,5 +1,5 @@
 ---
-title: "*style-warning*"
+title: "style-warning"
 ---
 
 # style-warning

@@ -1,5 +1,5 @@
 ---
-title: "*identity*"
+title: "identity"
 ---
 
 # identity

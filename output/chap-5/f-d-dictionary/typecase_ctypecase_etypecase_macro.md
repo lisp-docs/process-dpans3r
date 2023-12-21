@@ -1,5 +1,5 @@
 ---
-title: "*typecase, ctypecase, etypecase*"
+title: "typecase, ctypecase, etypecase"
 ---
 
 # typecase, ctypecase, etypecase

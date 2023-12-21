@@ -1,5 +1,5 @@
 ---
-title: "*load-truename*"
+title: "load-truename"
 ---
 
 # \*load-truename\*

@@ -1,5 +1,5 @@
 ---
-title: "*alpha-char-p*"
+title: "alpha-char-p"
 ---
 
 # alpha-char-p

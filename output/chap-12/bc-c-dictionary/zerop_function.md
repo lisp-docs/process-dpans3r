@@ -1,5 +1,5 @@
 ---
-title: "*zerop*"
+title: "zerop"
 ---
 
 # zerop

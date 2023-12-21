@@ -1,5 +1,5 @@
 ---
-title: "*find-restart*"
+title: "find-restart"
 ---
 
 # find-restart

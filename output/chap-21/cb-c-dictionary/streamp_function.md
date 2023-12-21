@@ -1,5 +1,5 @@
 ---
-title: "*streamp*"
+title: "streamp"
 ---
 
 # streamp

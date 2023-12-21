@@ -1,5 +1,5 @@
 ---
-title: "*ldb-test*"
+title: "ldb-test"
 ---
 
 # ldb-test

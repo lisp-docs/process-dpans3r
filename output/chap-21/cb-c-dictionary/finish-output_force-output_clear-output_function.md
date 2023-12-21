@@ -1,5 +1,5 @@
 ---
-title: "*finish-output, force-output, clear-output*"
+title: "finish-output, force-output, clear-output"
 ---
 
 # finish-output, force-output, clear-output

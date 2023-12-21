@@ -1,5 +1,5 @@
 ---
-title: "*last*"
+title: "last"
 ---
 
 # last

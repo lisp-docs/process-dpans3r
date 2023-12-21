@@ -1,5 +1,5 @@
 ---
-title: "*parse-error*"
+title: "parse-error"
 ---
 
 # parse-error

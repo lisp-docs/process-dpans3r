@@ -1,5 +1,5 @@
 ---
-title: "*floating-point-overflow*"
+title: "floating-point-overflow"
 ---
 
 # floating-point-overflow

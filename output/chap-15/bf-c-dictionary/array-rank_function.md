@@ -1,5 +1,5 @@
 ---
-title: "*array-rank*"
+title: "array-rank"
 ---
 
 # array-rank

@@ -1,5 +1,5 @@
 ---
-title: "*numberp*"
+title: "numberp"
 ---
 
 # numberp

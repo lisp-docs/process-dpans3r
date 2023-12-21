@@ -1,5 +1,5 @@
 ---
-title: "*pprint-tab*"
+title: "pprint-tab"
 ---
 
 # pprint-tab

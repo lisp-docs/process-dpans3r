@@ -1,5 +1,5 @@
 ---
-title: "*print-not-readable*"
+title: "print-not-readable"
 ---
 
 # print-not-readable

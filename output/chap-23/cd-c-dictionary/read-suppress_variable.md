@@ -1,5 +1,5 @@
 ---
-title: "*read-suppress*"
+title: "read-suppress"
 ---
 
 # \*read-suppress\*

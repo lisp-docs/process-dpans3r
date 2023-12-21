@@ -1,5 +1,5 @@
 ---
-title: "*symbol-macrolet*"
+title: "symbol-macrolet"
 ---
 
 # symbol-macrolet

@@ -1,5 +1,5 @@
 ---
-title: "*broadcast-stream*"
+title: "broadcast-stream"
 ---
 
 # broadcast-stream

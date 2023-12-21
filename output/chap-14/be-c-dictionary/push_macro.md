@@ -1,5 +1,5 @@
 ---
-title: "*push*"
+title: "push"
 ---
 
 # push

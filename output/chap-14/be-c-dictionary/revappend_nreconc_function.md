@@ -1,5 +1,5 @@
 ---
-title: "*revappend, nreconc*"
+title: "revappend, nreconc"
 ---
 
 # revappend, nreconc

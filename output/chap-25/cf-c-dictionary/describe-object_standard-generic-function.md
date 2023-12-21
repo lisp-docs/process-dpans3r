@@ -1,5 +1,5 @@
 ---
-title: "*describe-object*"
+title: "describe-object"
 ---
 
 # describe-object

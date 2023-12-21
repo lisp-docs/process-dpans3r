@@ -1,5 +1,5 @@
 ---
-title: "*nil*"
+title: "nil"
 ---
 
 # nil

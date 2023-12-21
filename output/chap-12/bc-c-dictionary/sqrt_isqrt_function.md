@@ -1,5 +1,5 @@
 ---
-title: "*sqrt, isqrt*"
+title: "sqrt, isqrt"
 ---
 
 # sqrt, isqrt

@@ -1,5 +1,5 @@
 ---
-title: "*end-of-file*"
+title: "end-of-file"
 ---
 
 # end-of-file

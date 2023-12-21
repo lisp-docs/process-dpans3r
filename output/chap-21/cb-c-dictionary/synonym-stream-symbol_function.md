@@ -1,5 +1,5 @@
 ---
-title: "*synonym-stream-symbol*"
+title: "synonym-stream-symbol"
 ---
 
 # synonym-stream-symbol

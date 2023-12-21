@@ -1,5 +1,5 @@
 ---
-title: "*do-symbols, do-external-symbols, do-all-symbols*"
+title: "do-symbols, do-external-symbols, do-all-symbols"
 ---
 
 # do-symbols, do-external-symbols, do-all-symbols

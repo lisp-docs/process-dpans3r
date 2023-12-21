@@ -1,5 +1,5 @@
 ---
-title: "*unread-char*"
+title: "unread-char"
 ---
 
 # unread-char

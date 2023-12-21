@@ -60,22 +60,37 @@ def process_file_without_codeblocks(filename, root):
     write_to_file(filepath, final_text)
 
 def add_cl_links(file_text):
+    curr_text = replace_dictionary_links(file_text)
+    curr_text = replace_glossary_links(curr_text)
+    return curr_text
+
+def replace_glossary_links(file_text):
+    print("")
+
+def replace_dictionary_links(file_text):
     dictionary_items = re.finditer(DICTIONARY_ITEM_REGEX, file_text)
-    glossary_items = re.finditer(GLOSSARY_ITEM_REGEX, file_text)
+    # glossary_items = re.finditer(GLOSSARY_ITEM_REGEX, file_text)
     title_lines_matches_iter = re.finditer(TITLE_LINES_REGEX, file_text)
     title_lines_matches = [m for m in title_lines_matches_iter]
-    all_items = [m for m in dictionary_items] + [m for m in glossary_items]
+    # all_items = [m for m in dictionary_items] + [m for m in glossary_items]
+    all_items = [m for m in dictionary_items]
     text_array = []
     start_index = 0
+    # if "If multiple iteration clauses are used to control iteration, v" in file_text:
+    #     import pdb; pdb.set_trace()
+    #     from pprint import pprint
+        # pprint(all_items)
+        # all_items[5].group("item")
     for match in all_items:
-        # import pdb; pdb.set_trace()
         if len(title_lines_matches) > 0:
             in_titles = [match.start() > title.start() and match.start() < title.end() for title in title_lines_matches]
             in_title = functools.reduce(lambda x,y: x or y, in_titles)
         else:
             in_title = False
-        if not in_title and match.end() - match.start() <= 32:
-            cl_link = '<ClLink styled={true}>'  + match.group("item") + '</ClLink>'
+        item = match.group("item")
+        if not in_title and len(item) <= 32 and len(item) > 0:
+            extra_asterisk = "*" if len(item) > 0 and item[-1] == "\\" else ""
+            cl_link = '<ClLinks styled={true}>'  + item + extra_asterisk + '</ClLinks>'
             text_array.append(file_text[start_index:match.start()])
             text_array.append(cl_link)
             start_index = match.end()

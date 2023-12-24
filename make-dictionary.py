@@ -6,7 +6,7 @@ MD_DIR = "./output/"
 # CODE_BLOCKS_JSON = "./output/code-blocks.json"
 DICTIONARY_LINKS = "./output/dictionary-entries.md"
 DICTIONARY_TEXT = []
-ITEM_EXPLICIT_REGEX = r'((\*\∗\*)?\*\*(?P<item_name>([\w=/<>\-+\\]+(-[\w=/<>\-+\\]+)*)(, ([\w=/<>\-+\\]+(-[\w=/<>\-+\\]+)*))*)\*\*[\s\n]*\*(\∗ )?(?P<item_type>\w+([\s\n]*\w+)*)\*[\s\n]*\*\*(Syntax|(Class Precedence List)|(Value Type)|Supertypes|(Constant Value))*:\*\*)'
+ITEM_EXPLICIT_REGEX = r'((\*\∗\*)?\*\*(?P<item_name>([\d\*#\w=/<>\-+\\]+(-[\w=/<>\-+\\]+)*)(, ([\w=/<>\-+\\]+(-[\w=/<>\-+\\]+)*))*)\*\*[\s\n]*\*(\∗ )?(?P<item_type>\w+([\s\n]*\w+)*)\*[\s\n]*\*\*(Syntax|(Class Precedence List)|(Value Type)|Supertypes|(Constant Value))*:\*\*)'
 
 def get_last_section(filenames):
     # section_name_regex = r'_((\w-)+).*\.md'

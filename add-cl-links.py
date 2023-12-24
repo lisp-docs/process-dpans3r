@@ -10,11 +10,19 @@ START_CODE_BLOCK = f"```lisp{UNTIL_NEW_LINE_REGEX}"
 END_CODE_BLOCK = "```"
 DICTIONARY_ITEM_NAME = LOOK_AHEAD_REGEX_MATCH_OPEN.format("\\*\\*", "\\S")
 GLOSSARY_ITEM_NAME = LOOK_AHEAD_REGEX_MATCH_OPEN.format("\\*", "\\S")
-DICTIONARY_ITEM_REGEX = f'(?P<pre>[^\\\\]\*\*)(?P<item>{DICTIONARY_ITEM_NAME}[^\\\\])(?P<post>\*\*)'
-GLOSSARY_ITEM_REGEX = f'(?P<pre>[^\\\\]\*)(?P<item>{GLOSSARY_ITEM_NAME}[^\\\\])(?P<post>\*)'
+DICTIONARY_ITEM_REGEX = f'(?P<pre>[^\\\\])(\\*\\*)(?P<item>{DICTIONARY_ITEM_NAME}[^\\\\])(?P<post>\\*\\*)'
+GLOSSARY_ITEM_REGEX = f'(?P<pre>[^\\*\\\\])(\\*)(?P<item>{GLOSSARY_ITEM_NAME}[^\\*\\\\])(?P<post>\\*)'
 TITLE_LINES_REGEX = r'\n#(?:(?!\n)[^\n])*'
 dictionary_json_path = "./glossary_output/dictionary.json"
 glossary_json_path = "./glossary_output/glossary.json"
+
+file = open(dictionary_json_path, "r")
+dictionary_json = json.load(file)
+file.close()
+
+file = open(glossary_json_path, "r")
+glossary_json = json.load(file)
+file.close()
 
 def get_file_text(filepath):
     file = open(filepath, "r")
@@ -81,14 +89,25 @@ def is_in_glossary(match, glossary):
             is_glossary_entry = True
             # return {"valid": is_glossary_entry, "term": term}
             return (is_glossary_entry, term)
-        else:
-            is_glossary_entry = False
+        # else:
+        #     is_glossary_entry = False
     word_match = re.search(r'([\w\-]+)', match.group(0))
     if word_match:
-        import pdb; pdb.set_trace()
-        is_word_match_glossary_entry = word_match.group(0) in glossary
-    else:
-        is_word_match_glossary_entry = False
+        item = word_match.group(0)
+        # is_word_match_glossary_entry = word_match.group(0) in glossary
+        if len(item) > 0 and item[0].lower() in glossary:
+            glossary_letter = glossary[item[0].lower()]
+            if item.lower() in glossary_letter:
+                is_glossary_entry = True
+                term = item.lower()
+                return (is_glossary_entry, term)
+                # return {"valid": is_glossary_entry, "term": term}
+            elif len(item) > 1 and item[-1].lower() == "s" and item[:-1].lower() in glossary_letter:
+                term = item[:-1].lower()
+                is_glossary_entry = True
+                # return {"valid": is_glossary_entry, "term": term}
+                return (is_glossary_entry, term)
+    # import pdb; pdb.set_trace()
 
     # return {"valid": False, "term": None}
     return (False, None)
@@ -100,9 +119,6 @@ def replace_glossary_links(file_text):
     all_items = [m for m in glossary_items]
     text_array = []
     start_index = 0
-    file = open(glossary_json_path, "r")
-    glossary_json = json.load(file)
-    file.close()
     for match in all_items:
         if len(title_lines_matches) > 0:
             in_titles = [match.start() > title.start() and match.start() < title.end() for title in title_lines_matches]
@@ -121,7 +137,8 @@ def replace_glossary_links(file_text):
             extra_asterisk = "*" if len(item) > 0 and item[-1] == "\\" else ""
             pre = match.group("pre")
             post = match.group("post")
-            cl_link = pre + '<ClLinks term={"' + term + '"}>'  + item + extra_asterisk + '</ClLinks>' + post
+            cl_link = pre + '<ClLinks styled={true} term={"' + term + '"}><i>'  + item + extra_asterisk + '</i></ClLinks>' 
+            # + post
             text_array.append(file_text[start_index:match.start()])
             text_array.append(cl_link)
             start_index = match.end()
@@ -136,9 +153,7 @@ def replace_dictionary_links(file_text):
     all_items = [m for m in dictionary_items]
     text_array = []
     start_index = 0
-    file = open(dictionary_json_path, "r")
-    dictionary_json = json.load(file)
-    file.close()
+    
     for match in all_items:
         if len(title_lines_matches) > 0:
             in_titles = [match.start() > title.start() and match.start() < title.end() for title in title_lines_matches]
@@ -165,7 +180,8 @@ def replace_dictionary_links(file_text):
             extra_asterisk = "*" if len(item) > 0 and item[-1] == "\\" else ""
             pre = match.group("pre")
             post = match.group("post")
-            cl_link = pre + '<ClLinks term={"' + term + '"}>'  + item + extra_asterisk + '</ClLinks>' + post
+            cl_link = pre + '<ClLinks styled={true} term={"' + term + '"}><b>'  + item + extra_asterisk + '</b></ClLinks>' 
+            # + post
             text_array.append(file_text[start_index:match.start()])
             text_array.append(cl_link)
             start_index = match.end()

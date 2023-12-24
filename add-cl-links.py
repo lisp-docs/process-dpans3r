@@ -67,6 +67,32 @@ def add_cl_links(file_text):
     curr_text = replace_glossary_links(curr_text)
     return curr_text
 
+def is_in_glossary(match, glossary):
+    item = match.group("item")
+    if len(item) > 0 and item[0].lower() in glossary:
+        glossary_letter = glossary[item[0].lower()]
+        if item.lower() in glossary_letter:
+            is_glossary_entry = True
+            term = item.lower()
+            return (is_glossary_entry, term)
+            # return {"valid": is_glossary_entry, "term": term}
+        elif len(item) > 1 and item[-1].lower() == "s" and item[:-1].lower() in glossary_letter:
+            term = item[:-1].lower()
+            is_glossary_entry = True
+            # return {"valid": is_glossary_entry, "term": term}
+            return (is_glossary_entry, term)
+        else:
+            is_glossary_entry = False
+    word_match = re.search(r'([\w\-]+)', match.group(0))
+    if word_match:
+        import pdb; pdb.set_trace()
+        is_word_match_glossary_entry = word_match.group(0) in glossary
+    else:
+        is_word_match_glossary_entry = False
+
+    # return {"valid": False, "term": None}
+    return (False, None)
+
 def replace_glossary_links(file_text):
     glossary_items = re.finditer(GLOSSARY_ITEM_REGEX, file_text)
     title_lines_matches_iter = re.finditer(TITLE_LINES_REGEX, file_text)
@@ -88,19 +114,14 @@ def replace_glossary_links(file_text):
         inside_table = "|" in match.group(0)
         is_small = len(item) <= 32 and len(item) > 0
         in_right_place = not in_title and not inside_table
-        is_glossary_entry = item in glossary_json
-        word_match = re.search(r'([\w\-]+)', match.group(0))
-        if word_match:
-            is_word_match_glossary_entry = word_match.group(0) in glossary_json
-        else:
-            is_word_match_glossary_entry = False
-        is_valid_entry = is_glossary_entry or is_word_match_glossary_entry
+
+        (is_valid_entry, term) = is_in_glossary(match, glossary_json)
         if in_right_place and is_small and not already_has_cllinks and is_valid_entry:
             # print(item)
             extra_asterisk = "*" if len(item) > 0 and item[-1] == "\\" else ""
             pre = match.group("pre")
             post = match.group("post")
-            cl_link = pre + '<ClLinks>'  + item + extra_asterisk + '</ClLinks>' + post
+            cl_link = pre + '<ClLinks term={"' + term + '"}>'  + item + extra_asterisk + '</ClLinks>' + post
             text_array.append(file_text[start_index:match.start()])
             text_array.append(cl_link)
             start_index = match.end()
@@ -132,7 +153,7 @@ def replace_dictionary_links(file_text):
         is_dictionary_entry = item in dictionary_json
         # if "do\*" in match.group(0):
         word_match = re.search(r'([\w\-]+)', match.group(0))
-        if word_match:
+        if word_match and not is_dictionary_entry:
             is_word_match_dictionary_entry = word_match.group(0) in dictionary_json
         else:
             is_word_match_dictionary_entry = False
@@ -140,10 +161,11 @@ def replace_dictionary_links(file_text):
         is_valid_entry = is_dictionary_entry or is_word_match_dictionary_entry
         if in_right_place and is_small and not already_has_cllinks and is_valid_entry:
             # print(item)
+            term = item if is_dictionary_entry else word_match.group(0)
             extra_asterisk = "*" if len(item) > 0 and item[-1] == "\\" else ""
             pre = match.group("pre")
             post = match.group("post")
-            cl_link = pre + '<ClLinks>'  + item + extra_asterisk + '</ClLinks>' + post
+            cl_link = pre + '<ClLinks term={"' + term + '"}>'  + item + extra_asterisk + '</ClLinks>' + post
             text_array.append(file_text[start_index:match.start()])
             text_array.append(cl_link)
             start_index = match.end()

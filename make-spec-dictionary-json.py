@@ -2,6 +2,7 @@ import re, sys, os, subprocess, json
 from pprint import pprint
 
 DICTIONARY_FILE = "./glossary_output/dictionary.json"
+TITLE_REGEX = r'(title:\s"(?P<title>[^"]+)")'
 
 # TODO delete this function???
 def make_dictionary_items_dict_for_file(filepath):
@@ -30,6 +31,15 @@ def make_dictionary_items_dict_for_file(filepath):
         not_matched.append([filepath, new_text])
     return (dictionary_items, not_matched)
 
+def get_title_items(filepath):
+    file = open(filepath, "r")
+    text = file.read()
+    file.close()
+    title_match = re.search(TITLE_REGEX, text)
+    if title_match:
+        return [title_match.group("title").strip()] + [item.strip() for item in title_match.group("title").split(",")]
+    else:
+        return None
 
 def make_dictionary_items_dict(given_dir):
     dictionary_items = {}
@@ -45,12 +55,14 @@ def make_dictionary_items_dict(given_dir):
                     if filename.endswith(".md") and not filename.startswith("_"):
                         filepath = os.path.join(root, filename)
                         # print(filename)
-                        item = filename.replace(".md", "")
+                        # item = filename.replace(".md", "")
+                        items = get_title_items(filepath)
                         url = "/".join(filepath.split("/")[-4:]).replace(".md", "")
                         # print(filepath)
                         # print(item)
                         # print(url)
-                        dictionary_items[item] = url
+                        for item in items:
+                            dictionary_items[item] = url
         file = open(DICTIONARY_FILE, "w")
         file.write(json.dumps(dictionary_items))
         file.close()

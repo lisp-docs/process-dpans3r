@@ -137,7 +137,7 @@ def replace_glossary_links(file_text):
             extra_asterisk = "*" if len(item) > 0 and item[-1] == "\\" else ""
             pre = match.group("pre")
             post = match.group("post")
-            cl_link = pre + '<ClLinks styled={true} term={"' + term + '"}><i>'  + item + extra_asterisk + '</i></ClLinks>' 
+            cl_link = pre + '<GlossaryTerm styled={true} term={"' + term + '"}><i>'  + item + extra_asterisk + '</i></GlossaryTerm>' 
             # + post
             text_array.append(file_text[start_index:match.start()])
             text_array.append(cl_link)
@@ -180,7 +180,7 @@ def replace_dictionary_links(file_text):
             extra_asterisk = "*" if len(item) > 0 and item[-1] == "\\" else ""
             pre = match.group("pre")
             post = match.group("post")
-            cl_link = pre + '<ClLinks styled={true} term={"' + term + '"}><b>'  + item + extra_asterisk + '</b></ClLinks>' 
+            cl_link = pre + '<DictionaryLink styled={true} term={"' + term + '"}><b>'  + item + extra_asterisk + '</b></DictionaryLink>' 
             # + post
             text_array.append(file_text[start_index:match.start()])
             text_array.append(cl_link)

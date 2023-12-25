@@ -1,4 +1,4 @@
-*∗***print-radix***∗ Variable* 
+*∗<DictionaryLink styled={true} term={"print-radix"}><b>*print-radix*</b></DictionaryLink>∗ Variable* 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**\*print-base\***—a *radix* . **\*print-radix\***—a *generalized boolean*. 
+**\*print-base\***—a <GlossaryTerm styled={true} term={"radix"}><i>radix</i></GlossaryTerm> . <DictionaryLink styled={true} term={"print-radix"}><b>\*print-radix\*</b></DictionaryLink>—a *generalized boolean*. 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-The initial *value* of **\*print-base\*** is 10. The initial *value* of **\*print-radix\*** is *false*. 
+The initial <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of **\*print-base\*** is 10. The initial <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of <DictionaryLink styled={true} term={"print-radix"}><b>\*print-radix\*</b></DictionaryLink> is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
@@ -22,15 +22,15 @@ The initial *value* of **\*print-base\*** is 10. The initial *value* of **\*prin
 
 
 
-**\*print-base\*** and **\*print-radix\*** control the printing of *rationals*. The *value* of **\*print-base\*** is called the *current output base*. 
+**\*print-base\*** and <DictionaryLink styled={true} term={"print-radix"}><b>\*print-radix\*</b></DictionaryLink> control the printing of <GlossaryTerm styled={true} term={"rational"}><i>rationals</i></GlossaryTerm>. The <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of **\*print-base\*** is called the *current output base*. 
 
 
 
-The *value* of **\*print-base\*** is the *radix* in which the printer will print *rationals*. For radices above 10, letters of the alphabet are used to represent digits above 9. 
+The <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of **\*print-base\*** is the <GlossaryTerm styled={true} term={"radix"}><i>radix</i></GlossaryTerm> in which the printer will print <GlossaryTerm styled={true} term={"rational"}><i>rationals</i></GlossaryTerm>. For radices above 10, letters of the alphabet are used to represent digits above 9. 
 
 
 
-If the *value* of **\*print-radix\*** is *true*, the printer will print a radix specifier to indicate the *radix* in which it is printing a *rational* number. The radix specifier is always printed using lowercase letters. If **\*print-base\*** is 2, 8, or 16, then the radix specifier used is #b, #o, or #x, respectively. For *integers*, base ten is indicated by a trailing decimal point instead of a leading radix specifier; for *ratios*, #10r is used. 
+If the <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of <DictionaryLink styled={true} term={"print-radix"}><b>\*print-radix\*</b></DictionaryLink> is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>, the printer will print a radix specifier to indicate the <GlossaryTerm styled={true} term={"radix"}><i>radix</i></GlossaryTerm> in which it is printing a <GlossaryTerm styled={true} term={"rational"}><i>rational</i></GlossaryTerm> number. The radix specifier is always printed using lowercase letters. If **\*print-base\*** is 2, 8, or 16, then the radix specifier used is #b, #o, or #x, respectively. For *integers*, base ten is indicated by a trailing decimal point instead of a leading radix specifier; for <GlossaryTerm styled={true} term={"ratio"}><i>ratios</i></GlossaryTerm>, #10r is used. 
 
 
 
@@ -72,7 +72,7 @@ If the *value* of **\*print-radix\*** is *true*, the printer will print a radix 
 
 
 
-Might be *bound* by **format**, and **write**, **write-to-string**. 
+Might be <GlossaryTerm styled={true} term={"bound"}><i>bound</i></GlossaryTerm> by <DictionaryLink styled={true} term={"format"}><b>format</b></DictionaryLink>, and <DictionaryLink styled={true} term={"write"}><b>write</b></DictionaryLink>, <DictionaryLink styled={true} term={"write-to-string"}><b>write-to-string</b></DictionaryLink>. 
 
 
 
@@ -80,7 +80,7 @@ Might be *bound* by **format**, and **write**, **write-to-string**.
 
 
 
-**format**, **write**, **write-to-string** 
+<DictionaryLink styled={true} term={"format"}><b>format</b></DictionaryLink>, <DictionaryLink styled={true} term={"write"}><b>write</b></DictionaryLink>, <DictionaryLink styled={true} term={"write-to-string"}><b>write-to-string</b></DictionaryLink> 
 
 
 

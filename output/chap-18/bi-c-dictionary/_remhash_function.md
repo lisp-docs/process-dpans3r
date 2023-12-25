@@ -1,4 +1,4 @@
-**remhash** *Function* 
+**remhash** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**remhash** *key hash-table → generalized-boolean* 
+<DictionaryLink styled={true} term={"remhash"}><b>remhash</b></DictionaryLink> *key hash-table → generalized-boolean* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*key*—an *object*. 
+<GlossaryTerm styled={true} term={"key"}><i>key</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -30,7 +30,7 @@
 
 
 
-Removes the entry for *key* in *hash-table*, if any. Returns *true* if there was such an entry, or *false* otherwise. 
+Removes the entry for <GlossaryTerm styled={true} term={"key"}><i>key</i></GlossaryTerm> in *hash-table*, if any. Returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if there was such an entry, or <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm> otherwise. 
 
 
 
@@ -65,7 +65,7 @@ Hash
 
 
 
-**maphash** 
+<DictionaryLink styled={true} term={"maphash"}><b>maphash</b></DictionaryLink> 
 
 
 

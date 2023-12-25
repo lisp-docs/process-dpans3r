@@ -1,4 +1,4 @@
-**terpri, fresh-line** *Function* 
+**terpri, fresh-line** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,11 +6,11 @@
 
 
 
-**terpri** &amp;optional *output-stream →* **nil** 
+<DictionaryLink styled={true} term={"terpri"}><b>terpri</b></DictionaryLink> &amp;optional *output-stream →* <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> 
 
 
 
-**fresh-line** &amp;optional *output-stream → generalized-boolean* 
+<DictionaryLink styled={true} term={"fresh-line"}><b>fresh-line</b></DictionaryLink> &amp;optional *output-stream → generalized-boolean* 
 
 
 
@@ -30,11 +30,11 @@
 
 
 
-**terpri** outputs a *newline* to *output-stream*. 
+<DictionaryLink styled={true} term={"terpri"}><b>terpri</b></DictionaryLink> outputs a <GlossaryTerm styled={true} term={"newline"}><i>newline</i></GlossaryTerm> to *output-stream*. 
 
 
 
-**fresh-line** is similar to **terpri** but outputs a *newline* only if the *output-stream* is not already at the start of a line. If for some reason this cannot be determined, then a *newline* is output anyway. **fresh-line** returns *true* if it outputs a *newline*; otherwise it returns *false*. 
+<DictionaryLink styled={true} term={"fresh-line"}><b>fresh-line</b></DictionaryLink> is similar to <DictionaryLink styled={true} term={"terpri"}><b>terpri</b></DictionaryLink> but outputs a <GlossaryTerm styled={true} term={"newline"}><i>newline</i></GlossaryTerm> only if the *output-stream* is not already at the start of a line. If for some reason this cannot be determined, then a <GlossaryTerm styled={true} term={"newline"}><i>newline</i></GlossaryTerm> is output anyway. <DictionaryLink styled={true} term={"fresh-line"}><b>fresh-line</b></DictionaryLink> returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if it outputs a <GlossaryTerm styled={true} term={"newline"}><i>newline</i></GlossaryTerm>; otherwise it returns <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
@@ -69,7 +69,7 @@ The *output-stream* is modified.
 
 
 
-**\*standard-output\***, **\*terminal-io\***. 
+**\*standard-output\***, <DictionaryLink styled={true} term={"terminal-io"}><b>\*terminal-io\*</b></DictionaryLink>. 
 
 
 
@@ -97,7 +97,7 @@ None.
 
 
 
-**terpri** is identical in effect to 
+<DictionaryLink styled={true} term={"terpri"}><b>terpri</b></DictionaryLink> is identical in effect to 
 
 
 

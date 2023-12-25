@@ -1,4 +1,4 @@
-**machine-version** *Function* 
+**machine-version** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**machine-version** *hno argumentsi → description* 
+<DictionaryLink styled={true} term={"machine-version"}><b>machine-version</b></DictionaryLink> *hno argumentsi → description* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*description*—a *string* or **nil**. 
+*description*—a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -22,7 +22,7 @@
 
 
 
-Returns a *string* that identifies the version of the computer hardware on which Common Lisp is running, or **nil** if no such value can be computed. 
+Returns a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> that identifies the version of the computer hardware on which Common Lisp is running, or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> if no such value can be computed. 
 
 
 
@@ -48,7 +48,7 @@ Returns a *string* that identifies the version of the computer hardware on which
 
 
 
-The machine version, and the *implementation*. 
+The machine version, and the <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm>. 
 
 
 
@@ -56,7 +56,7 @@ The machine version, and the *implementation*.
 
 
 
-**machine-type**, **machine-instance** 
+<DictionaryLink styled={true} term={"machine-type"}><b>machine-type</b></DictionaryLink>, <DictionaryLink styled={true} term={"machine-instance"}><b>machine-instance</b></DictionaryLink> 
 
 
 

@@ -1,4 +1,4 @@
-**pathnamep** *Function* 
+**pathnamep** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**pathnamep** *object → generalized-boolean* 
+<DictionaryLink styled={true} term={"pathnamep"}><b>pathnamep</b></DictionaryLink> *object → generalized-boolean* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*object*—an *object*. 
+<GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-Returns *true* if *object* is of *type* **pathname**; otherwise, returns *false*. 
+Returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"pathname"}><b>pathname</b></DictionaryLink>; otherwise, returns <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
@@ -48,7 +48,7 @@ Returns *true* if *object* is of *type* **pathname**; otherwise, returns *false*
 
 
 
-(pathnamep *object*) *≡* (typep *object* ’pathname) 
+(pathnamep <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>) *≡* (typep <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> ’pathname) 
 
 
 
@@ -72,23 +72,23 @@ Returns *true* if *object* is of *type* **pathname**; otherwise, returns *false*
 
 
 
-**pathname-host** *pathname* &amp;key *case → host* 
+**pathname-host** <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm> &amp;key *case → host* 
 
 
 
-**pathname-device** *pathname* &amp;key *case → device* 
+**pathname-device** <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm> &amp;key *case → device* 
 
 
 
-**pathname-directory** *pathname* &amp;key *case → directory* 
+**pathname-directory** <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm> &amp;key *case → directory* 
 
 
 
-**pathname-name** *pathname* &amp;key *case → name* 
+**pathname-name** <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm> &amp;key *case → name* 
 
 
 
-**pathname-type** *pathname* &amp;key *case → type* 
+**pathname-type** <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm> &amp;key *case → type* 
 
 
 
@@ -100,11 +100,11 @@ Returns *true* if *object* is of *type* **pathname**; otherwise, returns *false*
 
 
 
-*pathname*—a *pathname designator* . 
+<GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm>—a *pathname designator* . 
 
 
 
-*case*—one of :local or :common. The default is :local. 
+<GlossaryTerm styled={true} term={"case"}><i>case</i></GlossaryTerm>—one of :local or :common. The default is :local. 
 
 
 
@@ -120,11 +120,11 @@ Returns *true* if *object* is of *type* **pathname**; otherwise, returns *false*
 
 
 
-*name*—a *valid pathname name*. 
+<GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm>—a *valid pathname name*. 
 
 
 
-*type*—a *valid pathname type*. 
+<GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm>—a *valid pathname type*. 
 
 
 
@@ -136,15 +136,15 @@ Returns *true* if *object* is of *type* **pathname**; otherwise, returns *false*
 
 
 
-These functions return the components of *pathname*. 
+These functions return the components of <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm>. 
 
 
 
-If the *pathname designator* is a *pathname*, it represents the name used to open the file. This may be, but is not required to be, the actual name of the file. 
+If the *pathname designator* is a <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm>, it represents the name used to open the file. This may be, but is not required to be, the actual name of the file. 
 
 
 
-If *case* is supplied, it is treated as described in Section 19.2.2.1.2 (Case in Pathname Components). **Examples:**
+If <GlossaryTerm styled={true} term={"case"}><i>case</i></GlossaryTerm> is supplied, it is treated as described in Section 19.2.2.1.2 (Case in Pathname Components). **Examples:**
 ```lisp
 
 
@@ -216,7 +216,7 @@ If *case* is supplied, it is treated as described in Section 19.2.2.1.2 (Case in
 
 
 
-The *implementation* and the host *file system*. 
+The <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm> and the host *file system*. 
 
 
 
@@ -224,7 +224,7 @@ The *implementation* and the host *file system*.
 
 
 
-Should signal an error of *type* **type-error** if its first argument is not a *pathname*. 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if its first argument is not a <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm>. 
 
 
 
@@ -232,7 +232,7 @@ Should signal an error of *type* **type-error** if its first argument is not a *
 
 
 
-**pathname**, **logical-pathname**, Section 20.1 (File System Concepts), Section 19.1.2 (Pathnames as Filenames) 
+<DictionaryLink styled={true} term={"pathname"}><b>pathname</b></DictionaryLink>, <DictionaryLink styled={true} term={"logical-pathname"}><b>logical-pathname</b></DictionaryLink>, Section 20.1 (File System Concepts), Section 19.1.2 (Pathnames as Filenames) 
 
 
 

@@ -1,4 +1,4 @@
-**+** *Function* 
+**+** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**+** &amp;rest *numbers → sum* 
+<DictionaryLink styled={true} term={"+"}><b>+</b></DictionaryLink> &amp;rest *numbers → sum* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*number*—a *number* . 
+<GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> . 
 
 
 
-*sum*—a *number* . 
+*sum*—a <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> . 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-Returns the sum of *numbers*, performing any necessary type conversions in the process. If no *numbers* are supplied, 0 is returned. 
+Returns the sum of <GlossaryTerm styled={true} term={"number"}><i>numbers</i></GlossaryTerm>, performing any necessary type conversions in the process. If no <GlossaryTerm styled={true} term={"number"}><i>numbers</i></GlossaryTerm> are supplied, 0 is returned. 
 
 
 
@@ -43,7 +43,7 @@ Returns the sum of *numbers*, performing any necessary type conversions in the p
 
 
 
-Might signal **type-error** if some *argument* is not a *number* . Might signal **arithmetic-error**. 
+Might signal <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if some <GlossaryTerm styled={true} term={"argument"}><i>argument</i></GlossaryTerm> is not a <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> . Might signal <DictionaryLink styled={true} term={"arithmetic-error"}><b>arithmetic-error</b></DictionaryLink>. 
 
 
 
@@ -75,11 +75,11 @@ Section 12.1.1 (Numeric Operations), Section 12.1.3 (Rational Computations), Sec
 
 
 
-*number*, *minuend*, *subtrahend*—a *number* . 
+<GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm>, *minuend*, *subtrahend*—a <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> . 
 
 
 
-*negation*, *difference*—a *number* . 
+*negation*, *difference*—a <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> . 
 
 
 
@@ -87,7 +87,7 @@ Section 12.1.1 (Numeric Operations), Section 12.1.3 (Rational Computations), Sec
 
 
 
-The *function* **-** performs arithmetic subtraction and negation. 
+The <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> <DictionaryLink styled={true} term={"-"}><b>-</b></DictionaryLink> performs arithmetic subtraction and negation. 
 
 
 
@@ -103,15 +103,15 @@ The *function* **-** performs arithmetic subtraction and negation.
 
 
 
-If only one *number* is supplied, the negation of that *number* is returned. 
+If only one <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> is supplied, the negation of that <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> is returned. 
 
 
 
-If more than one *argument* is given, it subtracts all of the *subtrahends* from the *minuend* and returns the result. 
+If more than one <GlossaryTerm styled={true} term={"argument"}><i>argument</i></GlossaryTerm> is given, it subtracts all of the *subtrahends* from the *minuend* and returns the result. 
 
 
 
-The *function* **-** performs necessary type conversions. 
+The <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> <DictionaryLink styled={true} term={"-"}><b>-</b></DictionaryLink> performs necessary type conversions. 
 
 
 
@@ -130,7 +130,7 @@ The *function* **-** performs necessary type conversions.
 
 
 
-Might signal **type-error** if some *argument* is not a *number* . Might signal **arithmetic-error**. 
+Might signal <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if some <GlossaryTerm styled={true} term={"argument"}><i>argument</i></GlossaryTerm> is not a <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> . Might signal <DictionaryLink styled={true} term={"arithmetic-error"}><b>arithmetic-error</b></DictionaryLink>. 
 
 
 

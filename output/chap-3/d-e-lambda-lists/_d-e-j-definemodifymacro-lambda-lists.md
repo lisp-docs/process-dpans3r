@@ -2,7 +2,7 @@
 
 
 
-A *define-modify-macro lambda list* is used by **define-modify-macro**. 
+A *define-modify-macro lambda list* is used by <DictionaryLink styled={true} term={"define-modify-macro"}><b>define-modify-macro</b></DictionaryLink>. 
 
 
 
@@ -22,7 +22,7 @@ A *define-modify-macro lambda list* can contain the *lambda list keywords* shown
 
 
 
-*Define-modify-macro lambda lists* are similar to *ordinary lambda lists*, but do not support keyword arguments. **define-modify-macro** has no need match keyword arguments, and a *rest parameter* is sufficient. *Aux variables* are also not supported, since **define-modify-macro** has no body *forms* which could refer to such *bindings*. See the *macro* **define-modify-macro**. 
+*Define-modify-macro lambda lists* are similar to *ordinary lambda lists*, but do not support keyword arguments. <DictionaryLink styled={true} term={"define-modify-macro"}><b>define-modify-macro</b></DictionaryLink> has no need match keyword arguments, and a *rest parameter* is sufficient. *Aux variables* are also not supported, since <DictionaryLink styled={true} term={"define-modify-macro"}><b>define-modify-macro</b></DictionaryLink> has no body <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm> which could refer to such <GlossaryTerm styled={true} term={"binding"}><i>bindings</i></GlossaryTerm>. See the <GlossaryTerm styled={true} term={"macro"}><i>macro</i></GlossaryTerm> <DictionaryLink styled={true} term={"define-modify-macro"}><b>define-modify-macro</b></DictionaryLink>. 
 
 
 

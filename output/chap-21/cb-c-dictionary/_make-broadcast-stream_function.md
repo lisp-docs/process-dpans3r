@@ -1,4 +1,4 @@
-**make-broadcast-stream** *Function* 
+**make-broadcast-stream** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**make-broadcast-stream** &amp;rest *streams → broadcast-stream* 
+<DictionaryLink styled={true} term={"make-broadcast-stream"}><b>make-broadcast-stream</b></DictionaryLink> &amp;rest *streams → broadcast-stream* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*stream*—an *output stream*. 
+<GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>—an *output stream*. 
 
 
 
@@ -48,7 +48,7 @@ Returns a *broadcast stream*.
 
 
 
-Should signal an error of *type* **type-error** if any *stream* is not an *output stream*. 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if any <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm> is not an *output stream*. 
 
 
 
@@ -56,7 +56,7 @@ Should signal an error of *type* **type-error** if any *stream* is not an *outpu
 
 
 
-**broadcast-stream-streams** 
+<DictionaryLink styled={true} term={"broadcast-stream-streams"}><b>broadcast-stream-streams</b></DictionaryLink> 
 
 
 

@@ -1,4 +1,4 @@
-**defpackage** *Macro* 
+**defpackage** <GlossaryTerm styled={true} term={"macro"}><i>Macro</i></GlossaryTerm> 
 
 
 
@@ -6,15 +6,15 @@
 
 
 
-**defpackage** *defined-package-name* [[ *↓option* ]] *→ package* 
+<DictionaryLink styled={true} term={"defpackage"}><b>defpackage</b></DictionaryLink> *defined-package-name* [[ *↓option* ]] *→ package* 
 
 
 
-*option::*=*\{*(:nicknames *\{nickname\}*\*)*\}*\* *|* 
+*option::*=*\{*(:nicknames <GlossaryTerm styled={true} term={"nickname"}><i>\{nickname\}</i></GlossaryTerm>\*)*\}*\* *|* 
 
 
 
-(:documentation *string*) *|* 
+(:documentation <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>) *|* 
 
 
 
@@ -58,7 +58,7 @@
 
 
 
-*nickname*—a *string designator* . 
+<GlossaryTerm styled={true} term={"nickname"}><i>nickname</i></GlossaryTerm>—a *string designator* . 
 
 
 
@@ -66,7 +66,7 @@
 
 
 
-*package*—the *package* named *package-name*. 
+<GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>—the <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> named *package-name*. 
 
 
 
@@ -74,11 +74,11 @@
 
 
 
-**defpackage** creates a *package* as specified and returns the *package*. 
+<DictionaryLink styled={true} term={"defpackage"}><b>defpackage</b></DictionaryLink> creates a <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> as specified and returns the <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>. 
 
 
 
-If *defined-package-name* already refers to an existing *package*, the name-to-package mapping for that name is not changed. If the new definition is at variance with the current state of that *package*, the consequences are undefined; an implementation might choose to modify the existing *package* to reflect the new definition. If *defined-package-name* is a *symbol*, its *name* is used. 
+If *defined-package-name* already refers to an existing <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>, the name-to-package mapping for that name is not changed. If the new definition is at variance with the current state of that <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>, the consequences are undefined; an implementation might choose to modify the existing <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> to reflect the new definition. If *defined-package-name* is a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>, its <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> is used. 
 
 
 
@@ -90,7 +90,7 @@ The standard *options* are described below.
 
 
 
-The arguments to :nicknames set the *package*’s nicknames to the supplied names. 
+The arguments to :nicknames set the <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>’s nicknames to the supplied names. 
 
 
 
@@ -110,11 +110,11 @@ The argument to :documentation specifies a *documentation string*; it is attache
 
 
 
-**defpackage** 
+<DictionaryLink styled={true} term={"defpackage"}><b>defpackage</b></DictionaryLink> 
 
 
 
-*documentation string* to the *package*. At most one :documentation option can appear in a single **defpackage** *form*. 
+*documentation string* to the <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>. At most one :documentation option can appear in a single <DictionaryLink styled={true} term={"defpackage"}><b>defpackage</b></DictionaryLink> <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>. 
 
 
 
@@ -122,7 +122,7 @@ The argument to :documentation specifies a *documentation string*; it is attache
 
 
 
-The arguments to :use set the *packages* that the *package* named by *package-name* will inherit from. If :use is not supplied, it defaults to the same *implementation-dependent* value as the :use *argument* to **make-package**. 
+The arguments to :use set the <GlossaryTerm styled={true} term={"package"}><i>packages</i></GlossaryTerm> that the <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> named by *package-name* will inherit from. If :use is not supplied, it defaults to the same <GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm> value as the :use <GlossaryTerm styled={true} term={"argument"}><i>argument</i></GlossaryTerm> to <DictionaryLink styled={true} term={"make-package"}><b>make-package</b></DictionaryLink>. 
 
 
 
@@ -130,7 +130,7 @@ The arguments to :use set the *packages* that the *package* named by *package-na
 
 
 
-The arguments to :shadow, *symbol-names*, name *symbols* that are to be created in the *package* being defined. These *symbols* are added to the list of shadowing *symbols* effectively as if by **shadow**. 
+The arguments to :shadow, *symbol-names*, name <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> that are to be created in the <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> being defined. These <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> are added to the list of shadowing <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> effectively as if by <DictionaryLink styled={true} term={"shadow"}><b>shadow</b></DictionaryLink>. 
 
 
 
@@ -138,7 +138,7 @@ The arguments to :shadow, *symbol-names*, name *symbols* that are to be created 
 
 
 
-The *symbols* named by the argument *symbol-names* are found (involving a lookup as if by **find-symbol**) in the specified *package-name*. The resulting *symbols* are *imported* into the *package* being defined, and placed on the shadowing symbols list as if by **shadowing-import**. In no case are *symbols* created in any *package* other than the one being defined. 
+The <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> named by the argument *symbol-names* are found (involving a lookup as if by <DictionaryLink styled={true} term={"find-symbol"}><b>find-symbol</b></DictionaryLink>) in the specified *package-name*. The resulting <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> are *imported* into the <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> being defined, and placed on the shadowing symbols list as if by <DictionaryLink styled={true} term={"shadowing-import"}><b>shadowing-import</b></DictionaryLink>. In no case are <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> created in any <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> other than the one being defined. 
 
 
 
@@ -146,7 +146,7 @@ The *symbols* named by the argument *symbol-names* are found (involving a lookup
 
 
 
-The *symbols* named by the argument *symbol-names* are found in the *package* named by *package-name* and they are *imported* into the *package* being defined. In no case are *symbols* created in any *package* other than the one being defined. 
+The <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> named by the argument *symbol-names* are found in the <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> named by *package-name* and they are *imported* into the <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> being defined. In no case are <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> created in any <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> other than the one being defined. 
 
 
 
@@ -154,7 +154,7 @@ The *symbols* named by the argument *symbol-names* are found in the *package* na
 
 
 
-The *symbols* named by the argument *symbol-names* are found or created in the *package* being defined and *exported*. The :export option interacts with the :use option, since inherited *symbols* can be used rather than new ones created. The :export option interacts with the :import-from and :shadowing-import-from options, since *imported* symbols can be used rather than new ones created. If an argument to the :export option is *accessible* as an (inherited) *internal symbol* via **use-package**, that the *symbol* named by *symbol-name* is first *imported* into the *package* being defined, and is then *exported* from that *package*. 
+The <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> named by the argument *symbol-names* are found or created in the <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> being defined and <GlossaryTerm styled={true} term={"exported"}><i>exported</i></GlossaryTerm>. The :export option interacts with the :use option, since inherited <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> can be used rather than new ones created. The :export option interacts with the :import-from and :shadowing-import-from options, since *imported* symbols can be used rather than new ones created. If an argument to the :export option is <GlossaryTerm styled={true} term={"accessible"}><i>accessible</i></GlossaryTerm> as an (inherited) *internal symbol* via <DictionaryLink styled={true} term={"use-package"}><b>use-package</b></DictionaryLink>, that the <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> named by *symbol-name* is first *imported* into the <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> being defined, and is then <GlossaryTerm styled={true} term={"exported"}><i>exported</i></GlossaryTerm> from that <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>. 
 
 
 
@@ -162,7 +162,7 @@ The *symbols* named by the argument *symbol-names* are found or created in the *
 
 
 
-The *symbols* named by the argument *symbol-names* are found or created in the *package* being defined. The :intern option interacts with the :use option, since inherited *symbols* can be used rather than new ones created. 
+The <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> named by the argument *symbol-names* are found or created in the <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> being defined. The :intern option interacts with the :use option, since inherited <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> can be used rather than new ones created. 
 
 
 
@@ -170,7 +170,7 @@ The *symbols* named by the argument *symbol-names* are found or created in the *
 
 
 
-The argument to the :size option declares the approximate number of *symbols* expected in the *package*. This is an efficiency hint only and might be ignored by an implementation. 
+The argument to the :size option declares the approximate number of <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> expected in the <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>. This is an efficiency hint only and might be ignored by an implementation. 
 
 
 
@@ -186,11 +186,11 @@ The argument to the :size option declares the approximate number of *symbols* ex
 
 
 
-**defpackage** 
+<DictionaryLink styled={true} term={"defpackage"}><b>defpackage</b></DictionaryLink> 
 
 
 
-The order in which the options appear in a **defpackage** form is irrelevant. The order in which they are executed is as follows: 
+The order in which the options appear in a <DictionaryLink styled={true} term={"defpackage"}><b>defpackage</b></DictionaryLink> form is irrelevant. The order in which they are executed is as follows: 
 
 
 
@@ -210,11 +210,11 @@ The order in which the options appear in a **defpackage** form is irrelevant. Th
 
 
 
-Shadows are established first, since they might be necessary to block spurious name conflicts when the :use option is processed. The :use option is executed next so that :intern and :export options can refer to normally inherited *symbols*. The :export option is executed last so that it can refer to *symbols* created by any of the other options; in particular, *shadowing symbols* and *imported symbols* can be made external. 
+Shadows are established first, since they might be necessary to block spurious name conflicts when the :use option is processed. The :use option is executed next so that :intern and :export options can refer to normally inherited <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm>. The :export option is executed last so that it can refer to <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> created by any of the other options; in particular, *shadowing symbols* and *imported symbols* can be made external. 
 
 
 
-If a defpackage *form* appears as a *top level form*, all of the actions normally performed by this *macro* at load time must also be performed at compile time. 
+If a defpackage <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> appears as a *top level form*, all of the actions normally performed by this <GlossaryTerm styled={true} term={"macro"}><i>macro</i></GlossaryTerm> at load time must also be performed at compile time. 
 
 
 
@@ -241,7 +241,7 @@ If a defpackage *form* appears as a *top level form*, all of the actions normall
 
 
 
-Existing *packages*. 
+Existing <GlossaryTerm styled={true} term={"package"}><i>packages</i></GlossaryTerm>. 
 
 
 
@@ -249,19 +249,15 @@ Existing *packages*.
 
 
 
-If one of the supplied :nicknames already refers to an existing *package*, an error of *type* **package-error** is signaled. 
+If one of the supplied :nicknames already refers to an existing <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>, an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"package-error"}><b>package-error</b></DictionaryLink> is signaled. 
 
 
 
-An error of *type* **program-error** should be signaled if :size or :documentation appears more than once. 
-
-
+An error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"program-error"}><b>program-error</b></DictionaryLink> should be signaled if :size or :documentation appears more than once. 
 
 
 
 
-
- 
 
 
 
@@ -269,23 +265,27 @@ An error of *type* **program-error** should be signaled if :size or :documentati
 
 
 
-**defpackage** 
+ 
 
 
 
-Since *implementations* might allow extended *options* an error of *type* **program-error** should be signaled if an *option* is present that is not actually supported in the host *implementation*. 
+<DictionaryLink styled={true} term={"defpackage"}><b>defpackage</b></DictionaryLink> 
 
 
 
-The collection of *symbol-name* arguments given to the options :shadow, :intern, :import-from, and :shadowing-import-from must all be disjoint; additionally, the *symbol-name* arguments given to :export and :intern must be disjoint. Disjoint in this context is defined as no two of the *symbol-names* being **string=** with each other. If either condition is violated, an error of *type* **program-error** should be signaled. 
+Since <GlossaryTerm styled={true} term={"implementation"}><i>implementations</i></GlossaryTerm> might allow extended *options* an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"program-error"}><b>program-error</b></DictionaryLink> should be signaled if an *option* is present that is not actually supported in the host <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm>. 
 
 
 
-For the :shadowing-import-from and :import-from options, a *correctable error* of *type* **package-error** is signaled if no *symbol* is *accessible* in the *package* named by *package-name* for one of the argument *symbol-names*. 
+The collection of *symbol-name* arguments given to the options :shadow, :intern, :import-from, and :shadowing-import-from must all be disjoint; additionally, the *symbol-name* arguments given to :export and :intern must be disjoint. Disjoint in this context is defined as no two of the *symbol-names* being <DictionaryLink styled={true} term={"string"}><b>string=</b></DictionaryLink> with each other. If either condition is violated, an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"program-error"}><b>program-error</b></DictionaryLink> should be signaled. 
 
 
 
-Name conflict errors are handled by the underlying calls to **make-package**, **use-package**, **import**, and **export**. See Section 11.1 (Package Concepts). 
+For the :shadowing-import-from and :import-from options, a *correctable error* of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"package-error"}><b>package-error</b></DictionaryLink> is signaled if no <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> is <GlossaryTerm styled={true} term={"accessible"}><i>accessible</i></GlossaryTerm> in the <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> named by *package-name* for one of the argument *symbol-names*. 
+
+
+
+Name conflict errors are handled by the underlying calls to <DictionaryLink styled={true} term={"make-package"}><b>make-package</b></DictionaryLink>, <DictionaryLink styled={true} term={"use-package"}><b>use-package</b></DictionaryLink>, <DictionaryLink styled={true} term={"import"}><b>import</b></DictionaryLink>, and <DictionaryLink styled={true} term={"export"}><b>export</b></DictionaryLink>. See Section 11.1 (Package Concepts). 
 
 
 
@@ -301,15 +301,15 @@ Name conflict errors are handled by the underlying calls to **make-package**, **
 
 
 
-The :intern option is useful if an :import-from or a :shadowing-import-from option in a subsequent call to **defpackage** (for some other *package*) expects to find these *symbols accessible* but not necessarily external. 
+The :intern option is useful if an :import-from or a :shadowing-import-from option in a subsequent call to <DictionaryLink styled={true} term={"defpackage"}><b>defpackage</b></DictionaryLink> (for some other <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>) expects to find these *symbols accessible* but not necessarily external. 
 
 
 
-It is recommended that the entire *package* definition is put in a single place, and that all the *package* definitions of a program are in a single file. This file can be *loaded* before *loading* or compiling anything else that depends on those *packages*. Such a file can be read in the COMMON-LISP-USER *package*, avoiding any initial state issues. 
+It is recommended that the entire <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> definition is put in a single place, and that all the <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> definitions of a program are in a single file. This file can be *loaded* before *loading* or compiling anything else that depends on those <GlossaryTerm styled={true} term={"package"}><i>packages</i></GlossaryTerm>. Such a file can be read in the COMMON-LISP-USER <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>, avoiding any initial state issues. 
 
 
 
-**defpackage** cannot be used to create two “mutually recursive” packages, such as: 
+<DictionaryLink styled={true} term={"defpackage"}><b>defpackage</b></DictionaryLink> cannot be used to create two “mutually recursive” packages, such as: 
 
 
 
@@ -341,15 +341,15 @@ It is recommended that the entire *package* definition is put in a single place,
 
 
 
-However, nothing prevents the user from using the *package*-affecting functions such as **use-package**, **import**, and **export** to establish such links after a more standard use of **defpackage**. 
+However, nothing prevents the user from using the <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>-affecting functions such as <DictionaryLink styled={true} term={"use-package"}><b>use-package</b></DictionaryLink>, <DictionaryLink styled={true} term={"import"}><b>import</b></DictionaryLink>, and <DictionaryLink styled={true} term={"export"}><b>export</b></DictionaryLink> to establish such links after a more standard use of <DictionaryLink styled={true} term={"defpackage"}><b>defpackage</b></DictionaryLink>. 
 
 
 
-The macroexpansion of **defpackage** could usefully canonicalize the names into *strings*, so that even if a source file has random *symbols* in the **defpackage** form, the compiled file would only contain *strings*. 
+The macroexpansion of <DictionaryLink styled={true} term={"defpackage"}><b>defpackage</b></DictionaryLink> could usefully canonicalize the names into <GlossaryTerm styled={true} term={"string"}><i>strings</i></GlossaryTerm>, so that even if a source file has random <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> in the <DictionaryLink styled={true} term={"defpackage"}><b>defpackage</b></DictionaryLink> form, the compiled file would only contain <GlossaryTerm styled={true} term={"string"}><i>strings</i></GlossaryTerm>. 
 
 
 
-Frequently additional *implementation-dependent* options take the form of a *keyword* standing by itself as an abbreviation for a list (keyword T); this syntax should be properly reported as an 
+Frequently additional <GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm> options take the form of a <GlossaryTerm styled={true} term={"keyword"}><i>keyword</i></GlossaryTerm> standing by itself as an abbreviation for a list (keyword T); this syntax should be properly reported as an 
 
 
 

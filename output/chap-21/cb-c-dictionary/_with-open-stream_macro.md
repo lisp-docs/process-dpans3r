@@ -1,4 +1,4 @@
-**with-open-stream** *Macro* 
+**with-open-stream** <GlossaryTerm styled={true} term={"macro"}><i>Macro</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**with-open-stream** (*var stream*) *\{declaration\}*\* *\{form\}*\* 
+<DictionaryLink styled={true} term={"with-open-stream"}><b>with-open-stream</b></DictionaryLink> (*var stream*) *\{declaration\}*\* <GlossaryTerm styled={true} term={"form"}><i>\{form\}</i></GlossaryTerm>\* 
 
 
 
@@ -22,19 +22,19 @@
 
 
 
-*stream*—a *form*; evaluated to produce a *stream*. 
+<GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>; evaluated to produce a <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>. 
 
 
 
-*declaration*—a **declare** *expression*; not evaluated. 
+<GlossaryTerm styled={true} term={"declaration"}><i>declaration</i></GlossaryTerm>—a <DictionaryLink styled={true} term={"declare"}><b>declare</b></DictionaryLink> <GlossaryTerm styled={true} term={"expression"}><i>expression</i></GlossaryTerm>; not evaluated. 
 
 
 
-*forms*—an *implicit progn*. 
+<GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm>—an *implicit progn*. 
 
 
 
-*results*—the *values* returned by the *forms*. 
+*results*—the <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> returned by the <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm>. 
 
 
 
@@ -42,15 +42,15 @@
 
 
 
-**with-open-stream** performs a series of operations on *stream*, returns a value, and then closes the *stream*. 
+<DictionaryLink styled={true} term={"with-open-stream"}><b>with-open-stream</b></DictionaryLink> performs a series of operations on <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>, returns a value, and then closes the <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>. 
 
 
 
-*Var* is bound to the value of *stream*, and then *forms* are executed as an *implicit progn*. *stream* is automatically closed on exit from **with-open-stream**, no matter whether the exit is normal or abnormal. The *stream* has *dynamic extent*; its *extent* ends when the *form* is exited. 
+*Var* is bound to the value of <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>, and then <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm> are executed as an *implicit progn*. *stream* is automatically closed on exit from <DictionaryLink styled={true} term={"with-open-stream"}><b>with-open-stream</b></DictionaryLink>, no matter whether the exit is normal or abnormal. The <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm> has *dynamic extent*; its <GlossaryTerm styled={true} term={"extent"}><i>extent</i></GlossaryTerm> ends when the <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> is exited. 
 
 
 
-The consequences are undefined if an attempt is made to *assign* the the *variable var* with the *forms*. 
+The consequences are undefined if an attempt is made to <GlossaryTerm styled={true} term={"assign"}><i>assign</i></GlossaryTerm> the the *variable var* with the <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm>. 
 
 
 
@@ -68,7 +68,7 @@ The consequences are undefined if an attempt is made to *assign* the the *variab
 
 
 
-The *stream* is closed (upon exit). 
+The <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm> is closed (upon exit). 
 
 
 
@@ -76,7 +76,7 @@ The *stream* is closed (upon exit).
 
 
 
-**close** 
+<DictionaryLink styled={true} term={"close"}><b>close</b></DictionaryLink> 
 
 
 

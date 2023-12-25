@@ -6,7 +6,7 @@
 
 
 
-**package-error**, **error**, **serious-condition**, **condition**, **t** 
+<DictionaryLink styled={true} term={"package-error"}><b>package-error</b></DictionaryLink>, <DictionaryLink styled={true} term={"error"}><b>error</b></DictionaryLink>, <DictionaryLink styled={true} term={"serious-condition"}><b>serious-condition</b></DictionaryLink>, <DictionaryLink styled={true} term={"condition"}><b>condition</b></DictionaryLink>, <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink> 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-The *type* **package-error** consists of *error conditions* related to operations on *packages*. The offending *package* (or *package name*) is initialized by the :package initialization argument to **make-condition**, and is *accessed* by the *function* **package-error-package**. 
+The <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"package-error"}><b>package-error</b></DictionaryLink> consists of *error conditions* related to operations on <GlossaryTerm styled={true} term={"package"}><i>packages</i></GlossaryTerm>. The offending <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> (or *package name*) is initialized by the :package initialization argument to <DictionaryLink styled={true} term={"make-condition"}><b>make-condition</b></DictionaryLink>, and is *accessed* by the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> <DictionaryLink styled={true} term={"package-error-package"}><b>package-error-package</b></DictionaryLink>. 
 
 
 
@@ -22,7 +22,7 @@ The *type* **package-error** consists of *error conditions* related to operation
 
 
 
-**package-error-package**, Chapter 9 (Conditions) 
+<DictionaryLink styled={true} term={"package-error-package"}><b>package-error-package</b></DictionaryLink>, Chapter 9 (Conditions) 
 
 
 
@@ -38,7 +38,7 @@ The *type* **package-error** consists of *error conditions* related to operation
 
 
 
-**package-error-package** 
+<DictionaryLink styled={true} term={"package-error-package"}><b>package-error-package</b></DictionaryLink> 
 
 
 

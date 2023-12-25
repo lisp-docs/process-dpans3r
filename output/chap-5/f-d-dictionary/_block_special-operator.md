@@ -6,7 +6,7 @@
 
 
 
-**block** *name form*\* *→ \{result\}*\* 
+<DictionaryLink styled={true} term={"block"}><b>block</b></DictionaryLink> *name form*\* *→ \{result\}*\* 
 
 
 
@@ -26,15 +26,15 @@ Data and Control
 
 
 
-*name*—a *symbol*. 
+<GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>. 
 
 
 
-*form*—a *form*. 
+<GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>. 
 
 
 
-*results*—the *values* of the *forms* if a *normal return* occurs, or else, if an *explicit return* occurs, the *values* that were transferred. 
+*results*—the <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> of the <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm> if a *normal return* occurs, or else, if an *explicit return* occurs, the <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> that were transferred. 
 
 
 
@@ -42,19 +42,19 @@ Data and Control
 
 
 
-**block** *establishes* a *block* named *name* and then evaluates *forms* as an *implicit progn*. 
+<DictionaryLink styled={true} term={"block"}><b>block</b></DictionaryLink> *establishes* a <GlossaryTerm styled={true} term={"block"}><i>block</i></GlossaryTerm> named <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> and then evaluates <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm> as an *implicit progn*. 
 
 
 
-The *special operators* **block** and **return-from** work together to provide a structured, lexical, non-local exit facility. At any point lexically contained within *forms*, **return-from** can be used with the given *name* to return control and values from the **block** *form*, except when an intervening *block* with the same name has been *established*, in which case the outer *block* is shadowed by the inner one. 
+The *special operators* <DictionaryLink styled={true} term={"block"}><b>block</b></DictionaryLink> and <DictionaryLink styled={true} term={"return-from"}><b>return-from</b></DictionaryLink> work together to provide a structured, lexical, non-local exit facility. At any point lexically contained within <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm>, <DictionaryLink styled={true} term={"return-from"}><b>return-from</b></DictionaryLink> can be used with the given <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> to return control and values from the <DictionaryLink styled={true} term={"block"}><b>block</b></DictionaryLink> <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>, except when an intervening <GlossaryTerm styled={true} term={"block"}><i>block</i></GlossaryTerm> with the same name has been *established*, in which case the outer <GlossaryTerm styled={true} term={"block"}><i>block</i></GlossaryTerm> is shadowed by the inner one. 
 
 
 
-The *block* named *name* has *lexical scope* and *dynamic extent*. 
+The <GlossaryTerm styled={true} term={"block"}><i>block</i></GlossaryTerm> named <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> has *lexical scope* and *dynamic extent*. 
 
 
 
-Once established, a *block* may only be exited once, whether by *normal return* or *explicit return*. **Examples:**
+Once established, a <GlossaryTerm styled={true} term={"block"}><i>block</i></GlossaryTerm> may only be exited once, whether by *normal return* or *explicit return*. **Examples:**
 ```lisp
 
 (block empty) *→* NIL 
@@ -76,7 +76,7 @@ Once established, a *block* may only be exited once, whether by *normal return* 
 
 
 
-**return**, **return-from**, Section 3.1 (Evaluation) 
+<DictionaryLink styled={true} term={"return"}><b>return</b></DictionaryLink>, <DictionaryLink styled={true} term={"return-from"}><b>return-from</b></DictionaryLink>, Section 3.1 (Evaluation) 
 
 
 
@@ -96,7 +96,7 @@ Once established, a *block* may only be exited once, whether by *normal return* 
 
 
 
-**catch** 
+<DictionaryLink styled={true} term={"catch"}><b>catch</b></DictionaryLink> 
 
 
 

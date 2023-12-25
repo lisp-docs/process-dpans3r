@@ -1,4 +1,4 @@
-**rassoc, rassoc-if, rassoc-if-not** *Function* 
+**rassoc, rassoc-if, rassoc-if-not** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,15 +6,15 @@
 
 
 
-**rassoc** *item alist* &amp;key *key test test-not → entry* 
+<DictionaryLink styled={true} term={"rassoc"}><b>rassoc</b></DictionaryLink> *item alist* &amp;key *key test test-not → entry* 
 
 
 
-**rassoc-if** *predicate alist* &amp;key *key → entry* 
+<DictionaryLink styled={true} term={"rassoc-if"}><b>rassoc-if</b></DictionaryLink> *predicate alist* &amp;key *key → entry* 
 
 
 
-**rassoc-if-not** *predicate alist* &amp;key *key → entry* 
+<DictionaryLink styled={true} term={"rassoc-if-not"}><b>rassoc-if-not</b></DictionaryLink> *predicate alist* &amp;key *key → entry* 
 
 
 
@@ -22,19 +22,19 @@
 
 
 
-*item*—an *object*. 
+*item*—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
-*alist*—an *association list*. 
+<GlossaryTerm styled={true} term={"alist"}><i>alist</i></GlossaryTerm>—an *association list*. 
 
 
 
-*predicate*—a *designator* for a *function* of one *argument* that returns a *generalized boolean*. *test*—a *designator* for a *function* of two *arguments* that returns a *generalized boolean*. *test-not*—a *designator* for a *function* of two *arguments* that returns a *generalized boolean*. *key*—a *designator* for a *function* of one argument, or **nil**. 
+<GlossaryTerm styled={true} term={"predicate"}><i>predicate</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"designator"}><i>designator</i></GlossaryTerm> for a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> of one <GlossaryTerm styled={true} term={"argument"}><i>argument</i></GlossaryTerm> that returns a *generalized boolean*. *test<GlossaryTerm styled={true} term={"t"}><i>—a </i></GlossaryTerm>designator* for a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> of two <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm> that returns a *generalized boolean*. *test-not<GlossaryTerm styled={true} term={"t"}><i>—a </i></GlossaryTerm>designator* for a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> of two <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm> that returns a *generalized boolean*. *key*—a *designator* for a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> of one argument, or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
-*entry*—a *cons* that is an *element* of the *alist*, or **nil**. 
+*entry*—a <GlossaryTerm styled={true} term={"cons"}><i>cons</i></GlossaryTerm> that is an <GlossaryTerm styled={true} term={"element"}><i>element</i></GlossaryTerm> of the <GlossaryTerm styled={true} term={"alist"}><i>alist</i></GlossaryTerm>, or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -54,11 +54,11 @@
 
 
 
-**rassoc**, **rassoc-if**, and **rassoc-if-not** return the first *cons* whose *cdr satisfies the test*. If no such *cons* is found, **nil** is returned. 
+<DictionaryLink styled={true} term={"rassoc"}><b>rassoc</b></DictionaryLink>, <DictionaryLink styled={true} term={"rassoc-if"}><b>rassoc-if</b></DictionaryLink>, and <DictionaryLink styled={true} term={"rassoc-if-not"}><b>rassoc-if-not</b></DictionaryLink> return the first <GlossaryTerm styled={true} term={"cons"}><i>cons</i></GlossaryTerm> whose *cdr satisfies the test*. If no such <GlossaryTerm styled={true} term={"cons"}><i>cons</i></GlossaryTerm> is found, <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> is returned. 
 
 
 
-If **nil** appears in *alist* in place of a pair, it is ignored. 
+If <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> appears in <GlossaryTerm styled={true} term={"alist"}><i>alist</i></GlossaryTerm> in place of a pair, it is ignored. 
 
 
 
@@ -80,7 +80,7 @@ If **nil** appears in *alist* in place of a pair, it is ignored.
 
 
 
-**assoc**, Section 3.6 (Traversal Rules and Side Effects) 
+<DictionaryLink styled={true} term={"assoc"}><b>assoc</b></DictionaryLink>, Section 3.6 (Traversal Rules and Side Effects) 
 
 
 
@@ -92,11 +92,11 @@ The :test-not parameter is deprecated.
 
 
 
-The *function* **rassoc-if-not** is deprecated. 
+The <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> <DictionaryLink styled={true} term={"rassoc-if-not"}><b>rassoc-if-not</b></DictionaryLink> is deprecated. 
 
 
 
-It is possible to **rplaca** the result of **rassoc**, provided that it is not **nil**, in order to “update” *alist*. The expressions 
+It is possible to <DictionaryLink styled={true} term={"rplaca"}><b>rplaca</b></DictionaryLink> the result of <DictionaryLink styled={true} term={"rassoc"}><b>rassoc</b></DictionaryLink>, provided that it is not <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>, in order to “update” <GlossaryTerm styled={true} term={"alist"}><i>alist</i></GlossaryTerm>. The expressions 
 
 
 
@@ -112,7 +112,7 @@ and
 
 
 
-are equivalent in meaning, except when the item is **nil** and **nil** appears in place of a pair in the *alist*. See the *function* **assoc**. 
+are equivalent in meaning, except when the item is <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> and <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> appears in place of a pair in the <GlossaryTerm styled={true} term={"alist"}><i>alist</i></GlossaryTerm>. See the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> <DictionaryLink styled={true} term={"assoc"}><b>assoc</b></DictionaryLink>. 
 
 
 

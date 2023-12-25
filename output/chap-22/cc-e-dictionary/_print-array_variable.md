@@ -1,4 +1,4 @@
-*∗***print-array***∗ Variable* 
+*∗<DictionaryLink styled={true} term={"print-array"}><b>*print-array*</b></DictionaryLink>∗ Variable* 
 
 
 
@@ -14,7 +14,7 @@ a *generalized boolean*.
 
 
 
-*implementation-dependent*. 
+<GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm>. 
 
 
 
@@ -22,7 +22,7 @@ a *generalized boolean*.
 
 
 
-Controls the format in which *arrays* are printed. If it is *false*, the contents of *arrays* other than *strings* are never printed. Instead, *arrays* are printed in a concise form using #&lt; that gives enough information for the user to be able to identify the *array*, but does not include the entire *array* contents. If it is *true*, non-*string arrays* are printed using #(...), #\*, or #nA syntax. 
+Controls the format in which <GlossaryTerm styled={true} term={"array"}><i>arrays</i></GlossaryTerm> are printed. If it is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>, the contents of <GlossaryTerm styled={true} term={"array"}><i>arrays</i></GlossaryTerm> other than <GlossaryTerm styled={true} term={"string"}><i>strings</i></GlossaryTerm> are never printed. Instead, <GlossaryTerm styled={true} term={"array"}><i>arrays</i></GlossaryTerm> are printed in a concise form using #&lt; that gives enough information for the user to be able to identify the <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm>, but does not include the entire <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm> contents. If it is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>, non-*string arrays* are printed using #(...), #\*, or #nA syntax. 
 
 
 
@@ -30,7 +30,7 @@ Controls the format in which *arrays* are printed. If it is *false*, the content
 
 
 
-The *implementation*. 
+The <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm>. 
 
 
 

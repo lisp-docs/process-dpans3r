@@ -2,11 +2,11 @@
 
 
 
-*Vectors* whose *elements* are restricted to *type* **character** or a *subtype* of **character** are called *strings*. *Strings* are of *type* **string**. Figure 15–2 lists some *defined names* related to *strings*. 
+<GlossaryTerm styled={true} term={"vector"}><i>Vectors</i></GlossaryTerm> whose <GlossaryTerm styled={true} term={"element"}><i>elements</i></GlossaryTerm> are restricted to <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"character"}><b>character</b></DictionaryLink> or a <GlossaryTerm styled={true} term={"subtype"}><i>subtype</i></GlossaryTerm> of <DictionaryLink styled={true} term={"character"}><b>character</b></DictionaryLink> are called <GlossaryTerm styled={true} term={"string"}><i>strings</i></GlossaryTerm>. <GlossaryTerm styled={true} term={"string"}><i>Strings</i></GlossaryTerm> are of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"string"}><b>string</b></DictionaryLink>. Figure 15–2 lists some *defined names* related to <GlossaryTerm styled={true} term={"string"}><i>strings</i></GlossaryTerm>. 
 
 
 
-*Strings* are *specialized arrays* and might logically have been included in this chapter. However, for purposes of readability most information about *strings* does not appear in this chapter; see instead Chapter 16 (Strings). 
+<GlossaryTerm styled={true} term={"string"}><i>Strings</i></GlossaryTerm> are *specialized arrays* and might logically have been included in this chapter. However, for purposes of readability most information about <GlossaryTerm styled={true} term={"string"}><i>strings</i></GlossaryTerm> does not appear in this chapter; see instead Chapter 16 (Strings). 
 
 
 
@@ -22,7 +22,7 @@
 
 
 
-*Vectors* whose *elements* are restricted to *type* **bit** are called *bit vectors*. *Bit vectors* are of *type* **bit-vector**. Figure 15–3 lists some *defined names* for operations on *bit arrays*. 
+<GlossaryTerm styled={true} term={"vector"}><i>Vectors</i></GlossaryTerm> whose <GlossaryTerm styled={true} term={"element"}><i>elements</i></GlossaryTerm> are restricted to <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"bit"}><b>bit</b></DictionaryLink> are called *bit vectors*. *Bit vectors* are of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"bit-vector"}><b>bit-vector</b></DictionaryLink>. Figure 15–3 lists some *defined names* for operations on *bit arrays*. 
 
 
 

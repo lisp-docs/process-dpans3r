@@ -1,4 +1,4 @@
-**with-condition-restarts** *Macro* 
+**with-condition-restarts** <GlossaryTerm styled={true} term={"macro"}><i>Macro</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**with-condition-restarts** *condition-form restarts-form \{form\}*\* 
+<DictionaryLink styled={true} term={"with-condition-restarts"}><b>with-condition-restarts</b></DictionaryLink> *condition-form restarts-form \{form\}*\* 
 
 
 
@@ -18,27 +18,27 @@
 
 
 
-*condition-form*—a *form*; *evaluated* to produce a *condition*. 
+*condition-form*—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>; *evaluated* to produce a <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm>. 
 
 
 
-*condition*—a *condition object* resulting from the *evaluation* of *condition-form*. 
+<GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm>—a *condition object* resulting from the <GlossaryTerm styled={true} term={"evaluation"}><i>evaluation</i></GlossaryTerm> of *condition-form*. 
 
 
 
-*restart-form*—a *form*; *evaluated* to produce a *restart-list*. 
+*restart-form*—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>; *evaluated* to produce a *restart-list*. 
 
 
 
-*restart-list*—a *list* of *restart objects* resulting from the *evaluation* of *restart-form*. 
+*restart-list*—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of *restart objects* resulting from the <GlossaryTerm styled={true} term={"evaluation"}><i>evaluation</i></GlossaryTerm> of *restart-form*. 
 
 
 
-*forms*—an *implicit progn*; evaluated. 
+<GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm>—an *implicit progn*; evaluated. 
 
 
 
-*results*—the *values* returned by *forms*. 
+*results*—the <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> returned by <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm>. 
 
 
 
@@ -58,11 +58,11 @@
 
 
 
-First, the *condition-form* and *restarts-form* are *evaluated* in normal left-to-right order; the *primary values* yielded by these *evaluations* are respectively called the *condition* and the *restart-list*. 
+First, the *condition-form* and *restarts-form* are *evaluated* in normal left-to-right order; the *primary values* yielded by these <GlossaryTerm styled={true} term={"evaluation"}><i>evaluations</i></GlossaryTerm> are respectively called the <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> and the *restart-list*. 
 
 
 
-Next, the *forms* are *evaluated* in a *dynamic environment* in which each *restart* in *restart-list* is associated with the *condition*. See Section 9.1.4.2.4 (Associating a Restart with a Condition). 
+Next, the <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm> are *evaluated* in a *dynamic environment* in which each <GlossaryTerm styled={true} term={"restart"}><i>restart</i></GlossaryTerm> in *restart-list* is associated with the <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm>. See Section 9.1.4.2.4 (Associating a Restart with a Condition). 
 
 
 
@@ -70,7 +70,7 @@ Next, the *forms* are *evaluated* in a *dynamic environment* in which each *rest
 
 
 
-**restart-case** 
+<DictionaryLink styled={true} term={"restart-case"}><b>restart-case</b></DictionaryLink> 
 
 
 
@@ -78,7 +78,7 @@ Next, the *forms* are *evaluated* in a *dynamic environment* in which each *rest
 
 
 
-Usually this *macro* is not used explicitly in code, since **restart-case** handles most of the common cases in a way that is syntactically more concise. 
+Usually this <GlossaryTerm styled={true} term={"macro"}><i>macro</i></GlossaryTerm> is not used explicitly in code, since <DictionaryLink styled={true} term={"restart-case"}><b>restart-case</b></DictionaryLink> handles most of the common cases in a way that is syntactically more concise. 
 
 
 

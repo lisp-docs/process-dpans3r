@@ -1,4 +1,4 @@
-**or** *Macro* 
+**or** <GlossaryTerm styled={true} term={"macro"}><i>Macro</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**or** *\{form\}*\* *→ \{results\}*\* 
+<DictionaryLink styled={true} term={"or"}><b>or</b></DictionaryLink> <GlossaryTerm styled={true} term={"form"}><i>\{form\}</i></GlossaryTerm>\* *→ \{results\}*\* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*form*—a *form*. 
+<GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>. 
 
 
 
-*results*—the *values* or *primary value* (see below) resulting from the evaluation of the last *form* executed or **nil**. 
+*results*—the <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> or *primary value* (see below) resulting from the evaluation of the last <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> executed or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-**or** evaluates each *form*, one at a time, from left to right. The evaluation of all *forms* terminates when a *form* evaluates to *true* (*i.e.*, something other than **nil**). 
+<DictionaryLink styled={true} term={"or"}><b>or</b></DictionaryLink> evaluates each <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>, one at a time, from left to right. The evaluation of all <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm> terminates when a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> evaluates to <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> (*i.e.*, something other than <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>). 
 
 
 
@@ -42,7 +42,7 @@ Data and Control
 
 
 
-If the *evaluation* of any *form* other than the last returns a *primary value* that is *true*, **or** immediately returns that *value* (but no additional *values*) without evaluating the remaining *forms*. If every *form* but the last returns *false* as its *primary value*, **or** returns all *values* returned by the last *form*. If no *forms* are supplied, **or** returns **nil**. 
+If the <GlossaryTerm styled={true} term={"evaluation"}><i>evaluation</i></GlossaryTerm> of any <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> other than the last returns a *primary value* that is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>, <DictionaryLink styled={true} term={"or"}><b>or</b></DictionaryLink> immediately returns that <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> (but no additional <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm>) without evaluating the remaining <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm>. If every <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> but the last returns <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm> as its *primary value*, <DictionaryLink styled={true} term={"or"}><b>or</b></DictionaryLink> returns all <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> returned by the last <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>. If no <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm> are supplied, <DictionaryLink styled={true} term={"or"}><b>or</b></DictionaryLink> returns <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -67,7 +67,7 @@ temp3 *→* 30
 
 
 
-**and**, **some**, **unless** 
+<DictionaryLink styled={true} term={"and"}><b>and</b></DictionaryLink>, <DictionaryLink styled={true} term={"some"}><b>some</b></DictionaryLink>, <DictionaryLink styled={true} term={"unless"}><b>unless</b></DictionaryLink> 
 
 
 

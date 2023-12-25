@@ -1,4 +1,4 @@
-**copy-tree** *Function* 
+**copy-tree** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**copy-tree** *tree → new-tree* 
+<DictionaryLink styled={true} term={"copy-tree"}><b>copy-tree</b></DictionaryLink> *tree → new-tree* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*tree*—a *tree*. 
+<GlossaryTerm styled={true} term={"tree"}><i>tree</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"tree"}><i>tree</i></GlossaryTerm>. 
 
 
 
-*new-tree*—a *tree*. 
+*new-tree*—a <GlossaryTerm styled={true} term={"tree"}><i>tree</i></GlossaryTerm>. 
 
 
 
@@ -26,15 +26,15 @@
 
 
 
-Creates a *copy* of a *tree* of *conses*. 
+Creates a <GlossaryTerm styled={true} term={"copy"}><i>copy</i></GlossaryTerm> of a <GlossaryTerm styled={true} term={"tree"}><i>tree</i></GlossaryTerm> of *conses*. 
 
 
 
-If *tree* is not a *cons*, it is returned; otherwise, the result is a new *cons* of the results of calling **copy-tree** on the *car* and *cdr* of *tree*. In other words, all *conses* in the *tree* represented by *tree* are copied recursively, stopping only when non-*conses* are encountered. 
+If <GlossaryTerm styled={true} term={"tree"}><i>tree</i></GlossaryTerm> is not a <GlossaryTerm styled={true} term={"cons"}><i>cons</i></GlossaryTerm>, it is returned; otherwise, the result is a new <GlossaryTerm styled={true} term={"cons"}><i>cons</i></GlossaryTerm> of the results of calling <DictionaryLink styled={true} term={"copy-tree"}><b>copy-tree</b></DictionaryLink> on the <GlossaryTerm styled={true} term={"car"}><i>car</i></GlossaryTerm> and <GlossaryTerm styled={true} term={"cdr"}><i>cdr</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"tree"}><i>tree</i></GlossaryTerm>. In other words, all *conses* in the <GlossaryTerm styled={true} term={"tree"}><i>tree</i></GlossaryTerm> represented by <GlossaryTerm styled={true} term={"tree"}><i>tree</i></GlossaryTerm> are copied recursively, stopping only when non-*conses* are encountered. 
 
 
 
-**copy-tree** does not preserve circularities and the sharing of substructure. 
+<DictionaryLink styled={true} term={"copy-tree"}><b>copy-tree</b></DictionaryLink> does not preserve circularities and the sharing of substructure. 
 
 
 
@@ -69,7 +69,7 @@ copy-as-tree *→* ((1 . "one") (2 A B C))
 
 
 
-**tree-equal** 
+<DictionaryLink styled={true} term={"tree-equal"}><b>tree-equal</b></DictionaryLink> 
 
 
 

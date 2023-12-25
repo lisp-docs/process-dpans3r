@@ -30,7 +30,7 @@ could be represented in this way:
 
 
 
-Without this notation, but with **\*print-length\*** set to 10 and **\*print-circle\*** set to **nil**, the structure would print in this way: 
+Without this notation, but with <DictionaryLink styled={true} term={"print-length"}><b>\*print-length\*</b></DictionaryLink> set to 10 and <DictionaryLink styled={true} term={"print-circle"}><b>\*print-circle\*</b></DictionaryLink> set to <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>, the structure would print in this way: 
 
 
 
@@ -38,7 +38,7 @@ Without this notation, but with **\*print-length\*** set to 10 and **\*print-cir
 
 
 
-A reference #*n*# may only occur after a label #*n*=; forward references are not permitted. The reference may not appear as the labeled object itself (that is, #*n*=#*n*#) may not be written because the *object* labeled by #*n*= is not well defined in this case. 
+A reference #*n*# may only occur after a label #*n*=; forward references are not permitted. The reference may not appear as the labeled object itself (that is, #*n*=#*n*#) may not be written because the <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> labeled by #*n*= is not well defined in this case. 
 
 
 

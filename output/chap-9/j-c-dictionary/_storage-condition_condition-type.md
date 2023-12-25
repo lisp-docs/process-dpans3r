@@ -6,7 +6,7 @@
 
 
 
-**storage-condition**, **serious-condition**, **condition**, **t** 
+<DictionaryLink styled={true} term={"storage-condition"}><b>storage-condition</b></DictionaryLink>, <DictionaryLink styled={true} term={"serious-condition"}><b>serious-condition</b></DictionaryLink>, <DictionaryLink styled={true} term={"condition"}><b>condition</b></DictionaryLink>, <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink> 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-The *type* **storage-condition** consists of serious conditions that relate to problems with memory management that are potentially due to *implementation-dependent* limits rather than semantic errors in *conforming programs*, and that typically warrant entry to the debugger if not handled. 
+The <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"storage-condition"}><b>storage-condition</b></DictionaryLink> consists of serious conditions that relate to problems with memory management that are potentially due to <GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm> limits rather than semantic errors in *conforming programs*, and that typically warrant entry to the debugger if not handled. 
 
 
 
-Depending on the details of the *implementation*, these might include such problems as stack overflow, memory region overflow, and storage exhausted. 
+Depending on the details of the <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm>, these might include such problems as stack overflow, memory region overflow, and storage exhausted. 
 
 
 
@@ -26,7 +26,7 @@ Depending on the details of the *implementation*, these might include such probl
 
 
 
-While some Common Lisp operations might signal *storage-condition* because they are defined to create *objects*, it is unspecified whether operations that are not defined to create *objects* create them anyway and so might also signal **storage-condition**. Likewise, the evaluator itself might create *objects* and so might signal **storage-condition**. (The natural assumption might be that such *object* creation is naturally inefficient, but even that is *implementation-dependent*.) In general, the entire question of how storage allocation is done is *implementation-dependent*, and so any operation might signal **storage-condition** at any time. Because such a *condition* is indicative of a limitation of the *implementation* or of the *image* rather than an error in a *program*, *objects* of *type* **storage-condition** are not of *type* **error**. 
+While some Common Lisp operations might signal *storage-condition* because they are defined to create <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm>, it is unspecified whether operations that are not defined to create <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm> create them anyway and so might also signal <DictionaryLink styled={true} term={"storage-condition"}><b>storage-condition</b></DictionaryLink>. Likewise, the evaluator itself might create <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm> and so might signal <DictionaryLink styled={true} term={"storage-condition"}><b>storage-condition</b></DictionaryLink>. (The natural assumption might be that such <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> creation is naturally inefficient, but even that is <GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm>.) In general, the entire question of how storage allocation is done is <GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm>, and so any operation might signal <DictionaryLink styled={true} term={"storage-condition"}><b>storage-condition</b></DictionaryLink> at any time. Because such a <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> is indicative of a limitation of the <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm> or of the *image* rather than an error in a <GlossaryTerm styled={true} term={"program"}><i>program</i></GlossaryTerm>, <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"storage-condition"}><b>storage-condition</b></DictionaryLink> are not of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"error"}><b>error</b></DictionaryLink>. 
 
 
 

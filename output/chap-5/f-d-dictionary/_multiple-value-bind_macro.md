@@ -1,4 +1,4 @@
-**multiple-value-bind** *Macro* 
+**multiple-value-bind** <GlossaryTerm styled={true} term={"macro"}><i>Macro</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**multiple-value-bind** (*\{var\}*\*) *values-form \{declaration\}*\* *\{form\}*\* 
+<DictionaryLink styled={true} term={"multiple-value-bind"}><b>multiple-value-bind</b></DictionaryLink> (*\{var\}*\*) *values-form \{declaration\}*\* <GlossaryTerm styled={true} term={"form"}><i>\{form\}</i></GlossaryTerm>\* 
 
 
 
@@ -30,23 +30,23 @@ Data and Control
 
 
 
-*var*—a *symbol* naming a variable; not evaluated. 
+*var*—a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> naming a variable; not evaluated. 
 
 
 
-*values-form*—a *form*; evaluated. 
+*values-form*—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>; evaluated. 
 
 
 
-*declaration*—a **declare** *expression*; not evaluated. 
+<GlossaryTerm styled={true} term={"declaration"}><i>declaration</i></GlossaryTerm>—a <DictionaryLink styled={true} term={"declare"}><b>declare</b></DictionaryLink> <GlossaryTerm styled={true} term={"expression"}><i>expression</i></GlossaryTerm>; not evaluated. 
 
 
 
-*forms*—an *implicit progn*. 
+<GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm>—an *implicit progn*. 
 
 
 
-*results*—the *values* returned by the *forms*. 
+*results*—the <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> returned by the <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm>. 
 
 
 
@@ -54,15 +54,15 @@ Data and Control
 
 
 
-Creates new variable *bindings* for the *vars* and executes a series of *forms* that use these *bindings*. The variable *bindings* created are lexical unless **special** declarations are specified. 
+Creates new variable <GlossaryTerm styled={true} term={"binding"}><i>bindings</i></GlossaryTerm> for the *vars* and executes a series of <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm> that use these <GlossaryTerm styled={true} term={"binding"}><i>bindings</i></GlossaryTerm>. The variable <GlossaryTerm styled={true} term={"binding"}><i>bindings</i></GlossaryTerm> created are lexical unless <DictionaryLink styled={true} term={"special"}><b>special</b></DictionaryLink> declarations are specified. 
 
 
 
-*Values-form* is evaluated, and each of the *vars* is bound to the respective value returned by that *form*. If there are more *vars* than values returned, extra values of **nil** are given to the remaining *vars*. If there are more values than *vars*, the excess values are discarded. The *vars* are bound to the values over the execution of the *forms*, which make up an implicit **progn**. The consequences are unspecified if a type *declaration* is specified for a *var*, but the value to which that *var* is bound is not consistent with the type *declaration*. 
+*Values-form* is evaluated, and each of the *vars* is bound to the respective value returned by that <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>. If there are more *vars* than values returned, extra values of <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> are given to the remaining *vars*. If there are more values than *vars*, the excess values are discarded. The *vars* are bound to the values over the execution of the <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm>, which make up an implicit <DictionaryLink styled={true} term={"progn"}><b>progn</b></DictionaryLink>. The consequences are unspecified if a type <GlossaryTerm styled={true} term={"declaration"}><i>declaration</i></GlossaryTerm> is specified for a *var*, but the value to which that *var* is bound is not consistent with the type <GlossaryTerm styled={true} term={"declaration"}><i>declaration</i></GlossaryTerm>. 
 
 
 
-The *scopes* of the name binding and *declarations* do not include the *values-form*. 
+The <GlossaryTerm styled={true} term={"scope"}><i>scopes</i></GlossaryTerm> of the name binding and <GlossaryTerm styled={true} term={"declaration"}><i>declarations</i></GlossaryTerm> do not include the *values-form*. 
 
 
 
@@ -78,7 +78,7 @@ The *scopes* of the name binding and *declarations* do not include the *values-f
 
 
 
-**let**, **multiple-value-call** 
+<DictionaryLink styled={true} term={"let"}><b>let</b></DictionaryLink>, <DictionaryLink styled={true} term={"multiple-value-call"}><b>multiple-value-call</b></DictionaryLink> 
 
 
 
@@ -98,7 +98,7 @@ The *scopes* of the name binding and *declarations* do not include the *values-f
 
 
 
-*\{form\}*\*) 
+<GlossaryTerm styled={true} term={"form"}><i>\{form\}</i></GlossaryTerm>\*) 
 
 
 

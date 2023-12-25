@@ -2,7 +2,7 @@
 
 
 
-A *cons* is a compound data *object* having two components called the *car* and the *cdr* . 
+A <GlossaryTerm styled={true} term={"cons"}><i>cons</i></GlossaryTerm> is a compound data <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> having two components called the <GlossaryTerm styled={true} term={"car"}><i>car</i></GlossaryTerm> and the <GlossaryTerm styled={true} term={"cdr"}><i>cdr</i></GlossaryTerm> . 
 
 
 

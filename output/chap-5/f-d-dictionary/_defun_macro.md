@@ -1,4 +1,4 @@
-**defun** *Macro* 
+**defun** <GlossaryTerm styled={true} term={"macro"}><i>Macro</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**defun** *function-name lambda-list* [[ *\{declaration\}*\* *| documentation* ]] *\{form\}*\* 
+<DictionaryLink styled={true} term={"defun"}><b>defun</b></DictionaryLink> *function-name lambda-list* [[ <GlossaryTerm styled={true} term={"declaration"}><i>\{declaration\}</i></GlossaryTerm>\* *| documentation* ]] <GlossaryTerm styled={true} term={"form"}><i>\{form\}</i></GlossaryTerm>\* 
 
 
 
@@ -26,15 +26,15 @@
 
 
 
-*declaration*—a **declare** *expression*; not evaluated. 
+<GlossaryTerm styled={true} term={"declaration"}><i>declaration</i></GlossaryTerm>—a <DictionaryLink styled={true} term={"declare"}><b>declare</b></DictionaryLink> <GlossaryTerm styled={true} term={"expression"}><i>expression</i></GlossaryTerm>; not evaluated. 
 
 
 
-*documentation*—a *string*; not evaluated. 
+*documentation*—a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>; not evaluated. 
 
 
 
-*forms*—an *implicit progn*. 
+<GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm>—an *implicit progn*. 
 
 
 
@@ -46,19 +46,19 @@
 
 
 
-Defines a new *function* named *function-name* in the *global environment*. The body of the *function* defined by **defun** consists of *forms*; they are executed as an *implicit progn* when the *function* is called. **defun** can be used to define a new *function*, to install a corrected version of an incorrect definition, to redefine an already-defined *function*, or to redefine a *macro* as a *function*. 
+Defines a new <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> named *function-name* in the *global environment*. The body of the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> defined by <DictionaryLink styled={true} term={"defun"}><b>defun</b></DictionaryLink> consists of <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm>; they are executed as an *implicit progn* when the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> is called. <DictionaryLink styled={true} term={"defun"}><b>defun</b></DictionaryLink> can be used to define a new <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>, to install a corrected version of an incorrect definition, to redefine an already-defined <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>, or to redefine a <GlossaryTerm styled={true} term={"macro"}><i>macro</i></GlossaryTerm> as a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>. 
 
 
 
-**defun** implicitly puts a **block** named *block-name* around the body *forms* (but not the *forms* in the *lambda-list*) of the *function* defined. 
+<DictionaryLink styled={true} term={"defun"}><b>defun</b></DictionaryLink> implicitly puts a <DictionaryLink styled={true} term={"block"}><b>block</b></DictionaryLink> named *block-name* around the body <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm> (but not the <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm> in the *lambda-list*) of the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> defined. 
 
 
 
-*Documentation* is attached as a *documentation string* to *name* (as kind **function**) and to the *function object*. 
+*Documentation* is attached as a *documentation string* to <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> (as kind <DictionaryLink styled={true} term={"function"}><b>function</b></DictionaryLink>) and to the *function object*. 
 
 
 
-Evaluating **defun** causes *function-name* to be a global name for the *function* specified by the *lambda expression* 
+Evaluating <DictionaryLink styled={true} term={"defun"}><b>defun</b></DictionaryLink> causes *function-name* to be a global name for the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> specified by the *lambda expression* 
 
 
 
@@ -66,7 +66,7 @@ Evaluating **defun** causes *function-name* to be a global name for the *functio
 
 
 
-[[ *\{declaration\}*\* *| documentation* ]] 
+[[ <GlossaryTerm styled={true} term={"declaration"}><i>\{declaration\}</i></GlossaryTerm>\* *| documentation* ]] 
 
 
 
@@ -74,7 +74,7 @@ Evaluating **defun** causes *function-name* to be a global name for the *functio
 
 
 
-processed in the *lexical environment* in which **defun** was executed. 
+processed in the *lexical environment* in which <DictionaryLink styled={true} term={"defun"}><b>defun</b></DictionaryLink> was executed. 
 
 
 
@@ -90,7 +90,7 @@ Data and Control
 
 
 
-**defun** 
+<DictionaryLink styled={true} term={"defun"}><b>defun</b></DictionaryLink> 
 
 
 
@@ -98,7 +98,7 @@ Data and Control
 
 
 
-**defun** is not required to perform any compile-time side effects. In particular, **defun** does not make the *function* definition available at compile time. An *implementation* may choose to store information about the *function* for the purposes of compile-time error-checking (such as checking the number of arguments on calls), or to enable the *function* to be expanded inline. 
+<DictionaryLink styled={true} term={"defun"}><b>defun</b></DictionaryLink> is not required to perform any compile-time side effects. In particular, <DictionaryLink styled={true} term={"defun"}><b>defun</b></DictionaryLink> does not make the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> definition available at compile time. An <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm> may choose to store information about the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> for the purposes of compile-time error-checking (such as checking the number of arguments on calls), or to enable the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> to be expanded inline. 
 
 
 
@@ -136,7 +136,7 @@ Data and Control
 
 
 
-**flet**, **labels**, **block**, **return-from**, **declare**, **documentation**, Section 3.1 (Evaluation), Section 3.4.1 (Ordinary Lambda Lists), Section 3.4.11 (Syntactic Interaction of Documentation Strings and Declarations) 
+<DictionaryLink styled={true} term={"flet"}><b>flet</b></DictionaryLink>, <DictionaryLink styled={true} term={"labels"}><b>labels</b></DictionaryLink>, <DictionaryLink styled={true} term={"block"}><b>block</b></DictionaryLink>, <DictionaryLink styled={true} term={"return-from"}><b>return-from</b></DictionaryLink>, <DictionaryLink styled={true} term={"declare"}><b>declare</b></DictionaryLink>, **documentation**, Section 3.1 (Evaluation), Section 3.4.1 (Ordinary Lambda Lists), Section 3.4.11 (Syntactic Interaction of Documentation Strings and Declarations) 
 
 
 
@@ -144,7 +144,7 @@ Data and Control
 
 
 
-**return-from** can be used to return prematurely from a *function* defined by **defun**. 
+<DictionaryLink styled={true} term={"return-from"}><b>return-from</b></DictionaryLink> can be used to return prematurely from a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> defined by <DictionaryLink styled={true} term={"defun"}><b>defun</b></DictionaryLink>. 
 
 
 

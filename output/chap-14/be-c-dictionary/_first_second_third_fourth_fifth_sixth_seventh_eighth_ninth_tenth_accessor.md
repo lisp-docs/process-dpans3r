@@ -1,4 +1,4 @@
-**first, second, third, fourth, fifth, sixth, seventh, eighth, ninth, tenth** *Accessor* 
+**first, second, third, fourth, fifth, sixth, seventh, eighth, ninth, tenth** <GlossaryTerm styled={true} term={"accessor"}><i>Accessor</i></GlossaryTerm> 
 
 
 
@@ -6,43 +6,43 @@
 
 
 
-**first** *list → object* 
+<DictionaryLink styled={true} term={"first"}><b>first</b></DictionaryLink> *list → object* 
 
 
 
-**second** *list → object* 
+<DictionaryLink styled={true} term={"second"}><b>second</b></DictionaryLink> *list → object* 
 
 
 
-**third** *list → object* 
+<DictionaryLink styled={true} term={"third"}><b>third</b></DictionaryLink> *list → object* 
 
 
 
-**fourth** *list → object* 
+<DictionaryLink styled={true} term={"fourth"}><b>fourth</b></DictionaryLink> *list → object* 
 
 
 
-**fifth** *list → object* 
+<DictionaryLink styled={true} term={"fifth"}><b>fifth</b></DictionaryLink> *list → object* 
 
 
 
-**sixth** *list → object* 
+<DictionaryLink styled={true} term={"sixth"}><b>sixth</b></DictionaryLink> *list → object* 
 
 
 
-**seventh** *list → object* 
+<DictionaryLink styled={true} term={"seventh"}><b>seventh</b></DictionaryLink> *list → object* 
 
 
 
-**eighth** *list → object* 
+<DictionaryLink styled={true} term={"eighth"}><b>eighth</b></DictionaryLink> *list → object* 
 
 
 
-**ninth** *list → object* 
+<DictionaryLink styled={true} term={"ninth"}><b>ninth</b></DictionaryLink> *list → object* 
 
 
 
-**tenth** *list → object* 
+<DictionaryLink styled={true} term={"tenth"}><b>tenth</b></DictionaryLink> *list → object* 
 
 
 
@@ -50,11 +50,11 @@
 
 
 
-**(setf (first** *list***)** *new-object***) (setf (second** *list***)** *new-object***) (setf (third** *list***)** *new-object***) (setf (fourth** *list***)** *new-object***) (setf (fifth** *list***)** *new-object***) (setf (sixth** *list***)** *new-object***) (setf (seventh** *list***)** *new-object***) (setf (eighth** *list***)** *new-object***) (setf (ninth** *list***)** *new-object***) (setf (tenth** *list***)** *new-object***)** 
+**(setf (first** *list<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> *new-object***) (setf (second** *list<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> *new-object***) (setf (third** *list<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> *new-object***) (setf (fourth** *list<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> *new-object***) (setf (fifth** *list<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> *new-object***) (setf (sixth** *list<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> *new-object***) (setf (seventh** *list<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> *new-object***) (setf (eighth** *list<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> *new-object***) (setf (ninth** *list<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> *new-object***) (setf (tenth** *list<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> *new-object<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> 
 
 
 
-*list*—a *list*, which might be a *dotted list* or a *circular list*. 
+<GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>, which might be a *dotted list* or a *circular list*. 
 
 
 
@@ -74,7 +74,7 @@
 
 
 
-*object*, *new-object*—an *object*. 
+<GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>, *new-object*—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -82,55 +82,55 @@
 
 
 
-The functions **first**, **second**, **third**, **fourth**, **fifth**, **sixth**, **seventh**, **eighth**, **ninth**, and **tenth** *access* the first, second, third, fourth, fifth, sixth, seventh, eighth, ninth, and tenth *elements* of *list*, respectively. Specifically, 
+The functions <DictionaryLink styled={true} term={"first"}><b>first</b></DictionaryLink>, <DictionaryLink styled={true} term={"second"}><b>second</b></DictionaryLink>, <DictionaryLink styled={true} term={"third"}><b>third</b></DictionaryLink>, <DictionaryLink styled={true} term={"fourth"}><b>fourth</b></DictionaryLink>, <DictionaryLink styled={true} term={"fifth"}><b>fifth</b></DictionaryLink>, <DictionaryLink styled={true} term={"sixth"}><b>sixth</b></DictionaryLink>, <DictionaryLink styled={true} term={"seventh"}><b>seventh</b></DictionaryLink>, <DictionaryLink styled={true} term={"eighth"}><b>eighth</b></DictionaryLink>, <DictionaryLink styled={true} term={"ninth"}><b>ninth</b></DictionaryLink>, and <DictionaryLink styled={true} term={"tenth"}><b>tenth</b></DictionaryLink> <GlossaryTerm styled={true} term={"access"}><i>access</i></GlossaryTerm> the first, second, third, fourth, fifth, sixth, seventh, eighth, ninth, and tenth <GlossaryTerm styled={true} term={"element"}><i>elements</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>, respectively. Specifically, 
 
 
 
-(first *list*) *≡* (car *list*) 
+(first <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>) *≡* (car <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>) 
 
 
 
-(second *list*) *≡* (car (cdr *list*)) 
+(second <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>) *≡* (car (cdr <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>)) 
 
 
 
-(third *list*) *≡* (car (cddr *list*)) 
+(third <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>) *≡* (car (cddr <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>)) 
 
 
 
-(fourth *list*) *≡* (car (cdddr *list*)) 
+(fourth <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>) *≡* (car (cdddr <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>)) 
 
 
 
-(fifth *list*) *≡* (car (cddddr *list*)) 
+(fifth <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>) *≡* (car (cddddr <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>)) 
 
 
 
-(sixth *list*) *≡* (car (cdr (cddddr *list*))) 
+(sixth <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>) *≡* (car (cdr (cddddr <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>))) 
 
 
 
-(seventh *list*) *≡* (car (cddr (cddddr *list*))) 
+(seventh <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>) *≡* (car (cddr (cddddr <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>))) 
 
 
 
-(eighth *list*) *≡* (car (cdddr (cddddr *list*))) 
+(eighth <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>) *≡* (car (cdddr (cddddr <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>))) 
 
 
 
-(ninth *list*) *≡* (car (cddddr (cddddr *list*))) 
+(ninth <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>) *≡* (car (cddddr (cddddr <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>))) 
 
 
 
-(tenth *list*) *≡* (car (cdr (cddddr (cddddr *list*)))) 
+(tenth <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>) *≡* (car (cdr (cddddr (cddddr <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>)))) 
 
 
 
-**setf** can also be used with any of these functions to change an existing component. The same equivalences apply. For example: 
+<DictionaryLink styled={true} term={"setf"}><b>setf</b></DictionaryLink> can also be used with any of these functions to change an existing component. The same equivalences apply. For example: 
 
 
 
-(setf (fifth *list*) *new-object*) *≡* (setf (car (cddddr *list*)) *new-object*) 
+(setf (fifth <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>) *new-object*) *≡* (setf (car (cddddr <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>)) *new-object*) 
 
 
 
@@ -152,7 +152,7 @@ lst *→* (1 2 3 "four" ((V)) VI 7 8 9 10)
 
 
 
-**car**, **nth** 
+<DictionaryLink styled={true} term={"car"}><b>car</b></DictionaryLink>, <DictionaryLink styled={true} term={"nth"}><b>nth</b></DictionaryLink> 
 
 
 
@@ -160,11 +160,11 @@ lst *→* (1 2 3 "four" ((V)) VI 7 8 9 10)
 
 
 
-**first** is functionally equivalent to **car**, **second** is functionally equivalent to **cadr**, **third** is functionally equivalent to **caddr**, and **fourth** is functionally equivalent to **cadddr**. 
+<DictionaryLink styled={true} term={"first"}><b>first</b></DictionaryLink> is functionally equivalent to <DictionaryLink styled={true} term={"car"}><b>car</b></DictionaryLink>, <DictionaryLink styled={true} term={"second"}><b>second</b></DictionaryLink> is functionally equivalent to <DictionaryLink styled={true} term={"cadr"}><b>cadr</b></DictionaryLink>, <DictionaryLink styled={true} term={"third"}><b>third</b></DictionaryLink> is functionally equivalent to <DictionaryLink styled={true} term={"caddr"}><b>caddr</b></DictionaryLink>, and <DictionaryLink styled={true} term={"fourth"}><b>fourth</b></DictionaryLink> is functionally equivalent to <DictionaryLink styled={true} term={"cadddr"}><b>cadddr</b></DictionaryLink>. 
 
 
 
-The ordinal numbering used here is one-origin, as opposed to the zero-origin numbering used by **nth**: 
+The ordinal numbering used here is one-origin, as opposed to the zero-origin numbering used by <DictionaryLink styled={true} term={"nth"}><b>nth</b></DictionaryLink>: 
 
 
 

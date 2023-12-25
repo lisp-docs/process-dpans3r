@@ -1,4 +1,4 @@
-**file-length** *Function* 
+**file-length** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**file-length** *stream → length* 
+<DictionaryLink styled={true} term={"file-length"}><b>file-length</b></DictionaryLink> *stream → length* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*stream*—a *stream associated with a file*. 
+<GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>—a *stream associated with a file*. 
 
 
 
-*length*—a non-negative *integer* or **nil**. 
+<GlossaryTerm styled={true} term={"length"}><i>length</i></GlossaryTerm>—a non-negative *integer* or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -26,11 +26,11 @@
 
 
 
-**file-length** returns the length of *stream*, or **nil** if the length cannot be determined. 
+<DictionaryLink styled={true} term={"file-length"}><b>file-length</b></DictionaryLink> returns the length of <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>, or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> if the length cannot be determined. 
 
 
 
-For a binary file, the length is measured in units of the *element type* of the *stream*. **Examples:**
+For a binary file, the length is measured in units of the *element type* of the <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>. **Examples:**
 ```lisp
 
 (with-open-file (s "decimal-digits.text" 
@@ -50,7 +50,7 @@ For a binary file, the length is measured in units of the *element type* of the 
 
 
 
-Should signal an error of *type* **type-error** if *stream* is not a *stream associated with a file*. 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm> is not a *stream associated with a file*. 
 
 
 
@@ -58,7 +58,7 @@ Should signal an error of *type* **type-error** if *stream* is not a *stream ass
 
 
 
-**open** 
+<DictionaryLink styled={true} term={"open"}><b>open</b></DictionaryLink> 
 
 
 

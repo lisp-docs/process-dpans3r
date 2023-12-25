@@ -1,4 +1,4 @@
-**array-dimensions** *Function* 
+**array-dimensions** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**array-dimensions** *array → dimensions* 
+<DictionaryLink styled={true} term={"array-dimensions"}><b>array-dimensions</b></DictionaryLink> *array → dimensions* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*array*—an *array*. 
+<GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm>. 
 
 
 
-*dimensions*—a *list* of *integers*. 
+<GlossaryTerm styled={true} term={"dimension"}><i>dimensions</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of *integers*. 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-Returns a *list* of the *dimensions* of *array*. (If *array* is a *vector* with a *fill pointer* , that *fill pointer* is ignored.) 
+Returns a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of the <GlossaryTerm styled={true} term={"dimension"}><i>dimensions</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm>. (If <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm> is a <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm> with a *fill pointer* , that *fill pointer* is ignored.) 
 
 
 
@@ -42,7 +42,7 @@ Returns a *list* of the *dimensions* of *array*. (If *array* is a *vector* with 
 
 
 
-Should signal an error of *type* **type-error** if its argument is not an *array*. 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if its argument is not an <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm>. 
 
 
 
@@ -50,7 +50,7 @@ Should signal an error of *type* **type-error** if its argument is not an *array
 
 
 
-**array-dimension** 
+<DictionaryLink styled={true} term={"array-dimension"}><b>array-dimension</b></DictionaryLink> 
 
 
 

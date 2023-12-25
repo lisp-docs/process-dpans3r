@@ -1,4 +1,4 @@
-**file-write-date** *Function* 
+**file-write-date** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**file-write-date** *pathspec → date* 
+<DictionaryLink styled={true} term={"file-write-date"}><b>file-write-date</b></DictionaryLink> *pathspec → date* 
 
 
 
@@ -18,7 +18,7 @@
 
 
 
-*date*—a *universal time* or **nil**. 
+*date*—a *universal time* or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-Returns a *universal time* representing the time at which the *file* specified by *pathspec* was last written (or created), or returns **nil** if such a time cannot be determined. 
+Returns a *universal time* representing the time at which the <GlossaryTerm styled={true} term={"file"}><i>file</i></GlossaryTerm> specified by *pathspec* was last written (or created), or returns <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> if such a time cannot be determined. 
 
 
 
@@ -60,11 +60,11 @@ The host computer’s file system.
 
 
 
-An error of *type* **file-error** is signaled if *pathspec* is *wild*. 
+An error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"file-error"}><b>file-error</b></DictionaryLink> is signaled if *pathspec* is <GlossaryTerm styled={true} term={"wild"}><i>wild</i></GlossaryTerm>. 
 
 
 
-An error of *type* **file-error** is signaled if the *file system* cannot perform the requested operation. 
+An error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"file-error"}><b>file-error</b></DictionaryLink> is signaled if the *file system* cannot perform the requested operation. 
 
 
 

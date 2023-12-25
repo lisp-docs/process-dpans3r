@@ -6,7 +6,7 @@ For this standard, some features from the language described in *Common Lisp: Th
 
 
 
-*Conforming implementations* that wish to retain any removed features for compatibility must assure that such compatibility does not interfere with the correct function of *conforming programs*. For example, symbols corresponding to the names of removed functions may not appear in the the COMMON-LISP *package*. (Note, however, that this specification has been devised in such a way that there can be a package named LISP which can contain such symbols.) 
+*Conforming implementations* that wish to retain any removed features for compatibility must assure that such compatibility does not interfere with the correct function of *conforming programs*. For example, symbols corresponding to the names of removed functions may not appear in the the COMMON-LISP <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>. (Note, however, that this specification has been devised in such a way that there can be a package named LISP which can contain such symbols.) 
 
 
 

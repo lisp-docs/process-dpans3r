@@ -1,4 +1,4 @@
-**characterp** *Function* 
+**characterp** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**characterp** *object → generalized-boolean* 
+<DictionaryLink styled={true} term={"characterp"}><b>characterp</b></DictionaryLink> *object → generalized-boolean* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*object*—an *object*. 
+<GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-Returns *true* if *object* is of *type* **character**; otherwise, returns *false*. 
+Returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"character"}><b>character</b></DictionaryLink>; otherwise, returns <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
@@ -50,7 +50,7 @@ Returns *true* if *object* is of *type* **character**; otherwise, returns *false
 
 
 
-**character** (*type* and *function*), **typep** 
+<DictionaryLink styled={true} term={"character"}><b>character</b></DictionaryLink> (<GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> and <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>), <DictionaryLink styled={true} term={"typep"}><b>typep</b></DictionaryLink> 
 
 
 
@@ -58,7 +58,7 @@ Returns *true* if *object* is of *type* **character**; otherwise, returns *false
 
 
 
-(characterp *object*) *≡* (typep *object* ’character) 
+(characterp <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>) *≡* (typep <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> ’character) 
 
 
 

@@ -1,4 +1,4 @@
-**trace, untrace** *Macro* 
+**trace, untrace** <GlossaryTerm styled={true} term={"macro"}><i>Macro</i></GlossaryTerm> 
 
 
 
@@ -6,11 +6,11 @@
 
 
 
-**trace** *\{function-name\}*\* *→ trace-result* 
+<DictionaryLink styled={true} term={"trace"}><b>trace</b></DictionaryLink> *\{function-name\}*\* *→ trace-result* 
 
 
 
-**untrace** *\{function-name\}*\* *→ untrace-result* 
+<DictionaryLink styled={true} term={"untrace"}><b>untrace</b></DictionaryLink> *\{function-name\}*\* *→ untrace-result* 
 
 
 
@@ -22,11 +22,11 @@
 
 
 
-*trace-result*—*implementation-dependent*, unless no *function-names* are supplied, in which case *trace-result* is a *list* of *function names*. 
+*trace-result*—<GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm>, unless no *function-names* are supplied, in which case *trace-result* is a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of *function names*. 
 
 
 
-*untrace-result*—*implementation-dependent*. 
+*untrace-result*—<GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm>. 
 
 
 
@@ -34,19 +34,19 @@
 
 
 
-**trace** and **untrace** control the invocation of the trace facility. 
+<DictionaryLink styled={true} term={"trace"}><b>trace</b></DictionaryLink> and <DictionaryLink styled={true} term={"untrace"}><b>untrace</b></DictionaryLink> control the invocation of the trace facility. 
 
 
 
-Invoking **trace** with one or more *function-names* causes the denoted *functions* to be “traced.” Whenever a traced *function* is invoked, information about the call, about the arguments passed, and about any eventually returned values is printed to *trace output*. If **trace** is used with no *function-names*, no tracing action is performed; instead, a list of the *functions* currently being traced is returned. 
+Invoking <DictionaryLink styled={true} term={"trace"}><b>trace</b></DictionaryLink> with one or more *function-names* causes the denoted <GlossaryTerm styled={true} term={"function"}><i>functions</i></GlossaryTerm> to be “traced.” Whenever a traced <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> is invoked, information about the call, about the arguments passed, and about any eventually returned values is printed to *trace output*. If <DictionaryLink styled={true} term={"trace"}><b>trace</b></DictionaryLink> is used with no *function-names*, no tracing action is performed; instead, a list of the <GlossaryTerm styled={true} term={"function"}><i>functions</i></GlossaryTerm> currently being traced is returned. 
 
 
 
-Invoking **untrace** with one or more function names causes those functions to be “untraced” (*i.e.*, no longer traced). If **untrace** is used with no *function-names*, all *functions* currently being traced are untraced. 
+Invoking <DictionaryLink styled={true} term={"untrace"}><b>untrace</b></DictionaryLink> with one or more function names causes those functions to be “untraced” (*i.e.*, no longer traced). If <DictionaryLink styled={true} term={"untrace"}><b>untrace</b></DictionaryLink> is used with no *function-names*, all <GlossaryTerm styled={true} term={"function"}><i>functions</i></GlossaryTerm> currently being traced are untraced. 
 
 
 
-If a *function* to be traced has been open-coded (*e.g.*, because it was declared **inline**), a call to that *function* might not produce trace output. 
+If a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> to be traced has been open-coded (*e.g.*, because it was declared <DictionaryLink styled={true} term={"inline"}><b>inline</b></DictionaryLink>), a call to that <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> might not produce trace output. 
 
 
 
@@ -77,7 +77,7 @@ If a *function* to be traced has been open-coded (*e.g.*, because it was declare
 
 
 
-Might change the definitions of the *functions* named by *function-names*. 
+Might change the definitions of the <GlossaryTerm styled={true} term={"function"}><i>functions</i></GlossaryTerm> named by *function-names*. 
 
 
 
@@ -101,7 +101,7 @@ Tracing an already traced function, or untracing a function not currently being 
 
 
 
-**\*trace-output\***, **step** 
+**\*trace-output\***, <DictionaryLink styled={true} term={"step"}><b>step</b></DictionaryLink> 
 
 
 
@@ -109,11 +109,11 @@ Tracing an already traced function, or untracing a function not currently being 
 
 
 
-**trace** and **untrace** may also accept additional *implementation-dependent* argument formats. The format of the trace output is *implementation-dependent*. 
+<DictionaryLink styled={true} term={"trace"}><b>trace</b></DictionaryLink> and <DictionaryLink styled={true} term={"untrace"}><b>untrace</b></DictionaryLink> may also accept additional <GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm> argument formats. The format of the trace output is <GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm>. 
 
 
 
-Although **trace** can be extended to permit non-standard options, *implementations* are nevertheless encouraged (but not required) to warn about the use of syntax or options that are neither specified by this standard nor added as an extension by the *implementation*, since they could be symptomatic of typographical errors or of reliance on features supported in *implementations* other than the current *implementation*. 
+Although <DictionaryLink styled={true} term={"trace"}><b>trace</b></DictionaryLink> can be extended to permit non-standard options, <GlossaryTerm styled={true} term={"implementation"}><i>implementations</i></GlossaryTerm> are nevertheless encouraged (but not required) to warn about the use of syntax or options that are neither specified by this standard nor added as an extension by the <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm>, since they could be symptomatic of typographical errors or of reliance on features supported in <GlossaryTerm styled={true} term={"implementation"}><i>implementations</i></GlossaryTerm> other than the current <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm>. 
 
 
 

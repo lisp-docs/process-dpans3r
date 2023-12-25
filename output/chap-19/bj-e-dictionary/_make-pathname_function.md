@@ -1,4 +1,4 @@
-**make-pathname** *Function* 
+**make-pathname** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**make-pathname** &amp;key *host device directory name type version defaults case* 
+<DictionaryLink styled={true} term={"make-pathname"}><b>make-pathname</b></DictionaryLink> &amp;key *host device directory name type version defaults case* 
 
 
 
@@ -22,11 +22,11 @@
 
 
 
-*directory*—a *valid pathname directory*. Complicated defaulting behavior; see below. *name*—a *valid pathname name*. Complicated defaulting behavior; see below. 
+*directory*—a *valid pathname directory*. Complicated defaulting behavior; see below. <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm>—a *valid pathname name*. Complicated defaulting behavior; see below. 
 
 
 
-*type*—a *valid pathname type*. Complicated defaulting behavior; see below. 
+<GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm>—a *valid pathname type*. Complicated defaulting behavior; see below. 
 
 
 
@@ -34,15 +34,15 @@
 
 
 
-*defaults*—a *pathname designator* . The default is a *pathname* whose host component is the same as the host component of the *value* of **\*default-pathname-defaults\***, and whose other components are all **nil**. 
+*defaults*—a *pathname designator* . The default is a <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm> whose host component is the same as the host component of the <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of <DictionaryLink styled={true} term={"default-pathname-defaults"}><b>\*default-pathname-defaults\*</b></DictionaryLink>, and whose other components are all <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
-*case*—one of :common or :local. The default is :local. 
+<GlossaryTerm styled={true} term={"case"}><i>case</i></GlossaryTerm>—one of :common or :local. The default is :local. 
 
 
 
-*pathname*—a *pathname*. 
+<GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm>. 
 
 
 
@@ -50,31 +50,27 @@
 
 
 
-Constructs and returns a *pathname* from the supplied keyword arguments. 
+Constructs and returns a <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm> from the supplied keyword arguments. 
 
 
 
-After the components supplied explicitly by *host*, *device*, *directory*, *name*, *type*, and *version* are filled in, the merging rules used by **merge-pathnames** are used to fill in any unsupplied components from the defaults supplied by *defaults*. 
+After the components supplied explicitly by *host*, *device*, *directory*, <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm>, <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm>, and *version* are filled in, the merging rules used by <DictionaryLink styled={true} term={"merge-pathnames"}><b>merge-pathnames</b></DictionaryLink> are used to fill in any unsupplied components from the defaults supplied by *defaults*. 
 
 
 
-Whenever a *pathname* is constructed the components may be canonicalized if appropriate. For the explanation of the arguments that can be supplied for each component, see Section 19.2.1 (Pathname Components). 
+Whenever a <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm> is constructed the components may be canonicalized if appropriate. For the explanation of the arguments that can be supplied for each component, see Section 19.2.1 (Pathname Components). 
 
 
 
-If *case* is supplied, it is treated as described in Section 19.2.2.1.2 (Case in Pathname Components). 
+If <GlossaryTerm styled={true} term={"case"}><i>case</i></GlossaryTerm> is supplied, it is treated as described in Section 19.2.2.1.2 (Case in Pathname Components). 
 
 
 
-The resulting *pathname* is a *logical pathname* if and only its host component is a *logical host* or a *string* that names a defined *logical host*. 
-
-
+The resulting <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm> is a *logical pathname* if and only its host component is a *logical host* or a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> that names a defined *logical host*. 
 
 
 
 
-
- 
 
 
 
@@ -82,11 +78,15 @@ The resulting *pathname* is a *logical pathname* if and only its host component 
 
 
 
-**make-pathname** 
+ 
 
 
 
-If the *directory* is a *string*, it should be the name of a top level directory, and should not contain any punctuation characters; that is, specifying a *string*, *str*, is equivalent to specifying the list (:absolute *str*). Specifying the symbol :wild is equivalent to specifying the list (:absolute :wild-inferiors), or (:absolute :wild) in a file system that does not support :wild-inferiors. 
+<DictionaryLink styled={true} term={"make-pathname"}><b>make-pathname</b></DictionaryLink> 
+
+
+
+If the *directory* is a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>, it should be the name of a top level directory, and should not contain any punctuation characters; that is, specifying a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>, *str*, is equivalent to specifying the list (:absolute *str*). Specifying the symbol :wild is equivalent to specifying the list (:absolute :wild-inferiors), or (:absolute :wild) in a file system that does not support :wild-inferiors. 
 
 
 
@@ -144,7 +144,7 @@ The *file system*.
 
 
 
-**merge-pathnames**, **pathname**, **logical-pathname**, Section 20.1 (File System Concepts), Section 19.1.2 (Pathnames as Filenames) 
+<DictionaryLink styled={true} term={"merge-pathnames"}><b>merge-pathnames</b></DictionaryLink>, <DictionaryLink styled={true} term={"pathname"}><b>pathname</b></DictionaryLink>, <DictionaryLink styled={true} term={"logical-pathname"}><b>logical-pathname</b></DictionaryLink>, Section 20.1 (File System Concepts), Section 19.1.2 (Pathnames as Filenames) 
 
 
 

@@ -1,4 +1,4 @@
-**make-hash-table** *Function* 
+**make-hash-table** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**make-hash-table** &amp;key *test size rehash-size rehash-threshold → hash-table* 
+<DictionaryLink styled={true} term={"make-hash-table"}><b>make-hash-table</b></DictionaryLink> &amp;key *test size rehash-size rehash-threshold → hash-table* 
 
 
 
@@ -14,15 +14,15 @@
 
 
 
-*test*—a *designator* for one of the *functions* **eq**, **eql**, **equal**, or **equalp**. The default is **eql**. *size*—a non-negative *integer* . The default is *implementation-dependent*. 
+*test*—a <GlossaryTerm styled={true} term={"designator"}><i>designator</i></GlossaryTerm> for one of the <GlossaryTerm styled={true} term={"function"}><i>functions</i></GlossaryTerm> <DictionaryLink styled={true} term={"eq"}><b>eq</b></DictionaryLink>, <DictionaryLink styled={true} term={"eql"}><b>eql</b></DictionaryLink>, <DictionaryLink styled={true} term={"equal"}><b>equal</b></DictionaryLink>, or <DictionaryLink styled={true} term={"equalp"}><b>equalp</b></DictionaryLink>. The default is <DictionaryLink styled={true} term={"eql"}><b>eql</b></DictionaryLink>. *size*—a non-negative *integer* . The default is <GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm>. 
 
 
 
-*rehash-size*—a *real* of *type* (or (integer 1 \*) (float (1.0) \*)). The default is *implementation dependent*. 
+*rehash-size*—a *real* of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> (or (integer 1 \*) (float (1.0) \*)). The default is *implementation dependent*. 
 
 
 
-*rehash-threshold*—a *real* of *type* (real 0 1). The default is *implementation-dependent*. *hash-table*—a *hash table*. 
+*rehash-threshold*—a *real* of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> (real 0 1). The default is <GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm>. *hash-table*—a *hash table*. 
 
 
 
@@ -34,19 +34,15 @@ Creates and returns a new *hash table*.
 
 
 
-*test* determines how *keys* are compared. An *object* is said to be present in the *hash-table* if that *object* is the *same* under the *test* as the *key* for some entry in the *hash-table*. 
+*test* determines how <GlossaryTerm styled={true} term={"key"}><i>keys</i></GlossaryTerm> are compared. An <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is said to be present in the *hash-table* if that <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is the <GlossaryTerm styled={true} term={"same"}><i>same</i></GlossaryTerm> under the *test* as the <GlossaryTerm styled={true} term={"key"}><i>key</i></GlossaryTerm> for some entry in the *hash-table*. 
 
 
 
-*size* is a hint to the *implementation* about how much initial space to allocate in the *hash-table*. This information, taken together with the *rehash-threshold*, controls the approximate number of entries which it should be possible to insert before the table has to grow. The actual size might be 
-
-
+*size* is a hint to the <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm> about how much initial space to allocate in the *hash-table*. This information, taken together with the *rehash-threshold*, controls the approximate number of entries which it should be possible to insert before the table has to grow. The actual size might be 
 
 
 
 
-
- 
 
 
 
@@ -54,11 +50,15 @@ Creates and returns a new *hash table*.
 
 
 
-rounded up from *size* to the next ‘good’ size; for example, some *implementations* might round to the next prime number. 
+ 
 
 
 
-*rehash-size* specifies a minimum amount to increase the size of the *hash-table* when it becomes full enough to require rehashing; see *rehash-theshold* below. If *rehash-size* is an *integer* , the expected growth rate for the table is additive and the *integer* is the number of entries to add; if it is a *float*, the expected growth rate for the table is multiplicative and the *float* is the ratio of the new size to the old size. As with *size*, the actual size of the increase might be rounded up. 
+rounded up from *size* to the next ‘good’ size; for example, some <GlossaryTerm styled={true} term={"implementation"}><i>implementations</i></GlossaryTerm> might round to the next prime number. 
+
+
+
+*rehash-size* specifies a minimum amount to increase the size of the *hash-table* when it becomes full enough to require rehashing; see *rehash-theshold* below. If *rehash-size* is an *integer* , the expected growth rate for the table is additive and the *integer* is the number of entries to add; if it is a <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm>, the expected growth rate for the table is multiplicative and the <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm> is the ratio of the new size to the old size. As with *size*, the actual size of the increase might be rounded up. 
 
 
 
@@ -66,7 +66,7 @@ rounded up from *size* to the next ‘good’ size; for example, some *implement
 
 
 
-The *values* of *rehash-size* and *rehash-threshold* do not constrain the *implementation* to use any particular method for computing when and by how much the size of *hash-table* should be enlarged. Such decisions are *implementation-dependent*, and these *values* only hints from the *programmer* to the *implementation*, and the *implementation* is permitted to ignore them. 
+The <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> of *rehash-size* and *rehash-threshold* do not constrain the <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm> to use any particular method for computing when and by how much the size of *hash-table* should be enlarged. Such decisions are <GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm>, and these <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> only hints from the <GlossaryTerm styled={true} term={"programmer"}><i>programmer</i></GlossaryTerm> to the <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm>, and the <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm> is permitted to ignore them. 
 
 
 
@@ -86,7 +86,7 @@ The *values* of *rehash-size* and *rehash-threshold* do not constrain the *imple
 
 
 
-**gethash**, **hash-table** 
+<DictionaryLink styled={true} term={"gethash"}><b>gethash</b></DictionaryLink>, <DictionaryLink styled={true} term={"hash-table"}><b>hash-table</b></DictionaryLink> 
 
 
 

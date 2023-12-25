@@ -2,7 +2,7 @@
 
 
 
-When *printer escaping* is disabled, or the characters under consideration are not already quoted specifically by *single escape* or *multiple escape* syntax, the *readtable case* of the *current readtable* affects the way the *Lisp printer* writes *symbols* in the following ways: 
+When *printer escaping* is disabled, or the characters under consideration are not already quoted specifically by *single escape* or *multiple escape* syntax, the *readtable case* of the *current readtable* affects the way the *Lisp printer* writes <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> in the following ways: 
 
 
 
@@ -10,7 +10,7 @@ When *printer escaping* is disabled, or the characters under consideration are n
 
 
 
-When the *readtable case* is :upcase, *uppercase characters* are printed in the case specified by **\*print-case\***, and *lowercase characters* are printed in their own case. 
+When the *readtable case* is :upcase, *uppercase characters* are printed in the case specified by <DictionaryLink styled={true} term={"print-case"}><b>\*print-case\*</b></DictionaryLink>, and *lowercase characters* are printed in their own case. 
 
 
 
@@ -30,7 +30,7 @@ When the *readtable case* is :upcase, *uppercase characters* are printed in the 
 
 
 
-When the *readtable case* is :downcase, *uppercase characters* are printed in their own case, and *lowercase characters* are printed in the case specified by **\*print-case\***. 
+When the *readtable case* is :downcase, *uppercase characters* are printed in their own case, and *lowercase characters* are printed in the case specified by <DictionaryLink styled={true} term={"print-case"}><b>\*print-case\*</b></DictionaryLink>. 
 
 
 
@@ -50,7 +50,7 @@ When the *readtable case* is :invert, the case of all *alphabetic characters* in
 
 
 
-The rules for escaping *alphabetic characters* in symbol names are affected by the **readtable-case** if *printer escaping* is enabled. *Alphabetic characters* are escaped as follows: 
+The rules for escaping *alphabetic characters* in symbol names are affected by the <DictionaryLink styled={true} term={"readtable-case"}><b>readtable-case</b></DictionaryLink> if *printer escaping* is enabled. *Alphabetic characters* are escaped as follows: 
 
 
 

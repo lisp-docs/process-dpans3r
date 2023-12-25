@@ -1,4 +1,4 @@
-**print-not-readable-object** *Function* 
+**print-not-readable-object** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**print-not-readable-object** *condition ! object* 
+<DictionaryLink styled={true} term={"print-not-readable-object"}><b>print-not-readable-object</b></DictionaryLink> *condition ! object* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*condition*—a *condition* of *type* **print-not-readable**. 
+<GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"print-not-readable"}><b>print-not-readable</b></DictionaryLink>. 
 
 
 
-*object*—an *object*. 
+<GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-Returns the *object* that could not be printed readably in the situation represented by *condition*. 
+Returns the <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> that could not be printed readably in the situation represented by <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm>. 
 
 
 
@@ -42,7 +42,7 @@ Returns the *object* that could not be printed readably in the situation represe
 
 
 
-**print-not-readable**, Chapter 9 (Conditions) 
+<DictionaryLink styled={true} term={"print-not-readable"}><b>print-not-readable</b></DictionaryLink>, Chapter 9 (Conditions) 
 
 
 

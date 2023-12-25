@@ -1,4 +1,4 @@
-**read-byte** *Function* 
+**read-byte** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**read-byte** *stream* &amp;optional *eof-error-p eof-value → byte* 
+<DictionaryLink styled={true} term={"read-byte"}><b>read-byte</b></DictionaryLink> <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm> &amp;optional *eof-error-p eof-value → byte* 
 
 
 
@@ -14,19 +14,19 @@
 
 
 
-*stream*—a *binary input stream*. 
+<GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>—a *binary input stream*. 
 
 
 
-*eof-error-p*—a *generalized boolean*. The default is *true*. 
+*eof-error-p*—a *generalized boolean*. The default is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>. 
 
 
 
-*eof-value*—an *object*. The default is **nil**. 
+*eof-value*—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. The default is <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
-*byte*—an *integer* , or the *eof-value*. 
+<GlossaryTerm styled={true} term={"byte"}><i>byte</i></GlossaryTerm>—an *integer* , or the *eof-value*. 
 
 
 
@@ -34,11 +34,11 @@
 
 
 
-**read-byte** reads and returns one byte from *stream*. 
+<DictionaryLink styled={true} term={"read-byte"}><b>read-byte</b></DictionaryLink> reads and returns one byte from <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>. 
 
 
 
-If an *end of file*<sub>2</sub> occurs and *eof-error-p* is *false*, the *eof-value* is returned. 
+If an *end of file*<sub>2</sub> occurs and *eof-error-p* is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>, the *eof-value* is returned. 
 
 
 
@@ -59,7 +59,7 @@ If an *end of file*<sub>2</sub> occurs and *eof-error-p* is *false*, the *eof-va
 
 
 
-Modifies *stream*. 
+Modifies <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>. 
 
 
 
@@ -67,15 +67,15 @@ Modifies *stream*.
 
 
 
-Should signal an error of *type* **type-error** if *stream* is not a *stream*. 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm> is not a <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>. 
 
 
 
-Should signal an error of *type* **error** if *stream* is not a *binary input stream*. 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"error"}><b>error</b></DictionaryLink> if <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm> is not a *binary input stream*. 
 
 
 
-If there are no *bytes* remaining in the *stream* and *eof-error-p* is *true*, an error of *type* **end-of-file** is signaled. 
+If there are no <GlossaryTerm styled={true} term={"byte"}><i>bytes</i></GlossaryTerm> remaining in the <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm> and *eof-error-p* is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>, an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"end-of-file"}><b>end-of-file</b></DictionaryLink> is signaled. 
 
 
 
@@ -83,7 +83,7 @@ If there are no *bytes* remaining in the *stream* and *eof-error-p* is *true*, a
 
 
 
-**read-char**, **read-sequence**, **write-byte** 
+<DictionaryLink styled={true} term={"read-char"}><b>read-char</b></DictionaryLink>, <DictionaryLink styled={true} term={"read-sequence"}><b>read-sequence</b></DictionaryLink>, <DictionaryLink styled={true} term={"write-byte"}><b>write-byte</b></DictionaryLink> 
 
 
 

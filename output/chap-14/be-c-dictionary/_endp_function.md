@@ -1,4 +1,4 @@
-**endp** *Function* 
+**endp** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**endp** *list → generalized-boolean* 
+<DictionaryLink styled={true} term={"endp"}><b>endp</b></DictionaryLink> *list → generalized-boolean* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*list*—a *list*, which might be a *dotted list* or a *circular list*. 
+<GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>, which might be a *dotted list* or a *circular list*. 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-Returns *true* if *list* is the *empty list*. Returns *false* if *list* is a *cons*. 
+Returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> is the *empty list*. Returns <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm> if <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> is a <GlossaryTerm styled={true} term={"cons"}><i>cons</i></GlossaryTerm>. 
 
 
 
@@ -42,7 +42,7 @@ Returns *true* if *list* is the *empty list*. Returns *false* if *list* is a *co
 
 
 
-Should signal an error of *type* **type-error** if *list* is not a *list*. 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> is not a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>. 
 
 
 
@@ -50,7 +50,7 @@ Should signal an error of *type* **type-error** if *list* is not a *list*.
 
 
 
-The purpose of **endp** is to test for the end of *proper list*. Since **endp** does not descend into a *cons*, it is well-defined to pass it a *dotted list*. However, if shorter “lists” are iteratively produced by calling **cdr** on such a *dotted list* and those “lists” are tested with **endp**, a situation that has undefined consequences will eventually result when the *non-nil atom* (which is not in fact a *list*) finally becomes the argument to **endp**. Since this is the usual way in which **endp** is used, it is conservative programming style and consistent with the intent of **endp** to treat **endp** as simply a function on *proper lists* which happens not to enforce an argument type of *proper list* except when the argument is *atomic*. 
+The purpose of <DictionaryLink styled={true} term={"endp"}><b>endp</b></DictionaryLink> is to test for the end of *proper list*. Since <DictionaryLink styled={true} term={"endp"}><b>endp</b></DictionaryLink> does not descend into a <GlossaryTerm styled={true} term={"cons"}><i>cons</i></GlossaryTerm>, it is well-defined to pass it a *dotted list*. However, if shorter “lists” are iteratively produced by calling <DictionaryLink styled={true} term={"cdr"}><b>cdr</b></DictionaryLink> on such a *dotted list* and those “lists” are tested with <DictionaryLink styled={true} term={"endp"}><b>endp</b></DictionaryLink>, a situation that has undefined consequences will eventually result when the *non-nil atom* (which is not in fact a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>) finally becomes the argument to <DictionaryLink styled={true} term={"endp"}><b>endp</b></DictionaryLink>. Since this is the usual way in which <DictionaryLink styled={true} term={"endp"}><b>endp</b></DictionaryLink> is used, it is conservative programming style and consistent with the intent of <DictionaryLink styled={true} term={"endp"}><b>endp</b></DictionaryLink> to treat <DictionaryLink styled={true} term={"endp"}><b>endp</b></DictionaryLink> as simply a function on *proper lists* which happens not to enforce an argument type of *proper list* except when the argument is <GlossaryTerm styled={true} term={"atomic"}><i>atomic</i></GlossaryTerm>. 
 
 
 

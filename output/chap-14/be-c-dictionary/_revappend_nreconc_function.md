@@ -1,4 +1,4 @@
-**revappend, nreconc** *Function* 
+**revappend, nreconc** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,11 +6,11 @@
 
 
 
-**revappend** *list tail → result-list* 
+<DictionaryLink styled={true} term={"revappend"}><b>revappend</b></DictionaryLink> *list tail → result-list* 
 
 
 
-**nreconc** *list tail → result-list* 
+<DictionaryLink styled={true} term={"nreconc"}><b>nreconc</b></DictionaryLink> *list tail → result-list* 
 
 
 
@@ -18,15 +18,15 @@
 
 
 
-*list*—a *proper list*. 
+<GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>—a *proper list*. 
 
 
 
-*tail*—an *object*. 
+<GlossaryTerm styled={true} term={"tail"}><i>tail</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
-*result-list*—an *object*. 
+*result-list*—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -34,15 +34,15 @@
 
 
 
-**revappend** constructs a *copy*<sub>2</sub> of *list*, but with the *elements* in reverse order. It then appends (as if by **nconc**) the *tail* to that reversed list and returns the result. 
+<DictionaryLink styled={true} term={"revappend"}><b>revappend</b></DictionaryLink> constructs a <GlossaryTerm styled={true} term={"copy"}><i>copy</i></GlossaryTerm><sub>2</sub> of <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>, but with the <GlossaryTerm styled={true} term={"element"}><i>elements</i></GlossaryTerm> in reverse order. It then appends (as if by <DictionaryLink styled={true} term={"nconc"}><b>nconc</b></DictionaryLink>) the <GlossaryTerm styled={true} term={"tail"}><i>tail</i></GlossaryTerm> to that reversed list and returns the result. 
 
 
 
-**nreconc** reverses the order of *elements* in *list* (as if by **nreverse**). It then appends (as if by **nconc**) the *tail* to that reversed list and returns the result. 
+<DictionaryLink styled={true} term={"nreconc"}><b>nreconc</b></DictionaryLink> reverses the order of <GlossaryTerm styled={true} term={"element"}><i>elements</i></GlossaryTerm> in <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> (as if by <DictionaryLink styled={true} term={"nreverse"}><b>nreverse</b></DictionaryLink>). It then appends (as if by <DictionaryLink styled={true} term={"nconc"}><b>nconc</b></DictionaryLink>) the <GlossaryTerm styled={true} term={"tail"}><i>tail</i></GlossaryTerm> to that reversed list and returns the result. 
 
 
 
-The resulting *list* shares *list structure* with *tail*. 
+The resulting <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> shares *list structure* with <GlossaryTerm styled={true} term={"tail"}><i>tail</i></GlossaryTerm>. 
 
 
 
@@ -94,15 +94,15 @@ The resulting *list* shares *list structure* with *tail*.
 
 
 
-**revappend** does not modify either of its *arguments*. **nreconc** is permitted to modify *list* but not *tail*. 
+<DictionaryLink styled={true} term={"revappend"}><b>revappend</b></DictionaryLink> does not modify either of its <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm>. <DictionaryLink styled={true} term={"nreconc"}><b>nreconc</b></DictionaryLink> is permitted to modify <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> but not <GlossaryTerm styled={true} term={"tail"}><i>tail</i></GlossaryTerm>. 
 
 
 
-Although it might be implemented differently, **nreconc** is constrained to have side-effect behavior equivalent to: 
+Although it might be implemented differently, <DictionaryLink styled={true} term={"nreconc"}><b>nreconc</b></DictionaryLink> is constrained to have side-effect behavior equivalent to: 
 
 
 
-(nconc (nreverse *list*) *tail*) 
+(nconc (nreverse <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>) <GlossaryTerm styled={true} term={"tail"}><i>tail</i></GlossaryTerm>) 
 
 
 
@@ -110,7 +110,7 @@ Although it might be implemented differently, **nreconc** is constrained to have
 
 
 
-**reverse**, **nreverse**, **nconc** 
+<DictionaryLink styled={true} term={"reverse"}><b>reverse</b></DictionaryLink>, <DictionaryLink styled={true} term={"nreverse"}><b>nreverse</b></DictionaryLink>, <DictionaryLink styled={true} term={"nconc"}><b>nconc</b></DictionaryLink> 
 
 
 
@@ -118,7 +118,7 @@ Although it might be implemented differently, **nreconc** is constrained to have
 
 
 
-The following functional equivalences are true, although good *implementations* will typically use a faster algorithm for achieving the same effect: 
+The following functional equivalences are true, although good <GlossaryTerm styled={true} term={"implementation"}><i>implementations</i></GlossaryTerm> will typically use a faster algorithm for achieving the same effect: 
 
 
 
@@ -134,11 +134,11 @@ The following functional equivalences are true, although good *implementations* 
 
 
 
-(revappend *list tail*) *≡* (nconc (reverse *list*) *tail*) 
+(revappend *list tail*) *≡* (nconc (reverse <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>) <GlossaryTerm styled={true} term={"tail"}><i>tail</i></GlossaryTerm>) 
 
 
 
-(nreconc *list tail*) *≡* (nconc (nreverse *list*) *tail*) 
+(nreconc *list tail*) *≡* (nconc (nreverse <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>) <GlossaryTerm styled={true} term={"tail"}><i>tail</i></GlossaryTerm>) 
 
 
 

@@ -1,4 +1,4 @@
-**string** *Function* 
+**string** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**string** *x → string* 
+<DictionaryLink styled={true} term={"string"}><b>string</b></DictionaryLink> *x → string* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*x*—a *string*, a *symbol*, or a *character* . 
+*x*—a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>, a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>, or a <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> . 
 
 
 
-*string*—a *string*. 
+<GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>. 
 
 
 
@@ -26,23 +26,23 @@
 
 
 
-Returns a *string* described by *x*; specifically: 
+Returns a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> described by *x*; specifically: 
 
 
 
-*•* If *x* is a *string*, it is returned. 
+*•* If *x* is a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>, it is returned. 
 
 
 
-*•* If *x* is a *symbol*, its *name* is returned. 
+*•* If *x* is a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>, its <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> is returned. 
 
 
 
-*•* If *x* is a *character* , then a *string* containing that one *character* is returned. 
+*•* If *x* is a <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> , then a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> containing that one <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> is returned. 
 
 
 
-*•* **string** might perform additional, *implementation-defined* conversions. 
+*•* <DictionaryLink styled={true} term={"string"}><b>string</b></DictionaryLink> might perform additional, <GlossaryTerm styled={true} term={"implementation-defined"}><i>implementation-defined</i></GlossaryTerm> conversions. 
 
 
 
@@ -58,7 +58,7 @@ Returns a *string* described by *x*; specifically:
 
 
 
-In the case where a conversion is defined neither by this specification nor by the *implementation*, an error of *type* **type-error** is signaled. 
+In the case where a conversion is defined neither by this specification nor by the <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm>, an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> is signaled. 
 
 
 
@@ -66,7 +66,7 @@ In the case where a conversion is defined neither by this specification nor by t
 
 
 
-**coerce**, **string** (*type*). 
+<DictionaryLink styled={true} term={"coerce"}><b>coerce</b></DictionaryLink>, <DictionaryLink styled={true} term={"string"}><b>string</b></DictionaryLink> (<GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm>). 
 
 
 
@@ -74,7 +74,7 @@ In the case where a conversion is defined neither by this specification nor by t
 
 
 
-**coerce** can be used to convert a *sequence* of *characters* to a *string*. 
+<DictionaryLink styled={true} term={"coerce"}><b>coerce</b></DictionaryLink> can be used to convert a *sequence* of <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm> to a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>. 
 
 
 
@@ -90,7 +90,7 @@ In the case where a conversion is defined neither by this specification nor by t
 
 
 
-**prin1-to-string**, **princ-to-string**, **write-to-string**, or **format** (with a first argument of **nil**) can be used to get a *string* representation of a *number* or any other *object*. 
+<DictionaryLink styled={true} term={"prin1-to-string"}><b>prin1-to-string</b></DictionaryLink>, <DictionaryLink styled={true} term={"princ-to-string"}><b>princ-to-string</b></DictionaryLink>, <DictionaryLink styled={true} term={"write-to-string"}><b>write-to-string</b></DictionaryLink>, or <DictionaryLink styled={true} term={"format"}><b>format</b></DictionaryLink> (with a first argument of <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>) can be used to get a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> representation of a <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> or any other <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -102,27 +102,27 @@ In the case where a conversion is defined neither by this specification nor by t
 
 
 
-**string-upcase** *string* &amp;key *start end → cased-string* 
+**string-upcase** <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> &amp;key *start end → cased-string* 
 
 
 
-**string-downcase** *string* &amp;key *start end → cased-string* 
+**string-downcase** <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> &amp;key *start end → cased-string* 
 
 
 
-**string-capitalize** *string* &amp;key *start end → cased-string* 
+**string-capitalize** <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> &amp;key *start end → cased-string* 
 
 
 
-**nstring-upcase** *string* &amp;key *start end → string* 
+**nstring-upcase** <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> &amp;key *start end → string* 
 
 
 
-**nstring-downcase** *string* &amp;key *start end → string* 
+**nstring-downcase** <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> &amp;key *start end → string* 
 
 
 
-**nstring-capitalize** *string* &amp;key *start end → string* 
+**nstring-capitalize** <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> &amp;key *start end → string* 
 
 
 
@@ -130,15 +130,15 @@ In the case where a conversion is defined neither by this specification nor by t
 
 
 
-*string*—a *string designator* . For **nstring-upcase**, **nstring-downcase**, and **nstring-capitalize**, the *string designator* must be a *string*. 
+<GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>—a *string designator* . For **nstring-upcase**, **nstring-downcase**, and **nstring-capitalize**, the *string designator* must be a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>. 
 
 
 
-*start*, *end*—*bounding index designators* of *string*. The defaults for *start* and *end* are 0 and **nil**, respectively. 
+*start*, *end*—*bounding index designators* of <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>. The defaults for *start* and *end* are 0 and <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>, respectively. 
 
 
 
-*cased-string*—a *string*. 
+*cased-string*—a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>. 
 
 
 
@@ -154,7 +154,7 @@ In the case where a conversion is defined neither by this specification nor by t
 
 
 
-**string-upcase** returns a *string* just like *string* with all lowercase characters replaced by the corresponding uppercase characters. More precisely, each character of the result *string* is produced by applying the *function* **char-upcase** to the corresponding character of *string*. 
+**string-upcase** returns a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> just like <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> with all lowercase characters replaced by the corresponding uppercase characters. More precisely, each character of the result <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> is produced by applying the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> <DictionaryLink styled={true} term={"char-upcase"}><b>char-upcase</b></DictionaryLink> to the corresponding character of <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>. 
 
 
 
@@ -162,7 +162,7 @@ In the case where a conversion is defined neither by this specification nor by t
 
 
 
-**string-downcase** is like **string-upcase** except that all uppercase characters are replaced by the corresponding lowercase characters (using **char-downcase**). 
+**string-downcase** is like **string-upcase** except that all uppercase characters are replaced by the corresponding lowercase characters (using <DictionaryLink styled={true} term={"char-downcase"}><b>char-downcase</b></DictionaryLink>). 
 
 
 
@@ -186,7 +186,7 @@ In the case where a conversion is defined neither by this specification nor by t
 
 
 
-**string-capitalize** produces a copy of *string* such that, for every word in the copy, the first *character* of the “word,” if it has *case*, is *uppercase* and any other *characters* with *case* in the word are *lowercase*. For the purposes of **string-capitalize**, a “word” is defined to be a consecutive subsequence consisting of *alphanumeric characters*, delimited at each end either by a non-*alphanumeric character* or by an end of the *string*. 
+**string-capitalize** produces a copy of <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> such that, for every word in the copy, the first <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> of the “word,” if it has <GlossaryTerm styled={true} term={"case"}><i>case</i></GlossaryTerm>, is <GlossaryTerm styled={true} term={"uppercase"}><i>uppercase</i></GlossaryTerm> and any other <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm> with <GlossaryTerm styled={true} term={"case"}><i>case</i></GlossaryTerm> in the word are <GlossaryTerm styled={true} term={"lowercase"}><i>lowercase</i></GlossaryTerm>. For the purposes of **string-capitalize**, a “word” is defined to be a consecutive subsequence consisting of *alphanumeric characters*, delimited at each end either by a non-*alphanumeric character* or by an end of the <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>. 
 
 
 
@@ -194,11 +194,11 @@ In the case where a conversion is defined neither by this specification nor by t
 
 
 
-**nstring-upcase**, **nstring-downcase**, and **nstring-capitalize** are identical to **string-upcase**, **string-downcase**, and **string-capitalize** respectively except that they modify *string*. 
+**nstring-upcase**, **nstring-downcase**, and **nstring-capitalize** are identical to **string-upcase**, **string-downcase**, and **string-capitalize** respectively except that they modify <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>. 
 
 
 
-For **string-upcase**, **string-downcase**, and **string-capitalize**, *string* is not modified. However, if no characters in *string* require conversion, the result may be either *string* or a copy of it, at the implementation’s discretion. 
+For **string-upcase**, **string-downcase**, and **string-capitalize**, <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> is not modified. However, if no characters in <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> require conversion, the result may be either <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> or a copy of it, at the implementation’s discretion. 
 
 
 
@@ -227,7 +227,7 @@ str *→* "0123AbcD890a"
 
 
 
-**nstring-upcase**, **nstring-downcase**, and **nstring-capitalize** modify *string* as appropriate rather than constructing a new *string*. 
+**nstring-upcase**, **nstring-downcase**, and **nstring-capitalize** modify <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> as appropriate rather than constructing a new <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>. 
 
 
 
@@ -235,7 +235,7 @@ str *→* "0123AbcD890a"
 
 
 
-**char-upcase**, **char-downcase** 
+<DictionaryLink styled={true} term={"char-upcase"}><b>char-upcase</b></DictionaryLink>, <DictionaryLink styled={true} term={"char-downcase"}><b>char-downcase</b></DictionaryLink> 
 
 
 
@@ -255,7 +255,7 @@ str *→* "0123AbcD890a"
 
 
 
-The result is always of the same length as *string*. 
+The result is always of the same length as <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>. 
 
 
 

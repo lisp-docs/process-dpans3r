@@ -1,4 +1,4 @@
-**break** *Function* 
+**break** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**break** &amp;optional *format-control* &amp;rest *format-arguments →* **nil** 
+<DictionaryLink styled={true} term={"break"}><b>break</b></DictionaryLink> &amp;optional *format-control* &amp;rest *format-arguments →* <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*format-control*—a *format control*. The default is *implementation-dependent*. 
+*format-control*—a *format control*. The default is <GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm>. 
 
 
 
@@ -26,15 +26,15 @@
 
 
 
-**break** *formats format-control* and *format-arguments* and then goes directly into the debugger without allowing any possibility of interception by programmed error-handling facilities. 
+<DictionaryLink styled={true} term={"break"}><b>break</b></DictionaryLink> *formats format-control* and *format-arguments* and then goes directly into the debugger without allowing any possibility of interception by programmed error-handling facilities. 
 
 
 
-If the **continue** *restart* is used while in the debugger, **break** immediately returns **nil** without taking any unusual recovery action. 
+If the **continue** <GlossaryTerm styled={true} term={"restart"}><i>restart</i></GlossaryTerm> is used while in the debugger, <DictionaryLink styled={true} term={"break"}><b>break</b></DictionaryLink> immediately returns <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> without taking any unusual recovery action. 
 
 
 
-**break** binds **\*debugger-hook\*** to **nil** before attempting to enter the debugger. 
+<DictionaryLink styled={true} term={"break"}><b>break</b></DictionaryLink> binds <DictionaryLink styled={true} term={"debugger-hook"}><b>\*debugger-hook\*</b></DictionaryLink> to <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> before attempting to enter the debugger. 
 
 
 
@@ -71,7 +71,7 @@ The debugger is entered.
 
 
 
-**error**, **invoke-debugger**. 
+<DictionaryLink styled={true} term={"error"}><b>error</b></DictionaryLink>, <DictionaryLink styled={true} term={"invoke-debugger"}><b>invoke-debugger</b></DictionaryLink>. 
 
 
 
@@ -79,7 +79,7 @@ The debugger is entered.
 
 
 
-**break** is used as a way of inserting temporary debugging “breakpoints” in a program, not as a way of signaling errors. For this reason, **break** does not take the *continue-format-control argument* that **cerror** takes. This and the lack of any possibility of interception by *condition handling* are the only program-visible differences between **break** and **cerror**. 
+<DictionaryLink styled={true} term={"break"}><b>break</b></DictionaryLink> is used as a way of inserting temporary debugging “breakpoints” in a program, not as a way of signaling errors. For this reason, <DictionaryLink styled={true} term={"break"}><b>break</b></DictionaryLink> does not take the *continue-format-control argument* that <DictionaryLink styled={true} term={"cerror"}><b>cerror</b></DictionaryLink> takes. This and the lack of any possibility of interception by *condition handling* are the only program-visible differences between <DictionaryLink styled={true} term={"break"}><b>break</b></DictionaryLink> and <DictionaryLink styled={true} term={"cerror"}><b>cerror</b></DictionaryLink>. 
 
 
 
@@ -95,11 +95,11 @@ The debugger is entered.
 
 
 
-The user interface aspects of **break** and **cerror** are permitted to vary more widely, in order to accomodate the interface needs of the *implementation*. For example, it is permissible for a *Lisp read-eval-print loop* to be entered by **break** rather than the conventional debugger. 
+The user interface aspects of <DictionaryLink styled={true} term={"break"}><b>break</b></DictionaryLink> and <DictionaryLink styled={true} term={"cerror"}><b>cerror</b></DictionaryLink> are permitted to vary more widely, in order to accomodate the interface needs of the <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm>. For example, it is permissible for a *Lisp read-eval-print loop* to be entered by <DictionaryLink styled={true} term={"break"}><b>break</b></DictionaryLink> rather than the conventional debugger. 
 
 
 
-**break** could be defined by: 
+<DictionaryLink styled={true} term={"break"}><b>break</b></DictionaryLink> could be defined by: 
 
 
 

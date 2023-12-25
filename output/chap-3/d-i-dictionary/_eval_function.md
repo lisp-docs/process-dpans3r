@@ -1,4 +1,4 @@
-**eval** *Function* 
+**eval** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**eval** *form → \{result\}*\* 
+<DictionaryLink styled={true} term={"eval"}><b>eval</b></DictionaryLink> *form → \{result\}*\* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*form*—a *form*. 
+<GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>. 
 
 
 
-*results*—the *values yielded* by the *evaluation* of *form*. 
+*results*—the *values yielded* by the <GlossaryTerm styled={true} term={"evaluation"}><i>evaluation</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>. 
 
 
 
@@ -26,15 +26,15 @@
 
 
 
-Evaluates *form* in the current *dynamic environment* and the *null lexical environment*. **eval** is a user interface to the evaluator. 
+Evaluates <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> in the current *dynamic environment* and the *null lexical environment*. <DictionaryLink styled={true} term={"eval"}><b>eval</b></DictionaryLink> is a user interface to the evaluator. 
 
 
 
-The evaluator expands macro calls as if through the use of **macroexpand-1**. 
+The evaluator expands macro calls as if through the use of <DictionaryLink styled={true} term={"macroexpand-1"}><b>macroexpand-1</b></DictionaryLink>. 
 
 
 
-Constants appearing in code processed by **eval** are not copied nor coalesced. The code resulting from the execution of **eval** references *objects* that are **eql** to the corresponding *objects* in the source code. 
+Constants appearing in code processed by <DictionaryLink styled={true} term={"eval"}><b>eval</b></DictionaryLink> are not copied nor coalesced. The code resulting from the execution of <DictionaryLink styled={true} term={"eval"}><b>eval</b></DictionaryLink> references <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm> that are <DictionaryLink styled={true} term={"eql"}><b>eql</b></DictionaryLink> to the corresponding <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm> in the source code. 
 
 
 
@@ -52,7 +52,7 @@ Constants appearing in code processed by **eval** are not copied nor coalesced. 
 
 
 
-**macroexpand-1**, Section 3.1.2 (The Evaluation Model) 
+<DictionaryLink styled={true} term={"macroexpand-1"}><b>macroexpand-1</b></DictionaryLink>, Section 3.1.2 (The Evaluation Model) 
 
 
 
@@ -60,11 +60,11 @@ Constants appearing in code processed by **eval** are not copied nor coalesced. 
 
 
 
-To obtain the current dynamic value of a *symbol*, use of **symbol-value** is equivalent (and usually preferable) to use of **eval**. 
+To obtain the current dynamic value of a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>, use of <DictionaryLink styled={true} term={"symbol-value"}><b>symbol-value</b></DictionaryLink> is equivalent (and usually preferable) to use of <DictionaryLink styled={true} term={"eval"}><b>eval</b></DictionaryLink>. 
 
 
 
-Note that an **eval** *form* involves two levels of *evaluation* for its *argument*. First, *form* is *evaluated* by the normal argument evaluation mechanism as would occur with any *call*. The *object* that  
+Note that an <DictionaryLink styled={true} term={"eval"}><b>eval</b></DictionaryLink> <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> involves two levels of <GlossaryTerm styled={true} term={"evaluation"}><i>evaluation</i></GlossaryTerm> for its <GlossaryTerm styled={true} term={"argument"}><i>argument</i></GlossaryTerm>. First, <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> is *evaluated* by the normal argument evaluation mechanism as would occur with any <GlossaryTerm styled={true} term={"call"}><i>call</i></GlossaryTerm>. The <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> that  
 
 
 
@@ -72,7 +72,7 @@ Note that an **eval** *form* involves two levels of *evaluation* for its *argume
 
 
 
-results from this normal *argument evaluation* becomes the *value* of the *form parameter* , and is then *evaluated* as part of the **eval** *form*. For example: 
+results from this normal *argument evaluation* becomes the <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of the *form parameter* , and is then *evaluated* as part of the <DictionaryLink styled={true} term={"eval"}><b>eval</b></DictionaryLink> <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>. For example: 
 
 
 
@@ -80,7 +80,7 @@ results from this normal *argument evaluation* becomes the *value* of the *form 
 
 
 
-The *argument form* (list ’cdr (car ’((quote (a . b)) c))) is evaluated in the usual way to produce the *argument* (cdr (quote (a . b))); **eval** then evaluates its *argument*, (cdr (quote (a . b))), to produce b. Since a single *evaluation* already occurs for any *argument form* in any *function form*, **eval** is sometimes said to perform “an extra level of evaluation.” 
+The *argument form* (list ’cdr (car ’((quote (a . b)) c))) is evaluated in the usual way to produce the <GlossaryTerm styled={true} term={"argument"}><i>argument</i></GlossaryTerm> (cdr (quote (a . b))); <DictionaryLink styled={true} term={"eval"}><b>eval</b></DictionaryLink> then evaluates its <GlossaryTerm styled={true} term={"argument"}><i>argument</i></GlossaryTerm>, (cdr (quote (a . b))), to produce b. Since a single <GlossaryTerm styled={true} term={"evaluation"}><i>evaluation</i></GlossaryTerm> already occurs for any *argument form* in any *function form*, <DictionaryLink styled={true} term={"eval"}><b>eval</b></DictionaryLink> is sometimes said to perform “an extra level of evaluation.” 
 
 
 

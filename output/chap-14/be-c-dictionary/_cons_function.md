@@ -1,4 +1,4 @@
-**cons** *Function* 
+**cons** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**cons** *object-1 object-2 → cons* 
+<DictionaryLink styled={true} term={"cons"}><b>cons</b></DictionaryLink> *object-1 object-2 → cons* 
 
 
 
@@ -14,15 +14,15 @@
 
 
 
-*object-1*—an *object*. 
+*object-1*—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
-*object-2*—an *object*. 
+*object-2*—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
-*cons*—a *cons*. 
+<GlossaryTerm styled={true} term={"cons"}><i>cons</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"cons"}><i>cons</i></GlossaryTerm>. 
 
 
 
@@ -30,7 +30,7 @@
 
 
 
-Creates a *fresh cons*, the *car* of which is *object-1* and the *cdr* of which is *object-2*. 
+Creates a *fresh cons*, the <GlossaryTerm styled={true} term={"car"}><i>car</i></GlossaryTerm> of which is *object-1* and the <GlossaryTerm styled={true} term={"cdr"}><i>cdr</i></GlossaryTerm> of which is *object-2*. 
 
 
 
@@ -51,7 +51,7 @@ Creates a *fresh cons*, the *car* of which is *object-1* and the *cdr* of which 
 
 
 
-**list** 
+<DictionaryLink styled={true} term={"list"}><b>list</b></DictionaryLink> 
 
 
 
@@ -59,7 +59,7 @@ Creates a *fresh cons*, the *car* of which is *object-1* and the *cdr* of which 
 
 
 
-If *object-2* is a *list*, **cons** can be thought of as producing a new *list* which is like it but has *object-1* prepended. 
+If *object-2* is a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>, <DictionaryLink styled={true} term={"cons"}><b>cons</b></DictionaryLink> can be thought of as producing a new <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> which is like it but has *object-1* prepended. 
 
 
 

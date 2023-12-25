@@ -1,4 +1,4 @@
-**inspect** *Function* 
+**inspect** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**inspect** *object → implementation-dependent* 
+<DictionaryLink styled={true} term={"inspect"}><b>inspect</b></DictionaryLink> *object → implementation-dependent* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*object*—an *object*. 
+<GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -22,7 +22,7 @@
 
 
 
-**inspect** is an interactive version of **describe**. The nature of the interaction is *implementation dependent*, but the purpose of **inspect** is to make it easy to wander through a data structure, examining and modifying parts of it. 
+<DictionaryLink styled={true} term={"inspect"}><b>inspect</b></DictionaryLink> is an interactive version of <DictionaryLink styled={true} term={"describe"}><b>describe</b></DictionaryLink>. The nature of the interaction is *implementation dependent*, but the purpose of <DictionaryLink styled={true} term={"inspect"}><b>inspect</b></DictionaryLink> is to make it easy to wander through a data structure, examining and modifying parts of it. 
 
 
 
@@ -30,7 +30,7 @@
 
 
 
-*implementation-dependent*. 
+<GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm>. 
 
 
 
@@ -38,7 +38,7 @@
 
 
 
-*implementation-dependent*. 
+<GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm>. 
 
 
 
@@ -46,7 +46,7 @@
 
 
 
-*implementation-dependent*. 
+<GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm>. 
 
 
 
@@ -54,7 +54,7 @@
 
 
 
-**describe** 
+<DictionaryLink styled={true} term={"describe"}><b>describe</b></DictionaryLink> 
 
 
 

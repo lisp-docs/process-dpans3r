@@ -6,7 +6,7 @@
 
 
 
-**method-qualifiers** *method → qualifiers* 
+<DictionaryLink styled={true} term={"method-qualifiers"}><b>method-qualifiers</b></DictionaryLink> *method → qualifiers* 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-**method-qualifiers** (*method* **standard-method**) 
+<DictionaryLink styled={true} term={"method-qualifiers"}><b>method-qualifiers</b></DictionaryLink> (<GlossaryTerm styled={true} term={"method"}><i>method</i></GlossaryTerm> <DictionaryLink styled={true} term={"standard-method"}><b>standard-method</b></DictionaryLink>) 
 
 
 
@@ -34,11 +34,11 @@
 
 
 
-*method*—a *method*. 
+<GlossaryTerm styled={true} term={"method"}><i>method</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"method"}><i>method</i></GlossaryTerm>. 
 
 
 
-*qualifiers*—a *proper list*. 
+<GlossaryTerm styled={true} term={"qualifier"}><i>qualifiers</i></GlossaryTerm>—a *proper list*. 
 
 
 
@@ -46,7 +46,7 @@
 
 
 
-Returns a *list* of the *qualifiers* of the *method*. 
+Returns a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of the <GlossaryTerm styled={true} term={"qualifier"}><i>qualifiers</i></GlossaryTerm> of the <GlossaryTerm styled={true} term={"method"}><i>method</i></GlossaryTerm>. 
 
 
 
@@ -62,7 +62,7 @@ Returns a *list* of the *qualifiers* of the *method*.
 
 
 
-**define-method-combination** 
+<DictionaryLink styled={true} term={"define-method-combination"}><b>define-method-combination</b></DictionaryLink> 
 
 
 

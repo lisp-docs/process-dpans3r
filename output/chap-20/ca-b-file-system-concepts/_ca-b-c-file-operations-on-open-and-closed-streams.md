@@ -2,11 +2,11 @@
 
 
 
-Many *functions* that perform *file* operations accept either *open* or *closed streams* as *arguments*; see Section 21.1.3 (Stream Arguments to Standardized Functions). 
+Many <GlossaryTerm styled={true} term={"function"}><i>functions</i></GlossaryTerm> that perform <GlossaryTerm styled={true} term={"file"}><i>file</i></GlossaryTerm> operations accept either <GlossaryTerm styled={true} term={"open"}><i>open</i></GlossaryTerm> or *closed streams* as <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm>; see Section 21.1.3 (Stream Arguments to Standardized Functions). 
 
 
 
-Of these, the *functions* in Figure 20–2 treat *open* and *closed streams* differently. 
+Of these, the <GlossaryTerm styled={true} term={"function"}><i>functions</i></GlossaryTerm> in Figure 20–2 treat <GlossaryTerm styled={true} term={"open"}><i>open</i></GlossaryTerm> and *closed streams* differently. 
 
 
 
@@ -34,7 +34,7 @@ Of these, the *functions* in Figure 20–2 treat *open* and *closed streams* dif
 
 
 
-Since treatment of *open streams* by the *file system* may vary considerably between *implementations*, however, a *closed stream* might be the most reliable kind of *argument* for some of these functions—in particular, those in Figure 20–3. For example, in some *file systems*, *open files* are written under temporary names and not renamed until *closed* and/or are held invisible until *closed*. In general, any code that is intended to be portable should use such *functions* carefully. 
+Since treatment of *open streams* by the *file system* may vary considerably between <GlossaryTerm styled={true} term={"implementation"}><i>implementations</i></GlossaryTerm>, however, a *closed stream* might be the most reliable kind of <GlossaryTerm styled={true} term={"argument"}><i>argument</i></GlossaryTerm> for some of these functions—in particular, those in Figure 20–3. For example, in some *file systems*, *open files* are written under temporary names and not renamed until <GlossaryTerm styled={true} term={"closed"}><i>closed</i></GlossaryTerm> and/or are held invisible until <GlossaryTerm styled={true} term={"closed"}><i>closed</i></GlossaryTerm>. In general, any code that is intended to be portable should use such <GlossaryTerm styled={true} term={"function"}><i>functions</i></GlossaryTerm> carefully. 
 
 
 

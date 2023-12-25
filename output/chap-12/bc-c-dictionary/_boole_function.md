@@ -1,4 +1,4 @@
-**boole** *Function* 
+**boole** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**boole** *op integer-1 integer-2 → result-integer* 
+<DictionaryLink styled={true} term={"boole"}><b>boole</b></DictionaryLink> *op integer-1 integer-2 → result-integer* 
 
 
 
@@ -34,7 +34,7 @@
 
 
 
-**boole** 
+<DictionaryLink styled={true} term={"boole"}><b>boole</b></DictionaryLink> 
 
 
 
@@ -50,7 +50,7 @@
 
 
 
-**boole** performs bit-wise logical operations on *integer-1* and *integer-2*, which are treated as if they were binary and in two’s complement representation. 
+<DictionaryLink styled={true} term={"boole"}><b>boole</b></DictionaryLink> performs bit-wise logical operations on *integer-1* and *integer-2*, which are treated as if they were binary and in two’s complement representation. 
 
 
 
@@ -58,7 +58,7 @@ The operation to be performed and the return value are determined by *op*.
 
 
 
-**boole** returns the values specified for any *op* in Figure 12–17. 
+<DictionaryLink styled={true} term={"boole"}><b>boole</b></DictionaryLink> returns the values specified for any *op* in Figure 12–17. 
 
 
 
@@ -66,7 +66,7 @@ The operation to be performed and the return value are determined by *op*.
 
 | :- |
 
-|<p>**boole-1** *integer-1* </p><p>**boole-2** *integer-2* </p><p>**boole-andc1** and complement of *integer-1* with *integer-2* </p><p>**boole-andc2** and *integer-1* with complement of *integer-2* </p><p>**boole-and** and </p><p>**boole-c1** complement of *integer-1* </p><p>**boole-c2** complement of *integer-2* </p><p>**boole-clr** always 0 (all zero bits) </p><p>**boole-eqv** equivalence (exclusive nor) </p><p>**boole-ior** inclusive or </p><p>**boole-nand** not-and </p><p>**boole-nor** not-or </p><p>**boole-orc1** or complement of *integer-1* with *integer-2* </p><p>**boole-orc2** or *integer-1* with complement of *integer-2* </p><p>**boole-set** always -1 (all one bits) </p><p>**boole-xor** exclusive or</p>|
+|<p><DictionaryLink styled={true} term={"boole-1"}><b>boole-1</b></DictionaryLink> *integer-1* </p><p><DictionaryLink styled={true} term={"boole-2"}><b>boole-2</b></DictionaryLink> *integer-2* </p><p><DictionaryLink styled={true} term={"boole-andc1"}><b>boole-andc1</b></DictionaryLink> and complement of *integer-1* with *integer-2* </p><p><DictionaryLink styled={true} term={"boole-andc2"}><b>boole-andc2</b></DictionaryLink> and *integer-1* with complement of *integer-2* </p><p><DictionaryLink styled={true} term={"boole-and"}><b>boole-and</b></DictionaryLink> and </p><p><DictionaryLink styled={true} term={"boole-c1"}><b>boole-c1</b></DictionaryLink> complement of *integer-1* </p><p><DictionaryLink styled={true} term={"boole-c2"}><b>boole-c2</b></DictionaryLink> complement of *integer-2* </p><p><DictionaryLink styled={true} term={"boole-clr"}><b>boole-clr</b></DictionaryLink> always 0 (all zero bits) </p><p><DictionaryLink styled={true} term={"boole-eqv"}><b>boole-eqv</b></DictionaryLink> equivalence (exclusive nor) </p><p><DictionaryLink styled={true} term={"boole-ior"}><b>boole-ior</b></DictionaryLink> inclusive or </p><p><DictionaryLink styled={true} term={"boole-nand"}><b>boole-nand</b></DictionaryLink> not-and </p><p><DictionaryLink styled={true} term={"boole-nor"}><b>boole-nor</b></DictionaryLink> not-or </p><p><DictionaryLink styled={true} term={"boole-orc1"}><b>boole-orc1</b></DictionaryLink> or complement of *integer-1* with *integer-2* </p><p><DictionaryLink styled={true} term={"boole-orc2"}><b>boole-orc2</b></DictionaryLink> or *integer-1* with complement of *integer-2* </p><p><DictionaryLink styled={true} term={"boole-set"}><b>boole-set</b></DictionaryLink> always -1 (all one bits) </p><p><DictionaryLink styled={true} term={"boole-xor"}><b>boole-xor</b></DictionaryLink> exclusive or</p>|
 
 
 
@@ -123,7 +123,7 @@ symbol result (logand result #b1111)))))
 
 
 
-Should signal **type-error** if its first argument is not a *bit-wise logical operation specifier* or if any subsequent argument is not an *integer* . 
+Should signal <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if its first argument is not a *bit-wise logical operation specifier* or if any subsequent argument is not an *integer* . 
 
 
 
@@ -131,7 +131,7 @@ Should signal **type-error** if its first argument is not a *bit-wise logical op
 
 
 
-**logand** 
+<DictionaryLink styled={true} term={"logand"}><b>logand</b></DictionaryLink> 
 
 
 
@@ -147,7 +147,7 @@ In general,
 
 
 
-*Programmers* who would prefer to use numeric indices rather than *bit-wise logical operation specifiers* can get an equivalent effect by a technique such as the following: 
+<GlossaryTerm styled={true} term={"programmer"}><i>Programmers</i></GlossaryTerm> who would prefer to use numeric indices rather than *bit-wise logical operation specifiers* can get an equivalent effect by a technique such as the following: 
 
 
 
@@ -243,7 +243,7 @@ boole-c2 boole-orc2 boole-nand boole-set))
 
 
 
-The identity and nature of the *values* of each of these *variables* is *implementation-dependent*, except that it must be *distinct* from each of the *values* of the others, and it must be a valid first *argument* to the *function* **boole**. 
+The identity and nature of the <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> of each of these <GlossaryTerm styled={true} term={"variable"}><i>variables</i></GlossaryTerm> is <GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm>, except that it must be <GlossaryTerm styled={true} term={"distinct"}><i>distinct</i></GlossaryTerm> from each of the <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> of the others, and it must be a valid first <GlossaryTerm styled={true} term={"argument"}><i>argument</i></GlossaryTerm> to the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> <DictionaryLink styled={true} term={"boole"}><b>boole</b></DictionaryLink>. 
 
 
 
@@ -251,7 +251,7 @@ The identity and nature of the *values* of each of these *variables* is *impleme
 
 
 
-Each of these *constants* has a *value* which is one of the sixteen possible *bit-wise logical operation specifiers*. 
+Each of these <GlossaryTerm styled={true} term={"constant"}><i>constants</i></GlossaryTerm> has a <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> which is one of the sixteen possible *bit-wise logical operation specifiers*. 
 
 
 
@@ -267,7 +267,7 @@ Each of these *constants* has a *value* which is one of the sixteen possible *bi
 
 
 
-**boole** 
+<DictionaryLink styled={true} term={"boole"}><b>boole</b></DictionaryLink> 
 
 
 

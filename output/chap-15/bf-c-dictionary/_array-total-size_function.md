@@ -1,4 +1,4 @@
-**array-total-size** *Function* 
+**array-total-size** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**array-total-size** *array → size* 
+<DictionaryLink styled={true} term={"array-total-size"}><b>array-total-size</b></DictionaryLink> *array → size* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*array*—an *array*. 
+<GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm>. 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-Returns the *array total size* of the *array*. 
+Returns the *array total size* of the <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm>. 
 
 
 
@@ -57,7 +57,7 @@ Returns the *array total size* of the *array*.
 
 
 
-Should signal an error of *type* **type-error** if its argument is not an *array*. 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if its argument is not an <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm>. 
 
 
 
@@ -65,7 +65,7 @@ Should signal an error of *type* **type-error** if its argument is not an *array
 
 
 
-**make-array**, **array-dimensions** 
+<DictionaryLink styled={true} term={"make-array"}><b>make-array</b></DictionaryLink>, <DictionaryLink styled={true} term={"array-dimensions"}><b>array-dimensions</b></DictionaryLink> 
 
 
 
@@ -73,11 +73,11 @@ Should signal an error of *type* **type-error** if its argument is not an *array
 
 
 
-If the *array* is a *vector* with a *fill pointer* , the *fill pointer* is ignored when calculating the *array total size*. 
+If the <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm> is a <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm> with a *fill pointer* , the *fill pointer* is ignored when calculating the *array total size*. 
 
 
 
-Since the product of no arguments is one, the *array total size* of a zero-dimensional *array* is one. 
+Since the product of no arguments is one, the *array total size* of a zero-dimensional <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm> is one. 
 
 
 

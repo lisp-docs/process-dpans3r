@@ -1,4 +1,4 @@
-**car, cdr, caar, cadr, cdar, cddr, caaar, caadr, cadar, caddr, cdaar, cdadr, cddar, cdddr, caaaar, caaadr, caadar, caaddr, cadaar, cadadr, caddar, cadddr, cdaaar, cdaadr, cdadar, cdaddr, cddaar, cddadr, cdddar, cddddr** *Accessor* 
+**car, cdr, caar, cadr, cdar, cddr, caaar, caadr, cadar, caddr, cdaar, cdadr, cddar, cdddr, caaaar, caaadr, caadar, caaddr, cadaar, cadadr, caddar, cadddr, cdaaar, cdaadr, cdadar, cdaddr, cddaar, cddadr, cdddar, cddddr** <GlossaryTerm styled={true} term={"accessor"}><i>Accessor</i></GlossaryTerm> 
 
 
 
@@ -6,123 +6,123 @@
 
 
 
-**(setf (car** *x***)** *new-object***)** 
+**(setf (car** *x***)** *new-object<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> 
 
 
 
-**(setf (cdr** *x***)** *new-object***)** 
+**(setf (cdr** *x***)** *new-object<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> 
 
 
 
-**(setf (caar** *x***)** *new-object***)** 
+**(setf (caar** *x***)** *new-object<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> 
 
 
 
-**(setf (cadr** *x***)** *new-object***)** 
+**(setf (cadr** *x***)** *new-object<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> 
 
 
 
-**(setf (cdar** *x***)** *new-object***)** 
+**(setf (cdar** *x***)** *new-object<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> 
 
 
 
-**(setf (cddr** *x***)** *new-object***)** 
+**(setf (cddr** *x***)** *new-object<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> 
 
 
 
-**(setf (caaar** *x***)** *new-object***)** 
+**(setf (caaar** *x***)** *new-object<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> 
 
 
 
-**(setf (caadr** *x***)** *new-object***)** 
+**(setf (caadr** *x***)** *new-object<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> 
 
 
 
-**(setf (cadar** *x***)** *new-object***)** 
+**(setf (cadar** *x***)** *new-object<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> 
 
 
 
-**(setf (caddr** *x***)** *new-object***)** 
+**(setf (caddr** *x***)** *new-object<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> 
 
 
 
-**(setf (cdaar** *x***)** *new-object***)** 
+**(setf (cdaar** *x***)** *new-object<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> 
 
 
 
-**(setf (cdadr** *x***)** *new-object***)** 
+**(setf (cdadr** *x***)** *new-object<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> 
 
 
 
-**(setf (cddar** *x***)** *new-object***)** 
+**(setf (cddar** *x***)** *new-object<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> 
 
 
 
-**(setf (cdddr** *x***)** *new-object***)** 
+**(setf (cdddr** *x***)** *new-object<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> 
 
 
 
-**(setf (caaaar** *x***)** *new-object***)** 
+**(setf (caaaar** *x***)** *new-object<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> 
 
 
 
-**(setf (caaadr** *x***)** *new-object***)** 
+**(setf (caaadr** *x***)** *new-object<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> 
 
 
 
-**(setf (caadar** *x***)** *new-object***)** 
+**(setf (caadar** *x***)** *new-object<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> 
 
 
 
-**(setf (caaddr** *x***)** *new-object***)** 
+**(setf (caaddr** *x***)** *new-object<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> 
 
 
 
-**(setf (cadaar** *x***)** *new-object***)** 
+**(setf (cadaar** *x***)** *new-object<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> 
 
 
 
-**(setf (cadadr** *x***)** *new-object***)** 
+**(setf (cadadr** *x***)** *new-object<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> 
 
 
 
-**(setf (caddar** *x***)** *new-object***)** 
+**(setf (caddar** *x***)** *new-object<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> 
 
 
 
-**(setf (cadddr** *x***)** *new-object***)** 
+**(setf (cadddr** *x***)** *new-object<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> 
 
 
 
-**(setf (cdaaar** *x***)** *new-object***)** 
+**(setf (cdaaar** *x***)** *new-object<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> 
 
 
 
-**(setf (cdaadr** *x***)** *new-object***)** 
+**(setf (cdaadr** *x***)** *new-object<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> 
 
 
 
-**(setf (cdadar** *x***)** *new-object***)** 
+**(setf (cdadar** *x***)** *new-object<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> 
 
 
 
-**(setf (cdaddr** *x***)** *new-object***)** 
+**(setf (cdaddr** *x***)** *new-object<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> 
 
 
 
-**(setf (cddaar** *x***)** *new-object***)** 
+**(setf (cddaar** *x***)** *new-object<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> 
 
 
 
-**(setf (cddadr** *x***)** *new-object***)** 
+**(setf (cddadr** *x***)** *new-object<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> 
 
 
 
-**(setf (cdddar** *x***)** *new-object***)** 
+**(setf (cdddar** *x***)** *new-object<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> 
 
 
 
-**(setf (cddddr** *x***)** *new-object***)** 
+**(setf (cddddr** *x***)** *new-object<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> 
 
 
 
@@ -130,23 +130,23 @@
 
 
 
-**car** *x → object* **cdr** *x → object* 
+<DictionaryLink styled={true} term={"car"}><b>car</b></DictionaryLink> *x → object* <DictionaryLink styled={true} term={"cdr"}><b>cdr</b></DictionaryLink> *x → object* 
 
 
 
-**caar** *x → object* **cadr** *x → object* **cdar** *x → object* **cddr** *x → object* 
+<DictionaryLink styled={true} term={"caar"}><b>caar</b></DictionaryLink> *x → object* <DictionaryLink styled={true} term={"cadr"}><b>cadr</b></DictionaryLink> *x → object* <DictionaryLink styled={true} term={"cdar"}><b>cdar</b></DictionaryLink> *x → object* <DictionaryLink styled={true} term={"cddr"}><b>cddr</b></DictionaryLink> *x → object* 
 
 
 
-**caaar** *x → object* **caadr** *x → object* **cadar** *x → object* **caddr** *x → object* **cdaar** *x → object* **cdadr** *x → object* **cddar** *x → object* **cdddr** *x → object* 
+<DictionaryLink styled={true} term={"caaar"}><b>caaar</b></DictionaryLink> *x → object* <DictionaryLink styled={true} term={"caadr"}><b>caadr</b></DictionaryLink> *x → object* <DictionaryLink styled={true} term={"cadar"}><b>cadar</b></DictionaryLink> *x → object* <DictionaryLink styled={true} term={"caddr"}><b>caddr</b></DictionaryLink> *x → object* <DictionaryLink styled={true} term={"cdaar"}><b>cdaar</b></DictionaryLink> *x → object* <DictionaryLink styled={true} term={"cdadr"}><b>cdadr</b></DictionaryLink> *x → object* <DictionaryLink styled={true} term={"cddar"}><b>cddar</b></DictionaryLink> *x → object* <DictionaryLink styled={true} term={"cdddr"}><b>cdddr</b></DictionaryLink> *x → object* 
 
 
 
-**caaaar** *x → object* **caaadr** *x → object* **caadar** *x → object* **caaddr** *x → object* **cadaar** *x → object* **cadadr** *x → object* **caddar** *x → object* **cadddr** *x → object* **cdaaar** *x → object* **cdaadr** *x → object* **cdadar** *x → object* **cdaddr** *x → object* **cddaar** *x → object* **cddadr** *x → object* **cdddar** *x → object* **cddddr** *x → object* 
+<DictionaryLink styled={true} term={"caaaar"}><b>caaaar</b></DictionaryLink> *x → object* <DictionaryLink styled={true} term={"caaadr"}><b>caaadr</b></DictionaryLink> *x → object* <DictionaryLink styled={true} term={"caadar"}><b>caadar</b></DictionaryLink> *x → object* <DictionaryLink styled={true} term={"caaddr"}><b>caaddr</b></DictionaryLink> *x → object* <DictionaryLink styled={true} term={"cadaar"}><b>cadaar</b></DictionaryLink> *x → object* <DictionaryLink styled={true} term={"cadadr"}><b>cadadr</b></DictionaryLink> *x → object* <DictionaryLink styled={true} term={"caddar"}><b>caddar</b></DictionaryLink> *x → object* <DictionaryLink styled={true} term={"cadddr"}><b>cadddr</b></DictionaryLink> *x → object* <DictionaryLink styled={true} term={"cdaaar"}><b>cdaaar</b></DictionaryLink> *x → object* <DictionaryLink styled={true} term={"cdaadr"}><b>cdaadr</b></DictionaryLink> *x → object* <DictionaryLink styled={true} term={"cdadar"}><b>cdadar</b></DictionaryLink> *x → object* <DictionaryLink styled={true} term={"cdaddr"}><b>cdaddr</b></DictionaryLink> *x → object* <DictionaryLink styled={true} term={"cddaar"}><b>cddaar</b></DictionaryLink> *x → object* <DictionaryLink styled={true} term={"cddadr"}><b>cddadr</b></DictionaryLink> *x → object* <DictionaryLink styled={true} term={"cdddar"}><b>cdddar</b></DictionaryLink> *x → object* <DictionaryLink styled={true} term={"cddddr"}><b>cddddr</b></DictionaryLink> *x → object* 
 
 
 
-**cadr**: [ **ka d*** **r** ] 
+<DictionaryLink styled={true} term={"cadr"}><b>cadr</b></DictionaryLink>: [ **ka d*** **r** ] 
 
 
 
@@ -166,15 +166,15 @@
 
 
 
-**caddr**: [ **kad***  **d*** **r** ] or [ **ka d\_ud*** **r** ] 
+<DictionaryLink styled={true} term={"caddr"}><b>caddr</b></DictionaryLink>: [ **kad***  **d*** **r** ] or [ **ka d\_ud*** **r** ] 
 
 
 
-**cdr**: [ **k\_u d*** **r** ] 
+<DictionaryLink styled={true} term={"cdr"}><b>cdr</b></DictionaryLink>: [ **k\_u d*** **r** ] 
 
 
 
-**cddr**: [ **k\_ud***  **d*** **r** ] or [ **k***  **d\_ud*** **r** ] 
+<DictionaryLink styled={true} term={"cddr"}><b>cddr</b></DictionaryLink>: [ **k\_ud***  **d*** **r** ] or [ **k***  **d\_ud*** **r** ] 
 
 
 
@@ -182,15 +182,15 @@
 
 
 
-*x*—a *list*. 
+*x*—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>. 
 
 
 
-*object*—an *object*. 
+<GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
-*new-object*—an *object*. 
+*new-object*—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -198,15 +198,15 @@
 
 
 
-If *x* is a *cons*, **car** returns the *car* of that *cons*. If *x* is **nil**, **car** returns **nil**. 
+If *x* is a <GlossaryTerm styled={true} term={"cons"}><i>cons</i></GlossaryTerm>, <DictionaryLink styled={true} term={"car"}><b>car</b></DictionaryLink> returns the <GlossaryTerm styled={true} term={"car"}><i>car</i></GlossaryTerm> of that <GlossaryTerm styled={true} term={"cons"}><i>cons</i></GlossaryTerm>. If *x* is <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>, <DictionaryLink styled={true} term={"car"}><b>car</b></DictionaryLink> returns <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
-If *x* is a *cons*, **cdr** returns the *cdr* of that *cons*. If *x* is **nil**, **cdr** returns **nil**. 
+If *x* is a <GlossaryTerm styled={true} term={"cons"}><i>cons</i></GlossaryTerm>, <DictionaryLink styled={true} term={"cdr"}><b>cdr</b></DictionaryLink> returns the <GlossaryTerm styled={true} term={"cdr"}><i>cdr</i></GlossaryTerm> of that <GlossaryTerm styled={true} term={"cons"}><i>cons</i></GlossaryTerm>. If *x* is <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>, <DictionaryLink styled={true} term={"cdr"}><b>cdr</b></DictionaryLink> returns <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
-*Functions* are provided which perform compositions of up to four **car** and **cdr** operations. Their *names* consist of a C, followed by two, three, or four occurrences of A or D, and finally an R. The series of A’s and D’s in each *function*’s *name* is chosen to identify the series of **car** and **cdr** operations that is performed by the function. The order in which the A’s and D’s appear is the inverse of the order in which the corresponding operations are performed. Figure 14–6 defines the relationships precisely. 
+<GlossaryTerm styled={true} term={"function"}><i>Functions</i></GlossaryTerm> are provided which perform compositions of up to four <DictionaryLink styled={true} term={"car"}><b>car</b></DictionaryLink> and <DictionaryLink styled={true} term={"cdr"}><b>cdr</b></DictionaryLink> operations. Their <GlossaryTerm styled={true} term={"name"}><i>names</i></GlossaryTerm> consist of a C, followed by two, three, or four occurrences of A or D, and finally an R. The series of A’s and D’s in each <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>’s <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> is chosen to identify the series of <DictionaryLink styled={true} term={"car"}><b>car</b></DictionaryLink> and <DictionaryLink styled={true} term={"cdr"}><b>cdr</b></DictionaryLink> operations that is performed by the function. The order in which the A’s and D’s appear is the inverse of the order in which the corresponding operations are performed. Figure 14–6 defines the relationships precisely. 
 
 
 
@@ -240,7 +240,7 @@ If *x* is a *cons*, **cdr** returns the *cdr* of that *cons*. If *x* is **nil**,
 
 
 
-**setf** can also be used with any of these functions to change an existing component of *x*, but **setf** will not make new components. So, for example, the *car* of a *cons* can be assigned with **setf** of **car**, but the *car* of **nil** cannot be assigned with **setf** of **car**. Similarly, the *car* of the *car* of a *cons* whose *car* is a *cons* can be assigned with **setf** of **caar**, but neither **nil**nor a *cons* whose car is **nil** can be assigned with **setf** of **caar**. 
+<DictionaryLink styled={true} term={"setf"}><b>setf</b></DictionaryLink> can also be used with any of these functions to change an existing component of *x*, but <DictionaryLink styled={true} term={"setf"}><b>setf</b></DictionaryLink> will not make new components. So, for example, the <GlossaryTerm styled={true} term={"car"}><i>car</i></GlossaryTerm> of a <GlossaryTerm styled={true} term={"cons"}><i>cons</i></GlossaryTerm> can be assigned with <DictionaryLink styled={true} term={"setf"}><b>setf</b></DictionaryLink> of <DictionaryLink styled={true} term={"car"}><b>car</b></DictionaryLink>, but the <GlossaryTerm styled={true} term={"car"}><i>car</i></GlossaryTerm> of <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> cannot be assigned with <DictionaryLink styled={true} term={"setf"}><b>setf</b></DictionaryLink> of <DictionaryLink styled={true} term={"car"}><b>car</b></DictionaryLink>. Similarly, the <GlossaryTerm styled={true} term={"car"}><i>car</i></GlossaryTerm> of the <GlossaryTerm styled={true} term={"car"}><i>car</i></GlossaryTerm> of a <GlossaryTerm styled={true} term={"cons"}><i>cons</i></GlossaryTerm> whose <GlossaryTerm styled={true} term={"car"}><i>car</i></GlossaryTerm> is a <GlossaryTerm styled={true} term={"cons"}><i>cons</i></GlossaryTerm> can be assigned with <DictionaryLink styled={true} term={"setf"}><b>setf</b></DictionaryLink> of <DictionaryLink styled={true} term={"caar"}><b>caar</b></DictionaryLink>, but neither <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>nor a <GlossaryTerm styled={true} term={"cons"}><i>cons</i></GlossaryTerm> whose car is <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> can be assigned with <DictionaryLink styled={true} term={"setf"}><b>setf</b></DictionaryLink> of <DictionaryLink styled={true} term={"caar"}><b>caar</b></DictionaryLink>. 
 
 
 
@@ -266,7 +266,7 @@ The argument *x* is permitted to be a *dotted list* or a *circular list*.
 
 
 
-The functions **car** and **cdr** should signal **type-error** if they receive an argument which is not a *list*. The other functions (**caar**, **cadr**, *. . .* **cddddr**) should behave for the purpose of error checking as if defined by appropriate calls to **car** and **cdr**. 
+The functions <DictionaryLink styled={true} term={"car"}><b>car</b></DictionaryLink> and <DictionaryLink styled={true} term={"cdr"}><b>cdr</b></DictionaryLink> should signal <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if they receive an argument which is not a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>. The other functions (<DictionaryLink styled={true} term={"caar"}><b>caar</b></DictionaryLink>, <DictionaryLink styled={true} term={"cadr"}><b>cadr</b></DictionaryLink>, *. . .* <DictionaryLink styled={true} term={"cddddr"}><b>cddddr</b></DictionaryLink>) should behave for the purpose of error checking as if defined by appropriate calls to <DictionaryLink styled={true} term={"car"}><b>car</b></DictionaryLink> and <DictionaryLink styled={true} term={"cdr"}><b>cdr</b></DictionaryLink>. 
 
 
 
@@ -274,7 +274,7 @@ The functions **car** and **cdr** should signal **type-error** if they receive a
 
 
 
-**rplaca**, **first**, **rest** 
+<DictionaryLink styled={true} term={"rplaca"}><b>rplaca</b></DictionaryLink>, <DictionaryLink styled={true} term={"first"}><b>first</b></DictionaryLink>, <DictionaryLink styled={true} term={"rest"}><b>rest</b></DictionaryLink> 
 
 
 
@@ -282,7 +282,7 @@ The functions **car** and **cdr** should signal **type-error** if they receive a
 
 
 
-The *car* of a *cons* can also be altered by using **rplaca**, and the *cdr* of a *cons* can be altered by using **rplacd**. 
+The <GlossaryTerm styled={true} term={"car"}><i>car</i></GlossaryTerm> of a <GlossaryTerm styled={true} term={"cons"}><i>cons</i></GlossaryTerm> can also be altered by using <DictionaryLink styled={true} term={"rplaca"}><b>rplaca</b></DictionaryLink>, and the <GlossaryTerm styled={true} term={"cdr"}><i>cdr</i></GlossaryTerm> of a <GlossaryTerm styled={true} term={"cons"}><i>cons</i></GlossaryTerm> can be altered by using <DictionaryLink styled={true} term={"rplacd"}><b>rplacd</b></DictionaryLink>. 
 
 
 

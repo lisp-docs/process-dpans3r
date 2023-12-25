@@ -1,4 +1,4 @@
-**shadow** *Function* 
+**shadow** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**shadow** *symbol-names* &amp;optional *package →* **t** 
+<DictionaryLink styled={true} term={"shadow"}><b>shadow</b></DictionaryLink> *symbol-names* &amp;optional *package →* <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink> 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*symbol-names*—a *designator* for a *list* of *string designators*. 
+*symbol-names*—a <GlossaryTerm styled={true} term={"designator"}><i>designator</i></GlossaryTerm> for a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of *string designators*. 
 
 
 
-*package*—a *package designator* . The default is the *current package*. 
+<GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>—a *package designator* . The default is the *current package*. 
 
 
 
@@ -26,11 +26,11 @@
 
 
 
-**shadow** assures that *symbols* with names given by *symbol-names* are *present* in the *package*. 
+<DictionaryLink styled={true} term={"shadow"}><b>shadow</b></DictionaryLink> assures that <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> with names given by *symbol-names* are <GlossaryTerm styled={true} term={"present"}><i>present</i></GlossaryTerm> in the <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>. 
 
 
 
-Specifically, *package* is searched for *symbols* with the *names* supplied by *symbol-names*. For each such *name*, if a corresponding *symbol* is not *present* in *package* (directly, not by inheritance), then a corresponding *symbol* is created with that *name*, and inserted into *package* as an *internal symbol*. The corresponding *symbol*, whether pre-existing or newly created, is then added, if not already present, to the *shadowing symbols list* of *package*. 
+Specifically, <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> is searched for <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> with the <GlossaryTerm styled={true} term={"name"}><i>names</i></GlossaryTerm> supplied by *symbol-names*. For each such <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm>, if a corresponding <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> is not <GlossaryTerm styled={true} term={"present"}><i>present</i></GlossaryTerm> in <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> (directly, not by inheritance), then a corresponding <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> is created with that <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm>, and inserted into <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> as an *internal symbol*. The corresponding <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>, whether pre-existing or newly created, is then added, if not already present, to the *shadowing symbols list* of <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>. 
 
 
 
@@ -61,7 +61,7 @@ Specifically, *package* is searched for *symbols* with the *names* supplied by *
 
 
 
-**shadow** changes the state of the package system in such a way that the package consistency rules do not hold across the change. 
+<DictionaryLink styled={true} term={"shadow"}><b>shadow</b></DictionaryLink> changes the state of the package system in such a way that the package consistency rules do not hold across the change. 
 
 
 
@@ -77,7 +77,7 @@ Current state of the package system.
 
 
 
-**package-shadowing-symbols**, Section 11.1 (Package Concepts) 
+<DictionaryLink styled={true} term={"package-shadowing-symbols"}><b>package-shadowing-symbols</b></DictionaryLink>, Section 11.1 (Package Concepts) 
 
 
 
@@ -85,7 +85,7 @@ Current state of the package system.
 
 
 
-If a *symbol* with a name in *symbol-names* already exists in *package*, but by inheritance, the inherited symbol becomes *shadowed* <sub>3</sub> by a newly created *internal symbol*. 
+If a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> with a name in *symbol-names* already exists in <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>, but by inheritance, the inherited symbol becomes *shadowed* <sub>3</sub> by a newly created *internal symbol*. 
 
 
 

@@ -6,11 +6,11 @@
 
 
 
-**list** &amp;rest *objects → list* 
+<DictionaryLink styled={true} term={"list"}><b>list</b></DictionaryLink> &amp;rest *objects → list* 
 
 
 
-**list\*** &amp;rest *objects*<sup>+</sup> *→ result* 
+<DictionaryLink styled={true} term={"list"}><b>list\*</b></DictionaryLink> &amp;rest <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm><sup>+</sup> *→ result* 
 
 
 
@@ -18,15 +18,15 @@
 
 
 
-*object*—an *object*. 
+<GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
-*list*—a *list*. 
+<GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>. 
 
 
 
-*result*—an *object*. 
+*result*—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -34,19 +34,19 @@
 
 
 
-**list** returns a *list* containing the supplied *objects*. 
+<DictionaryLink styled={true} term={"list"}><b>list</b></DictionaryLink> returns a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> containing the supplied <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm>. 
 
 
 
-**list\*** is like **list** except that the last *argument* to **list** becomes the *car* of the last *cons* constructed, while the last *argument* to **list\*** becomes the *cdr* of the last *cons* constructed. Hence, any given call to **list\*** always produces one fewer *conses* than a call to **list** with the same number of arguments. 
+<DictionaryLink styled={true} term={"list"}><b>list\*</b></DictionaryLink> is like <DictionaryLink styled={true} term={"list"}><b>list</b></DictionaryLink> except that the last <GlossaryTerm styled={true} term={"argument"}><i>argument</i></GlossaryTerm> to <DictionaryLink styled={true} term={"list"}><b>list</b></DictionaryLink> becomes the <GlossaryTerm styled={true} term={"car"}><i>car</i></GlossaryTerm> of the last <GlossaryTerm styled={true} term={"cons"}><i>cons</i></GlossaryTerm> constructed, while the last <GlossaryTerm styled={true} term={"argument"}><i>argument</i></GlossaryTerm> to <DictionaryLink styled={true} term={"list"}><b>list\*</b></DictionaryLink> becomes the <GlossaryTerm styled={true} term={"cdr"}><i>cdr</i></GlossaryTerm> of the last <GlossaryTerm styled={true} term={"cons"}><i>cons</i></GlossaryTerm> constructed. Hence, any given call to <DictionaryLink styled={true} term={"list"}><b>list\*</b></DictionaryLink> always produces one fewer *conses* than a call to <DictionaryLink styled={true} term={"list"}><b>list</b></DictionaryLink> with the same number of arguments. 
 
 
 
-If the last *argument* to **list\*** is a *list*, the effect is to construct a new *list* which is similar, but which has additional elements added to the front corresponding to the preceding *arguments* of **list\***. 
+If the last <GlossaryTerm styled={true} term={"argument"}><i>argument</i></GlossaryTerm> to <DictionaryLink styled={true} term={"list"}><b>list\*</b></DictionaryLink> is a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>, the effect is to construct a new <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> which is similar, but which has additional elements added to the front corresponding to the preceding <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm> of <DictionaryLink styled={true} term={"list"}><b>list\*</b></DictionaryLink>. 
 
 
 
-If **list\*** receives only one *object*, that *object* is returned, regardless of whether or not it is a *list*. **Examples:**
+If <DictionaryLink styled={true} term={"list"}><b>list\*</b></DictionaryLink> receives only one <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>, that <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is returned, regardless of whether or not it is a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>. **Examples:**
 ```lisp
 
 (list 1) *→* (1) 
@@ -68,7 +68,7 @@ If **list\*** receives only one *object*, that *object* is returned, regardless 
 
 
 
-**cons** 
+<DictionaryLink styled={true} term={"cons"}><b>cons</b></DictionaryLink> 
 
 
 

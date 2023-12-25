@@ -1,4 +1,4 @@
-**make-string-output-stream** *Function* 
+**make-string-output-stream** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**make-string-output-stream** &amp;key *element-type → string-stream* 
+<DictionaryLink styled={true} term={"make-string-output-stream"}><b>make-string-output-stream</b></DictionaryLink> &amp;key *element-type → string-stream* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*element-type*—a *type specifier* . The default is **character**. 
+*element-type*—a *type specifier* . The default is <DictionaryLink styled={true} term={"character"}><b>character</b></DictionaryLink>. 
 
 
 
@@ -38,11 +38,11 @@
 
 
 
-Returns an *output string stream* that accepts *characters* and makes available (via **get-output-stream-string**) a *string* that contains the *characters* that were actually output. 
+Returns an *output string stream* that accepts <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm> and makes available (via <DictionaryLink styled={true} term={"get-output-stream-string"}><b>get-output-stream-string</b></DictionaryLink>) a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> that contains the <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm> that were actually output. 
 
 
 
-The *element-type* names the *type* of the *elements* of the *string*; a *string* is constructed of the most specialized *type* that can accommodate *elements* of that *element-type*. 
+The *element-type* names the <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> of the <GlossaryTerm styled={true} term={"element"}><i>elements</i></GlossaryTerm> of the <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>; a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> is constructed of the most specialized <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> that can accommodate <GlossaryTerm styled={true} term={"element"}><i>elements</i></GlossaryTerm> of that *element-type*. 
 
 
 
@@ -61,7 +61,7 @@ None..
 
 
 
-**get-output-stream-string**, **with-output-to-string** 
+<DictionaryLink styled={true} term={"get-output-stream-string"}><b>get-output-stream-string</b></DictionaryLink>, <DictionaryLink styled={true} term={"with-output-to-string"}><b>with-output-to-string</b></DictionaryLink> 
 
 
 

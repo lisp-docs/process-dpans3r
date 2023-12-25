@@ -1,4 +1,4 @@
-**package-shadowing-symbols** *Function* 
+**package-shadowing-symbols** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**package-shadowing-symbols** *package → symbols* 
+<DictionaryLink styled={true} term={"package-shadowing-symbols"}><b>package-shadowing-symbols</b></DictionaryLink> *package → symbols* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*package*—a *package designator* . 
+<GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>—a *package designator* . 
 
 
 
-*symbols*—a *list* of *symbols*. 
+<GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm>. 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-Returns a *list* of *symbols* that have been declared as *shadowing symbols* in *package* by **shadow** or **shadowing-import** (or the equivalent **defpackage** options). All *symbols* on this *list* are *present* in *package*. 
+Returns a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> that have been declared as *shadowing symbols* in <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> by <DictionaryLink styled={true} term={"shadow"}><b>shadow</b></DictionaryLink> or <DictionaryLink styled={true} term={"shadowing-import"}><b>shadowing-import</b></DictionaryLink> (or the equivalent <DictionaryLink styled={true} term={"defpackage"}><b>defpackage</b></DictionaryLink> options). All <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> on this <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> are <GlossaryTerm styled={true} term={"present"}><i>present</i></GlossaryTerm> in <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>. 
 
 
 
@@ -45,7 +45,7 @@ Returns a *list* of *symbols* that have been declared as *shadowing symbols* in 
 
 
 
-Should signal an error of *type* **type-error** if *package* is not a *package designator* . 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> is not a *package designator* . 
 
 
 
@@ -53,7 +53,7 @@ Should signal an error of *type* **type-error** if *package* is not a *package d
 
 
 
-**shadow**, **shadowing-import** 
+<DictionaryLink styled={true} term={"shadow"}><b>shadow</b></DictionaryLink>, <DictionaryLink styled={true} term={"shadowing-import"}><b>shadowing-import</b></DictionaryLink> 
 
 
 
@@ -61,7 +61,7 @@ Should signal an error of *type* **type-error** if *package* is not a *package d
 
 
 
-Whether the list of *symbols* is *fresh* is *implementation-dependent*. 
+Whether the list of <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> is <GlossaryTerm styled={true} term={"fresh"}><i>fresh</i></GlossaryTerm> is <GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm>. 
 
 
 

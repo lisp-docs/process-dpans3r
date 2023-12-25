@@ -2,7 +2,7 @@
 
 
 
-A *destructuring lambda list* is used by **destructuring-bind**. 
+A *destructuring lambda list* is used by <DictionaryLink styled={true} term={"destructuring-bind"}><b>destructuring-bind</b></DictionaryLink>. 
 
 
 

@@ -1,4 +1,4 @@
-**software-type, software-version** *Function* 
+**software-type, software-version** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,11 +6,11 @@
 
 
 
-**software-type** *hno argumentsi → description* 
+<DictionaryLink styled={true} term={"software-type"}><b>software-type</b></DictionaryLink> *hno argumentsi → description* 
 
 
 
-**software-version** *hno argumentsi → description* 
+<DictionaryLink styled={true} term={"software-version"}><b>software-version</b></DictionaryLink> *hno argumentsi → description* 
 
 
 
@@ -18,7 +18,7 @@
 
 
 
-*description*—a *string* or **nil**. 
+*description*—a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -26,11 +26,11 @@
 
 
 
-**software-type** returns a *string* that identifies the generic name of any relevant supporting software, or **nil** if no appropriate or relevant result can be produced. 
+<DictionaryLink styled={true} term={"software-type"}><b>software-type</b></DictionaryLink> returns a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> that identifies the generic name of any relevant supporting software, or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> if no appropriate or relevant result can be produced. 
 
 
 
-**software-version** returns a *string* that identifies the version of any relevant supporting software, or **nil** if no appropriate or relevant result can be produced. 
+<DictionaryLink styled={true} term={"software-version"}><b>software-version</b></DictionaryLink> returns a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> that identifies the version of any relevant supporting software, or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> if no appropriate or relevant result can be produced. 
 
 
 
@@ -53,7 +53,7 @@ Operating system environment.
 
 
 
-This information should be of use to maintainers of the *implementation*. 
+This information should be of use to maintainers of the <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm>. 
 
 
 
@@ -69,7 +69,7 @@ This information should be of use to maintainers of the *implementation*.
 
 
 
-**user-homedir-pathname** 
+<DictionaryLink styled={true} term={"user-homedir-pathname"}><b>user-homedir-pathname</b></DictionaryLink> 
 
 
 

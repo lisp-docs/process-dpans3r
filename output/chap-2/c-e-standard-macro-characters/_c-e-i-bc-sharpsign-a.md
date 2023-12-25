@@ -22,7 +22,7 @@ foo 2 (hot dog)
 
 
 
-In contrast, #1A((0 1 5) (foo 2 (hot dog))) represents a *vector* of *length* 2 whose *elements* are *lists*: 
+In contrast, #1A((0 1 5) (foo 2 (hot dog))) represents a <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"length"}><i>length</i></GlossaryTerm> 2 whose <GlossaryTerm styled={true} term={"element"}><i>elements</i></GlossaryTerm> are <GlossaryTerm styled={true} term={"list"}><i>lists</i></GlossaryTerm>: 
 
 
 
@@ -38,11 +38,11 @@ In contrast, #1A((0 1 5) (foo 2 (hot dog))) represents a *vector* of *length* 2 
 
 
 
-If some *dimension* of the *array* whose representation is being parsed is found to be 0, all *dimensions* to the right (*i.e.*, the higher numbered *dimensions*) are also considered to be 0. 
+If some <GlossaryTerm styled={true} term={"dimension"}><i>dimension</i></GlossaryTerm> of the <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm> whose representation is being parsed is found to be 0, all <GlossaryTerm styled={true} term={"dimension"}><i>dimensions</i></GlossaryTerm> to the right (*i.e.*, the higher numbered <GlossaryTerm styled={true} term={"dimension"}><i>dimensions</i></GlossaryTerm>) are also considered to be 0. 
 
 
 
-For information on how the *Lisp printer* prints *arrays*, see Section 22.1.3.4 (Printing Strings), Section 22.1.3.6 (Printing Bit Vectors), Section 22.1.3.7 (Printing Other Vectors), or Section 22.1.3.8 (Printing Other Arrays).  
+For information on how the *Lisp printer* prints <GlossaryTerm styled={true} term={"array"}><i>arrays</i></GlossaryTerm>, see Section 22.1.3.4 (Printing Strings), Section 22.1.3.6 (Printing Bit Vectors), Section 22.1.3.7 (Printing Other Vectors), or Section 22.1.3.8 (Printing Other Arrays).  
 
 
 

@@ -6,7 +6,7 @@
 
 
 
-**setq** *\{↓pair\}*\* *→ result* 
+<DictionaryLink styled={true} term={"setq"}><b>setq</b></DictionaryLink> *\{↓pair\}*\* *→ result* 
 
 
 
@@ -26,15 +26,15 @@
 
 
 
-*var*—a *symbol* naming a *variable* other than a *constant variable*. 
+*var*—a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> naming a <GlossaryTerm styled={true} term={"variable"}><i>variable</i></GlossaryTerm> other than a *constant variable*. 
 
 
 
-*form*—a *form*. 
+<GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>. 
 
 
 
-*result*—the *primary value* of the last *form*, or **nil** if no *pairs* were supplied. 
+*result*—the *primary value* of the last <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>, or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> if no *pairs* were supplied. 
 
 
 
@@ -42,15 +42,15 @@
 
 
 
-Assigns values to *variables*. 
+Assigns values to <GlossaryTerm styled={true} term={"variable"}><i>variables</i></GlossaryTerm>. 
 
 
 
-(setq *var1 form1 var2 form2* ...) is the simple variable assignment statement of Lisp. First *form1* is evaluated and the result is stored in the variable *var1*, then *form2* is evaluated and the result stored in *var2*, and so forth. **setq** may be used for assignment of both lexical and dynamic variables. 
+(setq *var1 form1 var2 form2* ...) is the simple variable assignment statement of Lisp. First *form1* is evaluated and the result is stored in the variable *var1*, then *form2* is evaluated and the result stored in *var2*, and so forth. <DictionaryLink styled={true} term={"setq"}><b>setq</b></DictionaryLink> may be used for assignment of both lexical and dynamic variables. 
 
 
 
-If any *var* refers to a *binding* made by **symbol-macrolet**, then that *var* is treated as if **setf** (not **setq**) had been used. 
+If any *var* refers to a <GlossaryTerm styled={true} term={"binding"}><i>binding</i></GlossaryTerm> made by <DictionaryLink styled={true} term={"symbol-macrolet"}><b>symbol-macrolet</b></DictionaryLink>, then that *var* is treated as if <DictionaryLink styled={true} term={"setf"}><b>setf</b></DictionaryLink> (not <DictionaryLink styled={true} term={"setq"}><b>setq</b></DictionaryLink>) had been used. 
 
 
 
@@ -82,7 +82,7 @@ c *→* 7
 
 
 
-The *primary value* of each *form* is assigned to the corresponding *var*. 
+The *primary value* of each <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> is assigned to the corresponding *var*. 
 
 
 
@@ -90,7 +90,7 @@ The *primary value* of each *form* is assigned to the corresponding *var*.
 
 
 
-**psetq**, **set**, **setf** 
+<DictionaryLink styled={true} term={"psetq"}><b>psetq</b></DictionaryLink>, <DictionaryLink styled={true} term={"set"}><b>set</b></DictionaryLink>, <DictionaryLink styled={true} term={"setf"}><b>setf</b></DictionaryLink> 
 
 
 

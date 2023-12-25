@@ -1,4 +1,4 @@
-**code-char** *Function* 
+**code-char** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**code-char** *code → char-p* 
+<DictionaryLink styled={true} term={"code-char"}><b>code-char</b></DictionaryLink> *code → char-p* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*code*—a *character code*. 
+<GlossaryTerm styled={true} term={"code"}><i>code</i></GlossaryTerm>—a *character code*. 
 
 
 
-*char-p*—a *character* or **nil**. 
+*char-p*—a <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -38,7 +38,7 @@
 
 
 
-Returns a *character* with the *code attribute* given by *code*. If no such *character* exists and one cannot be created, **nil** is returned. 
+Returns a <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> with the *code attribute* given by <GlossaryTerm styled={true} term={"code"}><i>code</i></GlossaryTerm>. If no such <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> exists and one cannot be created, <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> is returned. 
 
 
 
@@ -53,7 +53,7 @@ Returns a *character* with the *code attribute* given by *code*. If no such *cha
 
 
 
-The *implementation*’s character encoding. 
+The <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm>’s character encoding. 
 
 
 
@@ -61,7 +61,7 @@ The *implementation*’s character encoding.
 
 
 
-**char-code** 
+<DictionaryLink styled={true} term={"char-code"}><b>char-code</b></DictionaryLink> 
 
 
 

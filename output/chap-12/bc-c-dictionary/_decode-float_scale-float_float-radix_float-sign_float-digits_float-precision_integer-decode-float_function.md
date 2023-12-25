@@ -1,4 +1,4 @@
-**decode-float, scale-float, float-radix, float-sign, float-digits, float-precision, integer-decode-float** *Function* 
+**decode-float, scale-float, float-radix, float-sign, float-digits, float-precision, integer-decode-float** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,31 +6,31 @@
 
 
 
-**decode-float** *float ! significand, exponent, sign* 
+<DictionaryLink styled={true} term={"decode-float"}><b>decode-float</b></DictionaryLink> *float ! significand, exponent, sign* 
 
 
 
-**scale-float** *float integer ! scaled-float* 
+<DictionaryLink styled={true} term={"scale-float"}><b>scale-float</b></DictionaryLink> *float integer ! scaled-float* 
 
 
 
-**float-radix** *float ! float-radix* 
+<DictionaryLink styled={true} term={"float-radix"}><b>float-radix</b></DictionaryLink> *float ! float-radix* 
 
 
 
-**float-sign** *float-1* &amp;optional *float-2 ! signed-float* 
+<DictionaryLink styled={true} term={"float-sign"}><b>float-sign</b></DictionaryLink> *float-1* &amp;optional *float-2 ! signed-float* 
 
 
 
-**float-digits** *float ! digits1* 
+<DictionaryLink styled={true} term={"float-digits"}><b>float-digits</b></DictionaryLink> *float ! digits1* 
 
 
 
-**float-precision** *float ! digits2* 
+<DictionaryLink styled={true} term={"float-precision"}><b>float-precision</b></DictionaryLink> *float ! digits2* 
 
 
 
-**integer-decode-float** *float ! significand, exponent, integer-sign* 
+<DictionaryLink styled={true} term={"integer-decode-float"}><b>integer-decode-float</b></DictionaryLink> *float ! significand, exponent, integer-sign* 
 
 
 
@@ -50,15 +50,15 @@
 
 
 
-*float*—a *float*. 
+<GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm>. 
 
 
 
-*float-1*—a *float*. 
+*float-1*—a <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm>. 
 
 
 
-*float-2*—a *float*. 
+*float-2*—a <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm>. 
 
 
 
@@ -90,19 +90,19 @@
 
 
 
-*scaled-float*—a *float*. 
+*scaled-float*—a <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm>. 
 
 
 
-*sign*—A *float* of the same *type* as *float* but numerically equal to 1.0 or -1.0. 
+<GlossaryTerm styled={true} term={"sign"}><i>sign</i></GlossaryTerm>—A <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm> of the same <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> as <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm> but numerically equal to 1.0 or -1.0. 
 
 
 
-*signed-float*—a *float*. 
+*signed-float*—a <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm>. 
 
 
 
-*significand*—a *float*. 
+*significand*—a <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm>. 
 
 
 
@@ -110,39 +110,39 @@
 
 
 
-**decode-float** computes three values that characterize *float*. The first value is of the same *type* as *float* and represents the significand. The second value represents the exponent to which the radix (notated in this description by *b*) must be raised to obtain the value that, when multiplied with the first result, produces the absolute value of *float*. If *float* is zero, any *integer* value may be returned, provided that the identity shown for **scale-float** holds. The third value is of the same *type* as *float* and is 1.0 if *float* is greater than or equal to zero or -1.0 otherwise. 
+<DictionaryLink styled={true} term={"decode-float"}><b>decode-float</b></DictionaryLink> computes three values that characterize <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm>. The first value is of the same <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> as <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm> and represents the significand. The second value represents the exponent to which the radix (notated in this description by *b*) must be raised to obtain the value that, when multiplied with the first result, produces the absolute value of <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm>. If <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm> is zero, any *integer* value may be returned, provided that the identity shown for <DictionaryLink styled={true} term={"scale-float"}><b>scale-float</b></DictionaryLink> holds. The third value is of the same <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> as <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm> and is 1.0 if <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm> is greater than or equal to zero or -1.0 otherwise. 
 
 
 
-**decode-float** divides *float* by an integral power of *b* so as to bring its value between 1*/b* (inclusive) and 1 (exclusive), and returns the quotient as the first value. If *float* is zero, however, the result equals the absolute value of *float* (that is, if there is a negative zero, its significand is considered to be a positive zero). 
+<DictionaryLink styled={true} term={"decode-float"}><b>decode-float</b></DictionaryLink> divides <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm> by an integral power of *b* so as to bring its value between 1*/b* (inclusive) and 1 (exclusive), and returns the quotient as the first value. If <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm> is zero, however, the result equals the absolute value of <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm> (that is, if there is a negative zero, its significand is considered to be a positive zero). 
 
 
 
-**scale-float** returns (\* *float* (expt (float *b float*) *integer*)), where *b* is the radix of the floating point representation. *float* is not necessarily between 1*/b* and 1. 
+<DictionaryLink styled={true} term={"scale-float"}><b>scale-float</b></DictionaryLink> returns (\* <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm> (expt (float *b float<GlossaryTerm styled={true} term={"t"}><i>) </i></GlossaryTerm>integer*)), where *b* is the radix of the floating point representation. <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm> is not necessarily between 1*/b* and 1. 
 
 
 
-**float-radix** returns the radix of *float*. 
+<DictionaryLink styled={true} term={"float-radix"}><b>float-radix</b></DictionaryLink> returns the radix of <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm>. 
 
 
 
-**float-sign** returns a number z such that z and *float-1* have the same sign and also such that z and *float-2* have the same absolute value. If *float-2* is not supplied, its value is (float 1 *float-1*). If an implementation has distinct representations for negative zero and positive zero, then (float-sign -0.0) *!* -1.0. 
+<DictionaryLink styled={true} term={"float-sign"}><b>float-sign</b></DictionaryLink> returns a number z such that z and *float-1* have the same sign and also such that z and *float-2* have the same absolute value. If *float-2* is not supplied, its value is (float 1 *float-1*). If an implementation has distinct representations for negative zero and positive zero, then (float-sign -0.0) *!* -1.0. 
 
 
 
-**float-digits** returns the number of radix *b* digits used in the representation of *float* (including any implicit digits, such as a “hidden bit”). 
+<DictionaryLink styled={true} term={"float-digits"}><b>float-digits</b></DictionaryLink> returns the number of radix *b* digits used in the representation of <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm> (including any implicit digits, such as a “hidden bit”). 
 
 
 
-**float-precision** returns the number of significant radix *b* digits present in *float*; if *float* is a *float* zero, then the result is an *integer* zero. 
+<DictionaryLink styled={true} term={"float-precision"}><b>float-precision</b></DictionaryLink> returns the number of significant radix *b* digits present in <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm>; if <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm> is a <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm> zero, then the result is an *integer* zero. 
 
 
 
-For *normalized floats*, the results of **float-digits** and **float-precision** are the same, but the precision is less than the number of representation digits for a *denormalized* or zero number. 
+For *normalized floats*, the results of <DictionaryLink styled={true} term={"float-digits"}><b>float-digits</b></DictionaryLink> and <DictionaryLink styled={true} term={"float-precision"}><b>float-precision</b></DictionaryLink> are the same, but the precision is less than the number of representation digits for a <GlossaryTerm styled={true} term={"denormalized"}><i>denormalized</i></GlossaryTerm> or zero number. 
 
 
 
-**integer-decode-float** computes three values that characterize *float* - the significand scaled so as to be an *integer* , and the same last two values that are returned by **decode-float**. If *float* is zero, **integer-decode-float** returns zero as the first value. The second value bears the same relationship 
+<DictionaryLink styled={true} term={"integer-decode-float"}><b>integer-decode-float</b></DictionaryLink> computes three values that characterize <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm> - the significand scaled so as to be an *integer* , and the same last two values that are returned by <DictionaryLink styled={true} term={"decode-float"}><b>decode-float</b></DictionaryLink>. If <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm> is zero, <DictionaryLink styled={true} term={"integer-decode-float"}><b>integer-decode-float</b></DictionaryLink> returns zero as the first value. The second value bears the same relationship 
 
 
 
@@ -162,7 +162,7 @@ For *normalized floats*, the results of **float-digits** and **float-precision**
 
 
 
-to the first value as for **decode-float**: 
+to the first value as for <DictionaryLink styled={true} term={"decode-float"}><b>decode-float</b></DictionaryLink>: 
 
 
 
@@ -206,7 +206,7 @@ to the first value as for **decode-float**:
 
 
 
-The implementation’s representation for *floats*. 
+The implementation’s representation for <GlossaryTerm styled={true} term={"float"}><i>floats</i></GlossaryTerm>. 
 
 
 
@@ -214,15 +214,15 @@ The implementation’s representation for *floats*.
 
 
 
-The functions **decode-float**, **float-radix**, **float-digits**, **float-precision**, and **integer-decode-float** should signal an error if their only argument is not a *float*. 
+The functions <DictionaryLink styled={true} term={"decode-float"}><b>decode-float</b></DictionaryLink>, <DictionaryLink styled={true} term={"float-radix"}><b>float-radix</b></DictionaryLink>, <DictionaryLink styled={true} term={"float-digits"}><b>float-digits</b></DictionaryLink>, <DictionaryLink styled={true} term={"float-precision"}><b>float-precision</b></DictionaryLink>, and <DictionaryLink styled={true} term={"integer-decode-float"}><b>integer-decode-float</b></DictionaryLink> should signal an error if their only argument is not a <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm>. 
 
 
 
-The *function* **scale-float** should signal an error if its first argument is not a *float* or if its second argument is not an *integer* . 
+The <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> <DictionaryLink styled={true} term={"scale-float"}><b>scale-float</b></DictionaryLink> should signal an error if its first argument is not a <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm> or if its second argument is not an *integer* . 
 
 
 
-The *function* **float-sign** should signal an error if its first argument is not a *float* or if its second argument is supplied but is not a *float*. 
+The <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> <DictionaryLink styled={true} term={"float-sign"}><b>float-sign</b></DictionaryLink> should signal an error if its first argument is not a <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm> or if its second argument is supplied but is not a <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm>. 
 
 
 
@@ -230,7 +230,7 @@ The *function* **float-sign** should signal an error if its first argument is no
 
 
 
-The product of the first result of **decode-float** or **integer-decode-float**, of the radix raised to the power of the second result, and of the third result is exactly equal to the value of *float*. 
+The product of the first result of <DictionaryLink styled={true} term={"decode-float"}><b>decode-float</b></DictionaryLink> or <DictionaryLink styled={true} term={"integer-decode-float"}><b>integer-decode-float</b></DictionaryLink>, of the radix raised to the power of the second result, and of the third result is exactly equal to the value of <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm>. 
 
 
 

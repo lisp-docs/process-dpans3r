@@ -1,4 +1,4 @@
-**return** *Macro* 
+**return** <GlossaryTerm styled={true} term={"macro"}><i>Macro</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**return** [*result*] *→* 
+<DictionaryLink styled={true} term={"return"}><b>return</b></DictionaryLink> [*result*] *→* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*result*—a *form*; evaluated. The default is **nil**. 
+*result*—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>; evaluated. The default is <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -22,7 +22,7 @@
 
 
 
-Returns, as if by **return-from**, from the *block* named **nil**. 
+Returns, as if by <DictionaryLink styled={true} term={"return-from"}><b>return-from</b></DictionaryLink>, from the <GlossaryTerm styled={true} term={"block"}><i>block</i></GlossaryTerm> named <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -41,7 +41,7 @@ Returns, as if by **return-from**, from the *block* named **nil**.
 
 
 
-**block**, **return-from**, Section 3.1 (Evaluation) 
+<DictionaryLink styled={true} term={"block"}><b>block</b></DictionaryLink>, <DictionaryLink styled={true} term={"return-from"}><b>return-from</b></DictionaryLink>, Section 3.1 (Evaluation) 
 
 
 
@@ -53,11 +53,11 @@ Returns, as if by **return-from**, from the *block* named **nil**.
 
 
 
-(return *form*) *≡* (return-from nil *form*) 
+(return <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>) *≡* (return-from nil <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>) 
 
 
 
-The *implicit blocks established* by *macros* such as **do** are often named **nil**, so that **return** can be used to exit from such *forms*. 
+The *implicit blocks established* by <GlossaryTerm styled={true} term={"macro"}><i>macros</i></GlossaryTerm> such as <DictionaryLink styled={true} term={"do"}><b>do</b></DictionaryLink> are often named <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>, so that <DictionaryLink styled={true} term={"return"}><b>return</b></DictionaryLink> can be used to exit from such <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm>. 
 
 
 
@@ -73,7 +73,7 @@ Data and Control
 
 
 
-**tagbody** 
+<DictionaryLink styled={true} term={"tagbody"}><b>tagbody</b></DictionaryLink> 
 
 
 

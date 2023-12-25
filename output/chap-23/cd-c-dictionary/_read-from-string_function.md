@@ -1,4 +1,4 @@
-**read-from-string** *Function* 
+**read-from-string** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**read-from-string** *string* &amp;optional *eof-error-p eof-value* 
+<DictionaryLink styled={true} term={"read-from-string"}><b>read-from-string</b></DictionaryLink> <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> &amp;optional *eof-error-p eof-value* 
 
 
 
@@ -22,31 +22,31 @@
 
 
 
-*string*—a *string*. 
+<GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>. 
 
 
 
-*eof-error-p*—a *generalized boolean*. The default is *true*. 
+*eof-error-p*—a *generalized boolean*. The default is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>. 
 
 
 
-*eof-value*—an *object*. The default is **nil**. 
+*eof-value*—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. The default is <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
-*start*, *end*—*bounding index designators* of *string*. The defaults for *start* and *end* are 0 and **nil**, respectively. 
+*start*, *end*—*bounding index designators* of <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>. The defaults for *start* and *end* are 0 and <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>, respectively. 
 
 
 
-*preserve-whitespace*—a *generalized boolean*. The default is *false*. 
+*preserve-whitespace*—a *generalized boolean*. The default is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
-*object*—an *object* (parsed by the *Lisp reader* ) or the *eof-value*. 
+<GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> (parsed by the *Lisp reader* ) or the *eof-value*. 
 
 
 
-*position*—an *integer* greater than or equal to zero, and less than or equal to one more than the *length* of the *string*. 
+*position*—an *integer* greater than or equal to zero, and less than or equal to one more than the <GlossaryTerm styled={true} term={"length"}><i>length</i></GlossaryTerm> of the <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>. 
 
 
 
@@ -66,19 +66,19 @@
 
 
 
-Parses the printed representation of an *object* from the subsequence of *string bounded* by *start* and *end*, as if **read** had been called on an *input stream* containing those same *characters*. 
+Parses the printed representation of an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> from the subsequence of *string bounded* by *start* and *end*, as if <DictionaryLink styled={true} term={"read"}><b>read</b></DictionaryLink> had been called on an *input stream* containing those same <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm>. 
 
 
 
-If *preserve-whitespace* is *true*, the operation will preserve *whitespace*<sub>2</sub> as **read-preserving-whitespace** would do. 
+If *preserve-whitespace* is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>, the operation will preserve <GlossaryTerm styled={true} term={"whitespace"}><i>whitespace</i></GlossaryTerm><sub>2</sub> as <DictionaryLink styled={true} term={"read-preserving-whitespace"}><b>read-preserving-whitespace</b></DictionaryLink> would do. 
 
 
 
-If an *object* is successfully parsed, the *primary value*, *object*, is the *object* that was parsed. If *eof-error-p* is *false* and if the end of the *substring* is reached, *eof-value* is returned. 
+If an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is successfully parsed, the *primary value*, *object*, is the <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> that was parsed. If *eof-error-p* is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm> and if the end of the *substring* is reached, *eof-value* is returned. 
 
 
 
-The *secondary value*, *position*, is the index of the first *character* in the *bounded string* that was not read. The *position* may depend upon the value of *preserve-whitespace*. If the entire *string* was read, the *position* returned is either the *length* of the *string* or one greater than the *length* of the *string*. 
+The *secondary value*, *position*, is the index of the first <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> in the *bounded string* that was not read. The *position* may depend upon the value of *preserve-whitespace*. If the entire <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> was read, the *position* returned is either the <GlossaryTerm styled={true} term={"length"}><i>length</i></GlossaryTerm> of the <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> or one greater than the <GlossaryTerm styled={true} term={"length"}><i>length</i></GlossaryTerm> of the <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>. 
 
 
 
@@ -93,7 +93,7 @@ The *secondary value*, *position*, is the index of the first *character* in the 
 
 
 
-If the end of the supplied substring occurs before an *object* can be read, an error is signaled if *eof-error-p* is *true*. An error is signaled if the end of the *substring* occurs in the middle of an incomplete *object*. 
+If the end of the supplied substring occurs before an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> can be read, an error is signaled if *eof-error-p* is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>. An error is signaled if the end of the *substring* occurs in the middle of an incomplete <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -101,7 +101,7 @@ If the end of the supplied substring occurs before an *object* can be read, an e
 
 
 
-**read**, **read-preserving-whitespace** 
+<DictionaryLink styled={true} term={"read"}><b>read</b></DictionaryLink>, <DictionaryLink styled={true} term={"read-preserving-whitespace"}><b>read-preserving-whitespace</b></DictionaryLink> 
 
 
 
@@ -109,7 +109,7 @@ If the end of the supplied substring occurs before an *object* can be read, an e
 
 
 
-The reason that *position* is allowed to be beyond the *length* of the *string* is to permit (but not require) the *implementation* to work by simulating the effect of a trailing delimiter at the end of the *bounded string*. When *preserve-whitespace* is *true*, the *position* might count the simulated delimiter. 
+The reason that *position* is allowed to be beyond the <GlossaryTerm styled={true} term={"length"}><i>length</i></GlossaryTerm> of the <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> is to permit (but not require) the <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm> to work by simulating the effect of a trailing delimiter at the end of the *bounded string*. When *preserve-whitespace* is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>, the *position* might count the simulated delimiter. 
 
 
 

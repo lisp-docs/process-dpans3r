@@ -1,4 +1,4 @@
-**gcd** *Function* 
+**gcd** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**gcd** &amp;rest *integers → greatest-common-denominator* 
+<DictionaryLink styled={true} term={"gcd"}><b>gcd</b></DictionaryLink> &amp;rest *integers → greatest-common-denominator* 
 
 
 
@@ -38,7 +38,7 @@
 
 
 
-Returns the greatest common divisor of *integers*. If only one *integer* is supplied, its absolute value is returned. If no *integers* are given, **gcd** returns 0, which is an identity for this operation. 
+Returns the greatest common divisor of *integers*. If only one *integer* is supplied, its absolute value is returned. If no *integers* are given, <DictionaryLink styled={true} term={"gcd"}><b>gcd</b></DictionaryLink> returns 0, which is an identity for this operation. 
 
 
 
@@ -59,7 +59,7 @@ Returns the greatest common divisor of *integers*. If only one *integer* is supp
 
 
 
-Should signal an error of *type* **type-error** if any *integer* is not an *integer* . 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if any *integer* is not an *integer* . 
 
 
 
@@ -67,7 +67,7 @@ Should signal an error of *type* **type-error** if any *integer* is not an *inte
 
 
 
-**lcm** 
+<DictionaryLink styled={true} term={"lcm"}><b>lcm</b></DictionaryLink> 
 
 
 

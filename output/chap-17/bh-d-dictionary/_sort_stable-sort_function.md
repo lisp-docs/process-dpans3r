@@ -1,4 +1,4 @@
-**sort, stable-sort** *Function* 
+**sort, stable-sort** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,11 +6,11 @@
 
 
 
-**sort** *sequence predicate* &amp;key *key → sorted-sequence* 
+<DictionaryLink styled={true} term={"sort"}><b>sort</b></DictionaryLink> *sequence predicate* &amp;key *key → sorted-sequence* 
 
 
 
-**stable-sort** *sequence predicate* &amp;key *key → sorted-sequence* 
+<DictionaryLink styled={true} term={"stable-sort"}><b>stable-sort</b></DictionaryLink> *sequence predicate* &amp;key *key → sorted-sequence* 
 
 
 
@@ -22,7 +22,7 @@
 
 
 
-*predicate*—a *designator* for a *function* of two arguments that returns a *generalized boolean*. *key*—a *designator* for a *function* of one argument, or **nil**. 
+<GlossaryTerm styled={true} term={"predicate"}><i>predicate</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"designator"}><i>designator</i></GlossaryTerm> for a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> of two arguments that returns a *generalized boolean*. *key*—a *designator* for a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> of one argument, or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -34,27 +34,27 @@
 
 
 
-**sort** and **stable-sort** destructively sort *sequences* according to the order determined by the *predicate* function. 
+<DictionaryLink styled={true} term={"sort"}><b>sort</b></DictionaryLink> and <DictionaryLink styled={true} term={"stable-sort"}><b>stable-sort</b></DictionaryLink> destructively sort *sequences* according to the order determined by the <GlossaryTerm styled={true} term={"predicate"}><i>predicate</i></GlossaryTerm> function. 
 
 
 
-If *sequence* is a *vector* , the result is a *vector* that has the same *actual array element type* as *sequence*. If *sequence* is a *list*, the result is a *list*. 
+If *sequence* is a <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm> , the result is a <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm> that has the same *actual array element type* as *sequence*. If *sequence* is a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>, the result is a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>. 
 
 
 
-**sort** determines the relationship between two elements by giving keys extracted from the elements to the *predicate*. The first argument to the *predicate* function is the part of one element of *sequence* extracted by the *key* function (if supplied); the second argument is the part of another element of *sequence* extracted by the *key* function (if supplied). *Predicate* should return *true* if and only if the first argument is strictly less than the second (in some appropriate sense). If the first argument is 
+<DictionaryLink styled={true} term={"sort"}><b>sort</b></DictionaryLink> determines the relationship between two elements by giving keys extracted from the elements to the <GlossaryTerm styled={true} term={"predicate"}><i>predicate</i></GlossaryTerm>. The first argument to the <GlossaryTerm styled={true} term={"predicate"}><i>predicate</i></GlossaryTerm> function is the part of one element of *sequence* extracted by the <GlossaryTerm styled={true} term={"key"}><i>key</i></GlossaryTerm> function (if supplied); the second argument is the part of another element of *sequence* extracted by the <GlossaryTerm styled={true} term={"key"}><i>key</i></GlossaryTerm> function (if supplied). <GlossaryTerm styled={true} term={"predicate"}><i>Predicate</i></GlossaryTerm> should return <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if and only if the first argument is strictly less than the second (in some appropriate sense). If the first argument is 
 
 
 
-greater than or equal to the second (in the appropriate sense), then the *predicate* should return *false*. 
+greater than or equal to the second (in the appropriate sense), then the <GlossaryTerm styled={true} term={"predicate"}><i>predicate</i></GlossaryTerm> should return <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
-The argument to the *key* function is the *sequence* element. The return value of the *key* function becomes an argument to *predicate*. If *key* is not supplied or **nil**, the *sequence* element itself is used. There is no guarantee on the number of times the *key* will be called. 
+The argument to the <GlossaryTerm styled={true} term={"key"}><i>key</i></GlossaryTerm> function is the *sequence* element. The return value of the <GlossaryTerm styled={true} term={"key"}><i>key</i></GlossaryTerm> function becomes an argument to <GlossaryTerm styled={true} term={"predicate"}><i>predicate</i></GlossaryTerm>. If <GlossaryTerm styled={true} term={"key"}><i>key</i></GlossaryTerm> is not supplied or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>, the *sequence* element itself is used. There is no guarantee on the number of times the <GlossaryTerm styled={true} term={"key"}><i>key</i></GlossaryTerm> will be called. 
 
 
 
-If the *key* and *predicate* always return, then the sorting operation will always terminate, producing a *sequence* containing the same *elements* as *sequence* (that is, the result is a permutation of *sequence*). This is guaranteed even if the *predicate* does not really consistently represent a total order (in which case the *elements* will be scrambled in some unpredictable way, but no *element* will be lost). If the *key* consistently returns meaningful keys, and the *predicate* does reflect some total ordering criterion on those keys, then the *elements* of the *sorted-sequence* will be properly sorted according to that ordering. 
+If the <GlossaryTerm styled={true} term={"key"}><i>key</i></GlossaryTerm> and <GlossaryTerm styled={true} term={"predicate"}><i>predicate</i></GlossaryTerm> always return, then the sorting operation will always terminate, producing a *sequence* containing the same <GlossaryTerm styled={true} term={"element"}><i>elements</i></GlossaryTerm> as *sequence* (that is, the result is a permutation of *sequence*). This is guaranteed even if the <GlossaryTerm styled={true} term={"predicate"}><i>predicate</i></GlossaryTerm> does not really consistently represent a total order (in which case the <GlossaryTerm styled={true} term={"element"}><i>elements</i></GlossaryTerm> will be scrambled in some unpredictable way, but no <GlossaryTerm styled={true} term={"element"}><i>element</i></GlossaryTerm> will be lost). If the <GlossaryTerm styled={true} term={"key"}><i>key</i></GlossaryTerm> consistently returns meaningful keys, and the <GlossaryTerm styled={true} term={"predicate"}><i>predicate</i></GlossaryTerm> does reflect some total ordering criterion on those keys, then the <GlossaryTerm styled={true} term={"element"}><i>elements</i></GlossaryTerm> of the *sorted-sequence* will be properly sorted according to that ordering. 
 
 
 
@@ -74,11 +74,11 @@ If the *key* and *predicate* always return, then the sorting operation will alwa
 
 
 
-The sorting operation performed by **sort** is not guaranteed stable. Elements considered equal by the *predicate* might or might not stay in their original order. The *predicate* is assumed to consider two elements x and y to be equal if (funcall *predicate x y*) and (funcall *predicate y x*) are both *false*. **stable-sort** guarantees stability. 
+The sorting operation performed by <DictionaryLink styled={true} term={"sort"}><b>sort</b></DictionaryLink> is not guaranteed stable. Elements considered equal by the <GlossaryTerm styled={true} term={"predicate"}><i>predicate</i></GlossaryTerm> might or might not stay in their original order. The <GlossaryTerm styled={true} term={"predicate"}><i>predicate</i></GlossaryTerm> is assumed to consider two elements x and y to be equal if (funcall *predicate x y*) and (funcall *predicate y x*) are both <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. <DictionaryLink styled={true} term={"stable-sort"}><b>stable-sort</b></DictionaryLink> guarantees stability. 
 
 
 
-The sorting operation can be destructive in all cases. In the case of a *vector* argument, this is accomplished by permuting the elements in place. In the case of a *list*, the *list* is destructively reordered in the same manner as for **nreverse**. 
+The sorting operation can be destructive in all cases. In the case of a <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm> argument, this is accomplished by permuting the elements in place. In the case of a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>, the <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> is destructively reordered in the same manner as for <DictionaryLink styled={true} term={"nreverse"}><b>nreverse</b></DictionaryLink>. 
 
 
 
@@ -134,7 +134,7 @@ The sorting operation can be destructive in all cases. In the case of a *vector*
 
 
 
-Should be prepared to signal an error of *type* **type-error** if *sequence* is not a *proper sequence*. 
+Should be prepared to signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if *sequence* is not a *proper sequence*. 
 
 
 
@@ -142,7 +142,7 @@ Should be prepared to signal an error of *type* **type-error** if *sequence* is 
 
 
 
-**merge**, Section 3.2.1 (Compiler Terminology), Section 3.6 (Traversal Rules and Side Effects), Section 3.7 (Destructive Operations) 
+<DictionaryLink styled={true} term={"merge"}><b>merge</b></DictionaryLink>, Section 3.2.1 (Compiler Terminology), Section 3.6 (Traversal Rules and Side Effects), Section 3.7 (Destructive Operations) 
 
 
 
@@ -150,7 +150,7 @@ Should be prepared to signal an error of *type* **type-error** if *sequence* is 
 
 
 
-If *sequence* is a *vector* , the result might or might not be simple, and might or might not be *identical* to *sequence*. 
+If *sequence* is a <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm> , the result might or might not be simple, and might or might not be <GlossaryTerm styled={true} term={"identical"}><i>identical</i></GlossaryTerm> to *sequence*. 
 
 
 

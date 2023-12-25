@@ -1,4 +1,4 @@
-**warn** *Function* 
+**warn** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**warn** *datum* &amp;rest *arguments →* **nil** 
+<DictionaryLink styled={true} term={"warn"}><b>warn</b></DictionaryLink> *datum* &amp;rest *arguments →* <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*datum*, *arguments*—*designators* for a *condition* of default type **simple-warning**. 
+*datum*, <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm>—<GlossaryTerm styled={true} term={"designator"}><i>designators</i></GlossaryTerm> for a <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> of default type <DictionaryLink styled={true} term={"simple-warning"}><b>simple-warning</b></DictionaryLink>. 
 
 
 
@@ -30,7 +30,7 @@
 
 
 
-**warn** 
+<DictionaryLink styled={true} term={"warn"}><b>warn</b></DictionaryLink> 
 
 
 
@@ -38,7 +38,7 @@
 
 
 
-*Signals* a *condition* of *type* **warning**. If the *condition* is not *handled*, reports the *condition* to *error output*. 
+<GlossaryTerm styled={true} term={"signal"}><i>Signals</i></GlossaryTerm> a <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"warning"}><b>warning</b></DictionaryLink>. If the <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> is not *handled*, reports the <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> to *error output*. 
 
 
 
@@ -50,7 +50,7 @@ The precise mechanism for warning is as follows:
 
 
 
-While the **warning** *condition* is being signaled, the **muffle-warning** *restart* is established for use by a *handler* . If invoked, this *restart* bypasses further action by **warn**, which in turn causes **warn** to immediately return **nil**. 
+While the <DictionaryLink styled={true} term={"warning"}><b>warning</b></DictionaryLink> <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> is being signaled, the **muffle-warning** <GlossaryTerm styled={true} term={"restart"}><i>restart</i></GlossaryTerm> is established for use by a <GlossaryTerm styled={true} term={"handler"}><i>handler</i></GlossaryTerm> . If invoked, this <GlossaryTerm styled={true} term={"restart"}><i>restart</i></GlossaryTerm> bypasses further action by <DictionaryLink styled={true} term={"warn"}><b>warn</b></DictionaryLink>, which in turn causes <DictionaryLink styled={true} term={"warn"}><b>warn</b></DictionaryLink> to immediately return <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -58,7 +58,7 @@ While the **warning** *condition* is being signaled, the **muffle-warning** *res
 
 
 
-If no handlers for the warning condition are found, or if all such handlers decline, then the *condition* is reported to *error output* by **warn** in an *implementation-dependent* format. 
+If no handlers for the warning condition are found, or if all such handlers decline, then the <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> is reported to *error output* by <DictionaryLink styled={true} term={"warn"}><b>warn</b></DictionaryLink> in an <GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm> format. 
 
 
 
@@ -66,7 +66,7 @@ If no handlers for the warning condition are found, or if all such handlers decl
 
 
 
-The value returned by **warn** if it returns is **nil**. 
+The value returned by <DictionaryLink styled={true} term={"warn"}><b>warn</b></DictionaryLink> if it returns is <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -115,7 +115,7 @@ Existing handler bindings.
 
 
 
-**\*break-on-signals\***, **\*error-output\***. 
+<DictionaryLink styled={true} term={"break-on-signals"}><b>\*break-on-signals\*</b></DictionaryLink>, **\*error-output\***. 
 
 
 
@@ -123,11 +123,11 @@ Existing handler bindings.
 
 
 
-If *datum* is a *condition* and if the *condition* is not of *type* **warning**, or *arguments* is *non-nil*, an error of *type* **type-error** is signaled. 
+If *datum* is a <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> and if the <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> is not of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"warning"}><b>warning</b></DictionaryLink>, or <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm> is <GlossaryTerm styled={true} term={"non-nil"}><i>non-nil</i></GlossaryTerm>, an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> is signaled. 
 
 
 
-If *datum* is a condition type, the result of (apply #’make-condition datum arguments) must be of *type* **warning** or an error of *type* **type-error** is signaled. 
+If *datum* is a condition type, the result of (apply #’make-condition datum arguments) must be of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"warning"}><b>warning</b></DictionaryLink> or an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> is signaled. 
 
 
 
@@ -135,7 +135,7 @@ If *datum* is a condition type, the result of (apply #’make-condition datum ar
 
 
 
-**\*break-on-signals\***, **muffle-warning**, **signal** 
+<DictionaryLink styled={true} term={"break-on-signals"}><b>\*break-on-signals\*</b></DictionaryLink>, **muffle-warning**, <DictionaryLink styled={true} term={"signal"}><b>signal</b></DictionaryLink> 
 
 
 

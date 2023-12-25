@@ -1,4 +1,4 @@
-**get-universal-time, get-decoded-time** *Function* 
+**get-universal-time, get-decoded-time** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,11 +6,11 @@
 
 
 
-**get-universal-time** *hno argumentsi → universal-time* 
+<DictionaryLink styled={true} term={"get-universal-time"}><b>get-universal-time</b></DictionaryLink> *hno argumentsi → universal-time* 
 
 
 
-**get-decoded-time** *hno argumentsi* 
+<DictionaryLink styled={true} term={"get-decoded-time"}><b>get-decoded-time</b></DictionaryLink> *hno argumentsi* 
 
 
 
@@ -46,11 +46,11 @@
 
 
 
-**get-universal-time** returns the current time, represented as a *universal time*. 
+<DictionaryLink styled={true} term={"get-universal-time"}><b>get-universal-time</b></DictionaryLink> returns the current time, represented as a *universal time*. 
 
 
 
-**get-decoded-time** returns the current time, represented as a *decoded time*. 
+<DictionaryLink styled={true} term={"get-decoded-time"}><b>get-decoded-time</b></DictionaryLink> returns the current time, represented as a *decoded time*. 
 
 
 
@@ -79,7 +79,7 @@ The time of day (*i.e.*, the passage of time), the system clock’s ability to k
 
 
 
-An error of *type* **error** might be signaled if the current time cannot be determined. 
+An error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"error"}><b>error</b></DictionaryLink> might be signaled if the current time cannot be determined. 
 
 
 
@@ -87,7 +87,7 @@ An error of *type* **error** might be signaled if the current time cannot be det
 
 
 
-**decode-universal-time**, **encode-universal-time**, Section 25.1.4 (Time) 
+<DictionaryLink styled={true} term={"decode-universal-time"}><b>decode-universal-time</b></DictionaryLink>, <DictionaryLink styled={true} term={"encode-universal-time"}><b>encode-universal-time</b></DictionaryLink>, Section 25.1.4 (Time) 
 
 
 
@@ -99,7 +99,7 @@ An error of *type* **error** might be signaled if the current time cannot be det
 
 
 
-No *implementation* is required to have a way to verify that the time returned is correct. However, if an *implementation* provides a validity check (*e.g.*, the failure to have properly initialized the system clock can be reliably detected) and that validity check fails, the *implementation* is strongly encouraged (but not required) to signal an error of *type* **error** (rather than, for example, returning a known-to-be-wrong value) that is *correctable* by allowing the user to interactively set the correct time. 
+No <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm> is required to have a way to verify that the time returned is correct. However, if an <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm> provides a validity check (*e.g.*, the failure to have properly initialized the system clock can be reliably detected) and that validity check fails, the <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm> is strongly encouraged (but not required) to signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"error"}><b>error</b></DictionaryLink> (rather than, for example, returning a known-to-be-wrong value) that is <GlossaryTerm styled={true} term={"correctable"}><i>correctable</i></GlossaryTerm> by allowing the user to interactively set the correct time. 
 
 
 

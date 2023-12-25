@@ -1,4 +1,4 @@
-**make-string-input-stream** *Function* 
+**make-string-input-stream** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**make-string-input-stream** *string* &amp;optional *start end → string-stream* 
+<DictionaryLink styled={true} term={"make-string-input-stream"}><b>make-string-input-stream</b></DictionaryLink> <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> &amp;optional *start end → string-stream* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*string*—a *string*. 
+<GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>. 
 
 
 
-*start*, *end*—*bounding index designators* of *string*. The defaults for *start* and *end* are 0 and **nil**, respectively. 
+*start*, *end*—*bounding index designators* of <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>. The defaults for *start* and *end* are 0 and <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>, respectively. 
 
 
 
@@ -30,7 +30,7 @@
 
 
 
-Returns an *input string stream*. This *stream* will supply, in order, the *characters* in the substring of *string bounded* by *start* and *end*. After the last *character* has been supplied, the *string stream* will then be at *end of file*. 
+Returns an *input string stream*. This <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm> will supply, in order, the <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm> in the substring of *string bounded* by *start* and *end*. After the last <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> has been supplied, the *string stream* will then be at *end of file*. 
 
 
 
@@ -49,7 +49,7 @@ Returns an *input string stream*. This *stream* will supply, in order, the *char
 
 
 
-**with-input-from-string** 
+<DictionaryLink styled={true} term={"with-input-from-string"}><b>with-input-from-string</b></DictionaryLink> 
 
 
 

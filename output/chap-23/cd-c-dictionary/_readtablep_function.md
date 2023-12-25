@@ -1,4 +1,4 @@
-**readtablep** *Function* 
+**readtablep** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**readtablep** *object → generalized-boolean* 
+<DictionaryLink styled={true} term={"readtablep"}><b>readtablep</b></DictionaryLink> *object → generalized-boolean* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*object*—an *object*. 
+<GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-Returns *true* if *object* is of *type* **readtable**; otherwise, returns *false*. 
+Returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"readtable"}><b>readtable</b></DictionaryLink>; otherwise, returns <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
@@ -42,7 +42,7 @@ Returns *true* if *object* is of *type* **readtable**; otherwise, returns *false
 
 
 
-(readtablep *object*) *≡* (typep *object* ’readtable) 
+(readtablep <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>) *≡* (typep <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> ’readtable) 
 
 
 
@@ -74,7 +74,7 @@ Returns *true* if *object* is of *type* **readtable**; otherwise, returns *false
 
 
 
-**set-dispatch-macro-character** *disp-char sub-char new-function* &amp;optional *readtable →* **t** 
+**set-dispatch-macro-character** *disp-char sub-char new-function* &amp;optional *readtable →* <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink> 
 
 
 
@@ -82,19 +82,19 @@ Returns *true* if *object* is of *type* **readtable**; otherwise, returns *false
 
 
 
-*disp-char*—a *character* . 
+*disp-char*—a <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> . 
 
 
 
-*sub-char*—a *character* . 
+*sub-char*—a <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> . 
 
 
 
-*readtable*—a *readtable designator* . The default is the *current readtable*. 
+<GlossaryTerm styled={true} term={"readtable"}><i>readtable</i></GlossaryTerm>—a *readtable designator* . The default is the *current readtable*. 
 
 
 
-*function*—a *function designator* or **nil**. 
+<GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>—a *function designator* or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -110,7 +110,7 @@ Returns *true* if *object* is of *type* **readtable**; otherwise, returns *false
 
 
 
-**set-dispatch-macro-character** installs a *new-function* to be called when a particular *dispatching macro character* pair is read. *New-function* is installed as the dispatch function to be called when *readtable* is in use and when *disp-char* is followed by *sub-char*. 
+**set-dispatch-macro-character** installs a *new-function* to be called when a particular *dispatching macro character* pair is read. *New-function* is installed as the dispatch function to be called when <GlossaryTerm styled={true} term={"readtable"}><i>readtable</i></GlossaryTerm> is in use and when *disp-char* is followed by *sub-char*. 
 
 
 
@@ -118,11 +118,11 @@ For more information about how the *new-function* is invoked, see Section 2.1.4.
 
 
 
-**get-dispatch-macro-character** retrieves the dispatch function associated with *disp-char* and *sub-char* in *readtable*. 
+**get-dispatch-macro-character** retrieves the dispatch function associated with *disp-char* and *sub-char* in <GlossaryTerm styled={true} term={"readtable"}><i>readtable</i></GlossaryTerm>. 
 
 
 
-**get-dispatch-macro-character** returns the macro-character function for *sub-char* under *disp char*, or **nil** if there is no function associated with *sub-char*. If *sub-char* is a decimal digit, **get-dispatch-macro-character** returns **nil**. 
+**get-dispatch-macro-character** returns the macro-character function for *sub-char* under *disp char*, or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> if there is no function associated with *sub-char*. If *sub-char* is a decimal digit, **get-dispatch-macro-character** returns <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -162,7 +162,7 @@ Section 2.1.4.4 (Macro Characters)
 
 
 
-The *readtable* is modified. 
+The <GlossaryTerm styled={true} term={"readtable"}><i>readtable</i></GlossaryTerm> is modified. 
 
 
 
@@ -170,7 +170,7 @@ The *readtable* is modified.
 
 
 
-**\*readtable\***. 
+<DictionaryLink styled={true} term={"readtable"}><b>\*readtable\*</b></DictionaryLink>. 
 
 
 
@@ -178,7 +178,7 @@ The *readtable* is modified.
 
 
 
-For either function, an error is signaled if *disp-char* is not a *dispatching macro character* in *readtable*. 
+For either function, an error is signaled if *disp-char* is not a *dispatching macro character* in <GlossaryTerm styled={true} term={"readtable"}><i>readtable</i></GlossaryTerm>. 
 
 
 
@@ -186,7 +186,7 @@ For either function, an error is signaled if *disp-char* is not a *dispatching m
 
 
 
-**\*readtable\*** 
+<DictionaryLink styled={true} term={"readtable"}><b>\*readtable\*</b></DictionaryLink> 
 
 
 
@@ -194,7 +194,7 @@ For either function, an error is signaled if *disp-char* is not a *dispatching m
 
 
 
-It is necessary to use **make-dispatch-macro-character** to set up the dispatch character before specifying its sub-characters. 
+It is necessary to use <DictionaryLink styled={true} term={"make-dispatch-macro-character"}><b>make-dispatch-macro-character</b></DictionaryLink> to set up the dispatch character before specifying its sub-characters. 
 
 
 

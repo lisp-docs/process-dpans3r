@@ -1,4 +1,4 @@
-**assoc, assoc-if, assoc-if-not** *Function* 
+**assoc, assoc-if, assoc-if-not** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,11 +6,11 @@
 
 
 
-**assoc** *item alist* &amp;key *key test test-not → entry* 
+<DictionaryLink styled={true} term={"assoc"}><b>assoc</b></DictionaryLink> *item alist* &amp;key *key test test-not → entry* 
 
 
 
-**assoc-if** *predicate alist* &amp;key *key → entry* 
+<DictionaryLink styled={true} term={"assoc-if"}><b>assoc-if</b></DictionaryLink> *predicate alist* &amp;key *key → entry* 
 
 
 
@@ -30,7 +30,7 @@
 
 
 
-**assoc-if-not** *predicate alist* &amp;key *key → entry* 
+<DictionaryLink styled={true} term={"assoc-if-not"}><b>assoc-if-not</b></DictionaryLink> *predicate alist* &amp;key *key → entry* 
 
 
 
@@ -38,19 +38,19 @@
 
 
 
-*item*—an *object*. 
+*item*—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
-*alist*—an *association list*. 
+<GlossaryTerm styled={true} term={"alist"}><i>alist</i></GlossaryTerm>—an *association list*. 
 
 
 
-*predicate*—a *designator* for a *function* of one *argument* that returns a *generalized boolean*. *test*—a *designator* for a *function* of two *arguments* that returns a *generalized boolean*. *test-not*—a *designator* for a *function* of two *arguments* that returns a *generalized boolean*. *key*—a *designator* for a *function* of one argument, or **nil**. 
+<GlossaryTerm styled={true} term={"predicate"}><i>predicate</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"designator"}><i>designator</i></GlossaryTerm> for a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> of one <GlossaryTerm styled={true} term={"argument"}><i>argument</i></GlossaryTerm> that returns a *generalized boolean*. *test<GlossaryTerm styled={true} term={"t"}><i>—a </i></GlossaryTerm>designator* for a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> of two <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm> that returns a *generalized boolean*. *test-not<GlossaryTerm styled={true} term={"t"}><i>—a </i></GlossaryTerm>designator* for a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> of two <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm> that returns a *generalized boolean*. *key*—a *designator* for a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> of one argument, or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
-*entry*—a *cons* that is an *element* of *alist*, or **nil**. 
+*entry*—a <GlossaryTerm styled={true} term={"cons"}><i>cons</i></GlossaryTerm> that is an <GlossaryTerm styled={true} term={"element"}><i>element</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"alist"}><i>alist</i></GlossaryTerm>, or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -58,11 +58,11 @@
 
 
 
-**assoc**, **assoc-if**, and **assoc-if-not** return the first *cons* in *alist* whose *car satisfies the test*, or **nil** if no such *cons* is found. 
+<DictionaryLink styled={true} term={"assoc"}><b>assoc</b></DictionaryLink>, <DictionaryLink styled={true} term={"assoc-if"}><b>assoc-if</b></DictionaryLink>, and <DictionaryLink styled={true} term={"assoc-if-not"}><b>assoc-if-not</b></DictionaryLink> return the first <GlossaryTerm styled={true} term={"cons"}><i>cons</i></GlossaryTerm> in <GlossaryTerm styled={true} term={"alist"}><i>alist</i></GlossaryTerm> whose *car satisfies the test*, or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> if no such <GlossaryTerm styled={true} term={"cons"}><i>cons</i></GlossaryTerm> is found. 
 
 
 
-For **assoc**, **assoc-if**, and **assoc-if-not**, if **nil** appears in *alist* in place of a pair, it is ignored. **Examples:**
+For <DictionaryLink styled={true} term={"assoc"}><b>assoc</b></DictionaryLink>, <DictionaryLink styled={true} term={"assoc-if"}><b>assoc-if</b></DictionaryLink>, and <DictionaryLink styled={true} term={"assoc-if-not"}><b>assoc-if-not</b></DictionaryLink>, if <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> appears in <GlossaryTerm styled={true} term={"alist"}><i>alist</i></GlossaryTerm> in place of a pair, it is ignored. **Examples:**
 ```lisp
 
 (setq values ’((x . 100) (y . 200) (z . 50))) *→* ((X . 100) (Y . 200) (Z . 50)) (assoc ’y values) *→* (Y . 200) 
@@ -94,7 +94,7 @@ For **assoc**, **assoc-if**, and **assoc-if-not**, if **nil** appears in *alist*
 
 
 
-Should be prepared to signal an error of *type* **type-error** if *alist* is not an *association list*. 
+Should be prepared to signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if <GlossaryTerm styled={true} term={"alist"}><i>alist</i></GlossaryTerm> is not an *association list*. 
 
 
 
@@ -102,7 +102,7 @@ Should be prepared to signal an error of *type* **type-error** if *alist* is not
 
 
 
-**rassoc**, **find**, **member**, **position**, Section 3.6 (Traversal Rules and Side Effects) 
+<DictionaryLink styled={true} term={"rassoc"}><b>rassoc</b></DictionaryLink>, <DictionaryLink styled={true} term={"find"}><b>find</b></DictionaryLink>, <DictionaryLink styled={true} term={"member"}><b>member</b></DictionaryLink>, <DictionaryLink styled={true} term={"position"}><b>position</b></DictionaryLink>, Section 3.6 (Traversal Rules and Side Effects) 
 
 
 
@@ -114,11 +114,11 @@ The :test-not parameter is deprecated.
 
 
 
-The *function* **assoc-if-not** is deprecated. 
+The <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> <DictionaryLink styled={true} term={"assoc-if-not"}><b>assoc-if-not</b></DictionaryLink> is deprecated. 
 
 
 
-It is possible to **rplacd** the result of **assoc**, provided that it is not **nil**, in order to “update” *alist*. The two expressions 
+It is possible to <DictionaryLink styled={true} term={"rplacd"}><b>rplacd</b></DictionaryLink> the result of <DictionaryLink styled={true} term={"assoc"}><b>assoc</b></DictionaryLink>, provided that it is not <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>, in order to “update” <GlossaryTerm styled={true} term={"alist"}><i>alist</i></GlossaryTerm>. The two expressions 
 
 
 
@@ -134,7 +134,7 @@ and
 
 
 
-are equivalent in meaning with one exception: if **nil** appears in *alist* in place of a pair, and *item* is **nil**, **find** will compute the *car* of the **nil** in *alist*, find that it is equal to *item*, and return **nil**, whereas **assoc** will ignore the **nil** in *alist* and continue to search for an actual *cons* whose *car* is **nil**. 
+are equivalent in meaning with one exception: if <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> appears in <GlossaryTerm styled={true} term={"alist"}><i>alist</i></GlossaryTerm> in place of a pair, and *item* is <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>, <DictionaryLink styled={true} term={"find"}><b>find</b></DictionaryLink> will compute the <GlossaryTerm styled={true} term={"car"}><i>car</i></GlossaryTerm> of the <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> in <GlossaryTerm styled={true} term={"alist"}><i>alist</i></GlossaryTerm>, find that it is equal to *item*, and return <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>, whereas <DictionaryLink styled={true} term={"assoc"}><b>assoc</b></DictionaryLink> will ignore the <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> in <GlossaryTerm styled={true} term={"alist"}><i>alist</i></GlossaryTerm> and continue to search for an actual <GlossaryTerm styled={true} term={"cons"}><i>cons</i></GlossaryTerm> whose <GlossaryTerm styled={true} term={"car"}><i>car</i></GlossaryTerm> is <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 

@@ -6,7 +6,7 @@ These are not really parameters. If the *lambda list keyword* **&amp;aux** is pr
 
 
 
-evaluated and *var* is bound to that value (or to **nil** if no *init-form* was specified). **&amp;aux** variable processing is analogous to **let\*** processing. 
+evaluated and *var* is bound to that value (or to <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> if no *init-form* was specified). **&amp;aux** variable processing is analogous to <DictionaryLink styled={true} term={"let"}><b>let\*</b></DictionaryLink> processing. 
 
 
 

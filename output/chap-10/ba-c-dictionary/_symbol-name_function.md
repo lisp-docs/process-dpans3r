@@ -1,4 +1,4 @@
-**symbol-name** *Function* 
+**symbol-name** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**symbol-name** *symbol → name* 
+<DictionaryLink styled={true} term={"symbol-name"}><b>symbol-name</b></DictionaryLink> *symbol → name* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*symbol*—a *symbol*. 
+<GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>. 
 
 
 
-*name*—a *string*. 
+<GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>. 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-**symbol-name** returns the *name* of *symbol*. The consequences are undefined if *name* is ever modified. 
+<DictionaryLink styled={true} term={"symbol-name"}><b>symbol-name</b></DictionaryLink> returns the <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>. The consequences are undefined if <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> is ever modified. 
 
 
 
@@ -42,7 +42,7 @@
 
 
 
-Should signal an error of *type* **type-error** if *symbol* is not a *symbol*. 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> is not a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>. 
 
 
 
@@ -58,7 +58,7 @@ Should signal an error of *type* **type-error** if *symbol* is not a *symbol*.
 
 
 
-**symbol-package** 
+<DictionaryLink styled={true} term={"symbol-package"}><b>symbol-package</b></DictionaryLink> 
 
 
 

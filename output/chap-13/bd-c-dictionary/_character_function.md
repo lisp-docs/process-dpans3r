@@ -1,4 +1,4 @@
-**character** *Function* 
+**character** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**character** *character → denoted-character* 
+<DictionaryLink styled={true} term={"character"}><b>character</b></DictionaryLink> *character → denoted-character* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*character*—a *character designator* . 
+<GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm>—a *character designator* . 
 
 
 
-*denoted-character*—a *character* . 
+*denoted-character*—a <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> . 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-Returns the *character* denoted by the *character designator* . 
+Returns the <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> denoted by the *character designator* . 
 
 
 
@@ -57,7 +57,7 @@ Returns the *character* denoted by the *character designator* .
 
 
 
-Should signal an error of *type* **type-error** if *object* is not a *character designator* . 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is not a *character designator* . 
 
 
 
@@ -65,7 +65,7 @@ Should signal an error of *type* **type-error** if *object* is not a *character 
 
 
 
-**coerce** 
+<DictionaryLink styled={true} term={"coerce"}><b>coerce</b></DictionaryLink> 
 
 
 
@@ -73,7 +73,7 @@ Should signal an error of *type* **type-error** if *object* is not a *character 
 
 
 
-(character *object*) *≡* (coerce *object* ’character) 
+(character <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>) *≡* (coerce <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> ’character) 
 
 
 

@@ -6,7 +6,7 @@
 
 
 
-**function** *name → function* 
+<DictionaryLink styled={true} term={"function"}><b>function</b></DictionaryLink> *name → function* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*name*—a *function name* or *lambda expression*. 
+<GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm>—a *function name* or *lambda expression*. 
 
 
 
-*function*—a *function object*. 
+<GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>—a *function object*. 
 
 
 
@@ -26,19 +26,19 @@
 
 
 
-The *value* of **function** is the *functional value* of *name* in the current *lexical environment*. 
+The <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of <DictionaryLink styled={true} term={"function"}><b>function</b></DictionaryLink> is the *functional value* of <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> in the current *lexical environment*. 
 
 
 
-If *name* is a *function name*, the functional definition of that name is that established by the innermost lexically enclosing **flet**, **labels**, or **macrolet** *form*, if there is one. Otherwise the global functional definition of the *function name* is returned. 
+If <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> is a *function name*, the functional definition of that name is that established by the innermost lexically enclosing <DictionaryLink styled={true} term={"flet"}><b>flet</b></DictionaryLink>, <DictionaryLink styled={true} term={"labels"}><b>labels</b></DictionaryLink>, or <DictionaryLink styled={true} term={"macrolet"}><b>macrolet</b></DictionaryLink> <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>, if there is one. Otherwise the global functional definition of the *function name* is returned. 
 
 
 
-If *name* is a *lambda expression*, then a *lexical closure* is returned. In situations where a *closure* over the same set of *bindings* might be produced more than once, the various resulting *closures* might or might not be **eq**. 
+If <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> is a *lambda expression*, then a *lexical closure* is returned. In situations where a <GlossaryTerm styled={true} term={"closure"}><i>closure</i></GlossaryTerm> over the same set of <GlossaryTerm styled={true} term={"binding"}><i>bindings</i></GlossaryTerm> might be produced more than once, the various resulting <GlossaryTerm styled={true} term={"closure"}><i>closures</i></GlossaryTerm> might or might not be <DictionaryLink styled={true} term={"eq"}><b>eq</b></DictionaryLink>. 
 
 
 
-It is an error to use **function** on a *function name* that does not denote a *function* in the lexical environment in which the **function** form appears. Specifically, it is an error to use **function** on a *symbol* that denotes a *macro* or *special form*. An implementation may choose not to signal this 
+It is an error to use <DictionaryLink styled={true} term={"function"}><b>function</b></DictionaryLink> on a *function name* that does not denote a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> in the lexical environment in which the <DictionaryLink styled={true} term={"function"}><b>function</b></DictionaryLink> form appears. Specifically, it is an error to use <DictionaryLink styled={true} term={"function"}><b>function</b></DictionaryLink> on a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> that denotes a <GlossaryTerm styled={true} term={"macro"}><i>macro</i></GlossaryTerm> or *special form*. An implementation may choose not to signal this 
 
 
 
@@ -60,7 +60,7 @@ This works because **function** creates a *closure* of the *lambda expression* t
 
 
 
-**defun**, **fdefinition**, **flet**, **labels**, **symbol-function**, Section 3.1.2.1.1 (Symbols as Forms), Section 2.4.8.2 (Sharpsign Single-Quote), Section 22.1.3.13 (Printing Other Objects) 
+<DictionaryLink styled={true} term={"defun"}><b>defun</b></DictionaryLink>, <DictionaryLink styled={true} term={"fdefinition"}><b>fdefinition</b></DictionaryLink>, <DictionaryLink styled={true} term={"flet"}><b>flet</b></DictionaryLink>, <DictionaryLink styled={true} term={"labels"}><b>labels</b></DictionaryLink>, <DictionaryLink styled={true} term={"symbol-function"}><b>symbol-function</b></DictionaryLink>, Section 3.1.2.1.1 (Symbols as Forms), Section 2.4.8.2 (Sharpsign Single-Quote), Section 22.1.3.13 (Printing Other Objects) 
 
 
 
@@ -80,7 +80,7 @@ Data and Control
 
 
 
-The notation #’*name* may be used as an abbreviation for (function *name*). 
+The notation #’<GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> may be used as an abbreviation for (function <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm>). 
 
 
 

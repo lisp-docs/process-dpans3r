@@ -10,11 +10,11 @@ Figure 18–1 lists some *defined names* that are applicable to *hash tables*. T
 
 
 
-– There are four kinds of *hash tables*: those whose keys are compared with **eq**, those whose keys are compared with **eql**, those whose keys are compared with **equal**, and those whose keys are compared with **equalp**. 
+– There are four kinds of *hash tables*: those whose keys are compared with <DictionaryLink styled={true} term={"eq"}><b>eq</b></DictionaryLink>, those whose keys are compared with <DictionaryLink styled={true} term={"eql"}><b>eql</b></DictionaryLink>, those whose keys are compared with <DictionaryLink styled={true} term={"equal"}><b>equal</b></DictionaryLink>, and those whose keys are compared with <DictionaryLink styled={true} term={"equalp"}><b>equalp</b></DictionaryLink>. 
 
 
 
-– *Hash tables* are created by **make-hash-table**. **gethash** is used to look up a key and find the associated value. New entries are added to *hash tables* using **setf** with **gethash**. **remhash** is used to remove an entry. For example: 
+– *Hash tables* are created by <DictionaryLink styled={true} term={"make-hash-table"}><b>make-hash-table</b></DictionaryLink>. <DictionaryLink styled={true} term={"gethash"}><b>gethash</b></DictionaryLink> is used to look up a key and find the associated value. New entries are added to *hash tables* using <DictionaryLink styled={true} term={"setf"}><b>setf</b></DictionaryLink> with <DictionaryLink styled={true} term={"gethash"}><b>gethash</b></DictionaryLink>. <DictionaryLink styled={true} term={"remhash"}><b>remhash</b></DictionaryLink> is used to remove an entry. For example: 
 
 
 
@@ -30,15 +30,15 @@ Figure 18–1 lists some *defined names* that are applicable to *hash tables*. T
 
 
 
-(gethash ’color a) *→* BROWN, *true* 
+(gethash ’color a) *→* BROWN, <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> 
 
 
 
-(gethash ’name a) *→* FRED, *true* 
+(gethash ’name a) *→* FRED, <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> 
 
 
 
-(gethash ’pointy a) *→* NIL, *false* 
+(gethash ’pointy a) *→* NIL, <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm> 
 
 
 
@@ -46,11 +46,11 @@ In this example, the symbols color and name are being used as keys, and the symb
 
 
 
-– A key or a value may be any *object*. 
+– A key or a value may be any <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
-– The existence of an entry in the *hash table* can be determined from the *secondary value* returned by **gethash**. 
+– The existence of an entry in the *hash table* can be determined from the *secondary value* returned by <DictionaryLink styled={true} term={"gethash"}><b>gethash</b></DictionaryLink>. 
 
 
 

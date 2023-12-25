@@ -1,4 +1,4 @@
-**compiled-function-p** *Function* 
+**compiled-function-p** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**compiled-function-p** *object → generalized-boolean* 
+<DictionaryLink styled={true} term={"compiled-function-p"}><b>compiled-function-p</b></DictionaryLink> *object → generalized-boolean* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*object*—an *object*. 
+<GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-Returns *true* if *object* is of *type* **compiled-function**; otherwise, returns *false*. 
+Returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"compiled-function"}><b>compiled-function</b></DictionaryLink>; otherwise, returns <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
@@ -65,7 +65,7 @@ Returns *true* if *object* is of *type* **compiled-function**; otherwise, return
 
 
 
-**compile**, **compile-file**, **compiled-function** 
+<DictionaryLink styled={true} term={"compile"}><b>compile</b></DictionaryLink>, <DictionaryLink styled={true} term={"compile-file"}><b>compile-file</b></DictionaryLink>, <DictionaryLink styled={true} term={"compiled-function"}><b>compiled-function</b></DictionaryLink> 
 
 
 
@@ -73,7 +73,7 @@ Returns *true* if *object* is of *type* **compiled-function**; otherwise, return
 
 
 
-(compiled-function-p *object*) *≡* (typep *object* ’compiled-function) 
+(compiled-function-p <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>) *≡* (typep <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> ’compiled-function) 
 
 
 

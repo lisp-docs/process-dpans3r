@@ -6,7 +6,7 @@
 
 
 
-**package**, **t** 
+<DictionaryLink styled={true} term={"package"}><b>package</b></DictionaryLink>, <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink> 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-A *package* is a *namespace* that maps *symbol names* to *symbols*; see Section 11.1 (Package Concepts). 
+A <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> is a <GlossaryTerm styled={true} term={"namespace"}><i>namespace</i></GlossaryTerm> that maps *symbol names* to <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm>; see Section 11.1 (Package Concepts). 
 
 
 

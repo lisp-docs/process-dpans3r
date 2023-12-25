@@ -6,7 +6,7 @@
 
 
 
-**the** *value-type form ! \{result\}*\* 
+<DictionaryLink styled={true} term={"the"}><b>the</b></DictionaryLink> *value-type form ! \{result\}*\* 
 
 
 
@@ -18,11 +18,11 @@
 
 
 
-*form*—a *form*; evaluated. 
+<GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>; evaluated. 
 
 
 
-*results*—the *values* resulting from the *evaluation* of *form*. These *values* must conform to the *type* supplied by *value-type*; see below. 
+*results*—the <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> resulting from the <GlossaryTerm styled={true} term={"evaluation"}><i>evaluation</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>. These <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> must conform to the <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> supplied by *value-type*; see below. 
 
 
 
@@ -34,11 +34,11 @@
 
 
 
-It is permissible for *form* to *yield* a di↵erent number of *values* than are specified by *value-type*, provided that the values for which *types* are declared are indeed of those *types*. Missing values are treated as **nil** for the purposes of checking their *types*. 
+It is permissible for <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> to <GlossaryTerm styled={true} term={"yield"}><i>yield</i></GlossaryTerm> a di↵erent number of <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> than are specified by *value-type*, provided that the values for which <GlossaryTerm styled={true} term={"type"}><i>types</i></GlossaryTerm> are declared are indeed of those <GlossaryTerm styled={true} term={"type"}><i>types</i></GlossaryTerm>. Missing values are treated as <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> for the purposes of checking their <GlossaryTerm styled={true} term={"type"}><i>types</i></GlossaryTerm>. 
 
 
 
-Regardless of number of *values* declared by *value-type*, the number of *values* returned by the **the** *special form* is the same as the number of *values* returned by *form*. 
+Regardless of number of <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> declared by *value-type*, the number of <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> returned by the <DictionaryLink styled={true} term={"the"}><b>the</b></DictionaryLink> *special form* is the same as the number of <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> returned by <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>. 
 
 
 
@@ -70,7 +70,7 @@ Evaluation and
 
 
 
-The consequences are undefined if the *values yielded* by the *form* are not of the *type* specified by *value-type*. 
+The consequences are undefined if the *values yielded* by the <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> are not of the <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> specified by *value-type*. 
 
 
 
@@ -78,7 +78,7 @@ The consequences are undefined if the *values yielded* by the *form* are not of 
 
 
 
-**values** 
+<DictionaryLink styled={true} term={"values"}><b>values</b></DictionaryLink> 
 
 
 
@@ -86,7 +86,7 @@ The consequences are undefined if the *values yielded* by the *form* are not of 
 
 
 
-The **values** *type specifier* can be used to indicate the types of *multiple values*: 
+The <DictionaryLink styled={true} term={"values"}><b>values</b></DictionaryLink> *type specifier* can be used to indicate the types of *multiple values*: 
 
 
 
@@ -102,7 +102,7 @@ The **values** *type specifier* can be used to indicate the types of *multiple v
 
 
 
-**setf** can be used with **the** type declarations. In this case the declaration is transferred to the form that specifies the new value. The resulting **setf** *form* is then analyzed. 
+<DictionaryLink styled={true} term={"setf"}><b>setf</b></DictionaryLink> can be used with <DictionaryLink styled={true} term={"the"}><b>the</b></DictionaryLink> type declarations. In this case the declaration is transferred to the form that specifies the new value. The resulting <DictionaryLink styled={true} term={"setf"}><b>setf</b></DictionaryLink> <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> is then analyzed. 
 
 
 

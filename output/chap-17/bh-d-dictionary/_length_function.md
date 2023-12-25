@@ -1,4 +1,4 @@
-**length** *Function* 
+**length** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**length** *sequence → n* 
+<DictionaryLink styled={true} term={"length"}><b>length</b></DictionaryLink> *sequence → n* 
 
 
 
@@ -26,11 +26,11 @@
 
 
 
-Returns the number of *elements* in *sequence*. 
+Returns the number of <GlossaryTerm styled={true} term={"element"}><i>elements</i></GlossaryTerm> in *sequence*. 
 
 
 
-If *sequence* is a *vector* with a *fill pointer* , the active length as specified by the *fill pointer* is returned. 
+If *sequence* is a <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm> with a *fill pointer* , the active length as specified by the *fill pointer* is returned. 
 
 
 
@@ -50,7 +50,7 @@ If *sequence* is a *vector* with a *fill pointer* , the active length as specifi
 
 
 
-Should be prepared to signal an error of *type* **type-error** if *sequence* is not a *proper sequence*. 
+Should be prepared to signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if *sequence* is not a *proper sequence*. 
 
 
 
@@ -58,7 +58,7 @@ Should be prepared to signal an error of *type* **type-error** if *sequence* is 
 
 
 
-**list-length**, **sequence** 
+<DictionaryLink styled={true} term={"list-length"}><b>list-length</b></DictionaryLink>, <DictionaryLink styled={true} term={"sequence"}><b>sequence</b></DictionaryLink> 
 
 
 

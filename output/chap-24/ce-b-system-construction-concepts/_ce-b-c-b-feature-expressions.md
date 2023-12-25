@@ -2,7 +2,7 @@
 
 
 
-Boolean combinations of *features*, called *feature expressions*, are used by the #+ and #- *reader macros* in order to direct conditional *reading* of *expressions* by the *Lisp reader* . 
+Boolean combinations of <GlossaryTerm styled={true} term={"feature"}><i>features</i></GlossaryTerm>, called *feature expressions*, are used by the #+ and #- *reader macros* in order to direct conditional *reading* of <GlossaryTerm styled={true} term={"expression"}><i>expressions</i></GlossaryTerm> by the *Lisp reader* . 
 
 
 
@@ -10,11 +10,11 @@ The rules for interpreting a *feature expression* are as follows:
 
 
 
-*feature* 
+<GlossaryTerm styled={true} term={"feature"}><i>feature</i></GlossaryTerm> 
 
 
 
-If a *symbol* naming a *feature* is used as a *feature expression*, the *feature expression* succeeds if that *feature* is *present*; otherwise it fails. 
+If a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> naming a <GlossaryTerm styled={true} term={"feature"}><i>feature</i></GlossaryTerm> is used as a *feature expression*, the *feature expression* succeeds if that <GlossaryTerm styled={true} term={"feature"}><i>feature</i></GlossaryTerm> is <GlossaryTerm styled={true} term={"present"}><i>present</i></GlossaryTerm>; otherwise it fails. 
 
 
 
@@ -22,7 +22,7 @@ If a *symbol* naming a *feature* is used as a *feature expression*, the *feature
 
 
 
-A **not** *feature expression* succeeds if its argument *feature-conditional* fails; otherwise, it succeeds. 
+A <DictionaryLink styled={true} term={"not"}><b>not</b></DictionaryLink> *feature expression* succeeds if its argument *feature-conditional* fails; otherwise, it succeeds. 
 
 
 
@@ -30,7 +30,7 @@ A **not** *feature expression* succeeds if its argument *feature-conditional* fa
 
 
 
-An **and** *feature expression* succeeds if all of its argument *feature-conditionals* succeed; otherwise, it fails. 
+An <DictionaryLink styled={true} term={"and"}><b>and</b></DictionaryLink> *feature expression* succeeds if all of its argument *feature-conditionals* succeed; otherwise, it fails. 
 
 
 
@@ -50,7 +50,7 @@ System
 
 
 
-An **or** *feature expression* succeeds if any of its argument *feature-conditionals* succeed; otherwise, it fails. 
+An <DictionaryLink styled={true} term={"or"}><b>or</b></DictionaryLink> *feature expression* succeeds if any of its argument *feature-conditionals* succeed; otherwise, it fails. 
 
 
 

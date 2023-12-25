@@ -6,7 +6,7 @@
 
 
 
-**two-way-stream**, **stream**, **t** 
+<DictionaryLink styled={true} term={"two-way-stream"}><b>two-way-stream</b></DictionaryLink>, <DictionaryLink styled={true} term={"stream"}><b>stream</b></DictionaryLink>, <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink> 
 
 
 
@@ -22,7 +22,7 @@ A *bidirectional composite stream* that receives its input from an associated *i
 
 
 
-**make-two-way-stream**, **two-way-stream-input-stream**, **two-way-stream-output-stream input-stream-p, output-stream-p** *Function* 
+<DictionaryLink styled={true} term={"make-two-way-stream"}><b>make-two-way-stream</b></DictionaryLink>, **two-way-stream-input-stream**, **two-way-stream-output-stream input-stream-p, output-stream-p** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -42,7 +42,7 @@ A *bidirectional composite stream* that receives its input from an associated *i
 
 
 
-*stream*—a *stream*. 
+<GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>. 
 
 
 
@@ -54,7 +54,7 @@ A *bidirectional composite stream* that receives its input from an associated *i
 
 
 
-**input-stream-p** returns *true* if *stream* is an *input stream*; otherwise, returns *false*. **output-stream-p** returns *true* if *stream* is an *output stream*; otherwise, returns *false*. **Examples:**
+**input-stream-p** returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm> is an *input stream*; otherwise, returns <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. **output-stream-p** returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm> is an *output stream*; otherwise, returns <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. **Examples:**
 ```lisp
 
 (input-stream-p \*standard-input\*) *→ true* 
@@ -69,7 +69,7 @@ A *bidirectional composite stream* that receives its input from an associated *i
 
 
 
-Should signal an error of *type* **type-error** if *stream* is not a *stream*. 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm> is not a <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>. 
 
 
 

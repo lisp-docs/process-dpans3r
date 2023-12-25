@@ -1,4 +1,4 @@
-**rename-package** *Function* 
+**rename-package** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**rename-package** *package new-name* &amp;optional *new-nicknames → package-object* 
+<DictionaryLink styled={true} term={"rename-package"}><b>rename-package</b></DictionaryLink> *package new-name* &amp;optional *new-nicknames → package-object* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*package*—a *package designator* . 
+<GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>—a *package designator* . 
 
 
 
@@ -22,7 +22,7 @@
 
 
 
-*new-nicknames*—a *list* of *string designators*. The default is the *empty list*. 
+*new-nicknames*—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of *string designators*. The default is the *empty list*. 
 
 
 
@@ -34,7 +34,7 @@
 
 
 
-Replaces the name and nicknames of *package*. The old name and all of the old nicknames of *package* are eliminated and are replaced by *new-name* and *new-nicknames*. 
+Replaces the name and nicknames of <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>. The old name and all of the old nicknames of <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> are eliminated and are replaced by *new-name* and *new-nicknames*. 
 
 
 
@@ -70,7 +70,7 @@ The consequences are undefined if *new-name* or any *new-nickname* conflicts wit
 
 
 
-**make-package** 
+<DictionaryLink styled={true} term={"make-package"}><b>make-package</b></DictionaryLink> 
 
 
 

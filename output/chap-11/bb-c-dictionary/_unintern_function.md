@@ -1,4 +1,4 @@
-**unintern** *Function* 
+**unintern** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**unintern** *symbol* &amp;optional *package → generalized-boolean* 
+<DictionaryLink styled={true} term={"unintern"}><b>unintern</b></DictionaryLink> <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> &amp;optional *package → generalized-boolean* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*symbol*—a *symbol*. 
+<GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>. 
 
 
 
-*package*—a *package designator* . The default is the *current package*. 
+<GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>—a *package designator* . The default is the *current package*. 
 
 
 
@@ -30,15 +30,15 @@
 
 
 
-**unintern** removes *symbol* from *package*. If *symbol* is *present* in *package*, it is removed from *package* and also from *package*’s *shadowing symbols list* if it is present there. If *package* is the *home package* for *symbol*, *symbol* is made to have no *home package*. *Symbol* may continue to be *accessible* in *package* by inheritance. 
+<DictionaryLink styled={true} term={"unintern"}><b>unintern</b></DictionaryLink> removes <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> from <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>. If <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> is <GlossaryTerm styled={true} term={"present"}><i>present</i></GlossaryTerm> in <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>, it is removed from <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> and also from <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>’s *shadowing symbols list* if it is present there. If <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> is the *home package* for <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>, <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> is made to have no *home package*. *Symbol* may continue to be <GlossaryTerm styled={true} term={"accessible"}><i>accessible</i></GlossaryTerm> in <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> by inheritance. 
 
 
 
-Use of **unintern** can result in a *symbol* that has no recorded *home package*, but that in fact is *accessible* in some *package*. Common Lisp does not check for this pathological case, and such *symbols* are always printed preceded by #:. 
+Use of <DictionaryLink styled={true} term={"unintern"}><b>unintern</b></DictionaryLink> can result in a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> that has no recorded *home package*, but that in fact is <GlossaryTerm styled={true} term={"accessible"}><i>accessible</i></GlossaryTerm> in some <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>. Common Lisp does not check for this pathological case, and such <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> are always printed preceded by #:. 
 
 
 
-**unintern** returns *true* if it removes *symbol*, and **nil** otherwise. 
+<DictionaryLink styled={true} term={"unintern"}><b>unintern</b></DictionaryLink> returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if it removes <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>, and <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> otherwise. 
 
 
 
@@ -56,7 +56,7 @@ temps-unpack *→* #:UNPACK
 
 
 
-**unintern** changes the state of the package system in such a way that the consistency rules do not hold across the change. 
+<DictionaryLink styled={true} term={"unintern"}><b>unintern</b></DictionaryLink> changes the state of the package system in such a way that the consistency rules do not hold across the change. 
 
 
 
@@ -84,7 +84,7 @@ Current state of the package system.
 
 
 
-Giving a shadowing symbol to **unintern** can uncover a name conflict that had previously been resolved by the shadowing. If package A uses packages B and C, A contains a shadowing symbol x, and B and C each contain external symbols named x, then removing the shadowing symbol x from A will reveal a name conflict between b:x and c:x if those two *symbols* are distinct. In this case **unintern** will signal an error. 
+Giving a shadowing symbol to <DictionaryLink styled={true} term={"unintern"}><b>unintern</b></DictionaryLink> can uncover a name conflict that had previously been resolved by the shadowing. If package A uses packages B and C, A contains a shadowing symbol x, and B and C each contain external symbols named x, then removing the shadowing symbol x from A will reveal a name conflict between b:x and c:x if those two <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> are distinct. In this case <DictionaryLink styled={true} term={"unintern"}><b>unintern</b></DictionaryLink> will signal an error. 
 
 
 

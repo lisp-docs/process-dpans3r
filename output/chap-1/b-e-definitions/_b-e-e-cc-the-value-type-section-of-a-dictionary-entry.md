@@ -2,7 +2,7 @@
 
 
 
-This information describes any *type* restrictions on a *dynamic variable*. 
+This information describes any <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> restrictions on a *dynamic variable*. 
 
 
 

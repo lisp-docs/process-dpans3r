@@ -1,4 +1,4 @@
-**ldiff, tailp** *Function* 
+**ldiff, tailp** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,11 +6,11 @@
 
 
 
-**ldiff** *list object → result-list* 
+<DictionaryLink styled={true} term={"ldiff"}><b>ldiff</b></DictionaryLink> *list object → result-list* 
 
 
 
-**tailp** *object list → generalized-boolean* 
+<DictionaryLink styled={true} term={"tailp"}><b>tailp</b></DictionaryLink> *object list → generalized-boolean* 
 
 
 
@@ -18,15 +18,15 @@
 
 
 
-*list*—a *list*, which might be a *dotted list*. 
+<GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>, which might be a *dotted list*. 
 
 
 
-*object*—an *object*. 
+<GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
-*result-list*—a *list*. 
+*result-list*—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>. 
 
 
 
@@ -54,11 +54,11 @@
 
 
 
-If *object* is the *same* as some *tail* of *list*, **tailp** returns *true*; otherwise, it returns *false*. 
+If <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is the <GlossaryTerm styled={true} term={"same"}><i>same</i></GlossaryTerm> as some <GlossaryTerm styled={true} term={"tail"}><i>tail</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>, <DictionaryLink styled={true} term={"tailp"}><b>tailp</b></DictionaryLink> returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>; otherwise, it returns <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
-If *object* is the *same* as some *tail* of *list*, **ldiff** returns a *fresh list* of the *elements* of *list* that precede **object** in the *list structure* of *list*; otherwise, it returns a *copy*<sub>2</sub> of *list*. 
+If <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is the <GlossaryTerm styled={true} term={"same"}><i>same</i></GlossaryTerm> as some <GlossaryTerm styled={true} term={"tail"}><i>tail</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>, <DictionaryLink styled={true} term={"ldiff"}><b>ldiff</b></DictionaryLink> returns a *fresh list* of the <GlossaryTerm styled={true} term={"element"}><i>elements</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> that precede **object** in the *list structure* of <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>; otherwise, it returns a <GlossaryTerm styled={true} term={"copy"}><i>copy</i></GlossaryTerm><sub>2</sub> of <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>. 
 
 
 
@@ -101,7 +101,7 @@ If *object* is the *same* as some *tail* of *list*, **ldiff** returns a *fresh l
 
 
 
-Neither **ldiff** nor **tailp** modifies either of its *arguments*. 
+Neither <DictionaryLink styled={true} term={"ldiff"}><b>ldiff</b></DictionaryLink> nor <DictionaryLink styled={true} term={"tailp"}><b>tailp</b></DictionaryLink> modifies either of its <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm>. 
 
 
 
@@ -109,7 +109,7 @@ Neither **ldiff** nor **tailp** modifies either of its *arguments*.
 
 
 
-Should be prepared to signal an error of *type* **type-error** if *list* is not a *proper list* or a *dotted list*. 
+Should be prepared to signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> is not a *proper list* or a *dotted list*. 
 
 
 
@@ -125,7 +125,7 @@ Should be prepared to signal an error of *type* **type-error** if *list* is not 
 
 
 
-**set-difference** 
+<DictionaryLink styled={true} term={"set-difference"}><b>set-difference</b></DictionaryLink> 
 
 
 
@@ -133,11 +133,11 @@ Should be prepared to signal an error of *type* **type-error** if *list* is not 
 
 
 
-If the *list* is a *circular list*, **tailp** will reliably *yield* a *value* only if the given *object* is in fact a *tail* of *list*. Otherwise, the consequences are unspecified: a given *implementation* which detects the circularity must return *false*, but since an *implementation* is not obliged to detect such a *situation*, **tailp** might just loop indefinitely without returning in that case. 
+If the <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> is a *circular list*, <DictionaryLink styled={true} term={"tailp"}><b>tailp</b></DictionaryLink> will reliably <GlossaryTerm styled={true} term={"yield"}><i>yield</i></GlossaryTerm> a <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> only if the given <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is in fact a <GlossaryTerm styled={true} term={"tail"}><i>tail</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>. Otherwise, the consequences are unspecified: a given <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm> which detects the circularity must return <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>, but since an <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm> is not obliged to detect such a <GlossaryTerm styled={true} term={"situation"}><i>situation</i></GlossaryTerm>, <DictionaryLink styled={true} term={"tailp"}><b>tailp</b></DictionaryLink> might just loop indefinitely without returning in that case. 
 
 
 
-**tailp** could be defined as follows: 
+<DictionaryLink styled={true} term={"tailp"}><b>tailp</b></DictionaryLink> could be defined as follows: 
 
 
 
@@ -161,7 +161,7 @@ If the *list* is a *circular list*, **tailp** will reliably *yield* a *value* on
 
 
 
-and **ldiff** could be defined by: 
+and <DictionaryLink styled={true} term={"ldiff"}><b>ldiff</b></DictionaryLink> could be defined by: 
 
 
 

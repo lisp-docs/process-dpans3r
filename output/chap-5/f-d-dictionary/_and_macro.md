@@ -1,4 +1,4 @@
-**and** *Macro* 
+**and** <GlossaryTerm styled={true} term={"macro"}><i>Macro</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**and** *\{form\}*\* *→ \{result\}*\* 
+<DictionaryLink styled={true} term={"and"}><b>and</b></DictionaryLink> <GlossaryTerm styled={true} term={"form"}><i>\{form\}</i></GlossaryTerm>\* *→ \{result\}*\* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*form*—a *form*. 
+<GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>. 
 
 
 
-*results*—the *values* resulting from the evaluation of the last *form*, or the symbols **nil** or **t**. 
+*results*—the <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> resulting from the evaluation of the last <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>, or the symbols <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> or <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink>. 
 
 
 
@@ -26,15 +26,15 @@
 
 
 
-The macro **and** evaluates each *form* one at a time from left to right. As soon as any *form* evaluates to **nil**, **and** returns **nil** without evaluating the remaining *forms*. If all *forms* but the last evaluate to *true* values, **and** returns the results produced by evaluating the last *form*. 
+The macro <DictionaryLink styled={true} term={"and"}><b>and</b></DictionaryLink> evaluates each <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> one at a time from left to right. As soon as any <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> evaluates to <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>, <DictionaryLink styled={true} term={"and"}><b>and</b></DictionaryLink> returns <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> without evaluating the remaining <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm>. If all <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm> but the last evaluate to <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> values, <DictionaryLink styled={true} term={"and"}><b>and</b></DictionaryLink> returns the results produced by evaluating the last <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>. 
 
 
 
-If no *forms* are supplied, (and) returns **t**. 
+If no <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm> are supplied, (and) returns <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink>. 
 
 
 
-**and** passes back multiple values from the last *subform* but not from subforms other than the last. **Examples:**
+<DictionaryLink styled={true} term={"and"}><b>and</b></DictionaryLink> passes back multiple values from the last <GlossaryTerm styled={true} term={"subform"}><i>subform</i></GlossaryTerm> but not from subforms other than the last. **Examples:**
 ```lisp
 
 (if (and (>= n 0) 
@@ -58,7 +58,7 @@ The above expression prints Foo! if element n of a-simple-vector is the symbol f
 
 
 
-**cond**, **every**, **if**, **or**, **when** 
+<DictionaryLink styled={true} term={"cond"}><b>cond</b></DictionaryLink>, <DictionaryLink styled={true} term={"every"}><b>every</b></DictionaryLink>, <DictionaryLink styled={true} term={"if"}><b>if</b></DictionaryLink>, <DictionaryLink styled={true} term={"or"}><b>or</b></DictionaryLink>, <DictionaryLink styled={true} term={"when"}><b>when</b></DictionaryLink> 
 
 
 
@@ -66,7 +66,7 @@ The above expression prints Foo! if element n of a-simple-vector is the symbol f
 
 
 
-(and *form*) *≡* (let () *form*) 
+(and <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>) *≡* (let () <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>) 
 
 
 

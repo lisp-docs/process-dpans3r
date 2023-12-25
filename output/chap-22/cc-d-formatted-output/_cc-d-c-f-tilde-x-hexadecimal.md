@@ -6,7 +6,7 @@ This is just like &#126;D but prints in hexadecimal radix (radix 16) instead of 
 
 
 
-&#126;X binds **\*print-escape\*** to *false*, **\*print-radix\*** to *false*, **\*print-base\*** to 16, and **\*print-readably\*** to *false*. 
+&#126;X binds <DictionaryLink styled={true} term={"print-escape"}><b>\*print-escape\*</b></DictionaryLink> to <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>, <DictionaryLink styled={true} term={"print-radix"}><b>\*print-radix\*</b></DictionaryLink> to <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>, **\*print-base\*** to 16, and <DictionaryLink styled={true} term={"print-readably"}><b>\*print-readably\*</b></DictionaryLink> to <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 

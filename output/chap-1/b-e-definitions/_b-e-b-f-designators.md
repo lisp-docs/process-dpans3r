@@ -2,23 +2,19 @@
 
 
 
-A *designator* is an *object* that denotes another *object*. 
+A <GlossaryTerm styled={true} term={"designator"}><i>designator</i></GlossaryTerm> is an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> that denotes another <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
-Where a *parameter* of an *operator* is described as a *designator* , the description of the *operator* is written in a way that assumes that the value of the *parameter* is the denoted *object*; that is, that the *parameter* is already of the denoted *type*. (The specific nature of the *object* denoted by a “⟨typeii designator*” or a “*designator* for a ⟨type⟩” can be found in the Glossary entry for “⟨typeii designator* .”) 
+Where a <GlossaryTerm styled={true} term={"parameter"}><i>parameter</i></GlossaryTerm> of an <GlossaryTerm styled={true} term={"operator"}><i>operator</i></GlossaryTerm> is described as a <GlossaryTerm styled={true} term={"designator"}><i>designator</i></GlossaryTerm> , the description of the <GlossaryTerm styled={true} term={"operator"}><i>operator</i></GlossaryTerm> is written in a way that assumes that the value of the <GlossaryTerm styled={true} term={"parameter"}><i>parameter</i></GlossaryTerm> is the denoted <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>; that is, that the <GlossaryTerm styled={true} term={"parameter"}><i>parameter</i></GlossaryTerm> is already of the denoted <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm>. (The specific nature of the <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> denoted by a “⟨typeii designator*” or a “<GlossaryTerm styled={true} term={"designator"}><i>designator</i></GlossaryTerm> for a ⟨type⟩” can be found in the Glossary entry for “⟨typeii designator* .”) 
 
 
 
-For example, “**nil**” and “the *value* of **\*standard-output\***” are operationally indistinguishable as *stream designators*. Similarly, the *symbol* foo and the *string* "FOO" are operationally indistinguishable as *string designators*. 
+For example, “<DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>” and “the <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of **\*standard-output\***” are operationally indistinguishable as *stream designators*. Similarly, the <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> foo and the <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> "FOO" are operationally indistinguishable as *string designators*. 
 
 
 
-Except as otherwise noted, in a situation where the denoted *object* might be used multiple times, it is *implementation-dependent* whether the *object* is coerced only once or whether the coercion occurs each time the *object* must be used. 
-
-
-
-
+Except as otherwise noted, in a situation where the denoted <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> might be used multiple times, it is <GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm> whether the <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is coerced only once or whether the coercion occurs each time the <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> must be used. 
 
 
 
@@ -26,7 +22,11 @@ Except as otherwise noted, in a situation where the denoted *object* might be us
 
 
 
-For example, **mapcar** receives a *function designator* as an argument, and its description is written as if this were simply a function. In fact, it is *implementation-dependent* whether the *function designator* is coerced right away or whether it is carried around internally in the form that it was given as an *argument* and re-coerced each time it is needed. In most cases, *conforming programs* cannot detect the distinction, but there are some pathological situations (particularly those involving self-redefining or mutually-redefining functions) which do conform and which can detect this difference. The following program is a *conforming program*, but might or might not have portably correct results, depending on whether its correctness depends on one or the other of the results: 
+
+
+
+
+For example, <DictionaryLink styled={true} term={"mapcar"}><b>mapcar</b></DictionaryLink> receives a *function designator* as an argument, and its description is written as if this were simply a function. In fact, it is <GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm> whether the *function designator* is coerced right away or whether it is carried around internally in the form that it was given as an <GlossaryTerm styled={true} term={"argument"}><i>argument</i></GlossaryTerm> and re-coerced each time it is needed. In most cases, *conforming programs* cannot detect the distinction, but there are some pathological situations (particularly those involving self-redefining or mutually-redefining functions) which do conform and which can detect this difference. The following program is a *conforming program*, but might or might not have portably correct results, depending on whether its correctness depends on one or the other of the results: 
 
 
 
@@ -54,7 +54,7 @@ For example, **mapcar** receives a *function designator* as an argument, and its
 
 
 
-In a few rare situations, there may be a need in a dictionary entry to refer to the *object* that was the original *designator* for a *parameter* . Since naming the *parameter* would refer to the denoted *object*, the phrase “the ⟨parameter-nameii designator*” can be used to refer to the *designator* which was the *argument* from which the *value* of ⟨parameter-name⟩ was computed. 
+In a few rare situations, there may be a need in a dictionary entry to refer to the <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> that was the original <GlossaryTerm styled={true} term={"designator"}><i>designator</i></GlossaryTerm> for a <GlossaryTerm styled={true} term={"parameter"}><i>parameter</i></GlossaryTerm> . Since naming the <GlossaryTerm styled={true} term={"parameter"}><i>parameter</i></GlossaryTerm> would refer to the denoted <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>, the phrase “the ⟨parameter-nameii designator*” can be used to refer to the <GlossaryTerm styled={true} term={"designator"}><i>designator</i></GlossaryTerm> which was the <GlossaryTerm styled={true} term={"argument"}><i>argument</i></GlossaryTerm> from which the <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of ⟨parameter-name⟩ was computed. 
 
 
 

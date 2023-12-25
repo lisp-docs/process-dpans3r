@@ -1,4 +1,4 @@
-**signum** *Function* 
+**signum** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**signum** *number → signed-prototype* 
+<DictionaryLink styled={true} term={"signum"}><b>signum</b></DictionaryLink> *number → signed-prototype* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*number*—a *number* . 
+<GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> . 
 
 
 
-*signed-prototype*—a *number* . 
+*signed-prototype*—a <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> . 
 
 
 
@@ -26,19 +26,19 @@
 
 
 
-**signum** determines a numerical value that indicates whether *number* is negative, zero, or positive. 
+<DictionaryLink styled={true} term={"signum"}><b>signum</b></DictionaryLink> determines a numerical value that indicates whether <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> is negative, zero, or positive. 
 
 
 
-For a *rational*, **signum** returns one of -1, 0, or 1 according to whether *number* is negative, zero, or positive. For a *float*, the result is a *float* of the same format whose value is minus one, zero, or one. For a *complex* number z, (signum *z*) is a complex number of the same phase but with unit magnitude, unless z is a complex zero, in which case the result is z. 
+For a <GlossaryTerm styled={true} term={"rational"}><i>rational</i></GlossaryTerm>, <DictionaryLink styled={true} term={"signum"}><b>signum</b></DictionaryLink> returns one of -1, 0, or 1 according to whether <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> is negative, zero, or positive. For a <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm>, the result is a <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm> of the same format whose value is minus one, zero, or one. For a <GlossaryTerm styled={true} term={"complex"}><i>complex</i></GlossaryTerm> number z, (signum *z*) is a complex number of the same phase but with unit magnitude, unless z is a complex zero, in which case the result is z. 
 
 
 
-For *rational arguments*, **signum** is a rational function, but it may be irrational for *complex arguments*. 
+For *rational arguments*, <DictionaryLink styled={true} term={"signum"}><b>signum</b></DictionaryLink> is a rational function, but it may be irrational for *complex arguments*. 
 
 
 
-If *number* is a *float*, the result is a *float*. If *number* is a *rational*, the result is a *rational*. If *number* is a *complex float*, the result is a *complex float*. If *number* is a *complex rational*, the result is a *complex* , but it is *implementation-dependent* whether that result is a *complex rational* or a *complex float*. 
+If <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> is a <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm>, the result is a <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm>. If <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> is a <GlossaryTerm styled={true} term={"rational"}><i>rational</i></GlossaryTerm>, the result is a <GlossaryTerm styled={true} term={"rational"}><i>rational</i></GlossaryTerm>. If <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> is a *complex float*, the result is a *complex float*. If <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> is a *complex rational*, the result is a <GlossaryTerm styled={true} term={"complex"}><i>complex</i></GlossaryTerm> , but it is <GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm> whether that result is a *complex rational* or a *complex float*. 
 
 
 

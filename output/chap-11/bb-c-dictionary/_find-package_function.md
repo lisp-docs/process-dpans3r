@@ -1,4 +1,4 @@
-**find-package** *Function* 
+**find-package** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**find-package** *name → package* 
+<DictionaryLink styled={true} term={"find-package"}><b>find-package</b></DictionaryLink> *name → package* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*name*—a *string designator* or a *package object*. 
+<GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm>—a *string designator* or a *package object*. 
 
 
 
-*package*—a *package object* or **nil**. 
+<GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>—a *package object* or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -26,11 +26,11 @@
 
 
 
-If *name* is a *string designator* , **find-package** locates and returns the *package* whose name or nickname is *name*. This search is case sensitive. If there is no such *package*, **find-package** returns **nil**. 
+If <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> is a *string designator* , <DictionaryLink styled={true} term={"find-package"}><b>find-package</b></DictionaryLink> locates and returns the <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> whose name or nickname is <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm>. This search is case sensitive. If there is no such <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>, <DictionaryLink styled={true} term={"find-package"}><b>find-package</b></DictionaryLink> returns <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
-If *name* is a *package object*, that *package object* is returned. 
+If <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> is a *package object*, that *package object* is returned. 
 
 
 
@@ -46,11 +46,11 @@ If *name* is a *package object*, that *package object* is returned.
 
 
 
-The set of *packages* created by the *implementation*. 
+The set of <GlossaryTerm styled={true} term={"package"}><i>packages</i></GlossaryTerm> created by the <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm>. 
 
 
 
-**defpackage**, **delete-package**, **make-package**, **rename-package** 
+<DictionaryLink styled={true} term={"defpackage"}><b>defpackage</b></DictionaryLink>, <DictionaryLink styled={true} term={"delete-package"}><b>delete-package</b></DictionaryLink>, <DictionaryLink styled={true} term={"make-package"}><b>make-package</b></DictionaryLink>, <DictionaryLink styled={true} term={"rename-package"}><b>rename-package</b></DictionaryLink> 
 
 
 
@@ -58,7 +58,7 @@ The set of *packages* created by the *implementation*.
 
 
 
-**make-package** 
+<DictionaryLink styled={true} term={"make-package"}><b>make-package</b></DictionaryLink> 
 
 
 

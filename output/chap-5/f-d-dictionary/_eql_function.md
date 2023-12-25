@@ -1,4 +1,4 @@
-**eql** *Function* 
+**eql** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**eql** *x y → generalized-boolean* 
+<DictionaryLink styled={true} term={"eql"}><b>eql</b></DictionaryLink> *x y → generalized-boolean* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*x*—an *object*. 
+*x*—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
-*y*—an *object*. 
+*y*—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -30,27 +30,27 @@
 
 
 
-The value of **eql** is *true* of two objects, *x* and *y*, in the folowing cases: 
+The value of <DictionaryLink styled={true} term={"eql"}><b>eql</b></DictionaryLink> is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> of two objects, *x* and *y*, in the folowing cases: 
 
 
 
-1\. If *x* and *y* are **eq**. 
+1\. If *x* and *y* are <DictionaryLink styled={true} term={"eq"}><b>eq</b></DictionaryLink>. 
 
 
 
-2\. If *x* and *y* are both *numbers* of the same *type* and the same value. 
+2\. If *x* and *y* are both <GlossaryTerm styled={true} term={"number"}><i>numbers</i></GlossaryTerm> of the same <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> and the same value. 
 
 
 
-3\. If they are both *characters* that represent the same character. 
+3\. If they are both <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm> that represent the same character. 
 
 
 
-Otherwise the value of **eql** is *false*. 
+Otherwise the value of <DictionaryLink styled={true} term={"eql"}><b>eql</b></DictionaryLink> is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
-If an implementation supports positive and negative zeros as *distinct* values, then (eql 0.0 -0.0) returns *false*. Otherwise, when the syntax -0.0 is read it is interpreted as the value 0.0, and so (eql 0.0 -0.0) returns *true*. 
+If an implementation supports positive and negative zeros as <GlossaryTerm styled={true} term={"distinct"}><i>distinct</i></GlossaryTerm> values, then (eql 0.0 -0.0) returns <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. Otherwise, when the syntax -0.0 is read it is interpreted as the value 0.0, and so (eql 0.0 -0.0) returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>. 
 
 
 
@@ -87,7 +87,7 @@ Normally (eql 1.0s0 1.0d0) is false, under the assumption that 1.0s0 and 1.0d0 a
 
 
 
-**eq**, **equal**, **equalp**, **=**, **char=** 
+<DictionaryLink styled={true} term={"eq"}><b>eq</b></DictionaryLink>, <DictionaryLink styled={true} term={"equal"}><b>equal</b></DictionaryLink>, <DictionaryLink styled={true} term={"equalp"}><b>equalp</b></DictionaryLink>, <DictionaryLink styled={true} term={"="}><b>=</b></DictionaryLink>, <DictionaryLink styled={true} term={"char="}><b>char=</b></DictionaryLink> 
 
 
 
@@ -95,19 +95,19 @@ Normally (eql 1.0s0 1.0d0) is false, under the assumption that 1.0s0 and 1.0d0 a
 
 
 
-**eql** is the same as **eq**, except that if the arguments are *characters* or *numbers* of the same type then their values are compared. Thus **eql** tells whether two *objects* are conceptually the same, whereas **eq** tells whether two *objects* are implementationally identical. It is for this reason that **eql**, not **eq**, is the default comparison predicate for *operators* that take *sequences* as arguments. 
+<DictionaryLink styled={true} term={"eql"}><b>eql</b></DictionaryLink> is the same as <DictionaryLink styled={true} term={"eq"}><b>eq</b></DictionaryLink>, except that if the arguments are <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm> or <GlossaryTerm styled={true} term={"number"}><i>numbers</i></GlossaryTerm> of the same type then their values are compared. Thus <DictionaryLink styled={true} term={"eql"}><b>eql</b></DictionaryLink> tells whether two <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm> are conceptually the same, whereas <DictionaryLink styled={true} term={"eq"}><b>eq</b></DictionaryLink> tells whether two <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm> are implementationally identical. It is for this reason that <DictionaryLink styled={true} term={"eql"}><b>eql</b></DictionaryLink>, not <DictionaryLink styled={true} term={"eq"}><b>eq</b></DictionaryLink>, is the default comparison predicate for <GlossaryTerm styled={true} term={"operator"}><i>operators</i></GlossaryTerm> that take *sequences* as arguments. 
 
 
 
-**eql** may not be true of two *floats* even when they represent the same value. **=** is used to compare mathematical values. 
+<DictionaryLink styled={true} term={"eql"}><b>eql</b></DictionaryLink> may not be true of two <GlossaryTerm styled={true} term={"float"}><i>floats</i></GlossaryTerm> even when they represent the same value. <DictionaryLink styled={true} term={"="}><b>=</b></DictionaryLink> is used to compare mathematical values. 
 
 
 
-Two *complex* numbers are considered to be **eql** if their real parts are **eql** and their imaginary parts are **eql**. For example, (eql #C(4 5) #C(4 5)) is *true* and (eql #C(4 5) #C(4.0 5.0)) is *false*. Note that while (eql #C(5.0 0.0) 5.0) is *false*, (eql #C(5 0) 5) is *true*. In the case of 
+Two <GlossaryTerm styled={true} term={"complex"}><i>complex</i></GlossaryTerm> numbers are considered to be <DictionaryLink styled={true} term={"eql"}><b>eql</b></DictionaryLink> if their real parts are <DictionaryLink styled={true} term={"eql"}><b>eql</b></DictionaryLink> and their imaginary parts are <DictionaryLink styled={true} term={"eql"}><b>eql</b></DictionaryLink>. For example, (eql #C(4 5) #C(4 5)) is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> and (eql #C(4 5) #C(4.0 5.0)) is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. Note that while (eql #C(5.0 0.0) 5.0) is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>, (eql #C(5 0) 5) is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>. In the case of 
 
 
 
-(eql #C(5.0 0.0) 5.0) the two arguments are of different types, and so cannot satisfy **eql**. In the case of (eql #C(5 0) 5), #C(5 0) is not a *complex* number, but is automatically reduced to the *integer* 5. 
+(eql #C(5.0 0.0) 5.0) the two arguments are of different types, and so cannot satisfy <DictionaryLink styled={true} term={"eql"}><b>eql</b></DictionaryLink>. In the case of (eql #C(5 0) 5), #C(5 0) is not a <GlossaryTerm styled={true} term={"complex"}><i>complex</i></GlossaryTerm> number, but is automatically reduced to the *integer* 5. 
 
 
 

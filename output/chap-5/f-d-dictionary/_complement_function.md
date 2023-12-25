@@ -1,4 +1,4 @@
-**complement** *Function* 
+**complement** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**complement** *function → complement-function* 
+<DictionaryLink styled={true} term={"complement"}><b>complement</b></DictionaryLink> *function → complement-function* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*function*—a *function*. 
+<GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>. 
 
 
 
-*complement-function*—a *function*. 
+*complement-function*—a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>. 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-Returns a *function* that takes the same *arguments* as *function*, and has the same side-effect behavior as *function*, but returns only a single value: a *generalized boolean* with the opposite truth value of that which would be returned as the *primary value* of *function*. That is, when the *function* would have returned *true* as its *primary value* the *complement-function* returns *false*, and when the *function* would have returned *false* as its *primary value* the *complement-function* returns *true*. 
+Returns a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> that takes the same <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm> as <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>, and has the same side-effect behavior as <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>, but returns only a single value: a *generalized boolean* with the opposite truth value of that which would be returned as the *primary value* of <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>. That is, when the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> would have returned <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> as its *primary value* the *complement-function* returns <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>, and when the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> would have returned <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm> as its *primary value* the *complement-function* returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>. 
 
 
 
@@ -43,7 +43,7 @@ Returns a *function* that takes the same *arguments* as *function*, and has the 
 
 
 
-**not** 
+<DictionaryLink styled={true} term={"not"}><b>not</b></DictionaryLink> 
 
 
 
@@ -59,7 +59,7 @@ In Common Lisp, functions with names like “*xxx*-if-not” are related to func
 
 
 
-(*xxx*-if-not *f* . *arguments*) *≡* (*xxx*-if (complement *f*) . *arguments*) 
+(*xxx*-if-not *f* . <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm>) *≡* (*xxx*-if (complement *f*) . <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm>) 
 
 
 
@@ -87,7 +87,7 @@ Data and Control
 
 
 
-Note that since the “*xxx*-if-not” *functions* and the :test-not arguments have been deprecated, uses of “*xxx*-if” *functions* or :test arguments with **complement** are preferred. 
+Note that since the “*xxx*-if-not” <GlossaryTerm styled={true} term={"function"}><i>functions</i></GlossaryTerm> and the :test-not arguments have been deprecated, uses of “*xxx*-if” <GlossaryTerm styled={true} term={"function"}><i>functions</i></GlossaryTerm> or :test arguments with <DictionaryLink styled={true} term={"complement"}><b>complement</b></DictionaryLink> are preferred. 
 
 
 

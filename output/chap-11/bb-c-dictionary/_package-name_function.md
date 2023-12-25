@@ -1,4 +1,4 @@
-**package-name** *Function* 
+**package-name** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**package-name** *package → name* 
+<DictionaryLink styled={true} term={"package-name"}><b>package-name</b></DictionaryLink> *package → name* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*package*—a *package designator* . 
+<GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>—a *package designator* . 
 
 
 
-*name*—a *string* or **nil**. 
+<GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-**package-name** returns the *string* that names *package*, or **nil** if the *package designator* is a *package object* that has no name (see the *function* **delete-package**). 
+<DictionaryLink styled={true} term={"package-name"}><b>package-name</b></DictionaryLink> returns the <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> that names <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>, or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> if the *package designator* is a *package object* that has no name (see the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> <DictionaryLink styled={true} term={"delete-package"}><b>delete-package</b></DictionaryLink>). 
 
 
 
@@ -49,7 +49,7 @@
 
 
 
-Should signal an error of *type* **type-error** if *package* is not a *package designator* . 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> is not a *package designator* . 
 
 
 

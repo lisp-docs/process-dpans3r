@@ -1,4 +1,4 @@
-**simple-vector-p** *Function* 
+**simple-vector-p** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**simple-vector-p** *object → generalized-boolean* 
+<DictionaryLink styled={true} term={"simple-vector-p"}><b>simple-vector-p</b></DictionaryLink> *object → generalized-boolean* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*object*—an *object*. 
+<GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-Returns *true* if *object* is of *type* **simple-vector**; otherwise, returns *false*.. 
+Returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"simple-vector"}><b>simple-vector</b></DictionaryLink>; otherwise, returns <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>.. 
 
 
 
@@ -42,7 +42,7 @@ Returns *true* if *object* is of *type* **simple-vector**; otherwise, returns *f
 
 
 
-**simple-vector** 
+<DictionaryLink styled={true} term={"simple-vector"}><b>simple-vector</b></DictionaryLink> 
 
 
 
@@ -50,7 +50,7 @@ Returns *true* if *object* is of *type* **simple-vector**; otherwise, returns *f
 
 
 
-(simple-vector-p *object*) *≡* (typep *object* ’simple-vector) 
+(simple-vector-p <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>) *≡* (typep <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> ’simple-vector) 
 
 
 

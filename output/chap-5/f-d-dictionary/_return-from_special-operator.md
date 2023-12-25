@@ -6,7 +6,7 @@
 
 
 
-**return-from** *name* [*result*] *→* 
+<DictionaryLink styled={true} term={"return-from"}><b>return-from</b></DictionaryLink> <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> [*result*] *→* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*name*—a *block tag*; not evaluated. 
+<GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm>—a *block tag*; not evaluated. 
 
 
 
-*result*—a *form*; evaluated. The default is **nil**. 
+*result*—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>; evaluated. The default is <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -26,15 +26,15 @@
 
 
 
-Returns control and *multiple values*<sub>2</sub> from a lexically enclosing *block*. 
+Returns control and *multiple values*<sub>2</sub> from a lexically enclosing <GlossaryTerm styled={true} term={"block"}><i>block</i></GlossaryTerm>. 
 
 
 
-A **block** *form* named *name* must lexically enclose the occurrence of **return-from**; any *values yielded* by the *evaluation* of *result* are immediately returned from the innermost such lexically enclosing *block*. 
+A <DictionaryLink styled={true} term={"block"}><b>block</b></DictionaryLink> <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> named <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> must lexically enclose the occurrence of <DictionaryLink styled={true} term={"return-from"}><b>return-from</b></DictionaryLink>; any *values yielded* by the <GlossaryTerm styled={true} term={"evaluation"}><i>evaluation</i></GlossaryTerm> of *result* are immediately returned from the innermost such lexically enclosing <GlossaryTerm styled={true} term={"block"}><i>block</i></GlossaryTerm>. 
 
 
 
-The transfer of control initiated by **return-from** is performed as described in Section 5.2 (Transfer of Control to an Exit Point). 
+The transfer of control initiated by <DictionaryLink styled={true} term={"return-from"}><b>return-from</b></DictionaryLink> is performed as described in Section 5.2 (Transfer of Control to an Exit Point). 
 
 
 
@@ -100,7 +100,7 @@ The following has undefined consequences because the **block** *form* exits norm
 
 
 
-**block**, **return**, Section 3.1 (Evaluation) 
+<DictionaryLink styled={true} term={"block"}><b>block</b></DictionaryLink>, <DictionaryLink styled={true} term={"return"}><b>return</b></DictionaryLink>, Section 3.1 (Evaluation) 
 
 
 

@@ -1,4 +1,4 @@
-**compiler-macro-function** *Accessor* 
+**compiler-macro-function** <GlossaryTerm styled={true} term={"accessor"}><i>Accessor</i></GlossaryTerm> 
 
 
 
@@ -6,11 +6,11 @@
 
 
 
-**compiler-macro-function** *name* &amp;optional *environment → function* 
+<DictionaryLink styled={true} term={"compiler-macro-function"}><b>compiler-macro-function</b></DictionaryLink> <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> &amp;optional *environment → function* 
 
 
 
-**(setf (compiler-macro-function** *name* &amp;optional *environment***)** *new-function***)** 
+**(setf (compiler-macro-function** <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> &amp;optional *environment<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> *new-function***)** 
 
 
 
@@ -18,15 +18,15 @@
 
 
 
-*name*—a *function name*. 
+<GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm>—a *function name*. 
 
 
 
-*environment*—an *environment object*. 
+<GlossaryTerm styled={true} term={"environment"}><i>environment</i></GlossaryTerm>—an *environment object*. 
 
 
 
-*function*, *new-function*—a *compiler macro function*, or **nil**. 
+<GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>, *new-function*—a *compiler macro function*, or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -34,7 +34,7 @@
 
 
 
-*Accesses* the *compiler macro function* named *name*, if any, in the *environment*.  
+*Accesses* the *compiler macro function* named <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm>, if any, in the <GlossaryTerm styled={true} term={"environment"}><i>environment</i></GlossaryTerm>.  
 
 
 
@@ -42,7 +42,7 @@
 
 
 
-A value of **nil** denotes the absence of a *compiler macro function* named *name*. 
+A value of <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> denotes the absence of a *compiler macro function* named <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm>. 
 
 
 
@@ -50,7 +50,7 @@ A value of **nil** denotes the absence of a *compiler macro function* named *nam
 
 
 
-The consequences are undefined if *environment* is *non-nil* in a use of **setf** of **compiler-macro-function**. 
+The consequences are undefined if <GlossaryTerm styled={true} term={"environment"}><i>environment</i></GlossaryTerm> is <GlossaryTerm styled={true} term={"non-nil"}><i>non-nil</i></GlossaryTerm> in a use of <DictionaryLink styled={true} term={"setf"}><b>setf</b></DictionaryLink> of <DictionaryLink styled={true} term={"compiler-macro-function"}><b>compiler-macro-function</b></DictionaryLink>. 
 
 
 
@@ -58,7 +58,7 @@ The consequences are undefined if *environment* is *non-nil* in a use of **setf*
 
 
 
-**define-compiler-macro**, Section 3.2.2.1 (Compiler Macros) 
+<DictionaryLink styled={true} term={"define-compiler-macro"}><b>define-compiler-macro</b></DictionaryLink>, Section 3.2.2.1 (Compiler Macros) 
 
 
 

@@ -1,4 +1,4 @@
-**file-position** *Function* 
+**file-position** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,11 +6,11 @@
 
 
 
-**file-position** *stream → position* 
+<DictionaryLink styled={true} term={"file-position"}><b>file-position</b></DictionaryLink> *stream → position* 
 
 
 
-**file-position** *stream position-spec → success-p* 
+<DictionaryLink styled={true} term={"file-position"}><b>file-position</b></DictionaryLink> *stream position-spec → success-p* 
 
 
 
@@ -18,7 +18,7 @@
 
 
 
-*stream*—a *stream*. 
+<GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>. 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-*position*—a *file position* or **nil**. 
+*position*—a *file position* or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -38,31 +38,27 @@
 
 
 
-Returns or changes the current position within a *stream*. 
+Returns or changes the current position within a <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>. 
 
 
 
-When *position-spec* is not supplied, **file-position** returns the current *file position* in the *stream*, or **nil** if this cannot be determined. 
+When *position-spec* is not supplied, <DictionaryLink styled={true} term={"file-position"}><b>file-position</b></DictionaryLink> returns the current *file position* in the <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>, or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> if this cannot be determined. 
 
 
 
-When *position-spec* is supplied, the *file position* in *stream* is set to that *file position* (if possible). **file-position** returns *true* if the repositioning is performed successfully, or *false* if it is not. 
+When *position-spec* is supplied, the *file position* in <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm> is set to that *file position* (if possible). <DictionaryLink styled={true} term={"file-position"}><b>file-position</b></DictionaryLink> returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if the repositioning is performed successfully, or <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm> if it is not. 
 
 
 
-An *integer* returned by **file-position** of one argument should be acceptable as *position-spec* for use with the same file. 
+An *integer* returned by <DictionaryLink styled={true} term={"file-position"}><b>file-position</b></DictionaryLink> of one argument should be acceptable as *position-spec* for use with the same file. 
 
 
 
-For a character file, performing a single **read-char** or **write-char** operation may cause the file position to be increased by more than 1 because of character-set translations (such as translating between the Common Lisp #\Newline character and an external ASCII carriage-return/line-feed 
-
-
+For a character file, performing a single <DictionaryLink styled={true} term={"read-char"}><b>read-char</b></DictionaryLink> or <DictionaryLink styled={true} term={"write-char"}><b>write-char</b></DictionaryLink> operation may cause the file position to be increased by more than 1 because of character-set translations (such as translating between the Common Lisp #\Newline character and an external ASCII carriage-return/line-feed 
 
 
 
 
-
- 
 
 
 
@@ -70,11 +66,15 @@ For a character file, performing a single **read-char** or **write-char** operat
 
 
 
-**file-position** 
+ 
 
 
 
-sequence) and other aspects of the implementation. For a binary file, every **read-byte** or **write-byte** operation increases the file position by 1. 
+<DictionaryLink styled={true} term={"file-position"}><b>file-position</b></DictionaryLink> 
+
+
+
+sequence) and other aspects of the implementation. For a binary file, every <DictionaryLink styled={true} term={"read-byte"}><b>read-byte</b></DictionaryLink> or <DictionaryLink styled={true} term={"write-byte"}><b>write-byte</b></DictionaryLink> operation increases the file position by 1. 
 
 
 
@@ -118,7 +118,7 @@ sequence) and other aspects of the implementation. For a binary file, every **re
 
 
 
-When the *position-spec* argument is supplied, the *file position* in the *stream* might be moved. 
+When the *position-spec* argument is supplied, the *file position* in the <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm> might be moved. 
 
 
 
@@ -126,7 +126,7 @@ When the *position-spec* argument is supplied, the *file position* in the *strea
 
 
 
-The value returned by **file-position** increases monotonically as input or output operations are performed. 
+The value returned by <DictionaryLink styled={true} term={"file-position"}><b>file-position</b></DictionaryLink> increases monotonically as input or output operations are performed. 
 
 
 
@@ -154,7 +154,7 @@ If *position-spec* is supplied, but is too large or otherwise inappropriate, an 
 
 
 
-**file-length**, **file-string-length**, **open** 
+<DictionaryLink styled={true} term={"file-length"}><b>file-length</b></DictionaryLink>, <DictionaryLink styled={true} term={"file-string-length"}><b>file-string-length</b></DictionaryLink>, <DictionaryLink styled={true} term={"open"}><b>open</b></DictionaryLink> 
 
 
 
@@ -162,7 +162,7 @@ If *position-spec* is supplied, but is too large or otherwise inappropriate, an 
 
 
 
-Implementations that have character files represented as a sequence of records of bounded size might choose to encode the file position as, for example, ⟨record-number ⟩\*⟨max-record size⟩+⟨character-within-record⟩. This is a valid encoding because it increases monotonically as each character is read or written, though not necessarily by 1 at each step. An *integer* might then be considered “inappropriate” as *position-spec* to **file-position** if, when decoded into record number and character number, it turned out that the supplied record was too short for the specified character number. 
+Implementations that have character files represented as a sequence of records of bounded size might choose to encode the file position as, for example, ⟨record-number ⟩\*⟨max-record size⟩+⟨character-within-record⟩. This is a valid encoding because it increases monotonically as each character is read or written, though not necessarily by 1 at each step. An *integer* might then be considered “inappropriate” as *position-spec* to <DictionaryLink styled={true} term={"file-position"}><b>file-position</b></DictionaryLink> if, when decoded into record number and character number, it turned out that the supplied record was too short for the specified character number. 
 
 
 

@@ -1,4 +1,4 @@
-**invoke-restart** *Function* 
+**invoke-restart** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**invoke-restart** *restart* &amp;rest *arguments → \{result\}*\* 
+<DictionaryLink styled={true} term={"invoke-restart"}><b>invoke-restart</b></DictionaryLink> <GlossaryTerm styled={true} term={"restart"}><i>restart</i></GlossaryTerm> &amp;rest *arguments → \{result\}*\* 
 
 
 
@@ -26,15 +26,15 @@
 
 
 
-*restart*—a *restart designator* . 
+<GlossaryTerm styled={true} term={"restart"}><i>restart</i></GlossaryTerm>—a *restart designator* . 
 
 
 
-*argument*—an *object*. 
+<GlossaryTerm styled={true} term={"argument"}><i>argument</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
-*results*—the *values* returned by the *function* associated with *restart*, if that *function* returns. 
+*results*—the <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> returned by the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> associated with <GlossaryTerm styled={true} term={"restart"}><i>restart</i></GlossaryTerm>, if that <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> returns. 
 
 
 
@@ -42,7 +42,7 @@
 
 
 
-Calls the *function* associated with *restart*, passing *arguments* to it. *Restart* must be valid in the current *dynamic environment*. 
+Calls the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> associated with <GlossaryTerm styled={true} term={"restart"}><i>restart</i></GlossaryTerm>, passing <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm> to it. <GlossaryTerm styled={true} term={"restart"}><i>Restart</i></GlossaryTerm> must be valid in the current *dynamic environment*. 
 
 
 
@@ -79,7 +79,7 @@ Existing restarts.
 
 
 
-If *restart* is not valid, an error of *type* **control-error** is signaled. 
+If <GlossaryTerm styled={true} term={"restart"}><i>restart</i></GlossaryTerm> is not valid, an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"control-error"}><b>control-error</b></DictionaryLink> is signaled. 
 
 
 
@@ -87,7 +87,7 @@ If *restart* is not valid, an error of *type* **control-error** is signaled.
 
 
 
-**find-restart**, **restart-bind**, **restart-case**, **invoke-restart-interactively** 
+<DictionaryLink styled={true} term={"find-restart"}><b>find-restart</b></DictionaryLink>, <DictionaryLink styled={true} term={"restart-bind"}><b>restart-bind</b></DictionaryLink>, <DictionaryLink styled={true} term={"restart-case"}><b>restart-case</b></DictionaryLink>, <DictionaryLink styled={true} term={"invoke-restart-interactively"}><b>invoke-restart-interactively</b></DictionaryLink> 
 
 
 
@@ -95,19 +95,15 @@ If *restart* is not valid, an error of *type* **control-error** is signaled.
 
 
 
-The most common use for **invoke-restart** is in a *handler* . It might be used explicitly, or implicitly through **invoke-restart-interactively** or a *restart function*. 
+The most common use for <DictionaryLink styled={true} term={"invoke-restart"}><b>invoke-restart</b></DictionaryLink> is in a <GlossaryTerm styled={true} term={"handler"}><i>handler</i></GlossaryTerm> . It might be used explicitly, or implicitly through <DictionaryLink styled={true} term={"invoke-restart-interactively"}><b>invoke-restart-interactively</b></DictionaryLink> or a *restart function*. 
 
 
 
-*Restart functions* call **invoke-restart**, not vice versa. That is, *invoke-restart* provides primitive functionality, and *restart functions* are non-essential “syntactic sugar.” 
-
-
+*Restart functions* call <DictionaryLink styled={true} term={"invoke-restart"}><b>invoke-restart</b></DictionaryLink>, not vice versa. That is, *invoke-restart* provides primitive functionality, and *restart functions* are non-essential “syntactic sugar.” 
 
 
 
 
-
- 
 
 
 
@@ -115,7 +111,11 @@ The most common use for **invoke-restart** is in a *handler* . It might be used 
 
 
 
-**invoke-restart-interactively** 
+ 
+
+
+
+<DictionaryLink styled={true} term={"invoke-restart-interactively"}><b>invoke-restart-interactively</b></DictionaryLink> 
 
 
 

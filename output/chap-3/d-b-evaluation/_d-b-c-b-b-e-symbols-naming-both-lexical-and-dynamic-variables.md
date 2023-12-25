@@ -2,11 +2,11 @@
 
 
 
-The same *symbol* can name both a *lexical variable* and a *dynamic variable*, but never in the same *lexical environment*. 
+The same <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> can name both a *lexical variable* and a *dynamic variable*, but never in the same *lexical environment*. 
 
 
 
-In the following example, the *symbol* x is used, at different times, as the *name* of a *lexical variable* and as the *name* of a *dynamic variable*. 
+In the following example, the <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> x is used, at different times, as the <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> of a *lexical variable* and as the <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> of a *dynamic variable*. 
 
 
 

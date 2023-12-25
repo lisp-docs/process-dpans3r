@@ -1,4 +1,4 @@
-**encode-universal-time** *function* 
+**encode-universal-time** <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**encode-universal-time** *second minute hour date month year* 
+<DictionaryLink styled={true} term={"encode-universal-time"}><b>encode-universal-time</b></DictionaryLink> *second minute hour date month year* 
 
 
 
@@ -34,7 +34,7 @@
 
 
 
-**encode-universal-time** converts a time from Decoded Time format to a *universal time*. If *time-zone* is supplied, no adjustment for daylight savings time is performed. 
+<DictionaryLink styled={true} term={"encode-universal-time"}><b>encode-universal-time</b></DictionaryLink> converts a time from Decoded Time format to a *universal time*. If *time-zone* is supplied, no adjustment for daylight savings time is performed. 
 
 
 
@@ -51,7 +51,7 @@
 
 
 
-**decode-universal-time**, **get-decoded-time** 
+<DictionaryLink styled={true} term={"decode-universal-time"}><b>decode-universal-time</b></DictionaryLink>, <DictionaryLink styled={true} term={"get-decoded-time"}><b>get-decoded-time</b></DictionaryLink> 
 
 
 

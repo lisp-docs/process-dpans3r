@@ -1,4 +1,4 @@
-**with-open-file** *macro* 
+**with-open-file** <GlossaryTerm styled={true} term={"macro"}><i>macro</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**with-open-file** (*stream filespec \{options\}*\*) *\{declaration\}*\* *\{form\}*\* 
+<DictionaryLink styled={true} term={"with-open-file"}><b>with-open-file</b></DictionaryLink> (*stream filespec \{options\}*\*) <GlossaryTerm styled={true} term={"declaration"}><i>\{declaration\}</i></GlossaryTerm>\* <GlossaryTerm styled={true} term={"form"}><i>\{form\}</i></GlossaryTerm>\* 
 
 
 
@@ -18,7 +18,7 @@
 
 
 
-*stream* – a variable. 
+<GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm> – a variable. 
 
 
 
@@ -26,19 +26,19 @@
 
 
 
-*options* – *forms*; evaluated. 
+*options* – <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm>; evaluated. 
 
 
 
-*declaration*—a **declare** *expression*; not evaluated. 
+<GlossaryTerm styled={true} term={"declaration"}><i>declaration</i></GlossaryTerm>—a <DictionaryLink styled={true} term={"declare"}><b>declare</b></DictionaryLink> <GlossaryTerm styled={true} term={"expression"}><i>expression</i></GlossaryTerm>; not evaluated. 
 
 
 
-*forms*—an *implicit progn*. 
+<GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm>—an *implicit progn*. 
 
 
 
-*results*—the *values* returned by the *forms*. 
+*results*—the <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> returned by the <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm>. 
 
 
 
@@ -46,27 +46,23 @@
 
 
 
-**with-open-file** uses **open** to create a *file stream* to *file* named by *filespec*. *Filespec* is the name of the file to be opened. *Options* are used as keyword arguments to **open**. 
+<DictionaryLink styled={true} term={"with-open-file"}><b>with-open-file</b></DictionaryLink> uses <DictionaryLink styled={true} term={"open"}><b>open</b></DictionaryLink> to create a *file stream* to <GlossaryTerm styled={true} term={"file"}><i>file</i></GlossaryTerm> named by *filespec*. *Filespec* is the name of the file to be opened. *Options* are used as keyword arguments to <DictionaryLink styled={true} term={"open"}><b>open</b></DictionaryLink>. 
 
 
 
-The *stream object* to which the *stream variable* is *bound* has *dynamic extent*; its *extent* ends when the *form* is exited. 
+The *stream object* to which the *stream variable* is <GlossaryTerm styled={true} term={"bound"}><i>bound</i></GlossaryTerm> has *dynamic extent*; its <GlossaryTerm styled={true} term={"extent"}><i>extent</i></GlossaryTerm> ends when the <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> is exited. 
 
 
 
-**with-open-file** evaluates the *forms* as an *implicit progn* with *stream* bound to the value returned by **open**. 
+<DictionaryLink styled={true} term={"with-open-file"}><b>with-open-file</b></DictionaryLink> evaluates the <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm> as an *implicit progn* with <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm> bound to the value returned by <DictionaryLink styled={true} term={"open"}><b>open</b></DictionaryLink>. 
 
 
 
-When control leaves the body, either normally or abnormally (such as by use of **throw**), the file is automatically closed. If a new output file is being written, and control leaves abnormally, the file is aborted and the file system is left, so far as possible, as if the file had never been opened. 
-
-
+When control leaves the body, either normally or abnormally (such as by use of <DictionaryLink styled={true} term={"throw"}><b>throw</b></DictionaryLink>), the file is automatically closed. If a new output file is being written, and control leaves abnormally, the file is aborted and the file system is left, so far as possible, as if the file had never been opened. 
 
 
 
 
-
- 
 
 
 
@@ -74,15 +70,19 @@ When control leaves the body, either normally or abnormally (such as by use of *
 
 
 
-**with-open-file** 
+ 
 
 
 
-It is possible by the use of :if-exists nil or :if-does-not-exist nil for *stream* to be bound to **nil**. Users of :if-does-not-exist nil should check for a valid *stream*. 
+<DictionaryLink styled={true} term={"with-open-file"}><b>with-open-file</b></DictionaryLink> 
 
 
 
-The consequences are undefined if an attempt is made to *assign* the *stream variable*. The compiler may choose to issue a warning if such an attempt is detected. 
+It is possible by the use of :if-exists nil or :if-does-not-exist nil for <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm> to be bound to <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. Users of :if-does-not-exist nil should check for a valid <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>. 
+
+
+
+The consequences are undefined if an attempt is made to <GlossaryTerm styled={true} term={"assign"}><i>assign</i></GlossaryTerm> the *stream variable*. The compiler may choose to issue a warning if such an attempt is detected. 
 
 
 
@@ -117,7 +117,7 @@ The consequences are undefined if an attempt is made to *assign* the *stream var
 
 
 
-Creates a *stream* to the *file* named by *filename* (upon entry), and closes the *stream* (upon exit). In some *implementations*, the *file* might be locked in some way while it is open. If the *stream* is an *output stream*, a *file* might be created. 
+Creates a <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm> to the <GlossaryTerm styled={true} term={"file"}><i>file</i></GlossaryTerm> named by <GlossaryTerm styled={true} term={"filename"}><i>filename</i></GlossaryTerm> (upon entry), and closes the <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm> (upon exit). In some <GlossaryTerm styled={true} term={"implementation"}><i>implementations</i></GlossaryTerm>, the <GlossaryTerm styled={true} term={"file"}><i>file</i></GlossaryTerm> might be locked in some way while it is open. If the <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm> is an *output stream*, a <GlossaryTerm styled={true} term={"file"}><i>file</i></GlossaryTerm> might be created. 
 
 
 
@@ -133,7 +133,7 @@ The host computer’s file system.
 
 
 
-See the *function* **open**. 
+See the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> <DictionaryLink styled={true} term={"open"}><b>open</b></DictionaryLink>. 
 
 
 
@@ -153,4 +153,4 @@ See the *function* **open**.
 
 
 
-**open**, **close**, **pathname**, **logical-pathname**, Section 19.1.2 (Pathnames as Filenames) 
+<DictionaryLink styled={true} term={"open"}><b>open</b></DictionaryLink>, <DictionaryLink styled={true} term={"close"}><b>close</b></DictionaryLink>, <DictionaryLink styled={true} term={"pathname"}><b>pathname</b></DictionaryLink>, <DictionaryLink styled={true} term={"logical-pathname"}><b>logical-pathname</b></DictionaryLink>, Section 19.1.2 (Pathnames as Filenames) 

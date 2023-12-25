@@ -6,7 +6,7 @@
 
 
 
-**undefined-function**, **cell-error**, **error**, **serious-condition**, **condition**, **t** 
+<DictionaryLink styled={true} term={"undefined-function"}><b>undefined-function</b></DictionaryLink>, <DictionaryLink styled={true} term={"cell-error"}><b>cell-error</b></DictionaryLink>, <DictionaryLink styled={true} term={"error"}><b>error</b></DictionaryLink>, <DictionaryLink styled={true} term={"serious-condition"}><b>serious-condition</b></DictionaryLink>, <DictionaryLink styled={true} term={"condition"}><b>condition</b></DictionaryLink>, <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink> 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-The *type* **undefined-function** consists of *error conditions* that represent attempts to *read* the definition of an *undefined function*. 
+The <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"undefined-function"}><b>undefined-function</b></DictionaryLink> consists of *error conditions* that represent attempts to <GlossaryTerm styled={true} term={"read"}><i>read</i></GlossaryTerm> the definition of an *undefined function*. 
 
 
 
-The name of the cell (see **cell-error**) is the *function name* which was *funbound*. 
+The name of the cell (see <DictionaryLink styled={true} term={"cell-error"}><b>cell-error</b></DictionaryLink>) is the *function name* which was <GlossaryTerm styled={true} term={"funbound"}><i>funbound</i></GlossaryTerm>. 
 
 
 
@@ -26,7 +26,7 @@ The name of the cell (see **cell-error**) is the *function name* which was *funb
 
 
 
-**cell-error-name** 
+<DictionaryLink styled={true} term={"cell-error-name"}><b>cell-error-name</b></DictionaryLink> 
 
 
 

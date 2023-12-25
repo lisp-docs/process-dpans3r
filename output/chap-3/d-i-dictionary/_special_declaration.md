@@ -1,4 +1,4 @@
-**special** *Declaration* 
+**special** <GlossaryTerm styled={true} term={"declaration"}><i>Declaration</i></GlossaryTerm> 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*var*—a *symbol*. 
+*var*—a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>. 
 
 
 
@@ -22,7 +22,7 @@
 
 
 
-*declaration* or *proclamation* 
+<GlossaryTerm styled={true} term={"declaration"}><i>declaration</i></GlossaryTerm> or <GlossaryTerm styled={true} term={"proclamation"}><i>proclamation</i></GlossaryTerm> 
 
 
 
@@ -30,7 +30,7 @@
 
 
 
-*variable* 
+<GlossaryTerm styled={true} term={"variable"}><i>variable</i></GlossaryTerm> 
 
 
 
@@ -38,7 +38,7 @@
 
 
 
-Specifies that all of the *vars* named are dynamic. This specifier a↵ects variable *bindings* and a↵ects references. All variable *bindings* a↵ected are made to be dynamic *bindings*, and a↵ected variable references refer to the current dynamic *binding*. For example: 
+Specifies that all of the *vars* named are dynamic. This specifier a↵ects variable <GlossaryTerm styled={true} term={"binding"}><i>bindings</i></GlossaryTerm> and a↵ects references. All variable <GlossaryTerm styled={true} term={"binding"}><i>bindings</i></GlossaryTerm> a↵ected are made to be dynamic <GlossaryTerm styled={true} term={"binding"}><i>bindings</i></GlossaryTerm>, and a↵ected variable references refer to the current dynamic <GlossaryTerm styled={true} term={"binding"}><i>binding</i></GlossaryTerm>. For example: 
 
 
 
@@ -74,15 +74,15 @@ Specifies that all of the *vars* named are dynamic. This specifier a↵ects vari
 
 
 
-A **special** declaration does not a↵ect inner *bindings* of a *var*; the inner *bindings* implicitly shadow a **special** declaration and must be explicitly re-declared to be **special**. **special** declarations never apply to function *bindings*. 
+A <DictionaryLink styled={true} term={"special"}><b>special</b></DictionaryLink> declaration does not a↵ect inner <GlossaryTerm styled={true} term={"binding"}><i>bindings</i></GlossaryTerm> of a *var*; the inner <GlossaryTerm styled={true} term={"binding"}><i>bindings</i></GlossaryTerm> implicitly shadow a <DictionaryLink styled={true} term={"special"}><b>special</b></DictionaryLink> declaration and must be explicitly re-declared to be <DictionaryLink styled={true} term={"special"}><b>special</b></DictionaryLink>. <DictionaryLink styled={true} term={"special"}><b>special</b></DictionaryLink> declarations never apply to function <GlossaryTerm styled={true} term={"binding"}><i>bindings</i></GlossaryTerm>. 
 
 
 
-**special** declarations can be either *bound declarations*, a↵ecting both a binding and references, or *free declarations*, a↵ecting only references, depending on whether the declaration is attached to a variable binding. 
+<DictionaryLink styled={true} term={"special"}><b>special</b></DictionaryLink> declarations can be either *bound declarations*, a↵ecting both a binding and references, or *free declarations*, a↵ecting only references, depending on whether the declaration is attached to a variable binding. 
 
 
 
-When used in a *proclamation*, a **special** *declaration specifier* applies to all *bindings* as well as to all references of the mentioned variables. For example, after 
+When used in a <GlossaryTerm styled={true} term={"proclamation"}><i>proclamation</i></GlossaryTerm>, a <DictionaryLink styled={true} term={"special"}><b>special</b></DictionaryLink> *declaration specifier* applies to all <GlossaryTerm styled={true} term={"binding"}><i>bindings</i></GlossaryTerm> as well as to all references of the mentioned variables. For example, after 
 
 
 
@@ -102,7 +102,7 @@ Evaluation and
 
 
 
-**special** 
+<DictionaryLink styled={true} term={"special"}><b>special</b></DictionaryLink> 
 
 
 
@@ -177,7 +177,7 @@ In the contorted code above, the outermost and innermost *bindings* of y are dyn
 
 
 
-**defparameter**, **defvar** 
+<DictionaryLink styled={true} term={"defparameter"}><b>defparameter</b></DictionaryLink>, <DictionaryLink styled={true} term={"defvar"}><b>defvar</b></DictionaryLink> 
 
 
 

@@ -1,4 +1,4 @@
-**make-condition** *Function* 
+**make-condition** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**make-condition** *type* &amp;rest *slot-initializations → condition* 
+<DictionaryLink styled={true} term={"make-condition"}><b>make-condition</b></DictionaryLink> <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> &amp;rest *slot-initializations → condition* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*type*—a *type specifier* (for a *subtype* of **condition**). 
+<GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm>—a *type specifier* (for a <GlossaryTerm styled={true} term={"subtype"}><i>subtype</i></GlossaryTerm> of <DictionaryLink styled={true} term={"condition"}><b>condition</b></DictionaryLink>). 
 
 
 
@@ -22,7 +22,7 @@
 
 
 
-*condition*—a *condition*. 
+<GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm>. 
 
 
 
@@ -42,7 +42,7 @@
 
 
 
-Constructs and returns a *condition* of type *type* using *slot-initializations* for the initial values of the slots. The newly created *condition* is returned. 
+Constructs and returns a <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> of type <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> using *slot-initializations* for the initial values of the slots. The newly created <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> is returned. 
 
 
 
@@ -76,7 +76,7 @@ The set of defined *condition types*.
 
 
 
-**define-condition**, Section 9.1 (Condition System Concepts) 
+<DictionaryLink styled={true} term={"define-condition"}><b>define-condition</b></DictionaryLink>, Section 9.1 (Condition System Concepts) 
 
 
 

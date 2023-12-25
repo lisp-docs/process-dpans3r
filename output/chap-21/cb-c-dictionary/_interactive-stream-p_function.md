@@ -1,4 +1,4 @@
-**interactive-stream-p** *Function* 
+**interactive-stream-p** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**interactive-stream-p** *stream → generalized-boolean* 
+<DictionaryLink styled={true} term={"interactive-stream-p"}><b>interactive-stream-p</b></DictionaryLink> *stream → generalized-boolean* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*stream*—a *stream*. 
+<GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>. 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-Returns *true* if *stream* is an *interactive stream*; otherwise, returns *false*. 
+Returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm> is an *interactive stream*; otherwise, returns <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
@@ -47,7 +47,7 @@ Is it safe to proceed? " error)
 
 
 
-Should signal an error of *type* **type-error** if *stream* is not a *stream*. 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm> is not a <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>. 
 
 
 

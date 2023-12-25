@@ -1,4 +1,4 @@
-**coerce** *Function* 
+**coerce** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**coerce** *object result-type → result* 
+<DictionaryLink styled={true} term={"coerce"}><b>coerce</b></DictionaryLink> *object result-type → result* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*object*—an *object*. 
+<GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -22,7 +22,7 @@
 
 
 
-*result*—an *object*, of *type result-type* except in situations described in Section 12.1.5.3 (Rule of Canonical Representation for Complex Rationals). 
+*result*—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>, of *type result-type* except in situations described in Section 12.1.5.3 (Rule of Canonical Representation for Complex Rationals). 
 
 
 
@@ -30,19 +30,15 @@
 
 
 
-*Coerces* the *object* to *type result-type*. 
+<GlossaryTerm styled={true} term={"coerce"}><i>Coerces</i></GlossaryTerm> the <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> to *type result-type*. 
 
 
 
-If *object* is already of *type result-type*, the *object* itself is returned, regardless of whether it would have been possible in general to coerce an *object* of some other *type* to *result-type*. 
+If <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is already of *type result-type*, the <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> itself is returned, regardless of whether it would have been possible in general to coerce an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> of some other <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> to *result-type*. 
 
 
 
-Otherwise, the *object* is *coerced* to *type result-type* according to the following rules: 
-
-
-
-
+Otherwise, the <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is *coerced* to *type result-type* according to the following rules: 
 
 
 
@@ -50,63 +46,67 @@ Otherwise, the *object* is *coerced* to *type result-type* according to the foll
 
 
 
-**coerce** 
 
 
 
-**sequence** 
+
+<DictionaryLink styled={true} term={"coerce"}><b>coerce</b></DictionaryLink> 
 
 
 
-If the *result-type* is a *recognizable subtype* of **list**, and the *object* is a *sequence*, then the *result* is a *list* that has the *same elements* as *object*. 
+<DictionaryLink styled={true} term={"sequence"}><b>sequence</b></DictionaryLink> 
 
 
 
-If the *result-type* is a *recognizable subtype* of **vector**, and the *object* is a *sequence*, then the *result* is a *vector* that has the *same elements* as *object*. If *result-type* is a specialized *type*, the *result* has an *actual array element type* that is the result of *upgrading* the element type part of that *specialized type*. If no element type is specified, the element type defaults to **t**. If the *implementation* cannot determine the element type, an error is signaled. 
+If the *result-type* is a *recognizable subtype* of <DictionaryLink styled={true} term={"list"}><b>list</b></DictionaryLink>, and the <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is a *sequence*, then the *result* is a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> that has the *same elements* as <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
-**character** 
+If the *result-type* is a *recognizable subtype* of <DictionaryLink styled={true} term={"vector"}><b>vector</b></DictionaryLink>, and the <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is a *sequence*, then the *result* is a <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm> that has the *same elements* as <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. If *result-type* is a specialized <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm>, the *result* has an *actual array element type* that is the result of *upgrading* the element type part of that *specialized type*. If no element type is specified, the element type defaults to <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink>. If the <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm> cannot determine the element type, an error is signaled. 
 
 
 
-If the *result-type* is **character** and the *object* is a *character designator* , the *result* is the *character* it denotes. 
+<DictionaryLink styled={true} term={"character"}><b>character</b></DictionaryLink> 
 
 
 
-**complex** 
+If the *result-type* is <DictionaryLink styled={true} term={"character"}><b>character</b></DictionaryLink> and the <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is a *character designator* , the *result* is the <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> it denotes. 
 
 
 
-If the *result-type* is **complex** and the *object* is a *real*, then the *result* is obtained by constructing a *complex* whose real part is the *object* and whose imaginary part is the result of *coercing* an *integer* zero to the *type* of the *object* (using **coerce**). (If the real part is a *rational*, however, then the result must be represented as a *rational* rather than a *complex* ; see Section 12.1.5.3 (Rule of Canonical Representation for Complex Rationals). So, for example, (coerce 3 ’complex) is permissible, but will return 3, which is not a *complex* .) 
+<DictionaryLink styled={true} term={"complex"}><b>complex</b></DictionaryLink> 
 
 
 
-**float** 
+If the *result-type* is <DictionaryLink styled={true} term={"complex"}><b>complex</b></DictionaryLink> and the <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is a *real*, then the *result* is obtained by constructing a <GlossaryTerm styled={true} term={"complex"}><i>complex</i></GlossaryTerm> whose real part is the <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> and whose imaginary part is the result of *coercing* an *integer* zero to the <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> of the <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> (using <DictionaryLink styled={true} term={"coerce"}><b>coerce</b></DictionaryLink>). (If the real part is a <GlossaryTerm styled={true} term={"rational"}><i>rational</i></GlossaryTerm>, however, then the result must be represented as a <GlossaryTerm styled={true} term={"rational"}><i>rational</i></GlossaryTerm> rather than a <GlossaryTerm styled={true} term={"complex"}><i>complex</i></GlossaryTerm> ; see Section 12.1.5.3 (Rule of Canonical Representation for Complex Rationals). So, for example, (coerce 3 ’complex) is permissible, but will return 3, which is not a <GlossaryTerm styled={true} term={"complex"}><i>complex</i></GlossaryTerm> .) 
 
 
 
-If the *result-type* is any of **float**, **short-float**, **single-float**, **double-float**, **long-float**, and the *object* is a *real*, then the *result* is a *float* of *type result-type* which is equal in sign and magnitude to the *object* to whatever degree of representational precision is permitted by that *float* representation. (If the *result-type* is **float** and *object* is not already a *float*, then the *result* is a *single float*.) 
+<DictionaryLink styled={true} term={"float"}><b>float</b></DictionaryLink> 
 
 
 
-**function** 
+If the *result-type* is any of <DictionaryLink styled={true} term={"float"}><b>float</b></DictionaryLink>, <DictionaryLink styled={true} term={"short-float"}><b>short-float</b></DictionaryLink>, <DictionaryLink styled={true} term={"single-float"}><b>single-float</b></DictionaryLink>, <DictionaryLink styled={true} term={"double-float"}><b>double-float</b></DictionaryLink>, <DictionaryLink styled={true} term={"long-float"}><b>long-float</b></DictionaryLink>, and the <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is a *real*, then the *result* is a <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm> of *type result-type* which is equal in sign and magnitude to the <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> to whatever degree of representational precision is permitted by that <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm> representation. (If the *result-type* is <DictionaryLink styled={true} term={"float"}><b>float</b></DictionaryLink> and <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is not already a <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm>, then the *result* is a *single float*.) 
 
 
 
-If the *result-type* is **function**, and *object* is any *function name* that is *fbound* but that is globally defined neither as a *macro name* nor as a *special operator* , then the *result* is the *functional value* of *object*. 
+<DictionaryLink styled={true} term={"function"}><b>function</b></DictionaryLink> 
 
 
 
-If the *result-type* is **function**, and *object* is a *lambda expression*, then the *result* is a *closure* of *object* in the *null lexical environment*. 
+If the *result-type* is <DictionaryLink styled={true} term={"function"}><b>function</b></DictionaryLink>, and <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is any *function name* that is <GlossaryTerm styled={true} term={"fbound"}><i>fbound</i></GlossaryTerm> but that is globally defined neither as a *macro name* nor as a *special operator* , then the *result* is the *functional value* of <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
-**t** 
+If the *result-type* is <DictionaryLink styled={true} term={"function"}><b>function</b></DictionaryLink>, and <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is a *lambda expression*, then the *result* is a <GlossaryTerm styled={true} term={"closure"}><i>closure</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> in the *null lexical environment*. 
 
 
 
-Any *object* can be *coerced* to an *object* of *type* **t**. In this case, the *object* is simply returned. **Examples:**
+<DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink> 
+
+
+
+Any <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> can be *coerced* to an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink>. In this case, the <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is simply returned. **Examples:**
 ```lisp
 
 (coerce ’(a b c) ’vector) *→* #(A B C)  
@@ -133,19 +133,19 @@ All the following *forms* should signal an error:
 
 
 
-If a coercion is not possible, an error of *type* **type-error** is signaled. 
+If a coercion is not possible, an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> is signaled. 
 
 
 
-(coerce x ’nil) always signals an error of *type* **type-error**. 
+(coerce x ’nil) always signals an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink>. 
 
 
 
-An error of *type* **error** is signaled if the *result-type* is **function** but *object* is a *symbol* that is not *fbound* or if the *symbol* names a *macro* or a *special operator* . 
+An error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"error"}><b>error</b></DictionaryLink> is signaled if the *result-type* is <DictionaryLink styled={true} term={"function"}><b>function</b></DictionaryLink> but <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> that is not <GlossaryTerm styled={true} term={"fbound"}><i>fbound</i></GlossaryTerm> or if the <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> names a <GlossaryTerm styled={true} term={"macro"}><i>macro</i></GlossaryTerm> or a *special operator* . 
 
 
 
-An error of *type* **type-error** should be signaled if *result-type* specifies the number of elements and *object* is of a different length. 
+An error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> should be signaled if *result-type* specifies the number of elements and <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is of a different length. 
 
 
 
@@ -153,7 +153,7 @@ An error of *type* **type-error** should be signaled if *result-type* specifies 
 
 
 
-**rational**, **floor**, **char-code**, **char-int** 
+<DictionaryLink styled={true} term={"rational"}><b>rational</b></DictionaryLink>, <DictionaryLink styled={true} term={"floor"}><b>floor</b></DictionaryLink>, <DictionaryLink styled={true} term={"char-code"}><b>char-code</b></DictionaryLink>, <DictionaryLink styled={true} term={"char-int"}><b>char-int</b></DictionaryLink> 
 
 
 
@@ -161,7 +161,7 @@ An error of *type* **type-error** should be signaled if *result-type* specifies 
 
 
 
-Coercions from *floats* to *rationals* and from *ratios* to *integers* are not provided because of rounding problems. 
+Coercions from <GlossaryTerm styled={true} term={"float"}><i>floats</i></GlossaryTerm> to <GlossaryTerm styled={true} term={"rational"}><i>rationals</i></GlossaryTerm> and from <GlossaryTerm styled={true} term={"ratio"}><i>ratios</i></GlossaryTerm> to *integers* are not provided because of rounding problems. 
 
 
 
@@ -173,7 +173,7 @@ Coercions from *floats* to *rationals* and from *ratios* to *integers* are not p
 
 
 
-**deftype** 
+<DictionaryLink styled={true} term={"deftype"}><b>deftype</b></DictionaryLink> 
 
 
 

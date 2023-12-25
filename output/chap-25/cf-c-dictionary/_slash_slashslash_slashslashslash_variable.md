@@ -1,4 +1,4 @@
-**/, //, ///** *Variable* 
+**/, //, ///** <GlossaryTerm styled={true} term={"variable"}><i>Variable</i></GlossaryTerm> 
 
 
 
@@ -14,7 +14,7 @@ a *proper list*.
 
 
 
-*implementation-dependent*. 
+<GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm>. 
 
 
 
@@ -22,15 +22,15 @@ a *proper list*.
 
 
 
-The *variables* **/**, **//**, and **///** are maintained by the *Lisp read-eval-print loop* to save the values of results that were printed at the end of the loop. 
+The <GlossaryTerm styled={true} term={"variable"}><i>variables</i></GlossaryTerm> <DictionaryLink styled={true} term={"/"}><b>/</b></DictionaryLink>, <DictionaryLink styled={true} term={"//"}><b>//</b></DictionaryLink>, and <DictionaryLink styled={true} term={"///"}><b>///</b></DictionaryLink> are maintained by the *Lisp read-eval-print loop* to save the values of results that were printed at the end of the loop. 
 
 
 
-The *value* of **/** is a *list* of the most recent *values* that were printed, the *value* of **//** is the previous value of **/**, and the *value* of **///** is the previous value of **//**. 
+The <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of <DictionaryLink styled={true} term={"/"}><b>/</b></DictionaryLink> is a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of the most recent <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> that were printed, the <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of <DictionaryLink styled={true} term={"//"}><b>//</b></DictionaryLink> is the previous value of <DictionaryLink styled={true} term={"/"}><b>/</b></DictionaryLink>, and the <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of <DictionaryLink styled={true} term={"///"}><b>///</b></DictionaryLink> is the previous value of <DictionaryLink styled={true} term={"//"}><b>//</b></DictionaryLink>. 
 
 
 
-The *values* of **/**, **//**, and **///** are updated immediately prior to printing the *return value* of a top-level *form* by the *Lisp read-eval-print loop*. If the *evaluation* of such a *form* is aborted prior to its normal return, the values of **/**, **//**, and **///** are not updated. 
+The <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> of <DictionaryLink styled={true} term={"/"}><b>/</b></DictionaryLink>, <DictionaryLink styled={true} term={"//"}><b>//</b></DictionaryLink>, and <DictionaryLink styled={true} term={"///"}><b>///</b></DictionaryLink> are updated immediately prior to printing the *return value* of a top-level <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> by the *Lisp read-eval-print loop*. If the <GlossaryTerm styled={true} term={"evaluation"}><i>evaluation</i></GlossaryTerm> of such a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> is aborted prior to its normal return, the values of <DictionaryLink styled={true} term={"/"}><b>/</b></DictionaryLink>, <DictionaryLink styled={true} term={"//"}><b>//</b></DictionaryLink>, and <DictionaryLink styled={true} term={"///"}><b>///</b></DictionaryLink> are not updated. 
 
 
 
@@ -53,7 +53,7 @@ The *values* of **/**, **//**, and **///** are updated immediately prior to prin
 
 
 
-**-** (*variable*), **+** (*variable*), **\*** (*variable*), Section 25.1.1 (Top level loop) 
+<DictionaryLink styled={true} term={"-"}><b>-</b></DictionaryLink> (<GlossaryTerm styled={true} term={"variable"}><i>variable</i></GlossaryTerm>), <DictionaryLink styled={true} term={"+"}><b>+</b></DictionaryLink> (<GlossaryTerm styled={true} term={"variable"}><i>variable</i></GlossaryTerm>), **\*** (<GlossaryTerm styled={true} term={"variable"}><i>variable</i></GlossaryTerm>), Section 25.1.1 (Top level loop) 
 
 
 
@@ -89,7 +89,7 @@ The *values* of **/**, **//**, and **///** are updated immediately prior to prin
 
 
 
-*description*—a *string* or **nil**. 
+*description*—a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -101,15 +101,15 @@ The *values* of **/**, **//**, and **///** are updated immediately prior to prin
 
 
 
-**lisp-implementation-type** returns a *string* that identifies the generic name of the particular Common Lisp implementation. 
+**lisp-implementation-type** returns a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> that identifies the generic name of the particular Common Lisp implementation. 
 
 
 
-**lisp-implementation-version** returns a *string* that identifies the version of the particular Common Lisp implementation. 
+**lisp-implementation-version** returns a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> that identifies the version of the particular Common Lisp implementation. 
 
 
 
-If no appropriate and relevant result can be produced, **nil** is returned instead of a *string*. **Examples:**
+If no appropriate and relevant result can be produced, <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> is returned instead of a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>. **Examples:**
 ```lisp
  
 (lisp-implementation-type) 
@@ -150,7 +150,7 @@ If no appropriate and relevant result can be produced, **nil** is returned inste
 
 
 
-*description*—a *string* or **nil**. 
+*description*—a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -158,7 +158,7 @@ If no appropriate and relevant result can be produced, **nil** is returned inste
 
 
 
-**short-site-name** and **long-site-name** return a *string* that identifies the physical location of the computer hardware, or **nil** if no appropriate *description* can be produced. 
+**short-site-name** and **long-site-name** return a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> that identifies the physical location of the computer hardware, or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> if no appropriate *description* can be produced. 
 
 
 

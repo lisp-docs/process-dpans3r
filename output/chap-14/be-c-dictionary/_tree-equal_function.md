@@ -1,4 +1,4 @@
-**tree-equal** *Function* 
+**tree-equal** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**tree-equal** *tree-1 tree-2* &amp;key *test test-not → generalized-boolean* 
+<DictionaryLink styled={true} term={"tree-equal"}><b>tree-equal</b></DictionaryLink> *tree-1 tree-2* &amp;key *test test-not → generalized-boolean* 
 
 
 
@@ -14,15 +14,15 @@
 
 
 
-*tree-1*—a *tree*. 
+*tree-1*—a <GlossaryTerm styled={true} term={"tree"}><i>tree</i></GlossaryTerm>. 
 
 
 
-*tree-2*—a *tree*. 
+*tree-2*—a <GlossaryTerm styled={true} term={"tree"}><i>tree</i></GlossaryTerm>. 
 
 
 
-*test*—a *designator* for a *function* of two *arguments* that returns a *generalized boolean*. *test-not*—a *designator* for a *function* of two *arguments* that returns a *generalized boolean*. *generalized-boolean*—a *generalized boolean*. 
+*test*—a <GlossaryTerm styled={true} term={"designator"}><i>designator</i></GlossaryTerm> for a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> of two <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm> that returns a *generalized boolean*. *test-not<GlossaryTerm styled={true} term={"t"}><i>—a </i></GlossaryTerm>designator* for a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> of two <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm> that returns a *generalized boolean*. *generalized-boolean*—a *generalized boolean*. 
 
 
 
@@ -30,15 +30,15 @@
 
 
 
-**tree-equal** tests whether two trees are of the same shape and have the same leaves. **tree-equal** returns *true* if *tree-1* and *tree-2* are both *atoms* and *satisfy the test*, or if they are both *conses* and the *car* of *tree-1* is **tree-equal** to the *car* of *tree-2* and the *cdr* of *tree-1* is **tree-equal** to the *cdr* of *tree-2*. Otherwise, **tree-equal** returns *false*. 
+<DictionaryLink styled={true} term={"tree-equal"}><b>tree-equal</b></DictionaryLink> tests whether two trees are of the same shape and have the same leaves. <DictionaryLink styled={true} term={"tree-equal"}><b>tree-equal</b></DictionaryLink> returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if *tree-1* and *tree-2* are both <GlossaryTerm styled={true} term={"atom"}><i>atoms</i></GlossaryTerm> and *satisfy the test*, or if they are both *conses* and the <GlossaryTerm styled={true} term={"car"}><i>car</i></GlossaryTerm> of *tree-1* is <DictionaryLink styled={true} term={"tree-equal"}><b>tree-equal</b></DictionaryLink> to the <GlossaryTerm styled={true} term={"car"}><i>car</i></GlossaryTerm> of *tree-2* and the <GlossaryTerm styled={true} term={"cdr"}><i>cdr</i></GlossaryTerm> of *tree-1* is <DictionaryLink styled={true} term={"tree-equal"}><b>tree-equal</b></DictionaryLink> to the <GlossaryTerm styled={true} term={"cdr"}><i>cdr</i></GlossaryTerm> of *tree-2*. Otherwise, <DictionaryLink styled={true} term={"tree-equal"}><b>tree-equal</b></DictionaryLink> returns <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
-**tree-equal** recursively compares *conses* but not any other *objects* that have components. 
+<DictionaryLink styled={true} term={"tree-equal"}><b>tree-equal</b></DictionaryLink> recursively compares *conses* but not any other <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm> that have components. 
 
 
 
-The first argument to the :test or :test-not function is *tree-1* or a *car* or *cdr* of *tree-1*; the second argument is *tree-2* or a *car* or *cdr* of *tree-2*. 
+The first argument to the :test or :test-not function is *tree-1* or a <GlossaryTerm styled={true} term={"car"}><i>car</i></GlossaryTerm> or <GlossaryTerm styled={true} term={"cdr"}><i>cdr</i></GlossaryTerm> of *tree-1*; the second argument is *tree-2* or a <GlossaryTerm styled={true} term={"car"}><i>car</i></GlossaryTerm> or <GlossaryTerm styled={true} term={"cdr"}><i>cdr</i></GlossaryTerm> of *tree-2*. 
 
 
 
@@ -67,7 +67,7 @@ The consequences are undefined if both *tree-1* and *tree-2* are circular.
 
 
 
-**equal**, Section 3.6 (Traversal Rules and Side Effects) 
+<DictionaryLink styled={true} term={"equal"}><b>equal</b></DictionaryLink>, Section 3.6 (Traversal Rules and Side Effects) 
 
 
 

@@ -1,4 +1,4 @@
-**with-compilation-unit** *Macro* 
+**with-compilation-unit** <GlossaryTerm styled={true} term={"macro"}><i>Macro</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**with-compilation-unit** ([[ *↓option* ]]) *\{form\}*\* *→ \{result\}*\* 
+<DictionaryLink styled={true} term={"with-compilation-unit"}><b>with-compilation-unit</b></DictionaryLink> ([[ *↓option* ]]) <GlossaryTerm styled={true} term={"form"}><i>\{form\}</i></GlossaryTerm>\* *→ \{result\}*\* 
 
 
 
@@ -18,15 +18,15 @@
 
 
 
-*override*—a *generalized boolean*; evaluated. The default is **nil**. 
+*override*—a *generalized boolean*; evaluated. The default is <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
-*forms*—an *implicit progn*. 
+<GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm>—an *implicit progn*. 
 
 
 
-*results*—the *values* returned by the *forms*. 
+*results*—the <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> returned by the <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm>. 
 
 
 
@@ -46,19 +46,19 @@
 
 
 
-Executes *forms* from left to right. Within the *dynamic environment* of **with-compilation-unit**, actions deferred by the compiler until the end of compilation will be deferred until the end of the outermost call to **with-compilation-unit**. 
+Executes <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm> from left to right. Within the *dynamic environment* of <DictionaryLink styled={true} term={"with-compilation-unit"}><b>with-compilation-unit</b></DictionaryLink>, actions deferred by the compiler until the end of compilation will be deferred until the end of the outermost call to <DictionaryLink styled={true} term={"with-compilation-unit"}><b>with-compilation-unit</b></DictionaryLink>. 
 
 
 
-The set of *options* permitted may be extended by the implementation, but the only *standardized* keyword is :override. 
+The set of *options* permitted may be extended by the implementation, but the only <GlossaryTerm styled={true} term={"standardized"}><i>standardized</i></GlossaryTerm> keyword is :override. 
 
 
 
-If nested dynamically only the outer call to **with-compilation-unit** has any effect unless the value associated with :override is *true*, in which case warnings are deferred only to the end of the innermost call for which *override* is *true*. 
+If nested dynamically only the outer call to <DictionaryLink styled={true} term={"with-compilation-unit"}><b>with-compilation-unit</b></DictionaryLink> has any effect unless the value associated with :override is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>, in which case warnings are deferred only to the end of the innermost call for which *override* is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>. 
 
 
 
-The function **compile-file** provides the effect of 
+The function <DictionaryLink styled={true} term={"compile-file"}><b>compile-file</b></DictionaryLink> provides the effect of 
 
 
 
@@ -66,11 +66,11 @@ The function **compile-file** provides the effect of
 
 
 
-around its *code*. 
+around its <GlossaryTerm styled={true} term={"code"}><i>code</i></GlossaryTerm>. 
 
 
 
-Any *implementation-dependent* extensions can only be provided as the result of an explicit programmer request by use of an *implementation-dependent* keyword. *Implementations* are forbidden from attaching additional meaning to a use of this macro which involves either no keywords or just the keyword :override. 
+Any <GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm> extensions can only be provided as the result of an explicit programmer request by use of an <GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm> keyword. <GlossaryTerm styled={true} term={"implementation"}><i>Implementations</i></GlossaryTerm> are forbidden from attaching additional meaning to a use of this macro which involves either no keywords or just the keyword :override. 
 
 
 
@@ -89,7 +89,7 @@ Note however that if the implementation does not normally defer any warnings, us
 
 
 
-**compile**, **compile-file** 
+<DictionaryLink styled={true} term={"compile"}><b>compile</b></DictionaryLink>, <DictionaryLink styled={true} term={"compile-file"}><b>compile-file</b></DictionaryLink> 
 
 
 
@@ -105,7 +105,7 @@ System
 
 
 
-*∗***features***∗* 
+*∗<DictionaryLink styled={true} term={"features"}><b><GlossaryTerm styled={true} term={"feature"}><i>features</i></GlossaryTerm></b></DictionaryLink>∗* 
 
 
 

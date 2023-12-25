@@ -1,4 +1,4 @@
-*∗***print-case***∗ Variable* 
+*∗<DictionaryLink styled={true} term={"print-case"}><b>*print-case*</b></DictionaryLink>∗ Variable* 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-One of the *symbols* :upcase, :downcase, or :capitalize. 
+One of the <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> :upcase, :downcase, or :capitalize. 
 
 
 
@@ -14,7 +14,7 @@ One of the *symbols* :upcase, :downcase, or :capitalize.
 
 
 
-The *symbol* :upcase. 
+The <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> :upcase. 
 
 
 
@@ -22,11 +22,11 @@ The *symbol* :upcase.
 
 
 
-The *value* of **\*print-case\*** controls the case (upper, lower, or mixed) in which to print any uppercase characters in the names of *symbols* when vertical-bar syntax is not used. 
+The <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of <DictionaryLink styled={true} term={"print-case"}><b>\*print-case\*</b></DictionaryLink> controls the case (upper, lower, or mixed) in which to print any uppercase characters in the names of <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> when vertical-bar syntax is not used. 
 
 
 
-**\*print-case\*** has an effect at all times when the *value* of **\*print-escape\*** is *false*. **\*print-case\*** also has an effect when the *value* of **\*print-escape\*** is *true* unless inside an escape context (*i.e.*, unless between *vertical-bars* or after a *slash*). 
+<DictionaryLink styled={true} term={"print-case"}><b>\*print-case\*</b></DictionaryLink> has an effect at all times when the <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of <DictionaryLink styled={true} term={"print-escape"}><b>\*print-escape\*</b></DictionaryLink> is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. <DictionaryLink styled={true} term={"print-case"}><b>\*print-case\*</b></DictionaryLink> also has an effect when the <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of <DictionaryLink styled={true} term={"print-escape"}><b>\*print-escape\*</b></DictionaryLink> is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> unless inside an escape context (*i.e.*, unless between <GlossaryTerm styled={true} term={"vertical-bar"}><i>vertical-bars</i></GlossaryTerm> or after a <GlossaryTerm styled={true} term={"slash"}><i>slash</i></GlossaryTerm>). 
 
 
 
@@ -61,7 +61,7 @@ The *value* of **\*print-case\*** controls the case (upper, lower, or mixed) in 
 
 
 
-**write** 
+<DictionaryLink styled={true} term={"write"}><b>write</b></DictionaryLink> 
 
 
 
@@ -69,11 +69,11 @@ The *value* of **\*print-case\*** controls the case (upper, lower, or mixed) in 
 
 
 
-**read** normally converts lowercase characters appearing in *symbols* to corresponding uppercase characters, so that internally print names normally contain only uppercase characters. 
+<DictionaryLink styled={true} term={"read"}><b>read</b></DictionaryLink> normally converts lowercase characters appearing in <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> to corresponding uppercase characters, so that internally print names normally contain only uppercase characters. 
 
 
 
-If **\*print-escape\*** is *true*, lowercase characters in the *name* of a *symbol* are always printed in lowercase, and are preceded by a single escape character or enclosed by multiple escape characters; uppercase characters in the *name* of a *symbol* are printed in upper case, in lower case, or in mixed case so as to capitalize words, according to the value of **\*print-case\***. The convention for what constitutes a “word” is the same as for **string-capitalize**. 
+If <DictionaryLink styled={true} term={"print-escape"}><b>\*print-escape\*</b></DictionaryLink> is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>, lowercase characters in the <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> of a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> are always printed in lowercase, and are preceded by a single escape character or enclosed by multiple escape characters; uppercase characters in the <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> of a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> are printed in upper case, in lower case, or in mixed case so as to capitalize words, according to the value of <DictionaryLink styled={true} term={"print-case"}><b>\*print-case\*</b></DictionaryLink>. The convention for what constitutes a “word” is the same as for **string-capitalize**. 
 
 
 

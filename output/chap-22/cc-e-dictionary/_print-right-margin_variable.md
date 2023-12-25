@@ -1,4 +1,4 @@
-*∗***print-right-margin***∗ Variable* 
+*∗<DictionaryLink styled={true} term={"print-right-margin"}><b>*print-right-margin*</b></DictionaryLink>∗ Variable* 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-a non-negative *integer* , or **nil**. 
+a non-negative *integer* , or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -14,7 +14,7 @@ a non-negative *integer* , or **nil**.
 
 
 
-**nil**. 
+<DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 

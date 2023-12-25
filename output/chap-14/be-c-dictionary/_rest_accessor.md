@@ -1,4 +1,4 @@
-**rest** *Accessor* 
+**rest** <GlossaryTerm styled={true} term={"accessor"}><i>Accessor</i></GlossaryTerm> 
 
 
 
@@ -6,11 +6,11 @@
 
 
 
-**rest** *list → tail* 
+<DictionaryLink styled={true} term={"rest"}><b>rest</b></DictionaryLink> *list → tail* 
 
 
 
-**(setf (rest** *list***)** *new-tail***)** 
+**(setf (rest** *list<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> *new-tail***)** 
 
 
 
@@ -18,11 +18,11 @@
 
 
 
-*list*—a *list*, which might be a *dotted list* or a *circular list*. 
+<GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>, which might be a *dotted list* or a *circular list*. 
 
 
 
-*tail*—an *object*. 
+<GlossaryTerm styled={true} term={"tail"}><i>tail</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -30,15 +30,15 @@
 
 
 
-**rest** performs the same operation as **cdr**, but mnemonically complements **first**. Specifically, 
+<DictionaryLink styled={true} term={"rest"}><b>rest</b></DictionaryLink> performs the same operation as <DictionaryLink styled={true} term={"cdr"}><b>cdr</b></DictionaryLink>, but mnemonically complements <DictionaryLink styled={true} term={"first"}><b>first</b></DictionaryLink>. Specifically, 
 
 
 
-(rest *list*) *≡* (cdr *list*) 
+(rest <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>) *≡* (cdr <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>) 
 
 
 
-(setf (rest *list*) *new-tail*) *≡* (setf (cdr *list*) *new-tail*) 
+(setf (rest <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>) *new-tail*) *≡* (setf (cdr <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>) *new-tail*) 
 
 
 
@@ -60,7 +60,7 @@
 
 
 
-**cdr**, **nthcdr** 
+<DictionaryLink styled={true} term={"cdr"}><b>cdr</b></DictionaryLink>, <DictionaryLink styled={true} term={"nthcdr"}><b>nthcdr</b></DictionaryLink> 
 
 
 
@@ -68,7 +68,7 @@
 
 
 
-**rest** is often preferred stylistically over **cdr** when the argument is to being subjectively viewed as a *list* rather than as a *cons*. 
+<DictionaryLink styled={true} term={"rest"}><b>rest</b></DictionaryLink> is often preferred stylistically over <DictionaryLink styled={true} term={"cdr"}><b>cdr</b></DictionaryLink> when the argument is to being subjectively viewed as a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> rather than as a <GlossaryTerm styled={true} term={"cons"}><i>cons</i></GlossaryTerm>. 
 
 
 

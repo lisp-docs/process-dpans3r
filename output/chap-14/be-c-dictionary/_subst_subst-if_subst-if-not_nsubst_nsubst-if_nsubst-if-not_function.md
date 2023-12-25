@@ -1,4 +1,4 @@
-**subst, subst-if, subst-if-not, nsubst, nsubst-if, nsubst-if-not** *Function* 
+**subst, subst-if, subst-if-not, nsubst, nsubst-if, nsubst-if-not** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,27 +6,27 @@
 
 
 
-**subst** *new old tree* &amp;key *key test test-not → new-tree* 
+<DictionaryLink styled={true} term={"subst"}><b>subst</b></DictionaryLink> *new old tree* &amp;key *key test test-not → new-tree* 
 
 
 
-**subst-if** *new predicate tree* &amp;key *key → new-tree* 
+<DictionaryLink styled={true} term={"subst-if"}><b>subst-if</b></DictionaryLink> *new predicate tree* &amp;key *key → new-tree* 
 
 
 
-**subst-if-not** *new predicate tree* &amp;key *key → new-tree* 
+<DictionaryLink styled={true} term={"subst-if-not"}><b>subst-if-not</b></DictionaryLink> *new predicate tree* &amp;key *key → new-tree* 
 
 
 
-**nsubst** *new old tree* &amp;key *key test test-not → new-tree* 
+<DictionaryLink styled={true} term={"nsubst"}><b>nsubst</b></DictionaryLink> *new old tree* &amp;key *key test test-not → new-tree* 
 
 
 
-**nsubst-if** *new predicate tree* &amp;key *key → new-tree* 
+<DictionaryLink styled={true} term={"nsubst-if"}><b>nsubst-if</b></DictionaryLink> *new predicate tree* &amp;key *key → new-tree* 
 
 
 
-**nsubst-if-not** *new predicate tree* &amp;key *key → new-tree* 
+<DictionaryLink styled={true} term={"nsubst-if-not"}><b>nsubst-if-not</b></DictionaryLink> *new predicate tree* &amp;key *key → new-tree* 
 
 
 
@@ -34,11 +34,11 @@
 
 
 
-*new*—an *object*. 
+*new*—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
-*old*—an *object*. 
+*old*—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -58,19 +58,19 @@
 
 
 
-*predicate*—a *symbol* that names a *function*, or a *function* of one argument that returns a *generalized boolean* value. 
+<GlossaryTerm styled={true} term={"predicate"}><i>predicate</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> that names a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>, or a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> of one argument that returns a *generalized boolean* value. 
 
 
 
-*tree*—a *tree*. 
+<GlossaryTerm styled={true} term={"tree"}><i>tree</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"tree"}><i>tree</i></GlossaryTerm>. 
 
 
 
-*test*—a *designator* for a *function* of two *arguments* that returns a *generalized boolean*. *test-not*—a *designator* for a *function* of two *arguments* that returns a *generalized boolean*. *key*—a *designator* for a *function* of one argument, or **nil**. 
+*test*—a <GlossaryTerm styled={true} term={"designator"}><i>designator</i></GlossaryTerm> for a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> of two <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm> that returns a *generalized boolean*. *test-not<GlossaryTerm styled={true} term={"t"}><i>—a </i></GlossaryTerm>designator* for a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> of two <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm> that returns a *generalized boolean*. *key*—a *designator* for a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> of one argument, or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
-*new-tree*—a *tree*. 
+*new-tree*—a <GlossaryTerm styled={true} term={"tree"}><i>tree</i></GlossaryTerm>. 
 
 
 
@@ -78,27 +78,27 @@
 
 
 
-**subst**, **subst-if**, and **subst-if-not** perform substitution operations on *tree*. Each function searches *tree* for occurrences of a particular *old* item of an element or subexpression that *satisfies the test*. 
+<DictionaryLink styled={true} term={"subst"}><b>subst</b></DictionaryLink>, <DictionaryLink styled={true} term={"subst-if"}><b>subst-if</b></DictionaryLink>, and <DictionaryLink styled={true} term={"subst-if-not"}><b>subst-if-not</b></DictionaryLink> perform substitution operations on <GlossaryTerm styled={true} term={"tree"}><i>tree</i></GlossaryTerm>. Each function searches <GlossaryTerm styled={true} term={"tree"}><i>tree</i></GlossaryTerm> for occurrences of a particular *old* item of an element or subexpression that *satisfies the test*. 
 
 
 
-**nsubst**, **nsubst-if**, and **nsubst-if-not** are like **subst**, **subst-if**, and **subst-if-not** respectively, except that the original *tree* is modified. 
+<DictionaryLink styled={true} term={"nsubst"}><b>nsubst</b></DictionaryLink>, <DictionaryLink styled={true} term={"nsubst-if"}><b>nsubst-if</b></DictionaryLink>, and <DictionaryLink styled={true} term={"nsubst-if-not"}><b>nsubst-if-not</b></DictionaryLink> are like <DictionaryLink styled={true} term={"subst"}><b>subst</b></DictionaryLink>, <DictionaryLink styled={true} term={"subst-if"}><b>subst-if</b></DictionaryLink>, and <DictionaryLink styled={true} term={"subst-if-not"}><b>subst-if-not</b></DictionaryLink> respectively, except that the original <GlossaryTerm styled={true} term={"tree"}><i>tree</i></GlossaryTerm> is modified. 
 
 
 
-**subst** makes a copy of *tree*, substituting *new* for every subtree or leaf of *tree* (whether the subtree or leaf is a *car* or a *cdr* of its parent) such that *old* and the subtree or leaf *satisfy the test*. 
+<DictionaryLink styled={true} term={"subst"}><b>subst</b></DictionaryLink> makes a copy of <GlossaryTerm styled={true} term={"tree"}><i>tree</i></GlossaryTerm>, substituting *new* for every subtree or leaf of <GlossaryTerm styled={true} term={"tree"}><i>tree</i></GlossaryTerm> (whether the subtree or leaf is a <GlossaryTerm styled={true} term={"car"}><i>car</i></GlossaryTerm> or a <GlossaryTerm styled={true} term={"cdr"}><i>cdr</i></GlossaryTerm> of its parent) such that *old* and the subtree or leaf *satisfy the test*. 
 
 
 
-**nsubst** is a destructive version of **subst**. The list structure of *tree* is altered by destructively replacing with *new* each leaf of the *tree* such that *old* and the leaf *satisfy the test*. 
+<DictionaryLink styled={true} term={"nsubst"}><b>nsubst</b></DictionaryLink> is a destructive version of <DictionaryLink styled={true} term={"subst"}><b>subst</b></DictionaryLink>. The list structure of <GlossaryTerm styled={true} term={"tree"}><i>tree</i></GlossaryTerm> is altered by destructively replacing with *new* each leaf of the <GlossaryTerm styled={true} term={"tree"}><i>tree</i></GlossaryTerm> such that *old* and the leaf *satisfy the test*. 
 
 
 
-For **subst**, **subst-if**, and **subst-if-not**, if the functions succeed, a new copy of the tree is returned in which each occurrence of such an element is replaced by the *new* element or subexpression. If no changes are made, the original *tree* may be returned. The original *tree* is left unchanged, but the result tree may share storage with it. 
+For <DictionaryLink styled={true} term={"subst"}><b>subst</b></DictionaryLink>, <DictionaryLink styled={true} term={"subst-if"}><b>subst-if</b></DictionaryLink>, and <DictionaryLink styled={true} term={"subst-if-not"}><b>subst-if-not</b></DictionaryLink>, if the functions succeed, a new copy of the tree is returned in which each occurrence of such an element is replaced by the *new* element or subexpression. If no changes are made, the original <GlossaryTerm styled={true} term={"tree"}><i>tree</i></GlossaryTerm> may be returned. The original <GlossaryTerm styled={true} term={"tree"}><i>tree</i></GlossaryTerm> is left unchanged, but the result tree may share storage with it. 
 
 
 
-For **nsubst**, **nsubst-if**, and **nsubst-if-not** the original *tree* is modified and returned as the function result, but the result may not be **eq** to *tree*. 
+For <DictionaryLink styled={true} term={"nsubst"}><b>nsubst</b></DictionaryLink>, <DictionaryLink styled={true} term={"nsubst-if"}><b>nsubst-if</b></DictionaryLink>, and <DictionaryLink styled={true} term={"nsubst-if-not"}><b>nsubst-if-not</b></DictionaryLink> the original <GlossaryTerm styled={true} term={"tree"}><i>tree</i></GlossaryTerm> is modified and returned as the function result, but the result may not be <DictionaryLink styled={true} term={"eq"}><b>eq</b></DictionaryLink> to <GlossaryTerm styled={true} term={"tree"}><i>tree</i></GlossaryTerm>. 
 
 
 
@@ -134,7 +134,7 @@ tree1 *→* (1 (1 2) X X)
 
 
 
-**nsubst**, **nsubst-if**, and **nsubst-if-not** might alter the *tree structure* of *tree*. 
+<DictionaryLink styled={true} term={"nsubst"}><b>nsubst</b></DictionaryLink>, <DictionaryLink styled={true} term={"nsubst-if"}><b>nsubst-if</b></DictionaryLink>, and <DictionaryLink styled={true} term={"nsubst-if-not"}><b>nsubst-if-not</b></DictionaryLink> might alter the *tree structure* of <GlossaryTerm styled={true} term={"tree"}><i>tree</i></GlossaryTerm>. 
 
 
 
@@ -154,11 +154,11 @@ The :test-not parameter is deprecated.
 
 
 
-The functions **subst-if-not** and **nsubst-if-not** are deprecated. 
+The functions <DictionaryLink styled={true} term={"subst-if-not"}><b>subst-if-not</b></DictionaryLink> and <DictionaryLink styled={true} term={"nsubst-if-not"}><b>nsubst-if-not</b></DictionaryLink> are deprecated. 
 
 
 
-One possible definition of **subst**: 
+One possible definition of <DictionaryLink styled={true} term={"subst"}><b>subst</b></DictionaryLink>: 
 
 
 
@@ -218,7 +218,7 @@ tree
 
 
 
-**tree-equal** 
+<DictionaryLink styled={true} term={"tree-equal"}><b>tree-equal</b></DictionaryLink> 
 
 
 

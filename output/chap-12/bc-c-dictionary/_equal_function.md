@@ -1,4 +1,4 @@
-**=** *Function* 
+**=** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,27 +6,27 @@
 
 
 
-**=** &amp;rest *numbers*<sup>+</sup> *→ generalized-boolean* 
+<DictionaryLink styled={true} term={"="}><b>=</b></DictionaryLink> &amp;rest <GlossaryTerm styled={true} term={"number"}><i>numbers</i></GlossaryTerm><sup>+</sup> *→ generalized-boolean* 
 
 
 
-**/=** &amp;rest *numbers*<sup>+</sup> *→ generalized-boolean* 
+<DictionaryLink styled={true} term={"/="}><b>/=</b></DictionaryLink> &amp;rest <GlossaryTerm styled={true} term={"number"}><i>numbers</i></GlossaryTerm><sup>+</sup> *→ generalized-boolean* 
 
 
 
-&lt; &amp;rest *numbers*<sup>+</sup> *→ generalized-boolean* 
+&lt; &amp;rest <GlossaryTerm styled={true} term={"number"}><i>numbers</i></GlossaryTerm><sup>+</sup> *→ generalized-boolean* 
 
 
 
-\&gt; &amp;rest *numbers*<sup>+</sup> *→ generalized-boolean* 
+\&gt; &amp;rest <GlossaryTerm styled={true} term={"number"}><i>numbers</i></GlossaryTerm><sup>+</sup> *→ generalized-boolean* 
 
 
 
-&lt;**=** &amp;rest *numbers*<sup>+</sup> *→ generalized-boolean* 
+&lt;<DictionaryLink styled={true} term={"="}><b>=</b></DictionaryLink> &amp;rest <GlossaryTerm styled={true} term={"number"}><i>numbers</i></GlossaryTerm><sup>+</sup> *→ generalized-boolean* 
 
 
 
-\&gt;**=** &amp;rest *numbers*<sup>+</sup> *→ generalized-boolean* 
+\&gt;<DictionaryLink styled={true} term={"="}><b>=</b></DictionaryLink> &amp;rest <GlossaryTerm styled={true} term={"number"}><i>numbers</i></GlossaryTerm><sup>+</sup> *→ generalized-boolean* 
 
 
 
@@ -34,7 +34,7 @@
 
 
 
-*number*—for &lt;, &gt;, &lt;**=**, &gt;**=**: a *real*; for **=**, **/=**: a *number* . 
+<GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm>—for &lt;, &gt;, &lt;<DictionaryLink styled={true} term={"="}><b>=</b></DictionaryLink>, &gt;<DictionaryLink styled={true} term={"="}><b>=</b></DictionaryLink>: a *real*; for <DictionaryLink styled={true} term={"="}><b>=</b></DictionaryLink>, <DictionaryLink styled={true} term={"/="}><b>/=</b></DictionaryLink>: a <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> . 
 
 
 
@@ -46,19 +46,19 @@
 
 
 
-**=**, **/=**, &lt;, &gt;, &lt;**=**, and &gt;**=** perform arithmetic comparisons on their arguments as follows: **=** 
+<DictionaryLink styled={true} term={"="}><b>=</b></DictionaryLink>, <DictionaryLink styled={true} term={"/="}><b>/=</b></DictionaryLink>, &lt;, &gt;, &lt;<DictionaryLink styled={true} term={"="}><b>=</b></DictionaryLink>, and &gt;<DictionaryLink styled={true} term={"="}><b>=</b></DictionaryLink> perform arithmetic comparisons on their arguments as follows: <DictionaryLink styled={true} term={"="}><b>=</b></DictionaryLink> 
 
 
 
-The value of **=** is *true* if all *numbers* are the same in value; otherwise it is *false*. Two *complexes* are considered equal by **=** if their real and imaginary parts are equal according to **=**. 
+The value of <DictionaryLink styled={true} term={"="}><b>=</b></DictionaryLink> is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if all <GlossaryTerm styled={true} term={"number"}><i>numbers</i></GlossaryTerm> are the same in value; otherwise it is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. Two *complexes* are considered equal by <DictionaryLink styled={true} term={"="}><b>=</b></DictionaryLink> if their real and imaginary parts are equal according to <DictionaryLink styled={true} term={"="}><b>=</b></DictionaryLink>. 
 
 
 
-**/=** 
+<DictionaryLink styled={true} term={"/="}><b>/=</b></DictionaryLink> 
 
 
 
-The value of **/=** is *true* if no two *numbers* are the same in value; otherwise it is *false*. 
+The value of <DictionaryLink styled={true} term={"/="}><b>/=</b></DictionaryLink> is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if no two <GlossaryTerm styled={true} term={"number"}><i>numbers</i></GlossaryTerm> are the same in value; otherwise it is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
@@ -78,7 +78,7 @@ The value of **/=** is *true* if no two *numbers* are the same in value; otherwi
 
 
 
-The value of &lt; is *true* if the *numbers* are in monotonically increasing order; otherwise it is *false*. 
+The value of &lt; is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if the <GlossaryTerm styled={true} term={"number"}><i>numbers</i></GlossaryTerm> are in monotonically increasing order; otherwise it is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
@@ -86,27 +86,27 @@ The value of &lt; is *true* if the *numbers* are in monotonically increasing ord
 
 
 
-The value of &gt; is *true* if the *numbers* are in monotonically decreasing order; otherwise it is *false*. 
+The value of &gt; is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if the <GlossaryTerm styled={true} term={"number"}><i>numbers</i></GlossaryTerm> are in monotonically decreasing order; otherwise it is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
-&lt;**=** 
+&lt;<DictionaryLink styled={true} term={"="}><b>=</b></DictionaryLink> 
 
 
 
-The value of &lt;**=** is *true* if the *numbers* are in monotonically nondecreasing order; otherwise it is *false*. 
+The value of &lt;<DictionaryLink styled={true} term={"="}><b>=</b></DictionaryLink> is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if the <GlossaryTerm styled={true} term={"number"}><i>numbers</i></GlossaryTerm> are in monotonically nondecreasing order; otherwise it is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
-\&gt;**=** 
+\&gt;<DictionaryLink styled={true} term={"="}><b>=</b></DictionaryLink> 
 
 
 
-The value of &gt;**=** is *true* if the *numbers* are in monotonically nonincreasing order; otherwise it is *false*. 
+The value of &gt;<DictionaryLink styled={true} term={"="}><b>=</b></DictionaryLink> is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if the <GlossaryTerm styled={true} term={"number"}><i>numbers</i></GlossaryTerm> are in monotonically nonincreasing order; otherwise it is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
-**=**, **/=**, &lt;, &gt;, &lt;**=**, and &gt;**=** perform necessary type conversions. 
+<DictionaryLink styled={true} term={"="}><b>=</b></DictionaryLink>, <DictionaryLink styled={true} term={"/="}><b>/=</b></DictionaryLink>, &lt;, &gt;, &lt;<DictionaryLink styled={true} term={"="}><b>=</b></DictionaryLink>, and &gt;<DictionaryLink styled={true} term={"="}><b>=</b></DictionaryLink> perform necessary type conversions. 
 
 
 
@@ -121,7 +121,7 @@ The uses of these functions are illustrated in Figure 12–13.
 
 
 
-Might signal **type-error** if some *argument* is not a *real*. Might signal **arithmetic-error** if otherwise unable to fulfill its contract. 
+Might signal <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if some <GlossaryTerm styled={true} term={"argument"}><i>argument</i></GlossaryTerm> is not a *real*. Might signal <DictionaryLink styled={true} term={"arithmetic-error"}><b>arithmetic-error</b></DictionaryLink> if otherwise unable to fulfill its contract. 
 
 
 
@@ -129,7 +129,7 @@ Might signal **type-error** if some *argument* is not a *real*. Might signal **a
 
 
 
-**=** differs from **eql** in that (= 0.0 -0.0) is always true, because **=** compares the mathematical values of its operands, whereas **eql** compares the representational values, so to speak. 
+<DictionaryLink styled={true} term={"="}><b>=</b></DictionaryLink> differs from <DictionaryLink styled={true} term={"eql"}><b>eql</b></DictionaryLink> in that (= 0.0 -0.0) is always true, because <DictionaryLink styled={true} term={"="}><b>=</b></DictionaryLink> compares the mathematical values of its operands, whereas <DictionaryLink styled={true} term={"eql"}><b>eql</b></DictionaryLink> compares the representational values, so to speak. 
 
 
 

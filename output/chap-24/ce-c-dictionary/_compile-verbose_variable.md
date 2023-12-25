@@ -1,4 +1,4 @@
-*∗***compile-verbose***∗ Variable* 
+*∗<DictionaryLink styled={true} term={"compile-verbose"}><b>*compile-verbose*</b></DictionaryLink>∗ Variable* 
 
 
 
@@ -14,7 +14,7 @@ a *generalized boolean*.
 
 
 
-*implementation-dependent*. 
+<GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm>. 
 
 
 
@@ -22,7 +22,7 @@ a *generalized boolean*.
 
 
 
-The *value* of **\*compile-print\*** is the default value of the :print *argument* to **compile-file**. The *value* of **\*compile-verbose\*** is the default value of the :verbose *argument* to **compile-file**. 
+The <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of **\*compile-print\*** is the default value of the :print <GlossaryTerm styled={true} term={"argument"}><i>argument</i></GlossaryTerm> to <DictionaryLink styled={true} term={"compile-file"}><b>compile-file</b></DictionaryLink>. The <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of <DictionaryLink styled={true} term={"compile-verbose"}><b>\*compile-verbose\*</b></DictionaryLink> is the default value of the :verbose <GlossaryTerm styled={true} term={"argument"}><i>argument</i></GlossaryTerm> to <DictionaryLink styled={true} term={"compile-file"}><b>compile-file</b></DictionaryLink>. 
 
 
 
@@ -30,7 +30,7 @@ The *value* of **\*compile-print\*** is the default value of the :print *argumen
 
 
 
-**compile-file** 
+<DictionaryLink styled={true} term={"compile-file"}><b>compile-file</b></DictionaryLink> 
 
 
 

@@ -1,4 +1,4 @@
-**multiple-value-setq** *Macro* 
+**multiple-value-setq** <GlossaryTerm styled={true} term={"macro"}><i>Macro</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**multiple-value-setq** *vars form ! result* 
+<DictionaryLink styled={true} term={"multiple-value-setq"}><b>multiple-value-setq</b></DictionaryLink> *vars form ! result* 
 
 
 
@@ -14,15 +14,15 @@
 
 
 
-*vars*—a *list* of *symbols* that are either *variable names* or *names* of *symbol macros*. 
+*vars*—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> that are either *variable names* or <GlossaryTerm styled={true} term={"name"}><i>names</i></GlossaryTerm> of *symbol macros*. 
 
 
 
-*form*—a *form*. 
+<GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>. 
 
 
 
-*result*—The *primary value* returned by the *form*. 
+*result*—The *primary value* returned by the <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>. 
 
 
 
@@ -30,11 +30,11 @@
 
 
 
-**multiple-value-setq** assigns values to *vars*. 
+<DictionaryLink styled={true} term={"multiple-value-setq"}><b>multiple-value-setq</b></DictionaryLink> assigns values to *vars*. 
 
 
 
-The *form* is evaluated, and each *var* is *assigned* to the corresponding *value* returned by that *form*. If there are more *vars* than *values* returned, **nil** is *assigned* to the extra *vars*. If there are more *values* than *vars*, the extra *values* are discarded. 
+The <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> is evaluated, and each *var* is *assigned* to the corresponding <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> returned by that <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>. If there are more *vars* than <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> returned, <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> is *assigned* to the extra *vars*. If there are more <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> than *vars*, the extra <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> are discarded. 
 
 
 
@@ -50,7 +50,7 @@ is defined to always behave in the same way as
 
 
 
-in order that the rules for order of evaluation and side-e↵ects be consistent with those used by **setf**. See Section 5.1.2.3 (VALUES Forms as Places). 
+in order that the rules for order of evaluation and side-e↵ects be consistent with those used by <DictionaryLink styled={true} term={"setf"}><b>setf</b></DictionaryLink>. See Section 5.1.2.3 (VALUES Forms as Places). 
 
 
 
@@ -73,7 +73,7 @@ b *!* 5
 
 
 
-**setq**, **symbol-macrolet** 
+<DictionaryLink styled={true} term={"setq"}><b>setq</b></DictionaryLink>, <DictionaryLink styled={true} term={"symbol-macrolet"}><b>symbol-macrolet</b></DictionaryLink> 
 
 
 

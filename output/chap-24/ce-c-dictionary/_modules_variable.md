@@ -1,4 +1,4 @@
-*∗***modules***∗ Variable* 
+*∗<DictionaryLink styled={true} term={"modules"}><b>*modules*</b></DictionaryLink>∗ Variable* 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-a *list* of *strings*. 
+a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"string"}><i>strings</i></GlossaryTerm>. 
 
 
 
@@ -14,7 +14,7 @@ a *list* of *strings*.
 
 
 
-*implementation-dependent*. 
+<GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm>. 
 
 
 
@@ -22,7 +22,7 @@ a *list* of *strings*.
 
 
 
-The *value* of **\*modules\*** is a list of names of the modules that have been loaded into the current *Lisp image*. 
+The <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of <DictionaryLink styled={true} term={"modules"}><b>\*modules\*</b></DictionaryLink> is a list of names of the modules that have been loaded into the current *Lisp image*. 
 
 
 
@@ -30,7 +30,7 @@ The *value* of **\*modules\*** is a list of names of the modules that have been 
 
 
 
-**provide** 
+<DictionaryLink styled={true} term={"provide"}><b>provide</b></DictionaryLink> 
 
 
 
@@ -38,7 +38,7 @@ The *value* of **\*modules\*** is a list of names of the modules that have been 
 
 
 
-**provide**, **require** 
+<DictionaryLink styled={true} term={"provide"}><b>provide</b></DictionaryLink>, <DictionaryLink styled={true} term={"require"}><b>require</b></DictionaryLink> 
 
 
 
@@ -46,7 +46,7 @@ The *value* of **\*modules\*** is a list of names of the modules that have been 
 
 
 
-The variable **\*modules\*** is deprecated. 
+The variable <DictionaryLink styled={true} term={"modules"}><b>\*modules\*</b></DictionaryLink> is deprecated. 
 
 
 

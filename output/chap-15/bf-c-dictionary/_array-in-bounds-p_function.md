@@ -1,4 +1,4 @@
-**array-in-bounds-p** *Function* 
+**array-in-bounds-p** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**array-in-bounds-p** *array* &amp;rest *subscripts → generalized-boolean* 
+<DictionaryLink styled={true} term={"array-in-bounds-p"}><b>array-in-bounds-p</b></DictionaryLink> <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm> &amp;rest *subscripts → generalized-boolean* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*array*—an *array*. 
+<GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm>. 
 
 
 
-*subscripts*—a list of *integers* of length equal to the *rank* of the *array*. 
+*subscripts*—a list of *integers* of length equal to the <GlossaryTerm styled={true} term={"rank"}><i>rank</i></GlossaryTerm> of the <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm>. 
 
 
 
@@ -30,7 +30,7 @@
 
 
 
-Returns *true* if the *subscripts* are all in bounds for *array*; otherwise returns *false*. (If *array* is a *vector* with a *fill pointer* , that *fill pointer* is ignored.) 
+Returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if the *subscripts* are all in bounds for <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm>; otherwise returns <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. (If <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm> is a <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm> with a *fill pointer* , that *fill pointer* is ignored.) 
 
 
 
@@ -49,7 +49,7 @@ Returns *true* if the *subscripts* are all in bounds for *array*; otherwise retu
 
 
 
-**array-dimensions** 
+<DictionaryLink styled={true} term={"array-dimensions"}><b>array-dimensions</b></DictionaryLink> 
 
 
 

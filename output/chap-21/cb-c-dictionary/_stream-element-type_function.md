@@ -1,4 +1,4 @@
-**stream-element-type** *Function* 
+**stream-element-type** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**stream-element-type** *stream → typespec* 
+<DictionaryLink styled={true} term={"stream-element-type"}><b>stream-element-type</b></DictionaryLink> *stream → typespec* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*stream*—a *stream*. 
+<GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>. 
 
 
 
@@ -26,11 +26,11 @@
 
 
 
-**stream-element-type** returns a *type specifier* that indicates the *types* of *objects* that may be read from or written to *stream*. 
+<DictionaryLink styled={true} term={"stream-element-type"}><b>stream-element-type</b></DictionaryLink> returns a *type specifier* that indicates the <GlossaryTerm styled={true} term={"type"}><i>types</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm> that may be read from or written to <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>. 
 
 
 
-*Streams* created by **open** have an *element type* restricted to **integer** or a *subtype* of *type* **character**. **Examples:**
+<GlossaryTerm styled={true} term={"stream"}><i>Streams</i></GlossaryTerm> created by <DictionaryLink styled={true} term={"open"}><b>open</b></DictionaryLink> have an *element type* restricted to <DictionaryLink styled={true} term={"integer"}><b>integer</b></DictionaryLink> or a <GlossaryTerm styled={true} term={"subtype"}><i>subtype</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"character"}><b>character</b></DictionaryLink>. **Examples:**
 ```lisp
 
 ;; Note that the stream must accomodate at least the specified type, 
@@ -57,7 +57,7 @@
 
 
 
-Should signal an error of *type* **type-error** if *stream* is not a *stream*. 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm> is not a <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>. 
 
 
 

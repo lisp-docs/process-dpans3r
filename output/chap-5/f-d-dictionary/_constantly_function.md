@@ -1,4 +1,4 @@
-**constantly** *Function* 
+**constantly** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**constantly** *value → function* 
+<DictionaryLink styled={true} term={"constantly"}><b>constantly</b></DictionaryLink> *value → function* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*value*—an *object*. 
+<GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
-*function*—a *function*. 
+<GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>. 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-**constantly** returns a *function* that accepts any number of arguments, that has no side-effects, and that always returns *value*. 
+<DictionaryLink styled={true} term={"constantly"}><b>constantly</b></DictionaryLink> returns a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> that accepts any number of arguments, that has no side-effects, and that always returns <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm>. 
 
 
 
@@ -45,7 +45,7 @@
 
 
 
-**identity** 
+<DictionaryLink styled={true} term={"identity"}><b>identity</b></DictionaryLink> 
 
 
 
@@ -53,7 +53,7 @@
 
 
 
-**constantly** could be defined by: 
+<DictionaryLink styled={true} term={"constantly"}><b>constantly</b></DictionaryLink> could be defined by: 
 
 
 

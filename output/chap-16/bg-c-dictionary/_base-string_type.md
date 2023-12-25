@@ -1,4 +1,4 @@
-**base-string** *Type* 
+**base-string** <GlossaryTerm styled={true} term={"type"}><i>Type</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**base-string**, **string**, **vector**, **array**, **sequence**, **t** 
+<DictionaryLink styled={true} term={"base-string"}><b>base-string</b></DictionaryLink>, <DictionaryLink styled={true} term={"string"}><b>string</b></DictionaryLink>, <DictionaryLink styled={true} term={"vector"}><b>vector</b></DictionaryLink>, <DictionaryLink styled={true} term={"array"}><b>array</b></DictionaryLink>, <DictionaryLink styled={true} term={"sequence"}><b>sequence</b></DictionaryLink>, <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink> 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-The *type* **base-string** is equivalent to (vector base-char). The *base string* representation is the most efficient *string* representation that can hold an arbitrary sequence of *standard characters*. 
+The <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"base-string"}><b>base-string</b></DictionaryLink> is equivalent to (vector base-char). The *base string* representation is the most efficient <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> representation that can hold an arbitrary sequence of *standard characters*. 
 
 
 
@@ -50,7 +50,7 @@ Abbreviating.
 
 
 
-*size*—a non-negative *fixnum*, or the *symbol* **\***. 
+*size*—a non-negative <GlossaryTerm styled={true} term={"fixnum"}><i>fixnum</i></GlossaryTerm>, or the <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> **\***. 
 
 
 

@@ -1,4 +1,4 @@
-**not** *Function* 
+**not** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**not** *x → boolean* 
+<DictionaryLink styled={true} term={"not"}><b>not</b></DictionaryLink> *x → boolean* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*x*—a *generalized boolean* (*i.e.*, any *object*). 
+*x*—a *generalized boolean* (*i.e.*, any <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>). 
 
 
 
-*boolean*—a *boolean*. 
+<GlossaryTerm styled={true} term={"boolean"}><i>boolean</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"boolean"}><i>boolean</i></GlossaryTerm>. 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-Returns **t** if *x* is *false*; otherwise, returns **nil**. 
+Returns <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink> if *x* is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>; otherwise, returns <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -45,7 +45,7 @@ Returns **t** if *x* is *false*; otherwise, returns **nil**.
 
 
 
-**null** 
+<DictionaryLink styled={true} term={"null"}><b>null</b></DictionaryLink> 
 
 
 
@@ -53,7 +53,7 @@ Returns **t** if *x* is *false*; otherwise, returns **nil**.
 
 
 
-**not** is intended to be used to invert the ‘truth value’ of a *boolean* (or *generalized boolean*) whereas **null** is intended to be used to test for the *empty list*. Operationally, **not** and **null** compute the same result; which to use is a matter of style. 
+<DictionaryLink styled={true} term={"not"}><b>not</b></DictionaryLink> is intended to be used to invert the ‘truth value’ of a <GlossaryTerm styled={true} term={"boolean"}><i>boolean</i></GlossaryTerm> (or *generalized boolean*) whereas <DictionaryLink styled={true} term={"null"}><b>null</b></DictionaryLink> is intended to be used to test for the *empty list*. Operationally, <DictionaryLink styled={true} term={"not"}><b>not</b></DictionaryLink> and <DictionaryLink styled={true} term={"null"}><b>null</b></DictionaryLink> compute the same result; which to use is a matter of style. 
 
 
 

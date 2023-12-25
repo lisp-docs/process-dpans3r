@@ -1,4 +1,4 @@
-**complexp** *Function* 
+**complexp** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**complexp** *object → generalized-boolean* 
+<DictionaryLink styled={true} term={"complexp"}><b>complexp</b></DictionaryLink> *object → generalized-boolean* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*object*—an *object*. 
+<GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-Returns *true* if *object* is of *type* **complex**; otherwise, returns *false*. 
+Returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"complex"}><b>complex</b></DictionaryLink>; otherwise, returns <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
@@ -41,7 +41,7 @@ Returns *true* if *object* is of *type* **complex**; otherwise, returns *false*.
 
 
 
-**complex** (*function* and *type*), **typep** 
+<DictionaryLink styled={true} term={"complex"}><b>complex</b></DictionaryLink> (<GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> and <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm>), <DictionaryLink styled={true} term={"typep"}><b>typep</b></DictionaryLink> 
 
 
 
@@ -49,7 +49,7 @@ Returns *true* if *object* is of *type* **complex**; otherwise, returns *false*.
 
 
 
-(complexp *object*) *≡* (typep *object* ’complex) 
+(complexp <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>) *≡* (typep <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> ’complex) 
 
 
 

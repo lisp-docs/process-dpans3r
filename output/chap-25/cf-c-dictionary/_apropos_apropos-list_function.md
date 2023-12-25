@@ -1,4 +1,4 @@
-**apropos, apropos-list** *Function* 
+**apropos, apropos-list** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,11 +6,11 @@
 
 
 
-**apropos** *string* &amp;optional *package → hno valuesi* 
+<DictionaryLink styled={true} term={"apropos"}><b>apropos</b></DictionaryLink> <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> &amp;optional *package → hno valuesi* 
 
 
 
-**apropos-list** *string* &amp;optional *package → symbols* 
+<DictionaryLink styled={true} term={"apropos-list"}><b>apropos-list</b></DictionaryLink> <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> &amp;optional *package → symbols* 
 
 
 
@@ -18,15 +18,15 @@
 
 
 
-*string*—a *string designator* . 
+<GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>—a *string designator* . 
 
 
 
-*package*—a *package designator* or **nil**. The default is **nil**. 
+<GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>—a *package designator* or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. The default is <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
-*symbols*—a *list* of *symbols*. 
+<GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm>. 
 
 
 
@@ -34,7 +34,7 @@
 
 
 
-These functions search for *interned symbols* whose *names* contain the substring *string*. 
+These functions search for *interned symbols* whose <GlossaryTerm styled={true} term={"name"}><i>names</i></GlossaryTerm> contain the substring <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>. 
 
 
 
@@ -46,23 +46,23 @@ These functions search for *interned symbols* whose *names* contain the substrin
 
 
 
-For **apropos**, as each such *symbol* is found, its name is printed on *standard output*. In addition, if such a *symbol* is defined as a *function* or *dynamic variable*, information about those definitions might also be printed. 
+For <DictionaryLink styled={true} term={"apropos"}><b>apropos</b></DictionaryLink>, as each such <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> is found, its name is printed on *standard output*. In addition, if such a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> is defined as a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> or *dynamic variable*, information about those definitions might also be printed. 
 
 
 
-For **apropos-list**, no output occurs as the search proceeds; instead a list of the matching *symbols* is returned when the search is complete. 
+For <DictionaryLink styled={true} term={"apropos-list"}><b>apropos-list</b></DictionaryLink>, no output occurs as the search proceeds; instead a list of the matching <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> is returned when the search is complete. 
 
 
 
-If *package* is *non-nil*, only the *symbols accessible* in that *package* are searched; otherwise all *symbols accessible* in any *package* are searched. 
+If <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> is <GlossaryTerm styled={true} term={"non-nil"}><i>non-nil</i></GlossaryTerm>, only the *symbols accessible* in that <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> are searched; otherwise all *symbols accessible* in any <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> are searched. 
 
 
 
-Because a *symbol* might be available by way of more than one inheritance path, **apropos** might print information about the *same symbol* more than once, or **apropos-list** might return a *list* containing duplicate *symbols*. 
+Because a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> might be available by way of more than one inheritance path, <DictionaryLink styled={true} term={"apropos"}><b>apropos</b></DictionaryLink> might print information about the *same symbol* more than once, or <DictionaryLink styled={true} term={"apropos-list"}><b>apropos-list</b></DictionaryLink> might return a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> containing duplicate <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm>. 
 
 
 
-Whether or not the search is case-sensitive is *implementation-defined*. 
+Whether or not the search is case-sensitive is <GlossaryTerm styled={true} term={"implementation-defined"}><i>implementation-defined</i></GlossaryTerm>. 
 
 
 
@@ -70,11 +70,11 @@ Whether or not the search is case-sensitive is *implementation-defined*.
 
 
 
-The set of *symbols* which are currently *interned* in any *packages* being searched. 
+The set of <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> which are currently <GlossaryTerm styled={true} term={"interned"}><i>interned</i></GlossaryTerm> in any <GlossaryTerm styled={true} term={"package"}><i>packages</i></GlossaryTerm> being searched. 
 
 
 
-**apropos** is also affected by **\*standard-output\***. 
+<DictionaryLink styled={true} term={"apropos"}><b>apropos</b></DictionaryLink> is also affected by **\*standard-output\***. 
 
 
 

@@ -2,7 +2,7 @@
 
 
 
-An evaluation arrow “*→*” precedes a list of *values* to be returned. For example: 
+An evaluation arrow “*→*” precedes a list of <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> to be returned. For example: 
 
 
 
@@ -10,7 +10,7 @@ An evaluation arrow “*→*” precedes a list of *values* to be returned. For 
 
 
 
-indicates that F is an operator that has three *required parameters* (*i.e.*, *a*, *b*, and *c*) and that returns one *value* (*i.e.*, *x*). If more than one *value* is returned by an operator, the *names* of the *values* are separated by commas, as in: 
+indicates that F is an operator that has three *required parameters* (*i.e.*, *a*, *b*, and *c*) and that returns one <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> (*i.e.*, *x*). If more than one <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> is returned by an operator, the <GlossaryTerm styled={true} term={"name"}><i>names</i></GlossaryTerm> of the <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> are separated by commas, as in: 
 
 
 

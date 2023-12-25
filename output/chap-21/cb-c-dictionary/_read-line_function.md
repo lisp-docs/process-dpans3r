@@ -1,4 +1,4 @@
-**read-line** *Function* 
+**read-line** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**read-line** &amp;optional *input-stream eof-error-p eof-value recursive-p* 
+<DictionaryLink styled={true} term={"read-line"}><b>read-line</b></DictionaryLink> &amp;optional *input-stream eof-error-p eof-value recursive-p* 
 
 
 
@@ -22,19 +22,19 @@
 
 
 
-*eof-error-p*—a *generalized boolean*. The default is *true*. 
+*eof-error-p*—a *generalized boolean*. The default is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>. 
 
 
 
-*eof-value*—an *object*. The default is **nil**. 
+*eof-value*—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. The default is <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
-*recursive-p*—a *generalized boolean*. The default is *false*. 
+*recursive-p*—a *generalized boolean*. The default is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
-*line*—a *string* or the *eof-value*. 
+*line*—a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> or the *eof-value*. 
 
 
 
@@ -46,19 +46,19 @@
 
 
 
-Reads from *input-stream* a line of text that is terminated by a *newline* or *end of file*. 
+Reads from *input-stream* a line of text that is terminated by a <GlossaryTerm styled={true} term={"newline"}><i>newline</i></GlossaryTerm> or *end of file*. 
 
 
 
-If *recursive-p* is *true*, this call is expected to be embedded in a higher-level call to **read** or a similar *function* used by the *Lisp reader* . 
+If *recursive-p* is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>, this call is expected to be embedded in a higher-level call to <DictionaryLink styled={true} term={"read"}><b>read</b></DictionaryLink> or a similar <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> used by the *Lisp reader* . 
 
 
 
-The *primary value*, *line*, is the line that is read, represented as a *string* (without the trailing *newline*, if any). If *eof-error-p* is *false* and the *end of file* for *input-stream* is reached before any *characters* are read, *eof-value* is returned as the *line*. 
+The *primary value*, *line*, is the line that is read, represented as a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> (without the trailing <GlossaryTerm styled={true} term={"newline"}><i>newline</i></GlossaryTerm>, if any). If *eof-error-p* is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm> and the *end of file* for *input-stream* is reached before any <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm> are read, *eof-value* is returned as the *line*. 
 
 
 
-The *secondary value*, *missing-newline-p*, is a *generalized boolean* that is *false* if the *line* was terminated by a *newline*, or *true* if the *line* was terminated by the *end of file* for *input-stream* (or if the *line* is the *eof-value*). 
+The *secondary value*, *missing-newline-p*, is a *generalized boolean* that is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm> if the *line* was terminated by a <GlossaryTerm styled={true} term={"newline"}><i>newline</i></GlossaryTerm>, or <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if the *line* was terminated by the *end of file* for *input-stream* (or if the *line* is the *eof-value*). 
 
 
 
@@ -84,7 +84,7 @@ line2"
 
 
 
-**\*standard-input\***, **\*terminal-io\***. 
+**\*standard-input\***, <DictionaryLink styled={true} term={"terminal-io"}><b>\*terminal-io\*</b></DictionaryLink>. 
 
 
 
@@ -92,7 +92,7 @@ line2"
 
 
 
-If an *end of file*<sub>2</sub> occurs before any characters are read in the line, an error is signaled if *eof-error-p* is *true*. 
+If an *end of file*<sub>2</sub> occurs before any characters are read in the line, an error is signaled if *eof-error-p* is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>. 
 
 
 
@@ -100,7 +100,7 @@ If an *end of file*<sub>2</sub> occurs before any characters are read in the lin
 
 
 
-**read** 
+<DictionaryLink styled={true} term={"read"}><b>read</b></DictionaryLink> 
 
 
 
@@ -108,7 +108,7 @@ If an *end of file*<sub>2</sub> occurs before any characters are read in the lin
 
 
 
-The corresponding output function is **write-line**. 
+The corresponding output function is <DictionaryLink styled={true} term={"write-line"}><b>write-line</b></DictionaryLink>. 
 
 
 

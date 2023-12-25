@@ -6,7 +6,7 @@ This section introduces the dictionary entry. It is not explicitly labeled. It a
 
 
 
-In large print at left, the *defined name* appears; if more than one *defined name* is to be described by the entry, all such *names* are shown separated by commas. 
+In large print at left, the *defined name* appears; if more than one *defined name* is to be described by the entry, all such <GlossaryTerm styled={true} term={"name"}><i>names</i></GlossaryTerm> are shown separated by commas. 
 
 
 
@@ -14,7 +14,7 @@ In somewhat smaller italic print at right is an indication of what kind of dicti
 
 
 
-*Accessor* 
+<GlossaryTerm styled={true} term={"accessor"}><i>Accessor</i></GlossaryTerm> 
 
 
 
@@ -22,11 +22,11 @@ This is an *accessor function*.
 
 
 
-*Class* 
+<GlossaryTerm styled={true} term={"class"}><i>Class</i></GlossaryTerm> 
 
 
 
-This is a *class*. 
+This is a <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm>. 
 
 
 
@@ -42,7 +42,7 @@ This is a *class*.
 
 
 
-This is a *subtype* of *type* **condition**. 
+This is a <GlossaryTerm styled={true} term={"subtype"}><i>subtype</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"condition"}><b>condition</b></DictionaryLink>. 
 
 
 
@@ -54,7 +54,7 @@ This is a *constant variable*.
 
 
 
-*Declaration* 
+<GlossaryTerm styled={true} term={"declaration"}><i>Declaration</i></GlossaryTerm> 
 
 
 
@@ -62,11 +62,11 @@ This is a *declaration identifier* .
 
 
 
-*Function* 
+<GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
-This is a *function*. 
+This is a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>. 
 
 
 
@@ -74,7 +74,7 @@ This is a *function*.
 
 
 
-This is a *function* that is defined only lexically within the scope of some other *macro form*. 
+This is a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> that is defined only lexically within the scope of some other *macro form*. 
 
 
 
@@ -82,23 +82,23 @@ This is a *function* that is defined only lexically within the scope of some oth
 
 
 
-This is a *macro* that is defined only lexically within the scope of some other *macro form*. 
+This is a <GlossaryTerm styled={true} term={"macro"}><i>macro</i></GlossaryTerm> that is defined only lexically within the scope of some other *macro form*. 
 
 
 
-*Macro* 
+<GlossaryTerm styled={true} term={"macro"}><i>Macro</i></GlossaryTerm> 
 
 
 
-This is a *macro*. 
+This is a <GlossaryTerm styled={true} term={"macro"}><i>macro</i></GlossaryTerm>. 
 
 
 
-*Restart* 
+<GlossaryTerm styled={true} term={"restart"}><i>Restart</i></GlossaryTerm> 
 
 
 
-This is a *restart*. 
+This is a <GlossaryTerm styled={true} term={"restart"}><i>restart</i></GlossaryTerm>. 
 
 
 
@@ -118,11 +118,11 @@ This is a *standard generic function*.
 
 
 
-*Symbol* 
+<GlossaryTerm styled={true} term={"symbol"}><i>Symbol</i></GlossaryTerm> 
 
 
 
-This is a *symbol* that is specially recognized in some particular situation, such as the syntax of a *macro*. 
+This is a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> that is specially recognized in some particular situation, such as the syntax of a <GlossaryTerm styled={true} term={"macro"}><i>macro</i></GlossaryTerm>. 
 
 
 
@@ -130,7 +130,7 @@ This is a *symbol* that is specially recognized in some particular situation, su
 
 
 
-This is like *class*, but it identifies a *class* that is potentially a *built-in class*. (No *class* is actually required to be a *built-in class*.)  
+This is like <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm>, but it identifies a <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm> that is potentially a *built-in class*. (No <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm> is actually required to be a *built-in class*.)  
 
 
 
@@ -138,7 +138,7 @@ This is like *class*, but it identifies a *class* that is potentially a *built-i
 
 
 
-*Type* 
+<GlossaryTerm styled={true} term={"type"}><i>Type</i></GlossaryTerm> 
 
 
 
@@ -154,7 +154,7 @@ This is a *defined name* that is not an *atomic type specifier* , but that can b
 
 
 
-*Variable* 
+<GlossaryTerm styled={true} term={"variable"}><i>Variable</i></GlossaryTerm> 
 
 
 

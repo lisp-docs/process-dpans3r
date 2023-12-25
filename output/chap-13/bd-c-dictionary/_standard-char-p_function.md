@@ -1,4 +1,4 @@
-**standard-char-p** *Function* 
+**standard-char-p** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**standard-char-p** *character → generalized-boolean* 
+<DictionaryLink styled={true} term={"standard-char-p"}><b>standard-char-p</b></DictionaryLink> *character → generalized-boolean* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*character*—a *character* . 
+<GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> . 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-Returns *true* if *character* is of *type* **standard-char**; otherwise, returns *false*. 
+Returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> is of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"standard-char"}><b>standard-char</b></DictionaryLink>; otherwise, returns <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
@@ -44,7 +44,7 @@ Returns *true* if *character* is of *type* **standard-char**; otherwise, returns
 
 
 
-Should signal an error of *type* **type-error** if *character* is not a *character* . 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> is not a <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> . 
 
 
 

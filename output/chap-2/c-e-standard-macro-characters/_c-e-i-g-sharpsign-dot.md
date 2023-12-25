@@ -6,11 +6,11 @@
 
 
 
-The normal effect of #. is inhibited when the *value* of **\*read-eval\*** is *false*. In that situation, an error of *type* **reader-error** is signaled. 
+The normal effect of #. is inhibited when the <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of **\*read-eval\*** is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. In that situation, an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"reader-error"}><b>reader-error</b></DictionaryLink> is signaled. 
 
 
 
-For an *object* that does not have a convenient printed representation, a *form* that computes the *object* can be given using the #. notation. 
+For an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> that does not have a convenient printed representation, a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> that computes the <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> can be given using the #. notation. 
 
 
 

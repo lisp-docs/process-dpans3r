@@ -1,4 +1,4 @@
-**truename** *Function* 
+**truename** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**truename** *filespec → truename* 
+<DictionaryLink styled={true} term={"truename"}><b>truename</b></DictionaryLink> *filespec → truename* 
 
 
 
@@ -18,7 +18,7 @@
 
 
 
-*truename*—a *physical pathname*. 
+<GlossaryTerm styled={true} term={"truename"}><i>truename</i></GlossaryTerm>—a *physical pathname*. 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-**truename** tries to find the *file* indicated by *filespec* and returns its *truename*. If the *filespec designator* is an open *stream*, its associated *file* is used. If *filespec* is a *stream*, **truename** can be used whether the *stream* is open or closed. It is permissible for **truename** to return more specific information after the *stream* is closed than when the *stream* was open. If *filespec* is a *pathname* it represents the name used to open the file. This may be, but is not required to be, the actual name of the file. 
+<DictionaryLink styled={true} term={"truename"}><b>truename</b></DictionaryLink> tries to find the <GlossaryTerm styled={true} term={"file"}><i>file</i></GlossaryTerm> indicated by *filespec* and returns its <GlossaryTerm styled={true} term={"truename"}><i>truename</i></GlossaryTerm>. If the *filespec designator* is an open <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>, its associated <GlossaryTerm styled={true} term={"file"}><i>file</i></GlossaryTerm> is used. If *filespec* is a <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>, <DictionaryLink styled={true} term={"truename"}><b>truename</b></DictionaryLink> can be used whether the <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm> is open or closed. It is permissible for <DictionaryLink styled={true} term={"truename"}><b>truename</b></DictionaryLink> to return more specific information after the <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm> is closed than when the <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm> was open. If *filespec* is a <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm> it represents the name used to open the file. This may be, but is not required to be, the actual name of the file. 
 
 
 
@@ -64,11 +64,11 @@
 
 
 
-An error of *type* **file-error** is signaled if an appropriate *file* cannot be located within the *file system* for the given *filespec*, or if the *file system* cannot perform the requested operation. 
+An error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"file-error"}><b>file-error</b></DictionaryLink> is signaled if an appropriate <GlossaryTerm styled={true} term={"file"}><i>file</i></GlossaryTerm> cannot be located within the *file system* for the given *filespec*, or if the *file system* cannot perform the requested operation. 
 
 
 
-An error of *type* **file-error** is signaled if *pathname* is *wild*. 
+An error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"file-error"}><b>file-error</b></DictionaryLink> is signaled if <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm> is <GlossaryTerm styled={true} term={"wild"}><i>wild</i></GlossaryTerm>. 
 
 
 
@@ -76,7 +76,7 @@ An error of *type* **file-error** is signaled if *pathname* is *wild*.
 
 
 
-**pathname**, **logical-pathname**, Section 20.1 (File System Concepts), Section 19.1.2 (Pathnames as Filenames) 
+<DictionaryLink styled={true} term={"pathname"}><b>pathname</b></DictionaryLink>, <DictionaryLink styled={true} term={"logical-pathname"}><b>logical-pathname</b></DictionaryLink>, Section 20.1 (File System Concepts), Section 19.1.2 (Pathnames as Filenames) 
 
 
 
@@ -84,4 +84,4 @@ An error of *type* **file-error** is signaled if *pathname* is *wild*.
 
 
 
-**truename** may be used to account for any *filename* translations performed by the *file system*. 
+<DictionaryLink styled={true} term={"truename"}><b>truename</b></DictionaryLink> may be used to account for any <GlossaryTerm styled={true} term={"filename"}><i>filename</i></GlossaryTerm> translations performed by the *file system*. 

@@ -1,4 +1,4 @@
-**ash** *Function* 
+**ash** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**ash** *integer count → shifted-integer* 
+<DictionaryLink styled={true} term={"ash"}><b>ash</b></DictionaryLink> *integer count → shifted-integer* 
 
 
 
@@ -30,11 +30,11 @@
 
 
 
-**ash** performs the arithmetic shift operation on the binary representation of *integer*, which is treated as if it were binary. 
+<DictionaryLink styled={true} term={"ash"}><b>ash</b></DictionaryLink> performs the arithmetic shift operation on the binary representation of *integer*, which is treated as if it were binary. 
 
 
 
-**ash** shifts *integer* arithmetically left by *count* bit positions if *count* is positive, or right *count* bit positions if *count* is negative. The shifted value of the same sign as *integer* is returned. 
+<DictionaryLink styled={true} term={"ash"}><b>ash</b></DictionaryLink> shifts *integer* arithmetically left by *count* bit positions if *count* is positive, or right *count* bit positions if *count* is negative. The shifted value of the same sign as *integer* is returned. 
 
 
 
@@ -42,7 +42,7 @@ Mathematically speaking, <b>ash</b> performs the computation floor(<i>integer·<
 
 
 
-**ash** is defined to behave as if *integer* were represented in two’s complement form, regardless of how *integers* are represented internally. 
+<DictionaryLink styled={true} term={"ash"}><b>ash</b></DictionaryLink> is defined to behave as if *integer* were represented in two’s complement form, regardless of how *integers* are represented internally. 
 
 
 
@@ -59,7 +59,7 @@ Mathematically speaking, <b>ash</b> performs the computation floor(<i>integer·<
 
 
 
-Should signal an error of *type* **type-error** if *integer* is not an *integer* . Should signal an error of *type* **type-error** if *count* is not an *integer* . Might signal **arithmetic-error**. 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if *integer* is not an *integer* . Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if *count* is not an *integer* . Might signal <DictionaryLink styled={true} term={"arithmetic-error"}><b>arithmetic-error</b></DictionaryLink>. 
 
 
 
@@ -87,7 +87,7 @@ Should signal an error of *type* **type-error** if *integer* is not an *integer*
 
 
 
-**integer-length** 
+<DictionaryLink styled={true} term={"integer-length"}><b>integer-length</b></DictionaryLink> 
 
 
 

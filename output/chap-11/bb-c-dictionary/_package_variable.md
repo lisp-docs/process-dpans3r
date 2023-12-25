@@ -1,4 +1,4 @@
-*∗***package***∗ Variable* 
+*∗<DictionaryLink styled={true} term={"package"}><b><GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm></b></DictionaryLink>∗ Variable* 
 
 
 
@@ -14,7 +14,7 @@ a *package object*.
 
 
 
-the COMMON-LISP-USER *package*. 
+the COMMON-LISP-USER <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>. 
 
 
 
@@ -22,7 +22,7 @@ the COMMON-LISP-USER *package*.
 
 
 
-Whatever *package object* is currently the *value* of **\*package\*** is referred to as the *current package*. **Examples:**
+Whatever *package object* is currently the <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of <DictionaryLink styled={true} term={"package"}><b>\*package\*</b></DictionaryLink> is referred to as the *current package*. **Examples:**
 ```lisp
 
 (in-package "COMMON-LISP-USER") *→* #<PACKAGE "COMMON-LISP-USER"> 
@@ -51,7 +51,7 @@ Whatever *package object* is currently the *value* of **\*package\*** is referre
 
 
 
-**load**, **compile-file**, **in-package** 
+<DictionaryLink styled={true} term={"load"}><b>load</b></DictionaryLink>, <DictionaryLink styled={true} term={"compile-file"}><b>compile-file</b></DictionaryLink>, <DictionaryLink styled={true} term={"in-package"}><b>in-package</b></DictionaryLink> 
 
 
 
@@ -59,7 +59,7 @@ Whatever *package object* is currently the *value* of **\*package\*** is referre
 
 
 
-**compile-file**, **in-package**, **load**, **package** 
+<DictionaryLink styled={true} term={"compile-file"}><b>compile-file</b></DictionaryLink>, <DictionaryLink styled={true} term={"in-package"}><b>in-package</b></DictionaryLink>, <DictionaryLink styled={true} term={"load"}><b>load</b></DictionaryLink>, <DictionaryLink styled={true} term={"package"}><b>package</b></DictionaryLink> 
 
 
 

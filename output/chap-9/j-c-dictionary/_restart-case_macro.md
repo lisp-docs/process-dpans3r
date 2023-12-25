@@ -1,4 +1,4 @@
-**restart-case** *Macro* 
+**restart-case** <GlossaryTerm styled={true} term={"macro"}><i>Macro</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**restart-case** *restartable-form \{↓clause\} → \{result\}*\* 
+<DictionaryLink styled={true} term={"restart-case"}><b>restart-case</b></DictionaryLink> *restartable-form \{↓clause\} → \{result\}*\* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-[[ :interactive *interactive-expression |* :report *report-expression |* :test *test-expression* ]] *\{declaration\}*\* *\{form\}*\*) 
+[[ :interactive *interactive-expression |* :report *report-expression |* :test *test-expression* ]] <GlossaryTerm styled={true} term={"declaration"}><i>\{declaration\}</i></GlossaryTerm>\* <GlossaryTerm styled={true} term={"form"}><i>\{form\}</i></GlossaryTerm>\*) 
 
 
 
@@ -22,11 +22,11 @@
 
 
 
-*restartable-form*—a *form*. 
+*restartable-form*—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>. 
 
 
 
-*case-name*—a *symbol* or **nil**. 
+*case-name*—a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -34,27 +34,27 @@
 
 
 
-*interactive-expression*—a *symbol* or a *lambda expression*. 
+*interactive-expression*—a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> or a *lambda expression*. 
 
 
 
-*report-expression*—a *string*, a *symbol*, or a *lambda expression*. 
+*report-expression*—a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>, a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>, or a *lambda expression*. 
 
 
 
-*test-expression*—a *symbol* or a *lambda expression*. 
+*test-expression*—a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> or a *lambda expression*. 
 
 
 
-*declaration*—a **declare** *expression*; not evaluated. 
+<GlossaryTerm styled={true} term={"declaration"}><i>declaration</i></GlossaryTerm>—a <DictionaryLink styled={true} term={"declare"}><b>declare</b></DictionaryLink> <GlossaryTerm styled={true} term={"expression"}><i>expression</i></GlossaryTerm>; not evaluated. 
 
 
 
-*form*—a *form*. 
+<GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>. 
 
 
 
-*results*—the *values* resulting from the *evaluation* of *restartable-form*, or the *values* returned by the last *form* executed in a chosen *clause*, or **nil**. 
+*results*—the <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> resulting from the <GlossaryTerm styled={true} term={"evaluation"}><i>evaluation</i></GlossaryTerm> of *restartable-form*, or the <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> returned by the last <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> executed in a chosen *clause*, or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -62,7 +62,7 @@
 
 
 
-**restart-case** evaluates *restartable-form* in a *dynamic environment* where the clauses have special meanings as points to which control may be transferred. If *restartable-form* finishes executing and returns any values, all values returned are returned by **restart-case** and processing has completed. While *restartable-form* is executing, any code may transfer control to one of the clauses (see 
+<DictionaryLink styled={true} term={"restart-case"}><b>restart-case</b></DictionaryLink> evaluates *restartable-form* in a *dynamic environment* where the clauses have special meanings as points to which control may be transferred. If *restartable-form* finishes executing and returns any values, all values returned are returned by <DictionaryLink styled={true} term={"restart-case"}><b>restart-case</b></DictionaryLink> and processing has completed. While *restartable-form* is executing, any code may transfer control to one of the clauses (see 
 
 
 
@@ -78,35 +78,35 @@
 
 
 
-**restart-case** 
+<DictionaryLink styled={true} term={"restart-case"}><b>restart-case</b></DictionaryLink> 
 
 
 
-**invoke-restart**). If a transfer occurs, the forms in the body of that clause is evaluated and any values returned by the last such form are returned by **restart-case**. In this case, the dynamic state is unwound appropriately (so that the restarts established around the *restartable-form* are no longer active) prior to execution of the clause. 
+<DictionaryLink styled={true} term={"invoke-restart"}><b>invoke-restart</b></DictionaryLink>). If a transfer occurs, the forms in the body of that clause is evaluated and any values returned by the last such form are returned by <DictionaryLink styled={true} term={"restart-case"}><b>restart-case</b></DictionaryLink>. In this case, the dynamic state is unwound appropriately (so that the restarts established around the *restartable-form* are no longer active) prior to execution of the clause. 
 
 
 
-If there are no *forms* in a selected clause, **restart-case** returns **nil**. 
+If there are no <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm> in a selected clause, <DictionaryLink styled={true} term={"restart-case"}><b>restart-case</b></DictionaryLink> returns <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
-If *case-name* is a *symbol*, it names this restart. 
+If *case-name* is a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>, it names this restart. 
 
 
 
-It is possible to have more than one clause use the same *case-name*. In this case, the first clause with that name is found by **find-restart**. The other clauses are accessible using **compute-restarts**. 
+It is possible to have more than one clause use the same *case-name*. In this case, the first clause with that name is found by <DictionaryLink styled={true} term={"find-restart"}><b>find-restart</b></DictionaryLink>. The other clauses are accessible using <DictionaryLink styled={true} term={"compute-restarts"}><b>compute-restarts</b></DictionaryLink>. 
 
 
 
-Each *arglist* is an *ordinary lambda list* to be bound during the execution of its corresponding *forms*. These parameters are used by the **restart-case** clause to receive any necessary data from a call to **invoke-restart**. 
+Each *arglist* is an *ordinary lambda list* to be bound during the execution of its corresponding <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm>. These parameters are used by the <DictionaryLink styled={true} term={"restart-case"}><b>restart-case</b></DictionaryLink> clause to receive any necessary data from a call to <DictionaryLink styled={true} term={"invoke-restart"}><b>invoke-restart</b></DictionaryLink>. 
 
 
 
-By default, **invoke-restart-interactively** passes no arguments and all arguments must be optional in order to accomodate interactive restarting. However, the arguments need not be optional if the :interactive keyword has been used to inform **invoke-restart-interactively** about how to compute a proper argument list. 
+By default, <DictionaryLink styled={true} term={"invoke-restart-interactively"}><b>invoke-restart-interactively</b></DictionaryLink> passes no arguments and all arguments must be optional in order to accomodate interactive restarting. However, the arguments need not be optional if the :interactive keyword has been used to inform <DictionaryLink styled={true} term={"invoke-restart-interactively"}><b>invoke-restart-interactively</b></DictionaryLink> about how to compute a proper argument list. 
 
 
 
-*Keyword* options have the following meaning. 
+<GlossaryTerm styled={true} term={"keyword"}><i>Keyword</i></GlossaryTerm> options have the following meaning. 
 
 
 
@@ -114,7 +114,7 @@ By default, **invoke-restart-interactively** passes no arguments and all argumen
 
 
 
-The *value* supplied by :interactive *value* must be a suitable argument to **function**. (function *value*) is evaluated in the current lexical environment. It should return a *function* of no arguments which returns arguments to be used by **invoke-restart-interactively** when it is invoked. **invoke-restart-interactively** is called in the dynamic environment available prior to any restart attempt, and uses *query I/O* for user interaction. 
+The <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> supplied by :interactive <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> must be a suitable argument to <DictionaryLink styled={true} term={"function"}><b>function</b></DictionaryLink>. (function <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm>) is evaluated in the current lexical environment. It should return a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> of no arguments which returns arguments to be used by <DictionaryLink styled={true} term={"invoke-restart-interactively"}><b>invoke-restart-interactively</b></DictionaryLink> when it is invoked. <DictionaryLink styled={true} term={"invoke-restart-interactively"}><b>invoke-restart-interactively</b></DictionaryLink> is called in the dynamic environment available prior to any restart attempt, and uses *query I/O* for user interaction. 
 
 
 
@@ -126,11 +126,11 @@ If a restart is invoked interactively but no :interactive option was supplied, t
 
 
 
-If the *value* supplied by :report *value* is a *lambda expression* or a *symbol*, it must be acceptable to **function**. (function *value*) is evaluated in the current lexical environment. It should return a *function* of one argument, a *stream*, which prints on the *stream* a description of the restart. This *function* is called whenever the restart is printed while **\*print-escape\*** is **nil**. 
+If the <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> supplied by :report <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> is a *lambda expression* or a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>, it must be acceptable to <DictionaryLink styled={true} term={"function"}><b>function</b></DictionaryLink>. (function <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm>) is evaluated in the current lexical environment. It should return a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> of one argument, a <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>, which prints on the <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm> a description of the restart. This <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> is called whenever the restart is printed while <DictionaryLink styled={true} term={"print-escape"}><b>\*print-escape\*</b></DictionaryLink> is <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
-If *value* is a *string*, it is a shorthand for 
+If <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> is a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>, it is a shorthand for 
 
 
 
@@ -154,11 +154,11 @@ If a named restart is asked to report but no report information has been supplie
 
 
 
-**restart-case** 
+<DictionaryLink styled={true} term={"restart-case"}><b>restart-case</b></DictionaryLink> 
 
 
 
-When **\*print-escape\*** is **nil**, the printer uses the report information for a restart. For example, a debugger might announce the action of typing a “continue” command by: 
+When <DictionaryLink styled={true} term={"print-escape"}><b>\*print-escape\*</b></DictionaryLink> is <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>, the printer uses the report information for a restart. For example, a debugger might announce the action of typing a “continue” command by: 
 
 
 
@@ -182,11 +182,11 @@ The consequences are unspecified if an unnamed restart is specified but no :repo
 
 
 
-The *value* supplied by :test *value* must be a suitable argument to **function**. 
+The <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> supplied by :test <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> must be a suitable argument to <DictionaryLink styled={true} term={"function"}><b>function</b></DictionaryLink>. 
 
 
 
-(function *value*) is evaluated in the current lexical environment. It should return a *function* of one *argument*, the *condition*, that returns *true* if the restart is to be considered visible. 
+(function <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm>) is evaluated in the current lexical environment. It should return a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> of one <GlossaryTerm styled={true} term={"argument"}><i>argument</i></GlossaryTerm>, the <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm>, that returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if the restart is to be considered visible. 
 
 
 
@@ -194,7 +194,7 @@ The default for this option is equivalent to (lambda (c) (declare (ignore c)) t)
 
 
 
-If the *restartable-form* is a *list* whose *car* is any of the *symbols* **signal**, **error**, **cerror**, or **warn** (or is a *macro form* which macroexpands into such a *list*), then **with-condition-restarts** is used implicitly to associate the indicated *restarts* with the *condition* to be signaled. 
+If the *restartable-form* is a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> whose <GlossaryTerm styled={true} term={"car"}><i>car</i></GlossaryTerm> is any of the <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> <DictionaryLink styled={true} term={"signal"}><b>signal</b></DictionaryLink>, <DictionaryLink styled={true} term={"error"}><b>error</b></DictionaryLink>, <DictionaryLink styled={true} term={"cerror"}><b>cerror</b></DictionaryLink>, or <DictionaryLink styled={true} term={"warn"}><b>warn</b></DictionaryLink> (or is a *macro form* which macroexpands into such a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>), then <DictionaryLink styled={true} term={"with-condition-restarts"}><b>with-condition-restarts</b></DictionaryLink> is used implicitly to associate the indicated <GlossaryTerm styled={true} term={"restart"}><i>restarts</i></GlossaryTerm> with the <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> to be signaled. 
 
 
 
@@ -272,7 +272,7 @@ If the *restartable-form* is a *list* whose *car* is any of the *symbols* **sign
 
 
 
-**restart-bind**, **with-simple-restart**. 
+<DictionaryLink styled={true} term={"restart-bind"}><b>restart-bind</b></DictionaryLink>, <DictionaryLink styled={true} term={"with-simple-restart"}><b>with-simple-restart</b></DictionaryLink>. 
 
 
 
@@ -280,7 +280,7 @@ If the *restartable-form* is a *list* whose *car* is any of the *symbols* **sign
 
 
 
-(restart-case *expression* 
+(restart-case <GlossaryTerm styled={true} term={"expression"}><i>expression</i></GlossaryTerm> 
 
 
 
@@ -352,7 +352,7 @@ is essentially equivalent to
 
 
 
-(return-from #1# *expression*)) 
+(return-from #1# <GlossaryTerm styled={true} term={"expression"}><i>expression</i></GlossaryTerm>)) 
 
 
 

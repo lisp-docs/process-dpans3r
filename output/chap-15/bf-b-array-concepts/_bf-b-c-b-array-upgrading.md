@@ -2,11 +2,11 @@
 
 
 
-The *upgraded array element type* of a *type T*<sub>1</sub> is a *type T*<sub>2</sub> that is a *supertype* of *T*<sub>1</sub> and that is used instead of *T*<sub>1</sub> whenever *T*<sub>1</sub> is used as an *array element type* for object creation or type discrimination. 
+The *upgraded array element type* of a *type T*<sub>1</sub> is a *type T*<sub>2</sub> that is a <GlossaryTerm styled={true} term={"supertype"}><i>supertype</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"t"}><i>T</i></GlossaryTerm><sub>1</sub> and that is used instead of <GlossaryTerm styled={true} term={"t"}><i>T</i></GlossaryTerm><sub>1</sub> whenever <GlossaryTerm styled={true} term={"t"}><i>T</i></GlossaryTerm><sub>1</sub> is used as an *array element type* for object creation or type discrimination. 
 
 
 
-During creation of an *array*, the *element type* that was requested is called the *expressed array element type*. The *upgraded array element type* of the *expressed array element type* becomes the *actual array element type* of the *array* that is created. 
+During creation of an <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm>, the *element type* that was requested is called the *expressed array element type*. The *upgraded array element type* of the *expressed array element type* becomes the *actual array element type* of the <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm> that is created. 
 
 
 
@@ -14,7 +14,7 @@ During creation of an *array*, the *element type* that was requested is called t
 
 
 
-The *upgraded array element type T*<sub>2</sub> of a *type T*<sub>1</sub> is a function only of *T*<sub>1</sub> itself; that is, it is independent of any other property of the *array* for which *T*<sub>2</sub> will be used, such as *rank*, *adjustability*, *fill pointers*, or displacement. The *function* **upgraded-array-element-type** can be used by *conforming programs* to predict how the *implementation* will *upgrade* a given *type*. 
+The *upgraded array element type T*<sub>2</sub> of a *type T*<sub>1</sub> is a function only of <GlossaryTerm styled={true} term={"t"}><i>T</i></GlossaryTerm><sub>1</sub> itself; that is, it is independent of any other property of the <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm> for which <GlossaryTerm styled={true} term={"t"}><i>T</i></GlossaryTerm><sub>2</sub> will be used, such as <GlossaryTerm styled={true} term={"rank"}><i>rank</i></GlossaryTerm>, <GlossaryTerm styled={true} term={"adjustability"}><i>adjustability</i></GlossaryTerm>, *fill pointers*, or displacement. The <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> <DictionaryLink styled={true} term={"upgraded-array-element-type"}><b>upgraded-array-element-type</b></DictionaryLink> can be used by *conforming programs* to predict how the <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm> will <GlossaryTerm styled={true} term={"upgrade"}><i>upgrade</i></GlossaryTerm> a given <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm>. 
 
 
 

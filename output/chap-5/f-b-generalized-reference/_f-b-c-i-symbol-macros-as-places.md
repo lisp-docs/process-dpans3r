@@ -2,7 +2,7 @@
 
 
 
-A reference to a *symbol* that has been *established* as a *symbol macro* can be used as a *place*. In this case, **setf** expands the reference and then analyzes the resulting *form*. 
+A reference to a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> that has been *established* as a *symbol macro* can be used as a <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm>. In this case, <DictionaryLink styled={true} term={"setf"}><b>setf</b></DictionaryLink> expands the reference and then analyzes the resulting <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>. 
 
 
 

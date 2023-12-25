@@ -1,4 +1,4 @@
-**multiple-value-list** *Macro* 
+**multiple-value-list** <GlossaryTerm styled={true} term={"macro"}><i>Macro</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**multiple-value-list** *form ! list* 
+<DictionaryLink styled={true} term={"multiple-value-list"}><b>multiple-value-list</b></DictionaryLink> *form ! list* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*form*—a *form*; evaluated as described below. 
+<GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>; evaluated as described below. 
 
 
 
-*list*—a *list* of the *values* returned by *form*. 
+<GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of the <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> returned by <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>. 
 
 
 
@@ -38,7 +38,7 @@ Data and Control
 
 
 
-**multiple-value-list** evaluates *form* and creates a *list* of the *multiple values*<sub>2</sub> it returns. **Examples:**
+<DictionaryLink styled={true} term={"multiple-value-list"}><b>multiple-value-list</b></DictionaryLink> evaluates <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> and creates a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of the *multiple values*<sub>2</sub> it returns. **Examples:**
 ```lisp
 
 (multiple-value-list (floor -3 4)) *!* (-1 1) 
@@ -48,7 +48,7 @@ Data and Control
 
 
 
-**values-list**, **multiple-value-call** 
+<DictionaryLink styled={true} term={"values-list"}><b>values-list</b></DictionaryLink>, <DictionaryLink styled={true} term={"multiple-value-call"}><b>multiple-value-call</b></DictionaryLink> 
 
 
 
@@ -56,7 +56,7 @@ Data and Control
 
 
 
-**multiple-value-list** and **values-list** are inverses of each other. 
+<DictionaryLink styled={true} term={"multiple-value-list"}><b>multiple-value-list</b></DictionaryLink> and <DictionaryLink styled={true} term={"values-list"}><b>values-list</b></DictionaryLink> are inverses of each other. 
 
 
 

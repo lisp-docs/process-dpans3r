@@ -1,4 +1,4 @@
-**subsetp** *Function* 
+**subsetp** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**subsetp** *list-1 list-2* &amp;key *key test test-not → generalized-boolean* 
+<DictionaryLink styled={true} term={"subsetp"}><b>subsetp</b></DictionaryLink> *list-1 list-2* &amp;key *key test test-not → generalized-boolean* 
 
 
 
@@ -34,7 +34,7 @@
 
 
 
-*test*—a *designator* for a *function* of two *arguments* that returns a *generalized boolean*. *test-not*—a *designator* for a *function* of two *arguments* that returns a *generalized boolean*. *key*—a *designator* for a *function* of one argument, or **nil**. 
+*test*—a <GlossaryTerm styled={true} term={"designator"}><i>designator</i></GlossaryTerm> for a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> of two <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm> that returns a *generalized boolean*. *test-not<GlossaryTerm styled={true} term={"t"}><i>—a </i></GlossaryTerm>designator* for a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> of two <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm> that returns a *generalized boolean*. *key*—a *designator* for a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> of one argument, or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -46,7 +46,7 @@
 
 
 
-**subsetp** returns *true* if every element of *list-1* matches some element of *list-2*, and *false* otherwise. 
+<DictionaryLink styled={true} term={"subsetp"}><b>subsetp</b></DictionaryLink> returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if every element of *list-1* matches some element of *list-2*, and <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm> otherwise. 
 
 
 
@@ -54,7 +54,7 @@ Whether a list element is the same as another list element is determined by the 
 
 
 
-The argument to the :key function is an element of either *list-1* or *list-2*; the return value is part of the element of the supplied list element. If :key is not supplied or **nil**, the *list-1* or *list-2* element itself is supplied to the :test or :test-not function. 
+The argument to the :key function is an element of either *list-1* or *list-2*; the return value is part of the element of the supplied list element. If :key is not supplied or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>, the *list-1* or *list-2* element itself is supplied to the :test or :test-not function. 
 
 
 
@@ -74,7 +74,7 @@ The argument to the :key function is an element of either *list-1* or *list-2*; 
 
 
 
-Should be prepared to signal an error of *type* **type-error** if *list-1* and *list-2* are not *proper lists*. 
+Should be prepared to signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if *list-1* and *list-2* are not *proper lists*. 
 
 
 

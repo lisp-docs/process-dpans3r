@@ -6,7 +6,7 @@
 
 
 
-**arithmetic-error**, **error**, **serious-condition**, **condition**, **t** 
+<DictionaryLink styled={true} term={"arithmetic-error"}><b>arithmetic-error</b></DictionaryLink>, <DictionaryLink styled={true} term={"error"}><b>error</b></DictionaryLink>, <DictionaryLink styled={true} term={"serious-condition"}><b>serious-condition</b></DictionaryLink>, <DictionaryLink styled={true} term={"condition"}><b>condition</b></DictionaryLink>, <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink> 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-The *type* **arithmetic-error** consists of error conditions that occur during arithmetic operations. The operation and operands are initialized with the initialization arguments named :operation and :operands to **make-condition**, and are *accessed* by the functions **arithmetic-error-operation** and **arithmetic-error-operands**. 
+The <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"arithmetic-error"}><b>arithmetic-error</b></DictionaryLink> consists of error conditions that occur during arithmetic operations. The operation and operands are initialized with the initialization arguments named :operation and :operands to <DictionaryLink styled={true} term={"make-condition"}><b>make-condition</b></DictionaryLink>, and are *accessed* by the functions **arithmetic-error-operation** and **arithmetic-error-operands**. 
 
 
 
@@ -46,11 +46,11 @@ The *type* **arithmetic-error** consists of error conditions that occur during a
 
 
 
-*condition*—a *condition* of *type* **arithmetic-error**. 
+<GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"arithmetic-error"}><b>arithmetic-error</b></DictionaryLink>. 
 
 
 
-*operands*—a *list*. 
+*operands*—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>. 
 
 
 
@@ -62,7 +62,7 @@ The *type* **arithmetic-error** consists of error conditions that occur during a
 
 
 
-**arithmetic-error-operands** returns a *list* of the operands which were used in the o↵ending call to the operation that signaled the *condition*. 
+**arithmetic-error-operands** returns a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of the operands which were used in the o↵ending call to the operation that signaled the <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm>. 
 
 
 
@@ -78,7 +78,7 @@ The *type* **arithmetic-error** consists of error conditions that occur during a
 
 
 
-**arithmetic-error-operation** returns a *list* of the o↵ending operation in the o↵ending call that signaled the *condition*. 
+**arithmetic-error-operation** returns a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of the o↵ending operation in the o↵ending call that signaled the <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm>. 
 
 
 
@@ -86,7 +86,7 @@ The *type* **arithmetic-error** consists of error conditions that occur during a
 
 
 
-**arithmetic-error**, Chapter 9 (Conditions) 
+<DictionaryLink styled={true} term={"arithmetic-error"}><b>arithmetic-error</b></DictionaryLink>, Chapter 9 (Conditions) 
 
 
 

@@ -2,15 +2,15 @@
 
 
 
-A *generalized reference* is the use of a *form*, sometimes called a *place*, as if it were a *variable* that could be read and written. The *value* of a *place* is the *object* to which the *place form* evaluates. The *value* of a *place* can be changed by using **setf**. The concept of binding a *place* is not defined 
+A *generalized reference* is the use of a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>, sometimes called a <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm>, as if it were a <GlossaryTerm styled={true} term={"variable"}><i>variable</i></GlossaryTerm> that could be read and written. The <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of a <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm> is the <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> to which the *place form* evaluates. The <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of a <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm> can be changed by using <DictionaryLink styled={true} term={"setf"}><b>setf</b></DictionaryLink>. The concept of binding a <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm> is not defined 
 
 
 
-in Common Lisp, but an *implementation* is permitted to extend the language by defining this concept. 
+in Common Lisp, but an <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm> is permitted to extend the language by defining this concept. 
 
 
 
-Figure 5–1 contains examples of the use of **setf**. Note that the values returned by evaluating the *forms* in column two are not necessarily the same as those obtained by evaluating the *forms* in column three. In general, the exact *macro expansion* of a **setf** *form* is not guaranteed and can even be *implementation-dependent*; all that is guaranteed is that the expansion is an update form that works for that particular *implementation*, that the left-to-right evaluation of *subforms* is preserved, and that the ultimate result of evaluating **setf** is the value or values being stored. 
+Figure 5–1 contains examples of the use of <DictionaryLink styled={true} term={"setf"}><b>setf</b></DictionaryLink>. Note that the values returned by evaluating the <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm> in column two are not necessarily the same as those obtained by evaluating the <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm> in column three. In general, the exact *macro expansion* of a <DictionaryLink styled={true} term={"setf"}><b>setf</b></DictionaryLink> <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> is not guaranteed and can even be <GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm>; all that is guaranteed is that the expansion is an update form that works for that particular <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm>, that the left-to-right evaluation of <GlossaryTerm styled={true} term={"subform"}><i>subforms</i></GlossaryTerm> is preserved, and that the ultimate result of evaluating <DictionaryLink styled={true} term={"setf"}><b>setf</b></DictionaryLink> is the value or values being stored. 
 
 
 
@@ -30,7 +30,7 @@ Figure 5–1 contains examples of the use of **setf**. Note that the values retu
 
 
 
-Figure 5–2 shows *operators* relating to *places* and *generalized reference*. 
+Figure 5–2 shows <GlossaryTerm styled={true} term={"operator"}><i>operators</i></GlossaryTerm> relating to <GlossaryTerm styled={true} term={"place"}><i>places</i></GlossaryTerm> and *generalized reference*. 
 
 
 
@@ -46,7 +46,7 @@ Figure 5–2 shows *operators* relating to *places* and *generalized reference*.
 
 
 
-Some of the *operators* above manipulate *places* and some manipulate *setf expanders*. A *setf expansion* can be derived from any *place*. New *setf expanders* can be defined by using **defsetf** and **define-setf-expander**. 
+Some of the <GlossaryTerm styled={true} term={"operator"}><i>operators</i></GlossaryTerm> above manipulate <GlossaryTerm styled={true} term={"place"}><i>places</i></GlossaryTerm> and some manipulate *setf expanders*. A *setf expansion* can be derived from any <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm>. New *setf expanders* can be defined by using <DictionaryLink styled={true} term={"defsetf"}><b>defsetf</b></DictionaryLink> and <DictionaryLink styled={true} term={"define-setf-expander"}><b>define-setf-expander</b></DictionaryLink>. 
 
 
 

@@ -6,7 +6,7 @@
 
 
 
-A non-negative *integer* , the exact magnitude of which is *implementation-dependent*, but which is not less than 96 (the number of *standard characters*). 
+A non-negative *integer* , the exact magnitude of which is <GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm>, but which is not less than 96 (the number of *standard characters*). 
 
 
 
@@ -14,7 +14,7 @@ A non-negative *integer* , the exact magnitude of which is *implementation-depen
 
 
 
-The upper exclusive bound on the *value* returned by the *function* **char-code**. 
+The upper exclusive bound on the <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> returned by the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> <DictionaryLink styled={true} term={"char-code"}><b>char-code</b></DictionaryLink>. 
 
 
 
@@ -22,7 +22,7 @@ The upper exclusive bound on the *value* returned by the *function* **char-code*
 
 
 
-**char-code** 
+<DictionaryLink styled={true} term={"char-code"}><b>char-code</b></DictionaryLink> 
 
 
 
@@ -30,7 +30,7 @@ The upper exclusive bound on the *value* returned by the *function* **char-code*
 
 
 
-The *value* of **char-code-limit** might be larger than the actual number of *characters* supported by the *implementation*. 
+The <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of <DictionaryLink styled={true} term={"char-code-limit"}><b>char-code-limit</b></DictionaryLink> might be larger than the actual number of <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm> supported by the <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm>. 
 
 
 
@@ -46,7 +46,7 @@ The *value* of **char-code-limit** might be larger than the actual number of *ch
 
 
 
-**char-name** 
+<DictionaryLink styled={true} term={"char-name"}><b>char-name</b></DictionaryLink> 
 
 
 

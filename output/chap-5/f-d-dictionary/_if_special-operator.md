@@ -6,7 +6,7 @@
 
 
 
-**if** *test-form then-form* [*else-form*] *→ \{result\}*\* 
+<DictionaryLink styled={true} term={"if"}><b>if</b></DictionaryLink> *test-form then-form* [*else-form*] *→ \{result\}*\* 
 
 
 
@@ -14,19 +14,19 @@
 
 
 
-*Test-form*—a *form*. 
+*Test-form*—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>. 
 
 
 
-*Then-form*—a *form*. 
+*Then-form*—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>. 
 
 
 
-*Else-form*—a *form*. The default is **nil**. 
+*Else-form*—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>. The default is <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
-*results*—if the *test-form yielded true*, the *values* returned by the *then-form*; otherwise, the *values* returned by the *else-form*. 
+*results*—if the *test-form yielded true*, the <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> returned by the *then-form*; otherwise, the <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> returned by the *else-form*. 
 
 
 
@@ -46,11 +46,11 @@
 
 
 
-**if** allows the execution of a *form* to be dependent on a single *test-form*. 
+<DictionaryLink styled={true} term={"if"}><b>if</b></DictionaryLink> allows the execution of a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> to be dependent on a single *test-form*. 
 
 
 
-First *test-form* is evaluated. If the result is *true*, then *then-form* is selected; otherwise *else-form* is selected. Whichever form is selected is then evaluated. 
+First *test-form* is evaluated. If the result is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>, then *then-form* is selected; otherwise *else-form* is selected. Whichever form is selected is then evaluated. 
 
 
 
@@ -75,7 +75,7 @@ First *test-form* is evaluated. If the result is *true*, then *then-form* is sel
 
 
 
-**cond**, **unless**, **when** 
+<DictionaryLink styled={true} term={"cond"}><b>cond</b></DictionaryLink>, <DictionaryLink styled={true} term={"unless"}><b>unless</b></DictionaryLink>, <DictionaryLink styled={true} term={"when"}><b>when</b></DictionaryLink> 
 
 
 

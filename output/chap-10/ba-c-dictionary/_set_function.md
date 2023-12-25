@@ -1,4 +1,4 @@
-**set** *Function* 
+**set** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**set** *symbol value → value* 
+<DictionaryLink styled={true} term={"set"}><b>set</b></DictionaryLink> *symbol value → value* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*symbol*—a *symbol*. 
+<GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>. 
 
 
 
-*value*—an *object*. 
+<GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -26,11 +26,11 @@
 
 
 
-**set** changes the contents of the *value cell* of *symbol* to the given *value*. 
+<DictionaryLink styled={true} term={"set"}><b>set</b></DictionaryLink> changes the contents of the *value cell* of <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> to the given <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm>. 
 
 
 
-(set *symbol value*) *≡* (setf (symbol-value *symbol*) *value*) 
+(set *symbol value*) *≡* (setf (symbol-value <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>) <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm>) 
 
 
 
@@ -78,7 +78,7 @@ n *→* 44
 
 
 
-The *value* of *symbol* is changed. 
+The <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> is changed. 
 
 
 
@@ -86,7 +86,7 @@ The *value* of *symbol* is changed.
 
 
 
-**setq**, **progv**, **symbol-value** 
+<DictionaryLink styled={true} term={"setq"}><b>setq</b></DictionaryLink>, <DictionaryLink styled={true} term={"progv"}><b>progv</b></DictionaryLink>, <DictionaryLink styled={true} term={"symbol-value"}><b>symbol-value</b></DictionaryLink> 
 
 
 
@@ -94,11 +94,11 @@ The *value* of *symbol* is changed.
 
 
 
-The function **set** is deprecated. 
+The function <DictionaryLink styled={true} term={"set"}><b>set</b></DictionaryLink> is deprecated. 
 
 
 
-**set** cannot change the value of a *lexical variable*. 
+<DictionaryLink styled={true} term={"set"}><b>set</b></DictionaryLink> cannot change the value of a *lexical variable*. 
 
 
 

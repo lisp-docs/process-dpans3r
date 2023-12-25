@@ -1,4 +1,4 @@
-**class-of** *Function* 
+**class-of** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**class-of** *object ! class* 
+<DictionaryLink styled={true} term={"class-of"}><b>class-of</b></DictionaryLink> *object ! class* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*object*—an *object*. 
+<GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
-*class*—a *class object*. 
+<GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm>—a *class object*. 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-Returns the *class* of which the *object* is a *direct instance*. 
+Returns the <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm> of which the <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is a *direct instance*. 
 
 
 
@@ -50,7 +50,7 @@ Returns the *class* of which the *object* is a *direct instance*.
 
 
 
-**make-instance**, **type-of** 
+<DictionaryLink styled={true} term={"make-instance"}><b>make-instance</b></DictionaryLink>, <DictionaryLink styled={true} term={"type-of"}><b>type-of</b></DictionaryLink> 
 
 
 

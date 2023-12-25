@@ -1,4 +1,4 @@
-**get-setf-expansion** *Function* 
+**get-setf-expansion** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**get-setf-expansion** *place* &amp;optional *environment* 
+<DictionaryLink styled={true} term={"get-setf-expansion"}><b>get-setf-expansion</b></DictionaryLink> <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm> &amp;optional <GlossaryTerm styled={true} term={"environment"}><i>environment</i></GlossaryTerm> 
 
 
 
@@ -18,11 +18,11 @@
 
 
 
-*place*—a *place*. 
+<GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm>. 
 
 
 
-*environment*—an *environment object*. 
+<GlossaryTerm styled={true} term={"environment"}><i>environment</i></GlossaryTerm>—an *environment object*. 
 
 
 
@@ -34,7 +34,7 @@
 
 
 
-Determines five values constituting the *setf expansion* for *place* in *environment*; see Section 5.1.1.2 (Setf Expansions). 
+Determines five values constituting the *setf expansion* for <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm> in <GlossaryTerm styled={true} term={"environment"}><i>environment</i></GlossaryTerm>; see Section 5.1.1.2 (Setf Expansions). 
 
 
 
@@ -50,7 +50,7 @@ Determines five values constituting the *setf expansion* for *place* in *environ
 
 
 
-If *environment* is not supplied or **nil**, the environment is the *null lexical environment*. **Examples:**
+If <GlossaryTerm styled={true} term={"environment"}><i>environment</i></GlossaryTerm> is not supplied or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>, the environment is the *null lexical environment<GlossaryTerm styled={true} term={"t"}><i>. </i></GlossaryTerm>*Examples:**
 ```lisp
 
 (get-setf-expansion ’x) 
@@ -74,7 +74,7 @@ If *environment* is not supplied or **nil**, the environment is the *null lexica
 
 
 
-**defsetf**, **define-setf-expander**, **setf** 
+<DictionaryLink styled={true} term={"defsetf"}><b>defsetf</b></DictionaryLink>, <DictionaryLink styled={true} term={"define-setf-expander"}><b>define-setf-expander</b></DictionaryLink>, <DictionaryLink styled={true} term={"setf"}><b>setf</b></DictionaryLink> 
 
 
 
@@ -82,7 +82,7 @@ If *environment* is not supplied or **nil**, the environment is the *null lexica
 
 
 
-Any *compound form* is a valid *place*, since any *compound form* whose *operator f* has no *setf expander* are expanded into a call to (setf *f* ). 
+Any *compound form* is a valid <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm>, since any *compound form* whose *operator f* has no *setf expander* are expanded into a call to (setf *f* ). 
 
 
 

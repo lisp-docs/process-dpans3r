@@ -1,4 +1,4 @@
-**symbolp** *Function* 
+**symbolp** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**symbolp** *object → generalized-boolean* 
+<DictionaryLink styled={true} term={"symbolp"}><b>symbolp</b></DictionaryLink> *object → generalized-boolean* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*object*—an *object*. 
+<GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-Returns *true* if *object* is of *type* **symbol**; otherwise, returns *false*. 
+Returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"symbol"}><b>symbol</b></DictionaryLink>; otherwise, returns <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
@@ -45,7 +45,7 @@ Returns *true* if *object* is of *type* **symbol**; otherwise, returns *false*.
 
 
 
-**keywordp**, **symbol**, **typep** 
+<DictionaryLink styled={true} term={"keywordp"}><b>keywordp</b></DictionaryLink>, <DictionaryLink styled={true} term={"symbol"}><b>symbol</b></DictionaryLink>, <DictionaryLink styled={true} term={"typep"}><b>typep</b></DictionaryLink> 
 
 
 
@@ -65,7 +65,7 @@ Returns *true* if *object* is of *type* **symbol**; otherwise, returns *false*.
 
 
 
-(symbolp *object*) *≡* (typep *object* ’symbol) 
+(symbolp <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>) *≡* (typep <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> ’symbol) 
 
 
 

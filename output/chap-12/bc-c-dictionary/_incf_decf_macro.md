@@ -1,4 +1,4 @@
-**incf, decf** *Macro* 
+**incf, decf** <GlossaryTerm styled={true} term={"macro"}><i>Macro</i></GlossaryTerm> 
 
 
 
@@ -6,11 +6,11 @@
 
 
 
-**incf** *place* [*delta-form*] *→ new-value* 
+<DictionaryLink styled={true} term={"incf"}><b>incf</b></DictionaryLink> <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm> [*delta-form*] *→ new-value* 
 
 
 
-**decf** *place* [*delta-form*] *→ new-value* 
+<DictionaryLink styled={true} term={"decf"}><b>decf</b></DictionaryLink> <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm> [*delta-form*] *→ new-value* 
 
 
 
@@ -18,19 +18,19 @@
 
 
 
-*place*—a *place*. 
+<GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm>. 
 
 
 
-*delta-form*—a *form*; evaluated to produce a *delta*. The default is 1. 
+*delta-form*—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>; evaluated to produce a *delta*. The default is 1. 
 
 
 
-*delta*—a *number* . 
+*delta*—a <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> . 
 
 
 
-*new-value*—a *number* . 
+*new-value*—a <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> . 
 
 
 
@@ -50,11 +50,11 @@
 
 
 
-**incf** and **decf** are used for incrementing and decrementing the *value* of *place*, respectively. 
+<DictionaryLink styled={true} term={"incf"}><b>incf</b></DictionaryLink> and <DictionaryLink styled={true} term={"decf"}><b>decf</b></DictionaryLink> are used for incrementing and decrementing the <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm>, respectively. 
 
 
 
-The *delta* is added to (in the case of **incf**) or subtracted from (in the case of **decf**) the number in *place* and the result is stored in *place*. 
+The *delta* is added to (in the case of <DictionaryLink styled={true} term={"incf"}><b>incf</b></DictionaryLink>) or subtracted from (in the case of <DictionaryLink styled={true} term={"decf"}><b>decf</b></DictionaryLink>) the number in <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm> and the result is stored in <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm>. 
 
 
 
@@ -62,7 +62,7 @@ Any necessary type conversions are performed automatically.
 
 
 
-For information about the *evaluation* of *subforms* of *places*, see Section 5.1.1.1 (Evaluation of Subforms to Places). 
+For information about the <GlossaryTerm styled={true} term={"evaluation"}><i>evaluation</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"subform"}><i>subforms</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"place"}><i>places</i></GlossaryTerm>, see Section 5.1.1.1 (Evaluation of Subforms to Places). 
 
 
 
@@ -85,7 +85,7 @@ n *→* 1.5
 
 
 
-*Place* is modified. 
+<GlossaryTerm styled={true} term={"place"}><i>Place</i></GlossaryTerm> is modified. 
 
 
 
@@ -93,7 +93,7 @@ n *→* 1.5
 
 
 
-**+**, **-**, **1+**, **1-**, **setf** 
+<DictionaryLink styled={true} term={"+"}><b>+</b></DictionaryLink>, <DictionaryLink styled={true} term={"-"}><b>-</b></DictionaryLink>, <DictionaryLink styled={true} term={"1+"}><b>1+</b></DictionaryLink>, **1-**, <DictionaryLink styled={true} term={"setf"}><b>setf</b></DictionaryLink> 
 
 
 

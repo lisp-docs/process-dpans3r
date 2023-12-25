@@ -1,4 +1,4 @@
-**package-used-by-list** *Function* 
+**package-used-by-list** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**package-used-by-list** *package → used-by-list* 
+<DictionaryLink styled={true} term={"package-used-by-list"}><b>package-used-by-list</b></DictionaryLink> *package → used-by-list* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*package*—a *package designator* . 
+<GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>—a *package designator* . 
 
 
 
-*used-by-list*—a *list* of *package objects*. 
+*used-by-list*—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of *package objects*. 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-**package-used-by-list** returns a *list* of other *packages* that use *package*. 
+<DictionaryLink styled={true} term={"package-used-by-list"}><b>package-used-by-list</b></DictionaryLink> returns a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of other <GlossaryTerm styled={true} term={"package"}><i>packages</i></GlossaryTerm> that use <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>. 
 
 
 
@@ -42,7 +42,7 @@
 
 
 
-Should signal an error of *type* **type-error** if *package* is not a *package*. 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> is not a <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>. 
 
 
 
@@ -50,7 +50,7 @@ Should signal an error of *type* **type-error** if *package* is not a *package*.
 
 
 
-**use-package**, **unuse-package** 
+<DictionaryLink styled={true} term={"use-package"}><b>use-package</b></DictionaryLink>, <DictionaryLink styled={true} term={"unuse-package"}><b>unuse-package</b></DictionaryLink> 
 
 
 

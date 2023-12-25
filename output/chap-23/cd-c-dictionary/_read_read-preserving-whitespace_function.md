@@ -1,4 +1,4 @@
-**read, read-preserving-whitespace** *Function* 
+**read, read-preserving-whitespace** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,11 +6,11 @@
 
 
 
-**read** &amp;optional *input-stream eof-error-p eof-value recursive-p → object* 
+<DictionaryLink styled={true} term={"read"}><b>read</b></DictionaryLink> &amp;optional *input-stream eof-error-p eof-value recursive-p → object* 
 
 
 
-**read-preserving-whitespace** &amp;optional *input-stream eof-error-p* 
+<DictionaryLink styled={true} term={"read-preserving-whitespace"}><b>read-preserving-whitespace</b></DictionaryLink> &amp;optional *input-stream eof-error-p* 
 
 
 
@@ -30,19 +30,19 @@
 
 
 
-*eof-error-p*—a *generalized boolean*. The default is *true*. 
+*eof-error-p*—a *generalized boolean*. The default is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>. 
 
 
 
-*eof-value*—an *object*. The default is **nil**. 
+*eof-value*—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. The default is <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
-*recursive-p*—a *generalized boolean*. The default is *false*. 
+*recursive-p*—a *generalized boolean*. The default is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
-*object*—an *object* (parsed by the *Lisp reader* ) or the *eof-value*. 
+<GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> (parsed by the *Lisp reader* ) or the *eof-value*. 
 
 
 
@@ -50,11 +50,11 @@
 
 
 
-**read** parses the printed representation of an *object* from *input-stream* and builds such an *object*. 
+<DictionaryLink styled={true} term={"read"}><b>read</b></DictionaryLink> parses the printed representation of an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> from *input-stream* and builds such an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
-**read-preserving-whitespace** is like **read** but preserves any *whitespace*<sub>2</sub> *character* that delimits the printed representation of the *object*. **read-preserving-whitespace** is exactly like **read** when the *recursive-p argument* to **read-preserving-whitespace** is *true*. 
+<DictionaryLink styled={true} term={"read-preserving-whitespace"}><b>read-preserving-whitespace</b></DictionaryLink> is like <DictionaryLink styled={true} term={"read"}><b>read</b></DictionaryLink> but preserves any <GlossaryTerm styled={true} term={"whitespace"}><i>whitespace</i></GlossaryTerm><sub>2</sub> <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> that delimits the printed representation of the <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. <DictionaryLink styled={true} term={"read-preserving-whitespace"}><b>read-preserving-whitespace</b></DictionaryLink> is exactly like <DictionaryLink styled={true} term={"read"}><b>read</b></DictionaryLink> when the *recursive-p argument* to <DictionaryLink styled={true} term={"read-preserving-whitespace"}><b>read-preserving-whitespace</b></DictionaryLink> is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>. 
 
 
 
@@ -74,19 +74,19 @@
 
 
 
-When **\*read-suppress\*** is *false*, **read** throws away the delimiting *character* required by certain printed representations if it is a *whitespace*<sub>2</sub> *character* ; but **read** preserves the character (using **unread-char**) if it is syntactically meaningful, because it could be the start of the next expression. 
+When <DictionaryLink styled={true} term={"read-suppress"}><b>\*read-suppress\*</b></DictionaryLink> is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>, <DictionaryLink styled={true} term={"read"}><b>read</b></DictionaryLink> throws away the delimiting <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> required by certain printed representations if it is a <GlossaryTerm styled={true} term={"whitespace"}><i>whitespace</i></GlossaryTerm><sub>2</sub> <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> ; but <DictionaryLink styled={true} term={"read"}><b>read</b></DictionaryLink> preserves the character (using <DictionaryLink styled={true} term={"unread-char"}><b>unread-char</b></DictionaryLink>) if it is syntactically meaningful, because it could be the start of the next expression. 
 
 
 
-If a file ends in a *symbol* or a *number* immediately followed by an *end of file*<sub>1</sub>, **read** reads the *symbol* or *number* successfully; when called again, it sees the *end of file*<sub>1</sub> and only then acts according to *eof-error-p*. If a file contains ignorable text at the end, such as blank lines and comments, **read** does not consider it to end in the middle of an *object*. 
+If a file ends in a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> or a <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> immediately followed by an *end of file*<sub>1</sub>, <DictionaryLink styled={true} term={"read"}><b>read</b></DictionaryLink> reads the <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> or <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> successfully; when called again, it sees the *end of file*<sub>1</sub> and only then acts according to *eof-error-p*. If a file contains ignorable text at the end, such as blank lines and comments, <DictionaryLink styled={true} term={"read"}><b>read</b></DictionaryLink> does not consider it to end in the middle of an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
-If *recursive-p* is *true*, the call to **read** is expected to be made from within some function that itself has been called from **read** or from a similar input function, rather than from the top level. 
+If *recursive-p* is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>, the call to <DictionaryLink styled={true} term={"read"}><b>read</b></DictionaryLink> is expected to be made from within some function that itself has been called from <DictionaryLink styled={true} term={"read"}><b>read</b></DictionaryLink> or from a similar input function, rather than from the top level. 
 
 
 
-Both functions return the *object* read from *input-stream*. *Eof-value* is returned if *eof-error-p* is *false* and end of file is reached before the beginning of an *object*. 
+Both functions return the <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> read from *input-stream*. *Eof-value* is returned if *eof-error-p* is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm> and end of file is reached before the beginning of an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -130,7 +130,7 @@ Both functions return the *object* read from *input-stream*. *Eof-value* is retu
 
 
 
-**\*standard-input\***, **\*terminal-io\***, **\*readtable\***, **\*read-default-float-format\***, **\*read-base\***, **\*read-suppress\***, **\*package\***, **\*read-eval\***. 
+**\*standard-input\***, <DictionaryLink styled={true} term={"terminal-io"}><b>\*terminal-io\*</b></DictionaryLink>, <DictionaryLink styled={true} term={"readtable"}><b>\*readtable\*</b></DictionaryLink>, <DictionaryLink styled={true} term={"read-default-float-format"}><b>\*read-default-float-format\*</b></DictionaryLink>, **\*read-base\***, <DictionaryLink styled={true} term={"read-suppress"}><b>\*read-suppress\*</b></DictionaryLink>, <DictionaryLink styled={true} term={"package"}><b>\*package\*</b></DictionaryLink>, **\*read-eval\***. 
 
 
 
@@ -138,11 +138,11 @@ Both functions return the *object* read from *input-stream*. *Eof-value* is retu
 
 
 
-**read** signals an error of *type* **end-of-file**, regardless of *eof-error-p*, if the file ends in the middle of an *object* representation. For example, if a file does not contain enough right parentheses to balance the left parentheses in it, **read** signals an error. This is detected when **read** or **read-preserving-whitespace** is called with *recursive-p* and *eof-error-p non-nil*, and end-of-file is reached before the beginning of an *object*. 
+<DictionaryLink styled={true} term={"read"}><b>read</b></DictionaryLink> signals an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"end-of-file"}><b>end-of-file</b></DictionaryLink>, regardless of *eof-error-p*, if the file ends in the middle of an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> representation. For example, if a file does not contain enough right parentheses to balance the left parentheses in it, <DictionaryLink styled={true} term={"read"}><b>read</b></DictionaryLink> signals an error. This is detected when <DictionaryLink styled={true} term={"read"}><b>read</b></DictionaryLink> or <DictionaryLink styled={true} term={"read-preserving-whitespace"}><b>read-preserving-whitespace</b></DictionaryLink> is called with *recursive-p* and *eof-error-p non-nil*, and end-of-file is reached before the beginning of an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
-If *eof-error-p* is *true*, an error of *type* **end-of-file** is signaled at the end of file. 
+If *eof-error-p* is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>, an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"end-of-file"}><b>end-of-file</b></DictionaryLink> is signaled at the end of file. 
 
 
 
@@ -150,7 +150,7 @@ If *eof-error-p* is *true*, an error of *type* **end-of-file** is signaled at th
 
 
 
-**peek-char**, **read-char**, **unread-char**, **read-from-string**, **read-delimited-list**, **parse-integer**, Chapter 2 (Syntax), Section 23.1 (Reader Concepts) 
+<DictionaryLink styled={true} term={"peek-char"}><b>peek-char</b></DictionaryLink>, <DictionaryLink styled={true} term={"read-char"}><b>read-char</b></DictionaryLink>, <DictionaryLink styled={true} term={"unread-char"}><b>unread-char</b></DictionaryLink>, <DictionaryLink styled={true} term={"read-from-string"}><b>read-from-string</b></DictionaryLink>, <DictionaryLink styled={true} term={"read-delimited-list"}><b>read-delimited-list</b></DictionaryLink>, <DictionaryLink styled={true} term={"parse-integer"}><b>parse-integer</b></DictionaryLink>, Chapter 2 (Syntax), Section 23.1 (Reader Concepts) 
 
 
 

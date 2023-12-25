@@ -2,11 +2,11 @@
 
 
 
-The **defclass** form for a *class* provides a total ordering on that *class* and its direct *superclasses*. This ordering is called the *local precedence order*. It is an ordered list of the *class* and its direct *superclasses*. The *class precedence list* for a class *C* is a total ordering on *C* and its *superclasses* that is consistent with the *local precedence orders* for each of *C* and its *superclasses*. 
+The <DictionaryLink styled={true} term={"defclass"}><b>defclass</b></DictionaryLink> form for a <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm> provides a total ordering on that <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm> and its direct *superclasses*. This ordering is called the *local precedence order*. It is an ordered list of the <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm> and its direct *superclasses*. The *class precedence list* for a class *C* is a total ordering on *C* and its *superclasses* that is consistent with the *local precedence orders* for each of *C* and its *superclasses*. 
 
 
 
-A *class* precedes its direct *superclasses*, and a direct *superclass* precedes all other direct *superclasses* specified to its right in the *superclasses* list of the **defclass** form. For every class *C*, define 
+A <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm> precedes its direct *superclasses*, and a direct <GlossaryTerm styled={true} term={"superclass"}><i>superclass</i></GlossaryTerm> precedes all other direct *superclasses* specified to its right in the *superclasses* list of the <DictionaryLink styled={true} term={"defclass"}><b>defclass</b></DictionaryLink> form. For every class *C*, define 
 
 
 

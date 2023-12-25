@@ -1,4 +1,4 @@
-**write-char** *Function* 
+**write-char** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**write-char** *character* &amp;optional *output-stream → character* 
+<DictionaryLink styled={true} term={"write-char"}><b>write-char</b></DictionaryLink> <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> &amp;optional *output-stream → character* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*character*—a *character* . 
+<GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> . 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-**write-char** outputs *character* to *output-stream*. 
+<DictionaryLink styled={true} term={"write-char"}><b>write-char</b></DictionaryLink> outputs <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> to *output-stream*. 
 
 
 
@@ -55,7 +55,7 @@ The *output-stream* is modified.
 
 
 
-**\*standard-output\***, **\*terminal-io\***. 
+**\*standard-output\***, <DictionaryLink styled={true} term={"terminal-io"}><b>\*terminal-io\*</b></DictionaryLink>. 
 
 
 
@@ -63,7 +63,7 @@ The *output-stream* is modified.
 
 
 
-**read-char**, **write-byte**, **write-sequence** 
+<DictionaryLink styled={true} term={"read-char"}><b>read-char</b></DictionaryLink>, <DictionaryLink styled={true} term={"write-byte"}><b>write-byte</b></DictionaryLink>, <DictionaryLink styled={true} term={"write-sequence"}><b>write-sequence</b></DictionaryLink> 
 
 
 
@@ -79,7 +79,7 @@ The *output-stream* is modified.
 
 
 
-**read-line** 
+<DictionaryLink styled={true} term={"read-line"}><b>read-line</b></DictionaryLink> 
 
 
 

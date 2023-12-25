@@ -1,4 +1,4 @@
-**gentemp** *Function* 
+**gentemp** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**gentemp** &amp;optional *prefix package → new-symbol* 
+<DictionaryLink styled={true} term={"gentemp"}><b>gentemp</b></DictionaryLink> &amp;optional *prefix package → new-symbol* 
 
 
 
@@ -14,15 +14,15 @@
 
 
 
-*prefix*—a *string*. The default is "T". 
+*prefix*—a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>. The default is "T". 
 
 
 
-*package*—a *package designator* . The default is the *current package*. 
+<GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>—a *package designator* . The default is the *current package*. 
 
 
 
-*new-symbol*—a *fresh*, *interned symbol*. 
+*new-symbol*—a <GlossaryTerm styled={true} term={"fresh"}><i>fresh</i></GlossaryTerm>, *interned symbol*. 
 
 
 
@@ -30,11 +30,11 @@
 
 
 
-**gentemp** creates and returns a *fresh symbol*, *interned* in the indicated *package*. The *symbol* is guaranteed to be one that was not previously *accessible* in *package*. It is neither *bound* nor *fbound*, and has a *null property list*. 
+<DictionaryLink styled={true} term={"gentemp"}><b>gentemp</b></DictionaryLink> creates and returns a *fresh symbol*, *interned* in the indicated <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>. The <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> is guaranteed to be one that was not previously <GlossaryTerm styled={true} term={"accessible"}><i>accessible</i></GlossaryTerm> in <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>. It is neither <GlossaryTerm styled={true} term={"bound"}><i>bound</i></GlossaryTerm> nor <GlossaryTerm styled={true} term={"fbound"}><i>fbound</i></GlossaryTerm>, and has a *null property list*. 
 
 
 
-The *name* of the *new-symbol* is the concatenation of the *prefix* and a suffix, which is taken from an internal counter used only by **gentemp**. (If a *symbol* by that name is already *accessible* in *package*, the counter is incremented as many times as is necessary to produce a *name* that is not already the *name* of a *symbol accessible* in *package*.) 
+The <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> of the *new-symbol* is the concatenation of the *prefix* and a suffix, which is taken from an internal counter used only by <DictionaryLink styled={true} term={"gentemp"}><b>gentemp</b></DictionaryLink>. (If a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> by that name is already <GlossaryTerm styled={true} term={"accessible"}><i>accessible</i></GlossaryTerm> in <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>, the counter is incremented as many times as is necessary to produce a <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> that is not already the <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> of a *symbol accessible* in <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>.) 
 
 
 
@@ -59,7 +59,7 @@ Its internal counter is incremented one or more times.
 
 
 
-*Interns* the *new-symbol* in *package*. 
+<GlossaryTerm styled={true} term={"intern"}><i>Interns</i></GlossaryTerm> the *new-symbol* in <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>. 
 
 
 
@@ -67,7 +67,7 @@ Its internal counter is incremented one or more times.
 
 
 
-The current state of its internal counter, and the current state of the *package*. 
+The current state of its internal counter, and the current state of the <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>. 
 
 
 
@@ -87,7 +87,7 @@ The current state of its internal counter, and the current state of the *package
 
 
 
-Should signal an error of *type* **type-error** if *prefix* is not a *string*. Should signal an error of *type* **type-error** if *package* is not a *package designator* . 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if *prefix* is not a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>. Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> is not a *package designator* . 
 
 
 
@@ -95,7 +95,7 @@ Should signal an error of *type* **type-error** if *prefix* is not a *string*. S
 
 
 
-**gensym** 
+<DictionaryLink styled={true} term={"gensym"}><b>gensym</b></DictionaryLink> 
 
 
 
@@ -103,19 +103,19 @@ Should signal an error of *type* **type-error** if *prefix* is not a *string*. S
 
 
 
-The function **gentemp** is deprecated. 
+The function <DictionaryLink styled={true} term={"gentemp"}><b>gentemp</b></DictionaryLink> is deprecated. 
 
 
 
-If *package* is the KEYWORD *package*, the result is an *external symbol* of *package*. Otherwise, the result is an *internal symbol* of *package*. 
+If <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> is the KEYWORD <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>, the result is an *external symbol* of <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>. Otherwise, the result is an *internal symbol* of <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>. 
 
 
 
-The **gentemp** internal counter is independent of **\*gensym-counter\***, the counter used by **gensym**. There is no provision for accessing the **gentemp** internal counter. 
+The <DictionaryLink styled={true} term={"gentemp"}><b>gentemp</b></DictionaryLink> internal counter is independent of <DictionaryLink styled={true} term={"gensym-counter"}><b>\*gensym-counter\*</b></DictionaryLink>, the counter used by <DictionaryLink styled={true} term={"gensym"}><b>gensym</b></DictionaryLink>. There is no provision for accessing the <DictionaryLink styled={true} term={"gentemp"}><b>gentemp</b></DictionaryLink> internal counter. 
 
 
 
-Just because **gentemp** creates a *symbol* which did not previously exist does not mean that such a *symbol* might not be seen in the future (*e.g.*, in a data file—perhaps even created by the same program in another session). As such, this symbol is not truly unique in the same sense as a *gensym* would be. In particular, programs which do automatic code generation should be careful not to attach global attributes to such generated *symbols* (*e.g.*, **special** *declarations*) and then write them into a file because such global attributes might, in a different session, end up applying to other *symbols* that were automatically generated on another day for some other purpose. 
+Just because <DictionaryLink styled={true} term={"gentemp"}><b>gentemp</b></DictionaryLink> creates a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> which did not previously exist does not mean that such a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> might not be seen in the future (*e.g.*, in a data file—perhaps even created by the same program in another session). As such, this symbol is not truly unique in the same sense as a <GlossaryTerm styled={true} term={"gensym"}><i>gensym</i></GlossaryTerm> would be. In particular, programs which do automatic code generation should be careful not to attach global attributes to such generated <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> (*e.g.*, <DictionaryLink styled={true} term={"special"}><b>special</b></DictionaryLink> <GlossaryTerm styled={true} term={"declaration"}><i>declarations</i></GlossaryTerm>) and then write them into a file because such global attributes might, in a different session, end up applying to other <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> that were automatically generated on another day for some other purpose. 
 
 
 

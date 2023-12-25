@@ -1,4 +1,4 @@
-*∗***default-pathname-defaults***∗ Variable* 
+*∗<DictionaryLink styled={true} term={"default-pathname-defaults"}><b>*default-pathname-defaults*</b></DictionaryLink>∗ Variable* 
 
 
 
@@ -22,7 +22,7 @@ An *implementation-dependent pathname*, typically in the working directory that 
 
 
 
-a *pathname*, used as the default whenever a *function* needs a default *pathname* and one is not supplied. 
+a <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm>, used as the default whenever a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> needs a default <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm> and one is not supplied. 
 
 
 
@@ -43,7 +43,7 @@ a *pathname*, used as the default whenever a *function* needs a default *pathnam
 
 
 
-The *implementation*. 
+The <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm>. 
 
 
 

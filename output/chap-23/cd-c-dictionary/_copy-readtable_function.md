@@ -1,4 +1,4 @@
-**copy-readtable** *Function* 
+**copy-readtable** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**copy-readtable** &amp;optional *from-readtable to-readtable → readtable* 
+<DictionaryLink styled={true} term={"copy-readtable"}><b>copy-readtable</b></DictionaryLink> &amp;optional *from-readtable to-readtable → readtable* 
 
 
 
@@ -18,11 +18,11 @@
 
 
 
-*to-readtable*—a *readtable* or **nil**. The default is **nil**. 
+*to-readtable*—a <GlossaryTerm styled={true} term={"readtable"}><i>readtable</i></GlossaryTerm> or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. The default is <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
-*readtable*—the *to-readtable* if it is *non-nil*, or else a *fresh readtable*. 
+<GlossaryTerm styled={true} term={"readtable"}><i>readtable</i></GlossaryTerm>—the *to-readtable* if it is <GlossaryTerm styled={true} term={"non-nil"}><i>non-nil</i></GlossaryTerm>, or else a *fresh readtable*. 
 
 
 
@@ -30,15 +30,15 @@
 
 
 
-**copy-readtable** copies *from-readtable*. 
+<DictionaryLink styled={true} term={"copy-readtable"}><b>copy-readtable</b></DictionaryLink> copies *from-readtable*. 
 
 
 
-If *to-readtable* is **nil**, a new *readtable* is created and returned. Otherwise the *readtable* specified by *to-readtable* is modified and returned. 
+If *to-readtable* is <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>, a new <GlossaryTerm styled={true} term={"readtable"}><i>readtable</i></GlossaryTerm> is created and returned. Otherwise the <GlossaryTerm styled={true} term={"readtable"}><i>readtable</i></GlossaryTerm> specified by *to-readtable* is modified and returned. 
 
 
 
-**copy-readtable** copies the setting of **readtable-case**. 
+<DictionaryLink styled={true} term={"copy-readtable"}><b>copy-readtable</b></DictionaryLink> copies the setting of <DictionaryLink styled={true} term={"readtable-case"}><b>readtable-case</b></DictionaryLink>. 
 
 
 
@@ -63,7 +63,7 @@ zvar *→* 123
 
 
 
-**readtable**, **\*readtable\*** 
+<DictionaryLink styled={true} term={"readtable"}><b>readtable</b></DictionaryLink>, <DictionaryLink styled={true} term={"readtable"}><b>\*readtable\*</b></DictionaryLink> 
 
 
 
@@ -87,7 +87,7 @@ On the other hand,
 
 
 
-replaces the current *readtable* with a copy of itself. This is useful if you want to save a copy of a readtable for later use, protected from alteration in the meantime. It is also useful if you want to locally bind the readtable to a copy of itself, as in: 
+replaces the current <GlossaryTerm styled={true} term={"readtable"}><i>readtable</i></GlossaryTerm> with a copy of itself. This is useful if you want to save a copy of a readtable for later use, protected from alteration in the meantime. It is also useful if you want to locally bind the readtable to a copy of itself, as in: 
 
 
 

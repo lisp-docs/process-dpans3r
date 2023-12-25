@@ -1,4 +1,4 @@
-**signed-byte** *Type* 
+**signed-byte** <GlossaryTerm styled={true} term={"type"}><i>Type</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**signed-byte**, **integer**, **rational**, **real**, **number**, **t** 
+<DictionaryLink styled={true} term={"signed-byte"}><b>signed-byte</b></DictionaryLink>, <DictionaryLink styled={true} term={"integer"}><b>integer</b></DictionaryLink>, <DictionaryLink styled={true} term={"rational"}><b>rational</b></DictionaryLink>, <DictionaryLink styled={true} term={"real"}><b>real</b></DictionaryLink>, <DictionaryLink styled={true} term={"number"}><b>number</b></DictionaryLink>, <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink> 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-The atomic *type specifier* **signed-byte** denotes the same type as is denoted by the *type specifier* **integer**; however, the list forms of these two *type specifiers* have different semantics. 
+The atomic *type specifier* <DictionaryLink styled={true} term={"signed-byte"}><b>signed-byte</b></DictionaryLink> denotes the same type as is denoted by the *type specifier* <DictionaryLink styled={true} term={"integer"}><b>integer</b></DictionaryLink>; however, the list forms of these two *type specifiers* have different semantics. 
 
 
 

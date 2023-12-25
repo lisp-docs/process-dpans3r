@@ -1,4 +1,4 @@
-**write-string, write-line** *Function* 
+**write-string, write-line** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,11 +6,11 @@
 
 
 
-**write-string** *string* &amp;optional *output-stream* &amp;key *start end → string* 
+<DictionaryLink styled={true} term={"write-string"}><b>write-string</b></DictionaryLink> <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> &amp;optional *output-stream* &amp;key *start end → string* 
 
 
 
-**write-line** *string* &amp;optional *output-stream* &amp;key *start end → string* 
+<DictionaryLink styled={true} term={"write-line"}><b>write-line</b></DictionaryLink> <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> &amp;optional *output-stream* &amp;key *start end → string* 
 
 
 
@@ -18,7 +18,7 @@
 
 
 
-*string*—a *string*. 
+<GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>. 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-*start*, *end*—*bounding index designators* of *string*. The defaults for *start* and *end* are 0 and **nil**, respectively. 
+*start*, *end*—*bounding index designators* of <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>. The defaults for *start* and *end* are 0 and <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>, respectively. 
 
 
 
@@ -34,7 +34,7 @@
 
 
 
-**write-string** writes the *characters* of the subsequence of *string bounded* by *start* and *end* to *output-stream*. **write-line** does the same thing, but then outputs a newline afterwards. 
+<DictionaryLink styled={true} term={"write-string"}><b>write-string</b></DictionaryLink> writes the <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm> of the subsequence of *string bounded* by *start* and *end* to *output-stream*. <DictionaryLink styled={true} term={"write-line"}><b>write-line</b></DictionaryLink> does the same thing, but then outputs a newline afterwards. 
 
 
 
@@ -62,7 +62,7 @@
 
 
 
-**\*standard-output\***, **\*terminal-io\***. 
+**\*standard-output\***, <DictionaryLink styled={true} term={"terminal-io"}><b>\*terminal-io\*</b></DictionaryLink>. 
 
 
 
@@ -70,7 +70,7 @@
 
 
 
-**read-line**, **write-char** 
+<DictionaryLink styled={true} term={"read-line"}><b>read-line</b></DictionaryLink>, <DictionaryLink styled={true} term={"write-char"}><b>write-char</b></DictionaryLink> 
 
 
 
@@ -78,7 +78,7 @@
 
 
 
-**write-line** and **write-string** return *string*, not the substring *bounded* by *start* and *end*. 
+<DictionaryLink styled={true} term={"write-line"}><b>write-line</b></DictionaryLink> and <DictionaryLink styled={true} term={"write-string"}><b>write-string</b></DictionaryLink> return <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>, not the substring <GlossaryTerm styled={true} term={"bounded"}><i>bounded</i></GlossaryTerm> by *start* and *end*. 
 
 
 

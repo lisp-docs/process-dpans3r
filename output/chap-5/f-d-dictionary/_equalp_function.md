@@ -1,4 +1,4 @@
-**equalp** *Function* 
+**equalp** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**equalp** *x y → generalized-boolean* 
+<DictionaryLink styled={true} term={"equalp"}><b>equalp</b></DictionaryLink> *x y → generalized-boolean* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*x*—an *object*. 
+*x*—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
-*y*—an *object*. 
+*y*—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -30,23 +30,23 @@
 
 
 
-Returns *true* if *x* and *y* are **equal**, or if they have components that are of the same *type* as each other and if those components are **equalp**; specifically, **equalp** returns *true* in the following cases: 
+Returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if *x* and *y* are <DictionaryLink styled={true} term={"equal"}><b>equal</b></DictionaryLink>, or if they have components that are of the same <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> as each other and if those components are <DictionaryLink styled={true} term={"equalp"}><b>equalp</b></DictionaryLink>; specifically, <DictionaryLink styled={true} term={"equalp"}><b>equalp</b></DictionaryLink> returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> in the following cases: 
 
 
 
-*Characters* 
+<GlossaryTerm styled={true} term={"character"}><i>Characters</i></GlossaryTerm> 
 
 
 
-If two *characters* are **char-equal**. 
+If two <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm> are <DictionaryLink styled={true} term={"char-equal"}><b>char-equal</b></DictionaryLink>. 
 
 
 
-*Numbers* 
+<GlossaryTerm styled={true} term={"number"}><i>Numbers</i></GlossaryTerm> 
 
 
 
-If two *numbers* are the *same* under **=**. 
+If two <GlossaryTerm styled={true} term={"number"}><i>numbers</i></GlossaryTerm> are the <GlossaryTerm styled={true} term={"same"}><i>same</i></GlossaryTerm> under <DictionaryLink styled={true} term={"="}><b>=</b></DictionaryLink>. 
 
 
 
@@ -54,19 +54,15 @@ If two *numbers* are the *same* under **=**.
 
 
 
-If the two *cars* in the *conses* are **equalp** and the two *cdrs* in the *conses* are **equalp**. 
+If the two <GlossaryTerm styled={true} term={"car"}><i>cars</i></GlossaryTerm> in the *conses* are <DictionaryLink styled={true} term={"equalp"}><b>equalp</b></DictionaryLink> and the two <GlossaryTerm styled={true} term={"cdr"}><i>cdrs</i></GlossaryTerm> in the *conses* are <DictionaryLink styled={true} term={"equalp"}><b>equalp</b></DictionaryLink>. 
 
 
 
-*Arrays* 
+<GlossaryTerm styled={true} term={"array"}><i>Arrays</i></GlossaryTerm> 
 
 
 
-If two *arrays* have the same number of dimensions, the dimensions match, and the corresponding *active elements* are **equalp**. The *types* for which the *arrays* are *specialized* need not match; for example, a *string* and a general *array* that happens to contain the same *characters* are **equalp**. Because **equalp** performs *element*-by-*element* comparisons of *strings* and ignores the *case* of *characters*, *case* distinctions are ignored when **equalp** compares *strings*. 
-
-
-
-
+If two <GlossaryTerm styled={true} term={"array"}><i>arrays</i></GlossaryTerm> have the same number of dimensions, the dimensions match, and the corresponding *active elements* are <DictionaryLink styled={true} term={"equalp"}><b>equalp</b></DictionaryLink>. The <GlossaryTerm styled={true} term={"type"}><i>types</i></GlossaryTerm> for which the <GlossaryTerm styled={true} term={"array"}><i>arrays</i></GlossaryTerm> are <GlossaryTerm styled={true} term={"specialized"}><i>specialized</i></GlossaryTerm> need not match; for example, a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> and a general <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm> that happens to contain the same <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm> are <DictionaryLink styled={true} term={"equalp"}><b>equalp</b></DictionaryLink>. Because <DictionaryLink styled={true} term={"equalp"}><b>equalp</b></DictionaryLink> performs <GlossaryTerm styled={true} term={"element"}><i>element</i></GlossaryTerm>-by-<GlossaryTerm styled={true} term={"element"}><i>element</i></GlossaryTerm> comparisons of <GlossaryTerm styled={true} term={"string"}><i>strings</i></GlossaryTerm> and ignores the <GlossaryTerm styled={true} term={"case"}><i>case</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm>, <GlossaryTerm styled={true} term={"case"}><i>case</i></GlossaryTerm> distinctions are ignored when <DictionaryLink styled={true} term={"equalp"}><b>equalp</b></DictionaryLink> compares <GlossaryTerm styled={true} term={"string"}><i>strings</i></GlossaryTerm>. 
 
 
 
@@ -78,15 +74,19 @@ If two *arrays* have the same number of dimensions, the dimensions match, and th
 
 
 
-**equalp** 
 
 
 
-*Structures* 
+
+<DictionaryLink styled={true} term={"equalp"}><b>equalp</b></DictionaryLink> 
 
 
 
-If two *structures S*<sub>1</sub> and *S*<sub>2</sub> have the same *class* and the value of each *slot* in *S*<sub>1</sub> is the *same* under **equalp** as the value of the corresponding *slot* in *S*<sub>2</sub>. 
+<GlossaryTerm styled={true} term={"structure"}><i>Structures</i></GlossaryTerm> 
+
+
+
+If two *structures S*<sub>1</sub> and *S*<sub>2</sub> have the same <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm> and the value of each <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm> in *S*<sub>1</sub> is the <GlossaryTerm styled={true} term={"same"}><i>same</i></GlossaryTerm> under <DictionaryLink styled={true} term={"equalp"}><b>equalp</b></DictionaryLink> as the value of the corresponding <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm> in *S*<sub>2</sub>. 
 
 
 
@@ -94,11 +94,11 @@ If two *structures S*<sub>1</sub> and *S*<sub>2</sub> have the same *class* and 
 
 
 
-**equalp** descends *hash-tables* by first comparing the count of entries and the :test function; if those are the same, it compares the keys of the tables using the :test function and then the values of the matching keys using **equalp** recursively. 
+<DictionaryLink styled={true} term={"equalp"}><b>equalp</b></DictionaryLink> descends *hash-tables* by first comparing the count of entries and the :test function; if those are the same, it compares the keys of the tables using the :test function and then the values of the matching keys using <DictionaryLink styled={true} term={"equalp"}><b>equalp</b></DictionaryLink> recursively. 
 
 
 
-**equalp** does not descend any *objects* other than the ones explicitly specified above. Figure 5–13 summarizes the information given in the previous list. In addition, the figure specifies the priority of the behavior of **equalp**, with upper entries taking priority over lower ones. 
+<DictionaryLink styled={true} term={"equalp"}><b>equalp</b></DictionaryLink> does not descend any <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm> other than the ones explicitly specified above. Figure 5–13 summarizes the information given in the previous list. In addition, the figure specifies the priority of the behavior of <DictionaryLink styled={true} term={"equalp"}><b>equalp</b></DictionaryLink>, with upper entries taking priority over lower ones. 
 
 
 
@@ -106,7 +106,7 @@ If two *structures S*<sub>1</sub> and *S*<sub>2</sub> have the same *class* and 
 
 | :- |
 
-|<p>*number* uses **=** </p><p>*character* uses **char-equal** </p><p>*cons* descends </p><p>*bit vector* descends </p><p>*string* descends </p><p>*pathname* same as **equal** </p><p>*structure* descends, as described above </p><p>Other *array* descends </p><p>*hash table* descends, as described above </p><p>Other *object* uses **eq**</p>|
+|<p><GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> uses <DictionaryLink styled={true} term={"="}><b>=</b></DictionaryLink> </p><p><GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> uses <DictionaryLink styled={true} term={"char-equal"}><b>char-equal</b></DictionaryLink> </p><p><GlossaryTerm styled={true} term={"cons"}><i>cons</i></GlossaryTerm> descends </p><p>*bit vector* descends </p><p><GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> descends </p><p><GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm> same as <DictionaryLink styled={true} term={"equal"}><b>equal</b></DictionaryLink> </p><p><GlossaryTerm styled={true} term={"structure"}><i>structure</i></GlossaryTerm> descends, as described above </p><p>Other <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm> descends </p><p>*hash table* descends, as described above </p><p>Other <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> uses <DictionaryLink styled={true} term={"eq"}><b>eq</b></DictionaryLink></p>|
 
 
 
@@ -152,7 +152,7 @@ Data and Control
 
 
 
-**eq**, **eql**, **equal**, **=**, **string=**, **string-equal**, **char=**, **char-equal** 
+<DictionaryLink styled={true} term={"eq"}><b>eq</b></DictionaryLink>, <DictionaryLink styled={true} term={"eql"}><b>eql</b></DictionaryLink>, <DictionaryLink styled={true} term={"equal"}><b>equal</b></DictionaryLink>, <DictionaryLink styled={true} term={"="}><b>=</b></DictionaryLink>, <DictionaryLink styled={true} term={"string"}><b>string=</b></DictionaryLink>, **string-equal**, <DictionaryLink styled={true} term={"char="}><b>char=</b></DictionaryLink>, <DictionaryLink styled={true} term={"char-equal"}><b>char-equal</b></DictionaryLink> 
 
 
 
@@ -160,7 +160,7 @@ Data and Control
 
 
 
-*Object* equality is not a concept for which there is a uniquely determined correct algorithm. The appropriateness of an equality predicate can be judged only in the context of the needs of some particular program. Although these functions take any type of argument and their names sound very generic, **equal** and **equalp** are not appropriate for every application. 
+<GlossaryTerm styled={true} term={"object"}><i>Object</i></GlossaryTerm> equality is not a concept for which there is a uniquely determined correct algorithm. The appropriateness of an equality predicate can be judged only in the context of the needs of some particular program. Although these functions take any type of argument and their names sound very generic, <DictionaryLink styled={true} term={"equal"}><b>equal</b></DictionaryLink> and <DictionaryLink styled={true} term={"equalp"}><b>equalp</b></DictionaryLink> are not appropriate for every application. 
 
 
 

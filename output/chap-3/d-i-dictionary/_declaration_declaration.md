@@ -1,4 +1,4 @@
-**declaration** *Declaration* 
+**declaration** <GlossaryTerm styled={true} term={"declaration"}><i>Declaration</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-(declaration *\{name\}*\*) 
+(declaration <GlossaryTerm styled={true} term={"name"}><i>\{name\}</i></GlossaryTerm>\*) 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*name*—a *symbol*. 
+<GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>. 
 
 
 
@@ -22,7 +22,7 @@
 
 
 
-*proclamation* only 
+<GlossaryTerm styled={true} term={"proclamation"}><i>proclamation</i></GlossaryTerm> only 
 
 
 
@@ -30,7 +30,7 @@
 
 
 
-Advises the compiler that each *name* is a valid but potentially non-standard declaration name. The purpose of this is to tell one compiler not to issue warnings for declarations meant for another compiler or other program processor. 
+Advises the compiler that each <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> is a valid but potentially non-standard declaration name. The purpose of this is to tell one compiler not to issue warnings for declarations meant for another compiler or other program processor. 
 
 
 
@@ -49,7 +49,7 @@ Advises the compiler that each *name* is a valid but potentially non-standard de
 
 
 
-**declaim**, **proclaim** 
+<DictionaryLink styled={true} term={"declaim"}><b>declaim</b></DictionaryLink>, <DictionaryLink styled={true} term={"proclaim"}><b>proclaim</b></DictionaryLink> 
 
 
 

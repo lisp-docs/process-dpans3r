@@ -1,4 +1,4 @@
-**make-package** *Function* 
+**make-package** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**make-package** *package-name* &amp;key *nicknames use → package* 
+<DictionaryLink styled={true} term={"make-package"}><b>make-package</b></DictionaryLink> *package-name* &amp;key *nicknames use → package* 
 
 
 
@@ -18,15 +18,15 @@
 
 
 
-*nicknames*—a *list* of *string designators*. The default is the *empty list*. 
+<GlossaryTerm styled={true} term={"nickname"}><i>nicknames</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of *string designators*. The default is the *empty list*. 
 
 
 
-*use*—a *list* of *package designators*. The default is *implementation-defined*. 
+<GlossaryTerm styled={true} term={"use"}><i>use</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of *package designators*. The default is <GlossaryTerm styled={true} term={"implementation-defined"}><i>implementation-defined</i></GlossaryTerm>. 
 
 
 
-*package*—a *package*. 
+<GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>. 
 
 
 
@@ -34,15 +34,15 @@
 
 
 
-Creates a new *package* with the name *package-name*. 
+Creates a new <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> with the name *package-name*. 
 
 
 
-*Nicknames* are additional *names* which may be used to refer to the new *package*. 
+<GlossaryTerm styled={true} term={"nickname"}><i>Nicknames</i></GlossaryTerm> are additional <GlossaryTerm styled={true} term={"name"}><i>names</i></GlossaryTerm> which may be used to refer to the new <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>. 
 
 
 
-*use* specifies zero or more *packages* the *external symbols* of which are to be inherited by the new *package*. See the *function* **use-package**. 
+<GlossaryTerm styled={true} term={"use"}><i>use</i></GlossaryTerm> specifies zero or more <GlossaryTerm styled={true} term={"package"}><i>packages</i></GlossaryTerm> the *external symbols* of which are to be inherited by the new <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>. See the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> <DictionaryLink styled={true} term={"use-package"}><b>use-package</b></DictionaryLink>. 
 
 
 
@@ -58,7 +58,7 @@ Creates a new *package* with the name *package-name*.
 
 
 
-The existence of other *packages* in the system. 
+The existence of other <GlossaryTerm styled={true} term={"package"}><i>packages</i></GlossaryTerm> in the system. 
 
 
 
@@ -66,11 +66,11 @@ The existence of other *packages* in the system.
 
 
 
-The consequences are unspecified if *packages* denoted by *use* do not exist. 
+The consequences are unspecified if <GlossaryTerm styled={true} term={"package"}><i>packages</i></GlossaryTerm> denoted by <GlossaryTerm styled={true} term={"use"}><i>use</i></GlossaryTerm> do not exist. 
 
 
 
-A *correctable* error is signaled if the *package-name* or any of the *nicknames* is already the *name* or *nickname* of an existing *package*. 
+A <GlossaryTerm styled={true} term={"correctable"}><i>correctable</i></GlossaryTerm> error is signaled if the *package-name* or any of the <GlossaryTerm styled={true} term={"nickname"}><i>nicknames</i></GlossaryTerm> is already the <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> or <GlossaryTerm styled={true} term={"nickname"}><i>nickname</i></GlossaryTerm> of an existing <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>. 
 
 
 
@@ -90,7 +90,7 @@ A *correctable* error is signaled if the *package-name* or any of the *nicknames
 
 
 
-**defpackage**, **use-package** 
+<DictionaryLink styled={true} term={"defpackage"}><b>defpackage</b></DictionaryLink>, <DictionaryLink styled={true} term={"use-package"}><b>use-package</b></DictionaryLink> 
 
 
 
@@ -98,11 +98,11 @@ A *correctable* error is signaled if the *package-name* or any of the *nicknames
 
 
 
-In situations where the *packages* to be used contain symbols which would conflict, it is necessary to first create the package with :use ’(), then to use **shadow** or **shadowing-import** to address the conflicts, and then after that to use **use-package** once the conflicts have been addressed. 
+In situations where the <GlossaryTerm styled={true} term={"package"}><i>packages</i></GlossaryTerm> to be used contain symbols which would conflict, it is necessary to first create the package with :use ’(), then to use <DictionaryLink styled={true} term={"shadow"}><b>shadow</b></DictionaryLink> or <DictionaryLink styled={true} term={"shadowing-import"}><b>shadowing-import</b></DictionaryLink> to address the conflicts, and then after that to use <DictionaryLink styled={true} term={"use-package"}><b>use-package</b></DictionaryLink> once the conflicts have been addressed. 
 
 
 
-When packages are being created as part of the static definition of a program rather than dynamically by the program, it is generally considered more stylistically appropriate to use **defpackage** rather than **make-package**. 
+When packages are being created as part of the static definition of a program rather than dynamically by the program, it is generally considered more stylistically appropriate to use <DictionaryLink styled={true} term={"defpackage"}><b>defpackage</b></DictionaryLink> rather than <DictionaryLink styled={true} term={"make-package"}><b>make-package</b></DictionaryLink>. 
 
 
 

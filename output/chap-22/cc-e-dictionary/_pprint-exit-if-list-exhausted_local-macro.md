@@ -6,7 +6,7 @@
 
 
 
-**pprint-exit-if-list-exhausted** *hno argumentsi →* **nil** 
+<DictionaryLink styled={true} term={"pprint-exit-if-list-exhausted"}><b>pprint-exit-if-list-exhausted</b></DictionaryLink> *hno argumentsi →* <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-Tests whether or not the *list* passed to the *lexically current logical block* has been exhausted; see Section 22.2.1.1 (Dynamic Control of the Arrangement of Output). If this *list* has been reduced to **nil**, **pprint-exit-if-list-exhausted** terminates the execution of the *lexically current logical block* except for the printing of the suffix. Otherwise **pprint-exit-if-list-exhausted** returns **nil**. 
+Tests whether or not the <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> passed to the *lexically current logical block* has been exhausted; see Section 22.2.1.1 (Dynamic Control of the Arrangement of Output). If this <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> has been reduced to <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>, <DictionaryLink styled={true} term={"pprint-exit-if-list-exhausted"}><b>pprint-exit-if-list-exhausted</b></DictionaryLink> terminates the execution of the *lexically current logical block* except for the printing of the suffix. Otherwise <DictionaryLink styled={true} term={"pprint-exit-if-list-exhausted"}><b>pprint-exit-if-list-exhausted</b></DictionaryLink> returns <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
-Whether or not **pprint-exit-if-list-exhausted** is *fbound* in the *global environment* is *implementation dependent*; however, the restrictions on redefinition and *shadowing* of **pprint-exit-if-list-exhausted** are the same as for *symbols* in the COMMON-LISP *package* which are *fbound* in the *global environment*. The consequences of attempting to use **pprint-exit-if-list-exhausted** outside of **pprint-logical-block** are undefined. 
+Whether or not <DictionaryLink styled={true} term={"pprint-exit-if-list-exhausted"}><b>pprint-exit-if-list-exhausted</b></DictionaryLink> is <GlossaryTerm styled={true} term={"fbound"}><i>fbound</i></GlossaryTerm> in the *global environment* is *implementation dependent*; however, the restrictions on redefinition and *shadowing* of <DictionaryLink styled={true} term={"pprint-exit-if-list-exhausted"}><b>pprint-exit-if-list-exhausted</b></DictionaryLink> are the same as for <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> in the COMMON-LISP <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> which are <GlossaryTerm styled={true} term={"fbound"}><i>fbound</i></GlossaryTerm> in the *global environment*. The consequences of attempting to use <DictionaryLink styled={true} term={"pprint-exit-if-list-exhausted"}><b>pprint-exit-if-list-exhausted</b></DictionaryLink> outside of <DictionaryLink styled={true} term={"pprint-logical-block"}><b>pprint-logical-block</b></DictionaryLink> are undefined. 
 
 
 
@@ -26,7 +26,7 @@ Whether or not **pprint-exit-if-list-exhausted** is *fbound* in the *global envi
 
 
 
-An error is signaled (at macro expansion time or at run time) if **pprint-exit-if-list-exhausted** is used anywhere other than lexically within a call on **pprint-logical-block**. Also, the consequences of executing **pprint-if-list-exhausted** outside of the dynamic extent of the **pprint-logical-block** which lexically contains it are undefined. 
+An error is signaled (at macro expansion time or at run time) if <DictionaryLink styled={true} term={"pprint-exit-if-list-exhausted"}><b>pprint-exit-if-list-exhausted</b></DictionaryLink> is used anywhere other than lexically within a call on <DictionaryLink styled={true} term={"pprint-logical-block"}><b>pprint-logical-block</b></DictionaryLink>. Also, the consequences of executing **pprint-if-list-exhausted** outside of the dynamic extent of the <DictionaryLink styled={true} term={"pprint-logical-block"}><b>pprint-logical-block</b></DictionaryLink> which lexically contains it are undefined. 
 
 
 
@@ -34,7 +34,7 @@ An error is signaled (at macro expansion time or at run time) if **pprint-exit-i
 
 
 
-**pprint-logical-block**, **pprint-pop**. 
+<DictionaryLink styled={true} term={"pprint-logical-block"}><b>pprint-logical-block</b></DictionaryLink>, <DictionaryLink styled={true} term={"pprint-pop"}><b>pprint-pop</b></DictionaryLink>. 
 
 
 

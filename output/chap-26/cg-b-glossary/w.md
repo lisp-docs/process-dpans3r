@@ -15,19 +15,19 @@ sidebar_position: 119
 
 
 
-**wild** *adj.* 1. (of a *namestring*) using an *implementation-defined* syntax for naming files, which might “match” any of possibly several possible *filenames*, and which can therefore be used to refer to the aggregate of the *files* named by those *filenames*. 2. (of a *pathname*) a structured representation of a name which might “match” any of 
+**wild** *adj.* 1. (of a <GlossaryTerm styled={true} term={"namestring"}><i>namestring</i></GlossaryTerm>) using an <GlossaryTerm styled={true} term={"implementation-defined"}><i>implementation-defined</i></GlossaryTerm> syntax for naming files, which might “match” any of possibly several possible <GlossaryTerm styled={true} term={"filename"}><i>filenames</i></GlossaryTerm>, and which can therefore be used to refer to the aggregate of the <GlossaryTerm styled={true} term={"file"}><i>files</i></GlossaryTerm> named by those <GlossaryTerm styled={true} term={"filename"}><i>filenames</i></GlossaryTerm>. 2. (of a <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm>) a structured representation of a name which might “match” any of 
 
 
 
-possibly several *pathnames*, and which can therefore be used to refer to the aggregate of the *files* named by those *pathnames*. The set of *wild pathnames* includes, but is not restricted to, *pathnames* which have a component which is :wild, or which have a directory component which contains :wild or :wild-inferors. See the *function* **wild-pathname-p**. 
+possibly several <GlossaryTerm styled={true} term={"pathname"}><i>pathnames</i></GlossaryTerm>, and which can therefore be used to refer to the aggregate of the <GlossaryTerm styled={true} term={"file"}><i>files</i></GlossaryTerm> named by those <GlossaryTerm styled={true} term={"pathname"}><i>pathnames</i></GlossaryTerm>. The set of *wild pathnames* includes, but is not restricted to, <GlossaryTerm styled={true} term={"pathname"}><i>pathnames</i></GlossaryTerm> which have a component which is :wild, or which have a directory component which contains :wild or :wild-inferors. See the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> <DictionaryLink styled={true} term={"wild-pathname-p"}><b>wild-pathname-p</b></DictionaryLink>. 
 
 
 
-**write** *v.t.* 1. (a *binding* or *slot* or component) to change the *value* of the *binding* or *slot*. 2. (an *object* to a *stream*) to output a representation of the *object* to the *stream*. 
+<DictionaryLink styled={true} term={"write"}><b>write</b></DictionaryLink> *v.t.* 1. (a <GlossaryTerm styled={true} term={"binding"}><i>binding</i></GlossaryTerm> or <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm> or component) to change the <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of the <GlossaryTerm styled={true} term={"binding"}><i>binding</i></GlossaryTerm> or <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm>. 2. (an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> to a <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>) to output a representation of the <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> to the <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>. 
 
 
 
-**writer** *n.* a *function* that *writes*<sub>1</sub> a *variable* or *slot*. 
+**writer** *n.* a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> that <GlossaryTerm styled={true} term={"write"}><i>writes</i></GlossaryTerm><sub>1</sub> a <GlossaryTerm styled={true} term={"variable"}><i>variable</i></GlossaryTerm> or <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm>. 
 
 
 

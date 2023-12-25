@@ -1,4 +1,4 @@
-*∗***print-gensym***∗ Variable* 
+*∗<DictionaryLink styled={true} term={"print-gensym"}><b>*print-gensym*</b></DictionaryLink>∗ Variable* 
 
 
 
@@ -14,7 +14,7 @@ a *generalized boolean*.
 
 
 
-*true*. 
+<GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>. 
 
 
 
@@ -22,7 +22,7 @@ a *generalized boolean*.
 
 
 
-Controls whether the prefix “#:” is printed before *apparently uninterned symbols*. The prefix is printed before such *symbols* if and only if the *value* of **\*print-gensym\*** is *true*. 
+Controls whether the prefix “#:” is printed before *apparently uninterned symbols*. The prefix is printed before such <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> if and only if the <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of <DictionaryLink styled={true} term={"print-gensym"}><b>\*print-gensym\*</b></DictionaryLink> is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>. 
 
 
 
@@ -39,7 +39,7 @@ Controls whether the prefix “#:” is printed before *apparently uninterned sy
 
 
 
-**write**, **\*print-escape\*** 
+<DictionaryLink styled={true} term={"write"}><b>write</b></DictionaryLink>, <DictionaryLink styled={true} term={"print-escape"}><b>\*print-escape\*</b></DictionaryLink> 
 
 
 
@@ -55,7 +55,7 @@ Controls whether the prefix “#:” is printed before *apparently uninterned sy
 
 
 
-*∗***print-level***∗***,** *∗***print-length***∗* 
+*∗***print-level***∗***,** *∗<DictionaryLink styled={true} term={"print-length"}><b>*print-length*</b></DictionaryLink>∗* 
 
 
 

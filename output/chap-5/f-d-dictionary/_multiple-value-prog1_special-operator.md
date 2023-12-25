@@ -6,7 +6,7 @@
 
 
 
-**multiple-value-prog1** *first-form \{form\}*\* *! first-form-results* 
+<DictionaryLink styled={true} term={"multiple-value-prog1"}><b>multiple-value-prog1</b></DictionaryLink> *first-form \{form\}*\* *! first-form-results* 
 
 
 
@@ -14,15 +14,15 @@
 
 
 
-*first-form*—a *form*; evaluated as described below. 
+*first-form*—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>; evaluated as described below. 
 
 
 
-*form*—a *form*; evaluated as described below. 
+<GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>; evaluated as described below. 
 
 
 
-*first-form-results*—the *values* resulting from the *evaluation* of *first-form*. 
+*first-form-results*—the <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> resulting from the <GlossaryTerm styled={true} term={"evaluation"}><i>evaluation</i></GlossaryTerm> of *first-form*. 
 
 
 
@@ -30,7 +30,7 @@
 
 
 
-**multiple-value-prog1** evaluates *first-form* and saves all the values produced by that *form*. It then evaluates each *form* from left to right, discarding their values. 
+<DictionaryLink styled={true} term={"multiple-value-prog1"}><b>multiple-value-prog1</b></DictionaryLink> evaluates *first-form* and saves all the values produced by that <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>. It then evaluates each <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> from left to right, discarding their values. 
 
 
 
@@ -48,7 +48,7 @@
 
 
 
-**prog1** 
+<DictionaryLink styled={true} term={"prog1"}><b>prog1</b></DictionaryLink> 
 
 
 
@@ -64,7 +64,7 @@
 
 
 
-**multiple-value-setq** 
+<DictionaryLink styled={true} term={"multiple-value-setq"}><b>multiple-value-setq</b></DictionaryLink> 
 
 
 

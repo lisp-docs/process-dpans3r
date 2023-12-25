@@ -1,4 +1,4 @@
-**aref** *Accessor* 
+**aref** <GlossaryTerm styled={true} term={"accessor"}><i>Accessor</i></GlossaryTerm> 
 
 
 
@@ -6,11 +6,11 @@
 
 
 
-**aref** *array* &amp;rest *subscripts → element* 
+<DictionaryLink styled={true} term={"aref"}><b>aref</b></DictionaryLink> <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm> &amp;rest *subscripts → element* 
 
 
 
-**(setf (aref** *array* &amp;rest *subscripts***)** *new-element***)** 
+**(setf (aref** <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm> &amp;rest *subscripts***)** *new-element<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> 
 
 
 
@@ -18,15 +18,15 @@
 
 
 
-*array*—an *array*. 
+<GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm>. 
 
 
 
-*subscripts*—a *list* of *valid array indices* for the *array*. 
+*subscripts*—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of *valid array indices* for the <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm>. 
 
 
 
-*element*, *new-element*—an *object*. 
+<GlossaryTerm styled={true} term={"element"}><i>element</i></GlossaryTerm>, *new-element*—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -34,11 +34,11 @@
 
 
 
-*Accesses* the *array element* specified by the *subscripts*. If no *subscripts* are supplied and *array* is zero rank, **aref** *accesses* the sole element of *array*. 
+*Accesses* the *array element* specified by the *subscripts*. If no *subscripts* are supplied and <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm> is zero rank, <DictionaryLink styled={true} term={"aref"}><b>aref</b></DictionaryLink> *accesses* the sole element of <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm>. 
 
 
 
-**aref** ignores *fill pointers*. It is permissible to use **aref** to *access* any *array element*, whether *active* or not. 
+<DictionaryLink styled={true} term={"aref"}><b>aref</b></DictionaryLink> ignores *fill pointers*. It is permissible to use <DictionaryLink styled={true} term={"aref"}><b>aref</b></DictionaryLink> to <GlossaryTerm styled={true} term={"access"}><i>access</i></GlossaryTerm> any *array element*, whether <GlossaryTerm styled={true} term={"active"}><i>active</i></GlossaryTerm> or not. 
 
 
 
@@ -67,7 +67,7 @@ If the variable foo names a 3-by-5 array, then the first index could be 0, 1, or
 
 
 
-**bit**, **char**, **elt**, **row-major-aref**, **svref**, Section 3.2.1 (Compiler Terminology) 
+<DictionaryLink styled={true} term={"bit"}><b>bit</b></DictionaryLink>, <DictionaryLink styled={true} term={"char"}><b>char</b></DictionaryLink>, <DictionaryLink styled={true} term={"elt"}><b>elt</b></DictionaryLink>, <DictionaryLink styled={true} term={"row-major-aref"}><b>row-major-aref</b></DictionaryLink>, <DictionaryLink styled={true} term={"svref"}><b>svref</b></DictionaryLink>, Section 3.2.1 (Compiler Terminology) 
 
 
 

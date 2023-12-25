@@ -1,4 +1,4 @@
-**make-two-way-stream** *Function* 
+**make-two-way-stream** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**make-two-way-stream** *input-stream output-stream → two-way-stream* 
+<DictionaryLink styled={true} term={"make-two-way-stream"}><b>make-two-way-stream</b></DictionaryLink> *input-stream output-stream → two-way-stream* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*input-stream*—a *stream*. 
+*input-stream*—a <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>. 
 
 
 
-*output-stream*—a *stream*. 
+*output-stream*—a <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>. 
 
 
 
@@ -49,7 +49,7 @@ what-is-read *→* INPUT...
 
 
 
-Should signal an error of *type* **type-error** if *input-stream* is not an *input stream*. Should signal an error of *type* **type-error** if *output-stream* is not an *output stream*. 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if *input-stream* is not an *input stream*. Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if *output-stream* is not an *output stream*. 
 
 
 
@@ -101,7 +101,7 @@ Should signal an error of *type* **type-error** if *input-stream* is not an *inp
 
 
 
-**two-way-stream-input-stream** returns the *stream* from which *two-way-stream* receives input. **two-way-stream-output-stream** returns the *stream* to which *two-way-stream* sends output. 
+**two-way-stream-input-stream** returns the <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm> from which *two-way-stream* receives input. **two-way-stream-output-stream** returns the <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm> to which *two-way-stream* sends output. 
 
 
 

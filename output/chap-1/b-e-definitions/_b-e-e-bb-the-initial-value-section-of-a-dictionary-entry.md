@@ -2,7 +2,7 @@
 
 
 
-This information describes the initial *value* of a *dynamic variable*. Since this variable might change, see *type* restrictions in the “Value Type” section. 
+This information describes the initial <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of a *dynamic variable*. Since this variable might change, see <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> restrictions in the “Value Type” section. 
 
 
 

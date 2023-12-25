@@ -1,4 +1,4 @@
-**make-echo-stream** *Function* 
+**make-echo-stream** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**make-echo-stream** *input-stream output-stream → echo-stream* 
+<DictionaryLink styled={true} term={"make-echo-stream"}><b>make-echo-stream</b></DictionaryLink> *input-stream output-stream → echo-stream* 
 
 
 
@@ -52,7 +52,7 @@ Creates and returns an *echo stream* that takes input from *input-stream* and se
 
 
 
-**echo-stream-input-stream**, **echo-stream-output-stream**, **make-two-way-stream concatenated-stream-streams** *Function* 
+**echo-stream-input-stream**, **echo-stream-output-stream**, **make-two-way-stream concatenated-stream-streams** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -72,7 +72,7 @@ Creates and returns an *echo stream* that takes input from *input-stream* and se
 
 
 
-*streams*—a *list* of *input streams*. 
+<GlossaryTerm styled={true} term={"stream"}><i>streams</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of *input streams*. 
 
 
 
@@ -92,8 +92,8 @@ Creates and returns an *echo stream* that takes input from *input-stream* and se
 
 
 
-Returns a *list* of *input streams* that constitute the ordered set of *streams* the *concatenated-stream* still has to read from, starting with the current one it is reading from. The list may be *empty* if no more *streams* remain to be read. 
+Returns a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of *input streams* that constitute the ordered set of <GlossaryTerm styled={true} term={"stream"}><i>streams</i></GlossaryTerm> the *concatenated-stream* still has to read from, starting with the current one it is reading from. The list may be *empty* if no more <GlossaryTerm styled={true} term={"stream"}><i>streams</i></GlossaryTerm> remain to be read. 
 
 
 
-The consequences are undefined if the *list structure* of the *streams* is ever modified. 
+The consequences are undefined if the *list structure* of the <GlossaryTerm styled={true} term={"stream"}><i>streams</i></GlossaryTerm> is ever modified. 

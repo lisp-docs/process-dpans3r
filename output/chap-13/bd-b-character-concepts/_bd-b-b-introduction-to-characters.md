@@ -2,15 +2,15 @@
 
 
 
-A *character* is an *object* that represents a unitary token (*e.g.*, a letter, a special symbol, or a “control character”) in an aggregate quantity of text (*e.g.*, a *string* or a text *stream*). 
+A <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> is an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> that represents a unitary token (*e.g.*, a letter, a special symbol, or a “control character”) in an aggregate quantity of text (*e.g.*, a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> or a text <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>). 
 
 
 
-Common Lisp allows an implementation to provide support for international language *characters* as well as *characters* used in specialized arenas (*e.g.*, mathematics). 
+Common Lisp allows an implementation to provide support for international language <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm> as well as <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm> used in specialized arenas (*e.g.*, mathematics). 
 
 
 
-The following figures contain lists of *defined names* applicable to *characters*. 
+The following figures contain lists of *defined names* applicable to <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm>. 
 
 
 
@@ -30,7 +30,7 @@ Figure 13–1 lists some *defined names* relating to *character attributes* and 
 
 
 
-Figure 13–2 lists some *character* construction and conversion *defined names*. 
+Figure 13–2 lists some <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> construction and conversion *defined names*. 
 
 
 

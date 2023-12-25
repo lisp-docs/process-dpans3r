@@ -1,4 +1,4 @@
-**values-list** *Function* 
+**values-list** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**values-list** *list ! \{element\}*\* 
+<DictionaryLink styled={true} term={"values-list"}><b>values-list</b></DictionaryLink> *list ! \{element\}*\* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*list*—a *list*. 
+<GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>. 
 
 
 
-*elements*—the *elements* of the *list*. 
+<GlossaryTerm styled={true} term={"element"}><i>elements</i></GlossaryTerm>—the <GlossaryTerm styled={true} term={"element"}><i>elements</i></GlossaryTerm> of the <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>. 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-Returns the *elements* of the *list* as *multiple values*<sub>2</sub>. 
+Returns the <GlossaryTerm styled={true} term={"element"}><i>elements</i></GlossaryTerm> of the <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> as *multiple values*<sub>2</sub>. 
 
 
 
@@ -43,7 +43,7 @@ Returns the *elements* of the *list* as *multiple values*<sub>2</sub>.
 
 
 
-Should signal **type-error** if its argument is not a *proper list*. 
+Should signal <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if its argument is not a *proper list*. 
 
 
 
@@ -51,7 +51,7 @@ Should signal **type-error** if its argument is not a *proper list*.
 
 
 
-**multiple-value-bind**, **multiple-value-list**, **multiple-values-limit**, **values** 
+<DictionaryLink styled={true} term={"multiple-value-bind"}><b>multiple-value-bind</b></DictionaryLink>, <DictionaryLink styled={true} term={"multiple-value-list"}><b>multiple-value-list</b></DictionaryLink>, <DictionaryLink styled={true} term={"multiple-values-limit"}><b>multiple-values-limit</b></DictionaryLink>, <DictionaryLink styled={true} term={"values"}><b>values</b></DictionaryLink> 
 
 
 
@@ -59,11 +59,11 @@ Should signal **type-error** if its argument is not a *proper list*.
 
 
 
-(values-list *list*) *⌘* (apply #’values *list*) 
+(values-list <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>) *⌘* (apply #’values <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>) 
 
 
 
-(equal *x* (multiple-value-list (values-list *x*))) returns *true* for all *lists x*. 
+(equal *x* (multiple-value-list (values-list *x*))) returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> for all *lists x*. 
 
 
 

@@ -1,4 +1,4 @@
-**restart-name** *Function* 
+**restart-name** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**restart-name** *restart → name* 
+<DictionaryLink styled={true} term={"restart-name"}><b>restart-name</b></DictionaryLink> *restart → name* 
 
 
 
@@ -26,11 +26,11 @@
 
 
 
-*restart*—a *restart*. 
+<GlossaryTerm styled={true} term={"restart"}><i>restart</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"restart"}><i>restart</i></GlossaryTerm>. 
 
 
 
-*name*—a *symbol*. 
+<GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>. 
 
 
 
@@ -38,7 +38,7 @@
 
 
 
-Returns the name of the *restart*, or **nil** if the *restart* is not named. 
+Returns the name of the <GlossaryTerm styled={true} term={"restart"}><i>restart</i></GlossaryTerm>, or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> if the <GlossaryTerm styled={true} term={"restart"}><i>restart</i></GlossaryTerm> is not named. 
 
 
 

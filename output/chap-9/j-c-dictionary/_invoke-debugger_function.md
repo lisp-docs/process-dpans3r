@@ -1,4 +1,4 @@
-**invoke-debugger** *Function* 
+**invoke-debugger** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**invoke-debugger** *condition →* 
+<DictionaryLink styled={true} term={"invoke-debugger"}><b>invoke-debugger</b></DictionaryLink> *condition →* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*condition*—a *condition object*. 
+<GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm>—a *condition object*. 
 
 
 
@@ -22,11 +22,11 @@
 
 
 
-**invoke-debugger** attempts to enter the debugger with *condition*. 
+<DictionaryLink styled={true} term={"invoke-debugger"}><b>invoke-debugger</b></DictionaryLink> attempts to enter the debugger with <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm>. 
 
 
 
-If **\*debugger-hook\*** is not **nil**, it should be a *function* (or the name of a *function*) to be called prior to entry to the standard debugger. The *function* is called with **\*debugger-hook\*** bound to **nil**, and the *function* must accept two arguments: the *condition* and the *value* of **\*debugger-hook\*** prior to binding it to **nil**. If the *function* returns normally, the standard debugger is entered. 
+If <DictionaryLink styled={true} term={"debugger-hook"}><b>\*debugger-hook\*</b></DictionaryLink> is not <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>, it should be a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> (or the name of a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>) to be called prior to entry to the standard debugger. The <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> is called with <DictionaryLink styled={true} term={"debugger-hook"}><b>\*debugger-hook\*</b></DictionaryLink> bound to <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>, and the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> must accept two arguments: the <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> and the <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of <DictionaryLink styled={true} term={"debugger-hook"}><b>\*debugger-hook\*</b></DictionaryLink> prior to binding it to <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. If the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> returns normally, the standard debugger is entered. 
 
 
 
@@ -50,7 +50,7 @@ Debug>
 
 
 
-**\*debugger-hook\*** is bound to **nil**, program execution is discontinued, and the debugger is entered. 
+<DictionaryLink styled={true} term={"debugger-hook"}><b>\*debugger-hook\*</b></DictionaryLink> is bound to <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>, program execution is discontinued, and the debugger is entered. 
 
 
 
@@ -58,7 +58,7 @@ Debug>
 
 
 
-**\*debug-io\*** and **\*debugger-hook\***. 
+**\*debug-io\*** and <DictionaryLink styled={true} term={"debugger-hook"}><b>\*debugger-hook\*</b></DictionaryLink>. 
 
 
 
@@ -66,7 +66,7 @@ Debug>
 
 
 
-**error**, **break** 
+<DictionaryLink styled={true} term={"error"}><b>error</b></DictionaryLink>, <DictionaryLink styled={true} term={"break"}><b>break</b></DictionaryLink> 
 
 
 
@@ -82,7 +82,7 @@ Debug>
 
 
 
-**break** 
+<DictionaryLink styled={true} term={"break"}><b>break</b></DictionaryLink> 
 
 
 

@@ -1,4 +1,4 @@
-**graphic-char-p** *Function* 
+**graphic-char-p** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**graphic-char-p** *char → generalized-boolean* 
+<DictionaryLink styled={true} term={"graphic-char-p"}><b>graphic-char-p</b></DictionaryLink> *char → generalized-boolean* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*char*—a *character* . 
+*char*—a <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> . 
 
 
 
@@ -38,7 +38,7 @@
 
 
 
-Returns *true* if *character* is a *graphic character* ; otherwise, returns *false*. 
+Returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> is a *graphic character* ; otherwise, returns <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
@@ -55,7 +55,7 @@ Returns *true* if *character* is a *graphic character* ; otherwise, returns *fal
 
 
 
-Should signal an error of *type* **type-error** if *character* is not a *character* . 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> is not a <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> . 
 
 
 
@@ -63,7 +63,7 @@ Should signal an error of *type* **type-error** if *character* is not a *charact
 
 
 
-**read**, Section 2.1 (Character Syntax), Section 13.1.10 (Documentation of Implementation-Defined Scripts) 
+<DictionaryLink styled={true} term={"read"}><b>read</b></DictionaryLink>, Section 2.1 (Character Syntax), Section 13.1.10 (Documentation of Implementation-Defined Scripts) 
 
 
 

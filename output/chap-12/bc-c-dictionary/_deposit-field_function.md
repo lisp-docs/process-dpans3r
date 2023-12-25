@@ -1,4 +1,4 @@
-**deposit-field** *Function* 
+**deposit-field** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**deposit-field** *newbyte bytespec integer → result-integer* 
+<DictionaryLink styled={true} term={"deposit-field"}><b>deposit-field</b></DictionaryLink> *newbyte bytespec integer → result-integer* 
 
 
 
@@ -34,7 +34,7 @@
 
 
 
-Replaces a field of bits within *integer*; specifically, returns an *integer* that contains the bits of *newbyte* within the *byte* specified by *bytespec*, and elsewhere contains the bits of *integer*. 
+Replaces a field of bits within *integer*; specifically, returns an *integer* that contains the bits of *newbyte* within the <GlossaryTerm styled={true} term={"byte"}><i>byte</i></GlossaryTerm> specified by *bytespec*, and elsewhere contains the bits of *integer*. 
 
 
 
@@ -50,7 +50,7 @@ Replaces a field of bits within *integer*; specifically, returns an *integer* th
 
 
 
-**byte**, **dpb** 
+<DictionaryLink styled={true} term={"byte"}><b>byte</b></DictionaryLink>, <DictionaryLink styled={true} term={"dpb"}><b>dpb</b></DictionaryLink> 
 
 
 
@@ -86,7 +86,7 @@ Replaces a field of bits within *integer*; specifically, returns an *integer* th
 
 
 
-**deposit-field** is to **mask-field** as **dpb** is to **ldb**. 
+<DictionaryLink styled={true} term={"deposit-field"}><b>deposit-field</b></DictionaryLink> is to <DictionaryLink styled={true} term={"mask-field"}><b>mask-field</b></DictionaryLink> as <DictionaryLink styled={true} term={"dpb"}><b>dpb</b></DictionaryLink> is to <DictionaryLink styled={true} term={"ldb"}><b>ldb</b></DictionaryLink>. 
 
 
 

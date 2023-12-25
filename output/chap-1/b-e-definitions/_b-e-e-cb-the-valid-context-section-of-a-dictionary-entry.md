@@ -6,7 +6,7 @@ This information is used by dictionary entries such as “Declarations” in ord
 
 
 
-A given “Declaration” might appear in a *declaration* (*i.e.*, a **declare** *expression*), a *proclamation* (*i.e.*, a **declaim** or **proclaim** *form*), or both. 
+A given “Declaration” might appear in a <GlossaryTerm styled={true} term={"declaration"}><i>declaration</i></GlossaryTerm> (*i.e.*, a <DictionaryLink styled={true} term={"declare"}><b>declare</b></DictionaryLink> <GlossaryTerm styled={true} term={"expression"}><i>expression</i></GlossaryTerm>), a <GlossaryTerm styled={true} term={"proclamation"}><i>proclamation</i></GlossaryTerm> (*i.e.*, a <DictionaryLink styled={true} term={"declaim"}><b>declaim</b></DictionaryLink> or <DictionaryLink styled={true} term={"proclaim"}><b>proclaim</b></DictionaryLink> <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>), or both. 
 
 
 

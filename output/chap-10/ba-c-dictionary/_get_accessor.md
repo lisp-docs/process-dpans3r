@@ -1,4 +1,4 @@
-**get** *Accessor* 
+**get** <GlossaryTerm styled={true} term={"accessor"}><i>Accessor</i></GlossaryTerm> 
 
 
 
@@ -6,11 +6,11 @@
 
 
 
-**get** *symbol indicator* &amp;optional *default → value* 
+<DictionaryLink styled={true} term={"get"}><b>get</b></DictionaryLink> *symbol indicator* &amp;optional *default → value* 
 
 
 
-**(setf (get** *symbol indicator* &amp;optional *default***)** *new-value***)** 
+**(setf (get** *symbol indicator* &amp;optional *default<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> *new-value***)** 
 
 
 
@@ -18,19 +18,19 @@
 
 
 
-*symbol*—a *symbol*. 
+<GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>. 
 
 
 
-*indicator*—an *object*. 
+<GlossaryTerm styled={true} term={"indicator"}><i>indicator</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
-*default*—an *object*. The default is **nil**. 
+*default*—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. The default is <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
-*value*—if the indicated property exists, the *object* that is its *value*; otherwise, the specified *default*. *new-value*—an *object*. 
+<GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm>—if the indicated property exists, the <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> that is its <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm>; otherwise, the specified *default*. *new-value*—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -38,7 +38,7 @@
 
 
 
-**get** finds a *property* on the *property list* <sub>2</sub> of *symbol* whose *property indicator* is *identical* to *indicator*, and returns its corresponding *property value*. If there are multiple *properties*<sub>1</sub> with that *property indicator* , **get** uses the first such *property*. If there is no *property* with that *property indicator* , *default* is returned. 
+<DictionaryLink styled={true} term={"get"}><b>get</b></DictionaryLink> finds a <GlossaryTerm styled={true} term={"property"}><i>property</i></GlossaryTerm> on the *property list* <sub>2</sub> of <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> whose *property indicator* is <GlossaryTerm styled={true} term={"identical"}><i>identical</i></GlossaryTerm> to <GlossaryTerm styled={true} term={"indicator"}><i>indicator</i></GlossaryTerm>, and returns its corresponding *property value*. If there are multiple *properties*<sub>1</sub> with that *property indicator* , <DictionaryLink styled={true} term={"get"}><b>get</b></DictionaryLink> uses the first such <GlossaryTerm styled={true} term={"property"}><i>property</i></GlossaryTerm>. If there is no <GlossaryTerm styled={true} term={"property"}><i>property</i></GlossaryTerm> with that *property indicator* , *default* is returned. 
 
 
 
@@ -54,11 +54,11 @@
 
 
 
-**get** 
+<DictionaryLink styled={true} term={"get"}><b>get</b></DictionaryLink> 
 
 
 
-**setf** of **get** may be used to associate a new *object* with an existing indicator already on the *symbol*’s *property list*, or to create a new assocation if none exists. If there are multiple *properties*<sub>1</sub> with that *property indicator* , **setf** of **get** associates the *new-value* with the first such *property*. When a **get** *form* is used as a **setf** *place*, any *default* which is supplied is evaluated according to normal left-to-right evaluation rules, but its *value* is ignored. 
+<DictionaryLink styled={true} term={"setf"}><b>setf</b></DictionaryLink> of <DictionaryLink styled={true} term={"get"}><b>get</b></DictionaryLink> may be used to associate a new <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> with an existing indicator already on the <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>’s *property list*, or to create a new assocation if none exists. If there are multiple *properties*<sub>1</sub> with that *property indicator* , <DictionaryLink styled={true} term={"setf"}><b>setf</b></DictionaryLink> of <DictionaryLink styled={true} term={"get"}><b>get</b></DictionaryLink> associates the *new-value* with the first such <GlossaryTerm styled={true} term={"property"}><i>property</i></GlossaryTerm>. When a <DictionaryLink styled={true} term={"get"}><b>get</b></DictionaryLink> <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> is used as a <DictionaryLink styled={true} term={"setf"}><b>setf</b></DictionaryLink> <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm>, any *default* which is supplied is evaluated according to normal left-to-right evaluation rules, but its <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> is ignored. 
 
 
 
@@ -99,7 +99,7 @@
 
 
 
-Should signal an error of *type* **type-error** if *symbol* is not a *symbol*. 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> is not a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>. 
 
 
 
@@ -107,7 +107,7 @@ Should signal an error of *type* **type-error** if *symbol* is not a *symbol*.
 
 
 
-**getf**, **symbol-plist**, **remprop** 
+<DictionaryLink styled={true} term={"getf"}><b>getf</b></DictionaryLink>, <DictionaryLink styled={true} term={"symbol-plist"}><b>symbol-plist</b></DictionaryLink>, <DictionaryLink styled={true} term={"remprop"}><b>remprop</b></DictionaryLink> 
 
 
 
@@ -131,11 +131,11 @@ Should signal an error of *type* **type-error** if *symbol* is not a *symbol*.
 
 
 
-*Numbers* and *characters* are not recommended for use as *indicators* in portable code since **get** tests with **eq** rather than **eql**, and consequently the effect of using such *indicators* is *implementation-dependent*. 
+<GlossaryTerm styled={true} term={"number"}><i>Numbers</i></GlossaryTerm> and <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm> are not recommended for use as <GlossaryTerm styled={true} term={"indicator"}><i>indicators</i></GlossaryTerm> in portable code since <DictionaryLink styled={true} term={"get"}><b>get</b></DictionaryLink> tests with <DictionaryLink styled={true} term={"eq"}><b>eq</b></DictionaryLink> rather than <DictionaryLink styled={true} term={"eql"}><b>eql</b></DictionaryLink>, and consequently the effect of using such <GlossaryTerm styled={true} term={"indicator"}><i>indicators</i></GlossaryTerm> is <GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm>. 
 
 
 
-There is no way using **get** to distinguish an absent property from one whose value is *default*. However, see **get-properties**. 
+There is no way using <DictionaryLink styled={true} term={"get"}><b>get</b></DictionaryLink> to distinguish an absent property from one whose value is *default*. However, see <DictionaryLink styled={true} term={"get-properties"}><b>get-properties</b></DictionaryLink>. 
 
 
 

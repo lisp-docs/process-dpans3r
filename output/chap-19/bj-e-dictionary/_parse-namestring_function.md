@@ -1,4 +1,4 @@
-**parse-namestring** *Function* 
+**parse-namestring** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**parse-namestring** *thing* &amp;optional *host default-pathname* &amp;key *start end junk-allowed → pathname, position* 
+<DictionaryLink styled={true} term={"parse-namestring"}><b>parse-namestring</b></DictionaryLink> *thing* &amp;optional *host default-pathname* &amp;key *start end junk-allowed → pathname, position* 
 
 
 
@@ -14,27 +14,23 @@
 
 
 
-*thing*—a *string*, a *pathname*, or a *stream associated with a file*. 
+*thing*—a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>, a <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm>, or a *stream associated with a file*. 
 
 
 
-*host*—a *valid pathname host*, a *logical host*, or **nil**. 
+*host*—a *valid pathname host*, a *logical host*, or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
-*default-pathname*—a *pathname designator* . The default is the *value* of 
+*default-pathname*—a *pathname designator* . The default is the <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of 
 
 
 
-**\*default-pathname-defaults\***. 
-
-
+<DictionaryLink styled={true} term={"default-pathname-defaults"}><b>\*default-pathname-defaults\*</b></DictionaryLink>. 
 
 
 
 
-
- 
 
 
 
@@ -42,19 +38,23 @@
 
 
 
-**parse-namestring** 
+ 
 
 
 
-*start*, *end*—*bounding index designators* of *thing*. The defaults for *start* and *end* are 0 and **nil**, respectively. 
+<DictionaryLink styled={true} term={"parse-namestring"}><b>parse-namestring</b></DictionaryLink> 
 
 
 
-*junk-allowed*—a *generalized boolean*. The default is *false*. 
+*start*, *end*—*bounding index designators* of *thing*. The defaults for *start* and *end* are 0 and <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>, respectively. 
 
 
 
-*pathname*—a *pathname*, or **nil**. 
+*junk-allowed*—a *generalized boolean*. The default is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
+
+
+
+<GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm>, or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -66,7 +66,7 @@
 
 
 
-Converts *thing* into a *pathname*. 
+Converts *thing* into a <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm>. 
 
 
 
@@ -74,19 +74,19 @@ The *host* supplies a host name with respect to which the parsing occurs.
 
 
 
-If *thing* is a *stream associated with a file*, processing proceeds as if the *pathname* used to open that *file* had been supplied instead. 
+If *thing* is a *stream associated with a file*, processing proceeds as if the <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm> used to open that <GlossaryTerm styled={true} term={"file"}><i>file</i></GlossaryTerm> had been supplied instead. 
 
 
 
-If *thing* is a *pathname*, the *host* and the host component of *thing* are compared. If they match, two values are immediately returned: *thing* and *start*; otherwise (if they do not match), an error is signaled. 
+If *thing* is a <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm>, the *host* and the host component of *thing* are compared. If they match, two values are immediately returned: *thing* and *start*; otherwise (if they do not match), an error is signaled. 
 
 
 
-Otherwise (if *thing* is a *string*), **parse-namestring** parses the name of a *file* within the substring of *thing* bounded by *start* and *end*. 
+Otherwise (if *thing* is a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>), <DictionaryLink styled={true} term={"parse-namestring"}><b>parse-namestring</b></DictionaryLink> parses the name of a <GlossaryTerm styled={true} term={"file"}><i>file</i></GlossaryTerm> within the substring of *thing* bounded by *start* and *end*. 
 
 
 
-If *thing* is a *string* then the substring of *thing bounded* by *start* and *end* is parsed into a *pathname* as follows: 
+If *thing* is a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> then the substring of *thing bounded* by *start* and *end* is parsed into a <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm> as follows: 
 
 
 
@@ -94,19 +94,19 @@ If *thing* is a *string* then the substring of *thing bounded* by *start* and *e
 
 
 
-*•* If *host* is **nil** and *thing* is a syntactically valid *logical pathname namestring* containing an explicit host, then it is parsed as a *logical pathname namestring*. 
+*•* If *host* is <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> and *thing* is a syntactically valid *logical pathname namestring* containing an explicit host, then it is parsed as a *logical pathname namestring*. 
 
 
 
-*•* If *host* is **nil**, *default-pathname* is a *logical pathname*, and *thing* is a syntactically valid *logical pathname namestring* without an explicit host, then it is parsed as a *logical pathname namestring* on the host that is the host component of *default-pathname*. 
+*•* If *host* is <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>, *default-pathname* is a *logical pathname*, and *thing* is a syntactically valid *logical pathname namestring* without an explicit host, then it is parsed as a *logical pathname namestring* on the host that is the host component of *default-pathname*. 
 
 
 
-*•* Otherwise, the parsing of *thing* is *implementation-defined*. 
+*•* Otherwise, the parsing of *thing* is <GlossaryTerm styled={true} term={"implementation-defined"}><i>implementation-defined</i></GlossaryTerm>. 
 
 
 
-In the first of these cases, the host portion of the *logical pathname* namestring and its following *colon* are optional. 
+In the first of these cases, the host portion of the *logical pathname* namestring and its following <GlossaryTerm styled={true} term={"colon"}><i>colon</i></GlossaryTerm> are optional. 
 
 
 
@@ -114,7 +114,7 @@ If the host portion of the namestring and *host* are both present and do not mat
 
 
 
-If *junk-allowed* is *true*, then the *primary value* is the *pathname* parsed or, if no syntactically correct *pathname* was seen, **nil**. If *junk-allowed* is *false*, then the entire substring is scanned, and the *primary value* is the *pathname* parsed. 
+If *junk-allowed* is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>, then the *primary value* is the <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm> parsed or, if no syntactically correct <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm> was seen, <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. If *junk-allowed* is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>, then the entire substring is scanned, and the *primary value* is the <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm> parsed. 
 
 
 
@@ -130,15 +130,15 @@ In either case, the *secondary value* is the index into *thing* of the delimiter
 
 
 
-parse, or the index beyond the substring if the parse terminated at the end of the substring (as will always be the case if *junk-allowed* is *false*). 
+parse, or the index beyond the substring if the parse terminated at the end of the substring (as will always be the case if *junk-allowed* is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>). 
 
 
 
-Parsing a *null string* always succeeds, producing a *pathname* with all components (except the host) equal to **nil**. 
+Parsing a *null string* always succeeds, producing a <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm> with all components (except the host) equal to <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
-If *thing* contains an explicit host name and no explicit device name, then it is *implementation defined* whether **parse-namestring** will supply the standard default device for that host as the device component of the resulting *pathname*. 
+If *thing* contains an explicit host name and no explicit device name, then it is *implementation defined* whether <DictionaryLink styled={true} term={"parse-namestring"}><b>parse-namestring</b></DictionaryLink> will supply the standard default device for that host as the device component of the resulting <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm>. 
 
 
 
@@ -166,15 +166,15 @@ If *thing* contains an explicit host name and no explicit device name, then it i
 
 
 
-If *junk-allowed* is *false*, an error of *type* **parse-error** is signaled if *thing* does not consist entirely of the representation of a *pathname*, possibly surrounded on either side by *whitespace*<sub>1</sub> characters if that is appropriate to the cultural conventions of the implementation. 
+If *junk-allowed* is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>, an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"parse-error"}><b>parse-error</b></DictionaryLink> is signaled if *thing* does not consist entirely of the representation of a <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm>, possibly surrounded on either side by <GlossaryTerm styled={true} term={"whitespace"}><i>whitespace</i></GlossaryTerm><sub>1</sub> characters if that is appropriate to the cultural conventions of the implementation. 
 
 
 
-If *host* is supplied and not **nil**, and *thing* contains a manifest host name, an error of *type* **error** is signaled if the hosts do not match. 
+If *host* is supplied and not <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>, and *thing* contains a manifest host name, an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"error"}><b>error</b></DictionaryLink> is signaled if the hosts do not match. 
 
 
 
-If *thing* is a *logical pathname* namestring and if the host portion of the namestring and *host* are both present and do not match, an error of *type* **error** is signaled. 
+If *thing* is a *logical pathname* namestring and if the host portion of the namestring and *host* are both present and do not match, an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"error"}><b>error</b></DictionaryLink> is signaled. 
 
 
 
@@ -182,7 +182,7 @@ If *thing* is a *logical pathname* namestring and if the host portion of the nam
 
 
 
-**pathname**, **logical-pathname**, Section 20.1 (File System Concepts), Section 19.2.2.2.3 (:UNSPE CIFIC as a Component Value), Section 19.1.2 (Pathnames as Filenames) 
+<DictionaryLink styled={true} term={"pathname"}><b>pathname</b></DictionaryLink>, <DictionaryLink styled={true} term={"logical-pathname"}><b>logical-pathname</b></DictionaryLink>, Section 20.1 (File System Concepts), Section 19.2.2.2.3 (:UNSPE CIFIC as a Component Value), Section 19.1.2 (Pathnames as Filenames) 
 
 
 
@@ -198,7 +198,7 @@ If *thing* is a *logical pathname* namestring and if the host portion of the nam
 
 
 
-**wild-pathname-p** 
+<DictionaryLink styled={true} term={"wild-pathname-p"}><b>wild-pathname-p</b></DictionaryLink> 
 
 
 

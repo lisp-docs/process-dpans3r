@@ -2,35 +2,35 @@
 
 
 
-The *generic function* **shared-initialize** is used to fill the *slots* of an *instance* using initialization arguments and :initform forms when an *instance* is created, when an *instance* is re-initialized, when an *instance* is updated to conform to a redefined *class*, and when an *instance* is updated to conform to a different *class*. It uses standard *method* combination. It takes the following 
+The *generic function* <DictionaryLink styled={true} term={"shared-initialize"}><b>shared-initialize</b></DictionaryLink> is used to fill the <GlossaryTerm styled={true} term={"slot"}><i>slots</i></GlossaryTerm> of an <GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm> using initialization arguments and :initform forms when an <GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm> is created, when an <GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm> is re-initialized, when an <GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm> is updated to conform to a redefined <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm>, and when an <GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm> is updated to conform to a different <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm>. It uses standard <GlossaryTerm styled={true} term={"method"}><i>method</i></GlossaryTerm> combination. It takes the following 
 
 
 
-arguments: the *instance* to be initialized, a specification of a set of *names* of *slots accessible* in that *instance*, and any number of initialization arguments. The arguments after the first two must form an *initialization argument list*. 
+arguments: the <GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm> to be initialized, a specification of a set of <GlossaryTerm styled={true} term={"name"}><i>names</i></GlossaryTerm> of *slots accessible* in that <GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm>, and any number of initialization arguments. The arguments after the first two must form an *initialization argument list*. 
 
 
 
-The second argument to **shared-initialize** may be one of the following: 
+The second argument to <DictionaryLink styled={true} term={"shared-initialize"}><b>shared-initialize</b></DictionaryLink> may be one of the following: 
 
 
 
-*•* It can be a (possibly empty) *list* of *slot* names, which specifies the set of those *slot* names. 
+*•* It can be a (possibly empty) <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm> names, which specifies the set of those <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm> names. 
 
 
 
-*•* It can be the symbol **t**, which specifies the set of all of the *slots*. 
+*•* It can be the symbol <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink>, which specifies the set of all of the <GlossaryTerm styled={true} term={"slot"}><i>slots</i></GlossaryTerm>. 
 
 
 
-There is a system-supplied primary *method* for **shared-initialize** whose first *parameter specializer* is the *class* **standard-object**. This *method* behaves as follows on each *slot*, whether shared or local: 
+There is a system-supplied primary <GlossaryTerm styled={true} term={"method"}><i>method</i></GlossaryTerm> for <DictionaryLink styled={true} term={"shared-initialize"}><b>shared-initialize</b></DictionaryLink> whose first *parameter specializer* is the <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm> <DictionaryLink styled={true} term={"standard-object"}><b>standard-object</b></DictionaryLink>. This <GlossaryTerm styled={true} term={"method"}><i>method</i></GlossaryTerm> behaves as follows on each <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm>, whether shared or local: 
 
 
 
-*•* If an initialization argument in the *initialization argument list* specifies a value for that *slot*, that value is stored into the *slot*, even if a value has already been stored in the *slot* before the *method* is run. The affected *slots* are independent of which *slots* are indicated by the second argument to **shared-initialize**. 
+*•* If an initialization argument in the *initialization argument list* specifies a value for that <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm>, that value is stored into the <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm>, even if a value has already been stored in the <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm> before the <GlossaryTerm styled={true} term={"method"}><i>method</i></GlossaryTerm> is run. The affected <GlossaryTerm styled={true} term={"slot"}><i>slots</i></GlossaryTerm> are independent of which <GlossaryTerm styled={true} term={"slot"}><i>slots</i></GlossaryTerm> are indicated by the second argument to <DictionaryLink styled={true} term={"shared-initialize"}><b>shared-initialize</b></DictionaryLink>. 
 
 
 
-*•* Any *slots* indicated by the second argument that are still unbound at this point are initialized according to their :initform forms. For any such *slot* that has an :initform form, that *form* is evaluated in the lexical environment of its defining **defclass** form and the result is stored into the *slot*. For example, if a *before method* stores a value in the *slot*, the :initform form will not be used to supply a value for the *slot*. If the second argument specifies a *name* that does not correspond to any *slots accessible* in the *instance*, the results are unspecified. 
+*•* Any <GlossaryTerm styled={true} term={"slot"}><i>slots</i></GlossaryTerm> indicated by the second argument that are still unbound at this point are initialized according to their :initform forms. For any such <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm> that has an :initform form, that <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> is evaluated in the lexical environment of its defining <DictionaryLink styled={true} term={"defclass"}><b>defclass</b></DictionaryLink> form and the result is stored into the <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm>. For example, if a *before method* stores a value in the <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm>, the :initform form will not be used to supply a value for the <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm>. If the second argument specifies a <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> that does not correspond to any *slots accessible* in the <GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm>, the results are unspecified. 
 
 
 
@@ -38,7 +38,7 @@ There is a system-supplied primary *method* for **shared-initialize** whose firs
 
 
 
-The generic function **shared-initialize** is called by the system-supplied primary *methods* for **reinitialize-instance**, **update-instance-for-different-class**, **update-instance-for-redefined-class**, and **initialize-instance**. Thus, *methods* can be written for **shared-initialize** to specify actions that should be taken in all of these contexts. 
+The generic function <DictionaryLink styled={true} term={"shared-initialize"}><b>shared-initialize</b></DictionaryLink> is called by the system-supplied primary <GlossaryTerm styled={true} term={"method"}><i>methods</i></GlossaryTerm> for <DictionaryLink styled={true} term={"reinitialize-instance"}><b>reinitialize-instance</b></DictionaryLink>, **update-instance-for-different-class**, **update-instance-for-redefined-class**, and <DictionaryLink styled={true} term={"initialize-instance"}><b>initialize-instance</b></DictionaryLink>. Thus, <GlossaryTerm styled={true} term={"method"}><i>methods</i></GlossaryTerm> can be written for <DictionaryLink styled={true} term={"shared-initialize"}><b>shared-initialize</b></DictionaryLink> to specify actions that should be taken in all of these contexts. 
 
 
 

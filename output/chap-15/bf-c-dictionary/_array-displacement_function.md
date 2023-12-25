@@ -1,4 +1,4 @@
-**array-displacement** *Function* 
+**array-displacement** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**array-displacement** *array → displaced-to, displaced-index-offset* 
+<DictionaryLink styled={true} term={"array-displacement"}><b>array-displacement</b></DictionaryLink> *array → displaced-to, displaced-index-offset* 
 
 
 
@@ -14,15 +14,15 @@
 
 
 
-*array*—an *array*. 
+<GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm>. 
 
 
 
-*displaced-to*—an *array* or **nil**. 
+*displaced-to*—an <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm> or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
-*displaced-index-offset*—a non-negative *fixnum*. 
+*displaced-index-offset*—a non-negative <GlossaryTerm styled={true} term={"fixnum"}><i>fixnum</i></GlossaryTerm>. 
 
 
 
@@ -30,11 +30,11 @@
 
 
 
-If the *array* is a *displaced array*, returns the *values* of the :displaced-to and :displaced-index-offset options for the *array* (see the *functions* **make-array** and **adjust-array**). If the *array* is not a *displaced array*, **nil** and 0 are returned. 
+If the <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm> is a *displaced array*, returns the <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> of the :displaced-to and :displaced-index-offset options for the <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm> (see the <GlossaryTerm styled={true} term={"function"}><i>functions</i></GlossaryTerm> <DictionaryLink styled={true} term={"make-array"}><b>make-array</b></DictionaryLink> and <DictionaryLink styled={true} term={"adjust-array"}><b>adjust-array</b></DictionaryLink>). If the <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm> is not a *displaced array*, <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> and 0 are returned. 
 
 
 
-If **array-displacement** is called on an *array* for which a *non-nil object* was provided as the :displaced-to *argument* to **make-array** or **adjust-array**, it must return that *object* as its first value. It is *implementation-dependent* whether **array-displacement** returns a *non-nil primary value* for any other *array*. 
+If <DictionaryLink styled={true} term={"array-displacement"}><b>array-displacement</b></DictionaryLink> is called on an <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm> for which a *non-nil object* was provided as the :displaced-to <GlossaryTerm styled={true} term={"argument"}><i>argument</i></GlossaryTerm> to <DictionaryLink styled={true} term={"make-array"}><b>make-array</b></DictionaryLink> or <DictionaryLink styled={true} term={"adjust-array"}><b>adjust-array</b></DictionaryLink>, it must return that <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> as its first value. It is <GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm> whether <DictionaryLink styled={true} term={"array-displacement"}><b>array-displacement</b></DictionaryLink> returns a *non-nil primary value* for any other <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm>. 
 
 
 
@@ -61,7 +61,7 @@ If **array-displacement** is called on an *array* for which a *non-nil object* w
 
 
 
-Should signal an error of *type* **type-error** if *array* is not an *array*. 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm> is not an <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm>. 
 
 
 
@@ -69,7 +69,7 @@ Should signal an error of *type* **type-error** if *array* is not an *array*.
 
 
 
-**make-array** 
+<DictionaryLink styled={true} term={"make-array"}><b>make-array</b></DictionaryLink> 
 
 
 

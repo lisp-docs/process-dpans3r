@@ -6,7 +6,7 @@
 
 
 
-**change-class** *instance new-class* &amp;key &amp;allow-other-keys *→ instance* 
+<DictionaryLink styled={true} term={"change-class"}><b>change-class</b></DictionaryLink> *instance new-class* &amp;key &amp;allow-other-keys *→ instance* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-**change-class** (*instance* **standard-object**) (*new-class* **standard-class**) &amp;rest *initargs* 
+<DictionaryLink styled={true} term={"change-class"}><b>change-class</b></DictionaryLink> (<GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm> <DictionaryLink styled={true} term={"standard-object"}><b>standard-object</b></DictionaryLink>) (*new-class* <DictionaryLink styled={true} term={"standard-class"}><b>standard-class</b></DictionaryLink>) &amp;rest *initargs* 
 
 
 
-**change-class** (*instance* **t**) (*new-class* **symbol**) &amp;rest *initargs* 
+<DictionaryLink styled={true} term={"change-class"}><b>change-class</b></DictionaryLink> (<GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm> <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink>) (*new-class* <DictionaryLink styled={true} term={"symbol"}><b>symbol</b></DictionaryLink>) &amp;rest *initargs* 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-*instance*—an *object*. 
+<GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -42,7 +42,7 @@
 
 
 
-The *generic function* **change-class** changes the *class* of an *instance* to *new-class*. It destructively modifies and returns the *instance*. 
+The *generic function* <DictionaryLink styled={true} term={"change-class"}><b>change-class</b></DictionaryLink> changes the <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm> of an <GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm> to *new-class*. It destructively modifies and returns the <GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm>. 
 
 
 
@@ -58,19 +58,19 @@ The *generic function* **change-class** changes the *class* of an *instance* to 
 
 
 
-**change-class** 
+<DictionaryLink styled={true} term={"change-class"}><b>change-class</b></DictionaryLink> 
 
 
 
-If in the old *class* there is any *slot* of the same name as a local *slot* in the *new-class*, the value of that *slot* is retained. This means that if the *slot* has a value, the value returned by **slot-value** after **change-class** is invoked is **eql** to the value returned by **slot-value** before **change-class** is invoked. Similarly, if the *slot* was unbound, it remains unbound. The other *slots* are initialized as described in Section 7.2 (Changing the Class of an Instance). 
+If in the old <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm> there is any <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm> of the same name as a local <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm> in the *new-class*, the value of that <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm> is retained. This means that if the <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm> has a value, the value returned by <DictionaryLink styled={true} term={"slot-value"}><b>slot-value</b></DictionaryLink> after <DictionaryLink styled={true} term={"change-class"}><b>change-class</b></DictionaryLink> is invoked is <DictionaryLink styled={true} term={"eql"}><b>eql</b></DictionaryLink> to the value returned by <DictionaryLink styled={true} term={"slot-value"}><b>slot-value</b></DictionaryLink> before <DictionaryLink styled={true} term={"change-class"}><b>change-class</b></DictionaryLink> is invoked. Similarly, if the <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm> was unbound, it remains unbound. The other <GlossaryTerm styled={true} term={"slot"}><i>slots</i></GlossaryTerm> are initialized as described in Section 7.2 (Changing the Class of an Instance). 
 
 
 
-After completing all other actions, **change-class** invokes **update-instance-for-different-class**. The generic function **update-instance-for-different-class** can be used to assign values to slots in the transformed instance. See Section 7.2.2 (Initializing Newly Added Local Slots). 
+After completing all other actions, <DictionaryLink styled={true} term={"change-class"}><b>change-class</b></DictionaryLink> invokes **update-instance-for-different-class**. The generic function **update-instance-for-different-class** can be used to assign values to slots in the transformed instance. See Section 7.2.2 (Initializing Newly Added Local Slots). 
 
 
 
-If the second of the above *methods* is selected, that *method* invokes **change-class** on *instance*, (find-class *new-class*), and the *initargs*. 
+If the second of the above <GlossaryTerm styled={true} term={"method"}><i>methods</i></GlossaryTerm> is selected, that <GlossaryTerm styled={true} term={"method"}><i>method</i></GlossaryTerm> invokes <DictionaryLink styled={true} term={"change-class"}><b>change-class</b></DictionaryLink> on <GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm>, (find-class *new-class*), and the *initargs*. 
 
 
 
@@ -120,11 +120,11 @@ If the second of the above *methods* is selected, that *method* invokes **change
 
 
 
-The generic function **change-class** has several semantic difficulties. First, it performs a destructive operation that can be invoked within a *method* on an *instance* that was used to select that *method*. When multiple *methods* are involved because *methods* are being combined, the *methods* currently 
+The generic function <DictionaryLink styled={true} term={"change-class"}><b>change-class</b></DictionaryLink> has several semantic difficulties. First, it performs a destructive operation that can be invoked within a <GlossaryTerm styled={true} term={"method"}><i>method</i></GlossaryTerm> on an <GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm> that was used to select that <GlossaryTerm styled={true} term={"method"}><i>method</i></GlossaryTerm>. When multiple <GlossaryTerm styled={true} term={"method"}><i>methods</i></GlossaryTerm> are involved because <GlossaryTerm styled={true} term={"method"}><i>methods</i></GlossaryTerm> are being combined, the <GlossaryTerm styled={true} term={"method"}><i>methods</i></GlossaryTerm> currently 
 
 
 
-executing or about to be executed may no longer be applicable. Second, some implementations might use compiler optimizations of slot *access*, and when the *class* of an *instance* is changed the assumptions the compiler made might be violated. This implies that a programmer must not use **change-class** inside a *method* if any *methods* for that *generic function access* any *slots*, or the results are undefined. 
+executing or about to be executed may no longer be applicable. Second, some implementations might use compiler optimizations of slot <GlossaryTerm styled={true} term={"access"}><i>access</i></GlossaryTerm>, and when the <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm> of an <GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm> is changed the assumptions the compiler made might be violated. This implies that a programmer must not use <DictionaryLink styled={true} term={"change-class"}><b>change-class</b></DictionaryLink> inside a <GlossaryTerm styled={true} term={"method"}><i>method</i></GlossaryTerm> if any <GlossaryTerm styled={true} term={"method"}><i>methods</i></GlossaryTerm> for that *generic function access* any <GlossaryTerm styled={true} term={"slot"}><i>slots</i></GlossaryTerm>, or the results are undefined. 
 
 
 

@@ -1,4 +1,4 @@
-*∗***debugger-hook***∗ Variable* 
+*∗<DictionaryLink styled={true} term={"debugger-hook"}><b>*debugger-hook*</b></DictionaryLink>∗ Variable* 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-a *designator* for a *function* of two *arguments* (a *condition* and the *value* of **\*debugger-hook\*** at the time the debugger was entered), or **nil**. 
+a <GlossaryTerm styled={true} term={"designator"}><i>designator</i></GlossaryTerm> for a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> of two <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm> (a <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> and the <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of <DictionaryLink styled={true} term={"debugger-hook"}><b>\*debugger-hook\*</b></DictionaryLink> at the time the debugger was entered), or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -14,7 +14,7 @@ a *designator* for a *function* of two *arguments* (a *condition* and the *value
 
 
 
-**nil**. 
+<DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -22,7 +22,7 @@ a *designator* for a *function* of two *arguments* (a *condition* and the *value
 
 
 
-When the *value* of **\*debugger-hook\*** is *non-nil*, it is called prior to normal entry into the debugger, either due to a call to **invoke-debugger** or due to automatic entry into the debugger from a call to **error** or **cerror** with a condition that is not handled. The *function* may either handle the *condition* (transfer control) or return normally (allowing the standard debugger to run). To minimize recursive errors while debugging, **\*debugger-hook\*** is bound to **nil** by **invoke-debugger** prior to calling the *function*. 
+When the <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of <DictionaryLink styled={true} term={"debugger-hook"}><b>\*debugger-hook\*</b></DictionaryLink> is <GlossaryTerm styled={true} term={"non-nil"}><i>non-nil</i></GlossaryTerm>, it is called prior to normal entry into the debugger, either due to a call to <DictionaryLink styled={true} term={"invoke-debugger"}><b>invoke-debugger</b></DictionaryLink> or due to automatic entry into the debugger from a call to <DictionaryLink styled={true} term={"error"}><b>error</b></DictionaryLink> or <DictionaryLink styled={true} term={"cerror"}><b>cerror</b></DictionaryLink> with a condition that is not handled. The <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> may either handle the <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> (transfer control) or return normally (allowing the standard debugger to run). To minimize recursive errors while debugging, <DictionaryLink styled={true} term={"debugger-hook"}><b>\*debugger-hook\*</b></DictionaryLink> is bound to <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> by <DictionaryLink styled={true} term={"invoke-debugger"}><b>invoke-debugger</b></DictionaryLink> prior to calling the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>. 
 
 
 
@@ -68,7 +68,7 @@ When the *value* of **\*debugger-hook\*** is *non-nil*, it is called prior to no
 
 
 
-**invoke-debugger** 
+<DictionaryLink styled={true} term={"invoke-debugger"}><b>invoke-debugger</b></DictionaryLink> 
 
 
 
@@ -76,7 +76,7 @@ When the *value* of **\*debugger-hook\*** is *non-nil*, it is called prior to no
 
 
 
-When evaluating code typed in by the user interactively, it is sometimes useful to have the hook function bind **\*debugger-hook\*** to the *function* that was its second argument so that recursive errors can be handled using the same interactive facility. 
+When evaluating code typed in by the user interactively, it is sometimes useful to have the hook function bind <DictionaryLink styled={true} term={"debugger-hook"}><b>\*debugger-hook\*</b></DictionaryLink> to the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> that was its second argument so that recursive errors can be handled using the same interactive facility. 
 
 
 

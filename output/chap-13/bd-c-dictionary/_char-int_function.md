@@ -1,4 +1,4 @@
-**char-int** *Function* 
+**char-int** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**char-int** *character → integer* 
+<DictionaryLink styled={true} term={"char-int"}><b>char-int</b></DictionaryLink> *character → integer* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*character*—a *character* . 
+<GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> . 
 
 
 
@@ -26,11 +26,11 @@
 
 
 
-Returns a non-negative *integer* encoding the *character* object. The manner in which the *integer* is computed is *implementation-dependent*. In contrast to **sxhash**, the result is not guaranteed to be independent of the particular *Lisp image*. 
+Returns a non-negative *integer* encoding the <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> object. The manner in which the *integer* is computed is <GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm>. In contrast to <DictionaryLink styled={true} term={"sxhash"}><b>sxhash</b></DictionaryLink>, the result is not guaranteed to be independent of the particular *Lisp image*. 
 
 
 
-If *character* has no *implementation-defined attributes*, the results of **char-int** and **char-code** are the same. 
+If <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> has no *implementation-defined attributes*, the results of <DictionaryLink styled={true} term={"char-int"}><b>char-int</b></DictionaryLink> and <DictionaryLink styled={true} term={"char-code"}><b>char-code</b></DictionaryLink> are the same. 
 
 
 
@@ -54,7 +54,7 @@ for characters *c1* and *c2*.
 
 
 
-**char-code** 
+<DictionaryLink styled={true} term={"char-code"}><b>char-code</b></DictionaryLink> 
 
 
 

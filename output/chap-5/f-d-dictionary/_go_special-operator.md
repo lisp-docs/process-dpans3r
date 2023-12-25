@@ -6,7 +6,7 @@
 
 
 
-**go** *tag →* 
+<DictionaryLink styled={true} term={"go"}><b>go</b></DictionaryLink> *tag →* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*tag*—a *go tag*. 
+<GlossaryTerm styled={true} term={"tag"}><i>tag</i></GlossaryTerm>—a *go tag*. 
 
 
 
@@ -22,11 +22,11 @@
 
 
 
-**go** transfers control to the point in the body of an enclosing **tagbody** form labeled by a tag **eql** to *tag*. If there is no such *tag* in the body, the bodies of lexically containing **tagbody** *forms* (if any) are examined as well. If several tags are **eql** to *tag*, control is transferred to whichever matching *tag* is contained in the innermost **tagbody** form that contains the **go**. The consequences are undefined if there is no matching *tag* lexically visible to the point of the **go**. 
+<DictionaryLink styled={true} term={"go"}><b>go</b></DictionaryLink> transfers control to the point in the body of an enclosing <DictionaryLink styled={true} term={"tagbody"}><b>tagbody</b></DictionaryLink> form labeled by a tag <DictionaryLink styled={true} term={"eql"}><b>eql</b></DictionaryLink> to <GlossaryTerm styled={true} term={"tag"}><i>tag</i></GlossaryTerm>. If there is no such <GlossaryTerm styled={true} term={"tag"}><i>tag</i></GlossaryTerm> in the body, the bodies of lexically containing <DictionaryLink styled={true} term={"tagbody"}><b>tagbody</b></DictionaryLink> <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm> (if any) are examined as well. If several tags are <DictionaryLink styled={true} term={"eql"}><b>eql</b></DictionaryLink> to <GlossaryTerm styled={true} term={"tag"}><i>tag</i></GlossaryTerm>, control is transferred to whichever matching <GlossaryTerm styled={true} term={"tag"}><i>tag</i></GlossaryTerm> is contained in the innermost <DictionaryLink styled={true} term={"tagbody"}><b>tagbody</b></DictionaryLink> form that contains the <DictionaryLink styled={true} term={"go"}><b>go</b></DictionaryLink>. The consequences are undefined if there is no matching <GlossaryTerm styled={true} term={"tag"}><i>tag</i></GlossaryTerm> lexically visible to the point of the <DictionaryLink styled={true} term={"go"}><b>go</b></DictionaryLink>. 
 
 
 
-The transfer of control initiated by **go** is performed as described in Section 5.2 (Transfer of Control to an Exit Point). 
+The transfer of control initiated by <DictionaryLink styled={true} term={"go"}><b>go</b></DictionaryLink> is performed as described in Section 5.2 (Transfer of Control to an Exit Point). 
 
 
 
@@ -55,7 +55,7 @@ The following is in error because the **tagbody** is passed over before the **go
 
 
 
-**tagbody** 
+<DictionaryLink styled={true} term={"tagbody"}><b>tagbody</b></DictionaryLink> 
 
 
 

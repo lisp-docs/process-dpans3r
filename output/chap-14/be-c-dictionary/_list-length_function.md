@@ -1,4 +1,4 @@
-**list-length** *Function* 
+**list-length** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**list-length** *list → length* 
+<DictionaryLink styled={true} term={"list-length"}><b>list-length</b></DictionaryLink> *list → length* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*list*—a *proper list* or a *circular list*. 
+<GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>—a *proper list* or a *circular list*. 
 
 
 
-*length*—a non-negative *integer* , or **nil**. 
+<GlossaryTerm styled={true} term={"length"}><i>length</i></GlossaryTerm>—a non-negative *integer* , or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-Returns the *length* of *list* if *list* is a *proper list*. Returns **nil** if *list* is a *circular list*. 
+Returns the <GlossaryTerm styled={true} term={"length"}><i>length</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> if <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> is a *proper list*. Returns <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> if <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> is a *circular list*. 
 
 
 
@@ -49,7 +49,7 @@ Returns the *length* of *list* if *list* is a *proper list*. Returns **nil** if 
 
 
 
-Should signal an error of *type* **type-error** if *list* is not a *proper list* or a *circular list*. 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> is not a *proper list* or a *circular list*. 
 
 
 
@@ -57,7 +57,7 @@ Should signal an error of *type* **type-error** if *list* is not a *proper list*
 
 
 
-**length** 
+<DictionaryLink styled={true} term={"length"}><b>length</b></DictionaryLink> 
 
 
 
@@ -65,7 +65,7 @@ Should signal an error of *type* **type-error** if *list* is not a *proper list*
 
 
 
-**list-length** could be implemented as follows: 
+<DictionaryLink styled={true} term={"list-length"}><b>list-length</b></DictionaryLink> could be implemented as follows: 
 
 
 

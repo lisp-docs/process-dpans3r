@@ -1,4 +1,4 @@
-**pprint-logical-block** *Macro* 
+**pprint-logical-block** <GlossaryTerm styled={true} term={"macro"}><i>Macro</i></GlossaryTerm> 
 
 
 
@@ -6,15 +6,15 @@
 
 
 
-**pprint-logical-block** (*stream-symbol object* &amp;key *prefix per-line-prefix suffix*) 
+<DictionaryLink styled={true} term={"pprint-logical-block"}><b>pprint-logical-block</b></DictionaryLink> (*stream-symbol object* &amp;key *prefix per-line-prefix suffix*) 
 
 
 
-*\{declaration\}*\* *\{form\}*\* 
+<GlossaryTerm styled={true} term={"declaration"}><i>\{declaration\}</i></GlossaryTerm>\* <GlossaryTerm styled={true} term={"form"}><i>\{form\}</i></GlossaryTerm>\* 
 
 
 
-*→* **nil** 
+*→* <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> 
 
 
 
@@ -26,31 +26,27 @@
 
 
 
-*object*—an *object*; evaluated. 
+<GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>; evaluated. 
 
 
 
-:prefix—a *string*; evaluated. Complicated defaulting behavior; see below. 
+:prefix—a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>; evaluated. Complicated defaulting behavior; see below. 
 
 
 
-:per-line-prefix—a *string*; evaluated. Complicated defaulting behavior; see below. :suffix—a *string*; evaluated. The default is the *null string*. 
+:per-line-prefix—a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>; evaluated. Complicated defaulting behavior; see below. :suffix—a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>; evaluated. The default is the *null string*. 
 
 
 
-*declaration*—a **declare** *expression*; not evaluated. 
+<GlossaryTerm styled={true} term={"declaration"}><i>declaration</i></GlossaryTerm>—a <DictionaryLink styled={true} term={"declare"}><b>declare</b></DictionaryLink> <GlossaryTerm styled={true} term={"expression"}><i>expression</i></GlossaryTerm>; not evaluated. 
 
 
 
-*forms*—an *implicit progn*. 
-
-
+<GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm>—an *implicit progn*. 
 
 
 
 
-
- 
 
 
 
@@ -58,7 +54,11 @@
 
 
 
-**pprint-logical-block** 
+ 
+
+
+
+<DictionaryLink styled={true} term={"pprint-logical-block"}><b>pprint-logical-block</b></DictionaryLink> 
 
 
 
@@ -70,11 +70,11 @@ Causes printing to be grouped into a logical block.
 
 
 
-The logical block is printed to the *stream* that is the *value* of the *variable* denoted by *stream-symbol*. During the execution of the *forms*, that *variable* is *bound* to a *pretty printing stream* that supports decisions about the arrangement of output and then forwards the output to the destination stream. All the standard printing functions (*e.g.*, **write**, **princ**, and **terpri**) can be used to print output to the *pretty printing stream*. All and only the output sent to this *pretty printing stream* is treated as being in the logical block. 
+The logical block is printed to the <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm> that is the <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of the <GlossaryTerm styled={true} term={"variable"}><i>variable</i></GlossaryTerm> denoted by *stream-symbol*. During the execution of the <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm>, that <GlossaryTerm styled={true} term={"variable"}><i>variable</i></GlossaryTerm> is <GlossaryTerm styled={true} term={"bound"}><i>bound</i></GlossaryTerm> to a *pretty printing stream* that supports decisions about the arrangement of output and then forwards the output to the destination stream. All the standard printing functions (*e.g.*, <DictionaryLink styled={true} term={"write"}><b>write</b></DictionaryLink>, <DictionaryLink styled={true} term={"princ"}><b>princ</b></DictionaryLink>, and <DictionaryLink styled={true} term={"terpri"}><b>terpri</b></DictionaryLink>) can be used to print output to the *pretty printing stream*. All and only the output sent to this *pretty printing stream* is treated as being in the logical block. 
 
 
 
-The *prefix* specifies a prefix to be printed before the beginning of the logical block. The *per-line-prefix* specifies a prefix that is printed before the block and at the beginning of each new line in the block. The :prefix and :pre-line-prefix *arguments* are mutually exclusive. If neither :prefix nor :per-line-prefix is specified, a *prefix* of the *null string* is assumed. 
+The *prefix* specifies a prefix to be printed before the beginning of the logical block. The *per-line-prefix* specifies a prefix that is printed before the block and at the beginning of each new line in the block. The :prefix and :pre-line-prefix <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm> are mutually exclusive. If neither :prefix nor :per-line-prefix is specified, a *prefix* of the *null string* is assumed. 
 
 
 
@@ -82,27 +82,27 @@ The *suffix* specifies a suffix that is printed just after the logical block.
 
 
 
-The *object* is normally a *list* that the body *forms* are responsible for printing. If *object* is not a *list*, it is printed using **write**. (This makes it easier to write printing functions that are robust in the face of malformed arguments.) If **\*print-circle\*** is *non-nil* and *object* is a circular (or shared) reference to a *cons*, then an appropriate “#*n*#” marker is printed. (This makes it easy to write printing 
+The <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is normally a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> that the body <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm> are responsible for printing. If <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is not a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>, it is printed using <DictionaryLink styled={true} term={"write"}><b>write</b></DictionaryLink>. (This makes it easier to write printing functions that are robust in the face of malformed arguments.) If <DictionaryLink styled={true} term={"print-circle"}><b>\*print-circle\*</b></DictionaryLink> is <GlossaryTerm styled={true} term={"non-nil"}><i>non-nil</i></GlossaryTerm> and <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is a circular (or shared) reference to a <GlossaryTerm styled={true} term={"cons"}><i>cons</i></GlossaryTerm>, then an appropriate “#*n*#” marker is printed. (This makes it easy to write printing 
 
 
 
-functions that provide full support for circularity and sharing abbreviation.) If **\*print-level\*** is not **nil** and the logical block is at a dynamic nesting depth of greater than **\*print-level\*** in logical blocks, “#” is printed. (This makes easy to write printing functions that provide full support for depth abbreviation.) 
+functions that provide full support for circularity and sharing abbreviation.) If **\*print-level\*** is not <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> and the logical block is at a dynamic nesting depth of greater than **\*print-level\*** in logical blocks, “#” is printed. (This makes easy to write printing functions that provide full support for depth abbreviation.) 
 
 
 
-If either of the three conditions above occurs, the indicated output is printed on *stream-symbol* and the body *forms* are skipped along with the printing of the :prefix and :suffix. (If the body *forms* are not to be responsible for printing a list, then the first two tests above can be turned off by supplying **nil** for the *object* argument.) 
+If either of the three conditions above occurs, the indicated output is printed on *stream-symbol* and the body <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm> are skipped along with the printing of the :prefix and :suffix. (If the body <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm> are not to be responsible for printing a list, then the first two tests above can be turned off by supplying <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> for the <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> argument.) 
 
 
 
-In addition to the *object* argument of **pprint-logical-block**, the arguments of the standard printing functions (such as **write**, **print**, **prin1**, and **pprint**, as well as the arguments of the standard *format directives* such as &#126;A, &#126;S, (and &#126;W) are all checked (when necessary) for circularity and sharing. However, such checking is not applied to the arguments of the functions **write-line**, **write-string**, and **write-char** or to the literal text output by **format**. A consequence of this is that you must use one of the latter functions if you want to print some literal text in the output that is not supposed to be checked for circularity or sharing. 
+In addition to the <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> argument of <DictionaryLink styled={true} term={"pprint-logical-block"}><b>pprint-logical-block</b></DictionaryLink>, the arguments of the standard printing functions (such as <DictionaryLink styled={true} term={"write"}><b>write</b></DictionaryLink>, <DictionaryLink styled={true} term={"print"}><b>print</b></DictionaryLink>, <DictionaryLink styled={true} term={"prin1"}><b>prin1</b></DictionaryLink>, and <DictionaryLink styled={true} term={"pprint"}><b>pprint</b></DictionaryLink>, as well as the arguments of the standard *format directives* such as &#126;A, &#126;S, (and &#126;W) are all checked (when necessary) for circularity and sharing. However, such checking is not applied to the arguments of the functions <DictionaryLink styled={true} term={"write-line"}><b>write-line</b></DictionaryLink>, <DictionaryLink styled={true} term={"write-string"}><b>write-string</b></DictionaryLink>, and <DictionaryLink styled={true} term={"write-char"}><b>write-char</b></DictionaryLink> or to the literal text output by <DictionaryLink styled={true} term={"format"}><b>format</b></DictionaryLink>. A consequence of this is that you must use one of the latter functions if you want to print some literal text in the output that is not supposed to be checked for circularity or sharing. 
 
 
 
-The body *forms* of a **pprint-logical-block** *form* must not perform any side-effects on the surrounding environment; for example, no *variables* must be assigned which have not been *bound* within its scope. 
+The body <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm> of a <DictionaryLink styled={true} term={"pprint-logical-block"}><b>pprint-logical-block</b></DictionaryLink> <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> must not perform any side-effects on the surrounding environment; for example, no <GlossaryTerm styled={true} term={"variable"}><i>variables</i></GlossaryTerm> must be assigned which have not been <GlossaryTerm styled={true} term={"bound"}><i>bound</i></GlossaryTerm> within its scope. 
 
 
 
-The **pprint-logical-block** *macro* may be used regardless of the *value* of **\*print-pretty\***. 
+The <DictionaryLink styled={true} term={"pprint-logical-block"}><b>pprint-logical-block</b></DictionaryLink> <GlossaryTerm styled={true} term={"macro"}><i>macro</i></GlossaryTerm> may be used regardless of the <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of <DictionaryLink styled={true} term={"print-pretty"}><b>\*print-pretty\*</b></DictionaryLink>. 
 
 
 
@@ -110,7 +110,7 @@ The **pprint-logical-block** *macro* may be used regardless of the *value* of **
 
 
 
-**\*print-circle\***, **\*print-level\***. 
+<DictionaryLink styled={true} term={"print-circle"}><b>\*print-circle\*</b></DictionaryLink>, **\*print-level\***. 
 
 
 
@@ -130,7 +130,7 @@ The **pprint-logical-block** *macro* may be used regardless of the *value* of **
 
 
 
-An error of *type* **type-error** is signaled if any of the :suffix, :prefix, or :per-line-prefix is supplied but does not evaluate to a *string*. 
+An error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> is signaled if any of the :suffix, :prefix, or :per-line-prefix is supplied but does not evaluate to a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>. 
 
 
 
@@ -138,7 +138,7 @@ An error is signaled if :prefix and :pre-line-prefix are both used.
 
 
 
-**pprint-logical-block** and the *pretty printing stream* it creates have *dynamic extent*. The consequences are undefined if, outside of this extent, output is attempted to the *pretty printing stream* it creates. 
+<DictionaryLink styled={true} term={"pprint-logical-block"}><b>pprint-logical-block</b></DictionaryLink> and the *pretty printing stream* it creates have *dynamic extent*. The consequences are undefined if, outside of this extent, output is attempted to the *pretty printing stream* it creates. 
 
 
 
@@ -150,7 +150,7 @@ It is also unspecified what happens if, within this extent, any output is sent d
 
 
 
-**pprint-pop**, **pprint-exit-if-list-exhausted**, Section 22.3.5.2 (Tilde Less-Than-Sign: Logical Block) 
+<DictionaryLink styled={true} term={"pprint-pop"}><b>pprint-pop</b></DictionaryLink>, <DictionaryLink styled={true} term={"pprint-exit-if-list-exhausted"}><b>pprint-exit-if-list-exhausted</b></DictionaryLink>, Section 22.3.5.2 (Tilde Less-Than-Sign: Logical Block) 
 
 
 
@@ -158,11 +158,11 @@ It is also unspecified what happens if, within this extent, any output is sent d
 
 
 
-One reason for using the **pprint-logical-block** *macro* when the *value* of **\*print-pretty\*** is **nil** would be to allow it to perform checking for *dotted lists*, as well as (in conjunction with **pprint-pop**) checking for **\*print-level\*** or **\*print-length\*** being exceeded. 
+One reason for using the <DictionaryLink styled={true} term={"pprint-logical-block"}><b>pprint-logical-block</b></DictionaryLink> <GlossaryTerm styled={true} term={"macro"}><i>macro</i></GlossaryTerm> when the <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of <DictionaryLink styled={true} term={"print-pretty"}><b>\*print-pretty\*</b></DictionaryLink> is <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> would be to allow it to perform checking for *dotted lists*, as well as (in conjunction with <DictionaryLink styled={true} term={"pprint-pop"}><b>pprint-pop</b></DictionaryLink>) checking for **\*print-level\*** or <DictionaryLink styled={true} term={"print-length"}><b>\*print-length\*</b></DictionaryLink> being exceeded. 
 
 
 
-Detection of circularity and sharing is supported by the *pretty printer* by in essence performing requested output twice. On the first pass, circularities and sharing are detected and the actual outputting of characters is suppressed. On the second pass, the appropriate “#*n*=” and “#*n*#” markers are inserted and characters are output. This is why the restriction on side-effects is necessary. Obeying this restriction is facilitated by using **pprint-pop**, instead of an ordinary **pop** when traversing a list being printed by the body *forms* of the **pprint-logical-block** *form*.) 
+Detection of circularity and sharing is supported by the *pretty printer* by in essence performing requested output twice. On the first pass, circularities and sharing are detected and the actual outputting of characters is suppressed. On the second pass, the appropriate “#*n*=” and “#*n*#” markers are inserted and characters are output. This is why the restriction on side-effects is necessary. Obeying this restriction is facilitated by using <DictionaryLink styled={true} term={"pprint-pop"}><b>pprint-pop</b></DictionaryLink>, instead of an ordinary <DictionaryLink styled={true} term={"pop"}><b>pop</b></DictionaryLink> when traversing a list being printed by the body <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm> of the <DictionaryLink styled={true} term={"pprint-logical-block"}><b>pprint-logical-block</b></DictionaryLink> <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>.) 
 
 
 

@@ -22,7 +22,7 @@ The object <i>O</i> might not be compared directly to <i>E<sub>i</sub></i>. If a
 
 
 
-The *function* designated by the :key *argument* is never called on *O* itself. However, if the function operates on multiple sequences (*e.g.*, as happens in **set-difference**), *O* will be the result of calling the :key function on an *element* of the other sequence. 
+The <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> designated by the :key <GlossaryTerm styled={true} term={"argument"}><i>argument</i></GlossaryTerm> is never called on *O* itself. However, if the function operates on multiple sequences (*e.g.*, as happens in <DictionaryLink styled={true} term={"set-difference"}><b>set-difference</b></DictionaryLink>), *O* will be the result of calling the :key function on an <GlossaryTerm styled={true} term={"element"}><i>element</i></GlossaryTerm> of the other sequence. 
 
 
 
@@ -34,11 +34,11 @@ A :test-not <i>argument</i>, if supplied to <i>F</i>, is <i>designator</i> for a
 
 
 
-If neither a :test nor a :test-not *argument* is supplied, it is as if a :test argument of #’eql was supplied. 
+If neither a :test nor a :test-not <GlossaryTerm styled={true} term={"argument"}><i>argument</i></GlossaryTerm> is supplied, it is as if a :test argument of #’eql was supplied. 
 
 
 
-The consequences are unspecified if both a :test and a :test-not *argument* are supplied in the same *call* to *F*. 
+The consequences are unspecified if both a :test and a :test-not <GlossaryTerm styled={true} term={"argument"}><i>argument</i></GlossaryTerm> are supplied in the same <GlossaryTerm styled={true} term={"call"}><i>call</i></GlossaryTerm> to *F*. 
 
 
 

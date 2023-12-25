@@ -1,4 +1,4 @@
-**last** *Function* 
+**last** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**last** *list* &amp;optional *n → tail* 
+<DictionaryLink styled={true} term={"last"}><b>last</b></DictionaryLink> <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> &amp;optional *n → tail* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*list*—a *list*, which might be a *dotted list* but must not be a *circular list*. 
+<GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>, which might be a *dotted list* but must not be a *circular list*. 
 
 
 
@@ -22,7 +22,7 @@
 
 
 
-*tail*—an *object*. 
+<GlossaryTerm styled={true} term={"tail"}><i>tail</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -30,11 +30,11 @@
 
 
 
-**last** returns the last *n conses* (not the last *n* elements) of *list*). If *list* is (), **last** returns (). 
+<DictionaryLink styled={true} term={"last"}><b>last</b></DictionaryLink> returns the last *n conses* (not the last *n* elements) of <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>). If <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> is (), <DictionaryLink styled={true} term={"last"}><b>last</b></DictionaryLink> returns (). 
 
 
 
-If *n* is zero, the atom that terminates *list* is returned. If *n* is greater than or equal to the number of *cons* cells in *list*, the result is *list*. 
+If *n* is zero, the atom that terminates <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> is returned. If *n* is greater than or equal to the number of <GlossaryTerm styled={true} term={"cons"}><i>cons</i></GlossaryTerm> cells in <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>, the result is <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>. 
 
 
 
@@ -66,7 +66,7 @@ If *n* is zero, the atom that terminates *list* is returned. If *n* is greater t
 
 
 
-The consequences are undefined if *list* is a *circular list*. Should signal an error of *type* **type-error** if *n* is not a non-negative *integer* . 
+The consequences are undefined if <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> is a *circular list*. Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if *n* is not a non-negative *integer* . 
 
 
 
@@ -74,7 +74,7 @@ The consequences are undefined if *list* is a *circular list*. Should signal an 
 
 
 
-**butlast**, **nth** 
+<DictionaryLink styled={true} term={"butlast"}><b>butlast</b></DictionaryLink>, <DictionaryLink styled={true} term={"nth"}><b>nth</b></DictionaryLink> 
 
 
 
@@ -82,7 +82,7 @@ The consequences are undefined if *list* is a *circular list*. Should signal an 
 
 
 
-The following code could be used to define **last**. 
+The following code could be used to define <DictionaryLink styled={true} term={"last"}><b>last</b></DictionaryLink>. 
 
 
 

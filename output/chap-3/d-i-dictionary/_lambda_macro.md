@@ -1,4 +1,4 @@
-**lambda** *Macro* 
+**lambda** <GlossaryTerm styled={true} term={"macro"}><i>Macro</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**lambda** *lambda-list* [[ *\{declaration\}*\* *| documentation* ]] *\{form\}*\* *→ function* 
+<DictionaryLink styled={true} term={"lambda"}><b>lambda</b></DictionaryLink> *lambda-list* [[ <GlossaryTerm styled={true} term={"declaration"}><i>\{declaration\}</i></GlossaryTerm>\* *| documentation* ]] <GlossaryTerm styled={true} term={"form"}><i>\{form\}</i></GlossaryTerm>\* *→ function* 
 
 
 
@@ -22,19 +22,19 @@
 
 
 
-*declaration*—a **declare** *expression*; not evaluated. 
+<GlossaryTerm styled={true} term={"declaration"}><i>declaration</i></GlossaryTerm>—a <DictionaryLink styled={true} term={"declare"}><b>declare</b></DictionaryLink> <GlossaryTerm styled={true} term={"expression"}><i>expression</i></GlossaryTerm>; not evaluated. 
 
 
 
-*documentation*—a *string*; not evaluated. 
+*documentation*—a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>; not evaluated. 
 
 
 
-*form*—a *form*. 
+<GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>. 
 
 
 
-*function*—a *function*. 
+<GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>. 
 
 
 
@@ -42,19 +42,19 @@
 
 
 
-Provides a shorthand notation for a **function** *special form* involving a *lambda expression* such that: 
+Provides a shorthand notation for a <DictionaryLink styled={true} term={"function"}><b>function</b></DictionaryLink> *special form* involving a *lambda expression* such that: 
 
 
 
-(lambda *lambda-list* [[ *\{declaration\}*\* *| documentation* ]] *\{form\}*\*) 
+(lambda *lambda-list* [[ <GlossaryTerm styled={true} term={"declaration"}><i>\{declaration\}</i></GlossaryTerm>\* *| documentation* ]] <GlossaryTerm styled={true} term={"form"}><i>\{form\}</i></GlossaryTerm>\*) 
 
 
 
-*≡* (function (lambda *lambda-list* [[ *\{declaration\}*\* *| documentation* ]] *\{form\}*\*)) 
+*≡* (function (lambda *lambda-list* [[ <GlossaryTerm styled={true} term={"declaration"}><i>\{declaration\}</i></GlossaryTerm>\* *| documentation* ]] <GlossaryTerm styled={true} term={"form"}><i>\{form\}</i></GlossaryTerm>\*)) 
 
 
 
-*≡* #’(lambda *lambda-list* [[ *\{declaration\}*\* *| documentation* ]] *\{form\}*\*) 
+*≡* #’(lambda *lambda-list* [[ <GlossaryTerm styled={true} term={"declaration"}><i>\{declaration\}</i></GlossaryTerm>\* *| documentation* ]] <GlossaryTerm styled={true} term={"form"}><i>\{form\}</i></GlossaryTerm>\*) 
 
 
 
@@ -68,7 +68,7 @@ Provides a shorthand notation for a **function** *special form* involving a *lam
 
 
 
-**lambda** (symbol) 
+<DictionaryLink styled={true} term={"lambda"}><b>lambda</b></DictionaryLink> (symbol) 
 
 
 

@@ -1,4 +1,4 @@
-**lambda** *Symbol* 
+**lambda** <GlossaryTerm styled={true} term={"symbol"}><i>Symbol</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**lambda** *lambda-list* [[ *\{declaration\}*\* *| documentation* ]] *\{form\}*\* 
+<DictionaryLink styled={true} term={"lambda"}><b>lambda</b></DictionaryLink> *lambda-list* [[ <GlossaryTerm styled={true} term={"declaration"}><i>\{declaration\}</i></GlossaryTerm>\* *| documentation* ]] <GlossaryTerm styled={true} term={"form"}><i>\{form\}</i></GlossaryTerm>\* 
 
 
 
@@ -18,15 +18,15 @@
 
 
 
-*declaration*—a **declare** *expression*; not evaluated. 
+<GlossaryTerm styled={true} term={"declaration"}><i>declaration</i></GlossaryTerm>—a <DictionaryLink styled={true} term={"declare"}><b>declare</b></DictionaryLink> <GlossaryTerm styled={true} term={"expression"}><i>expression</i></GlossaryTerm>; not evaluated. 
 
 
 
-*documentation*—a *string*; not evaluated. 
+*documentation*—a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>; not evaluated. 
 
 
 
-*form*—a *form*. 
+<GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>. 
 
 
 
@@ -34,11 +34,11 @@
 
 
 
-A *lambda expression* is a *list* that can be used in place of a *function name* in certain contexts to denote a *function* by directly describing its behavior rather than indirectly by referring to the name of an *established function*. 
+A *lambda expression* is a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> that can be used in place of a *function name* in certain contexts to denote a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> by directly describing its behavior rather than indirectly by referring to the name of an *established function*. 
 
 
 
-*Documentation* is attached to the denoted *function* (if any is actually created) as a *documentation string*. 
+*Documentation* is attached to the denoted <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> (if any is actually created) as a *documentation string*. 
 
 
 
@@ -46,7 +46,7 @@ A *lambda expression* is a *list* that can be used in place of a *function name*
 
 
 
-**function**, **documentation**, Section 3.1.3 (Lambda Expressions), Section 3.1.2.1.2.4 (Lambda Forms), Section 3.4.11 (Syntactic Interaction of Documentation Strings and Declarations) 
+<DictionaryLink styled={true} term={"function"}><b>function</b></DictionaryLink>, **documentation**, Section 3.1.3 (Lambda Expressions), Section 3.1.2.1.2.4 (Lambda Forms), Section 3.4.11 (Syntactic Interaction of Documentation Strings and Declarations) 
 
 
 
@@ -58,7 +58,7 @@ The *lambda form*
 
 
 
-((lambda *lambda-list* . *body*) . *arguments*) 
+((lambda *lambda-list* . *body*) . <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm>) 
 
 
 
@@ -66,7 +66,7 @@ is semantically equivalent to the *function form*
 
 
 
-(funcall #’(lambda *lambda-list* . *body*) . *arguments*) 
+(funcall #’(lambda *lambda-list* . *body*) . <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm>) 
 
 
 

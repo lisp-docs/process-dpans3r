@@ -1,4 +1,4 @@
-**with-accessors** *Macro* 
+**with-accessors** <GlossaryTerm styled={true} term={"macro"}><i>Macro</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**with-accessors** (*\{slot-entry\}*\*) *instance-form \{declaration\}*\* *\{form\}*\* 
+<DictionaryLink styled={true} term={"with-accessors"}><b>with-accessors</b></DictionaryLink> (*\{slot-entry\}*\*) *instance-form \{declaration\}*\* <GlossaryTerm styled={true} term={"form"}><i>\{form\}</i></GlossaryTerm>\* 
 
 
 
@@ -30,19 +30,19 @@
 
 
 
-*instance-form*—a *form*; evaluated. 
+*instance-form*—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>; evaluated. 
 
 
 
-*declaration*—a **declare** *expression*; not evaluated. 
+<GlossaryTerm styled={true} term={"declaration"}><i>declaration</i></GlossaryTerm>—a <DictionaryLink styled={true} term={"declare"}><b>declare</b></DictionaryLink> <GlossaryTerm styled={true} term={"expression"}><i>expression</i></GlossaryTerm>; not evaluated. 
 
 
 
-*forms*—an *implicit progn*. 
+<GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm>—an *implicit progn*. 
 
 
 
-*results*—the *values* returned by the *forms*. 
+*results*—the <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> returned by the <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm>. 
 
 
 
@@ -50,7 +50,7 @@
 
 
 
-Creates a lexical environment in which the slots specified by *slot-entry* are lexically available through their accessors as if they were variables. The macro **with-accessors** invokes the appropriate accessors to *access* the *slots* specified by *slot-entry*. Both **setf** and **setq** can be used to set the value of the *slot*. 
+Creates a lexical environment in which the slots specified by *slot-entry* are lexically available through their accessors as if they were variables. The macro <DictionaryLink styled={true} term={"with-accessors"}><b>with-accessors</b></DictionaryLink> invokes the appropriate accessors to <GlossaryTerm styled={true} term={"access"}><i>access</i></GlossaryTerm> the <GlossaryTerm styled={true} term={"slot"}><i>slots</i></GlossaryTerm> specified by *slot-entry*. Both <DictionaryLink styled={true} term={"setf"}><b>setf</b></DictionaryLink> and <DictionaryLink styled={true} term={"setq"}><b>setq</b></DictionaryLink> can be used to set the value of the <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm>. 
 
 
 
@@ -66,7 +66,7 @@ Creates a lexical environment in which the slots specified by *slot-entry* are l
 
 
 
-**with-accessors** 
+<DictionaryLink styled={true} term={"with-accessors"}><b>with-accessors</b></DictionaryLink> 
 
 
 
@@ -107,7 +107,7 @@ Creates a lexical environment in which the slots specified by *slot-entry* are l
 
 
 
-**defclass** 
+<DictionaryLink styled={true} term={"defclass"}><b>defclass</b></DictionaryLink> 
 
 
 
@@ -115,7 +115,7 @@ Creates a lexical environment in which the slots specified by *slot-entry* are l
 
 
 
-The consequences are undefined if any *accessor-name* is not the name of an accessor for the *instance*. 
+The consequences are undefined if any *accessor-name* is not the name of an accessor for the <GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm>. 
 
 
 
@@ -123,7 +123,7 @@ The consequences are undefined if any *accessor-name* is not the name of an acce
 
 
 
-**with-slots**, **symbol-macrolet** 
+<DictionaryLink styled={true} term={"with-slots"}><b>with-slots</b></DictionaryLink>, <DictionaryLink styled={true} term={"symbol-macrolet"}><b>symbol-macrolet</b></DictionaryLink> 
 
 
 
@@ -131,7 +131,7 @@ The consequences are undefined if any *accessor-name* is not the name of an acce
 
 
 
-A **with-accessors** expression of the form: 
+A <DictionaryLink styled={true} term={"with-accessors"}><b>with-accessors</b></DictionaryLink> expression of the form: 
 
 
 

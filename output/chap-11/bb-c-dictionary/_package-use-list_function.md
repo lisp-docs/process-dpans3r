@@ -1,4 +1,4 @@
-**package-use-list** *Function* 
+**package-use-list** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**package-use-list** *package → use-list* 
+<DictionaryLink styled={true} term={"package-use-list"}><b>package-use-list</b></DictionaryLink> *package → use-list* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*package*—a *package designator* . 
+<GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>—a *package designator* . 
 
 
 
-*use-list*—a *list* of *package objects*. 
+*use-list*—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of *package objects*. 
 
 
 
@@ -38,7 +38,7 @@
 
 
 
-Returns a *list* of other *packages* used by *package*. 
+Returns a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of other <GlossaryTerm styled={true} term={"package"}><i>packages</i></GlossaryTerm> used by <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>. 
 
 
 
@@ -54,7 +54,7 @@ Returns a *list* of other *packages* used by *package*.
 
 
 
-Should signal an error of *type* **type-error** if *package* is not a *package designator* . 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> is not a *package designator* . 
 
 
 
@@ -62,7 +62,7 @@ Should signal an error of *type* **type-error** if *package* is not a *package d
 
 
 
-**use-package**, **unuse-package** 
+<DictionaryLink styled={true} term={"use-package"}><b>use-package</b></DictionaryLink>, <DictionaryLink styled={true} term={"unuse-package"}><b>unuse-package</b></DictionaryLink> 
 
 
 

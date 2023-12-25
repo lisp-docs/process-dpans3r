@@ -1,4 +1,4 @@
-**vector** *Function* 
+**vector** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**vector** &amp;rest *objects → vector* 
+<DictionaryLink styled={true} term={"vector"}><b>vector</b></DictionaryLink> &amp;rest *objects → vector* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*object*—an *object*. 
+<GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
-*vector*—a *vector* of *type* (vector t \*). 
+<GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> (vector t \*). 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-Creates a *fresh simple general vector* whose size corresponds to the number of *objects*. The *vector* is initialized to contain the *objects*. 
+Creates a *fresh simple general vector* whose size corresponds to the number of <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm>. The <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm> is initialized to contain the <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm>. 
 
 
 
@@ -46,7 +46,7 @@ Creates a *fresh simple general vector* whose size corresponds to the number of 
 
 
 
-**make-array** 
+<DictionaryLink styled={true} term={"make-array"}><b>make-array</b></DictionaryLink> 
 
 
 
@@ -54,7 +54,7 @@ Creates a *fresh simple general vector* whose size corresponds to the number of 
 
 
 
-**vector** is analogous to **list**. 
+<DictionaryLink styled={true} term={"vector"}><b>vector</b></DictionaryLink> is analogous to <DictionaryLink styled={true} term={"list"}><b>list</b></DictionaryLink>. 
 
 
 

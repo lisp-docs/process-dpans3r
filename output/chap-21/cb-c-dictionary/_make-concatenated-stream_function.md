@@ -1,4 +1,4 @@
-**make-concatenated-stream** *Function* 
+**make-concatenated-stream** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**make-concatenated-stream** &amp;rest *input-streams → concatenated-stream* 
+<DictionaryLink styled={true} term={"make-concatenated-stream"}><b>make-concatenated-stream</b></DictionaryLink> &amp;rest *input-streams → concatenated-stream* 
 
 
 
@@ -38,7 +38,7 @@ Returns a *concatenated stream* that has the indicated *input-streams* initially
 
 
 
-Should signal **type-error** if any argument is not an *input stream*. 
+Should signal <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if any argument is not an *input stream*. 
 
 
 

@@ -1,4 +1,4 @@
-**rplaca, rplacd** *Function* 
+**rplaca, rplacd** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,11 +6,11 @@
 
 
 
-**rplaca** *cons object → cons* 
+<DictionaryLink styled={true} term={"rplaca"}><b>rplaca</b></DictionaryLink> *cons object → cons* 
 
 
 
-**rplacd** *cons object → cons* 
+<DictionaryLink styled={true} term={"rplacd"}><b>rplacd</b></DictionaryLink> *cons object → cons* 
 
 
 
@@ -18,11 +18,11 @@
 
 
 
-**rplaca**: [ **r—e plak***  ] or [ **r***  **plak***  ] 
+<DictionaryLink styled={true} term={"rplaca"}><b>rplaca</b></DictionaryLink>: [ **r—e plak***  ] or [ **r***  **plak***  ] 
 
 
 
-**rplacd**: [ **r—e plakd***  ] or [ **r***  **plakd***  ] or [ **r—e plakd—e** ] or [ **r***  **plakd—e** ] 
+<DictionaryLink styled={true} term={"rplacd"}><b>rplacd</b></DictionaryLink>: [ **r—e plakd***  ] or [ **r***  **plakd***  ] or [ **r—e plakd—e** ] or [ **r***  **plakd—e** ] 
 
 
 
@@ -30,11 +30,11 @@
 
 
 
-*cons*—a *cons*. 
+<GlossaryTerm styled={true} term={"cons"}><i>cons</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"cons"}><i>cons</i></GlossaryTerm>. 
 
 
 
-*object*—an *object*. 
+<GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -42,11 +42,11 @@
 
 
 
-**rplaca** replaces the *car* of the *cons* with *object*. 
+<DictionaryLink styled={true} term={"rplaca"}><b>rplaca</b></DictionaryLink> replaces the <GlossaryTerm styled={true} term={"car"}><i>car</i></GlossaryTerm> of the <GlossaryTerm styled={true} term={"cons"}><i>cons</i></GlossaryTerm> with <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
-**rplacd** replaces the *cdr* of the *cons* with *object*. 
+<DictionaryLink styled={true} term={"rplacd"}><b>rplacd</b></DictionaryLink> replaces the <GlossaryTerm styled={true} term={"cdr"}><i>cdr</i></GlossaryTerm> of the <GlossaryTerm styled={true} term={"cons"}><i>cons</i></GlossaryTerm> with <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -65,11 +65,11 @@
 
 
 
-The *cons* is modified. 
+The <GlossaryTerm styled={true} term={"cons"}><i>cons</i></GlossaryTerm> is modified. 
 
 
 
-Should signal an error of *type* **type-error** if *cons* is not a *cons*. 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if <GlossaryTerm styled={true} term={"cons"}><i>cons</i></GlossaryTerm> is not a <GlossaryTerm styled={true} term={"cons"}><i>cons</i></GlossaryTerm>. 
 
 
 

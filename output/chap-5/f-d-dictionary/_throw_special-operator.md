@@ -6,7 +6,7 @@
 
 
 
-**throw** *tag result-form →* 
+<DictionaryLink styled={true} term={"throw"}><b>throw</b></DictionaryLink> *tag result-form →* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*tag*—a *catch tag*; evaluated. 
+<GlossaryTerm styled={true} term={"tag"}><i>tag</i></GlossaryTerm>—a *catch tag*; evaluated. 
 
 
 
-*result-form*—a *form*; evaluated as described below. 
+*result-form*—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>; evaluated as described below. 
 
 
 
@@ -34,7 +34,7 @@ Data and Control
 
 
 
-**throw** 
+<DictionaryLink styled={true} term={"throw"}><b>throw</b></DictionaryLink> 
 
 
 
@@ -42,15 +42,15 @@ Data and Control
 
 
 
-**throw** causes a non-local control transfer to a **catch** whose tag is **eq** to *tag*. 
+<DictionaryLink styled={true} term={"throw"}><b>throw</b></DictionaryLink> causes a non-local control transfer to a <DictionaryLink styled={true} term={"catch"}><b>catch</b></DictionaryLink> whose tag is <DictionaryLink styled={true} term={"eq"}><b>eq</b></DictionaryLink> to <GlossaryTerm styled={true} term={"tag"}><i>tag</i></GlossaryTerm>. 
 
 
 
-*Tag* is evaluated first to produce an *object* called the throw tag; then *result-form* is evaluated, and its results are saved. If the *result-form* produces multiple values, then all the values are saved. The most recent outstanding **catch** whose *tag* is **eq** to the throw tag is exited; the saved results are returned as the value or values of **catch**. 
+<GlossaryTerm styled={true} term={"tag"}><i>Tag</i></GlossaryTerm> is evaluated first to produce an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> called the throw tag; then *result-form* is evaluated, and its results are saved. If the *result-form* produces multiple values, then all the values are saved. The most recent outstanding <DictionaryLink styled={true} term={"catch"}><b>catch</b></DictionaryLink> whose <GlossaryTerm styled={true} term={"tag"}><i>tag</i></GlossaryTerm> is <DictionaryLink styled={true} term={"eq"}><b>eq</b></DictionaryLink> to the throw tag is exited; the saved results are returned as the value or values of <DictionaryLink styled={true} term={"catch"}><b>catch</b></DictionaryLink>. 
 
 
 
-The transfer of control initiated by **throw** is performed as described in Section 5.2 (Transfer of Control to an Exit Point). 
+The transfer of control initiated by <DictionaryLink styled={true} term={"throw"}><b>throw</b></DictionaryLink> is performed as described in Section 5.2 (Transfer of Control to an Exit Point). 
 
 
 
@@ -96,7 +96,7 @@ If there is no outstanding *catch tag* that matches the throw tag, no unwinding 
 
 
 
-performed, and an error of *type* **control-error** is signaled. When the error is signaled, the *dynamic environment* is that which was in force at the point of the **throw**. 
+performed, and an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"control-error"}><b>control-error</b></DictionaryLink> is signaled. When the error is signaled, the *dynamic environment* is that which was in force at the point of the <DictionaryLink styled={true} term={"throw"}><b>throw</b></DictionaryLink>. 
 
 
 
@@ -104,7 +104,7 @@ performed, and an error of *type* **control-error** is signaled. When the error 
 
 
 
-**block**, **catch**, **return-from**, **unwind-protect**, Section 3.1 (Evaluation) 
+<DictionaryLink styled={true} term={"block"}><b>block</b></DictionaryLink>, <DictionaryLink styled={true} term={"catch"}><b>catch</b></DictionaryLink>, <DictionaryLink styled={true} term={"return-from"}><b>return-from</b></DictionaryLink>, <DictionaryLink styled={true} term={"unwind-protect"}><b>unwind-protect</b></DictionaryLink>, Section 3.1 (Evaluation) 
 
 
 
@@ -112,7 +112,7 @@ performed, and an error of *type* **control-error** is signaled. When the error 
 
 
 
-**catch** and **throw** are normally used when the *exit point* must have *dynamic scope* (*e.g.*, the **throw** is not lexically enclosed by the **catch**), while **block** and **return** are used when *lexical scope* is sufficient. 
+<DictionaryLink styled={true} term={"catch"}><b>catch</b></DictionaryLink> and <DictionaryLink styled={true} term={"throw"}><b>throw</b></DictionaryLink> are normally used when the *exit point* must have *dynamic scope* (*e.g.*, the <DictionaryLink styled={true} term={"throw"}><b>throw</b></DictionaryLink> is not lexically enclosed by the <DictionaryLink styled={true} term={"catch"}><b>catch</b></DictionaryLink>), while <DictionaryLink styled={true} term={"block"}><b>block</b></DictionaryLink> and <DictionaryLink styled={true} term={"return"}><b>return</b></DictionaryLink> are used when *lexical scope* is sufficient. 
 
 
 

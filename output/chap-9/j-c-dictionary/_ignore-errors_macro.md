@@ -1,4 +1,4 @@
-**ignore-errors** *Macro* 
+**ignore-errors** <GlossaryTerm styled={true} term={"macro"}><i>Macro</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**ignore-errors** *\{form\}*\* *→ \{result\}*\* 
+<DictionaryLink styled={true} term={"ignore-errors"}><b>ignore-errors</b></DictionaryLink> <GlossaryTerm styled={true} term={"form"}><i>\{form\}</i></GlossaryTerm>\* *→ \{result\}*\* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*forms*—an *implicit progn*. 
+<GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm>—an *implicit progn*. 
 
 
 
-*results*—In the normal situation, the *values* of the *forms* are returned; in the exceptional situation, two values are returned: **nil** and the *condition*. 
+*results*—In the normal situation, the <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> of the <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm> are returned; in the exceptional situation, two values are returned: <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> and the <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm>. 
 
 
 
@@ -26,15 +26,15 @@
 
 
 
-**ignore-errors** is used to prevent *conditions* of *type* **error** from causing entry into the debugger. 
+<DictionaryLink styled={true} term={"ignore-errors"}><b>ignore-errors</b></DictionaryLink> is used to prevent <GlossaryTerm styled={true} term={"condition"}><i>conditions</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"error"}><b>error</b></DictionaryLink> from causing entry into the debugger. 
 
 
 
-Specifically, **ignore-errors** *executes forms* in a *dynamic environment* where a *handler* for *conditions* of *type* **error** has been established; if invoked, it *handles* such *conditions* by returning two *values*, **nil** and the *condition* that was *signaled*, from the **ignore-errors** *form*. 
+Specifically, <DictionaryLink styled={true} term={"ignore-errors"}><b>ignore-errors</b></DictionaryLink> *executes forms* in a *dynamic environment* where a <GlossaryTerm styled={true} term={"handler"}><i>handler</i></GlossaryTerm> for <GlossaryTerm styled={true} term={"condition"}><i>conditions</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"error"}><b>error</b></DictionaryLink> has been established; if invoked, it <GlossaryTerm styled={true} term={"handle"}><i>handles</i></GlossaryTerm> such <GlossaryTerm styled={true} term={"condition"}><i>conditions</i></GlossaryTerm> by returning two <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm>, <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> and the <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> that was *signaled*, from the <DictionaryLink styled={true} term={"ignore-errors"}><b>ignore-errors</b></DictionaryLink> <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>. 
 
 
 
-If a *normal return* from the *forms* occurs, any *values* returned are returned by **ignore-errors**. **Examples:**
+If a *normal return* from the <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm> occurs, any <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> returned are returned by <DictionaryLink styled={true} term={"ignore-errors"}><b>ignore-errors</b></DictionaryLink>. **Examples:**
 ```lisp
 
 (defun load-init-file (program) 
@@ -57,7 +57,7 @@ NIL
 
 
 
-**handler-case**, Section 9.1 (Condition System Concepts) 
+<DictionaryLink styled={true} term={"handler-case"}><b>handler-case</b></DictionaryLink>, Section 9.1 (Condition System Concepts) 
 
 
 
@@ -65,7 +65,7 @@ NIL
 
 
 
-(ignore-errors . *forms*) 
+(ignore-errors . <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm>) 
 
 
 
@@ -73,7 +73,7 @@ is equivalent to:
 
 
 
-(handler-case (progn . *forms*) 
+(handler-case (progn . <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm>) 
 
 
 
@@ -81,7 +81,7 @@ is equivalent to:
 
 
 
-Because the second return value is a *condition* in the exceptional case, it is common (but not required) to arrange for the second return value in the normal case to be missing or **nil** so that the two situations can be distinguished. 
+Because the second return value is a <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> in the exceptional case, it is common (but not required) to arrange for the second return value in the normal case to be missing or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> so that the two situations can be distinguished. 
 
 
 

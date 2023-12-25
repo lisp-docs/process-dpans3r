@@ -1,4 +1,4 @@
-**byte, byte-size, byte-position** *Function* 
+**byte, byte-size, byte-position** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,15 +6,15 @@
 
 
 
-**byte** *size position → bytespec* 
+<DictionaryLink styled={true} term={"byte"}><b>byte</b></DictionaryLink> *size position → bytespec* 
 
 
 
-**byte-size** *bytespec → size* 
+<DictionaryLink styled={true} term={"byte-size"}><b>byte-size</b></DictionaryLink> *bytespec → size* 
 
 
 
-**byte-position** *bytespec → position* 
+<DictionaryLink styled={true} term={"byte-position"}><b>byte-position</b></DictionaryLink> *bytespec → position* 
 
 
 
@@ -38,11 +38,11 @@
 
 
 
-**byte-size** returns the number of bits specified by *bytespec*. 
+<DictionaryLink styled={true} term={"byte-size"}><b>byte-size</b></DictionaryLink> returns the number of bits specified by *bytespec*. 
 
 
 
-**byte-position** returns the position specified by *bytespec*. 
+<DictionaryLink styled={true} term={"byte-position"}><b>byte-position</b></DictionaryLink> returns the position specified by *bytespec*. 
 
 
 
@@ -58,7 +58,7 @@
 
 
 
-**ldb**, **dpb** 
+<DictionaryLink styled={true} term={"ldb"}><b>ldb</b></DictionaryLink>, <DictionaryLink styled={true} term={"dpb"}><b>dpb</b></DictionaryLink> 
 
 
 
@@ -86,7 +86,7 @@
 
 
 
-A *byte* of *size* of 0 is permissible; it refers to a *byte* of width zero. For example, 
+A <GlossaryTerm styled={true} term={"byte"}><i>byte</i></GlossaryTerm> of *size* of 0 is permissible; it refers to a <GlossaryTerm styled={true} term={"byte"}><i>byte</i></GlossaryTerm> of width zero. For example, 
 
 
 

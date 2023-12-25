@@ -1,4 +1,4 @@
-**fill** *Function* 
+**fill** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**fill** *sequence item* &amp;key *start end → sequence* 
+<DictionaryLink styled={true} term={"fill"}><b>fill</b></DictionaryLink> *sequence item* &amp;key *start end → sequence* 
 
 
 
@@ -22,7 +22,7 @@
 
 
 
-*start*, *end*—*bounding index designators* of *sequence*. The defaults for *start* and *end* are 0 and **nil**, respectively. 
+*start*, *end*—*bounding index designators* of *sequence*. The defaults for *start* and *end* are 0 and <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>, respectively. 
 
 
 
@@ -30,7 +30,7 @@
 
 
 
-Replaces the *elements* of *sequence bounded* by *start* and *end* with *item*. 
+Replaces the <GlossaryTerm styled={true} term={"element"}><i>elements</i></GlossaryTerm> of *sequence bounded* by *start* and *end* with *item*. 
 
 
 
@@ -58,7 +58,7 @@ x *→* #(P P P P P)
 
 
 
-Should be prepared to signal an error of *type* **type-error** if *sequence* is not a *proper sequence*. Should signal an error of *type* **type-error** if *start* is not a non-negative *integer* . Should signal an error of *type* **type-error** if *end* is not a non-negative *integer* or **nil**. 
+Should be prepared to signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if *sequence* is not a *proper sequence*. Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if *start* is not a non-negative *integer* . Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if *end* is not a non-negative *integer* or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -66,7 +66,7 @@ Should be prepared to signal an error of *type* **type-error** if *sequence* is 
 
 
 
-**replace**, **nsubstitute** 
+<DictionaryLink styled={true} term={"replace"}><b>replace</b></DictionaryLink>, **nsubstitute** 
 
 
 
@@ -90,7 +90,7 @@ Should be prepared to signal an error of *type* **type-error** if *sequence* is 
 
 
 
-**make-sequence** 
+<DictionaryLink styled={true} term={"make-sequence"}><b>make-sequence</b></DictionaryLink> 
 
 
 

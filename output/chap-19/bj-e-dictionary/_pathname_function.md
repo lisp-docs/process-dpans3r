@@ -1,4 +1,4 @@
-**pathname** *Function* 
+**pathname** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**pathname** *pathspec → pathname* 
+<DictionaryLink styled={true} term={"pathname"}><b>pathname</b></DictionaryLink> *pathspec → pathname* 
 
 
 
@@ -18,7 +18,7 @@
 
 
 
-*pathname*—a *pathname*. 
+<GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm>. 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-Returns the *pathname* denoted by *pathspec*. 
+Returns the <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm> denoted by *pathspec*. 
 
 
 
@@ -42,11 +42,11 @@ Returns the *pathname* denoted by *pathspec*.
 
 
 
-**pathname** 
+<DictionaryLink styled={true} term={"pathname"}><b>pathname</b></DictionaryLink> 
 
 
 
-If the *pathspec designator* is a *stream*, the *stream* can be either open or closed; in both cases, the **pathname** returned corresponds to the *filename* used to open the *file*. **pathname** returns the same *pathname* for a *file stream* after it is closed as it did when it was open. 
+If the *pathspec designator* is a <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>, the <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm> can be either open or closed; in both cases, the <DictionaryLink styled={true} term={"pathname"}><b>pathname</b></DictionaryLink> returned corresponds to the <GlossaryTerm styled={true} term={"filename"}><i>filename</i></GlossaryTerm> used to open the <GlossaryTerm styled={true} term={"file"}><i>file</i></GlossaryTerm>. <DictionaryLink styled={true} term={"pathname"}><b>pathname</b></DictionaryLink> returns the same <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm> for a *file stream* after it is closed as it did when it was open. 
 
 
 
@@ -97,7 +97,7 @@ If the *pathspec designator* is a *file stream* created by opening a *logical pa
 
 
 
-**pathname**, **logical-pathname**, Section 20.1 (File System Concepts), Section 19.1.2 (Pathnames as 
+<DictionaryLink styled={true} term={"pathname"}><b>pathname</b></DictionaryLink>, <DictionaryLink styled={true} term={"logical-pathname"}><b>logical-pathname</b></DictionaryLink>, Section 20.1 (File System Concepts), Section 19.1.2 (Pathnames as 
 
 
 

@@ -1,4 +1,4 @@
-**minusp, plusp** *Function* 
+**minusp, plusp** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,11 +6,11 @@
 
 
 
-**minusp** *real → generalized-boolean* 
+<DictionaryLink styled={true} term={"minusp"}><b>minusp</b></DictionaryLink> *real → generalized-boolean* 
 
 
 
-**plusp** *real → generalized-boolean* 
+<DictionaryLink styled={true} term={"plusp"}><b>plusp</b></DictionaryLink> *real → generalized-boolean* 
 
 
 
@@ -30,15 +30,15 @@
 
 
 
-**minusp** returns *true* if *real* is less than zero; otherwise, returns *false*. 
+<DictionaryLink styled={true} term={"minusp"}><b>minusp</b></DictionaryLink> returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if *real* is less than zero; otherwise, returns <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
-**plusp** returns *true* if *real* is greater than zero; otherwise, returns *false*. 
+<DictionaryLink styled={true} term={"plusp"}><b>plusp</b></DictionaryLink> returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if *real* is greater than zero; otherwise, returns <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
-Regardless of whether an *implementation* provides distinct representations for positive and negative *float* zeros, (minusp -0.0) always returns *false*. 
+Regardless of whether an <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm> provides distinct representations for positive and negative <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm> zeros, (minusp -0.0) always returns <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
@@ -54,7 +54,7 @@ Regardless of whether an *implementation* provides distinct representations for 
 
 
 
-Should signal an error of *type* **type-error** if *real* is not a *real*. 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if *real* is not a *real*. 
 
 
 

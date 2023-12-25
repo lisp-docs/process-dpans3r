@@ -1,4 +1,4 @@
-**eq** *Function* 
+**eq** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**eq** *x y → generalized-boolean* 
+<DictionaryLink styled={true} term={"eq"}><b>eq</b></DictionaryLink> *x y → generalized-boolean* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*x*—an *object*. 
+*x*—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
-*y*—an *object*. 
+*y*—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -30,7 +30,7 @@
 
 
 
-Returns *true* if its *arguments* are the same, identical *object*; otherwise, returns *false*. **Examples:**
+Returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if its <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm> are the same, identical <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>; otherwise, returns <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. **Examples:**
 ```lisp
 
 (eq ’a ’b) *→ false* 
@@ -76,7 +76,7 @@ Returns *true* if its *arguments* are the same, identical *object*; otherwise, r
 
 
 
-**eql**, **equal**, **equalp**, **=**, Section 3.2 (Compilation) 
+<DictionaryLink styled={true} term={"eql"}><b>eql</b></DictionaryLink>, <DictionaryLink styled={true} term={"equal"}><b>equal</b></DictionaryLink>, <DictionaryLink styled={true} term={"equalp"}><b>equalp</b></DictionaryLink>, <DictionaryLink styled={true} term={"="}><b>=</b></DictionaryLink>, Section 3.2 (Compilation) 
 
 
 
@@ -84,15 +84,15 @@ Returns *true* if its *arguments* are the same, identical *object*; otherwise, r
 
 
 
-*Objects* that appear the same when printed are not necessarily **eq** to each other. *Symbols* that print the same usually are **eq** to each other because of the use of the **intern** function. However, *numbers* with the same value need not be **eq**, and two similar *lists* are usually not *identical*. 
+<GlossaryTerm styled={true} term={"object"}><i>Objects</i></GlossaryTerm> that appear the same when printed are not necessarily <DictionaryLink styled={true} term={"eq"}><b>eq</b></DictionaryLink> to each other. <GlossaryTerm styled={true} term={"symbol"}><i>Symbols</i></GlossaryTerm> that print the same usually are <DictionaryLink styled={true} term={"eq"}><b>eq</b></DictionaryLink> to each other because of the use of the <DictionaryLink styled={true} term={"intern"}><b>intern</b></DictionaryLink> function. However, <GlossaryTerm styled={true} term={"number"}><i>numbers</i></GlossaryTerm> with the same value need not be <DictionaryLink styled={true} term={"eq"}><b>eq</b></DictionaryLink>, and two similar <GlossaryTerm styled={true} term={"list"}><i>lists</i></GlossaryTerm> are usually not <GlossaryTerm styled={true} term={"identical"}><i>identical</i></GlossaryTerm>. 
 
 
 
-An implementation is permitted to make “copies” of *characters* and *numbers* at any time. The effect is that Common Lisp makes no guarantee that **eq** is true even when both its arguments are “the same thing” if that thing is a *character* or *number* . 
+An implementation is permitted to make “copies” of <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm> and <GlossaryTerm styled={true} term={"number"}><i>numbers</i></GlossaryTerm> at any time. The effect is that Common Lisp makes no guarantee that <DictionaryLink styled={true} term={"eq"}><b>eq</b></DictionaryLink> is true even when both its arguments are “the same thing” if that thing is a <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> or <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> . 
 
 
 
-Most Common Lisp *operators* use **eql** rather than **eq** to compare objects, or else they default to **eql** and only use **eq** if specifically requested to do so. However, the following *operators* are defined to use **eq** rather than **eql** in a way that cannot be overridden by the *code* which employs them: 
+Most Common Lisp <GlossaryTerm styled={true} term={"operator"}><i>operators</i></GlossaryTerm> use <DictionaryLink styled={true} term={"eql"}><b>eql</b></DictionaryLink> rather than <DictionaryLink styled={true} term={"eq"}><b>eq</b></DictionaryLink> to compare objects, or else they default to <DictionaryLink styled={true} term={"eql"}><b>eql</b></DictionaryLink> and only use <DictionaryLink styled={true} term={"eq"}><b>eq</b></DictionaryLink> if specifically requested to do so. However, the following <GlossaryTerm styled={true} term={"operator"}><i>operators</i></GlossaryTerm> are defined to use <DictionaryLink styled={true} term={"eq"}><b>eq</b></DictionaryLink> rather than <DictionaryLink styled={true} term={"eql"}><b>eql</b></DictionaryLink> in a way that cannot be overridden by the <GlossaryTerm styled={true} term={"code"}><i>code</i></GlossaryTerm> which employs them: 
 
 
 

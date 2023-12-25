@@ -1,4 +1,4 @@
-**write-byte** *Function* 
+**write-byte** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**write-byte** *byte stream → byte* 
+<DictionaryLink styled={true} term={"write-byte"}><b>write-byte</b></DictionaryLink> *byte stream → byte* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*byte*—an *integer* of the *stream element type* of *stream*. 
+<GlossaryTerm styled={true} term={"byte"}><i>byte</i></GlossaryTerm>—an *integer* of the *stream element type* of <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>. 
 
 
 
-*stream*—a *binary output stream*. 
+<GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>—a *binary output stream*. 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-**write-byte** writes one byte, *byte*, to *stream*. 
+<DictionaryLink styled={true} term={"write-byte"}><b>write-byte</b></DictionaryLink> writes one byte, <GlossaryTerm styled={true} term={"byte"}><i>byte</i></GlossaryTerm>, to <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>. 
 
 
 
@@ -43,7 +43,7 @@
 
 
 
-*stream* is modified. 
+<GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm> is modified. 
 
 
 
@@ -51,7 +51,7 @@
 
 
 
-The *element type* of the *stream*. 
+The *element type* of the <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>. 
 
 
 
@@ -59,11 +59,11 @@ The *element type* of the *stream*.
 
 
 
-Should signal an error of *type* **type-error** if *stream* is not a *stream*. Should signal an error of *type* **error** if *stream* is not a *binary output stream*. 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm> is not a <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>. Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"error"}><b>error</b></DictionaryLink> if <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm> is not a *binary output stream*. 
 
 
 
-Might signal an error of *type* **type-error** if *byte* is not an *integer* of the *stream element type* of *stream*. 
+Might signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if <GlossaryTerm styled={true} term={"byte"}><i>byte</i></GlossaryTerm> is not an *integer* of the *stream element type* of <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>. 
 
 
 
@@ -71,7 +71,7 @@ Might signal an error of *type* **type-error** if *byte* is not an *integer* of 
 
 
 
-**read-byte**, **write-char**, **write-sequence** 
+<DictionaryLink styled={true} term={"read-byte"}><b>read-byte</b></DictionaryLink>, <DictionaryLink styled={true} term={"write-char"}><b>write-char</b></DictionaryLink>, <DictionaryLink styled={true} term={"write-sequence"}><b>write-sequence</b></DictionaryLink> 
 
 
 
@@ -87,7 +87,7 @@ Might signal an error of *type* **type-error** if *byte* is not an *integer* of 
 
 
 
-**peek-char** 
+<DictionaryLink styled={true} term={"peek-char"}><b>peek-char</b></DictionaryLink> 
 
 
 

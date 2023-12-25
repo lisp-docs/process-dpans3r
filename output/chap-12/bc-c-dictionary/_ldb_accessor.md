@@ -1,4 +1,4 @@
-**ldb** *Accessor* 
+**ldb** <GlossaryTerm styled={true} term={"accessor"}><i>Accessor</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**ldb** *bytespec integer ! byte* 
+<DictionaryLink styled={true} term={"ldb"}><b>ldb</b></DictionaryLink> *bytespec integer ! byte* 
 
 
 
@@ -34,7 +34,7 @@
 
 
 
-*byte*, *new-byte*—a non-negative *integer* . 
+<GlossaryTerm styled={true} term={"byte"}><i>byte</i></GlossaryTerm>, *new-byte*—a non-negative *integer* . 
 
 
 
@@ -42,7 +42,7 @@
 
 
 
-**ldb** extracts and returns the *byte* of *integer* specified by *bytespec*. 
+<DictionaryLink styled={true} term={"ldb"}><b>ldb</b></DictionaryLink> extracts and returns the <GlossaryTerm styled={true} term={"byte"}><i>byte</i></GlossaryTerm> of *integer* specified by *bytespec*. 
 
 
 
@@ -50,7 +50,7 @@
 
 
 
-**setf** may be used with **ldb** to modify a byte within the *integer* that is stored in a given *place*. The order of evaluation, when an **ldb** form is supplied to **setf**, is exactly left-to-right. The e↵ect is to perform a **dpb** operation and then store the result back into the *place*. 
+<DictionaryLink styled={true} term={"setf"}><b>setf</b></DictionaryLink> may be used with <DictionaryLink styled={true} term={"ldb"}><b>ldb</b></DictionaryLink> to modify a byte within the *integer* that is stored in a given <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm>. The order of evaluation, when an <DictionaryLink styled={true} term={"ldb"}><b>ldb</b></DictionaryLink> form is supplied to <DictionaryLink styled={true} term={"setf"}><b>setf</b></DictionaryLink>, is exactly left-to-right. The e↵ect is to perform a <DictionaryLink styled={true} term={"dpb"}><b>dpb</b></DictionaryLink> operation and then store the result back into the <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm>. 
 
 
 
@@ -67,7 +67,7 @@ a *!* (10)
 
 
 
-**byte**, **byte-position**, **byte-size**, **dpb** 
+<DictionaryLink styled={true} term={"byte"}><b>byte</b></DictionaryLink>, <DictionaryLink styled={true} term={"byte-position"}><b>byte-position</b></DictionaryLink>, <DictionaryLink styled={true} term={"byte-size"}><b>byte-size</b></DictionaryLink>, <DictionaryLink styled={true} term={"dpb"}><b>dpb</b></DictionaryLink> 
 
 
 

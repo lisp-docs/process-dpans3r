@@ -1,4 +1,4 @@
-**intern** *Function* 
+**intern** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**intern** *string* &amp;optional *package → symbol, status* 
+<DictionaryLink styled={true} term={"intern"}><b>intern</b></DictionaryLink> <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> &amp;optional *package → symbol, status* 
 
 
 
@@ -14,19 +14,19 @@
 
 
 
-*string*—a *string*. 
+<GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>. 
 
 
 
-*package*—a *package designator* . The default is the *current package*. 
+<GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>—a *package designator* . The default is the *current package*. 
 
 
 
-*symbol*—a *symbol*. 
+<GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>. 
 
 
 
-*status*—one of :inherited, :external, :internal, or **nil**. 
+*status*—one of :inherited, :external, :internal, or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -34,11 +34,11 @@
 
 
 
-**intern** enters a *symbol* named *string* into *package*. If a *symbol* whose name is the same as *string* is already *accessible* in *package*, it is returned. If no such *symbol* is *accessible* in *package*, a new *symbol* with the given name is created and entered into *package* as an *internal symbol*, or as an *external symbol* if the *package* is the KEYWORD *package*; *package* becomes the *home package* of the created *symbol*. 
+<DictionaryLink styled={true} term={"intern"}><b>intern</b></DictionaryLink> enters a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> named <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> into <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>. If a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> whose name is the same as <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> is already <GlossaryTerm styled={true} term={"accessible"}><i>accessible</i></GlossaryTerm> in <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>, it is returned. If no such <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> is <GlossaryTerm styled={true} term={"accessible"}><i>accessible</i></GlossaryTerm> in <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>, a new <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> with the given name is created and entered into <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> as an *internal symbol*, or as an *external symbol* if the <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> is the KEYWORD <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>; <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> becomes the *home package* of the created <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>. 
 
 
 
-The first value returned by **intern**, *symbol*, is the *symbol* that was found or created. The meaning of the *secondary value*, *status*, is as follows: 
+The first value returned by <DictionaryLink styled={true} term={"intern"}><b>intern</b></DictionaryLink>, <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>, is the <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> that was found or created. The meaning of the *secondary value*, *status*, is as follows: 
 
 
 
@@ -46,7 +46,7 @@ The first value returned by **intern**, *symbol*, is the *symbol* that was found
 
 
 
-The *symbol* was found and is *present* in *package* as an *internal symbol*. 
+The <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> was found and is <GlossaryTerm styled={true} term={"present"}><i>present</i></GlossaryTerm> in <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> as an *internal symbol*. 
 
 
 
@@ -54,7 +54,7 @@ The *symbol* was found and is *present* in *package* as an *internal symbol*.
 
 
 
-The *symbol* was found and is *present* as an *external symbol*. 
+The <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> was found and is <GlossaryTerm styled={true} term={"present"}><i>present</i></GlossaryTerm> as an *external symbol*. 
 
 
 
@@ -62,23 +62,19 @@ The *symbol* was found and is *present* as an *external symbol*.
 
 
 
-The *symbol* was found and is inherited via **use-package** (which implies that the *symbol* is internal). 
+The <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> was found and is inherited via <DictionaryLink styled={true} term={"use-package"}><b>use-package</b></DictionaryLink> (which implies that the <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> is internal). 
 
 
 
-**nil** 
+<DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> 
 
 
 
-No pre-existing *symbol* was found, so one was created. 
-
-
+No pre-existing <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> was found, so one was created. 
 
 
 
 
-
- 
 
 
 
@@ -86,7 +82,11 @@ No pre-existing *symbol* was found, so one was created.
 
 
 
-It is *implementation-dependent* whether the *string* that becomes the new *symbol*’s *name* is the given *string* or a copy of it. Once a *string* has been given as the *string argument* to *intern* in this situation where a new *symbol* is created, the consequences are undefined if a subsequent attempt is made to alter that *string*. 
+ 
+
+
+
+It is <GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm> whether the <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> that becomes the new <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>’s <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> is the given <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> or a copy of it. Once a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> has been given as the *string argument* to <GlossaryTerm styled={true} term={"intern"}><i>intern</i></GlossaryTerm> in this situation where a new <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> is created, the consequences are undefined if a subsequent attempt is made to alter that <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>. 
 
 
 
@@ -104,7 +104,7 @@ It is *implementation-dependent* whether the *string* that becomes the new *symb
 
 
 
-**find-symbol**, **read**, **symbol**, **unintern**, Section 2.3.4 (Symbols as Tokens) 
+<DictionaryLink styled={true} term={"find-symbol"}><b>find-symbol</b></DictionaryLink>, <DictionaryLink styled={true} term={"read"}><b>read</b></DictionaryLink>, <DictionaryLink styled={true} term={"symbol"}><b>symbol</b></DictionaryLink>, <DictionaryLink styled={true} term={"unintern"}><b>unintern</b></DictionaryLink>, Section 2.3.4 (Symbols as Tokens) 
 
 
 
@@ -112,7 +112,7 @@ It is *implementation-dependent* whether the *string* that becomes the new *symb
 
 
 
-**intern** does not need to do any name conflict checking because it never creates a new *symbol* if there is already an *accessible symbol* with the name given. 
+<DictionaryLink styled={true} term={"intern"}><b>intern</b></DictionaryLink> does not need to do any name conflict checking because it never creates a new <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> if there is already an *accessible symbol* with the name given. 
 
 
 

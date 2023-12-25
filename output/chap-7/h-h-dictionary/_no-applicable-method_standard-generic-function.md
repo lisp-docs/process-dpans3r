@@ -6,7 +6,7 @@
 
 
 
-**no-applicable-method** *generic-function* &amp;rest *function-arguments → \{result\}*\* 
+<DictionaryLink styled={true} term={"no-applicable-method"}><b>no-applicable-method</b></DictionaryLink> *generic-function* &amp;rest *function-arguments → \{result\}*\* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-**no-applicable-method** (*generic-function* **t**) 
+<DictionaryLink styled={true} term={"no-applicable-method"}><b>no-applicable-method</b></DictionaryLink> (*generic-function* <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink>) 
 
 
 
@@ -30,11 +30,11 @@
 
 
 
-*function-arguments*—*arguments* to the *generic-function*. 
+*function-arguments*—<GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm> to the *generic-function*. 
 
 
 
-*result*—an *object*. 
+*result*—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -42,11 +42,11 @@
 
 
 
-The generic function **no-applicable-method** is called when a *generic function* is invoked and no *method* on that *generic function* is applicable. The *default method* signals an error. 
+The generic function <DictionaryLink styled={true} term={"no-applicable-method"}><b>no-applicable-method</b></DictionaryLink> is called when a *generic function* is invoked and no <GlossaryTerm styled={true} term={"method"}><i>method</i></GlossaryTerm> on that *generic function* is applicable. The *default method* signals an error. 
 
 
 
-The generic function **no-applicable-method** is not intended to be called by programmers. Programmers may write *methods* for it. 
+The generic function <DictionaryLink styled={true} term={"no-applicable-method"}><b>no-applicable-method</b></DictionaryLink> is not intended to be called by programmers. Programmers may write <GlossaryTerm styled={true} term={"method"}><i>methods</i></GlossaryTerm> for it. 
 
 
 
@@ -66,7 +66,7 @@ The generic function **no-applicable-method** is not intended to be called by pr
 
 
 
-The default *method* signals an error of *type* **error**. 
+The default <GlossaryTerm styled={true} term={"method"}><i>method</i></GlossaryTerm> signals an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"error"}><b>error</b></DictionaryLink>. 
 
 
 

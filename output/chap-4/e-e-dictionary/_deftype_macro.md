@@ -1,4 +1,4 @@
-**deftype** *Macro* 
+**deftype** <GlossaryTerm styled={true} term={"macro"}><i>Macro</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**deftype** *name lambda-list* [[ *\{declaration\}*\* *| documentation* ]] *\{form\}*\* *→ name* 
+<DictionaryLink styled={true} term={"deftype"}><b>deftype</b></DictionaryLink> *name lambda-list* [[ <GlossaryTerm styled={true} term={"declaration"}><i>\{declaration\}</i></GlossaryTerm>\* *| documentation* ]] <GlossaryTerm styled={true} term={"form"}><i>\{form\}</i></GlossaryTerm>\* *→ name* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*name*—a *symbol*. 
+<GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>. 
 
 
 
@@ -22,15 +22,15 @@
 
 
 
-*declaration*—a **declare** *expression*; not evaluated. 
+<GlossaryTerm styled={true} term={"declaration"}><i>declaration</i></GlossaryTerm>—a <DictionaryLink styled={true} term={"declare"}><b>declare</b></DictionaryLink> <GlossaryTerm styled={true} term={"expression"}><i>expression</i></GlossaryTerm>; not evaluated. 
 
 
 
-*documentation*—a *string*; not evaluated. 
+*documentation*—a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>; not evaluated. 
 
 
 
-*form*—a *form*. 
+<GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>. 
 
 
 
@@ -38,7 +38,7 @@
 
 
 
-**deftype** defines a *derived type specifier* named *name*. 
+<DictionaryLink styled={true} term={"deftype"}><b>deftype</b></DictionaryLink> defines a *derived type specifier* named <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm>. 
 
 
 
@@ -54,11 +54,11 @@ The <i>argument expressions</i> to the <i>type specifier</i> , <i>arg</i><sub>1<
 
 
 
-The body of the **deftype** *form* (but not the *lambda-list*) is implicitly enclosed in a *block* named *name*, and is evaluated as an *implicit progn*, returning a new *type specifier* . 
+The body of the <DictionaryLink styled={true} term={"deftype"}><b>deftype</b></DictionaryLink> <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> (but not the *lambda-list*) is implicitly enclosed in a <GlossaryTerm styled={true} term={"block"}><i>block</i></GlossaryTerm> named <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm>, and is evaluated as an *implicit progn*, returning a new *type specifier* . 
 
 
 
-The *lexical environment* of the body is the one which was current at the time the **deftype** form was evaluated, augmented by the *variables* in the *lambda-list*. 
+The *lexical environment* of the body is the one which was current at the time the <DictionaryLink styled={true} term={"deftype"}><b>deftype</b></DictionaryLink> form was evaluated, augmented by the <GlossaryTerm styled={true} term={"variable"}><i>variables</i></GlossaryTerm> in the *lambda-list*. 
 
 
 
@@ -66,15 +66,15 @@ Recursive expansion of the *type specifier* returned as the expansion must termi
 
 
 
-The consequences are undefined if the result of fully expanding a *type specifier* contains any circular structure, except within the *objects* referred to by **member** and **eql** *type specifiers*. 
+The consequences are undefined if the result of fully expanding a *type specifier* contains any circular structure, except within the <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm> referred to by <DictionaryLink styled={true} term={"member"}><b>member</b></DictionaryLink> and <DictionaryLink styled={true} term={"eql"}><b>eql</b></DictionaryLink> *type specifiers*. 
 
 
 
-*Documentation* is attached to *name* as a *documentation string* of kind **type**. 
+*Documentation* is attached to <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> as a *documentation string* of kind <DictionaryLink styled={true} term={"type"}><b>type</b></DictionaryLink>. 
 
 
 
-If a **deftype** *form* appears as a *top level form*, the *compiler* must ensure that the *name* is recognized in subsequent *type* declarations. The *programmer* must ensure that the body of a **deftype** form can be *evaluated* at compile time if the *name* is referenced in subsequent *type* declarations. If the  
+If a <DictionaryLink styled={true} term={"deftype"}><b>deftype</b></DictionaryLink> <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> appears as a *top level form*, the <GlossaryTerm styled={true} term={"compiler"}><i>compiler</i></GlossaryTerm> must ensure that the <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> is recognized in subsequent <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> declarations. The <GlossaryTerm styled={true} term={"programmer"}><i>programmer</i></GlossaryTerm> must ensure that the body of a <DictionaryLink styled={true} term={"deftype"}><b>deftype</b></DictionaryLink> form can be *evaluated* at compile time if the <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> is referenced in subsequent <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> declarations. If the  
 
 
 
@@ -82,7 +82,7 @@ If a **deftype** *form* appears as a *top level form*, the *compiler* must ensur
 
 
 
-expansion of a *type specifier* is not defined fully at compile time (perhaps because it expands into an unknown *type specifier* or a **satisfies** of a named *function* that isn’t defined in the compile-time environment), an *implementation* may ignore any references to this *type* in declarations and/or signal a warning. 
+expansion of a *type specifier* is not defined fully at compile time (perhaps because it expands into an unknown *type specifier* or a **satisfies** of a named <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> that isn’t defined in the compile-time environment), an <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm> may ignore any references to this <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> in declarations and/or signal a warning. 
 
 
 
@@ -101,7 +101,7 @@ expansion of a *type specifier* is not defined fully at compile time (perhaps be
 
 
 
-**declare**, **defmacro**, **documentation**, Section 4.2.3 (Type Specifiers), Section 3.4.11 (Syntactic Interaction of Documentation Strings and Declarations) 
+<DictionaryLink styled={true} term={"declare"}><b>declare</b></DictionaryLink>, <DictionaryLink styled={true} term={"defmacro"}><b>defmacro</b></DictionaryLink>, **documentation**, Section 4.2.3 (Type Specifiers), Section 3.4.11 (Syntactic Interaction of Documentation Strings and Declarations) 
 
 
 

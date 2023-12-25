@@ -1,4 +1,4 @@
-**clrhash** *Function* 
+**clrhash** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**clrhash** *hash-table → hash-table* 
+<DictionaryLink styled={true} term={"clrhash"}><b>clrhash</b></DictionaryLink> *hash-table → hash-table* 
 
 
 

@@ -1,4 +1,4 @@
-**floor, ffloor, ceiling, fceiling, truncate, ftruncate, round, fround** *Function* 
+**floor, ffloor, ceiling, fceiling, truncate, ftruncate, round, fround** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,15 +6,15 @@
 
 
 
-**floor** *number* &amp;optional *divisor → quotient, remainder* 
+<DictionaryLink styled={true} term={"floor"}><b>floor</b></DictionaryLink> <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> &amp;optional *divisor → quotient, remainder* 
 
 
 
-**ffloor** *number* &amp;optional *divisor → quotient, remainder* 
+<DictionaryLink styled={true} term={"ffloor"}><b>ffloor</b></DictionaryLink> <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> &amp;optional *divisor → quotient, remainder* 
 
 
 
-**ceiling** *number* &amp;optional *divisor → quotient, remainder* 
+<DictionaryLink styled={true} term={"ceiling"}><b>ceiling</b></DictionaryLink> <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> &amp;optional *divisor → quotient, remainder* 
 
 
 
@@ -34,23 +34,23 @@
 
 
 
-**fceiling** *number* &amp;optional *divisor → quotient, remainder* 
+<DictionaryLink styled={true} term={"fceiling"}><b>fceiling</b></DictionaryLink> <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> &amp;optional *divisor → quotient, remainder* 
 
 
 
-**truncate** *number* &amp;optional *divisor → quotient, remainder* 
+<DictionaryLink styled={true} term={"truncate"}><b>truncate</b></DictionaryLink> <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> &amp;optional *divisor → quotient, remainder* 
 
 
 
-**ftruncate** *number* &amp;optional *divisor → quotient, remainder* 
+<DictionaryLink styled={true} term={"ftruncate"}><b>ftruncate</b></DictionaryLink> <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> &amp;optional *divisor → quotient, remainder* 
 
 
 
-**round** *number* &amp;optional *divisor → quotient, remainder* 
+<DictionaryLink styled={true} term={"round"}><b>round</b></DictionaryLink> <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> &amp;optional *divisor → quotient, remainder* 
 
 
 
-**fround** *number* &amp;optional *divisor → quotient, remainder* 
+<DictionaryLink styled={true} term={"fround"}><b>fround</b></DictionaryLink> <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> &amp;optional *divisor → quotient, remainder* 
 
 
 
@@ -58,7 +58,7 @@
 
 
 
-*number*—a *real*. 
+<GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm>—a *real*. 
 
 
 
@@ -66,7 +66,7 @@
 
 
 
-*quotient*—for **floor**, **ceiling**, **truncate**, and **round**: an *integer* ; for **ffloor**, **fceiling**, **ftruncate**, and **fround**: a *float*. 
+*quotient*—for <DictionaryLink styled={true} term={"floor"}><b>floor</b></DictionaryLink>, <DictionaryLink styled={true} term={"ceiling"}><b>ceiling</b></DictionaryLink>, <DictionaryLink styled={true} term={"truncate"}><b>truncate</b></DictionaryLink>, and <DictionaryLink styled={true} term={"round"}><b>round</b></DictionaryLink>: an *integer* ; for <DictionaryLink styled={true} term={"ffloor"}><b>ffloor</b></DictionaryLink>, <DictionaryLink styled={true} term={"fceiling"}><b>fceiling</b></DictionaryLink>, <DictionaryLink styled={true} term={"ftruncate"}><b>ftruncate</b></DictionaryLink>, and <DictionaryLink styled={true} term={"fround"}><b>fround</b></DictionaryLink>: a <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm>. 
 
 
 
@@ -78,43 +78,43 @@
 
 
 
-These functions divide *number* by *divisor*, returning a *quotient* and *remainder*, such that *quotient·divisor*+*remainder*=*number* 
+These functions divide <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> by *divisor*, returning a *quotient* and *remainder*, such that *quotient·divisor*+*remainder*=<GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> 
 
 
 
-The *quotient* always represents a mathematical integer. When more than one mathematical integer might be possible (*i.e.*, when the remainder is not zero), the kind of rounding or truncation depends on the *operator* : 
+The *quotient* always represents a mathematical integer. When more than one mathematical integer might be possible (*i.e.*, when the remainder is not zero), the kind of rounding or truncation depends on the <GlossaryTerm styled={true} term={"operator"}><i>operator</i></GlossaryTerm> : 
 
 
 
-**floor**, **ffloor** 
+<DictionaryLink styled={true} term={"floor"}><b>floor</b></DictionaryLink>, <DictionaryLink styled={true} term={"ffloor"}><b>ffloor</b></DictionaryLink> 
 
 
 
-**floor** and **ffloor** produce a *quotient* that has been truncated toward negative infinity; that is, the *quotient* represents the largest mathematical integer that is not larger than the mathematical quotient. 
+<DictionaryLink styled={true} term={"floor"}><b>floor</b></DictionaryLink> and <DictionaryLink styled={true} term={"ffloor"}><b>ffloor</b></DictionaryLink> produce a *quotient* that has been truncated toward negative infinity; that is, the *quotient* represents the largest mathematical integer that is not larger than the mathematical quotient. 
 
 
 
-**ceiling**, **fceiling** 
+<DictionaryLink styled={true} term={"ceiling"}><b>ceiling</b></DictionaryLink>, <DictionaryLink styled={true} term={"fceiling"}><b>fceiling</b></DictionaryLink> 
 
 
 
-**ceiling** and **fceiling** produce a *quotient* that has been truncated toward positive infinity; that is, the *quotient* represents the smallest mathematical integer that is not smaller than the mathematical result. 
+<DictionaryLink styled={true} term={"ceiling"}><b>ceiling</b></DictionaryLink> and <DictionaryLink styled={true} term={"fceiling"}><b>fceiling</b></DictionaryLink> produce a *quotient* that has been truncated toward positive infinity; that is, the *quotient* represents the smallest mathematical integer that is not smaller than the mathematical result. 
 
 
 
-**truncate**, **ftruncate** 
+<DictionaryLink styled={true} term={"truncate"}><b>truncate</b></DictionaryLink>, <DictionaryLink styled={true} term={"ftruncate"}><b>ftruncate</b></DictionaryLink> 
 
 
 
-**truncate** and **ftruncate** produce a *quotient* that has been truncated towards zero; that is, the *quotient* represents the mathematical integer of the same sign as the mathematical quotient, and that has the greatest integral magnitude not greater than that of the mathematical quotient. 
+<DictionaryLink styled={true} term={"truncate"}><b>truncate</b></DictionaryLink> and <DictionaryLink styled={true} term={"ftruncate"}><b>ftruncate</b></DictionaryLink> produce a *quotient* that has been truncated towards zero; that is, the *quotient* represents the mathematical integer of the same sign as the mathematical quotient, and that has the greatest integral magnitude not greater than that of the mathematical quotient. 
 
 
 
-**round**, **fround** 
+<DictionaryLink styled={true} term={"round"}><b>round</b></DictionaryLink>, <DictionaryLink styled={true} term={"fround"}><b>fround</b></DictionaryLink> 
 
 
 
-**round** and **fround** produce a *quotient* that has been rounded to the nearest mathematical integer; if the mathematical quotient is exactly halfway between two integers, (that is, it 
+<DictionaryLink styled={true} term={"round"}><b>round</b></DictionaryLink> and <DictionaryLink styled={true} term={"fround"}><b>fround</b></DictionaryLink> produce a *quotient* that has been rounded to the nearest mathematical integer; if the mathematical quotient is exactly halfway between two integers, (that is, it 
 
 
 
@@ -138,15 +138,15 @@ has the form *integer*+<sup>1</sup><sub>2</sub>), then the *quotient* has been r
 
 
 
-All of these functions perform type conversion operations on *numbers*. 
+All of these functions perform type conversion operations on <GlossaryTerm styled={true} term={"number"}><i>numbers</i></GlossaryTerm>. 
 
 
 
-The *remainder* is an *integer* if both x and y are *integers*, is a *rational* if both x and y are *rationals*, and is a *float* if either x or y is a *float*. 
+The *remainder* is an *integer* if both x and y are *integers*, is a <GlossaryTerm styled={true} term={"rational"}><i>rational</i></GlossaryTerm> if both x and y are <GlossaryTerm styled={true} term={"rational"}><i>rationals</i></GlossaryTerm>, and is a <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm> if either x or y is a <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm>. 
 
 
 
-**ffloor**, **fceiling**, **ftruncate**, and **fround** handle arguments of different *types* in the following way: If *number* is a *float*, and *divisor* is not a *float* of longer format, then the first result is a *float* of the same *type* as *number*. Otherwise, the first result is of the *type* determined by *contagion* rules; see Section 12.1.1.2 (Contagion in Numeric Operations). 
+<DictionaryLink styled={true} term={"ffloor"}><b>ffloor</b></DictionaryLink>, <DictionaryLink styled={true} term={"fceiling"}><b>fceiling</b></DictionaryLink>, <DictionaryLink styled={true} term={"ftruncate"}><b>ftruncate</b></DictionaryLink>, and <DictionaryLink styled={true} term={"fround"}><b>fround</b></DictionaryLink> handle arguments of different <GlossaryTerm styled={true} term={"type"}><i>types</i></GlossaryTerm> in the following way: If <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> is a <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm>, and *divisor* is not a <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm> of longer format, then the first result is a <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm> of the same <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> as <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm>. Otherwise, the first result is of the <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> determined by <GlossaryTerm styled={true} term={"contagion"}><i>contagion</i></GlossaryTerm> rules; see Section 12.1.1.2 (Contagion in Numeric Operations). 
 
 
 
@@ -184,11 +184,11 @@ The *remainder* is an *integer* if both x and y are *integers*, is a *rational* 
 
 
 
-When only *number* is given, the two results are exact; the mathematical sum of the two results is always equal to the mathematical value of *number*. 
+When only <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> is given, the two results are exact; the mathematical sum of the two results is always equal to the mathematical value of <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm>. 
 
 
 
-(*function number divisor*) and (*function* (/ *number divisor*)) (where *function* is any of one of **floor**, **ceiling**, **ffloor**, **fceiling**, **truncate**, **round**, **ftruncate**, and **fround**) return the same first value, 
+(*function number divisor*) and (<GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> (/ *number divisor*)) (where <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> is any of one of <DictionaryLink styled={true} term={"floor"}><b>floor</b></DictionaryLink>, <DictionaryLink styled={true} term={"ceiling"}><b>ceiling</b></DictionaryLink>, <DictionaryLink styled={true} term={"ffloor"}><b>ffloor</b></DictionaryLink>, <DictionaryLink styled={true} term={"fceiling"}><b>fceiling</b></DictionaryLink>, <DictionaryLink styled={true} term={"truncate"}><b>truncate</b></DictionaryLink>, <DictionaryLink styled={true} term={"round"}><b>round</b></DictionaryLink>, <DictionaryLink styled={true} term={"ftruncate"}><b>ftruncate</b></DictionaryLink>, and <DictionaryLink styled={true} term={"fround"}><b>fround</b></DictionaryLink>) return the same first value, 
 
 
 
@@ -216,7 +216,7 @@ but they return different remainders as the second value. For example:
 
 
 
-If an effect is desired that is similar to **round**, but that always rounds up or down (rather than toward the nearest even integer) if the mathematical quotient is exactly halfway between two integers, the programmer should consider a construction such as (floor (+ x 1/2)) or (ceiling (- x 1/2)). 
+If an effect is desired that is similar to <DictionaryLink styled={true} term={"round"}><b>round</b></DictionaryLink>, but that always rounds up or down (rather than toward the nearest even integer) if the mathematical quotient is exactly halfway between two integers, the programmer should consider a construction such as (floor (+ x 1/2)) or (ceiling (- x 1/2)). 
 
 
 

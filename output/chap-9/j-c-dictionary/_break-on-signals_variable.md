@@ -1,4 +1,4 @@
-*∗***break-on-signals***∗ Variable* 
+*∗<DictionaryLink styled={true} term={"break-on-signals"}><b>*break-on-signals*</b></DictionaryLink>∗ Variable* 
 
 
 
@@ -14,7 +14,7 @@ a *type specifier* .
 
 
 
-**nil**. 
+<DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -30,7 +30,7 @@ a *type specifier* .
 
 
 
-*∗***break-on-signals***∗* 
+*∗<DictionaryLink styled={true} term={"break-on-signals"}><b>*break-on-signals*</b></DictionaryLink>∗* 
 
 
 
@@ -38,11 +38,11 @@ a *type specifier* .
 
 
 
-When (typep *condition* \*break-on-signals\*) returns *true*, calls to **signal**, and to other *operators* such as **error** that implicitly call **signal**, enter the debugger prior to *signaling* the *condition*. 
+When (typep <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> \*break-on-signals\*) returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>, calls to <DictionaryLink styled={true} term={"signal"}><b>signal</b></DictionaryLink>, and to other <GlossaryTerm styled={true} term={"operator"}><i>operators</i></GlossaryTerm> such as <DictionaryLink styled={true} term={"error"}><b>error</b></DictionaryLink> that implicitly call <DictionaryLink styled={true} term={"signal"}><b>signal</b></DictionaryLink>, enter the debugger prior to *signaling* the <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm>. 
 
 
 
-The **continue** *restart* can be used to continue with the normal *signaling* process when a break occurs process due to **\*break-on-signals\***. 
+The **continue** <GlossaryTerm styled={true} term={"restart"}><i>restart</i></GlossaryTerm> can be used to continue with the normal *signaling* process when a break occurs process due to <DictionaryLink styled={true} term={"break-on-signals"}><b>\*break-on-signals\*</b></DictionaryLink>. 
 
 
 
@@ -82,7 +82,7 @@ The **continue** *restart* can be used to continue with the normal *signaling* p
 
 
 
-**break**, **signal**, **warn**, **error**, **typep**, Section 9.1 (Condition System Concepts) 
+<DictionaryLink styled={true} term={"break"}><b>break</b></DictionaryLink>, <DictionaryLink styled={true} term={"signal"}><b>signal</b></DictionaryLink>, <DictionaryLink styled={true} term={"warn"}><b>warn</b></DictionaryLink>, <DictionaryLink styled={true} term={"error"}><b>error</b></DictionaryLink>, <DictionaryLink styled={true} term={"typep"}><b>typep</b></DictionaryLink>, Section 9.1 (Condition System Concepts) 
 
 
 
@@ -90,7 +90,7 @@ The **continue** *restart* can be used to continue with the normal *signaling* p
 
 
 
-**\*break-on-signals\*** is intended primarily for use in debugging code that does signaling. When setting **\*break-on-signals\***, the user is encouraged to choose the most restrictive specification 
+<DictionaryLink styled={true} term={"break-on-signals"}><b>\*break-on-signals\*</b></DictionaryLink> is intended primarily for use in debugging code that does signaling. When setting <DictionaryLink styled={true} term={"break-on-signals"}><b>\*break-on-signals\*</b></DictionaryLink>, the user is encouraged to choose the most restrictive specification 
 
 
 
@@ -106,11 +106,11 @@ The **continue** *restart* can be used to continue with the normal *signaling* p
 
 
 
-that suffices. Setting **\*break-on-signals\*** effectively violates the modular handling of *condition* signaling. In practice, the complete effect of setting **\*break-on-signals\*** might be unpredictable in some cases since the user might not be aware of the variety or number of calls to **signal** that are used in code called only incidentally. 
+that suffices. Setting <DictionaryLink styled={true} term={"break-on-signals"}><b>\*break-on-signals\*</b></DictionaryLink> effectively violates the modular handling of <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> signaling. In practice, the complete effect of setting <DictionaryLink styled={true} term={"break-on-signals"}><b>\*break-on-signals\*</b></DictionaryLink> might be unpredictable in some cases since the user might not be aware of the variety or number of calls to <DictionaryLink styled={true} term={"signal"}><b>signal</b></DictionaryLink> that are used in code called only incidentally. 
 
 
 
-**\*break-on-signals\*** enables an early entry to the debugger but such an entry does not preclude an additional entry to the debugger in the case of operations such as **error** and **cerror**. 
+<DictionaryLink styled={true} term={"break-on-signals"}><b>\*break-on-signals\*</b></DictionaryLink> enables an early entry to the debugger but such an entry does not preclude an additional entry to the debugger in the case of operations such as <DictionaryLink styled={true} term={"error"}><b>error</b></DictionaryLink> and <DictionaryLink styled={true} term={"cerror"}><b>cerror</b></DictionaryLink>. 
 
 
 

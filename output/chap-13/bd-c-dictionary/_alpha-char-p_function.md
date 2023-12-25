@@ -1,4 +1,4 @@
-**alpha-char-p** *Function* 
+**alpha-char-p** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**alpha-char-p** *character → generalized-boolean* 
+<DictionaryLink styled={true} term={"alpha-char-p"}><b>alpha-char-p</b></DictionaryLink> *character → generalized-boolean* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*character*—a *character* . 
+<GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> . 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-Returns *true* if *character* is an *alphabetic*<sub>1</sub> *character* ; otherwise, returns *false*. 
+Returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> is an <GlossaryTerm styled={true} term={"alphabetic"}><i>alphabetic</i></GlossaryTerm><sub>1</sub> <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> ; otherwise, returns <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
@@ -53,7 +53,7 @@ None. (In particular, the results of this predicate are independent of any speci
 
 
 
-Should signal an error of *type* **type-error** if *character* is not a *character* . 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> is not a <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> . 
 
 
 
@@ -61,7 +61,7 @@ Should signal an error of *type* **type-error** if *character* is not a *charact
 
 
 
-**alphanumericp**, Section 13.1.10 (Documentation of Implementation-Defined Scripts) 
+<DictionaryLink styled={true} term={"alphanumericp"}><b>alphanumericp</b></DictionaryLink>, Section 13.1.10 (Documentation of Implementation-Defined Scripts) 
 
 
 

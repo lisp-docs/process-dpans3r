@@ -1,4 +1,4 @@
-**with-slots** *Macro* 
+**with-slots** <GlossaryTerm styled={true} term={"macro"}><i>Macro</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**with-slots** (*\{slot-entry\}*\*) *instance-form \{declaration\}*\* *\{form\}*\* 
+<DictionaryLink styled={true} term={"with-slots"}><b>with-slots</b></DictionaryLink> (*\{slot-entry\}*\*) *instance-form \{declaration\}*\* <GlossaryTerm styled={true} term={"form"}><i>\{form\}</i></GlossaryTerm>\* 
 
 
 
@@ -30,23 +30,23 @@
 
 
 
-*instance-form*—a *form*; evaluted to produce *instance*. 
+*instance-form*—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>; evaluted to produce <GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm>. 
 
 
 
-*instance*—an *object*. 
+<GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
-*declaration*—a **declare** *expression*; not evaluated. 
+<GlossaryTerm styled={true} term={"declaration"}><i>declaration</i></GlossaryTerm>—a <DictionaryLink styled={true} term={"declare"}><b>declare</b></DictionaryLink> <GlossaryTerm styled={true} term={"expression"}><i>expression</i></GlossaryTerm>; not evaluated. 
 
 
 
-*forms*—an *implicit progn*. 
+<GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm>—an *implicit progn*. 
 
 
 
-*results*—the *values* returned by the *forms*. 
+*results*—the <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> returned by the <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm>. 
 
 
 
@@ -54,11 +54,11 @@
 
 
 
-The macro **with-slots** *establishes* a *lexical environment* for referring to the *slots* in the *instance* named by the given *slot-names* as though they were *variables*. Within such a context the value of the *slot* can be specified by using its slot name, as if it were a lexically bound variable. Both **setf** and **setq** can be used to set the value of the *slot*. 
+The macro <DictionaryLink styled={true} term={"with-slots"}><b>with-slots</b></DictionaryLink> *establishes* a *lexical environment* for referring to the <GlossaryTerm styled={true} term={"slot"}><i>slots</i></GlossaryTerm> in the <GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm> named by the given *slot-names* as though they were <GlossaryTerm styled={true} term={"variable"}><i>variables</i></GlossaryTerm>. Within such a context the value of the <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm> can be specified by using its slot name, as if it were a lexically bound variable. Both <DictionaryLink styled={true} term={"setf"}><b>setf</b></DictionaryLink> and <DictionaryLink styled={true} term={"setq"}><b>setq</b></DictionaryLink> can be used to set the value of the <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm>. 
 
 
 
-The macro **with-slots** translates an appearance of the slot name as a *variable* into a call to **slot-value**. 
+The macro <DictionaryLink styled={true} term={"with-slots"}><b>with-slots</b></DictionaryLink> translates an appearance of the slot name as a <GlossaryTerm styled={true} term={"variable"}><i>variable</i></GlossaryTerm> into a call to <DictionaryLink styled={true} term={"slot-value"}><b>slot-value</b></DictionaryLink>. 
 
 
 
@@ -105,7 +105,7 @@ The macro **with-slots** translates an appearance of the slot name as a *variabl
 
 
 
-**defclass** 
+<DictionaryLink styled={true} term={"defclass"}><b>defclass</b></DictionaryLink> 
 
 
 
@@ -113,7 +113,7 @@ The macro **with-slots** translates an appearance of the slot name as a *variabl
 
 
 
-The consequences are undefined if any *slot-name* is not the name of a *slot* in the *instance*. 
+The consequences are undefined if any *slot-name* is not the name of a <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm> in the <GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm>. 
 
 
 
@@ -121,7 +121,7 @@ The consequences are undefined if any *slot-name* is not the name of a *slot* in
 
 
 
-**with-accessors**, **slot-value**, **symbol-macrolet** 
+<DictionaryLink styled={true} term={"with-accessors"}><b>with-accessors</b></DictionaryLink>, <DictionaryLink styled={true} term={"slot-value"}><b>slot-value</b></DictionaryLink>, <DictionaryLink styled={true} term={"symbol-macrolet"}><b>symbol-macrolet</b></DictionaryLink> 
 
 
 
@@ -129,7 +129,7 @@ The consequences are undefined if any *slot-name* is not the name of a *slot* in
 
 
 
-A **with-slots** expression of the form: 
+A <DictionaryLink styled={true} term={"with-slots"}><b>with-slots</b></DictionaryLink> expression of the form: 
 
 
 

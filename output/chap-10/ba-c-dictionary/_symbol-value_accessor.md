@@ -1,4 +1,4 @@
-**symbol-value** *Accessor* 
+**symbol-value** <GlossaryTerm styled={true} term={"accessor"}><i>Accessor</i></GlossaryTerm> 
 
 
 
@@ -6,11 +6,11 @@
 
 
 
-**symbol-value** *symbol → value* 
+<DictionaryLink styled={true} term={"symbol-value"}><b>symbol-value</b></DictionaryLink> *symbol → value* 
 
 
 
-**(setf (symbol-value** *symbol***)** *new-value***)** 
+**(setf (symbol-value** <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>**)** *new-value***)** 
 
 
 
@@ -18,11 +18,11 @@
 
 
 
-*symbol*—a *symbol* that must have a *value*. 
+<GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> that must have a <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm>. 
 
 
 
-*value*, *new-value*—an *object*. 
+<GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm>, *new-value*—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -30,7 +30,7 @@
 
 
 
-*Accesses* the *symbol*’s *value cell*. 
+*Accesses* the <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>’s *value cell*. 
 
 
 
@@ -75,7 +75,7 @@ a *→* 3
 
 
 
-**makunbound**, **set**, **setq** 
+<DictionaryLink styled={true} term={"makunbound"}><b>makunbound</b></DictionaryLink>, <DictionaryLink styled={true} term={"set"}><b>set</b></DictionaryLink>, <DictionaryLink styled={true} term={"setq"}><b>setq</b></DictionaryLink> 
 
 
 
@@ -83,11 +83,11 @@ a *→* 3
 
 
 
-Should signal an error of *type* **type-error** if *symbol* is not a *symbol*. 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> is not a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>. 
 
 
 
-Should signal **unbound-variable** if *symbol* is *unbound* and an attempt is made to *read* its *value*. (No such error is signaled on an attempt to *write* its *value*.) 
+Should signal <DictionaryLink styled={true} term={"unbound-variable"}><b>unbound-variable</b></DictionaryLink> if <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> is <GlossaryTerm styled={true} term={"unbound"}><i>unbound</i></GlossaryTerm> and an attempt is made to <GlossaryTerm styled={true} term={"read"}><i>read</i></GlossaryTerm> its <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm>. (No such error is signaled on an attempt to <GlossaryTerm styled={true} term={"write"}><i>write</i></GlossaryTerm> its <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm>.) 
 
 
 
@@ -95,7 +95,7 @@ Should signal **unbound-variable** if *symbol* is *unbound* and an attempt is ma
 
 
 
-**boundp**, **makunbound**, **set**, **setq** 
+<DictionaryLink styled={true} term={"boundp"}><b>boundp</b></DictionaryLink>, <DictionaryLink styled={true} term={"makunbound"}><b>makunbound</b></DictionaryLink>, <DictionaryLink styled={true} term={"set"}><b>set</b></DictionaryLink>, <DictionaryLink styled={true} term={"setq"}><b>setq</b></DictionaryLink> 
 
 
 
@@ -103,7 +103,7 @@ Should signal **unbound-variable** if *symbol* is *unbound* and an attempt is ma
 
 
 
-**symbol-value** can be used to get the value of a *constant variable*. **symbol-value** cannot *access* the value of a *lexical variable*. 
+<DictionaryLink styled={true} term={"symbol-value"}><b>symbol-value</b></DictionaryLink> can be used to get the value of a *constant variable*. <DictionaryLink styled={true} term={"symbol-value"}><b>symbol-value</b></DictionaryLink> cannot <GlossaryTerm styled={true} term={"access"}><i>access</i></GlossaryTerm> the value of a *lexical variable*. 
 
 
 

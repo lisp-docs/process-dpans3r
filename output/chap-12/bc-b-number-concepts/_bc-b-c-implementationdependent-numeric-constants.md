@@ -1,4 +1,4 @@
- Figure 12–7 shows *defined names* relating to *implementation-dependent* details about *numbers*. 
+ Figure 12–7 shows *defined names* relating to <GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm> details about <GlossaryTerm styled={true} term={"number"}><i>numbers</i></GlossaryTerm>. 
 
 
 

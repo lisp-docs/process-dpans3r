@@ -6,11 +6,11 @@
 
 
 
-**let** (*\{var |* (*var* [*init-form*])*\}*\*) *\{declaration\}*\* *\{form\}*\* *→ \{result\}*\* 
+<DictionaryLink styled={true} term={"let"}><b>let</b></DictionaryLink> (*\{var |* (*var* [*init-form*])*\}*\*) <GlossaryTerm styled={true} term={"declaration"}><i>\{declaration\}</i></GlossaryTerm>\* <GlossaryTerm styled={true} term={"form"}><i>\{form\}</i></GlossaryTerm>\* *→ \{result\}*\* 
 
 
 
-**let\*** (*\{var |* (*var* [*init-form*])*\}*\*) *\{declaration\}*\* *\{form\}*\* *→ \{result\}*\* 
+<DictionaryLink styled={true} term={"let"}><b>let\*</b></DictionaryLink> (*\{var |* (*var* [*init-form*])*\}*\*) <GlossaryTerm styled={true} term={"declaration"}><i>\{declaration\}</i></GlossaryTerm>\* <GlossaryTerm styled={true} term={"form"}><i>\{form\}</i></GlossaryTerm>\* *→ \{result\}*\* 
 
 
 
@@ -18,23 +18,23 @@
 
 
 
-*var*—a *symbol*. 
+*var*—a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>. 
 
 
 
-*init-form*—a *form*. 
+*init-form*—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>. 
 
 
 
-*declaration*—a **declare** *expression*; not evaluated. 
+<GlossaryTerm styled={true} term={"declaration"}><i>declaration</i></GlossaryTerm>—a <DictionaryLink styled={true} term={"declare"}><b>declare</b></DictionaryLink> <GlossaryTerm styled={true} term={"expression"}><i>expression</i></GlossaryTerm>; not evaluated. 
 
 
 
-*form*—a *form*. 
+<GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>. 
 
 
 
-*results*—the *values* returned by the *forms*. 
+*results*—the <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> returned by the <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm>. 
 
 
 
@@ -42,7 +42,7 @@
 
 
 
-**let** and **let\*** create new variable *bindings* and execute a series of *forms* that use these *bindings*. **let** performs the *bindings* in parallel and **let\*** does them sequentially. 
+<DictionaryLink styled={true} term={"let"}><b>let</b></DictionaryLink> and <DictionaryLink styled={true} term={"let"}><b>let\*</b></DictionaryLink> create new variable <GlossaryTerm styled={true} term={"binding"}><i>bindings</i></GlossaryTerm> and execute a series of <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm> that use these <GlossaryTerm styled={true} term={"binding"}><i>bindings</i></GlossaryTerm>. <DictionaryLink styled={true} term={"let"}><b>let</b></DictionaryLink> performs the <GlossaryTerm styled={true} term={"binding"}><i>bindings</i></GlossaryTerm> in parallel and <DictionaryLink styled={true} term={"let"}><b>let\*</b></DictionaryLink> does them sequentially. 
 
 
 
@@ -114,11 +114,11 @@ The form
 
 
 
-first evaluates the expressions *init-form-1*, *init-form-2*, and so on, in that order, saving the resulting values. Then all of the variables *varj* are bound to the corresponding values; each *binding* is lexical unless there is a **special** declaration to the contrary. The expressions *formk* are then evaluated in order; the values of all but the last are discarded (that is, the body of a **let** is an *implicit progn*). 
+first evaluates the expressions *init-form-1*, *init-form-2*, and so on, in that order, saving the resulting values. Then all of the variables *varj* are bound to the corresponding values; each <GlossaryTerm styled={true} term={"binding"}><i>binding</i></GlossaryTerm> is lexical unless there is a <DictionaryLink styled={true} term={"special"}><b>special</b></DictionaryLink> declaration to the contrary. The expressions *formk* are then evaluated in order; the values of all but the last are discarded (that is, the body of a <DictionaryLink styled={true} term={"let"}><b>let</b></DictionaryLink> is an *implicit progn*). 
 
 
 
-**let\*** is similar to **let**, but the *bindings* of variables are performed sequentially rather than in parallel. The expression for the *init-form* of a *var* can refer to *vars* previously bound in the **let\***. 
+<DictionaryLink styled={true} term={"let"}><b>let\*</b></DictionaryLink> is similar to <DictionaryLink styled={true} term={"let"}><b>let</b></DictionaryLink>, but the <GlossaryTerm styled={true} term={"binding"}><i>bindings</i></GlossaryTerm> of variables are performed sequentially rather than in parallel. The expression for the *init-form* of a *var* can refer to *vars* previously bound in the <DictionaryLink styled={true} term={"let"}><b>let\*</b></DictionaryLink>. 
 
 
 
@@ -174,15 +174,15 @@ The form
 
 
 
-first evaluates the expression *init-form-1*, then binds the variable *var1* to that value; then it evaluates *init-form-2* and binds *var2*, and so on. The expressions *formj* are then evaluated in order; the values of all but the last are discarded (that is, the body of **let\*** is an implicit **progn**). 
+first evaluates the expression *init-form-1*, then binds the variable *var1* to that value; then it evaluates *init-form-2* and binds *var2*, and so on. The expressions *formj* are then evaluated in order; the values of all but the last are discarded (that is, the body of <DictionaryLink styled={true} term={"let"}><b>let\*</b></DictionaryLink> is an implicit <DictionaryLink styled={true} term={"progn"}><b>progn</b></DictionaryLink>). 
 
 
 
-For both **let** and **let\***, if there is not an *init-form* associated with a *var*, *var* is initialized to **nil**. 
+For both <DictionaryLink styled={true} term={"let"}><b>let</b></DictionaryLink> and <DictionaryLink styled={true} term={"let"}><b>let\*</b></DictionaryLink>, if there is not an *init-form* associated with a *var*, *var* is initialized to <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
-The special form **let** has the property that the *scope* of the name binding does not include any initial value form. For **let\***, a variable’s *scope* also includes the remaining initial value forms for subsequent variable bindings. 
+The special form <DictionaryLink styled={true} term={"let"}><b>let</b></DictionaryLink> has the property that the <GlossaryTerm styled={true} term={"scope"}><i>scope</i></GlossaryTerm> of the name binding does not include any initial value form. For <DictionaryLink styled={true} term={"let"}><b>let\*</b></DictionaryLink>, a variable’s <GlossaryTerm styled={true} term={"scope"}><i>scope</i></GlossaryTerm> also includes the remaining initial value forms for subsequent variable bindings. 
 
 
 
@@ -213,7 +213,7 @@ is incorrect; although x is indeed set before it is used, and is set to a value 
 
 
 
-**progv** 
+<DictionaryLink styled={true} term={"progv"}><b>progv</b></DictionaryLink> 
 
 
 

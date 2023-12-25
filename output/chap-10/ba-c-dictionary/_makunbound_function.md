@@ -1,4 +1,4 @@
-**makunbound** *Function* 
+**makunbound** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**makunbound** *symbol → symbol* 
+<DictionaryLink styled={true} term={"makunbound"}><b>makunbound</b></DictionaryLink> *symbol → symbol* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*symbol*—a *symbol* 
+<GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> 
 
 
 
@@ -22,7 +22,7 @@
 
 
 
-Makes the *symbol* be *unbound*, regardless of whether it was previously *bound*. 
+Makes the <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> be <GlossaryTerm styled={true} term={"unbound"}><i>unbound</i></GlossaryTerm>, regardless of whether it was previously <GlossaryTerm styled={true} term={"bound"}><i>bound</i></GlossaryTerm>. 
 
 
 
@@ -40,7 +40,7 @@ a *→* 1
 
 
 
-The *value cell* of *symbol* is modified. 
+The *value cell* of <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> is modified. 
 
 
 
@@ -48,7 +48,7 @@ The *value cell* of *symbol* is modified.
 
 
 
-Should signal an error of *type* **type-error** if *symbol* is not a *symbol*. 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> is not a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>. 
 
 
 
@@ -68,7 +68,7 @@ Should signal an error of *type* **type-error** if *symbol* is not a *symbol*.
 
 
 
-**boundp**, **fmakunbound** 
+<DictionaryLink styled={true} term={"boundp"}><b>boundp</b></DictionaryLink>, <DictionaryLink styled={true} term={"fmakunbound"}><b>fmakunbound</b></DictionaryLink> 
 
 
 

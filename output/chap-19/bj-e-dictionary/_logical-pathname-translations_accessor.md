@@ -1,4 +1,4 @@
-**logical-pathname-translations** *Accessor* 
+**logical-pathname-translations** <GlossaryTerm styled={true} term={"accessor"}><i>Accessor</i></GlossaryTerm> 
 
 
 
@@ -6,11 +6,11 @@
 
 
 
-**logical-pathname-translations** *host → translations* 
+<DictionaryLink styled={true} term={"logical-pathname-translations"}><b>logical-pathname-translations</b></DictionaryLink> *host → translations* 
 
 
 
-**(setf (logical-pathname-translations** *host***)** *new-translations***)** 
+**(setf (logical-pathname-translations** *host<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> *new-translations***)** 
 
 
 
@@ -22,7 +22,7 @@
 
 
 
-*translations*, *new-translations*—a *list*. 
+*translations*, *new-translations*—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>. 
 
 
 
@@ -38,7 +38,7 @@
 
 
 
-**logical-pathname-translations** 
+<DictionaryLink styled={true} term={"logical-pathname-translations"}><b>logical-pathname-translations</b></DictionaryLink> 
 
 
 
@@ -46,19 +46,19 @@
 
 
 
-Returns the host’s *list* of translations. Each translation is a *list* of at least two elements: *from-wildcard* and *to-wildcard*. Any additional elements are *implementation-defined*. *From-wildcard* is a *logical pathname* whose host is *host*. *To-wildcard* is a *pathname*. 
+Returns the host’s <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of translations. Each translation is a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of at least two elements: *from-wildcard* and *to-wildcard*. Any additional elements are <GlossaryTerm styled={true} term={"implementation-defined"}><i>implementation-defined</i></GlossaryTerm>. *From-wildcard* is a *logical pathname* whose host is *host*. *To-wildcard* is a <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm>. 
 
 
 
-(setf (logical-pathname-translations *host*) *translations*) sets a *logical pathname* host’s *list* of *translations*. If *host* is a *string* that has not been previously used as a *logical pathname* host, a new *logical pathname* host is defined; otherwise an existing host’s translations are replaced. *logical pathname* host names are compared with **string-equal**. 
+(setf (logical-pathname-translations *host*) *translations*) sets a *logical pathname* host’s <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of *translations*. If *host* is a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> that has not been previously used as a *logical pathname* host, a new *logical pathname* host is defined; otherwise an existing host’s translations are replaced. *logical pathname* host names are compared with **string-equal**. 
 
 
 
-When setting the translations list, each *from-wildcard* can be a *logical pathname* whose host is *host* or a *logical pathname* namestring parseable by (parse-namestring *string host*), where *host* represents the appropriate *object* as defined by **parse-namestring**. Each *to-wildcard* can be anything coercible to a *pathname* by (pathname *to-wildcard*). If *to-wildcard* coerces to a *logical pathname*, **translate-logical-pathname** will perform repeated translation steps when it uses it. 
+When setting the translations list, each *from-wildcard* can be a *logical pathname* whose host is *host* or a *logical pathname* namestring parseable by (parse-namestring *string host*), where *host* represents the appropriate <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> as defined by <DictionaryLink styled={true} term={"parse-namestring"}><b>parse-namestring</b></DictionaryLink>. Each *to-wildcard* can be anything coercible to a <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm> by (pathname *to-wildcard*). If *to-wildcard* coerces to a *logical pathname*, <DictionaryLink styled={true} term={"translate-logical-pathname"}><b>translate-logical-pathname</b></DictionaryLink> will perform repeated translation steps when it uses it. 
 
 
 
-*host* is either the host component of a *logical pathname* or a *string* that has been defined as a *logical pathname* host name by **setf** of **logical-pathname-translations**. 
+*host* is either the host component of a *logical pathname* or a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> that has been defined as a *logical pathname* host name by <DictionaryLink styled={true} term={"setf"}><b>setf</b></DictionaryLink> of <DictionaryLink styled={true} term={"logical-pathname-translations"}><b>logical-pathname-translations</b></DictionaryLink>. 
 
 
 
@@ -177,7 +177,7 @@ When setting the translations list, each *from-wildcard* can be a *logical pathn
 
 
 
-If *host* is incorrectly supplied, an error of *type* **type-error** is signaled. 
+If *host* is incorrectly supplied, an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> is signaled. 
 
 
 
@@ -185,7 +185,7 @@ If *host* is incorrectly supplied, an error of *type* **type-error** is signaled
 
 
 
-**logical-pathname**, Section 19.1.2 (Pathnames as Filenames) 
+<DictionaryLink styled={true} term={"logical-pathname"}><b>logical-pathname</b></DictionaryLink>, Section 19.1.2 (Pathnames as Filenames) 
 
 
 
@@ -193,7 +193,7 @@ If *host* is incorrectly supplied, an error of *type* **type-error** is signaled
 
 
 
-Implementations can define additional *functions* that operate on *logical pathname* hosts, for example to specify additional translation rules or options. 
+Implementations can define additional <GlossaryTerm styled={true} term={"function"}><i>functions</i></GlossaryTerm> that operate on *logical pathname* hosts, for example to specify additional translation rules or options. 
 
 
 

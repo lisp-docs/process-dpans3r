@@ -1,4 +1,4 @@
-**make-synonym-stream** *Function* 
+**make-synonym-stream** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**make-synonym-stream** *symbol → synonym-stream* 
+<DictionaryLink styled={true} term={"make-synonym-stream"}><b>make-synonym-stream</b></DictionaryLink> *symbol → synonym-stream* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*symbol*—a *symbol* that names a *dynamic variable*. 
+<GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> that names a *dynamic variable*. 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-Returns a *synonym stream* whose *synonym stream symbol* is *symbol*. 
+Returns a *synonym stream* whose *synonym stream symbol* is <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>. 
 
 
 
@@ -50,7 +50,7 @@ Returns a *synonym stream* whose *synonym stream symbol* is *symbol*.
 
 
 
-Should signal **type-error** if its argument is not a *symbol*. 
+Should signal <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if its argument is not a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>. 
 
 
 

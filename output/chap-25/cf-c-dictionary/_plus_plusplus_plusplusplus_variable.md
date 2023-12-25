@@ -1,4 +1,4 @@
-**+, ++, +++** *Variable* 
+**+, ++, +++** <GlossaryTerm styled={true} term={"variable"}><i>Variable</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-an *object*. 
+an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -14,7 +14,7 @@ an *object*.
 
 
 
-*implementation-dependent*. 
+<GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm>. 
 
 
 
@@ -22,11 +22,11 @@ an *object*.
 
 
 
-The *variables* **+**, **++**, and **+++** are maintained by the *Lisp read-eval-print loop* to save *forms* that were recently *evaluated*. 
+The <GlossaryTerm styled={true} term={"variable"}><i>variables</i></GlossaryTerm> <DictionaryLink styled={true} term={"+"}><b>+</b></DictionaryLink>, <DictionaryLink styled={true} term={"++"}><b>++</b></DictionaryLink>, and <DictionaryLink styled={true} term={"+++"}><b>+++</b></DictionaryLink> are maintained by the *Lisp read-eval-print loop* to save <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm> that were recently *evaluated*. 
 
 
 
-The *value* of **+** is the last *form* that was *evaluated*, the *value* of **++** is the previous value of **+**, and the *value* of **+++** is the previous value of **++**. 
+The <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of <DictionaryLink styled={true} term={"+"}><b>+</b></DictionaryLink> is the last <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> that was *evaluated*, the <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of <DictionaryLink styled={true} term={"++"}><b>++</b></DictionaryLink> is the previous value of <DictionaryLink styled={true} term={"+"}><b>+</b></DictionaryLink>, and the <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of <DictionaryLink styled={true} term={"+++"}><b>+++</b></DictionaryLink> is the previous value of <DictionaryLink styled={true} term={"++"}><b>++</b></DictionaryLink>. 
 
 
 
@@ -59,7 +59,7 @@ The *value* of **+** is the last *form* that was *evaluated*, the *value* of **+
 
 
 
-**-** (*variable*), **\*** (*variable*), **/** (*variable*), Section 25.1.1 (Top level loop) 
+<DictionaryLink styled={true} term={"-"}><b>-</b></DictionaryLink> (<GlossaryTerm styled={true} term={"variable"}><i>variable</i></GlossaryTerm>), **\*** (<GlossaryTerm styled={true} term={"variable"}><i>variable</i></GlossaryTerm>), <DictionaryLink styled={true} term={"/"}><b>/</b></DictionaryLink> (<GlossaryTerm styled={true} term={"variable"}><i>variable</i></GlossaryTerm>), Section 25.1.1 (Top level loop) 
 
 
 
@@ -71,7 +71,7 @@ The *value* of **+** is the last *form* that was *evaluated*, the *value* of **+
 
 
 
-an *object*. 
+an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -79,7 +79,7 @@ an *object*.
 
 
 
-*implementation-dependent*. 
+<GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm>. 
 
 
 
@@ -87,19 +87,19 @@ an *object*.
 
 
 
-The *variables* **\***, **\*\***, and **\*\*\*** are maintained by the *Lisp read-eval-print loop* to save the values of results that are printed each time through the loop. 
+The <GlossaryTerm styled={true} term={"variable"}><i>variables</i></GlossaryTerm> **\***, **\*\***, and **\*\*\*** are maintained by the *Lisp read-eval-print loop* to save the values of results that are printed each time through the loop. 
 
 
 
-The *value* of **\*** is the most recent *primary value* that was printed, the *value* of **\*\*** is the previous value of **\***, and the *value* of **\*\*\*** is the previous value of **\*\***. 
+The <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of **\*** is the most recent *primary value* that was printed, the <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of **\*\*** is the previous value of **\***, and the <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of **\*\*\*** is the previous value of **\*\***. 
 
 
 
-If several values are produced, **\*** contains the first value only; **\*** contains **nil** if zero values are produced. 
+If several values are produced, **\*** contains the first value only; **\*** contains <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> if zero values are produced. 
 
 
 
-The *values* of **\***, **\*\***, and **\*\*\*** are updated immediately prior to printing the *return value* of a top-level *form* by the *Lisp read-eval-print loop*. If the *evaluation* of such a *form* is aborted prior to its normal return, the values of **\***, **\*\***, and **\*\*\*** are not updated. 
+The <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> of **\***, **\*\***, and **\*\*\*** are updated immediately prior to printing the *return value* of a top-level <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> by the *Lisp read-eval-print loop*. If the <GlossaryTerm styled={true} term={"evaluation"}><i>evaluation</i></GlossaryTerm> of such a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> is aborted prior to its normal return, the values of **\***, **\*\***, and **\*\*\*** are not updated. 
 
 
 
@@ -140,7 +140,7 @@ The *values* of **\***, **\*\***, and **\*\*\*** are updated immediately prior t
 
 
 
-**-** (*variable*), **+** (*variable*), **/** (*variable*), Section 25.1.1 (Top level loop) 
+<DictionaryLink styled={true} term={"-"}><b>-</b></DictionaryLink> (<GlossaryTerm styled={true} term={"variable"}><i>variable</i></GlossaryTerm>), <DictionaryLink styled={true} term={"+"}><b>+</b></DictionaryLink> (<GlossaryTerm styled={true} term={"variable"}><i>variable</i></GlossaryTerm>), <DictionaryLink styled={true} term={"/"}><b>/</b></DictionaryLink> (<GlossaryTerm styled={true} term={"variable"}><i>variable</i></GlossaryTerm>), Section 25.1.1 (Top level loop) 
 
 
 

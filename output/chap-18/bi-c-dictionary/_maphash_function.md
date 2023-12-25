@@ -1,4 +1,4 @@
-**maphash** *Function* 
+**maphash** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**maphash** *function hash-table →* **nil** 
+<DictionaryLink styled={true} term={"maphash"}><b>maphash</b></DictionaryLink> *function hash-table →* <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*function*—a *designator* for a *function* of two *arguments*, the *key* and the *value*. 
+<GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"designator"}><i>designator</i></GlossaryTerm> for a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> of two <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm>, the <GlossaryTerm styled={true} term={"key"}><i>key</i></GlossaryTerm> and the <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm>. 
 
 
 
@@ -26,11 +26,11 @@
 
 
 
-Iterates over all entries in the *hash-table*. For each entry, the *function* is called with two *arguments*–the *key* and the *value* of that entry. 
+Iterates over all entries in the *hash-table*. For each entry, the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> is called with two <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm>–the <GlossaryTerm styled={true} term={"key"}><i>key</i></GlossaryTerm> and the <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of that entry. 
 
 
 
-The consequences are unspecified if any attempt is made to add or remove an entry from the *hash-table* while a **maphash** is in progress, with two exceptions: the *function* can use can use **setf** of **gethash** to change the *value* part of the entry currently being processed, or it can use **remhash** to remove that entry. 
+The consequences are unspecified if any attempt is made to add or remove an entry from the *hash-table* while a <DictionaryLink styled={true} term={"maphash"}><b>maphash</b></DictionaryLink> is in progress, with two exceptions: the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> can use can use <DictionaryLink styled={true} term={"setf"}><b>setf</b></DictionaryLink> of <DictionaryLink styled={true} term={"gethash"}><b>gethash</b></DictionaryLink> to change the <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> part of the entry currently being processed, or it can use <DictionaryLink styled={true} term={"remhash"}><b>remhash</b></DictionaryLink> to remove that entry. 
 
 
 
@@ -64,7 +64,7 @@ The consequences are unspecified if any attempt is made to add or remove an entr
 
 
 
-None, other than any which might be done by the *function*. 
+None, other than any which might be done by the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>. 
 
 
 
@@ -84,7 +84,7 @@ None, other than any which might be done by the *function*.
 
 
 
-**loop**, **with-hash-table-iterator**, Section 3.6 (Traversal Rules and Side Effects) 
+<DictionaryLink styled={true} term={"loop"}><b>loop</b></DictionaryLink>, <DictionaryLink styled={true} term={"with-hash-table-iterator"}><b>with-hash-table-iterator</b></DictionaryLink>, Section 3.6 (Traversal Rules and Side Effects) 
 
 
 

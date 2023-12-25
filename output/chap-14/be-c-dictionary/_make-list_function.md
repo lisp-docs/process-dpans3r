@@ -1,4 +1,4 @@
-**make-list** *Function* 
+**make-list** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**make-list** *size* &amp;key *initial-element → list* 
+<DictionaryLink styled={true} term={"make-list"}><b>make-list</b></DictionaryLink> *size* &amp;key *initial-element → list* 
 
 
 
@@ -18,11 +18,11 @@
 
 
 
-*initial-element*—an *object*. The default is **nil**. 
+*initial-element*—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. The default is <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
-*list*—a *list*. 
+<GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>. 
 
 
 
@@ -30,7 +30,7 @@
 
 
 
-Returns a *list* of *length* given by *size*, each of the *elements* of which is *initial-element*. **Examples:**
+Returns a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"length"}><i>length</i></GlossaryTerm> given by *size*, each of the <GlossaryTerm styled={true} term={"element"}><i>elements</i></GlossaryTerm> of which is *initial-element*. **Examples:**
 ```lisp
 
 (make-list 5) *→* (NIL NIL NIL NIL NIL) 
@@ -44,7 +44,7 @@ Returns a *list* of *length* given by *size*, each of the *elements* of which is
 
 
 
-Should signal an error of *type* **type-error** if *size* is not a non-negative *integer* . 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if *size* is not a non-negative *integer* . 
 
 
 
@@ -52,7 +52,7 @@ Should signal an error of *type* **type-error** if *size* is not a non-negative 
 
 
 
-**cons**, **list** 
+<DictionaryLink styled={true} term={"cons"}><b>cons</b></DictionaryLink>, <DictionaryLink styled={true} term={"list"}><b>list</b></DictionaryLink> 
 
 
 

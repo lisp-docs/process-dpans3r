@@ -1,4 +1,4 @@
-**define-condition** *Macro* 
+**define-condition** <GlossaryTerm styled={true} term={"macro"}><i>Macro</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**define-condition** *name* (*\{parent-type\}*\*) (*\{↓slot-spec\}*\*) *\{option\}*\* 
+<DictionaryLink styled={true} term={"define-condition"}><b>define-condition</b></DictionaryLink> <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> (*\{parent-type\}*\*) (*\{↓slot-spec\}*\*) *\{option\}*\* 
 
 
 
@@ -18,7 +18,7 @@
 
 
 
-*slot-option::*=[[ *\{*:reader *symbol\}*\* *|* 
+*slot-option::*=[[ *\{*:reader <GlossaryTerm styled={true} term={"symbol"}><i>symbol\}</i></GlossaryTerm>\* *|* 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-*\{*:accessor *symbol\}*\* *|* 
+*\{*:accessor <GlossaryTerm styled={true} term={"symbol"}><i>symbol\}</i></GlossaryTerm>\* *|* 
 
 
 
@@ -34,7 +34,7 @@
 
 
 
-*\{*:initarg *symbol\}*\* *|* 
+*\{*:initarg <GlossaryTerm styled={true} term={"symbol"}><i>symbol\}</i></GlossaryTerm>\* *|* 
 
 
 
@@ -50,7 +50,7 @@
 
 
 
-(:documentation *string*) *|* 
+(:documentation <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>) *|* 
 
 
 
@@ -70,11 +70,11 @@
 
 
 
-**define-condition** 
+<DictionaryLink styled={true} term={"define-condition"}><b>define-condition</b></DictionaryLink> 
 
 
 
-*function-name::*=*\{symbol |* (setf *symbol*)*\}* 
+*function-name::*=*\{symbol |* (setf <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>)*\}* 
 
 
 
@@ -90,23 +90,23 @@
 
 
 
-*name*—a *symbol*. 
+<GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>. 
 
 
 
-*parent-type*—a *symbol* naming a *condition type*. If no *parent-types* are supplied, the *parent-types* default to (condition). 
+*parent-type*—a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> naming a *condition type*. If no *parent-types* are supplied, the *parent-types* default to (condition). 
 
 
 
-*default-initargs*—a *list* of *keyword/value pairs*. 
+*default-initargs*—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of *keyword/value pairs*. 
 
 
 
-*Slot-spec* – the *name* of a *slot* or a *list* consisting of the *slot-name* followed by zero or more *slot-options*. 
+*Slot-spec* – the <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> of a <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm> or a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> consisting of the *slot-name* followed by zero or more *slot-options*. 
 
 
 
-*Slot-name* – a slot name (a *symbol*), the *list* of a slot name, or the *list* of slot name/slot form pairs. *Option* – Any of the following: 
+*Slot-name* – a slot name (a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>), the <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of a slot name, or the <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of slot name/slot form pairs. *Option* – Any of the following: 
 
 
 
@@ -114,7 +114,7 @@
 
 
 
-:reader can be supplied more than once for a given *slot* and cannot be **nil**. 
+:reader can be supplied more than once for a given <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm> and cannot be <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -122,11 +122,11 @@
 
 
 
-:writer can be supplied more than once for a given *slot* and must name a *generic function*. :accessor 
+:writer can be supplied more than once for a given <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm> and must name a *generic function*. :accessor 
 
 
 
-:accessor can be supplied more than once for a given *slot* and cannot be **nil**. 
+:accessor can be supplied more than once for a given <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm> and cannot be <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -134,7 +134,7 @@
 
 
 
-:allocation can be supplied once at most for a given *slot*. The default if :allocation is not supplied is :instance. 
+:allocation can be supplied once at most for a given <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm>. The default if :allocation is not supplied is :instance. 
 
 
 
@@ -142,7 +142,7 @@
 
 
 
-:initarg can be supplied more than once for a given *slot*. 
+:initarg can be supplied more than once for a given <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm>. 
 
 
 
@@ -150,7 +150,7 @@
 
 
 
-:initform can be supplied once at most for a given *slot*. 
+:initform can be supplied once at most for a given <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm>. 
 
 
 
@@ -158,7 +158,7 @@
 
 
 
-:type can be supplied once at most for a given *slot*. 
+:type can be supplied once at most for a given <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm>. 
 
 
 
@@ -174,7 +174,7 @@
 
 
 
-**define-condition** 
+<DictionaryLink styled={true} term={"define-condition"}><b>define-condition</b></DictionaryLink> 
 
 
 
@@ -182,7 +182,7 @@
 
 
 
-:documentation can be supplied once at most for a given *slot*. 
+:documentation can be supplied once at most for a given <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm>. 
 
 
 
@@ -198,19 +198,19 @@
 
 
 
-**define-condition** defines a new condition type called *name*, which is a *subtype* of the *type* or *types* named by *parent-type*. Each *parent-type* argument specifies a direct *supertype* of the new *condition*. The new *condition* inherits *slots* and *methods* from each of its direct *supertypes*, and so on. 
+<DictionaryLink styled={true} term={"define-condition"}><b>define-condition</b></DictionaryLink> defines a new condition type called <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm>, which is a <GlossaryTerm styled={true} term={"subtype"}><i>subtype</i></GlossaryTerm> of the <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> or <GlossaryTerm styled={true} term={"type"}><i>types</i></GlossaryTerm> named by *parent-type*. Each *parent-type* argument specifies a direct <GlossaryTerm styled={true} term={"supertype"}><i>supertype</i></GlossaryTerm> of the new <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm>. The new <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> inherits <GlossaryTerm styled={true} term={"slot"}><i>slots</i></GlossaryTerm> and <GlossaryTerm styled={true} term={"method"}><i>methods</i></GlossaryTerm> from each of its direct <GlossaryTerm styled={true} term={"supertype"}><i>supertypes</i></GlossaryTerm>, and so on. 
 
 
 
-If a slot name/slot form pair is supplied, the slot form is a *form* that can be evaluated by **make-condition** to produce a default value when an explicit value is not provided. If no slot form is supplied, the contents of the *slot* is initialized in an *implementation-dependent* way. 
+If a slot name/slot form pair is supplied, the slot form is a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> that can be evaluated by <DictionaryLink styled={true} term={"make-condition"}><b>make-condition</b></DictionaryLink> to produce a default value when an explicit value is not provided. If no slot form is supplied, the contents of the <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm> is initialized in an <GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm> way. 
 
 
 
-If the *type* being defined and some other *type* from which it inherits have a slot by the same name, only one slot is allocated in the *condition*, but the supplied slot form overrides any slot form that might otherwise have been inherited from a *parent-type*. If no slot form is supplied, the inherited slot form (if any) is still visible. 
+If the <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> being defined and some other <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> from which it inherits have a slot by the same name, only one slot is allocated in the <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm>, but the supplied slot form overrides any slot form that might otherwise have been inherited from a *parent-type*. If no slot form is supplied, the inherited slot form (if any) is still visible. 
 
 
 
-Accessors are created according to the same rules as used by **defclass**. 
+Accessors are created according to the same rules as used by <DictionaryLink styled={true} term={"defclass"}><b>defclass</b></DictionaryLink>. 
 
 
 
@@ -222,15 +222,15 @@ A description of *slot-options* follows:
 
 
 
-The :reader slot option specifies that an *unqualified method* is to be defined on the *generic function* named by the argument to :reader to read the value of the given *slot*. 
+The :reader slot option specifies that an *unqualified method* is to be defined on the *generic function* named by the argument to :reader to read the value of the given <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm>. 
 
 
 
-*•* The :initform slot option is used to provide a default initial value form to be used in the initialization of the *slot*. This *form* is evaluated every time it is used to initialize the *slot*. The *lexical environment* in which this *form* is evaluated is the lexical *environment* in which the **define-condition** form was evaluated. Note that the *lexical environment* refers both to variables and to *functions*. For *local slots*, the *dynamic environment* is the dynamic *environment* in which **make-condition** was called; for *shared slots*, the *dynamic environment* is the *dynamic environment* in which the **define-condition** form was evaluated. 
+*•* The :initform slot option is used to provide a default initial value form to be used in the initialization of the <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm>. This <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> is evaluated every time it is used to initialize the <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm>. The *lexical environment* in which this <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> is evaluated is the lexical <GlossaryTerm styled={true} term={"environment"}><i>environment</i></GlossaryTerm> in which the <DictionaryLink styled={true} term={"define-condition"}><b>define-condition</b></DictionaryLink> form was evaluated. Note that the *lexical environment* refers both to variables and to <GlossaryTerm styled={true} term={"function"}><i>functions</i></GlossaryTerm>. For *local slots*, the *dynamic environment* is the dynamic <GlossaryTerm styled={true} term={"environment"}><i>environment</i></GlossaryTerm> in which <DictionaryLink styled={true} term={"make-condition"}><b>make-condition</b></DictionaryLink> was called; for *shared slots*, the *dynamic environment* is the *dynamic environment* in which the <DictionaryLink styled={true} term={"define-condition"}><b>define-condition</b></DictionaryLink> form was evaluated. 
 
 
 
-No implementation is permitted to extend the syntax of **define-condition** to allow (*slot-name form*) as an abbreviation for (*slot-name* :initform *form*). 
+No implementation is permitted to extend the syntax of <DictionaryLink styled={true} term={"define-condition"}><b>define-condition</b></DictionaryLink> to allow (*slot-name form*) as an abbreviation for (*slot-name* :initform <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>). 
 
 
 
@@ -238,7 +238,7 @@ No implementation is permitted to extend the syntax of **define-condition** to a
 
 
 
-The :initarg slot option declares an initialization argument named by its *symbol* argument and specifies that this initialization argument initializes the given *slot*. If the initialization 
+The :initarg slot option declares an initialization argument named by its <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> argument and specifies that this initialization argument initializes the given <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm>. If the initialization 
 
 
 
@@ -254,11 +254,11 @@ The :initarg slot option declares an initialization argument named by its *symbo
 
 
 
-**define-condition** 
+<DictionaryLink styled={true} term={"define-condition"}><b>define-condition</b></DictionaryLink> 
 
 
 
-argument has a value in the call to **initialize-instance**, the value is stored into the given *slot*, and the slot’s :initform slot option, if any, is not evaluated. If none of the initialization arguments specified for a given *slot* has a value, the *slot* is initialized according to the :initform slot option, if specified. 
+argument has a value in the call to <DictionaryLink styled={true} term={"initialize-instance"}><b>initialize-instance</b></DictionaryLink>, the value is stored into the given <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm>, and the slot’s :initform slot option, if any, is not evaluated. If none of the initialization arguments specified for a given <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm> has a value, the <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm> is initialized according to the :initform slot option, if specified. 
 
 
 
@@ -266,7 +266,7 @@ argument has a value in the call to **initialize-instance**, the value is stored
 
 
 
-The :type slot option specifies that the contents of the *slot* is always of the specified *type*. It effectively declares the result type of the reader generic function when applied to an *object* of this *condition* type. The consequences of attempting to store in a *slot* a value that does not satisfy the type of the *slot* is undefined. 
+The :type slot option specifies that the contents of the <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm> is always of the specified <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm>. It effectively declares the result type of the reader generic function when applied to an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> of this <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> type. The consequences of attempting to store in a <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm> a value that does not satisfy the type of the <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm> is undefined. 
 
 
 
@@ -274,7 +274,7 @@ The :type slot option specifies that the contents of the *slot* is always of the
 
 
 
-This option is treated the same as it would be **defclass**. 
+This option is treated the same as it would be <DictionaryLink styled={true} term={"defclass"}><b>defclass</b></DictionaryLink>. 
 
 
 
@@ -282,7 +282,7 @@ This option is treated the same as it would be **defclass**.
 
 
 
-The :documentation slot option provides a *documentation string* for the *slot*. 
+The :documentation slot option provides a *documentation string* for the <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm>. 
 
 
 
@@ -290,7 +290,7 @@ The :documentation slot option provides a *documentation string* for the *slot*.
 
 
 
-*Condition* reporting is mediated through the **print-object** method for the *condition* type in question, with **\*print-escape\*** always being **nil**. Specifying (:report *report-name*) in the definition of a condition type C is equivalent to: 
+<GlossaryTerm styled={true} term={"condition"}><i>Condition</i></GlossaryTerm> reporting is mediated through the <DictionaryLink styled={true} term={"print-object"}><b>print-object</b></DictionaryLink> method for the <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> type in question, with <DictionaryLink styled={true} term={"print-escape"}><b>\*print-escape\*</b></DictionaryLink> always being <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. Specifying (:report *report-name*) in the definition of a condition type C is equivalent to: 
 
 
 
@@ -302,11 +302,11 @@ The :documentation slot option provides a *documentation string* for the *slot*.
 
 
 
-If the value supplied by the argument to :report (*report-name*) is a *symbol* or a *lambda expression*, it must be acceptable to **function**. (function *report-name*) is evaluated in the current *lexical environment*. It should return a *function* of two arguments, a *condition* and a *stream*, that prints on the *stream* a description of the *condition*. This *function* is called whenever the *condition* is printed while **\*print-escape\*** is **nil**. 
+If the value supplied by the argument to :report (*report-name*) is a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> or a *lambda expression*, it must be acceptable to <DictionaryLink styled={true} term={"function"}><b>function</b></DictionaryLink>. (function *report-name*) is evaluated in the current *lexical environment*. It should return a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> of two arguments, a <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> and a <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>, that prints on the <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm> a description of the <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm>. This <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> is called whenever the <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> is printed while <DictionaryLink styled={true} term={"print-escape"}><b>\*print-escape\*</b></DictionaryLink> is <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
-If *report-name* is a *string*, it is a shorthand for 
+If *report-name* is a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>, it is a shorthand for 
 
 
 
@@ -322,19 +322,15 @@ If *report-name* is a *string*, it is a shorthand for
 
 
 
-This option is processed after the new *condition* type has been defined, so use of the *slot* accessors within the :report function is permitted. If this option is not supplied, information about how to report this type of *condition* is inherited from the *parent-type*. 
+This option is processed after the new <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> type has been defined, so use of the <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm> accessors within the :report function is permitted. If this option is not supplied, information about how to report this type of <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> is inherited from the *parent-type*. 
 
 
 
-The consequences are unspecifed if an attempt is made to *read* a *slot* that has not been explicitly initialized and that has not been given a default value. 
+The consequences are unspecifed if an attempt is made to <GlossaryTerm styled={true} term={"read"}><i>read</i></GlossaryTerm> a <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm> that has not been explicitly initialized and that has not been given a default value. 
 
 
 
-The consequences are unspecified if an attempt is made to assign the *slots* by using **setf**. 
-
-
-
- 
+The consequences are unspecified if an attempt is made to assign the <GlossaryTerm styled={true} term={"slot"}><i>slots</i></GlossaryTerm> by using <DictionaryLink styled={true} term={"setf"}><b>setf</b></DictionaryLink>. 
 
 
 
@@ -342,11 +338,15 @@ The consequences are unspecified if an attempt is made to assign the *slots* by 
 
 
 
-**define-condition** 
+ 
 
 
 
-If a **define-condition** *form* appears as a *top level form*, the *compiler* must make *name* recognizable as a valid *type* name, and it must be possible to reference the *condition type* as the *parent-type* of another *condition type* in a subsequent **define-condition** *form* in the *file* being compiled. 
+<DictionaryLink styled={true} term={"define-condition"}><b>define-condition</b></DictionaryLink> 
+
+
+
+If a <DictionaryLink styled={true} term={"define-condition"}><b>define-condition</b></DictionaryLink> <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> appears as a *top level form*, the <GlossaryTerm styled={true} term={"compiler"}><i>compiler</i></GlossaryTerm> must make <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> recognizable as a valid <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> name, and it must be possible to reference the *condition type* as the *parent-type* of another *condition type* in a subsequent <DictionaryLink styled={true} term={"define-condition"}><b>define-condition</b></DictionaryLink> <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> in the <GlossaryTerm styled={true} term={"file"}><i>file</i></GlossaryTerm> being compiled. 
 
 
 
@@ -416,7 +416,7 @@ Note that since no :report clause was given, the information inherited from mach
 
 
 
-**make-condition**, **defclass**, Section 9.1 (Condition System Concepts) 
+<DictionaryLink styled={true} term={"make-condition"}><b>make-condition</b></DictionaryLink>, <DictionaryLink styled={true} term={"defclass"}><b>defclass</b></DictionaryLink>, Section 9.1 (Condition System Concepts) 
 
 
 

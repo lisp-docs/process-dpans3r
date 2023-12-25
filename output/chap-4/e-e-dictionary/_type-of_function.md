@@ -1,4 +1,4 @@
-**type-of** *Function* 
+**type-of** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**type-of** *object → typespec* 
+<DictionaryLink styled={true} term={"type-of"}><b>type-of</b></DictionaryLink> *object → typespec* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*object*—an *object*. 
+<GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -26,23 +26,19 @@
 
 
 
-Returns a *type specifier* , *typespec*, for a *type* that has the *object* as an *element*. The *typespec* satisfies the following: 
+Returns a *type specifier* , *typespec*, for a <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> that has the <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> as an <GlossaryTerm styled={true} term={"element"}><i>element</i></GlossaryTerm>. The *typespec* satisfies the following: 
 
 
 
-1\. For any *object* that is an *element* of some *built-in type*: 
+1\. For any <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> that is an <GlossaryTerm styled={true} term={"element"}><i>element</i></GlossaryTerm> of some *built-in type*: 
 
 
 
-a. the *type* returned is a *recognizable subtype* of that *built-in type*. 
+a. the <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> returned is a *recognizable subtype* of that *built-in type*. 
 
 
 
-b. the *type* returned does not involve and, eql, member, not, or, satisfies, or values. 
-
-
-
-
+b. the <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> returned does not involve and, eql, member, not, or, satisfies, or values. 
 
 
 
@@ -50,27 +46,31 @@ b. the *type* returned does not involve and, eql, member, not, or, satisfies, or
 
 
 
-**type-of** 
 
 
 
-2\. For all *objects*, (typep *object* (type-of *object*)) returns *true*. Implicit in this is that *type specifiers* which are not valid for use with **typep**, such as the *list* form of the **function** *type specifier* , are never returned by **type-of**. 
+
+<DictionaryLink styled={true} term={"type-of"}><b>type-of</b></DictionaryLink> 
 
 
 
-3\. The *type* returned by **type-of** is always a *recognizable subtype* of the *class* returned by **class-of**. That is, 
+2\. For all <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm>, (typep <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> (type-of <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>)) returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>. Implicit in this is that *type specifiers* which are not valid for use with <DictionaryLink styled={true} term={"typep"}><b>typep</b></DictionaryLink>, such as the <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> form of the <DictionaryLink styled={true} term={"function"}><b>function</b></DictionaryLink> *type specifier* , are never returned by <DictionaryLink styled={true} term={"type-of"}><b>type-of</b></DictionaryLink>. 
 
 
 
-(subtypep (type-of *object*) (class-of *object*)) *→ true*, *true* 
+3\. The <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> returned by <DictionaryLink styled={true} term={"type-of"}><b>type-of</b></DictionaryLink> is always a *recognizable subtype* of the <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm> returned by <DictionaryLink styled={true} term={"class-of"}><b>class-of</b></DictionaryLink>. That is, 
 
 
 
-4\. For *objects* of metaclass **structure-class** or **standard-class**, and for *conditions*, **type-of** returns the *proper name* of the *class* returned by **class-of** if it has a *proper name*, and otherwise returns the *class* itself. In particular, for *objects* created by the constructor function of a structure defined with **defstruct** without a :type option, **type-of** returns the structure name; and for *objects* created by **make-condition**, the *typespec* is the *name* of the *condition type*. 
+(subtypep (type-of <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>) (class-of <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>)) *→ true*, *true* 
 
 
 
-5\. For each of the *types* **short-float**, **single-float**, **double-float**, or **long-float** of which the *object* is an *element*, the *typespec* is a *recognizable subtype* of that *type*. 
+4\. For <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm> of metaclass <DictionaryLink styled={true} term={"structure-class"}><b>structure-class</b></DictionaryLink> or <DictionaryLink styled={true} term={"standard-class"}><b>standard-class</b></DictionaryLink>, and for <GlossaryTerm styled={true} term={"condition"}><i>conditions</i></GlossaryTerm>, <DictionaryLink styled={true} term={"type-of"}><b>type-of</b></DictionaryLink> returns the *proper name* of the <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm> returned by <DictionaryLink styled={true} term={"class-of"}><b>class-of</b></DictionaryLink> if it has a *proper name*, and otherwise returns the <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm> itself. In particular, for <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm> created by the constructor function of a structure defined with <DictionaryLink styled={true} term={"defstruct"}><b>defstruct</b></DictionaryLink> without a :type option, <DictionaryLink styled={true} term={"type-of"}><b>type-of</b></DictionaryLink> returns the structure name; and for <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm> created by <DictionaryLink styled={true} term={"make-condition"}><b>make-condition</b></DictionaryLink>, the *typespec* is the <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> of the *condition type*. 
+
+
+
+5\. For each of the <GlossaryTerm styled={true} term={"type"}><i>types</i></GlossaryTerm> <DictionaryLink styled={true} term={"short-float"}><b>short-float</b></DictionaryLink>, <DictionaryLink styled={true} term={"single-float"}><b>single-float</b></DictionaryLink>, <DictionaryLink styled={true} term={"double-float"}><b>double-float</b></DictionaryLink>, or <DictionaryLink styled={true} term={"long-float"}><b>long-float</b></DictionaryLink> of which the <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is an <GlossaryTerm styled={true} term={"element"}><i>element</i></GlossaryTerm>, the *typespec* is a *recognizable subtype* of that <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm>. 
 
 
 
@@ -109,7 +109,7 @@ b. the *type* returned does not involve and, eql, member, not, or, satisfies, or
 
 
 
-**array-element-type**, **class-of**, **defstruct**, **typecase**, **typep**, Section 4.2 (Types) 
+<DictionaryLink styled={true} term={"array-element-type"}><b>array-element-type</b></DictionaryLink>, <DictionaryLink styled={true} term={"class-of"}><b>class-of</b></DictionaryLink>, <DictionaryLink styled={true} term={"defstruct"}><b>defstruct</b></DictionaryLink>, <DictionaryLink styled={true} term={"typecase"}><b>typecase</b></DictionaryLink>, <DictionaryLink styled={true} term={"typep"}><b>typep</b></DictionaryLink>, Section 4.2 (Types) 
 
 
 
@@ -117,7 +117,7 @@ b. the *type* returned does not involve and, eql, member, not, or, satisfies, or
 
 
 
-Implementors are encouraged to arrange for **type-of** to return a portable value. 
+Implementors are encouraged to arrange for <DictionaryLink styled={true} term={"type-of"}><b>type-of</b></DictionaryLink> to return a portable value. 
 
 
 

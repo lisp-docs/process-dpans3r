@@ -6,7 +6,7 @@
 
 
 
-**integer**, **rational**, **real**, **number**, **t** 
+<DictionaryLink styled={true} term={"integer"}><b>integer</b></DictionaryLink>, <DictionaryLink styled={true} term={"rational"}><b>rational</b></DictionaryLink>, <DictionaryLink styled={true} term={"real"}><b>real</b></DictionaryLink>, <DictionaryLink styled={true} term={"number"}><b>number</b></DictionaryLink>, <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink> 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-An *integer* is a mathematical integer. There is no limit on the magnitude of an *integer* . The *types* **fixnum** and **bignum** form an *exhaustive partition* of *type* **integer**. 
+An *integer* is a mathematical integer. There is no limit on the magnitude of an *integer* . The <GlossaryTerm styled={true} term={"type"}><i>types</i></GlossaryTerm> <DictionaryLink styled={true} term={"fixnum"}><b>fixnum</b></DictionaryLink> and <DictionaryLink styled={true} term={"bignum"}><b>bignum</b></DictionaryLink> form an *exhaustive partition* of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"integer"}><b>integer</b></DictionaryLink>. 
 
 
 
@@ -38,7 +38,7 @@ Abbreviating.
 
 
 
-*lower-limit*, *upper-limit*—*interval designators* for *type* **integer**. The defaults for each of *lower-limit* and *upper-limit* is the *symbol* **\***. 
+*lower-limit*, *upper-limit*—*interval designators* for <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"integer"}><b>integer</b></DictionaryLink>. The defaults for each of *lower-limit* and *upper-limit* is the <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> **\***. 
 
 
 
@@ -62,8 +62,8 @@ Figure 2–9, Section 2.3.2 (Constructing Numbers from Tokens), Section 22.1.3.1
 
 
 
-The *type* (integer *lower upper*), where *lower* and *upper* are **most-negative-fixnum** and **most-positive-fixnum**, respectively, is also called **fixnum**. 
+The <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> (integer *lower upper*), where *lower* and *upper* are <DictionaryLink styled={true} term={"most-negative-fixnum"}><b>most-negative-fixnum</b></DictionaryLink> and <DictionaryLink styled={true} term={"most-positive-fixnum"}><b>most-positive-fixnum</b></DictionaryLink>, respectively, is also called <DictionaryLink styled={true} term={"fixnum"}><b>fixnum</b></DictionaryLink>. 
 
 
 
-The *type* (integer 0 1) is also called **bit**. The *type* (integer 0 \*) is also called **unsigned-byte**. 
+The <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> (integer 0 1) is also called <DictionaryLink styled={true} term={"bit"}><b>bit</b></DictionaryLink>. The <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> (integer 0 \*) is also called <DictionaryLink styled={true} term={"unsigned-byte"}><b>unsigned-byte</b></DictionaryLink>. 

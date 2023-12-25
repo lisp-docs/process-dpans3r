@@ -2,7 +2,7 @@
 
 
 
-If **&amp;allow-other-keys** was specified in the *lambda list* of a *function*, *keyword* <sub>2</sub> *argument* checking is suppressed in calls to that *function*.  
+If **&amp;allow-other-keys** was specified in the *lambda list* of a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>, <GlossaryTerm styled={true} term={"keyword"}><i>keyword</i></GlossaryTerm> <sub>2</sub> <GlossaryTerm styled={true} term={"argument"}><i>argument</i></GlossaryTerm> checking is suppressed in calls to that <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>.  
 
 
 
@@ -10,11 +10,11 @@ If **&amp;allow-other-keys** was specified in the *lambda list* of a *function*,
 
 
 
-If the :allow-other-keys *argument* is *true* in a call to a *function*, *keyword* <sub>2</sub> *argument* checking is suppressed in that call. 
+If the :allow-other-keys <GlossaryTerm styled={true} term={"argument"}><i>argument</i></GlossaryTerm> is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> in a call to a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>, <GlossaryTerm styled={true} term={"keyword"}><i>keyword</i></GlossaryTerm> <sub>2</sub> <GlossaryTerm styled={true} term={"argument"}><i>argument</i></GlossaryTerm> checking is suppressed in that call. 
 
 
 
-The :allow-other-keys *argument* is permissible in all situations involving *keyword* <sub>2</sub> *arguments*, even when its associated *value* is *false*. 
+The :allow-other-keys <GlossaryTerm styled={true} term={"argument"}><i>argument</i></GlossaryTerm> is permissible in all situations involving <GlossaryTerm styled={true} term={"keyword"}><i>keyword</i></GlossaryTerm> <sub>2</sub> <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm>, even when its associated <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 

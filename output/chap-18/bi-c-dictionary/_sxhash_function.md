@@ -1,4 +1,4 @@
-**sxhash** *Function* 
+**sxhash** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**sxhash** *object → hash-code* 
+<DictionaryLink styled={true} term={"sxhash"}><b>sxhash</b></DictionaryLink> *object → hash-code* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*object*—an *object*. 
+<GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
-*hash-code*—a non-negative *fixnum*. 
+*hash-code*—a non-negative <GlossaryTerm styled={true} term={"fixnum"}><i>fixnum</i></GlossaryTerm>. 
 
 
 
@@ -26,11 +26,11 @@
 
 
 
-**sxhash** returns a hash code for *object*. 
+<DictionaryLink styled={true} term={"sxhash"}><b>sxhash</b></DictionaryLink> returns a hash code for <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
-The manner in which the hash code is computed is *implementation-dependent*, but subject to certain constraints: 
+The manner in which the hash code is computed is <GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm>, but subject to certain constraints: 
 
 
 
@@ -38,11 +38,11 @@ The manner in which the hash code is computed is *implementation-dependent*, but
 
 
 
-2\. For any two *objects*, *x* and *y*, both of which are *bit vectors*, *characters*, *conses*, *numbers*, *pathnames*, *strings*, or *symbols*, and which are *similar* , (sxhash *x*) and (sxhash *y*) *yield* the same mathematical value even if *x* and *y* exist in different *Lisp images* of the same *implementation*. See Section 3.2.4 (Literal Objects in Compiled Files). 
+2\. For any two <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm>, *x* and *y*, both of which are *bit vectors*, *characters*, *conses*, *numbers*, *pathnames*, *strings*, or <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm>, and which are <GlossaryTerm styled={true} term={"similar"}><i>similar</i></GlossaryTerm> , (sxhash *x*) and (sxhash *y*) <GlossaryTerm styled={true} term={"yield"}><i>yield</i></GlossaryTerm> the same mathematical value even if *x* and *y* exist in different *Lisp images* of the same <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm>. See Section 3.2.4 (Literal Objects in Compiled Files). 
 
 
 
-3\. The *hash-code* for an *object* is always the *same* within a single *session* provided that the *object* is not visibly modified with regard to the equivalence test **equal**. See Section 18.1.2 (Modifying Hash Table Keys). 
+3\. The *hash-code* for an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is always the <GlossaryTerm styled={true} term={"same"}><i>same</i></GlossaryTerm> within a single <GlossaryTerm styled={true} term={"session"}><i>session</i></GlossaryTerm> provided that the <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is not visibly modified with regard to the equivalence test <DictionaryLink styled={true} term={"equal"}><b>equal</b></DictionaryLink>. See Section 18.1.2 (Modifying Hash Table Keys). 
 
 
 
@@ -58,15 +58,15 @@ Hash
 
 
 
-**sxhash** 
+<DictionaryLink styled={true} term={"sxhash"}><b>sxhash</b></DictionaryLink> 
 
 
 
-4\. The *hash-code* is intended for hashing. This places no verifiable constraint on a *conforming implementation*, but the intent is that an *implementation* should make a good-faith effort to produce *hash-codes* that are well distributed within the range of non-negative *fixnums*. 
+4\. The *hash-code* is intended for hashing. This places no verifiable constraint on a *conforming implementation*, but the intent is that an <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm> should make a good-faith effort to produce *hash-codes* that are well distributed within the range of non-negative <GlossaryTerm styled={true} term={"fixnum"}><i>fixnums</i></GlossaryTerm>. 
 
 
 
-5\. Computation of the *hash-code* must terminate, even if the *object* contains circularities. **Examples:**
+5\. Computation of the *hash-code* must terminate, even if the <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> contains circularities. **Examples:**
 ```lisp
 
 (= (sxhash (list ’list "ab")) (sxhash (list ’list "ab"))) *→ true* 
@@ -80,7 +80,7 @@ Hash
 
 
 
-The *implementation*. 
+The <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm>. 
 
 
 
@@ -88,19 +88,19 @@ The *implementation*.
 
 
 
-Many common hashing needs are satisfied by **make-hash-table** and the related functions on *hash tables*. **sxhash** is intended for use where the pre-defined abstractions are insufficient. Its main intent is to allow the user a convenient means of implementing more complicated hashing paradigms than are provided through *hash tables*. 
+Many common hashing needs are satisfied by <DictionaryLink styled={true} term={"make-hash-table"}><b>make-hash-table</b></DictionaryLink> and the related functions on *hash tables*. <DictionaryLink styled={true} term={"sxhash"}><b>sxhash</b></DictionaryLink> is intended for use where the pre-defined abstractions are insufficient. Its main intent is to allow the user a convenient means of implementing more complicated hashing paradigms than are provided through *hash tables*. 
 
 
 
-The hash codes returned by **sxhash** are not necessarily related to any hashing strategy used by any other *function* in Common Lisp. 
+The hash codes returned by <DictionaryLink styled={true} term={"sxhash"}><b>sxhash</b></DictionaryLink> are not necessarily related to any hashing strategy used by any other <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> in Common Lisp. 
 
 
 
-For *objects* of *types* that **equal** compares with **eq**, item 3 requires that the *hash-code* be based on some immutable quality of the identity of the object. Another legitimate implementation technique would be to have **sxhash** assign (and cache) a random hash code for these *objects*, since there is no requirement that *similar* but non-**eq** objects have the same hash code. 
+For <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"type"}><i>types</i></GlossaryTerm> that <DictionaryLink styled={true} term={"equal"}><b>equal</b></DictionaryLink> compares with <DictionaryLink styled={true} term={"eq"}><b>eq</b></DictionaryLink>, item 3 requires that the *hash-code* be based on some immutable quality of the identity of the object. Another legitimate implementation technique would be to have <DictionaryLink styled={true} term={"sxhash"}><b>sxhash</b></DictionaryLink> assign (and cache) a random hash code for these <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm>, since there is no requirement that <GlossaryTerm styled={true} term={"similar"}><i>similar</i></GlossaryTerm> but non-<DictionaryLink styled={true} term={"eq"}><b>eq</b></DictionaryLink> objects have the same hash code. 
 
 
 
-Although *similarity* is defined for *symbols* in terms of both the *symbol*’s *name* and the *packages* in which the *symbol* is *accessible*, item 3 disallows using *package* information to compute the hash code, since changes to the package status of a symbol are not visible to *equal*. 
+Although <GlossaryTerm styled={true} term={"similarity"}><i>similarity</i></GlossaryTerm> is defined for <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> in terms of both the <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>’s <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> and the <GlossaryTerm styled={true} term={"package"}><i>packages</i></GlossaryTerm> in which the <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> is <GlossaryTerm styled={true} term={"accessible"}><i>accessible</i></GlossaryTerm>, item 3 disallows using <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> information to compute the hash code, since changes to the package status of a symbol are not visible to *equal*. 
 
 
 

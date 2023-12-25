@@ -1,4 +1,4 @@
-**hash-table-rehash-threshold** *Function* 
+**hash-table-rehash-threshold** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**hash-table-rehash-threshold** *hash-table → rehash-threshold* 
+<DictionaryLink styled={true} term={"hash-table-rehash-threshold"}><b>hash-table-rehash-threshold</b></DictionaryLink> *hash-table → rehash-threshold* 
 
 
 
@@ -18,7 +18,7 @@
 
 
 
-*rehash-threshold*—a *real* of *type* (real 0 1). 
+*rehash-threshold*—a *real* of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> (real 0 1). 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-Returns the current rehash threshold of *hash-table*, which is suitable for use in a call to **make-hash-table** in order to produce a *hash table* with state corresponding to the current state of the *hash-table*. 
+Returns the current rehash threshold of *hash-table*, which is suitable for use in a call to <DictionaryLink styled={true} term={"make-hash-table"}><b>make-hash-table</b></DictionaryLink> in order to produce a *hash table* with state corresponding to the current state of the *hash-table*. 
 
 
 
@@ -42,7 +42,7 @@ Returns the current rehash threshold of *hash-table*, which is suitable for use 
 
 
 
-Should signal an error of *type* **type-error** if *hash-table* is not a *hash table*. 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if *hash-table* is not a *hash table*. 
 
 
 
@@ -50,7 +50,7 @@ Should signal an error of *type* **type-error** if *hash-table* is not a *hash t
 
 
 
-**make-hash-table**, **hash-table-rehash-size** 
+<DictionaryLink styled={true} term={"make-hash-table"}><b>make-hash-table</b></DictionaryLink>, <DictionaryLink styled={true} term={"hash-table-rehash-size"}><b>hash-table-rehash-size</b></DictionaryLink> 
 
 
 

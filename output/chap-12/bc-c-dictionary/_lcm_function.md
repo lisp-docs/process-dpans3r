@@ -1,4 +1,4 @@
-**lcm** *Function* 
+**lcm** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**lcm** &amp;rest *integers → least-common-multiple* 
+<DictionaryLink styled={true} term={"lcm"}><b>lcm</b></DictionaryLink> &amp;rest *integers → least-common-multiple* 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-**lcm** returns the least common multiple of the *integers*. 
+<DictionaryLink styled={true} term={"lcm"}><b>lcm</b></DictionaryLink> returns the least common multiple of the *integers*. 
 
 
 
@@ -89,7 +89,7 @@ For three or more arguments,
 
 
 
-Should signal **type-error** if any argument is not an *integer* . 
+Should signal <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if any argument is not an *integer* . 
 
 
 
@@ -97,7 +97,7 @@ Should signal **type-error** if any argument is not an *integer* .
 
 
 
-**gcd** 
+<DictionaryLink styled={true} term={"gcd"}><b>gcd</b></DictionaryLink> 
 
 
 

@@ -1,4 +1,4 @@
-**directory** *Function* 
+**directory** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**directory** *pathspec* &amp;key *→ pathnames* 
+<DictionaryLink styled={true} term={"directory"}><b>directory</b></DictionaryLink> *pathspec* &amp;key *→ pathnames* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*pathspec*—a *pathname designator* , which may contain *wild* components. 
+*pathspec*—a *pathname designator* , which may contain <GlossaryTerm styled={true} term={"wild"}><i>wild</i></GlossaryTerm> components. 
 
 
 
-*pathnames*—a *list* of *physical pathnames*. 
+<GlossaryTerm styled={true} term={"pathname"}><i>pathnames</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of *physical pathnames*. 
 
 
 
@@ -26,11 +26,11 @@
 
 
 
-Determines which, if any, *files* that are present in the file system have names matching *pathspec*, and returns a *fresh list* of *pathnames* corresponding to the *truenames* of those *files*. 
+Determines which, if any, <GlossaryTerm styled={true} term={"file"}><i>files</i></GlossaryTerm> that are present in the file system have names matching *pathspec*, and returns a *fresh list* of <GlossaryTerm styled={true} term={"pathname"}><i>pathnames</i></GlossaryTerm> corresponding to the <GlossaryTerm styled={true} term={"truename"}><i>truenames</i></GlossaryTerm> of those <GlossaryTerm styled={true} term={"file"}><i>files</i></GlossaryTerm>. 
 
 
 
-An *implementation* may be extended to accept *implementation-defined* keyword arguments to **directory**. 
+An <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm> may be extended to accept <GlossaryTerm styled={true} term={"implementation-defined"}><i>implementation-defined</i></GlossaryTerm> keyword arguments to <DictionaryLink styled={true} term={"directory"}><b>directory</b></DictionaryLink>. 
 
 
 
@@ -46,7 +46,7 @@ The host computer’s file system.
 
 
 
-If the attempt to obtain a directory listing is not successful, an error of *type* **file-error** is signaled. 
+If the attempt to obtain a directory listing is not successful, an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"file-error"}><b>file-error</b></DictionaryLink> is signaled. 
 
 
 
@@ -54,7 +54,7 @@ If the attempt to obtain a directory listing is not successful, an error of *typ
 
 
 
-**pathname**, **logical-pathname**, **ensure-directories-exist**, Section 20.1 (File System Concepts), Section 21.1.1.1.2 (Open and Closed Streams), Section 19.1.2 (Pathnames as Filenames) 
+<DictionaryLink styled={true} term={"pathname"}><b>pathname</b></DictionaryLink>, <DictionaryLink styled={true} term={"logical-pathname"}><b>logical-pathname</b></DictionaryLink>, <DictionaryLink styled={true} term={"ensure-directories-exist"}><b>ensure-directories-exist</b></DictionaryLink>, Section 20.1 (File System Concepts), Section 21.1.1.1.2 (Open and Closed Streams), Section 19.1.2 (Pathnames as Filenames) 
 
 
 
@@ -62,11 +62,11 @@ If the attempt to obtain a directory listing is not successful, an error of *typ
 
 
 
-If the *pathspec* is not *wild*, the resulting list will contain either zero or one elements. 
+If the *pathspec* is not <GlossaryTerm styled={true} term={"wild"}><i>wild</i></GlossaryTerm>, the resulting list will contain either zero or one elements. 
 
 
 
-Common Lisp specifies “&amp;key” in the argument list to **directory** even though no *standardized* keyword arguments to **directory** are defined. “:allow-other-keys t” may be used in *conforming programs* in order to quietly ignore any additional keywords which are passed by the program but not supported by the *implementation*. 
+Common Lisp specifies “&amp;key” in the argument list to <DictionaryLink styled={true} term={"directory"}><b>directory</b></DictionaryLink> even though no <GlossaryTerm styled={true} term={"standardized"}><i>standardized</i></GlossaryTerm> keyword arguments to <DictionaryLink styled={true} term={"directory"}><b>directory</b></DictionaryLink> are defined. “:allow-other-keys t” may be used in *conforming programs* in order to quietly ignore any additional keywords which are passed by the program but not supported by the <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm>. 
 
 
 

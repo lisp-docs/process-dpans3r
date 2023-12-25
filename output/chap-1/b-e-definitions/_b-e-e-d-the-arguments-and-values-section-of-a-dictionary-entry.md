@@ -2,7 +2,7 @@
 
 
 
-An English language description of what *arguments* the *operator* accepts and what *values* it returns, including information about defaults for *parameters* corresponding to omittable *arguments* (such as *optional parameters* and *keyword parameters*). For *special operators* and *macros*, their *arguments* are not *evaluated* unless it is explicitly stated in their descriptions that they are *evaluated*. 
+An English language description of what <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm> the <GlossaryTerm styled={true} term={"operator"}><i>operator</i></GlossaryTerm> accepts and what <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> it returns, including information about defaults for <GlossaryTerm styled={true} term={"parameter"}><i>parameters</i></GlossaryTerm> corresponding to omittable <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm> (such as *optional parameters* and *keyword parameters*). For *special operators* and <GlossaryTerm styled={true} term={"macro"}><i>macros</i></GlossaryTerm>, their <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm> are not *evaluated* unless it is explicitly stated in their descriptions that they are *evaluated*. 
 
 
 

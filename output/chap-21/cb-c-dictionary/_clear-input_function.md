@@ -1,4 +1,4 @@
-**clear-input** *Function* 
+**clear-input** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**clear-input** &amp;optional *input-stream →* **nil** 
+<DictionaryLink styled={true} term={"clear-input"}><b>clear-input</b></DictionaryLink> &amp;optional *input-stream →* <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> 
 
 
 
@@ -26,7 +26,7 @@ Clears any available input from *input-stream*.
 
 
 
-If **clear-input** does not make sense for *input-stream*, then **clear-input** does nothing. **Examples:**
+If <DictionaryLink styled={true} term={"clear-input"}><b>clear-input</b></DictionaryLink> does not make sense for *input-stream*, then <DictionaryLink styled={true} term={"clear-input"}><b>clear-input</b></DictionaryLink> does nothing. **Examples:**
 ```lisp
 
 ;; The exact I/O behavior of this example might vary from implementation 
@@ -82,7 +82,7 @@ The *input-stream* is modified.
 
 
 
-Should signal an error of *type* **type-error** if *input-stream* is not a *stream designator* . 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if *input-stream* is not a *stream designator* . 
 
 
 
@@ -90,7 +90,7 @@ Should signal an error of *type* **type-error** if *input-stream* is not a *stre
 
 
 
-**clear-output** 
+<DictionaryLink styled={true} term={"clear-output"}><b>clear-output</b></DictionaryLink> 
 
 
 

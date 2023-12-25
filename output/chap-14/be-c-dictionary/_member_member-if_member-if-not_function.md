@@ -1,4 +1,4 @@
-**member, member-if, member-if-not** *Function* 
+**member, member-if, member-if-not** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,15 +6,15 @@
 
 
 
-**member** *item list* &amp;key *key test test-not → tail* 
+<DictionaryLink styled={true} term={"member"}><b>member</b></DictionaryLink> *item list* &amp;key *key test test-not → tail* 
 
 
 
-**member-if** *predicate list* &amp;key *key → tail* 
+<DictionaryLink styled={true} term={"member-if"}><b>member-if</b></DictionaryLink> *predicate list* &amp;key *key → tail* 
 
 
 
-**member-if-not** *predicate list* &amp;key *key → tail* 
+<DictionaryLink styled={true} term={"member-if-not"}><b>member-if-not</b></DictionaryLink> *predicate list* &amp;key *key → tail* 
 
 
 
@@ -22,19 +22,19 @@
 
 
 
-*item*—an *object*. 
+*item*—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
-*list*—a *proper list*. 
+<GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>—a *proper list*. 
 
 
 
-*predicate*—a *designator* for a *function* of one *argument* that returns a *generalized boolean*. *test*—a *designator* for a *function* of two *arguments* that returns a *generalized boolean*. *test-not*—a *designator* for a *function* of two *arguments* that returns a *generalized boolean*. *key*—a *designator* for a *function* of one argument, or **nil**. 
+<GlossaryTerm styled={true} term={"predicate"}><i>predicate</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"designator"}><i>designator</i></GlossaryTerm> for a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> of one <GlossaryTerm styled={true} term={"argument"}><i>argument</i></GlossaryTerm> that returns a *generalized boolean*. *test<GlossaryTerm styled={true} term={"t"}><i>—a </i></GlossaryTerm>designator* for a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> of two <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm> that returns a *generalized boolean*. *test-not<GlossaryTerm styled={true} term={"t"}><i>—a </i></GlossaryTerm>designator* for a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> of two <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm> that returns a *generalized boolean*. *key*—a *designator* for a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> of one argument, or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
-*tail*—a *list*. 
+<GlossaryTerm styled={true} term={"tail"}><i>tail</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>. 
 
 
 
@@ -42,15 +42,15 @@
 
 
 
-**member**, **member-if**, and **member-if-not** each search *list* for *item* or for a top-level element that *satisfies the test*. The argument to the *predicate* function is an element of *list*. 
+<DictionaryLink styled={true} term={"member"}><b>member</b></DictionaryLink>, <DictionaryLink styled={true} term={"member-if"}><b>member-if</b></DictionaryLink>, and <DictionaryLink styled={true} term={"member-if-not"}><b>member-if-not</b></DictionaryLink> each search <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> for *item* or for a top-level element that *satisfies the test*. The argument to the <GlossaryTerm styled={true} term={"predicate"}><i>predicate</i></GlossaryTerm> function is an element of <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>. 
 
 
 
-If some element *satisfies the test*, the tail of *list* beginning with this element is returned; otherwise **nil** is returned. 
+If some element *satisfies the test*, the tail of <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> beginning with this element is returned; otherwise <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> is returned. 
 
 
 
-*list* is searched on the top level only. 
+<GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> is searched on the top level only. 
 
 
 
@@ -83,7 +83,7 @@ If some element *satisfies the test*, the tail of *list* beginning with this ele
 
 
 
-Should be prepared to signal an error of *type* **type-error** if *list* is not a *proper list*. 
+Should be prepared to signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> is not a *proper list*. 
 
 
 
@@ -91,7 +91,7 @@ Should be prepared to signal an error of *type* **type-error** if *list* is not 
 
 
 
-**find**, **position**, Section 3.6 (Traversal Rules and Side Effects) 
+<DictionaryLink styled={true} term={"find"}><b>find</b></DictionaryLink>, <DictionaryLink styled={true} term={"position"}><b>position</b></DictionaryLink>, Section 3.6 (Traversal Rules and Side Effects) 
 
 
 
@@ -103,7 +103,7 @@ The :test-not parameter is deprecated.
 
 
 
-The *function* **member-if-not** is deprecated. 
+The <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> <DictionaryLink styled={true} term={"member-if-not"}><b>member-if-not</b></DictionaryLink> is deprecated. 
 
 
 
@@ -115,7 +115,7 @@ In the following
 
 
 
-the value returned by **member** is *identical* to the portion of the *list* beginning with a. Thus **rplaca** on the result of **member** can be used to alter the part of the *list* where a was found (assuming a check has been made that **member** did not return **nil**). 
+the value returned by <DictionaryLink styled={true} term={"member"}><b>member</b></DictionaryLink> is <GlossaryTerm styled={true} term={"identical"}><i>identical</i></GlossaryTerm> to the portion of the <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> beginning with a. Thus <DictionaryLink styled={true} term={"rplaca"}><b>rplaca</b></DictionaryLink> on the result of <DictionaryLink styled={true} term={"member"}><b>member</b></DictionaryLink> can be used to alter the part of the <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> where a was found (assuming a check has been made that <DictionaryLink styled={true} term={"member"}><b>member</b></DictionaryLink> did not return <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>). 
 
 
 

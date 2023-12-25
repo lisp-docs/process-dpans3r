@@ -1,4 +1,4 @@
-**upper-case-p, lower-case-p, both-case-p** *Function* 
+**upper-case-p, lower-case-p, both-case-p** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,15 +6,15 @@
 
 
 
-**upper-case-p** *character → generalized-boolean* 
+<DictionaryLink styled={true} term={"upper-case-p"}><b>upper-case-p</b></DictionaryLink> *character → generalized-boolean* 
 
 
 
-**lower-case-p** *character → generalized-boolean* 
+<DictionaryLink styled={true} term={"lower-case-p"}><b>lower-case-p</b></DictionaryLink> *character → generalized-boolean* 
 
 
 
-**both-case-p** *character → generalized-boolean* 
+<DictionaryLink styled={true} term={"both-case-p"}><b>both-case-p</b></DictionaryLink> *character → generalized-boolean* 
 
 
 
@@ -22,7 +22,7 @@
 
 
 
-*character*—a *character* . 
+<GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> . 
 
 
 
@@ -34,11 +34,11 @@
 
 
 
-These functions test the case of a given *character*. 
+These functions test the case of a given <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm>. 
 
 
 
-**upper-case-p** returns *true* if *character* is an *uppercase character* ; otherwise, returns *false*. **lower-case-p** returns *true* if *character* is a *lowercase character* ; otherwise, returns *false*. **both-case-p** returns *true* if *character* is a *character* with *case*; otherwise, returns *false*. **Examples:**
+<DictionaryLink styled={true} term={"upper-case-p"}><b>upper-case-p</b></DictionaryLink> returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> is an *uppercase character* ; otherwise, returns <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. <DictionaryLink styled={true} term={"lower-case-p"}><b>lower-case-p</b></DictionaryLink> returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> is a *lowercase character* ; otherwise, returns <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. <DictionaryLink styled={true} term={"both-case-p"}><b>both-case-p</b></DictionaryLink> returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> is a <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> with <GlossaryTerm styled={true} term={"case"}><i>case</i></GlossaryTerm>; otherwise, returns <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. **Examples:**
 ```lisp
 
 (upper-case-p #\A) *→ true* 
@@ -59,7 +59,7 @@ These functions test the case of a given *character*.
 
 
 
-Should signal an error of *type* **type-error** if *character* is not a *character* . 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> is not a <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> . 
 
 
 
@@ -67,7 +67,7 @@ Should signal an error of *type* **type-error** if *character* is not a *charact
 
 
 
-**char-upcase**, **char-downcase**, Section 13.1.4.3 (Characters With Case), Section 13.1.10 (Documentation of Implementation-Defined Scripts) 
+<DictionaryLink styled={true} term={"char-upcase"}><b>char-upcase</b></DictionaryLink>, <DictionaryLink styled={true} term={"char-downcase"}><b>char-downcase</b></DictionaryLink>, Section 13.1.4.3 (Characters With Case), Section 13.1.10 (Documentation of Implementation-Defined Scripts) 
 
 
 

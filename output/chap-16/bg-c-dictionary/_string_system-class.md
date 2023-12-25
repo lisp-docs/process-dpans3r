@@ -6,7 +6,7 @@
 
 
 
-**string**, **vector**, **array**, **sequence**, **t** 
+<DictionaryLink styled={true} term={"string"}><b>string</b></DictionaryLink>, <DictionaryLink styled={true} term={"vector"}><b>vector</b></DictionaryLink>, <DictionaryLink styled={true} term={"array"}><b>array</b></DictionaryLink>, <DictionaryLink styled={true} term={"sequence"}><b>sequence</b></DictionaryLink>, <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink> 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-A *string* is a *specialized vector* whose *elements* are of *type* **character** or a *subtype* of *type* **character**. When used as a *type specifier* for object creation, **string** means (vector character). 
+A <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> is a *specialized vector* whose <GlossaryTerm styled={true} term={"element"}><i>elements</i></GlossaryTerm> are of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"character"}><b>character</b></DictionaryLink> or a <GlossaryTerm styled={true} term={"subtype"}><i>subtype</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"character"}><b>character</b></DictionaryLink>. When used as a *type specifier* for object creation, <DictionaryLink styled={true} term={"string"}><b>string</b></DictionaryLink> means (vector character). 
 
 
 
@@ -38,7 +38,7 @@ Abbreviating.
 
 
 
-*size*—a non-negative *fixnum*, or the *symbol* **\***. 
+*size*—a non-negative <GlossaryTerm styled={true} term={"fixnum"}><i>fixnum</i></GlossaryTerm>, or the <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> **\***. 
 
 
 
@@ -46,7 +46,7 @@ Abbreviating.
 
 
 
-This denotes the union of all *types* (array *c* (*size*)) for all *subtypes c* of **character**; that is, the set of *strings* of size *size*. 
+This denotes the union of all <GlossaryTerm styled={true} term={"type"}><i>types</i></GlossaryTerm> (array *c* (*size*)) for all *subtypes c* of <DictionaryLink styled={true} term={"character"}><b>character</b></DictionaryLink>; that is, the set of <GlossaryTerm styled={true} term={"string"}><i>strings</i></GlossaryTerm> of size *size*. 
 
 
 

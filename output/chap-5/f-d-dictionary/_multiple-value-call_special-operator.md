@@ -6,7 +6,7 @@
 
 
 
-**multiple-value-call** *function-form form*\* *! \{result\}*\* 
+<DictionaryLink styled={true} term={"multiple-value-call"}><b>multiple-value-call</b></DictionaryLink> *function-form form*\* *! \{result\}*\* 
 
 
 
@@ -14,19 +14,19 @@
 
 
 
-*function-form*—a *form*; evaluated to produce *function*. 
+*function-form*—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>; evaluated to produce <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>. 
 
 
 
-*function*—a *function designator* resulting from the evaluation of *function-form*. 
+<GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>—a *function designator* resulting from the evaluation of *function-form*. 
 
 
 
-*form*—a *form*. 
+<GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>. 
 
 
 
-*results*—the *values* returned by the *function*. 
+*results*—the <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> returned by the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>. 
 
 
 
@@ -34,11 +34,11 @@
 
 
 
-Applies *function* to a *list* of the *objects* collected from groups of *multiple values*<sub>2</sub>. 
+Applies <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> to a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of the <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm> collected from groups of *multiple values*<sub>2</sub>. 
 
 
 
-**multiple-value-call** first evaluates the *function-form* to obtain *function*, and then evaluates each *form*. All the values of each *form* are gathered together (not just one value from each) and given as arguments to the *function*. 
+<DictionaryLink styled={true} term={"multiple-value-call"}><b>multiple-value-call</b></DictionaryLink> first evaluates the *function-form* to obtain <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>, and then evaluates each <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>. All the values of each <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> are gathered together (not just one value from each) and given as arguments to the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>. 
 
 
 
@@ -57,7 +57,7 @@ Applies *function* to a *list* of the *objects* collected from groups of *multip
 
 
 
-**multiple-value-list**, **multiple-value-bind** 
+<DictionaryLink styled={true} term={"multiple-value-list"}><b>multiple-value-list</b></DictionaryLink>, <DictionaryLink styled={true} term={"multiple-value-bind"}><b>multiple-value-bind</b></DictionaryLink> 
 
 
 

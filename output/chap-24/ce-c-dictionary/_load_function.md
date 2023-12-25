@@ -1,4 +1,4 @@
-**load** *Function* 
+**load** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**load** *filespec* &amp;key *verbose print* 
+<DictionaryLink styled={true} term={"load"}><b>load</b></DictionaryLink> *filespec* &amp;key *verbose print* 
 
 
 
@@ -22,23 +22,23 @@
 
 
 
-*filespec*—a *stream*, or a *pathname designator* . The default is taken from 
+*filespec*—a <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>, or a *pathname designator* . The default is taken from 
 
 
 
-**\*default-pathname-defaults\***. 
+<DictionaryLink styled={true} term={"default-pathname-defaults"}><b>\*default-pathname-defaults\*</b></DictionaryLink>. 
 
 
 
-*verbose*—a *generalized boolean*. The default is the *value* of **\*load-verbose\***. 
+*verbose*—a *generalized boolean*. The default is the <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of <DictionaryLink styled={true} term={"load-verbose"}><b>\*load-verbose\*</b></DictionaryLink>. 
 
 
 
-*print*—a *generalized boolean*. The default is the *value* of **\*load-print\***. 
+*print*—a *generalized boolean*. The default is the <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of **\*load-print\***. 
 
 
 
-*if-does-not-exist*—a *generalized boolean*. The default is *true*. 
+*if-does-not-exist*—a *generalized boolean*. The default is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>. 
 
 
 
@@ -54,27 +54,23 @@
 
 
 
-**load** *loads* the *file* named by *filespec* into the Lisp environment. 
+<DictionaryLink styled={true} term={"load"}><b>load</b></DictionaryLink> <GlossaryTerm styled={true} term={"load"}><i>loads</i></GlossaryTerm> the <GlossaryTerm styled={true} term={"file"}><i>file</i></GlossaryTerm> named by *filespec* into the Lisp environment. 
 
 
 
-The manner in which a *source file* is distinguished from a *compiled file* is *implementation-dependent*. If the file specification is not complete and both a *source file* and a *compiled file* exist which might match, then which of those files **load** selects is *implementation-dependent*. 
+The manner in which a *source file* is distinguished from a *compiled file* is <GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm>. If the file specification is not complete and both a *source file* and a *compiled file* exist which might match, then which of those files <DictionaryLink styled={true} term={"load"}><b>load</b></DictionaryLink> selects is <GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm>. 
 
 
 
-If *filespec* is a *stream*, **load** determines what kind of *stream* it is and loads directly from the *stream*. If *filespec* is a *logical pathname*, it is translated into a *physical pathname* as if by calling **translate-logical-pathname**. 
+If *filespec* is a <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>, <DictionaryLink styled={true} term={"load"}><b>load</b></DictionaryLink> determines what kind of <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm> it is and loads directly from the <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>. If *filespec* is a *logical pathname*, it is translated into a *physical pathname* as if by calling <DictionaryLink styled={true} term={"translate-logical-pathname"}><b>translate-logical-pathname</b></DictionaryLink>. 
 
 
 
-**load** sequentially executes each *form* it encounters in the *file* named by *filespec*. If the *file* is a *source file* and the *implementation* chooses to perform *implicit compilation*, **load** must recognize *top level forms* as described in Section 3.2.3.1 (Processing of Top Level Forms) and arrange for each *top level form* to be executed before beginning *implicit compilation* of the next. (Note, however, that processing of **eval-when** *forms* by **load** is controlled by the :execute situation.) 
-
-
+<DictionaryLink styled={true} term={"load"}><b>load</b></DictionaryLink> sequentially executes each <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> it encounters in the <GlossaryTerm styled={true} term={"file"}><i>file</i></GlossaryTerm> named by *filespec*. If the <GlossaryTerm styled={true} term={"file"}><i>file</i></GlossaryTerm> is a *source file* and the <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm> chooses to perform *implicit compilation*, <DictionaryLink styled={true} term={"load"}><b>load</b></DictionaryLink> must recognize *top level forms* as described in Section 3.2.3.1 (Processing of Top Level Forms) and arrange for each *top level form* to be executed before beginning *implicit compilation* of the next. (Note, however, that processing of <DictionaryLink styled={true} term={"eval-when"}><b>eval-when</b></DictionaryLink> <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm> by <DictionaryLink styled={true} term={"load"}><b>load</b></DictionaryLink> is controlled by the :execute situation.) 
 
 
 
 
-
- 
 
 
 
@@ -82,35 +78,39 @@ If *filespec* is a *stream*, **load** determines what kind of *stream* it is and
 
 
 
-**load** 
+ 
 
 
 
-If *verbose* is *true*, **load** prints a message in the form of a comment (*i.e.*, with a leading *semicolon*) to *standard output* indicating what *file* is being *loaded* and other useful information. If *verbose* is *false*, **load** does not print this information. 
+<DictionaryLink styled={true} term={"load"}><b>load</b></DictionaryLink> 
 
 
 
-If *print* is *true*, **load** incrementally prints information to *standard output* showing the progress of the *loading* process. For a *source file*, this information might mean printing the *values yielded* by each *form* in the *file* as soon as those *values* are returned. For a *compiled file*, what is printed might not reflect precisely the contents of the *source file*, but some information is generally printed. If *print* is *false*, **load** does not print this information. 
+If *verbose* is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>, <DictionaryLink styled={true} term={"load"}><b>load</b></DictionaryLink> prints a message in the form of a comment (*i.e.*, with a leading <GlossaryTerm styled={true} term={"semicolon"}><i>semicolon</i></GlossaryTerm>) to *standard output* indicating what <GlossaryTerm styled={true} term={"file"}><i>file</i></GlossaryTerm> is being *loaded* and other useful information. If *verbose* is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>, <DictionaryLink styled={true} term={"load"}><b>load</b></DictionaryLink> does not print this information. 
 
 
 
-If the file named by *filespec* is successfully loaded, **load** returns *true*. 
+If *print* is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>, <DictionaryLink styled={true} term={"load"}><b>load</b></DictionaryLink> incrementally prints information to *standard output* showing the progress of the *loading* process. For a *source file*, this information might mean printing the *values yielded* by each <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> in the <GlossaryTerm styled={true} term={"file"}><i>file</i></GlossaryTerm> as soon as those <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> are returned. For a *compiled file*, what is printed might not reflect precisely the contents of the *source file*, but some information is generally printed. If *print* is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>, <DictionaryLink styled={true} term={"load"}><b>load</b></DictionaryLink> does not print this information. 
 
 
 
-If the file does not exist, the specific action taken depends on *if-does-not-exist*: if it is **nil**, **load** returns **nil**; otherwise, **load** signals an error. 
+If the file named by *filespec* is successfully loaded, <DictionaryLink styled={true} term={"load"}><b>load</b></DictionaryLink> returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>. 
 
 
 
-The *external-format* specifies the *external file format* to be used when opening the *file* (see the *function* **open**), except that when the *file* named by *filespec* is a *compiled file*, the *external-format* is ignored. **compile-file** and **load** cooperate in an *implementation-dependent* way to assure the preservation of the *similarity* of *characters* referred to in the *source file* at the time the *source file* was processed by the *file compiler* under a given *external file format*, regardless of the value of *external-format* at the time the *compiled file* is *loaded*. 
+If the file does not exist, the specific action taken depends on *if-does-not-exist*: if it is <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>, <DictionaryLink styled={true} term={"load"}><b>load</b></DictionaryLink> returns <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>; otherwise, <DictionaryLink styled={true} term={"load"}><b>load</b></DictionaryLink> signals an error. 
 
 
 
-**load** binds **\*readtable\*** and **\*package\*** to the values they held before *loading* the file. **\*load-truename\*** is *bound* by **load** to hold the *truename* of the *pathname* of the file being *loaded*. 
+The *external-format* specifies the *external file format* to be used when opening the <GlossaryTerm styled={true} term={"file"}><i>file</i></GlossaryTerm> (see the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> <DictionaryLink styled={true} term={"open"}><b>open</b></DictionaryLink>), except that when the <GlossaryTerm styled={true} term={"file"}><i>file</i></GlossaryTerm> named by *filespec* is a *compiled file*, the *external-format* is ignored. <DictionaryLink styled={true} term={"compile-file"}><b>compile-file</b></DictionaryLink> and <DictionaryLink styled={true} term={"load"}><b>load</b></DictionaryLink> cooperate in an <GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm> way to assure the preservation of the <GlossaryTerm styled={true} term={"similarity"}><i>similarity</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm> referred to in the *source file* at the time the *source file* was processed by the *file compiler* under a given *external file format*, regardless of the value of *external-format* at the time the *compiled file* is *loaded*. 
 
 
 
-**\*load-pathname\*** is *bound* by **load** to hold a *pathname* that represents *filespec* merged against the defaults. That is, (pathname (merge-pathnames *filespec*)). 
+<DictionaryLink styled={true} term={"load"}><b>load</b></DictionaryLink> binds <DictionaryLink styled={true} term={"readtable"}><b>\*readtable\*</b></DictionaryLink> and <DictionaryLink styled={true} term={"package"}><b>\*package\*</b></DictionaryLink> to the values they held before *loading* the file. <DictionaryLink styled={true} term={"load-truename"}><b>\*load-truename\*</b></DictionaryLink> is <GlossaryTerm styled={true} term={"bound"}><i>bound</i></GlossaryTerm> by <DictionaryLink styled={true} term={"load"}><b>load</b></DictionaryLink> to hold the <GlossaryTerm styled={true} term={"truename"}><i>truename</i></GlossaryTerm> of the <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm> of the file being *loaded*. 
+
+
+
+**\*load-pathname\*** is <GlossaryTerm styled={true} term={"bound"}><i>bound</i></GlossaryTerm> by <DictionaryLink styled={true} term={"load"}><b>load</b></DictionaryLink> to hold a <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm> that represents *filespec* merged against the defaults. That is, (pathname (merge-pathnames *filespec*)). 
 
 
 
@@ -161,11 +161,11 @@ The implementation, and the host computer’s file system.
 
 
 
-If :if-does-not-exist is supplied and is *true*, or is not supplied, **load** signals an error of *type* **file-error** if the file named by *filespec* does not exist, or if the *file system* cannot perform the requested operation. 
+If :if-does-not-exist is supplied and is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>, or is not supplied, <DictionaryLink styled={true} term={"load"}><b>load</b></DictionaryLink> signals an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"file-error"}><b>file-error</b></DictionaryLink> if the file named by *filespec* does not exist, or if the *file system* cannot perform the requested operation. 
 
 
 
-An error of *type* **file-error** might be signaled if (wild-pathname-p *filespec*) returns *true*. 
+An error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"file-error"}><b>file-error</b></DictionaryLink> might be signaled if (wild-pathname-p *filespec*) returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>. 
 
 
 
@@ -173,7 +173,7 @@ An error of *type* **file-error** might be signaled if (wild-pathname-p *filespe
 
 
 
-**error**, **merge-pathnames**, **\*load-verbose\***, **\*default-pathname-defaults\***, **pathname**, **logical-pathname**, Section 20.1 (File System Concepts), Section 19.1.2 (Pathnames as File names) 
+<DictionaryLink styled={true} term={"error"}><b>error</b></DictionaryLink>, <DictionaryLink styled={true} term={"merge-pathnames"}><b>merge-pathnames</b></DictionaryLink>, <DictionaryLink styled={true} term={"load-verbose"}><b>\*load-verbose\*</b></DictionaryLink>, <DictionaryLink styled={true} term={"default-pathname-defaults"}><b>\*default-pathname-defaults\*</b></DictionaryLink>, <DictionaryLink styled={true} term={"pathname"}><b>pathname</b></DictionaryLink>, <DictionaryLink styled={true} term={"logical-pathname"}><b>logical-pathname</b></DictionaryLink>, Section 20.1 (File System Concepts), Section 19.1.2 (Pathnames as File names) 
 
 
 

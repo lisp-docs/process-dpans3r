@@ -2,7 +2,7 @@
 
 
 
-An *association list* is a *list* of *conses* representing an association of *keys* with *values*, where the *car* of each *cons* is the *key* and the *cdr* is the *value* associated with that *key*. 
+An *association list* is a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of *conses* representing an association of <GlossaryTerm styled={true} term={"key"}><i>keys</i></GlossaryTerm> with <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm>, where the <GlossaryTerm styled={true} term={"car"}><i>car</i></GlossaryTerm> of each <GlossaryTerm styled={true} term={"cons"}><i>cons</i></GlossaryTerm> is the <GlossaryTerm styled={true} term={"key"}><i>key</i></GlossaryTerm> and the <GlossaryTerm styled={true} term={"cdr"}><i>cdr</i></GlossaryTerm> is the <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> associated with that <GlossaryTerm styled={true} term={"key"}><i>key</i></GlossaryTerm>. 
 
 
 

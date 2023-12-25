@@ -1,4 +1,4 @@
-**unuse-package** *Function* 
+**unuse-package** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**unuse-package** *packages-to-unuse* &amp;optional *package →* **t** 
+<DictionaryLink styled={true} term={"unuse-package"}><b>unuse-package</b></DictionaryLink> *packages-to-unuse* &amp;optional *package →* <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink> 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*packages-to-unuse*—a *designator* for a *list* of *package designators*. 
+*packages-to-unuse*—a <GlossaryTerm styled={true} term={"designator"}><i>designator</i></GlossaryTerm> for a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of *package designators*. 
 
 
 
-*package*—a *package designator* . The default is the *current package*. 
+<GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>—a *package designator* . The default is the *current package*. 
 
 
 
@@ -26,11 +26,11 @@
 
 
 
-**unuse-package** causes *package* to cease inheriting all the *external symbols* of *packages-to-unuse*; **unuse-package** undoes the effects of **use-package**. The *packages-to-unuse* are removed from the *use list* of *package*. 
+<DictionaryLink styled={true} term={"unuse-package"}><b>unuse-package</b></DictionaryLink> causes <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> to cease inheriting all the *external symbols* of *packages-to-unuse*; <DictionaryLink styled={true} term={"unuse-package"}><b>unuse-package</b></DictionaryLink> undoes the effects of <DictionaryLink styled={true} term={"use-package"}><b>use-package</b></DictionaryLink>. The *packages-to-unuse* are removed from the *use list* of <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>. 
 
 
 
-Any *symbols* that have been *imported* into *package* continue to be *present* in *package*. **Examples:**
+Any <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> that have been *imported* into <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> continue to be <GlossaryTerm styled={true} term={"present"}><i>present</i></GlossaryTerm> in <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>. **Examples:**
 ```lisp
 
 (in-package "COMMON-LISP-USER") *→* #<PACKAGE "COMMON-LISP-USER"> 
@@ -46,7 +46,7 @@ Any *symbols* that have been *imported* into *package* continue to be *present* 
 
 
 
-The *use list* of *package* is modified. 
+The *use list* of <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> is modified. 
 
 
 
@@ -62,7 +62,7 @@ Current state of the package system.
 
 
 
-**use-package**, **package-use-list** 
+<DictionaryLink styled={true} term={"use-package"}><b>use-package</b></DictionaryLink>, <DictionaryLink styled={true} term={"package-use-list"}><b>package-use-list</b></DictionaryLink> 
 
 
 

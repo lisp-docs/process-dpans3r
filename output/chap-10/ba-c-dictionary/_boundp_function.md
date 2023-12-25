@@ -1,4 +1,4 @@
-**boundp** *Function* 
+**boundp** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**boundp** *symbol → generalized-boolean* 
+<DictionaryLink styled={true} term={"boundp"}><b>boundp</b></DictionaryLink> *symbol → generalized-boolean* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*symbol*—a *symbol*. 
+<GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>. 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-Returns *true* if *symbol* is *bound*; otherwise, returns *false*. 
+Returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> is <GlossaryTerm styled={true} term={"bound"}><i>bound</i></GlossaryTerm>; otherwise, returns <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
@@ -57,7 +57,7 @@ Returns *true* if *symbol* is *bound*; otherwise, returns *false*.
 
 
 
-Should signal an error of *type* **type-error** if *symbol* is not a *symbol*. 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> is not a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>. 
 
 
 
@@ -65,7 +65,7 @@ Should signal an error of *type* **type-error** if *symbol* is not a *symbol*.
 
 
 
-**set**, **setq**, **symbol-value**, **makunbound** 
+<DictionaryLink styled={true} term={"set"}><b>set</b></DictionaryLink>, <DictionaryLink styled={true} term={"setq"}><b>setq</b></DictionaryLink>, <DictionaryLink styled={true} term={"symbol-value"}><b>symbol-value</b></DictionaryLink>, <DictionaryLink styled={true} term={"makunbound"}><b>makunbound</b></DictionaryLink> 
 
 
 
@@ -73,7 +73,7 @@ Should signal an error of *type* **type-error** if *symbol* is not a *symbol*.
 
 
 
-The *function* **bound** determines only whether a *symbol* has a value in the *global environment*; any *lexical bindings* are ignored. 
+The <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> **bound** determines only whether a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> has a value in the *global environment*; any *lexical bindings* are ignored. 
 
 
 

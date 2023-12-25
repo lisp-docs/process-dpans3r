@@ -1,4 +1,4 @@
-**consp** *Function* 
+**consp** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**consp** *object → generalized-boolean* 
+<DictionaryLink styled={true} term={"consp"}><b>consp</b></DictionaryLink> *object → generalized-boolean* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*object*—an *object*. 
+<GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -38,7 +38,7 @@
 
 
 
-Returns *true* if *object* is of *type* **cons**; otherwise, returns *false*. 
+Returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"cons"}><b>cons</b></DictionaryLink>; otherwise, returns <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
@@ -55,7 +55,7 @@ The *empty list* is not a *cons*, so
 
 
 
-**listp** 
+<DictionaryLink styled={true} term={"listp"}><b>listp</b></DictionaryLink> 
 
 
 
@@ -63,7 +63,7 @@ The *empty list* is not a *cons*, so
 
 
 
-(consp *object*) *≡* (typep *object* ’cons) *≡* (not (typep *object* ’atom)) *≡* (typep *object* ’(not atom)) 
+(consp <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>) *≡* (typep <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> ’cons) *≡* (not (typep <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> ’atom)) *≡* (typep <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> ’(not atom)) 
 
 
 

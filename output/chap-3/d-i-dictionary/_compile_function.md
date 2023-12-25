@@ -1,4 +1,4 @@
-**compile** *Function* 
+**compile** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**compile** *name* &amp;optional *definition → function, warnings-p, failure-p* 
+<DictionaryLink styled={true} term={"compile"}><b>compile</b></DictionaryLink> <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> &amp;optional *definition → function, warnings-p, failure-p* 
 
 
 
@@ -14,15 +14,15 @@
 
 
 
-*name*—a *function name*, or **nil**. 
+<GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm>—a *function name*, or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
-*definition*—a *lambda expression* or a *function*. The default is the function definition of *name* if it names a *function*, or the *macro function* of *name* if it names a *macro*. The consequences are undefined if no *definition* is supplied when the *name* is **nil**. 
+*definition*—a *lambda expression* or a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>. The default is the function definition of <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> if it names a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>, or the *macro function* of <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> if it names a <GlossaryTerm styled={true} term={"macro"}><i>macro</i></GlossaryTerm>. The consequences are undefined if no *definition* is supplied when the <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> is <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
-*function*—the *function-name*, or a *compiled function*. 
+<GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>—the *function-name*, or a *compiled function*. 
 
 
 
@@ -34,7 +34,7 @@
 
 
 
-**compile** 
+<DictionaryLink styled={true} term={"compile"}><b>compile</b></DictionaryLink> 
 
 
 
@@ -50,27 +50,27 @@ Compiles an *interpreted function*.
 
 
 
-**compile** produces a *compiled function* from *definition*. If the *definition* is a *lambda expression*, it is coerced to a *function*. If the *definition* is already a *compiled function*, **compile** either produces that function itself (*i.e.*, is an identity operation) or an equivalent function. 
+<DictionaryLink styled={true} term={"compile"}><b>compile</b></DictionaryLink> produces a *compiled function* from *definition*. If the *definition* is a *lambda expression*, it is coerced to a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>. If the *definition* is already a *compiled function*, <DictionaryLink styled={true} term={"compile"}><b>compile</b></DictionaryLink> either produces that function itself (*i.e.*, is an identity operation) or an equivalent function. 
 
 
 
-If the *name* is **nil**, the resulting *compiled function* is returned directly as the *primary value*. If a *non-nil name* is given, then the resulting *compiled function* replaces the existing *function* definition of *name* and the *name* is returned as the *primary value*; if *name* is a *symbol* that names a *macro*, its *macro function* is updated and the *name* is returned as the *primary value*. 
+If the <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> is <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>, the resulting *compiled function* is returned directly as the *primary value*. If a *non-nil name* is given, then the resulting *compiled function* replaces the existing <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> definition of <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> and the <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> is returned as the *primary value*; if <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> is a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> that names a <GlossaryTerm styled={true} term={"macro"}><i>macro</i></GlossaryTerm>, its *macro function* is updated and the <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> is returned as the *primary value*. 
 
 
 
-*Literal objects* appearing in code processed by the **compile** function are neither copied nor *coalesced*. The code resulting from the execution of **compile** references *objects* that are **eql** to the corresponding *objects* in the source code. 
+*Literal objects* appearing in code processed by the <DictionaryLink styled={true} term={"compile"}><b>compile</b></DictionaryLink> function are neither copied nor *coalesced*. The code resulting from the execution of <DictionaryLink styled={true} term={"compile"}><b>compile</b></DictionaryLink> references <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm> that are <DictionaryLink styled={true} term={"eql"}><b>eql</b></DictionaryLink> to the corresponding <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm> in the source code. 
 
 
 
-**compile** is permitted, but not required, to *establish* a *handler* for *conditions* of *type* **error**. For example, the *handler* might issue a warning and restart compilation from some *implementation dependent* point in order to let the compilation proceed without manual intervention. 
+<DictionaryLink styled={true} term={"compile"}><b>compile</b></DictionaryLink> is permitted, but not required, to <GlossaryTerm styled={true} term={"establish"}><i>establish</i></GlossaryTerm> a <GlossaryTerm styled={true} term={"handler"}><i>handler</i></GlossaryTerm> for <GlossaryTerm styled={true} term={"condition"}><i>conditions</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"error"}><b>error</b></DictionaryLink>. For example, the <GlossaryTerm styled={true} term={"handler"}><i>handler</i></GlossaryTerm> might issue a warning and restart compilation from some *implementation dependent* point in order to let the compilation proceed without manual intervention. 
 
 
 
-The *secondary value*, *warnings-p*, is *false* if no *conditions* of *type* **error** or **warning** were detected by the compiler, and *true* otherwise. 
+The *secondary value*, *warnings-p*, is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm> if no <GlossaryTerm styled={true} term={"condition"}><i>conditions</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"error"}><b>error</b></DictionaryLink> or <DictionaryLink styled={true} term={"warning"}><b>warning</b></DictionaryLink> were detected by the compiler, and <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> otherwise. 
 
 
 
-The *tertiary value*, *failure-p*, is *false* if no *conditions* of *type* **error** or **warning** (other than **style-warning**) were detected by the compiler, and *true* otherwise. 
+The *tertiary value*, *failure-p*, is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm> if no <GlossaryTerm styled={true} term={"condition"}><i>conditions</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"error"}><b>error</b></DictionaryLink> or <DictionaryLink styled={true} term={"warning"}><b>warning</b></DictionaryLink> (other than <DictionaryLink styled={true} term={"style-warning"}><b>style-warning</b></DictionaryLink>) were detected by the compiler, and <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> otherwise. 
 
 
 
@@ -102,7 +102,7 @@ The presence of macro definitions and proclamations.
 
 
 
-The consequences are undefined if the *lexical environment* surrounding the *function* to be compiled contains any *bindings* other than those for *macros*, *symbol macros*, or *declarations*. 
+The consequences are undefined if the *lexical environment* surrounding the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> to be compiled contains any <GlossaryTerm styled={true} term={"binding"}><i>bindings</i></GlossaryTerm> other than those for <GlossaryTerm styled={true} term={"macro"}><i>macros</i></GlossaryTerm>, *symbol macros*, or <GlossaryTerm styled={true} term={"declaration"}><i>declarations</i></GlossaryTerm>. 
 
 
 
@@ -126,7 +126,7 @@ Situations in the Compiler).
 
 
 
-**compile-file** 
+<DictionaryLink styled={true} term={"compile-file"}><b>compile-file</b></DictionaryLink> 
 
 
 

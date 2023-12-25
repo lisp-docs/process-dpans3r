@@ -2,11 +2,11 @@
 
 
 
-A *stream*, whether a *character stream* or a *binary stream*, can be an *input stream* (source of data), an *output stream* (sink for data), both, or (*e.g.*, when “:direction :probe” is given to **open**) neither. 
+A <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>, whether a *character stream* or a *binary stream*, can be an *input stream* (source of data), an *output stream* (sink for data), both, or (*e.g.*, when “:direction :probe” is given to <DictionaryLink styled={true} term={"open"}><b>open</b></DictionaryLink>) neither. 
 
 
 
-Figure 21–2 shows *operators* relating to *input streams*. 
+Figure 21–2 shows <GlossaryTerm styled={true} term={"operator"}><i>operators</i></GlossaryTerm> relating to *input streams*. 
 
 
 
@@ -34,7 +34,7 @@ Figure 21–2 shows *operators* relating to *input streams*.
 
 
 
-Figure 21–3 shows *operators* relating to *output streams*. 
+Figure 21–3 shows <GlossaryTerm styled={true} term={"operator"}><i>operators</i></GlossaryTerm> relating to *output streams*. 
 
 
 
@@ -50,11 +50,11 @@ Figure 21–3 shows *operators* relating to *output streams*.
 
 
 
-A *stream* that is both an *input stream* and an *output stream* is called a *bidirectional stream*. See the *functions* **input-stream-p** and **output-stream-p**. 
+A <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm> that is both an *input stream* and an *output stream* is called a *bidirectional stream*. See the <GlossaryTerm styled={true} term={"function"}><i>functions</i></GlossaryTerm> **input-stream-p** and **output-stream-p**. 
 
 
 
-Any of the *operators* listed in Figure 21–2 or Figure 21–3 can be used with *bidirectional streams*. In addition, Figure 21–4 shows a list of *operators* that relate specificaly to *bidirectional streams*. 
+Any of the <GlossaryTerm styled={true} term={"operator"}><i>operators</i></GlossaryTerm> listed in Figure 21–2 or Figure 21–3 can be used with *bidirectional streams*. In addition, Figure 21–4 shows a list of <GlossaryTerm styled={true} term={"operator"}><i>operators</i></GlossaryTerm> that relate specificaly to *bidirectional streams*. 
 
 
 

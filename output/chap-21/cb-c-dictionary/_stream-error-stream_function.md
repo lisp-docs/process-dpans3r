@@ -1,4 +1,4 @@
-**stream-error-stream** *Function* 
+**stream-error-stream** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**stream-error-stream** *condition → stream* 
+<DictionaryLink styled={true} term={"stream-error-stream"}><b>stream-error-stream</b></DictionaryLink> *condition → stream* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*condition*—a *condition* of *type* **stream-error**. 
+<GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> **stream-error**. 
 
 
 
-*stream*—a *stream*. 
+<GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>. 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-Returns the offending *stream* of a *condition* of *type* **stream-error**. 
+Returns the offending <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm> of a <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> **stream-error**. 
 
 
 

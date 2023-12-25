@@ -1,4 +1,4 @@
-**adjoin** *Function* 
+**adjoin** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**adjoin** *item list* &amp;key *key test test-not → new-list* 
+<DictionaryLink styled={true} term={"adjoin"}><b>adjoin</b></DictionaryLink> *item list* &amp;key *key test test-not → new-list* 
 
 
 
@@ -14,19 +14,19 @@
 
 
 
-*item*—an *object*. 
+*item*—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
-*list*—a *proper list*. 
+<GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>—a *proper list*. 
 
 
 
-*test*—a *designator* for a *function* of two *arguments* that returns a *generalized boolean*. *test-not*—a *designator* for a *function* of two *arguments* that returns a *generalized boolean*. *key*—a *designator* for a *function* of one argument, or **nil**. 
+*test*—a <GlossaryTerm styled={true} term={"designator"}><i>designator</i></GlossaryTerm> for a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> of two <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm> that returns a *generalized boolean*. *test-not<GlossaryTerm styled={true} term={"t"}><i>—a </i></GlossaryTerm>designator* for a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> of two <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm> that returns a *generalized boolean*. *key*—a *designator* for a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> of one argument, or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
-*new-list*—a *list*. 
+*new-list*—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>. 
 
 
 
@@ -34,11 +34,11 @@
 
 
 
-Tests whether *item* is the same as an existing element of *list*. If the *item* is not an existing element, **adjoin** adds it to *list* (as if by **cons**) and returns the resulting *list*; otherwise, nothing is added and the original *list* is returned. 
+Tests whether *item* is the same as an existing element of <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>. If the *item* is not an existing element, <DictionaryLink styled={true} term={"adjoin"}><b>adjoin</b></DictionaryLink> adds it to <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> (as if by <DictionaryLink styled={true} term={"cons"}><b>cons</b></DictionaryLink>) and returns the resulting <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>; otherwise, nothing is added and the original <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> is returned. 
 
 
 
-The *test*, *test-not*, and *key* affect how it is determined whether *item* is the same as an *element* of *list*. For details, see Section 17.2.1 (Satisfying a Two-Argument Test). 
+The *test*, *test-not*, and <GlossaryTerm styled={true} term={"key"}><i>key</i></GlossaryTerm> affect how it is determined whether *item* is the same as an <GlossaryTerm styled={true} term={"element"}><i>element</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>. For details, see Section 17.2.1 (Satisfying a Two-Argument Test). 
 
 
 
@@ -59,7 +59,7 @@ slist *→* NIL
 
 
 
-Should be prepared to signal an error of *type* **type-error** if *list* is not a *proper list*. 
+Should be prepared to signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> is not a *proper list*. 
 
 
 
@@ -67,7 +67,7 @@ Should be prepared to signal an error of *type* **type-error** if *list* is not 
 
 
 
-**pushnew**, Section 3.6 (Traversal Rules and Side Effects) 
+<DictionaryLink styled={true} term={"pushnew"}><b>pushnew</b></DictionaryLink>, Section 3.6 (Traversal Rules and Side Effects) 
 
 
 

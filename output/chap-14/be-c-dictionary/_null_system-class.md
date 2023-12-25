@@ -6,7 +6,7 @@
 
 
 
-**null**, **symbol**, **list**, **sequence**, **t** 
+<DictionaryLink styled={true} term={"null"}><b>null</b></DictionaryLink>, <DictionaryLink styled={true} term={"symbol"}><b>symbol</b></DictionaryLink>, <DictionaryLink styled={true} term={"list"}><b>list</b></DictionaryLink>, <DictionaryLink styled={true} term={"sequence"}><b>sequence</b></DictionaryLink>, <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink> 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-The only *object* of *type* **null** is **nil**, which represents the *empty list* and can also be notated (). 
+The only <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"null"}><b>null</b></DictionaryLink> is <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>, which represents the *empty list* and can also be notated (). 
 
 
 

@@ -6,7 +6,7 @@
 
 
 
-**broadcast-stream**, **stream**, **t** 
+<DictionaryLink styled={true} term={"broadcast-stream"}><b>broadcast-stream</b></DictionaryLink>, <DictionaryLink styled={true} term={"stream"}><b>stream</b></DictionaryLink>, <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink> 
 
 
 
@@ -22,23 +22,19 @@ The set of operations that may be performed on a *broadcast stream* is the inter
 
 
 
-Some output operations (*e.g.*, **fresh-line**) return *values* based on the state of the *stream* at the time of the operation. Since these *values* might differ for each of the *component streams*, it is necessary to describe their return value specifically: 
+Some output operations (*e.g.*, <DictionaryLink styled={true} term={"fresh-line"}><b>fresh-line</b></DictionaryLink>) return <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> based on the state of the <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm> at the time of the operation. Since these <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> might differ for each of the *component streams*, it is necessary to describe their return value specifically: 
 
 
 
-*•* **stream-element-type** returns the value from the last component stream, or **t** if there are no component streams. 
+*•* <DictionaryLink styled={true} term={"stream-element-type"}><b>stream-element-type</b></DictionaryLink> returns the value from the last component stream, or <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink> if there are no component streams. 
 
 
 
-*•* **fresh-line** returns the value from the last component stream, or **nil** if there are no component streams. 
-
-
+*•* <DictionaryLink styled={true} term={"fresh-line"}><b>fresh-line</b></DictionaryLink> returns the value from the last component stream, or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> if there are no component streams. 
 
 
 
 
-
- 
 
 
 
@@ -46,31 +42,35 @@ Some output operations (*e.g.*, **fresh-line**) return *values* based on the sta
 
 
 
-*•* The functions **file-length**, **file-position**, **file-string-length**, and **stream-external-format** return the value from the last component stream; if there are no component 
+ 
 
 
 
-streams, **file-length** and **file-position** return 0, **file-string-length** returns 1, and **stream-external-format** returns :default. 
+*•* The functions <DictionaryLink styled={true} term={"file-length"}><b>file-length</b></DictionaryLink>, <DictionaryLink styled={true} term={"file-position"}><b>file-position</b></DictionaryLink>, <DictionaryLink styled={true} term={"file-string-length"}><b>file-string-length</b></DictionaryLink>, and <DictionaryLink styled={true} term={"stream-external-format"}><b>stream-external-format</b></DictionaryLink> return the value from the last component stream; if there are no component 
 
 
 
-*•* The functions **streamp** and **output-stream-p** always return *true* for *broadcast streams*. 
+streams, <DictionaryLink styled={true} term={"file-length"}><b>file-length</b></DictionaryLink> and <DictionaryLink styled={true} term={"file-position"}><b>file-position</b></DictionaryLink> return 0, <DictionaryLink styled={true} term={"file-string-length"}><b>file-string-length</b></DictionaryLink> returns 1, and <DictionaryLink styled={true} term={"stream-external-format"}><b>stream-external-format</b></DictionaryLink> returns :default. 
 
 
 
-*•* The functions **open-stream-p** tests whether the *broadcast stream* is *open*<sub>2</sub>, not whether its component streams are *open*. 
+*•* The functions <DictionaryLink styled={true} term={"streamp"}><b>streamp</b></DictionaryLink> and **output-stream-p** always return <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> for *broadcast streams*. 
 
 
 
-*•* The functions **input-stream-p** and *interactive-stream-p* return an *implementation-defined*, *generalized boolean* value. 
+*•* The functions <DictionaryLink styled={true} term={"open-stream-p"}><b>open-stream-p</b></DictionaryLink> tests whether the *broadcast stream* is <GlossaryTerm styled={true} term={"open"}><i>open</i></GlossaryTerm><sub>2</sub>, not whether its component streams are <GlossaryTerm styled={true} term={"open"}><i>open</i></GlossaryTerm>. 
 
 
 
-*•* For the input operations **clear-input listen**, **peek-char**, **read-byte**, **read-char-no-hang**, **read-char**, **read-line**, and **unread-char**, the consequences are undefined if the indicated operation is performed. However, an *implementation* is permitted to define such a behavior as an *implementation-dependent* extension. 
+*•* The functions **input-stream-p** and *interactive-stream-p* return an <GlossaryTerm styled={true} term={"implementation-defined"}><i>implementation-defined</i></GlossaryTerm>, *generalized boolean* value. 
 
 
 
-For any output operations not having their return values explicitly specified above or elsewhere in this document, it is defined that the *values* returned by such an operation are the *values* resulting from performing the operation on the last of its *component streams*; the *values* resulting from performing the operation on all preceding *streams* are discarded. If there are no *component streams*, the value is *implementation-dependent*. 
+*•* For the input operations **clear-input listen**, **peek-char**, **read-byte**, **read-char-no-hang**, **read-char**, **read-line**, and <DictionaryLink styled={true} term={"unread-char"}><b>unread-char</b></DictionaryLink>, the consequences are undefined if the indicated operation is performed. However, an <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm> is permitted to define such a behavior as an <GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm> extension. 
+
+
+
+For any output operations not having their return values explicitly specified above or elsewhere in this document, it is defined that the <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> returned by such an operation are the <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> resulting from performing the operation on the last of its *component streams*; the <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> resulting from performing the operation on all preceding <GlossaryTerm styled={true} term={"stream"}><i>streams</i></GlossaryTerm> are discarded. If there are no *component streams*, the value is <GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm>. 
 
 
 
@@ -78,7 +78,7 @@ For any output operations not having their return values explicitly specified ab
 
 
 
-**broadcast-stream-streams**, **make-broadcast-stream** 
+<DictionaryLink styled={true} term={"broadcast-stream-streams"}><b>broadcast-stream-streams</b></DictionaryLink>, <DictionaryLink styled={true} term={"make-broadcast-stream"}><b>make-broadcast-stream</b></DictionaryLink> 
 
 
 

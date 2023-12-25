@@ -1,4 +1,4 @@
-**package-nicknames** *Function* 
+**package-nicknames** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**package-nicknames** *package → nicknames* 
+<DictionaryLink styled={true} term={"package-nicknames"}><b>package-nicknames</b></DictionaryLink> *package → nicknames* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*package*—a *package designator* . 
+<GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>—a *package designator* . 
 
 
 
-*nicknames*—a *list* of *strings*. 
+<GlossaryTerm styled={true} term={"nickname"}><i>nicknames</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"string"}><i>strings</i></GlossaryTerm>. 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-Returns the *list* of nickname *strings* for *package*, not including the name of *package*. **Examples:**
+Returns the <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of nickname <GlossaryTerm styled={true} term={"string"}><i>strings</i></GlossaryTerm> for <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>, not including the name of <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>. **Examples:**
 ```lisp
 
 (package-nicknames (make-package ’temporary 
@@ -38,7 +38,7 @@ Returns the *list* of nickname *strings* for *package*, not including the name o
 
 
 
-Should signal an error of *type* **type-error** if *package* is not a *package designator* . 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> is not a *package designator* . 
 
 
 

@@ -6,7 +6,7 @@
 
 
 
-**update-instance-for-redefined-class** *instance* 
+**update-instance-for-redefined-class** <GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm> 
 
 
 
@@ -46,7 +46,7 @@
 
 
 
-**update-instance-for-redefined-class** (*instance* **standard-object**) 
+**update-instance-for-redefined-class** (<GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm> <DictionaryLink styled={true} term={"standard-object"}><b>standard-object</b></DictionaryLink>) 
 
 
 
@@ -66,19 +66,19 @@
 
 
 
-*instance*—an *object*. 
+<GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
-*added-slots*—a *list*. 
+*added-slots*—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>. 
 
 
 
-*discarded-slots*—a *list*. 
+*discarded-slots*—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>. 
 
 
 
-*property-list*—a *list*. 
+*property-list*—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>. 
 
 
 
@@ -86,7 +86,7 @@
 
 
 
-*result*—an *object*. 
+*result*—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -94,19 +94,19 @@
 
 
 
-The *generic function* **update-instance-for-redefined-class** is not intended to be called by programmers. Programmers may write *methods* for it. The *generic func tion* **update-instance-for-redefined-class** is called by the mechanism activated by **make-instances-obsolete**. 
+The *generic function* **update-instance-for-redefined-class** is not intended to be called by programmers. Programmers may write <GlossaryTerm styled={true} term={"method"}><i>methods</i></GlossaryTerm> for it. The *generic func tion* **update-instance-for-redefined-class** is called by the mechanism activated by <DictionaryLink styled={true} term={"make-instances-obsolete"}><b>make-instances-obsolete</b></DictionaryLink>. 
 
 
 
-The system-supplied primary *method* on **update-instance-for-redefined-class** checks the validity of *initargs* and signals an error if an *initarg* is supplied that is not declared as valid. This *method* then initializes *slots* with values according to the *initargs*, and initializes the newly *added-slots* with values according to their :initform forms. It does this by calling the generic function **shared-initialize** 
+The system-supplied primary <GlossaryTerm styled={true} term={"method"}><i>method</i></GlossaryTerm> on **update-instance-for-redefined-class** checks the validity of *initargs* and signals an error if an *initarg* is supplied that is not declared as valid. This <GlossaryTerm styled={true} term={"method"}><i>method</i></GlossaryTerm> then initializes <GlossaryTerm styled={true} term={"slot"}><i>slots</i></GlossaryTerm> with values according to the *initargs*, and initializes the newly *added-slots* with values according to their :initform forms. It does this by calling the generic function <DictionaryLink styled={true} term={"shared-initialize"}><b>shared-initialize</b></DictionaryLink> 
 
 
 
-with the following arguments: the *instance*, a list of names of the newly *added-slots* to *instance*, and the *initargs* it received. Newly *added-slots* are those *local slots* for which no *slot* of the same name exists in the old version of the *class*. 
+with the following arguments: the <GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm>, a list of names of the newly *added-slots* to <GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm>, and the *initargs* it received. Newly *added-slots* are those *local slots* for which no <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm> of the same name exists in the old version of the <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm>. 
 
 
 
-When **make-instances-obsolete** is invoked or when a *class* has been redefined and an *instance* is being updated, a *property-list* is created that captures the slot names and values of all the *discarded slots* with values in the original *instance*. The structure of the *instance* is transformed so that it conforms to the current class definition. The arguments to **update-instance-for-redefined-class** are this transformed *instance*, a list of *added-slots* to the *instance*, a list *discarded-slots* from the *instance*, and the *property-list* containing the slot names and values for *slots* that were discarded and had values. Included in this list of discarded *slots* are *slots* that were local in the old *class* and are shared in the new *class*. 
+When <DictionaryLink styled={true} term={"make-instances-obsolete"}><b>make-instances-obsolete</b></DictionaryLink> is invoked or when a <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm> has been redefined and an <GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm> is being updated, a *property-list* is created that captures the slot names and values of all the *discarded slots* with values in the original <GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm>. The structure of the <GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm> is transformed so that it conforms to the current class definition. The arguments to **update-instance-for-redefined-class** are this transformed <GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm>, a list of *added-slots* to the <GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm>, a list *discarded-slots* from the <GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm>, and the *property-list* containing the slot names and values for <GlossaryTerm styled={true} term={"slot"}><i>slots</i></GlossaryTerm> that were discarded and had values. Included in this list of discarded <GlossaryTerm styled={true} term={"slot"}><i>slots</i></GlossaryTerm> are <GlossaryTerm styled={true} term={"slot"}><i>slots</i></GlossaryTerm> that were local in the old <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm> and are shared in the new <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm>. 
 
 
 
@@ -164,7 +164,7 @@ The value returned by **update-instance-for-redefined-class** is ignored.
 
 
 
-The system-supplied primary *method* on **update-instance-for-redefined-class** signals an error if an *initarg* is supplied that is not declared as valid. 
+The system-supplied primary <GlossaryTerm styled={true} term={"method"}><i>method</i></GlossaryTerm> on **update-instance-for-redefined-class** signals an error if an *initarg* is supplied that is not declared as valid. 
 
 
 
@@ -172,7 +172,7 @@ The system-supplied primary *method* on **update-instance-for-redefined-class** 
 
 
 
-**make-instances-obsolete**, **shared-initialize**, Section 4.3.6 (Redefining Classes), Section 7.1.4 (Rules for Initialization Arguments), Section 7.1.2 (Declaring the Validity of Initialization Arguments) 
+<DictionaryLink styled={true} term={"make-instances-obsolete"}><b>make-instances-obsolete</b></DictionaryLink>, <DictionaryLink styled={true} term={"shared-initialize"}><b>shared-initialize</b></DictionaryLink>, Section 4.3.6 (Redefining Classes), Section 7.1.4 (Rules for Initialization Arguments), Section 7.1.2 (Declaring the Validity of Initialization Arguments) 
 
 
 
@@ -180,7 +180,7 @@ The system-supplied primary *method* on **update-instance-for-redefined-class** 
 
 
 
-*Initargs* are declared as valid by using the :initarg option to **defclass**, or by defining *methods* for **update-instance-for-redefined-class** or **shared-initialize**. The keyword name of each keyword parameter specifier in the *lambda list* of any *method* defined on **update-instance-for-redefined-class** or **shared-initialize** is declared as a valid *initarg* name for all *classes* for which that *method* is applicable. 
+*Initargs* are declared as valid by using the :initarg option to <DictionaryLink styled={true} term={"defclass"}><b>defclass</b></DictionaryLink>, or by defining <GlossaryTerm styled={true} term={"method"}><i>methods</i></GlossaryTerm> for **update-instance-for-redefined-class** or <DictionaryLink styled={true} term={"shared-initialize"}><b>shared-initialize</b></DictionaryLink>. The keyword name of each keyword parameter specifier in the *lambda list* of any <GlossaryTerm styled={true} term={"method"}><i>method</i></GlossaryTerm> defined on **update-instance-for-redefined-class** or <DictionaryLink styled={true} term={"shared-initialize"}><b>shared-initialize</b></DictionaryLink> is declared as a valid *initarg* name for all *classes* for which that <GlossaryTerm styled={true} term={"method"}><i>method</i></GlossaryTerm> is applicable. 
 
 
 

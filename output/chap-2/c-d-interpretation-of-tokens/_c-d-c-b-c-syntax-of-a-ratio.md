@@ -3,7 +3,7 @@
 
 
 
-*Ratios* can be written as an optional *sign* followed by two non-empty sequences of *digits* separated by a *slash*; see Figure 2–9. The second sequence may not consist entirely of zeros. Examples of *ratios* are in Figure 2–13.  
+<GlossaryTerm styled={true} term={"ratio"}><i>Ratios</i></GlossaryTerm> can be written as an optional <GlossaryTerm styled={true} term={"sign"}><i>sign</i></GlossaryTerm> followed by two non-empty sequences of <GlossaryTerm styled={true} term={"digit"}><i>digits</i></GlossaryTerm> separated by a <GlossaryTerm styled={true} term={"slash"}><i>slash</i></GlossaryTerm>; see Figure 2–9. The second sequence may not consist entirely of zeros. Examples of <GlossaryTerm styled={true} term={"ratio"}><i>ratios</i></GlossaryTerm> are in Figure 2–13.  
 
 
 
@@ -23,7 +23,7 @@
 
 
 
-For information on how *ratios* are printed, see Section 22.1.3.1.2 (Printing Ratios). 
+For information on how <GlossaryTerm styled={true} term={"ratio"}><i>ratios</i></GlossaryTerm> are printed, see Section 22.1.3.1.2 (Printing Ratios). 
 
 
 

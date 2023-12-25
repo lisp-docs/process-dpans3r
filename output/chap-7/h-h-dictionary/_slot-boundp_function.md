@@ -1,4 +1,4 @@
-**slot-boundp** *Function* 
+**slot-boundp** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**slot-boundp** *instance slot-name → generalized-boolean* 
+<DictionaryLink styled={true} term={"slot-boundp"}><b>slot-boundp</b></DictionaryLink> *instance slot-name → generalized-boolean* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*instance*—an *object*. 
+<GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
-*slot-name*—a *symbol* naming a *slot* of *instance*. 
+*slot-name*—a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> naming a <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm>. 
 
 
 
@@ -30,7 +30,7 @@
 
 
 
-Returns *true* if the *slot* named *slot-name* in *instance* is bound; otherwise, returns *false*. 
+Returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if the <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm> named *slot-name* in <GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm> is bound; otherwise, returns <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
@@ -38,15 +38,15 @@ Returns *true* if the *slot* named *slot-name* in *instance* is bound; otherwise
 
 
 
-If no *slot* of the *name slot-name* exists in the *instance*, **slot-missing** is called as follows: 
+If no <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm> of the *name slot-name* exists in the <GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm>, <DictionaryLink styled={true} term={"slot-missing"}><b>slot-missing</b></DictionaryLink> is called as follows: 
 
 
 
-(slot-missing (class-of *instance*) 
+(slot-missing (class-of <GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm>) 
 
 
 
-*instance* 
+<GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm> 
 
 
 
@@ -58,7 +58,7 @@ If no *slot* of the *name slot-name* exists in the *instance*, **slot-missing** 
 
 
 
-(If **slot-missing** is invoked and returns a value, a *boolean equivalent* to its *primary value* is returned by **slot-boundp**.) 
+(If <DictionaryLink styled={true} term={"slot-missing"}><b>slot-missing</b></DictionaryLink> is invoked and returns a value, a *boolean equivalent* to its *primary value* is returned by <DictionaryLink styled={true} term={"slot-boundp"}><b>slot-boundp</b></DictionaryLink>.) 
 
 
 
@@ -74,7 +74,7 @@ If no *slot* of the *name slot-name* exists in the *instance*, **slot-missing** 
 
 
 
-The specific behavior depends on *instance*’s *metaclass*. An error is never signaled if *instance* has *metaclass* **standard-class**. An error is always signaled if *instance* has *metaclass* **built-in-class**. The consequences are undefined if *instance* has any other *metaclass*–an error might or might not be signaled in this situation. Note in particular that the behavior for *conditions* and *structures* is not specified. 
+The specific behavior depends on <GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm>’s <GlossaryTerm styled={true} term={"metaclass"}><i>metaclass</i></GlossaryTerm>. An error is never signaled if <GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm> has <GlossaryTerm styled={true} term={"metaclass"}><i>metaclass</i></GlossaryTerm> <DictionaryLink styled={true} term={"standard-class"}><b>standard-class</b></DictionaryLink>. An error is always signaled if <GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm> has <GlossaryTerm styled={true} term={"metaclass"}><i>metaclass</i></GlossaryTerm> <DictionaryLink styled={true} term={"built-in-class"}><b>built-in-class</b></DictionaryLink>. The consequences are undefined if <GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm> has any other <GlossaryTerm styled={true} term={"metaclass"}><i>metaclass</i></GlossaryTerm>–an error might or might not be signaled in this situation. Note in particular that the behavior for <GlossaryTerm styled={true} term={"condition"}><i>conditions</i></GlossaryTerm> and <GlossaryTerm styled={true} term={"structure"}><i>structures</i></GlossaryTerm> is not specified. 
 
 
 
@@ -82,7 +82,7 @@ The specific behavior depends on *instance*’s *metaclass*. An error is never s
 
 
 
-**slot-makunbound**, **slot-missing** 
+<DictionaryLink styled={true} term={"slot-makunbound"}><b>slot-makunbound</b></DictionaryLink>, <DictionaryLink styled={true} term={"slot-missing"}><b>slot-missing</b></DictionaryLink> 
 
 
 
@@ -90,11 +90,11 @@ The specific behavior depends on *instance*’s *metaclass*. An error is never s
 
 
 
-The *function* **slot-boundp** allows for writing *after methods* on **initialize-instance** in order to initialize only those *slots* that have not already been bound. 
+The <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> <DictionaryLink styled={true} term={"slot-boundp"}><b>slot-boundp</b></DictionaryLink> allows for writing *after methods* on <DictionaryLink styled={true} term={"initialize-instance"}><b>initialize-instance</b></DictionaryLink> in order to initialize only those <GlossaryTerm styled={true} term={"slot"}><i>slots</i></GlossaryTerm> that have not already been bound. 
 
 
 
-Although no *implementation* is required to do so, implementors are strongly encouraged to implement the *function* **slot-boundp** using the *function* slot-boundp-using-class described in the *Metaobject Protocol*. 
+Although no <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm> is required to do so, implementors are strongly encouraged to implement the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> <DictionaryLink styled={true} term={"slot-boundp"}><b>slot-boundp</b></DictionaryLink> using the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> slot-boundp-using-class described in the *Metaobject Protocol*. 
 
 
 

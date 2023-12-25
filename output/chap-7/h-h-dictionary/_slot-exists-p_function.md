@@ -1,4 +1,4 @@
-**slot-exists-p** *Function* 
+**slot-exists-p** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**slot-exists-p** *object slot-name → generalized-boolean* 
+<DictionaryLink styled={true} term={"slot-exists-p"}><b>slot-exists-p</b></DictionaryLink> *object slot-name → generalized-boolean* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*object*—an *object*. 
+<GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
-*slot-name*—a *symbol*. 
+*slot-name*—a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>. 
 
 
 
@@ -30,7 +30,7 @@
 
 
 
-Returns *true* if the *object* has a *slot* named *slot-name*. 
+Returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if the <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> has a <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm> named *slot-name*. 
 
 
 
@@ -38,7 +38,7 @@ Returns *true* if the *object* has a *slot* named *slot-name*.
 
 
 
-**defclass**, **defstruct** 
+<DictionaryLink styled={true} term={"defclass"}><b>defclass</b></DictionaryLink>, <DictionaryLink styled={true} term={"defstruct"}><b>defstruct</b></DictionaryLink> 
 
 
 
@@ -46,7 +46,7 @@ Returns *true* if the *object* has a *slot* named *slot-name*.
 
 
 
-**defclass**, **slot-missing** 
+<DictionaryLink styled={true} term={"defclass"}><b>defclass</b></DictionaryLink>, <DictionaryLink styled={true} term={"slot-missing"}><b>slot-missing</b></DictionaryLink> 
 
 
 
@@ -54,7 +54,7 @@ Returns *true* if the *object* has a *slot* named *slot-name*.
 
 
 
-Although no *implementation* is required to do so, implementors are strongly encouraged to implement the *function* **slot-exists-p** using the *function* slot-exists-p-using-class described in the *Metaobject Protocol*. 
+Although no <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm> is required to do so, implementors are strongly encouraged to implement the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> <DictionaryLink styled={true} term={"slot-exists-p"}><b>slot-exists-p</b></DictionaryLink> using the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> slot-exists-p-using-class described in the *Metaobject Protocol*. 
 
 
 

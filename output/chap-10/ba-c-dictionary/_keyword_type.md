@@ -1,4 +1,4 @@
-**keyword** *Type* 
+**keyword** <GlossaryTerm styled={true} term={"type"}><i>Type</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**keyword**, **symbol**, **t** 
+<DictionaryLink styled={true} term={"keyword"}><b>keyword</b></DictionaryLink>, <DictionaryLink styled={true} term={"symbol"}><b>symbol</b></DictionaryLink>, <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink> 
 
 
 
@@ -14,23 +14,23 @@
 
 
 
-The *type* **keyword** includes all *symbols interned* the KEYWORD *package*. 
+The <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"keyword"}><b>keyword</b></DictionaryLink> includes all *symbols interned* the KEYWORD <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>. 
 
 
 
-*Interning* a *symbol* in the KEYWORD *package* has three automatic effects: 
+*Interning* a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> in the KEYWORD <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> has three automatic effects: 
 
 
 
-1\. It causes the *symbol* to become *bound* to itself. 
+1\. It causes the <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> to become <GlossaryTerm styled={true} term={"bound"}><i>bound</i></GlossaryTerm> to itself. 
 
 
 
-2\. It causes the *symbol* to become an *external symbol* of the KEYWORD *package*. 
+2\. It causes the <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> to become an *external symbol* of the KEYWORD <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>. 
 
 
 
-3\. It causes the *symbol* to become a *constant variable*. 
+3\. It causes the <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> to become a *constant variable*. 
 
 
 
@@ -38,7 +38,7 @@ The *type* **keyword** includes all *symbols interned* the KEYWORD *package*.
 
 
 
-**keywordp** 
+<DictionaryLink styled={true} term={"keywordp"}><b>keywordp</b></DictionaryLink> 
 
 
 

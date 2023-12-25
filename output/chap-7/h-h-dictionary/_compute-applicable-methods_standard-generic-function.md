@@ -6,7 +6,7 @@
 
 
 
-**compute-applicable-methods** *generic-function function-arguments → methods* 
+<DictionaryLink styled={true} term={"compute-applicable-methods"}><b>compute-applicable-methods</b></DictionaryLink> *generic-function function-arguments → methods* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-**compute-applicable-methods** (*generic-function* **standard-generic-function**) 
+<DictionaryLink styled={true} term={"compute-applicable-methods"}><b>compute-applicable-methods</b></DictionaryLink> (*generic-function* <DictionaryLink styled={true} term={"standard-generic-function"}><b>standard-generic-function</b></DictionaryLink>) 
 
 
 
@@ -26,11 +26,11 @@
 
 
 
-*function-arguments*—a *list* of arguments for the *generic-function*. 
+*function-arguments*—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of arguments for the *generic-function*. 
 
 
 
-*methods*—a *list* of *method objects*. 
+<GlossaryTerm styled={true} term={"method"}><i>methods</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of *method objects*. 
 
 
 
@@ -38,7 +38,7 @@
 
 
 
-Given a *generic-function* and a set of *function-arguments*, the function **compute-applicable-methods** returns the set of *methods* that are applicable for those arguments sorted according to precedence order. See Section 7.6.6 (Method Selection and Combination). 
+Given a *generic-function* and a set of *function-arguments*, the function <DictionaryLink styled={true} term={"compute-applicable-methods"}><b>compute-applicable-methods</b></DictionaryLink> returns the set of <GlossaryTerm styled={true} term={"method"}><i>methods</i></GlossaryTerm> that are applicable for those arguments sorted according to precedence order. See Section 7.6.6 (Method Selection and Combination). 
 
 
 
@@ -58,7 +58,7 @@ Given a *generic-function* and a set of *function-arguments*, the function **com
 
 
 
-**defmethod** 
+<DictionaryLink styled={true} term={"defmethod"}><b>defmethod</b></DictionaryLink> 
 
 
 

@@ -1,4 +1,4 @@
-**special-operator-p** *Function* 
+**special-operator-p** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**special-operator-p** *symbol ! generalized-boolean* 
+<DictionaryLink styled={true} term={"special-operator-p"}><b>special-operator-p</b></DictionaryLink> *symbol ! generalized-boolean* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*symbol*—a *symbol*. 
+<GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>. 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-Returns *true* if *symbol* is a *special operator* ; otherwise, returns *false*. 
+Returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> is a *special operator* ; otherwise, returns <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
@@ -42,7 +42,7 @@ Returns *true* if *symbol* is a *special operator* ; otherwise, returns *false*.
 
 
 
-Should signal **type-error** if its argument is not a *symbol*. 
+Should signal <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if its argument is not a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>. 
 
 
 
@@ -66,7 +66,7 @@ Historically, this function was called special-form-p. The name was finally decl
 
 
 
-**constantp** 
+<DictionaryLink styled={true} term={"constantp"}><b>constantp</b></DictionaryLink> 
 
 
 

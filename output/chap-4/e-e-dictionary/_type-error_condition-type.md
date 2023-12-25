@@ -6,7 +6,7 @@
 
 
 
-**type-error**, **error**, **serious-condition**, **condition**, **t** 
+<DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink>, <DictionaryLink styled={true} term={"error"}><b>error</b></DictionaryLink>, <DictionaryLink styled={true} term={"serious-condition"}><b>serious-condition</b></DictionaryLink>, <DictionaryLink styled={true} term={"condition"}><b>condition</b></DictionaryLink>, <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink> 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-The *type* **type-error** represents a situation in which an *object* is not of the expected type. The “offending datum” and “expected type” are initialized by the initialization arguments named :datum and :expected-type to **make-condition**, and are *accessed* by the functions **type-error-datum** and **type-error-expected-type**. 
+The <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> represents a situation in which an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is not of the expected type. The “offending datum” and “expected type” are initialized by the initialization arguments named :datum and :expected-type to <DictionaryLink styled={true} term={"make-condition"}><b>make-condition</b></DictionaryLink>, and are *accessed* by the functions <DictionaryLink styled={true} term={"type-error-datum"}><b>type-error-datum</b></DictionaryLink> and <DictionaryLink styled={true} term={"type-error-expected-type"}><b>type-error-expected-type</b></DictionaryLink>. 
 
 
 
@@ -22,7 +22,7 @@ The *type* **type-error** represents a situation in which an *object* is not of 
 
 
 
-**type-error-datum**, **type-error-expected-type** 
+<DictionaryLink styled={true} term={"type-error-datum"}><b>type-error-datum</b></DictionaryLink>, <DictionaryLink styled={true} term={"type-error-expected-type"}><b>type-error-expected-type</b></DictionaryLink> 
 
 
 

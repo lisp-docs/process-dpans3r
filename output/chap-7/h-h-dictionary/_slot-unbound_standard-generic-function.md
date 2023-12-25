@@ -6,7 +6,7 @@
 
 
 
-**slot-unbound** *class instance slot-name → \{result\}*\* 
+<DictionaryLink styled={true} term={"slot-unbound"}><b>slot-unbound</b></DictionaryLink> *class instance slot-name → \{result\}*\* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-**slot-unbound** (*class* **t**) *instance slot-name* 
+<DictionaryLink styled={true} term={"slot-unbound"}><b>slot-unbound</b></DictionaryLink> (<GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm> <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink>) *instance slot-name* 
 
 
 
@@ -22,19 +22,19 @@
 
 
 
-*class*—the *class* of the *instance*. 
+<GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm>—the <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm> of the <GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm>. 
 
 
 
-*instance*—the *instance* in which an attempt was made to *read* the *unbound slot*. 
+<GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm>—the <GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm> in which an attempt was made to <GlossaryTerm styled={true} term={"read"}><i>read</i></GlossaryTerm> the *unbound slot*. 
 
 
 
-*slot-name*—the *name* of the *unbound slot*. 
+*slot-name*—the <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> of the *unbound slot*. 
 
 
 
-*result*—an *object*. 
+*result*—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -42,15 +42,15 @@
 
 
 
-The generic function **slot-unbound** is called when an unbound *slot* is read in an *instance* whose metaclass is **standard-class**. The default *method* signals an error of *type* **unbound-slot**. The name slot of the **unbound-slot** *condition* is initialized to the name of the offending variable, and the instance slot of the **unbound-slot** *condition* is initialized to the offending instance. 
+The generic function <DictionaryLink styled={true} term={"slot-unbound"}><b>slot-unbound</b></DictionaryLink> is called when an unbound <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm> is read in an <GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm> whose metaclass is <DictionaryLink styled={true} term={"standard-class"}><b>standard-class</b></DictionaryLink>. The default <GlossaryTerm styled={true} term={"method"}><i>method</i></GlossaryTerm> signals an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"unbound-slot"}><b>unbound-slot</b></DictionaryLink>. The name slot of the <DictionaryLink styled={true} term={"unbound-slot"}><b>unbound-slot</b></DictionaryLink> <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> is initialized to the name of the offending variable, and the instance slot of the <DictionaryLink styled={true} term={"unbound-slot"}><b>unbound-slot</b></DictionaryLink> <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> is initialized to the offending instance. 
 
 
 
-The generic function **slot-unbound** is not intended to be called by programmers. Programmers may write *methods* for it. The *function* **slot-unbound** is called only indirectly by **slot-value**. 
+The generic function <DictionaryLink styled={true} term={"slot-unbound"}><b>slot-unbound</b></DictionaryLink> is not intended to be called by programmers. Programmers may write <GlossaryTerm styled={true} term={"method"}><i>methods</i></GlossaryTerm> for it. The <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> <DictionaryLink styled={true} term={"slot-unbound"}><b>slot-unbound</b></DictionaryLink> is called only indirectly by <DictionaryLink styled={true} term={"slot-value"}><b>slot-value</b></DictionaryLink>. 
 
 
 
-If **slot-unbound** returns, only the *primary value* will be used by the caller, and all other values will be ignored. 
+If <DictionaryLink styled={true} term={"slot-unbound"}><b>slot-unbound</b></DictionaryLink> returns, only the *primary value* will be used by the caller, and all other values will be ignored. 
 
 
 
@@ -58,7 +58,7 @@ If **slot-unbound** returns, only the *primary value* will be used by the caller
 
 
 
-The default *method* on **slot-unbound** signals an error of *type* **unbound-slot**. 
+The default <GlossaryTerm styled={true} term={"method"}><i>method</i></GlossaryTerm> on <DictionaryLink styled={true} term={"slot-unbound"}><b>slot-unbound</b></DictionaryLink> signals an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"unbound-slot"}><b>unbound-slot</b></DictionaryLink>. 
 
 
 
@@ -66,7 +66,7 @@ The default *method* on **slot-unbound** signals an error of *type* **unbound-sl
 
 
 
-**slot-makunbound** 
+<DictionaryLink styled={true} term={"slot-makunbound"}><b>slot-makunbound</b></DictionaryLink> 
 
 
 
@@ -86,7 +86,7 @@ The default *method* on **slot-unbound** signals an error of *type* **unbound-sl
 
 
 
-An unbound *slot* may occur if no :initform form was specified for the *slot* and the *slot* value has not been set, or if **slot-makunbound** has been called on the *slot*. 
+An unbound <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm> may occur if no :initform form was specified for the <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm> and the <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm> value has not been set, or if <DictionaryLink styled={true} term={"slot-makunbound"}><b>slot-makunbound</b></DictionaryLink> has been called on the <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm>. 
 
 
 

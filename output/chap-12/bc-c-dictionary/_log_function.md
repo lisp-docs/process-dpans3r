@@ -1,4 +1,4 @@
-**log** *Function* 
+**log** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**log** *number* &amp;optional *base → logarithm* 
+<DictionaryLink styled={true} term={"log"}><b>log</b></DictionaryLink> <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> &amp;optional *base → logarithm* 
 
 
 
@@ -14,15 +14,15 @@
 
 
 
-*number*—a non-zero *number* . 
+<GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm>—a non-zero <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> . 
 
 
 
-*base*—a *number* . 
+*base*—a <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> . 
 
 
 
-*logarithm*—a *number* . 
+*logarithm*—a <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> . 
 
 
 
@@ -30,7 +30,7 @@
 
 
 
-**log** returns the logarithm of *number* in base *base*. If *base* is not supplied its value is *e*, the base of the natural logarithms. 
+<DictionaryLink styled={true} term={"log"}><b>log</b></DictionaryLink> returns the logarithm of <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> in base *base*. If *base* is not supplied its value is *e*, the base of the natural logarithms. 
 
 
 
@@ -46,11 +46,11 @@
 
 
 
-**log** 
+<DictionaryLink styled={true} term={"log"}><b>log</b></DictionaryLink> 
 
 
 
-**log** may return a *complex* when given a *real* negative *number*. 
+<DictionaryLink styled={true} term={"log"}><b>log</b></DictionaryLink> may return a <GlossaryTerm styled={true} term={"complex"}><i>complex</i></GlossaryTerm> when given a *real* negative <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm>. 
 
 
 
@@ -58,7 +58,7 @@
 
 
 
-If *base* is zero, **log** returns zero. 
+If *base* is zero, <DictionaryLink styled={true} term={"log"}><b>log</b></DictionaryLink> returns zero. 
 
 
 
@@ -90,7 +90,7 @@ The two-argument logarithm function is defined as
 
 
 
-*≡* (/ (log *number*) (log *base*)) 
+*≡* (/ (log <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm>) (log *base*)) 
 
 
 
@@ -137,7 +137,7 @@ The implementation.
 
 
 
-**exp**, **expt**, Section 12.1.3.3 (Rule of Float Substitutability) 
+<DictionaryLink styled={true} term={"exp"}><b>exp</b></DictionaryLink>, <DictionaryLink styled={true} term={"expt"}><b>expt</b></DictionaryLink>, Section 12.1.3.3 (Rule of Float Substitutability) 
 
 
 

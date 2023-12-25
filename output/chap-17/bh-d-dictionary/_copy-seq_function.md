@@ -1,4 +1,4 @@
-**copy-seq** *Function* 
+**copy-seq** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**copy-seq** *sequence → copied-sequence* 
+<DictionaryLink styled={true} term={"copy-seq"}><b>copy-seq</b></DictionaryLink> *sequence → copied-sequence* 
 
 
 
@@ -26,11 +26,11 @@
 
 
 
-Creates a copy of *sequence*. The *elements* of the new *sequence* are the *same* as the corresponding *elements* of the given *sequence*. 
+Creates a copy of *sequence*. The <GlossaryTerm styled={true} term={"element"}><i>elements</i></GlossaryTerm> of the new *sequence* are the <GlossaryTerm styled={true} term={"same"}><i>same</i></GlossaryTerm> as the corresponding <GlossaryTerm styled={true} term={"element"}><i>elements</i></GlossaryTerm> of the given *sequence*. 
 
 
 
-If *sequence* is a *vector* , the result is a *fresh simple array* of *rank* one that has the same *actual array element type* as *sequence*. If *sequence* is a *list*, the result is a *fresh list*. 
+If *sequence* is a <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm> , the result is a *fresh simple array* of <GlossaryTerm styled={true} term={"rank"}><i>rank</i></GlossaryTerm> one that has the same *actual array element type* as *sequence*. If *sequence* is a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>, the result is a *fresh list*. 
 
 
 
@@ -46,7 +46,7 @@ If *sequence* is a *vector* , the result is a *fresh simple array* of *rank* one
 
 
 
-Should be prepared to signal an error of *type* **type-error** if *sequence* is not a *proper sequence*. 
+Should be prepared to signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if *sequence* is not a *proper sequence*. 
 
 
 
@@ -54,7 +54,7 @@ Should be prepared to signal an error of *type* **type-error** if *sequence* is 
 
 
 
-**copy-list** 
+<DictionaryLink styled={true} term={"copy-list"}><b>copy-list</b></DictionaryLink> 
 
 
 

@@ -6,7 +6,7 @@
 
 
 
-**float**, **real**, **number**, **t** 
+<DictionaryLink styled={true} term={"float"}><b>float</b></DictionaryLink>, <DictionaryLink styled={true} term={"real"}><b>real</b></DictionaryLink>, <DictionaryLink styled={true} term={"number"}><b>number</b></DictionaryLink>, <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink> 
 
 
 
@@ -18,11 +18,11 @@ A <i>float</i> is a mathematical rational (but <i>not</i> a Common Lisp <i>ratio
 
 
 
-range of *e* depends on the implementation and on the type of *float* within that implementation. In addition, there is a floating-point zero; depending on the implementation, there can also be a “minus zero”. If there is no minus zero, then 0▷0 and *−*0▷0 are both interpreted as simply a floating-point zero. (= 0.0 -0.0) is always true. If there is a minus zero, (eql -0.0 0.0) is *false*, otherwise it is *true*. 
+range of *e* depends on the implementation and on the type of <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm> within that implementation. In addition, there is a floating-point zero; depending on the implementation, there can also be a “minus zero”. If there is no minus zero, then 0▷0 and *−*0▷0 are both interpreted as simply a floating-point zero. (= 0.0 -0.0) is always true. If there is a minus zero, (eql -0.0 0.0) is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>, otherwise it is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>. 
 
 
 
-The *types* **short-float**, **single-float**, **double-float**, and **long-float** are *subtypes* of *type* **float**. Any two of them must be either *disjoint types* or the *same type*; if the *same type*, then any other *types* between them in the above ordering must also be the *same type*. For example, if the *type* **single-float** and the *type* **long-float** are the *same type*, then the *type* **double-float** must be the *same type* also. 
+The <GlossaryTerm styled={true} term={"type"}><i>types</i></GlossaryTerm> <DictionaryLink styled={true} term={"short-float"}><b>short-float</b></DictionaryLink>, <DictionaryLink styled={true} term={"single-float"}><b>single-float</b></DictionaryLink>, <DictionaryLink styled={true} term={"double-float"}><b>double-float</b></DictionaryLink>, and <DictionaryLink styled={true} term={"long-float"}><b>long-float</b></DictionaryLink> are <GlossaryTerm styled={true} term={"subtype"}><i>subtypes</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"float"}><b>float</b></DictionaryLink>. Any two of them must be either *disjoint types* or the *same type*; if the *same type*, then any other <GlossaryTerm styled={true} term={"type"}><i>types</i></GlossaryTerm> between them in the above ordering must also be the *same type*. For example, if the <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"single-float"}><b>single-float</b></DictionaryLink> and the <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"long-float"}><b>long-float</b></DictionaryLink> are the *same type*, then the <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"double-float"}><b>double-float</b></DictionaryLink> must be the *same type* also. 
 
 
 
@@ -46,7 +46,7 @@ Abbreviating.
 
 
 
-*lower-limit*, *upper-limit*—*interval designators* for *type* **float**. The defaults for each of *lower-limit* and *upper-limit* is the *symbol* **\***. 
+*lower-limit*, *upper-limit*—*interval designators* for <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"float"}><b>float</b></DictionaryLink>. The defaults for each of *lower-limit* and *upper-limit* is the <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> **\***. 
 
 
 
@@ -54,7 +54,7 @@ Abbreviating.
 
 
 
-This denotes the *floats* on the interval described by *lower-limit* and *upper-limit*. 
+This denotes the <GlossaryTerm styled={true} term={"float"}><i>floats</i></GlossaryTerm> on the interval described by *lower-limit* and *upper-limit*. 
 
 
 
@@ -82,7 +82,7 @@ Figure 2–9, Section 2.3.2 (Constructing Numbers from Tokens), Section 22.1.3.1
 
 
 
-Note that all mathematical integers are representable not only as Common Lisp *reals*, but also as *complex floats*. For example, possible representations of the mathematical number 1 include the *integer* 1, the *float* 1.0, or the *complex* #C(1.0 0.0). 
+Note that all mathematical integers are representable not only as Common Lisp *reals*, but also as *complex floats*. For example, possible representations of the mathematical number 1 include the *integer* 1, the <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm> 1.0, or the <GlossaryTerm styled={true} term={"complex"}><i>complex</i></GlossaryTerm> #C(1.0 0.0). 
 
 
 

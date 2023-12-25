@@ -1,4 +1,4 @@
-**delete-package** *Function* 
+**delete-package** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**delete-package** *package → generalized-boolean* 
+<DictionaryLink styled={true} term={"delete-package"}><b>delete-package</b></DictionaryLink> *package → generalized-boolean* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*package*—a *package designator* . 
+<GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>—a *package designator* . 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-**delete-package** deletes *package* from all package system data structures. If the operation is successful, **delete-package** returns true, otherwise **nil**. The effect of **delete-package** is that the name and nicknames of *package* cease to be recognized package names. The package *object* is still a *package* (*i.e.*, **packagep** is *true* of it) but **package-name** returns **nil**. The consequences of deleting the COMMON-LISP *package* or the KEYWORD *package* are undefined. The consequences of invoking any other package operation on *package* once it has been deleted are unspecified. In particular, the consequences of invoking **find-symbol**, **intern** and other functions that look for a symbol name in 
+<DictionaryLink styled={true} term={"delete-package"}><b>delete-package</b></DictionaryLink> deletes <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> from all package system data structures. If the operation is successful, <DictionaryLink styled={true} term={"delete-package"}><b>delete-package</b></DictionaryLink> returns true, otherwise <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. The effect of <DictionaryLink styled={true} term={"delete-package"}><b>delete-package</b></DictionaryLink> is that the name and nicknames of <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> cease to be recognized package names. The package <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is still a <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> (*i.e.*, <DictionaryLink styled={true} term={"packagep"}><b>packagep</b></DictionaryLink> is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> of it) but <DictionaryLink styled={true} term={"package-name"}><b>package-name</b></DictionaryLink> returns <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. The consequences of deleting the COMMON-LISP <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> or the KEYWORD <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> are undefined. The consequences of invoking any other package operation on <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> once it has been deleted are unspecified. In particular, the consequences of invoking <DictionaryLink styled={true} term={"find-symbol"}><b>find-symbol</b></DictionaryLink>, <DictionaryLink styled={true} term={"intern"}><b>intern</b></DictionaryLink> and other functions that look for a symbol name in 
 
 
 
@@ -42,19 +42,19 @@
 
 
 
-**delete-package** 
+<DictionaryLink styled={true} term={"delete-package"}><b>delete-package</b></DictionaryLink> 
 
 
 
-a *package* are unspecified if they are called with **\*package\*** bound to the deleted *package* or with the deleted *package* as an argument. 
+a <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> are unspecified if they are called with <DictionaryLink styled={true} term={"package"}><b>\*package\*</b></DictionaryLink> bound to the deleted <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> or with the deleted <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> as an argument. 
 
 
 
-If *package* is a *package object* that has already been deleted, **delete-package** immediately returns **nil**. 
+If <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> is a *package object* that has already been deleted, <DictionaryLink styled={true} term={"delete-package"}><b>delete-package</b></DictionaryLink> immediately returns <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
-After this operation completes, the *home package* of any *symbol* whose *home package* had previously been *package* is *implementation-dependent*. Except for this, *symbols accessible* in *package* are not modified in any other way; *symbols* whose *home package* is not *package* remain unchanged. 
+After this operation completes, the *home package* of any <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> whose *home package* had previously been <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> is <GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm>. Except for this, *symbols accessible* in <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> are not modified in any other way; <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> whose *home package* is not <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> remain unchanged. 
 
 
 
@@ -124,15 +124,11 @@ After this operation completes, the *home package* of any *symbol* whose *home p
 
 
 
-If the *package designator* is a *name* that does not currently name a *package*, a *correctable* error of *type* **package-error** is signaled. If correction is attempted, no deletion action is attempted; instead, **delete-package** immediately returns **nil**. 
+If the *package designator* is a <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> that does not currently name a <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>, a <GlossaryTerm styled={true} term={"correctable"}><i>correctable</i></GlossaryTerm> error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"package-error"}><b>package-error</b></DictionaryLink> is signaled. If correction is attempted, no deletion action is attempted; instead, <DictionaryLink styled={true} term={"delete-package"}><b>delete-package</b></DictionaryLink> immediately returns <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
-If *package* is used by other *packages*, a *correctable* error of *type* **package-error** is signaled. 
-
-
-
- 
+If <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> is used by other <GlossaryTerm styled={true} term={"package"}><i>packages</i></GlossaryTerm>, a <GlossaryTerm styled={true} term={"correctable"}><i>correctable</i></GlossaryTerm> error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"package-error"}><b>package-error</b></DictionaryLink> is signaled. 
 
 
 
@@ -140,7 +136,11 @@ If *package* is used by other *packages*, a *correctable* error of *type* **pack
 
 
 
-If correction is attempted, **unuse-package** is effectively called to remove any dependencies, causing *package*’s *external symbols* to cease being *accessible* to those *packages* that use *package*. **delete-package** then deletes *package* just as it would have had there been no *packages* that used it. 
+ 
+
+
+
+If correction is attempted, <DictionaryLink styled={true} term={"unuse-package"}><b>unuse-package</b></DictionaryLink> is effectively called to remove any dependencies, causing <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>’s *external symbols* to cease being <GlossaryTerm styled={true} term={"accessible"}><i>accessible</i></GlossaryTerm> to those <GlossaryTerm styled={true} term={"package"}><i>packages</i></GlossaryTerm> that use <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>. <DictionaryLink styled={true} term={"delete-package"}><b>delete-package</b></DictionaryLink> then deletes <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> just as it would have had there been no <GlossaryTerm styled={true} term={"package"}><i>packages</i></GlossaryTerm> that used it. 
 
 
 
@@ -148,7 +148,7 @@ If correction is attempted, **unuse-package** is effectively called to remove an
 
 
 
-**unuse-package** 
+<DictionaryLink styled={true} term={"unuse-package"}><b>unuse-package</b></DictionaryLink> 
 
 
 

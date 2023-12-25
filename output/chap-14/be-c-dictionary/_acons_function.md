@@ -1,4 +1,4 @@
-**acons** *Function* 
+**acons** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**acons** *key datum alist → new-alist* 
+<DictionaryLink styled={true} term={"acons"}><b>acons</b></DictionaryLink> *key datum alist → new-alist* 
 
 
 
@@ -14,15 +14,15 @@
 
 
 
-*key*—an *object*. 
+<GlossaryTerm styled={true} term={"key"}><i>key</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
-*datum*—an *object*. 
+*datum*—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
-*alist*—an *association list*. 
+<GlossaryTerm styled={true} term={"alist"}><i>alist</i></GlossaryTerm>—an *association list*. 
 
 
 
@@ -34,7 +34,7 @@
 
 
 
-Creates a *fresh cons*, the *cdr* of which is *alist* and the *car* of which is another *fresh cons*, the *car* of which is *key* and the *cdr* of which is *datum*. 
+Creates a *fresh cons*, the <GlossaryTerm styled={true} term={"cdr"}><i>cdr</i></GlossaryTerm> of which is <GlossaryTerm styled={true} term={"alist"}><i>alist</i></GlossaryTerm> and the <GlossaryTerm styled={true} term={"car"}><i>car</i></GlossaryTerm> of which is another *fresh cons*, the <GlossaryTerm styled={true} term={"car"}><i>car</i></GlossaryTerm> of which is <GlossaryTerm styled={true} term={"key"}><i>key</i></GlossaryTerm> and the <GlossaryTerm styled={true} term={"cdr"}><i>cdr</i></GlossaryTerm> of which is *datum*. 
 
 
 
@@ -53,7 +53,7 @@ alist *→* NIL
 
 
 
-**assoc**, **pairlis** 
+<DictionaryLink styled={true} term={"assoc"}><b>assoc</b></DictionaryLink>, <DictionaryLink styled={true} term={"pairlis"}><b>pairlis</b></DictionaryLink> 
 
 
 
@@ -61,7 +61,7 @@ alist *→* NIL
 
 
 
-(acons *key datum alist*) *≡* (cons (cons *key datum*) *alist*) 
+(acons *key datum alist<GlossaryTerm styled={true} term={"t"}><i>) </i></GlossaryTerm>≡* (cons (cons *key datum*) *alist*) 
 
 
 

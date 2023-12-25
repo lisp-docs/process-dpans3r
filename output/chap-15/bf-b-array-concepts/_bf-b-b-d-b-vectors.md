@@ -2,7 +2,7 @@
 
 
 
-An *array* of *rank* one (*i.e.*, a one-dimensional *array*) is called a *vector*. 
+An <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"rank"}><i>rank</i></GlossaryTerm> one (*i.e.*, a one-dimensional <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm>) is called a <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm>. 
 
 
 

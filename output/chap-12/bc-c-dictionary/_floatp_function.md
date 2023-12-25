@@ -1,4 +1,4 @@
-**floatp** *Function* 
+**floatp** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**floatp** *object* 
+<DictionaryLink styled={true} term={"floatp"}><b>floatp</b></DictionaryLink> <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> 
 
 
 
@@ -18,7 +18,7 @@ generalized-boolean
 
 
 
-*object*—an *object*. 
+<GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -30,7 +30,7 @@ generalized-boolean
 
 
 
-Returns *true* if *object* is of *type* **float**; otherwise, returns *false*. 
+Returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"float"}><b>float</b></DictionaryLink>; otherwise, returns <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
@@ -47,7 +47,7 @@ Returns *true* if *object* is of *type* **float**; otherwise, returns *false*.
 
 
 
-(floatp *object*) *⌘* (typep *object* ’float) 
+(floatp <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>) *⌘* (typep <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> ’float) 
 
 
 
@@ -71,7 +71,7 @@ Returns *true* if *object* is of *type* **float**; otherwise, returns *false*.
 
 
 
-*implementation-dependent*. 
+<GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm>. 
 
 
 
@@ -79,15 +79,15 @@ Returns *true* if *object* is of *type* **float**; otherwise, returns *false*.
 
 
 
-These *constant variables* provide a way for programs to examine the *implementation-defined* limits for the various float formats. 
+These *constant variables* provide a way for programs to examine the <GlossaryTerm styled={true} term={"implementation-defined"}><i>implementation-defined</i></GlossaryTerm> limits for the various float formats. 
 
 
 
-Of these *variables*, each which has “-normalized” in its *name* must have a *value* which is a *normalized float*, and each which does not have “-normalized” in its name may have a *value* which is either a *normalized float* or a *denormalized float*, as appropriate. 
+Of these <GlossaryTerm styled={true} term={"variable"}><i>variables</i></GlossaryTerm>, each which has “-normalized” in its <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> must have a <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> which is a *normalized float*, and each which does not have “-normalized” in its name may have a <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> which is either a *normalized float* or a *denormalized float*, as appropriate. 
 
 
 
-Of these *variables*, each which has “short-float” in its name must have a *value* which is a *short float*, each which has “single-float” in its name must have a *value* which is a *single float*, each which has “double-float” in its name must have a *value* which is a *double float*, and each which has “long-float” in its name must have a *value* which is a *long float*. 
+Of these <GlossaryTerm styled={true} term={"variable"}><i>variables</i></GlossaryTerm>, each which has “short-float” in its name must have a <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> which is a *short float*, each which has “single-float” in its name must have a <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> which is a *single float*, each which has “double-float” in its name must have a <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> which is a *double float*, and each which has “long-float” in its name must have a <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> which is a *long float*. 
 
 
 
@@ -99,7 +99,7 @@ Of these *variables*, each which has “short-float” in its name must have a *
 
 
 
-Each of these *constant variables* has as its *value* the positive *float* of the largest magnitude 
+Each of these *constant variables* has as its <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> the positive <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm> of the largest magnitude 
 
 
 
@@ -131,7 +131,7 @@ Each of these *constant variables* has as its *value* the positive *float* of th
 
 
 
-Each of these *constant variables* has as its *value* the smallest positive (nonzero) *float* for the float format implied by its name. 
+Each of these *constant variables* has as its <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> the smallest positive (nonzero) <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm> for the float format implied by its name. 
 
 
 
@@ -151,7 +151,7 @@ Each of these *constant variables* has as its *value* the smallest positive (non
 
 
 
-Each of these *constant variables* has as its *value* the negative (nonzero) *float* of the smallest magnitude for the float format implied by its name. (If an implementation supports minus zero as a *di↵erent object* from positive zero, this value must not be minus zero.) 
+Each of these *constant variables* has as its <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> the negative (nonzero) <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm> of the smallest magnitude for the float format implied by its name. (If an implementation supports minus zero as a *di↵erent object* from positive zero, this value must not be minus zero.) 
 
 
 
@@ -163,7 +163,7 @@ Each of these *constant variables* has as its *value* the negative (nonzero) *fl
 
 
 
-Each of these *constant variables* has as its *value* the negative *float* of the largest magnitude (closest in value to, but not equal to, negative infinity) for the float format implied by its name. 
+Each of these *constant variables* has as its <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> the negative <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm> of the largest magnitude (closest in value to, but not equal to, negative infinity) for the float format implied by its name. 
 
 
 

@@ -6,7 +6,7 @@
 
 
 
-**make-load-form** *object* &amp;optional *environment → creation-form*[*, initialization-form*] 
+<DictionaryLink styled={true} term={"make-load-form"}><b>make-load-form</b></DictionaryLink> <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> &amp;optional *environment → creation-form*[*, initialization-form*] 
 
 
 
@@ -14,19 +14,19 @@
 
 
 
-**make-load-form** (*object* **standard-object**) &amp;optional *environment* 
+<DictionaryLink styled={true} term={"make-load-form"}><b>make-load-form</b></DictionaryLink> (<GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> <DictionaryLink styled={true} term={"standard-object"}><b>standard-object</b></DictionaryLink>) &amp;optional <GlossaryTerm styled={true} term={"environment"}><i>environment</i></GlossaryTerm> 
 
 
 
-**make-load-form** (*object* **structure-object**) &amp;optional *environment* 
+<DictionaryLink styled={true} term={"make-load-form"}><b>make-load-form</b></DictionaryLink> (<GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> <DictionaryLink styled={true} term={"structure-object"}><b>structure-object</b></DictionaryLink>) &amp;optional <GlossaryTerm styled={true} term={"environment"}><i>environment</i></GlossaryTerm> 
 
 
 
-**make-load-form** (*object* **condition**) &amp;optional *environment* 
+<DictionaryLink styled={true} term={"make-load-form"}><b>make-load-form</b></DictionaryLink> (<GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> <DictionaryLink styled={true} term={"condition"}><b>condition</b></DictionaryLink>) &amp;optional <GlossaryTerm styled={true} term={"environment"}><i>environment</i></GlossaryTerm> 
 
 
 
-**make-load-form** (*object* **class**) &amp;optional *environment* 
+<DictionaryLink styled={true} term={"make-load-form"}><b>make-load-form</b></DictionaryLink> (<GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> <DictionaryLink styled={true} term={"class"}><b>class</b></DictionaryLink>) &amp;optional <GlossaryTerm styled={true} term={"environment"}><i>environment</i></GlossaryTerm> 
 
 
 
@@ -34,19 +34,19 @@
 
 
 
-*object*—an *object*. 
+<GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
-*environment*—an *environment object*. 
+<GlossaryTerm styled={true} term={"environment"}><i>environment</i></GlossaryTerm>—an *environment object*. 
 
 
 
-*creation-form*—a *form*. 
+*creation-form*—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>. 
 
 
 
-*initialization-form*—a *form*. 
+*initialization-form*—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>. 
 
 
 
@@ -54,27 +54,23 @@
 
 
 
-The *generic function* **make-load-form** creates and returns one or two *forms*, a *creation-form* and an *initialization-form*, that enable **load** to construct an *object* equivalent to *object*. *Environment* is an *environment object* corresponding to the *lexical environment* in which the *forms* will be processed. 
+The *generic function* <DictionaryLink styled={true} term={"make-load-form"}><b>make-load-form</b></DictionaryLink> creates and returns one or two <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm>, a *creation-form* and an *initialization-form*, that enable <DictionaryLink styled={true} term={"load"}><b>load</b></DictionaryLink> to construct an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> equivalent to <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. <GlossaryTerm styled={true} term={"environment"}><i>Environment</i></GlossaryTerm> is an *environment object* corresponding to the *lexical environment* in which the <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm> will be processed. 
 
 
 
-The *file compiler* calls **make-load-form** to process certain *classes* of *literal objects*; see Section 3.2.4.4 (Additional Constraints on Externalizable Objects). 
+The *file compiler* calls <DictionaryLink styled={true} term={"make-load-form"}><b>make-load-form</b></DictionaryLink> to process certain *classes* of *literal objects*; see Section 3.2.4.4 (Additional Constraints on Externalizable Objects). 
 
 
 
-*Conforming programs* may call **make-load-form** directly, providing *object* is a *generalized instance* of **standard-object**, **structure-object**, or **condition**. 
+*Conforming programs* may call <DictionaryLink styled={true} term={"make-load-form"}><b>make-load-form</b></DictionaryLink> directly, providing <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is a *generalized instance* of <DictionaryLink styled={true} term={"standard-object"}><b>standard-object</b></DictionaryLink>, <DictionaryLink styled={true} term={"structure-object"}><b>structure-object</b></DictionaryLink>, or <DictionaryLink styled={true} term={"condition"}><b>condition</b></DictionaryLink>. 
 
 
 
-The creation form is a *form* that, when evaluated at **load** time, should return an *object* that is equivalent to *object*. The exact meaning of equivalent depends on the *type* of *object* and is up to the programmer who defines a *method* for **make-load-form**; see Section 3.2.4 (Literal Objects in Compiled Files). 
-
-
+The creation form is a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> that, when evaluated at <DictionaryLink styled={true} term={"load"}><b>load</b></DictionaryLink> time, should return an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> that is equivalent to <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. The exact meaning of equivalent depends on the <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> and is up to the programmer who defines a <GlossaryTerm styled={true} term={"method"}><i>method</i></GlossaryTerm> for <DictionaryLink styled={true} term={"make-load-form"}><b>make-load-form</b></DictionaryLink>; see Section 3.2.4 (Literal Objects in Compiled Files). 
 
 
 
 
-
- 
 
 
 
@@ -82,11 +78,15 @@ The creation form is a *form* that, when evaluated at **load** time, should retu
 
 
 
-**make-load-form** 
+ 
 
 
 
-The initialization form is a *form* that, when evaluated at **load** time, should perform further initialization of the *object*. The value returned by the initialization form is ignored. If **make-load-form** returns only one value, the initialization form is **nil**, which has no effect. If *object* appears as a constant in the initialization form, at **load** time it will be replaced by the equivalent *object* constructed by the creation form; this is how the further initialization gains access to the *object*. 
+<DictionaryLink styled={true} term={"make-load-form"}><b>make-load-form</b></DictionaryLink> 
+
+
+
+The initialization form is a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> that, when evaluated at <DictionaryLink styled={true} term={"load"}><b>load</b></DictionaryLink> time, should perform further initialization of the <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. The value returned by the initialization form is ignored. If <DictionaryLink styled={true} term={"make-load-form"}><b>make-load-form</b></DictionaryLink> returns only one value, the initialization form is <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>, which has no effect. If <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> appears as a constant in the initialization form, at <DictionaryLink styled={true} term={"load"}><b>load</b></DictionaryLink> time it will be replaced by the equivalent <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> constructed by the creation form; this is how the further initialization gains access to the <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -94,35 +94,31 @@ Both the *creation-form* and the *initialization-form* may contain references to
 
 
 
-The creation form for an *object* is always *evaluated* before the initialization form for that *object*. When either the creation form or the initialization form references other *objects* that have not been referenced earlier in the *file* being *compiled*, the *compiler* ensures that all of the referenced *objects* have been created before *evaluating* the referencing *form*. When the referenced *object* is of a *type* which the *file compiler* processes using **make-load-form**, this involves *evaluating* the creation form returned for it. (This is the reason for the prohibition against circular references among creation forms). 
+The creation form for an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is always *evaluated* before the initialization form for that <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. When either the creation form or the initialization form references other <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm> that have not been referenced earlier in the <GlossaryTerm styled={true} term={"file"}><i>file</i></GlossaryTerm> being *compiled*, the <GlossaryTerm styled={true} term={"compiler"}><i>compiler</i></GlossaryTerm> ensures that all of the referenced <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm> have been created before *evaluating* the referencing <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>. When the referenced <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is of a <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> which the *file compiler* processes using <DictionaryLink styled={true} term={"make-load-form"}><b>make-load-form</b></DictionaryLink>, this involves *evaluating* the creation form returned for it. (This is the reason for the prohibition against circular references among creation forms). 
 
 
 
-Each initialization form is *evaluated* as soon as possible after its associated creation form, as determined by data flow. If the initialization form for an *object* does not reference any other *objects* not referenced earlier in the *file* and processed by the *file compiler* using **make-load-form**, the initialization form is evaluated immediately after the creation form. If a creation or initialization form *F* does contain references to such *objects*, the creation forms for those other objects are evaluated before *F*, and the initialization forms for those other *objects* are also evaluated before *F* whenever they do not depend on the *object* created or initialized by *F*. Where these rules do not uniquely determine an order of *evaluation* between two creation/initialization forms, the order of *evaluation* is unspecified. 
+Each initialization form is *evaluated* as soon as possible after its associated creation form, as determined by data flow. If the initialization form for an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> does not reference any other <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm> not referenced earlier in the <GlossaryTerm styled={true} term={"file"}><i>file</i></GlossaryTerm> and processed by the *file compiler* using <DictionaryLink styled={true} term={"make-load-form"}><b>make-load-form</b></DictionaryLink>, the initialization form is evaluated immediately after the creation form. If a creation or initialization form *F* does contain references to such <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm>, the creation forms for those other objects are evaluated before *F*, and the initialization forms for those other <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm> are also evaluated before *F* whenever they do not depend on the <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> created or initialized by *F*. Where these rules do not uniquely determine an order of <GlossaryTerm styled={true} term={"evaluation"}><i>evaluation</i></GlossaryTerm> between two creation/initialization forms, the order of <GlossaryTerm styled={true} term={"evaluation"}><i>evaluation</i></GlossaryTerm> is unspecified. 
 
 
 
-While these creation and initialization forms are being evaluated, the *objects* are possibly in an uninitialized state, analogous to the state of an *object* between the time it has been created by **allocate-instance** and it has been processed fully by **initialize-instance**. Programmers writing 
+While these creation and initialization forms are being evaluated, the <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm> are possibly in an uninitialized state, analogous to the state of an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> between the time it has been created by <DictionaryLink styled={true} term={"allocate-instance"}><b>allocate-instance</b></DictionaryLink> and it has been processed fully by <DictionaryLink styled={true} term={"initialize-instance"}><b>initialize-instance</b></DictionaryLink>. Programmers writing 
 
 
 
-*methods* for **make-load-form** must take care in manipulating *objects* not to depend on *slots* that have not yet been initialized. 
+<GlossaryTerm styled={true} term={"method"}><i>methods</i></GlossaryTerm> for <DictionaryLink styled={true} term={"make-load-form"}><b>make-load-form</b></DictionaryLink> must take care in manipulating <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm> not to depend on <GlossaryTerm styled={true} term={"slot"}><i>slots</i></GlossaryTerm> that have not yet been initialized. 
 
 
 
-It is *implementation-dependent* whether **load** calls **eval** on the *forms* or does some other operation that has an equivalent effect. For example, the *forms* might be translated into different but equivalent *forms* and then evaluated, they might be compiled and the resulting functions called by **load**, or they might be interpreted by a special-purpose function different from **eval**. All that is required is that the effect be equivalent to evaluating the *forms*. 
+It is <GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm> whether <DictionaryLink styled={true} term={"load"}><b>load</b></DictionaryLink> calls <DictionaryLink styled={true} term={"eval"}><b>eval</b></DictionaryLink> on the <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm> or does some other operation that has an equivalent effect. For example, the <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm> might be translated into different but equivalent <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm> and then evaluated, they might be compiled and the resulting functions called by <DictionaryLink styled={true} term={"load"}><b>load</b></DictionaryLink>, or they might be interpreted by a special-purpose function different from <DictionaryLink styled={true} term={"eval"}><b>eval</b></DictionaryLink>. All that is required is that the effect be equivalent to evaluating the <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm>. 
 
 
 
-The *method specialized* on **class** returns a creation *form* using the *name* of the *class* if the *class* has a *proper name* in *environment*, signaling an error of *type* **error** if it does not have a *proper name*. *Evaluation* of the creation *form* uses the *name* to find the *class* with that *name*, as if by 
-
-
+The *method specialized* on <DictionaryLink styled={true} term={"class"}><b>class</b></DictionaryLink> returns a creation <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> using the <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> of the <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm> if the <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm> has a *proper name* in <GlossaryTerm styled={true} term={"environment"}><i>environment</i></GlossaryTerm>, signaling an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"error"}><b>error</b></DictionaryLink> if it does not have a *proper name*. *Evaluation* of the creation <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> uses the <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> to find the <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm> with that <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm>, as if by 
 
 
 
 
-
- 
 
 
 
@@ -130,15 +126,19 @@ The *method specialized* on **class** returns a creation *form* using the *name*
 
 
 
-**make-load-form** 
+ 
 
 
 
-*calling* **find-class**. If a *class* with that *name* has not been defined, then a *class* may be computed in an *implementation-defined* manner. If a *class* cannot be returned as the result of *evaluating* the creation *form*, then an error of *type* **error** is signaled. 
+<DictionaryLink styled={true} term={"make-load-form"}><b>make-load-form</b></DictionaryLink> 
 
 
 
-Both *conforming implementations* and *conforming programs* may further *specialize* **make-load-form**. 
+*calling* <DictionaryLink styled={true} term={"find-class"}><b>find-class</b></DictionaryLink>. If a <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm> with that <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> has not been defined, then a <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm> may be computed in an <GlossaryTerm styled={true} term={"implementation-defined"}><i>implementation-defined</i></GlossaryTerm> manner. If a <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm> cannot be returned as the result of *evaluating* the creation <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>, then an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"error"}><b>error</b></DictionaryLink> is signaled. 
+
+
+
+Both *conforming implementations* and *conforming programs* may further <GlossaryTerm styled={true} term={"specialize"}><i>specialize</i></GlossaryTerm> <DictionaryLink styled={true} term={"make-load-form"}><b>make-load-form</b></DictionaryLink>. 
 
 
 
@@ -216,11 +216,11 @@ In the following example, the data structure to be dumped has no special propert
 
 
 
-The *methods specialized* on **standard-object**, **structure-object**, and **condition** all signal an error of *type* **error**. 
+The *methods specialized* on <DictionaryLink styled={true} term={"standard-object"}><b>standard-object</b></DictionaryLink>, <DictionaryLink styled={true} term={"structure-object"}><b>structure-object</b></DictionaryLink>, and <DictionaryLink styled={true} term={"condition"}><b>condition</b></DictionaryLink> all signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"error"}><b>error</b></DictionaryLink>. 
 
 
 
-It is *implementation-dependent* whether *calling* **make-load-form** on a *generalized instance* of a *system class* signals an error or returns creation and initialization *forms*. 
+It is <GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm> whether *calling* <DictionaryLink styled={true} term={"make-load-form"}><b>make-load-form</b></DictionaryLink> on a *generalized instance* of a *system class* signals an error or returns creation and initialization <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm>. 
 
 
 
@@ -228,7 +228,7 @@ It is *implementation-dependent* whether *calling* **make-load-form** on a *gene
 
 
 
-**compile-file**, **make-load-form-saving-slots**, Section 3.2.4.4 (Additional Constraints on Externaliz able Objects) Section 3.1 (Evaluation), Section 3.2 (Compilation) 
+<DictionaryLink styled={true} term={"compile-file"}><b>compile-file</b></DictionaryLink>, <DictionaryLink styled={true} term={"make-load-form-saving-slots"}><b>make-load-form-saving-slots</b></DictionaryLink>, Section 3.2.4.4 (Additional Constraints on Externaliz able Objects) Section 3.1 (Evaluation), Section 3.2 (Compilation) 
 
 
 
@@ -236,11 +236,11 @@ It is *implementation-dependent* whether *calling* **make-load-form** on a *gene
 
 
 
-The *file compiler* calls **make-load-form** in specific circumstances detailed in Section 3.2.4.4 (Additional Constraints on Externalizable Objects). 
+The *file compiler* calls <DictionaryLink styled={true} term={"make-load-form"}><b>make-load-form</b></DictionaryLink> in specific circumstances detailed in Section 3.2.4.4 (Additional Constraints on Externalizable Objects). 
 
 
 
-Some *implementations* may provide facilities for defining new *subclasses* of *classes* which are specified as *system classes*. (Some likely candidates include **generic-function**, **method**, and **stream**). Such *implementations* should document how the *file compiler* processes *instances* of such *classes* when encountered as *literal objects*, and should document any relevant *methods* for **make-load-form**. 
+Some <GlossaryTerm styled={true} term={"implementation"}><i>implementations</i></GlossaryTerm> may provide facilities for defining new *subclasses* of *classes* which are specified as *system classes*. (Some likely candidates include <DictionaryLink styled={true} term={"generic-function"}><b>generic-function</b></DictionaryLink>, <DictionaryLink styled={true} term={"method"}><b>method</b></DictionaryLink>, and <DictionaryLink styled={true} term={"stream"}><b>stream</b></DictionaryLink>). Such <GlossaryTerm styled={true} term={"implementation"}><i>implementations</i></GlossaryTerm> should document how the *file compiler* processes <GlossaryTerm styled={true} term={"instance"}><i>instances</i></GlossaryTerm> of such *classes* when encountered as *literal objects*, and should document any relevant <GlossaryTerm styled={true} term={"method"}><i>methods</i></GlossaryTerm> for <DictionaryLink styled={true} term={"make-load-form"}><b>make-load-form</b></DictionaryLink>. 
 
 
 

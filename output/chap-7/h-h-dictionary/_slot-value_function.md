@@ -1,4 +1,4 @@
-**slot-value** *Function* 
+**slot-value** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**slot-value** *object slot-name → value* 
+<DictionaryLink styled={true} term={"slot-value"}><b>slot-value</b></DictionaryLink> *object slot-name → value* 
 
 
 
@@ -14,15 +14,15 @@
 
 
 
-*object*—an *object*. 
+<GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
-*name*—a *symbol*. 
+<GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>. 
 
 
 
-*value*—an *object*. 
+<GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -30,11 +30,11 @@
 
 
 
-The *function* **slot-value** returns the *value* of the *slot* named *slot-name* in the *object*. If there is no *slot* named *slot-name*, **slot-missing** is called. If the *slot* is unbound, **slot-unbound** is called. 
+The <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> <DictionaryLink styled={true} term={"slot-value"}><b>slot-value</b></DictionaryLink> returns the <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of the <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm> named *slot-name* in the <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. If there is no <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm> named *slot-name*, <DictionaryLink styled={true} term={"slot-missing"}><b>slot-missing</b></DictionaryLink> is called. If the <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm> is unbound, <DictionaryLink styled={true} term={"slot-unbound"}><b>slot-unbound</b></DictionaryLink> is called. 
 
 
 
-The macro **setf** can be used with **slot-value** to change the value of a *slot*. 
+The macro <DictionaryLink styled={true} term={"setf"}><b>setf</b></DictionaryLink> can be used with <DictionaryLink styled={true} term={"slot-value"}><b>slot-value</b></DictionaryLink> to change the value of a <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm>. 
 
 
 
@@ -66,15 +66,15 @@ The macro **setf** can be used with **slot-value** to change the value of a *slo
 
 
 
-If an attempt is made to read a *slot* and no *slot* of the name *slot-name* exists in the *object*, **slot-missing** is called as follows: 
+If an attempt is made to read a <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm> and no <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm> of the name *slot-name* exists in the <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>, <DictionaryLink styled={true} term={"slot-missing"}><b>slot-missing</b></DictionaryLink> is called as follows: 
 
 
 
-(slot-missing (class-of *instance*) 
+(slot-missing (class-of <GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm>) 
 
 
 
-*instance* 
+<GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm> 
 
 
 
@@ -86,19 +86,19 @@ If an attempt is made to read a *slot* and no *slot* of the name *slot-name* exi
 
 
 
-(If **slot-missing** is invoked, its *primary value* is returned by **slot-value**.) 
+(If <DictionaryLink styled={true} term={"slot-missing"}><b>slot-missing</b></DictionaryLink> is invoked, its *primary value* is returned by <DictionaryLink styled={true} term={"slot-value"}><b>slot-value</b></DictionaryLink>.) 
 
 
 
-If an attempt is made to write a *slot* and no *slot* of the name *slot-name* exists in the *object*, **slot-missing** is called as follows: 
+If an attempt is made to write a <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm> and no <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm> of the name *slot-name* exists in the <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>, <DictionaryLink styled={true} term={"slot-missing"}><b>slot-missing</b></DictionaryLink> is called as follows: 
 
 
 
-(slot-missing (class-of *instance*) 
+(slot-missing (class-of <GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm>) 
 
 
 
-*instance* 
+<GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm> 
 
 
 
@@ -114,11 +114,11 @@ If an attempt is made to write a *slot* and no *slot* of the name *slot-name* ex
 
 
 
-(If **slot-missing** returns in this case, any *values* are ignored.) 
+(If <DictionaryLink styled={true} term={"slot-missing"}><b>slot-missing</b></DictionaryLink> returns in this case, any <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> are ignored.) 
 
 
 
-The specific behavior depends on *object*’s *metaclass*. An error is never signaled if *object* has *metaclass* **standard-class**. An error is always signaled if *object* has *metaclass* **built-in-class**. The consequences are unspecified if *object* has any other *metaclass*–an error might or might not be signaled in this situation. Note in particular that the behavior for *conditions* and *structures* is not specified. 
+The specific behavior depends on <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>’s <GlossaryTerm styled={true} term={"metaclass"}><i>metaclass</i></GlossaryTerm>. An error is never signaled if <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> has <GlossaryTerm styled={true} term={"metaclass"}><i>metaclass</i></GlossaryTerm> <DictionaryLink styled={true} term={"standard-class"}><b>standard-class</b></DictionaryLink>. An error is always signaled if <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> has <GlossaryTerm styled={true} term={"metaclass"}><i>metaclass</i></GlossaryTerm> <DictionaryLink styled={true} term={"built-in-class"}><b>built-in-class</b></DictionaryLink>. The consequences are unspecified if <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> has any other <GlossaryTerm styled={true} term={"metaclass"}><i>metaclass</i></GlossaryTerm>–an error might or might not be signaled in this situation. Note in particular that the behavior for <GlossaryTerm styled={true} term={"condition"}><i>conditions</i></GlossaryTerm> and <GlossaryTerm styled={true} term={"structure"}><i>structures</i></GlossaryTerm> is not specified. 
 
 
 
@@ -126,7 +126,7 @@ The specific behavior depends on *object*’s *metaclass*. An error is never sig
 
 
 
-**slot-missing**, **slot-unbound**, **with-slots** 
+<DictionaryLink styled={true} term={"slot-missing"}><b>slot-missing</b></DictionaryLink>, <DictionaryLink styled={true} term={"slot-unbound"}><b>slot-unbound</b></DictionaryLink>, <DictionaryLink styled={true} term={"with-slots"}><b>with-slots</b></DictionaryLink> 
 
 
 
@@ -134,11 +134,11 @@ The specific behavior depends on *object*’s *metaclass*. An error is never sig
 
 
 
-Although no *implementation* is required to do so, implementors are strongly encouraged to implement the *function* **slot-value** using the *function* slot-value-using-class described in the *Metaobject Protocol*. 
+Although no <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm> is required to do so, implementors are strongly encouraged to implement the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> <DictionaryLink styled={true} term={"slot-value"}><b>slot-value</b></DictionaryLink> using the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> slot-value-using-class described in the *Metaobject Protocol*. 
 
 
 
-Implementations may optimize **slot-value** by compiling it inline. 
+Implementations may optimize <DictionaryLink styled={true} term={"slot-value"}><b>slot-value</b></DictionaryLink> by compiling it inline. 
 
 
 

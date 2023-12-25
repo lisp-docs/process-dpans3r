@@ -1,4 +1,4 @@
-**exp, expt** *Function* 
+**exp, expt** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,11 +6,11 @@
 
 
 
-**exp** *number → result* 
+<DictionaryLink styled={true} term={"exp"}><b>exp</b></DictionaryLink> *number → result* 
 
 
 
-**expt** *base-number power-number → result* 
+<DictionaryLink styled={true} term={"expt"}><b>expt</b></DictionaryLink> *base-number power-number → result* 
 
 
 
@@ -18,19 +18,19 @@
 
 
 
-*number*—a *number* . 
+<GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> . 
 
 
 
-*base-number*—a *number* . 
+*base-number*—a <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> . 
 
 
 
-*power-number*—a *number* . 
+*power-number*—a <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> . 
 
 
 
-*result*—a *number* . 
+*result*—a <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> . 
 
 
 
@@ -38,19 +38,19 @@
 
 
 
-**exp** and **expt** perform exponentiation. 
+<DictionaryLink styled={true} term={"exp"}><b>exp</b></DictionaryLink> and <DictionaryLink styled={true} term={"expt"}><b>expt</b></DictionaryLink> perform exponentiation. 
 
 
 
-**exp** returns *e* raised to the power *number*, where *e* is the base of the natural logarithms. **exp** has no branch cut. 
+<DictionaryLink styled={true} term={"exp"}><b>exp</b></DictionaryLink> returns *e* raised to the power <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm>, where *e* is the base of the natural logarithms. <DictionaryLink styled={true} term={"exp"}><b>exp</b></DictionaryLink> has no branch cut. 
 
 
 
-**expt** returns *base-number* raised to the power *power-number*. If the *base-number* is a *rational* and *power-number* is an *integer* , the calculation is exact and the result will be of *type* **rational**; otherwise a floating-point approximation might result. For **expt** of a *complex rational* to an *integer* power, the calculation must be exact and the result is of type (or rational (complex rational)). 
+<DictionaryLink styled={true} term={"expt"}><b>expt</b></DictionaryLink> returns *base-number* raised to the power *power-number*. If the *base-number* is a <GlossaryTerm styled={true} term={"rational"}><i>rational</i></GlossaryTerm> and *power-number* is an *integer* , the calculation is exact and the result will be of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"rational"}><b>rational</b></DictionaryLink>; otherwise a floating-point approximation might result. For <DictionaryLink styled={true} term={"expt"}><b>expt</b></DictionaryLink> of a *complex rational* to an *integer* power, the calculation must be exact and the result is of type (or rational (complex rational)). 
 
 
 
-The result of **expt** can be a *complex* , even when neither argument is a *complex* , if *base-number* is negative and *power-number* is not an *integer* . The result is always the *principal complex value*. For example, (expt -8 1/3) is not permitted to return -2, even though -2 is one of the cube roots of -8. The *principal* cube root is a *complex* approximately equal to #C(1.0 1.73205), not -2. 
+The result of <DictionaryLink styled={true} term={"expt"}><b>expt</b></DictionaryLink> can be a <GlossaryTerm styled={true} term={"complex"}><i>complex</i></GlossaryTerm> , even when neither argument is a <GlossaryTerm styled={true} term={"complex"}><i>complex</i></GlossaryTerm> , if *base-number* is negative and *power-number* is not an *integer* . The result is always the *principal complex value*. For example, (expt -8 1/3) is not permitted to return -2, even though -2 is one of the cube roots of -8. The <GlossaryTerm styled={true} term={"principal"}><i>principal</i></GlossaryTerm> cube root is a <GlossaryTerm styled={true} term={"complex"}><i>complex</i></GlossaryTerm> approximately equal to #C(1.0 1.73205), not -2. 
 
 
 
@@ -70,7 +70,7 @@ The result of **expt** can be a *complex* , even when neither argument is a *com
 
 
 
-When *power-number* is an *integer* 0, then the result is always the value one in the *type* of *base-number*, even if the *base-number* is zero (of any *type*). That is: 
+When *power-number* is an *integer* 0, then the result is always the value one in the <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> of *base-number*, even if the *base-number* is zero (of any <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm>). That is: 
 
 
 
@@ -78,7 +78,7 @@ When *power-number* is an *integer* 0, then the result is always the value one i
 
 
 
-If *power-number* is a zero of any other *type*, then the result is also the value one, in the *type* of the arguments after the application of the contagion rules in Section 12.1.1.2 (Contagion in Numeric Operations), with one exception: the consequences are undefined if *base-number* is zero when *power-number* is zero and not of *type* **integer**. 
+If *power-number* is a zero of any other <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm>, then the result is also the value one, in the <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> of the arguments after the application of the contagion rules in Section 12.1.1.2 (Contagion in Numeric Operations), with one exception: the consequences are undefined if *base-number* is zero when *power-number* is zero and not of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"integer"}><b>integer</b></DictionaryLink>. 
 
 
 
@@ -99,7 +99,7 @@ If *power-number* is a zero of any other *type*, then the result is also the val
 
 
 
-**log**, Section 12.1.3.3 (Rule of Float Substitutability) 
+<DictionaryLink styled={true} term={"log"}><b>log</b></DictionaryLink>, Section 12.1.3.3 (Rule of Float Substitutability) 
 
 
 
@@ -107,7 +107,7 @@ If *power-number* is a zero of any other *type*, then the result is also the val
 
 
 
-Implementations of **expt** are permitted to use different algorithms for the cases of a *power-number* of *type* **rational** and a *power-number* of *type* **float**. 
+Implementations of <DictionaryLink styled={true} term={"expt"}><b>expt</b></DictionaryLink> are permitted to use different algorithms for the cases of a *power-number* of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"rational"}><b>rational</b></DictionaryLink> and a *power-number* of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"float"}><b>float</b></DictionaryLink>. 
 
 
 

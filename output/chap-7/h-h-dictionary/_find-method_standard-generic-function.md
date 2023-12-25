@@ -6,7 +6,7 @@
 
 
 
-**find-method** *generic-function method-qualifiers specializers* &amp;optional *errorp* 
+<DictionaryLink styled={true} term={"find-method"}><b>find-method</b></DictionaryLink> *generic-function method-qualifiers specializers* &amp;optional *errorp* 
 
 
 
@@ -18,7 +18,7 @@
 
 
 
-**find-method** (*generic-function* **standard-generic-function**) 
+<DictionaryLink styled={true} term={"find-method"}><b>find-method</b></DictionaryLink> (*generic-function* <DictionaryLink styled={true} term={"standard-generic-function"}><b>standard-generic-function</b></DictionaryLink>) 
 
 
 
@@ -34,19 +34,19 @@
 
 
 
-*method-qualifiers*—a *list*. 
+*method-qualifiers*—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>. 
 
 
 
-*specializers*—a *list*. 
+*specializers*—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>. 
 
 
 
-*errorp*—a *generalized boolean*. The default is *true*. 
+*errorp*—a *generalized boolean*. The default is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>. 
 
 
 
-*method*—a *method object*, or **nil**. 
+<GlossaryTerm styled={true} term={"method"}><i>method</i></GlossaryTerm>—a *method object*, or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -54,19 +54,15 @@
 
 
 
-The *generic function* **find-method** takes a *generic function* and returns the *method object* that agrees on *qualifiers* and *parameter specializers* with the *method-qualifiers* and *specializers* arguments of **find-method**. *Method-qualifiers* contains the method *qualifiers* for the *method*. The order of the method *qualifiers* is significant. For a definition of agreement in this context, see Section 7.6.3 (Agreement on Parameter Specializers and Qualifiers). 
+The *generic function* <DictionaryLink styled={true} term={"find-method"}><b>find-method</b></DictionaryLink> takes a *generic function* and returns the *method object* that agrees on <GlossaryTerm styled={true} term={"qualifier"}><i>qualifiers</i></GlossaryTerm> and *parameter specializers* with the *method-qualifiers* and *specializers* arguments of <DictionaryLink styled={true} term={"find-method"}><b>find-method</b></DictionaryLink>. *Method-qualifiers* contains the method <GlossaryTerm styled={true} term={"qualifier"}><i>qualifiers</i></GlossaryTerm> for the <GlossaryTerm styled={true} term={"method"}><i>method</i></GlossaryTerm>. The order of the method <GlossaryTerm styled={true} term={"qualifier"}><i>qualifiers</i></GlossaryTerm> is significant. For a definition of agreement in this context, see Section 7.6.3 (Agreement on Parameter Specializers and Qualifiers). 
 
 
 
-The *specializers* argument contains the parameter specializers for the *method*. It must correspond in length to the number of required arguments of the *generic function*, or an error is signaled. This means that to obtain the default *method* on a given *generic-function*, a *list* whose elements are the *class* **t** must be given. 
-
-
+The *specializers* argument contains the parameter specializers for the <GlossaryTerm styled={true} term={"method"}><i>method</i></GlossaryTerm>. It must correspond in length to the number of required arguments of the *generic function*, or an error is signaled. This means that to obtain the default <GlossaryTerm styled={true} term={"method"}><i>method</i></GlossaryTerm> on a given *generic-function*, a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> whose elements are the <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm> <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink> must be given. 
 
 
 
 
-
- 
 
 
 
@@ -74,7 +70,11 @@ The *specializers* argument contains the parameter specializers for the *method*
 
 
 
-If there is no such *method* and *errorp* is *true*, **find-method** signals an error. If there is no such *method* and *errorp* is *false*, **find-method** returns **nil**. 
+ 
+
+
+
+If there is no such <GlossaryTerm styled={true} term={"method"}><i>method</i></GlossaryTerm> and *errorp* is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>, <DictionaryLink styled={true} term={"find-method"}><b>find-method</b></DictionaryLink> signals an error. If there is no such <GlossaryTerm styled={true} term={"method"}><i>method</i></GlossaryTerm> and *errorp* is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>, <DictionaryLink styled={true} term={"find-method"}><b>find-method</b></DictionaryLink> returns <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -94,7 +94,7 @@ If there is no such *method* and *errorp* is *true*, **find-method** signals an 
 
 
 
-**add-method**, **defclass**, **defgeneric**, **defmethod** 
+<DictionaryLink styled={true} term={"add-method"}><b>add-method</b></DictionaryLink>, <DictionaryLink styled={true} term={"defclass"}><b>defclass</b></DictionaryLink>, <DictionaryLink styled={true} term={"defgeneric"}><b>defgeneric</b></DictionaryLink>, <DictionaryLink styled={true} term={"defmethod"}><b>defmethod</b></DictionaryLink> 
 
 
 
@@ -102,11 +102,11 @@ If there is no such *method* and *errorp* is *true*, **find-method** signals an 
 
 
 
-If the *specializers* argument does not correspond in length to the number of required arguments of the *generic-function*, an an error of *type* **error** is signaled. 
+If the *specializers* argument does not correspond in length to the number of required arguments of the *generic-function*, an an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"error"}><b>error</b></DictionaryLink> is signaled. 
 
 
 
-If there is no such *method* and *errorp* is *true*, **find-method** signals an error of *type* **error**. 
+If there is no such <GlossaryTerm styled={true} term={"method"}><i>method</i></GlossaryTerm> and *errorp* is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>, <DictionaryLink styled={true} term={"find-method"}><b>find-method</b></DictionaryLink> signals an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"error"}><b>error</b></DictionaryLink>. 
 
 
 

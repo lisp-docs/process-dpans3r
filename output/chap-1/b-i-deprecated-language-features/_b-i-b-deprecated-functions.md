@@ -2,7 +2,7 @@
 
 
 
-The *functions* in Figure 1–2 are deprecated. 
+The <GlossaryTerm styled={true} term={"function"}><i>functions</i></GlossaryTerm> in Figure 1–2 are deprecated. 
 
 
 

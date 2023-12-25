@@ -1,4 +1,4 @@
-**set-macro-character, get-macro-character** *Function* 
+**set-macro-character, get-macro-character** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,11 +6,11 @@
 
 
 
-**get-macro-character** *char* &amp;optional *readtable → function, non-terminating-p* 
+<DictionaryLink styled={true} term={"get-macro-character"}><b>get-macro-character</b></DictionaryLink> *char* &amp;optional *readtable → function, non-terminating-p* 
 
 
 
-**set-macro-character** *char new-function* &amp;optional *non-terminating-p readtable →* **t** 
+<DictionaryLink styled={true} term={"set-macro-character"}><b>set-macro-character</b></DictionaryLink> *char new-function* &amp;optional *non-terminating-p readtable →* <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink> 
 
 
 
@@ -18,11 +18,11 @@
 
 
 
-*char*—a *character* . 
+*char*—a <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> . 
 
 
 
-*non-terminating-p*—a *generalized boolean*. The default is *false*. 
+*non-terminating-p*—a *generalized boolean*. The default is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
@@ -42,11 +42,11 @@
 
 
 
-*readtable*—a *readtable designator* . The default is the *current readtable*. 
+<GlossaryTerm styled={true} term={"readtable"}><i>readtable</i></GlossaryTerm>—a *readtable designator* . The default is the *current readtable*. 
 
 
 
-*function*—**nil**, or a *designator* for a *function* of two *arguments*. 
+<GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>—<DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>, or a <GlossaryTerm styled={true} term={"designator"}><i>designator</i></GlossaryTerm> for a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> of two <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm>. 
 
 
 
@@ -58,11 +58,11 @@
 
 
 
-**get-macro-character** returns as its *primary value*, *function*, the *reader macro function* associated with *char* in *readtable* (if any), or else **nil** if *char* is not a *macro character* in *readtable*. The *secondary value*, *non-terminating-p*, is *true* if *char* is a *non-terminating macro character* ; otherwise, it is *false*. 
+<DictionaryLink styled={true} term={"get-macro-character"}><b>get-macro-character</b></DictionaryLink> returns as its *primary value*, *function*, the *reader macro function* associated with *char* in <GlossaryTerm styled={true} term={"readtable"}><i>readtable</i></GlossaryTerm> (if any), or else <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> if *char* is not a *macro character* in <GlossaryTerm styled={true} term={"readtable"}><i>readtable</i></GlossaryTerm>. The *secondary value*, *non-terminating-p*, is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if *char* is a *non-terminating macro character* ; otherwise, it is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
-**set-macro-character** causes *char* to be a *macro character* associated with the *reader macro function new-function* (or the *designator* for *new-function*) in *readtable*. If *non-terminating-p* is *true*, *char* becomes a *non-terminating macro character* ; otherwise it becomes a *terminating macro character* . 
+<DictionaryLink styled={true} term={"set-macro-character"}><b>set-macro-character</b></DictionaryLink> causes *char* to be a *macro character* associated with the *reader macro function new-function* (or the <GlossaryTerm styled={true} term={"designator"}><i>designator</i></GlossaryTerm> for *new-function*) in <GlossaryTerm styled={true} term={"readtable"}><i>readtable</i></GlossaryTerm>. If *non-terminating-p* is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>, *char* becomes a *non-terminating macro character* ; otherwise it becomes a *terminating macro character* . 
 
 
 
@@ -92,7 +92,7 @@
 
 
 
-The *readtable* is modified. 
+The <GlossaryTerm styled={true} term={"readtable"}><i>readtable</i></GlossaryTerm> is modified. 
 
 
 
@@ -100,7 +100,7 @@ The *readtable* is modified.
 
 
 
-**\*readtable\*** 
+<DictionaryLink styled={true} term={"readtable"}><b>\*readtable\*</b></DictionaryLink> 
 
 
 

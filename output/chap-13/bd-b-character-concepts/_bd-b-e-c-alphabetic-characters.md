@@ -2,7 +2,7 @@
 
 
 
-The *alphabetic*<sub>1</sub> *characters* are a subset of the *graphic characters*. Of the *standard characters*, only these are the *alphabetic*<sub>1</sub> *characters*: 
+The <GlossaryTerm styled={true} term={"alphabetic"}><i>alphabetic</i></GlossaryTerm><sub>1</sub> <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm> are a subset of the *graphic characters*. Of the *standard characters*, only these are the <GlossaryTerm styled={true} term={"alphabetic"}><i>alphabetic</i></GlossaryTerm><sub>1</sub> <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm>: 
 
 
 

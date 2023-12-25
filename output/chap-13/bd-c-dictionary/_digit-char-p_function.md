@@ -1,4 +1,4 @@
-**digit-char-p** *Function* 
+**digit-char-p** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**digit-char-p** *char* &amp;optional *radix → weight* 
+<DictionaryLink styled={true} term={"digit-char-p"}><b>digit-char-p</b></DictionaryLink> *char* &amp;optional *radix → weight* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*char*—a *character* . 
+*char*—a <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> . 
 
 
 
@@ -30,11 +30,11 @@
 
 
 
-*radix*—a *radix* . The default is 10. 
+<GlossaryTerm styled={true} term={"radix"}><i>radix</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"radix"}><i>radix</i></GlossaryTerm> . The default is 10. 
 
 
 
-*weight*—either a non-negative *integer* less than *radix*, or *false*. 
+*weight*—either a non-negative *integer* less than <GlossaryTerm styled={true} term={"radix"}><i>radix</i></GlossaryTerm>, or <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
@@ -42,7 +42,7 @@
 
 
 
-Tests whether *char* is a digit in the specified *radix* (*i.e.*, with a weight less than *radix*). If it is a digit in that *radix*, its weight is returned as an *integer* ; otherwise **nil** is returned. 
+Tests whether *char* is a digit in the specified <GlossaryTerm styled={true} term={"radix"}><i>radix</i></GlossaryTerm> (*i.e.*, with a weight less than <GlossaryTerm styled={true} term={"radix"}><i>radix</i></GlossaryTerm>). If it is a digit in that <GlossaryTerm styled={true} term={"radix"}><i>radix</i></GlossaryTerm>, its weight is returned as an *integer* ; otherwise <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> is returned. 
 
 
 
@@ -78,7 +78,7 @@ None. (In particular, the results of this predicate are independent of any speci
 
 
 
-**alphanumericp** 
+<DictionaryLink styled={true} term={"alphanumericp"}><b>alphanumericp</b></DictionaryLink> 
 
 
 

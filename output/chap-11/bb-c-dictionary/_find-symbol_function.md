@@ -1,4 +1,4 @@
-**find-symbol** *Function* 
+**find-symbol** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**find-symbol** *string* &amp;optional *package → symbol, status* 
+<DictionaryLink styled={true} term={"find-symbol"}><b>find-symbol</b></DictionaryLink> <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> &amp;optional *package → symbol, status* 
 
 
 
@@ -14,27 +14,23 @@
 
 
 
-*string*—a *string*. 
+<GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>. 
 
 
 
-*package*—a *package designator* . The default is the *current package*. 
+<GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>—a *package designator* . The default is the *current package*. 
 
 
 
-*symbol*—a *symbol* accessible in the *package*, or **nil**. 
+<GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> accessible in the <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>, or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
-*status*—one of :inherited, :external, :internal, or **nil**. 
-
-
+*status*—one of :inherited, :external, :internal, or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
 
-
- 
 
 
 
@@ -42,7 +38,11 @@
 
 
 
-**find-symbol** 
+ 
+
+
+
+<DictionaryLink styled={true} term={"find-symbol"}><b>find-symbol</b></DictionaryLink> 
 
 
 
@@ -50,7 +50,7 @@
 
 
 
-**find-symbol** locates a *symbol* whose *name* is *string* in a *package*. If a *symbol* named *string* is found in *package*, directly or by inheritance, the *symbol* found is returned as the first value; the second value is as follows: 
+<DictionaryLink styled={true} term={"find-symbol"}><b>find-symbol</b></DictionaryLink> locates a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> whose <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> is <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> in a <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>. If a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> named <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> is found in <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>, directly or by inheritance, the <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> found is returned as the first value; the second value is as follows: 
 
 
 
@@ -58,7 +58,7 @@
 
 
 
-If the *symbol* is *present* in *package* as an *internal symbol*. 
+If the <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> is <GlossaryTerm styled={true} term={"present"}><i>present</i></GlossaryTerm> in <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> as an *internal symbol*. 
 
 
 
@@ -66,7 +66,7 @@ If the *symbol* is *present* in *package* as an *internal symbol*.
 
 
 
-If the *symbol* is *present* in *package* as an *external symbol*. 
+If the <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> is <GlossaryTerm styled={true} term={"present"}><i>present</i></GlossaryTerm> in <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> as an *external symbol*. 
 
 
 
@@ -74,7 +74,7 @@ If the *symbol* is *present* in *package* as an *external symbol*.
 
 
 
-If the *symbol* is inherited by *package* through **use-package**, but is not *present* in *package*. If no such *symbol* is *accessible* in *package*, both values are **nil**. 
+If the <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> is inherited by <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> through <DictionaryLink styled={true} term={"use-package"}><b>use-package</b></DictionaryLink>, but is not <GlossaryTerm styled={true} term={"present"}><i>present</i></GlossaryTerm> in <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>. If no such <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> is <GlossaryTerm styled={true} term={"accessible"}><i>accessible</i></GlossaryTerm> in <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>, both values are <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -106,7 +106,7 @@ If the *symbol* is inherited by *package* through **use-package**, but is not *p
 
 
 
-**intern**, **import**, **export**, **use-package**, **unintern**, **unexport**, **unuse-package** 
+<DictionaryLink styled={true} term={"intern"}><b>intern</b></DictionaryLink>, <DictionaryLink styled={true} term={"import"}><b>import</b></DictionaryLink>, <DictionaryLink styled={true} term={"export"}><b>export</b></DictionaryLink>, <DictionaryLink styled={true} term={"use-package"}><b>use-package</b></DictionaryLink>, <DictionaryLink styled={true} term={"unintern"}><b>unintern</b></DictionaryLink>, <DictionaryLink styled={true} term={"unexport"}><b>unexport</b></DictionaryLink>, <DictionaryLink styled={true} term={"unuse-package"}><b>unuse-package</b></DictionaryLink> 
 
 
 
@@ -114,7 +114,7 @@ If the *symbol* is inherited by *package* through **use-package**, but is not *p
 
 
 
-**intern**, **find-all-symbols** 
+<DictionaryLink styled={true} term={"intern"}><b>intern</b></DictionaryLink>, <DictionaryLink styled={true} term={"find-all-symbols"}><b>find-all-symbols</b></DictionaryLink> 
 
 
 
@@ -134,4 +134,4 @@ If the *symbol* is inherited by *package* through **use-package**, but is not *p
 
 
 
-**find-symbol** is operationally equivalent to **intern**, except that it never creates a new *symbol*. 
+<DictionaryLink styled={true} term={"find-symbol"}><b>find-symbol</b></DictionaryLink> is operationally equivalent to <DictionaryLink styled={true} term={"intern"}><b>intern</b></DictionaryLink>, except that it never creates a new <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>. 

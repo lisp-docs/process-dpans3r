@@ -1,4 +1,4 @@
-**null** *Function* 
+**null** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**null** *object → boolean* 
+<DictionaryLink styled={true} term={"null"}><b>null</b></DictionaryLink> *object → boolean* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*object*—an *object*. 
+<GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
-*boolean*—a *boolean*. 
+<GlossaryTerm styled={true} term={"boolean"}><i>boolean</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"boolean"}><i>boolean</i></GlossaryTerm>. 
 
 
 
@@ -38,7 +38,7 @@
 
 
 
-Returns **t** if *object* is the *empty list*; otherwise, returns **nil**. 
+Returns <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink> if <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is the *empty list*; otherwise, returns <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -55,7 +55,7 @@ Returns **t** if *object* is the *empty list*; otherwise, returns **nil**.
 
 
 
-**not** 
+<DictionaryLink styled={true} term={"not"}><b>not</b></DictionaryLink> 
 
 
 
@@ -63,11 +63,11 @@ Returns **t** if *object* is the *empty list*; otherwise, returns **nil**.
 
 
 
-**null** is intended to be used to test for the *empty list* whereas **not** is intended to be used to invert a *boolean* (or *generalized boolean*). Operationally, **null** and **not** compute the same result; which to use is a matter of style. 
+<DictionaryLink styled={true} term={"null"}><b>null</b></DictionaryLink> is intended to be used to test for the *empty list* whereas <DictionaryLink styled={true} term={"not"}><b>not</b></DictionaryLink> is intended to be used to invert a <GlossaryTerm styled={true} term={"boolean"}><i>boolean</i></GlossaryTerm> (or *generalized boolean*). Operationally, <DictionaryLink styled={true} term={"null"}><b>null</b></DictionaryLink> and <DictionaryLink styled={true} term={"not"}><b>not</b></DictionaryLink> compute the same result; which to use is a matter of style. 
 
 
 
-(null *object*) *≡* (typep *object* ’null) *≡* (eq *object* ’()) 
+(null <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>) *≡* (typep <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> ’null) *≡* (eq <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> ’()) 
 
 
 

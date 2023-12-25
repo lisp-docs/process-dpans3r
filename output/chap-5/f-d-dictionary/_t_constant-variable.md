@@ -6,7 +6,7 @@
 
 
 
-**t**. 
+<DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink>. 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-The *boolean* representing true, and the canonical *generalized boolean* representing true. Although any *object* other than **nil** is considered *true*, **t** is generally used when there is no special reason to prefer one such *object* over another. 
+The <GlossaryTerm styled={true} term={"boolean"}><i>boolean</i></GlossaryTerm> representing true, and the canonical *generalized boolean* representing true. Although any <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> other than <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> is considered <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>, <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink> is generally used when there is no special reason to prefer one such <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> over another. 
 
 
 
@@ -30,7 +30,7 @@ Data and Control
 
 
 
-The *symbol* **t** is also sometimes used for other purposes as well. For example, as the *name* of a *class*, as a *designator* (*e.g.*, a *stream designator* ) or as a special symbol for some syntactic reason (*e.g.*, in **case** and **typecase** to label the *otherwise-clause*). 
+The <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink> is also sometimes used for other purposes as well. For example, as the <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> of a <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm>, as a <GlossaryTerm styled={true} term={"designator"}><i>designator</i></GlossaryTerm> (*e.g.*, a *stream designator* ) or as a special symbol for some syntactic reason (*e.g.*, in <DictionaryLink styled={true} term={"case"}><b>case</b></DictionaryLink> and <DictionaryLink styled={true} term={"typecase"}><b>typecase</b></DictionaryLink> to label the *otherwise-clause*). 
 
 
 
@@ -51,7 +51,7 @@ t *→* T
 
 
 
-**nil** 
+<DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> 
 
 
 

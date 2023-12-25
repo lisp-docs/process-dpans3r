@@ -1,4 +1,4 @@
-**synonym-stream-symbol** *Function* 
+**synonym-stream-symbol** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**synonym-stream-symbol** *synonym-stream → symbol* 
+<DictionaryLink styled={true} term={"synonym-stream-symbol"}><b>synonym-stream-symbol</b></DictionaryLink> *synonym-stream → symbol* 
 
 
 
@@ -18,7 +18,7 @@
 
 
 
-*symbol*—a *symbol*. 
+<GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>. 
 
 
 
@@ -38,7 +38,7 @@
 
 
 
-Returns the *symbol* whose **symbol-value** the *synonym-stream* is using. 
+Returns the <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> whose <DictionaryLink styled={true} term={"symbol-value"}><b>symbol-value</b></DictionaryLink> the *synonym-stream* is using. 
 
 
 
@@ -46,7 +46,7 @@ Returns the *symbol* whose **symbol-value** the *synonym-stream* is using.
 
 
 
-**make-synonym-stream** 
+<DictionaryLink styled={true} term={"make-synonym-stream"}><b>make-synonym-stream</b></DictionaryLink> 
 
 
 

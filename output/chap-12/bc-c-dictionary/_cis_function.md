@@ -1,4 +1,4 @@
-**cis** *Function* 
+**cis** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**cis** *radians → number* 
+<DictionaryLink styled={true} term={"cis"}><b>cis</b></DictionaryLink> *radians → number* 
 
 
 
@@ -18,7 +18,7 @@
 
 
 
-*number*—a *complex* . 
+<GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"complex"}><i>complex</i></GlossaryTerm> . 
 
 
 

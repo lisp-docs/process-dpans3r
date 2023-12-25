@@ -1,4 +1,4 @@
-**cerror** *Function* 
+**cerror** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**cerror** *continue-format-control datum* &amp;rest *arguments →* **nil** 
+<DictionaryLink styled={true} term={"cerror"}><b>cerror</b></DictionaryLink> *continue-format-control datum* &amp;rest *arguments →* <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> 
 
 
 
@@ -18,7 +18,7 @@
 
 
 
-*datum*, *arguments*—*designators* for a *condition* of default type **simple-error**. 
+*datum*, <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm>—<GlossaryTerm styled={true} term={"designator"}><i>designators</i></GlossaryTerm> for a <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> of default type <DictionaryLink styled={true} term={"simple-error"}><b>simple-error</b></DictionaryLink>. 
 
 
 
@@ -26,11 +26,11 @@
 
 
 
-**cerror** effectively invokes **error** on the *condition* named by *datum*. As with any function that implicitly calls **error**, if the *condition* is not handled, (invoke-debugger *condition*) is executed. While signaling is going on, and while in the debugger if it is reached, it is possible to continue code execution (*i.e.*, to return from **cerror**) using the **continue** *restart*. 
+<DictionaryLink styled={true} term={"cerror"}><b>cerror</b></DictionaryLink> effectively invokes <DictionaryLink styled={true} term={"error"}><b>error</b></DictionaryLink> on the <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> named by *datum*. As with any function that implicitly calls <DictionaryLink styled={true} term={"error"}><b>error</b></DictionaryLink>, if the <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> is not handled, (invoke-debugger <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm>) is executed. While signaling is going on, and while in the debugger if it is reached, it is possible to continue code execution (*i.e.*, to return from <DictionaryLink styled={true} term={"cerror"}><b>cerror</b></DictionaryLink>) using the **continue** <GlossaryTerm styled={true} term={"restart"}><i>restart</i></GlossaryTerm>. 
 
 
 
-If *datum* is a *condition*, *arguments* can be supplied, but are used only in conjunction with the *continue-format-control*. 
+If *datum* is a <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm>, <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm> can be supplied, but are used only in conjunction with the *continue-format-control*. 
 
 
 
@@ -144,7 +144,7 @@ If *datum* is a *condition*, *arguments* can be supplied, but are used only in c
 
 
 
-**\*break-on-signals\***. 
+<DictionaryLink styled={true} term={"break-on-signals"}><b>\*break-on-signals\*</b></DictionaryLink>. 
 
 
 
@@ -156,7 +156,7 @@ Existing handler bindings.
 
 
 
-**error**, **format**, **handler-bind**, **\*break-on-signals\***, **simple-type-error** 
+<DictionaryLink styled={true} term={"error"}><b>error</b></DictionaryLink>, <DictionaryLink styled={true} term={"format"}><b>format</b></DictionaryLink>, <DictionaryLink styled={true} term={"handler-bind"}><b>handler-bind</b></DictionaryLink>, <DictionaryLink styled={true} term={"break-on-signals"}><b>\*break-on-signals\*</b></DictionaryLink>, <DictionaryLink styled={true} term={"simple-type-error"}><b>simple-type-error</b></DictionaryLink> 
 
 
 
@@ -164,7 +164,7 @@ Existing handler bindings.
 
 
 
-If *datum* is a *condition type* rather than a *string*, the **format** directive &#126;\* may be especially useful in the *continue-format-control* in order to ignore the *keywords* in the *initialization argument list*. For example: 
+If *datum* is a *condition type* rather than a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>, the <DictionaryLink styled={true} term={"format"}><b>format</b></DictionaryLink> directive &#126;\* may be especially useful in the *continue-format-control* in order to ignore the <GlossaryTerm styled={true} term={"keyword"}><i>keywords</i></GlossaryTerm> in the *initialization argument list*. For example: 
 
 
 

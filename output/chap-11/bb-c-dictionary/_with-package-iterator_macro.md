@@ -1,4 +1,4 @@
-**with-package-iterator** *Macro* 
+**with-package-iterator** <GlossaryTerm styled={true} term={"macro"}><i>Macro</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**with-package-iterator** (*name package-list-form* &amp;rest *symbol-types*) *\{declaration\}*\* *\{form\}*\* *→ \{result\}*\* 
+<DictionaryLink styled={true} term={"with-package-iterator"}><b>with-package-iterator</b></DictionaryLink> (*name package-list-form* &amp;rest *symbol-types*) <GlossaryTerm styled={true} term={"declaration"}><i>\{declaration\}</i></GlossaryTerm>\* <GlossaryTerm styled={true} term={"form"}><i>\{form\}</i></GlossaryTerm>\* *→ \{result\}*\* 
 
 
 
@@ -14,31 +14,31 @@
 
 
 
-*name*—a *symbol*. 
+<GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>. 
 
 
 
-*package-list-form*—a *form*; evaluated once to produce a *package-list*. 
+*package-list-form*—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>; evaluated once to produce a *package-list*. 
 
 
 
-*package-list*—a *designator* for a list of *package designators*. 
+*package-list*—a <GlossaryTerm styled={true} term={"designator"}><i>designator</i></GlossaryTerm> for a list of *package designators*. 
 
 
 
-*symbol-type*—one of the *symbols* :internal, :external, or :inherited. 
+*symbol-type*—one of the <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> :internal, :external, or :inherited. 
 
 
 
-*declaration*—a **declare** *expression*; not evaluated. 
+<GlossaryTerm styled={true} term={"declaration"}><i>declaration</i></GlossaryTerm>—a <DictionaryLink styled={true} term={"declare"}><b>declare</b></DictionaryLink> <GlossaryTerm styled={true} term={"expression"}><i>expression</i></GlossaryTerm>; not evaluated. 
 
 
 
-*forms*—an *implicit progn*. 
+<GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm>—an *implicit progn*. 
 
 
 
-*results*—the *values* of the *forms*. 
+*results*—the <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> of the <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm>. 
 
 
 
@@ -46,19 +46,15 @@
 
 
 
-Within the lexical scope of the body *forms*, the *name* is defined via **macrolet** such that successive invocations of (*name*) will return the *symbols*, one by one, from the *packages* in *package-list*. 
+Within the lexical scope of the body <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm>, the <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> is defined via <DictionaryLink styled={true} term={"macrolet"}><b>macrolet</b></DictionaryLink> such that successive invocations of (<GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm>) will return the <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm>, one by one, from the <GlossaryTerm styled={true} term={"package"}><i>packages</i></GlossaryTerm> in *package-list*. 
 
 
 
-It is unspecified whether *symbols* inherited from multiple *packages* are returned more than once. The order of *symbols* returned does not necessarily reflect the order of *packages* in *package-list*. When *package-list* has more than one element, it is unspecified whether duplicate *symbols* are returned once or more than once. 
+It is unspecified whether <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> inherited from multiple <GlossaryTerm styled={true} term={"package"}><i>packages</i></GlossaryTerm> are returned more than once. The order of <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> returned does not necessarily reflect the order of <GlossaryTerm styled={true} term={"package"}><i>packages</i></GlossaryTerm> in *package-list*. When *package-list* has more than one element, it is unspecified whether duplicate <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> are returned once or more than once. 
 
 
 
-*Symbol-types* controls which *symbols* that are *accessible* in a *package* are returned as follows: 
-
-
-
- 
+*Symbol-types* controls which <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> that are <GlossaryTerm styled={true} term={"accessible"}><i>accessible</i></GlossaryTerm> in a <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> are returned as follows: 
 
 
 
@@ -66,7 +62,11 @@ It is unspecified whether *symbols* inherited from multiple *packages* are retur
 
 
 
-**with-package-iterator** 
+ 
+
+
+
+<DictionaryLink styled={true} term={"with-package-iterator"}><b>with-package-iterator</b></DictionaryLink> 
 
 
 
@@ -74,7 +74,7 @@ It is unspecified whether *symbols* inherited from multiple *packages* are retur
 
 
 
-The *symbols* that are *present* in the *package*, but that are not *exported*. 
+The <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> that are <GlossaryTerm styled={true} term={"present"}><i>present</i></GlossaryTerm> in the <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>, but that are not <GlossaryTerm styled={true} term={"exported"}><i>exported</i></GlossaryTerm>. 
 
 
 
@@ -82,7 +82,7 @@ The *symbols* that are *present* in the *package*, but that are not *exported*.
 
 
 
-The *symbols* that are *present* in the *package* and are *exported*. 
+The <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> that are <GlossaryTerm styled={true} term={"present"}><i>present</i></GlossaryTerm> in the <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> and are <GlossaryTerm styled={true} term={"exported"}><i>exported</i></GlossaryTerm>. 
 
 
 
@@ -90,35 +90,35 @@ The *symbols* that are *present* in the *package* and are *exported*.
 
 
 
-The *symbols* that are *exported* by used *packages* and that are not *shadowed*. 
+The <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> that are <GlossaryTerm styled={true} term={"exported"}><i>exported</i></GlossaryTerm> by used <GlossaryTerm styled={true} term={"package"}><i>packages</i></GlossaryTerm> and that are not *shadowed*. 
 
 
 
-When more than one argument is supplied for *symbol-types*, a *symbol* is returned if its *accessibility* matches any one of the *symbol-types* supplied. Implementations may extend this syntax by recognizing additional symbol accessibility types. 
+When more than one argument is supplied for *symbol-types*, a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> is returned if its <GlossaryTerm styled={true} term={"accessibility"}><i>accessibility</i></GlossaryTerm> matches any one of the *symbol-types* supplied. Implementations may extend this syntax by recognizing additional symbol accessibility types. 
 
 
 
-An invocation of (*name*) returns four values as follows: 
+An invocation of (<GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm>) returns four values as follows: 
 
 
 
-1\. A flag that indicates whether a *symbol* is returned (true means that a *symbol* is returned). 2. A *symbol* that is *accessible* in one the indicated *packages*. 
+1\. A flag that indicates whether a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> is returned (true means that a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> is returned). 2. A <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> that is <GlossaryTerm styled={true} term={"accessible"}><i>accessible</i></GlossaryTerm> in one the indicated <GlossaryTerm styled={true} term={"package"}><i>packages</i></GlossaryTerm>. 
 
 
 
-3\. The accessibility type for that *symbol*; *i.e.*, one of the symbols :internal, :external, or :inherited. 
+3\. The accessibility type for that <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>; *i.e.*, one of the symbols :internal, :external, or :inherited. 
 
 
 
-4\. The *package* from which the *symbol* was obtained. The *package* is one of the *packages* present or named in *package-list*. 
+4\. The <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> from which the <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> was obtained. The <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> is one of the <GlossaryTerm styled={true} term={"package"}><i>packages</i></GlossaryTerm> present or named in *package-list*. 
 
 
 
-After all *symbols* have been returned by successive invocations of (*name*), then only one value is returned, namely **nil**. 
+After all <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> have been returned by successive invocations of (<GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm>), then only one value is returned, namely <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
-The meaning of the second, third, and fourth *values* is that the returned *symbol* is *accessible* in the returned *package* in the way indicated by the second return value as follows: 
+The meaning of the second, third, and fourth <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> is that the returned <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> is <GlossaryTerm styled={true} term={"accessible"}><i>accessible</i></GlossaryTerm> in the returned <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> in the way indicated by the second return value as follows: 
 
 
 
@@ -126,7 +126,7 @@ The meaning of the second, third, and fourth *values* is that the returned *symb
 
 
 
-Means *present* and not *exported*. 
+Means <GlossaryTerm styled={true} term={"present"}><i>present</i></GlossaryTerm> and not <GlossaryTerm styled={true} term={"exported"}><i>exported</i></GlossaryTerm>. 
 
 
 
@@ -134,7 +134,7 @@ Means *present* and not *exported*.
 
 
 
-Means *present* and *exported*. 
+Means <GlossaryTerm styled={true} term={"present"}><i>present</i></GlossaryTerm> and <GlossaryTerm styled={true} term={"exported"}><i>exported</i></GlossaryTerm>. 
 
 
 
@@ -142,23 +142,19 @@ Means *present* and *exported*.
 
 
 
-Means not *present* (thus not *shadowed*) but inherited from some used *package*. 
+Means not <GlossaryTerm styled={true} term={"present"}><i>present</i></GlossaryTerm> (thus not *shadowed*) but inherited from some used <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>. 
 
 
 
-It is unspecified what happens if any of the implicit interior state of an iteration is returned outside the dynamic extent of the **with-package-iterator** form such as by returning some *closure* over the invocation *form*. 
+It is unspecified what happens if any of the implicit interior state of an iteration is returned outside the dynamic extent of the <DictionaryLink styled={true} term={"with-package-iterator"}><b>with-package-iterator</b></DictionaryLink> form such as by returning some <GlossaryTerm styled={true} term={"closure"}><i>closure</i></GlossaryTerm> over the invocation <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>. 
 
 
 
-Any number of invocations of **with-package-iterator** can be nested, and the body of the innermost one can invoke all of the locally *established macros*, provided all those *macros* have distinct names. 
-
-
+Any number of invocations of <DictionaryLink styled={true} term={"with-package-iterator"}><b>with-package-iterator</b></DictionaryLink> can be nested, and the body of the innermost one can invoke all of the locally *established macros*, provided all those <GlossaryTerm styled={true} term={"macro"}><i>macros</i></GlossaryTerm> have distinct names. 
 
 
 
 
-
- 
 
 
 
@@ -166,7 +162,11 @@ Any number of invocations of **with-package-iterator** can be nested, and the bo
 
 
 
-**with-package-iterator** 
+ 
+
+
+
+<DictionaryLink styled={true} term={"with-package-iterator"}><b>with-package-iterator</b></DictionaryLink> 
 
 
 
@@ -214,7 +214,7 @@ The following function prints out every *present symbol* (possibly more than onc
 
 
 
-**with-package-iterator** signals an error of *type* **program-error** if no *symbol-types* are supplied or if a *symbol-type* is not recognized by the implementation is supplied. 
+<DictionaryLink styled={true} term={"with-package-iterator"}><b>with-package-iterator</b></DictionaryLink> signals an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"program-error"}><b>program-error</b></DictionaryLink> if no *symbol-types* are supplied or if a *symbol-type* is not recognized by the implementation is supplied. 
 
 
 
@@ -230,7 +230,7 @@ The consequences are undefined if the local function named *name established* by
 
 
 
-**with-package-iterator** is called after it has returned *false* as its *primary value*. 
+<DictionaryLink styled={true} term={"with-package-iterator"}><b>with-package-iterator</b></DictionaryLink> is called after it has returned <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm> as its *primary value*. 
 
 
 

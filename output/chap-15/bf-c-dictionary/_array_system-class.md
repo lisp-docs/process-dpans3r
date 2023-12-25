@@ -6,7 +6,7 @@
 
 
 
-**array**, **t** 
+<DictionaryLink styled={true} term={"array"}><b>array</b></DictionaryLink>, <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink> 
 
 
 
@@ -18,7 +18,7 @@ An <i>array</i> contains <i>objects</i> arranged according to a Cartesian coordi
 
 
 
-When an *array* is created, the program requesting its creation may declare that all *elements* are of a particular *type*, called the *expressed array element type*. The implementation is permitted to *upgrade* this type in order to produce the *actual array element type*, which is the *element type* for the *array* is actually *specialized*. See the *function* **upgraded-array-element-type**. 
+When an <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm> is created, the program requesting its creation may declare that all <GlossaryTerm styled={true} term={"element"}><i>elements</i></GlossaryTerm> are of a particular <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm>, called the *expressed array element type*. The implementation is permitted to <GlossaryTerm styled={true} term={"upgrade"}><i>upgrade</i></GlossaryTerm> this type in order to produce the *actual array element type*, which is the *element type* for the <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm> is actually <GlossaryTerm styled={true} term={"specialized"}><i>specialized</i></GlossaryTerm>. See the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> <DictionaryLink styled={true} term={"upgraded-array-element-type"}><b>upgraded-array-element-type</b></DictionaryLink>. 
 
 
 
@@ -46,7 +46,7 @@ Specializing.
 
 
 
-*dimension*—a *valid array dimension*. 
+<GlossaryTerm styled={true} term={"dimension"}><i>dimension</i></GlossaryTerm>—a *valid array dimension*. 
 
 
 
@@ -54,7 +54,7 @@ Specializing.
 
 
 
-*rank*—a non-negative *fixnum*. 
+<GlossaryTerm styled={true} term={"rank"}><i>rank</i></GlossaryTerm>—a non-negative <GlossaryTerm styled={true} term={"fixnum"}><i>fixnum</i></GlossaryTerm>. 
 
 
 
@@ -62,15 +62,15 @@ Specializing.
 
 
 
-This denotes the set of *arrays* whose *element type*, *rank*, and *dimensions* match any given *element-type*, *rank*, and *dimensions*. Specifically: 
+This denotes the set of <GlossaryTerm styled={true} term={"array"}><i>arrays</i></GlossaryTerm> whose *element type*, *rank*, and <GlossaryTerm styled={true} term={"dimension"}><i>dimensions</i></GlossaryTerm> match any given *element-type*, <GlossaryTerm styled={true} term={"rank"}><i>rank</i></GlossaryTerm>, and <GlossaryTerm styled={true} term={"dimension"}><i>dimensions</i></GlossaryTerm>. Specifically: 
 
 
 
-If *element-type* is the *symbol* **\***, *arrays* are not excluded on the basis of their *element type*. Otherwise, only those *arrays* are included whose *actual array element type* is the result of *upgrading element-type*; see Section 15.1.2.1 (Array Upgrading). 
+If *element-type* is the <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> **\***, <GlossaryTerm styled={true} term={"array"}><i>arrays</i></GlossaryTerm> are not excluded on the basis of their *element type*. Otherwise, only those <GlossaryTerm styled={true} term={"array"}><i>arrays</i></GlossaryTerm> are included whose *actual array element type* is the result of *upgrading element-type*; see Section 15.1.2.1 (Array Upgrading). 
 
 
 
-If the *dimension-spec* is a *rank*, the set includes only those *arrays* having that *rank*. If the *dimension-spec* is a *list* of *dimensions*, the set includes only those *arrays* having a *rank* given by the *length* of the *dimensions*, and having the indicated *dimensions*; in this case, **\*** matches any value for the corresponding *dimension*. If the *dimension-spec* is the *symbol* **\***, the set is not restricted on the basis of *rank* or *dimension*. 
+If the *dimension-spec* is a <GlossaryTerm styled={true} term={"rank"}><i>rank</i></GlossaryTerm>, the set includes only those <GlossaryTerm styled={true} term={"array"}><i>arrays</i></GlossaryTerm> having that <GlossaryTerm styled={true} term={"rank"}><i>rank</i></GlossaryTerm>. If the *dimension-spec* is a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"dimension"}><i>dimensions</i></GlossaryTerm>, the set includes only those <GlossaryTerm styled={true} term={"array"}><i>arrays</i></GlossaryTerm> having a <GlossaryTerm styled={true} term={"rank"}><i>rank</i></GlossaryTerm> given by the <GlossaryTerm styled={true} term={"length"}><i>length</i></GlossaryTerm> of the <GlossaryTerm styled={true} term={"dimension"}><i>dimensions</i></GlossaryTerm>, and having the indicated <GlossaryTerm styled={true} term={"dimension"}><i>dimensions</i></GlossaryTerm>; in this case, **\*** matches any value for the corresponding <GlossaryTerm styled={true} term={"dimension"}><i>dimension</i></GlossaryTerm>. If the *dimension-spec* is the <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> **\***, the set is not restricted on the basis of <GlossaryTerm styled={true} term={"rank"}><i>rank</i></GlossaryTerm> or <GlossaryTerm styled={true} term={"dimension"}><i>dimension</i></GlossaryTerm>. 
 
 
 
@@ -90,7 +90,7 @@ If the *dimension-spec* is a *rank*, the set includes only those *arrays* having
 
 
 
-**\*print-array\***, **aref**, **make-array**, **vector**, Section 2.4.8.12 (Sharpsign A), Section 22.1.3.8 (Printing Other Arrays) 
+<DictionaryLink styled={true} term={"print-array"}><b>\*print-array\*</b></DictionaryLink>, <DictionaryLink styled={true} term={"aref"}><b>aref</b></DictionaryLink>, <DictionaryLink styled={true} term={"make-array"}><b>make-array</b></DictionaryLink>, <DictionaryLink styled={true} term={"vector"}><b>vector</b></DictionaryLink>, Section 2.4.8.12 (Sharpsign A), Section 22.1.3.8 (Printing Other Arrays) 
 
 
 
@@ -98,11 +98,11 @@ If the *dimension-spec* is a *rank*, the set includes only those *arrays* having
 
 
 
-Note that the type (array t) is a proper *subtype* of the type (array \*). The reason is that the type (array t) is the set of *arrays* that can hold any *object* (the *elements* are of *type* **t**, which includes all *objects*). On the other hand, the type (array \*) is the set of all *arrays* whatsoever, 
+Note that the type (array t) is a proper <GlossaryTerm styled={true} term={"subtype"}><i>subtype</i></GlossaryTerm> of the type (array \*). The reason is that the type (array t) is the set of <GlossaryTerm styled={true} term={"array"}><i>arrays</i></GlossaryTerm> that can hold any <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> (the <GlossaryTerm styled={true} term={"element"}><i>elements</i></GlossaryTerm> are of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink>, which includes all <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm>). On the other hand, the type (array \*) is the set of all <GlossaryTerm styled={true} term={"array"}><i>arrays</i></GlossaryTerm> whatsoever, 
 
 
 
-including for example *arrays* that can hold only *characters*. The type (array character) is not a *subtype* of the type (array t); the two sets are *disjoint* because the type (array character) is not the set of all *arrays* that can hold *characters*, but rather the set of *arrays* that are specialized to hold precisely *characters* and no other *objects*. 
+including for example <GlossaryTerm styled={true} term={"array"}><i>arrays</i></GlossaryTerm> that can hold only <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm>. The type (array character) is not a <GlossaryTerm styled={true} term={"subtype"}><i>subtype</i></GlossaryTerm> of the type (array t); the two sets are <GlossaryTerm styled={true} term={"disjoint"}><i>disjoint</i></GlossaryTerm> because the type (array character) is not the set of all <GlossaryTerm styled={true} term={"array"}><i>arrays</i></GlossaryTerm> that can hold <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm>, but rather the set of <GlossaryTerm styled={true} term={"array"}><i>arrays</i></GlossaryTerm> that are specialized to hold precisely <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm> and no other <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm>. 
 
 
 

@@ -1,4 +1,4 @@
-**funcall** *Function* 
+**funcall** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**funcall** *function* &amp;rest *args → \{result\}*\* 
+<DictionaryLink styled={true} term={"funcall"}><b>funcall</b></DictionaryLink> <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> &amp;rest *args → \{result\}*\* 
 
 
 
@@ -14,15 +14,15 @@
 
 
 
-*function*—a *function designator* . 
+<GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>—a *function designator* . 
 
 
 
-*args*—*arguments* to the *function*. 
+*args*—<GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm> to the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>. 
 
 
 
-*results*—the *values* returned by the *function*. 
+*results*—the <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> returned by the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>. 
 
 
 
@@ -30,7 +30,7 @@
 
 
 
-**funcall** applies *function* to *args*. If *function* is a *symbol*, it is coerced to a *function* as if by finding its *functional value* in the *global environment*. 
+<DictionaryLink styled={true} term={"funcall"}><b>funcall</b></DictionaryLink> applies <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> to *args*. If <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> is a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>, it is coerced to a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> as if by finding its *functional value* in the *global environment*. 
 
 
 
@@ -53,7 +53,7 @@
 
 
 
-An error of *type* **undefined-function** should be signaled if *function* is a *symbol* that does not have a global definition as a *function* or that has a global definition as a *macro* or a *special operator* . 
+An error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"undefined-function"}><b>undefined-function</b></DictionaryLink> should be signaled if <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> is a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> that does not have a global definition as a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> or that has a global definition as a <GlossaryTerm styled={true} term={"macro"}><i>macro</i></GlossaryTerm> or a *special operator* . 
 
 
 
@@ -61,7 +61,7 @@ An error of *type* **undefined-function** should be signaled if *function* is a 
 
 
 
-**apply**, **function**, Section 3.1 (Evaluation) 
+<DictionaryLink styled={true} term={"apply"}><b>apply</b></DictionaryLink>, <DictionaryLink styled={true} term={"function"}><b>function</b></DictionaryLink>, Section 3.1 (Evaluation) 
 
 
 
@@ -77,15 +77,11 @@ An error of *type* **undefined-function** should be signaled if *function* is a 
 
 
 
-*≡* (apply *function* (list *arg1 arg2* ...)) 
+*≡* (apply <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> (list *arg1 arg2* ...)) 
 
 
 
-The difference between **funcall** and an ordinary function call is that in the former case the *function* 
-
-
-
-
+The difference between <DictionaryLink styled={true} term={"funcall"}><b>funcall</b></DictionaryLink> and an ordinary function call is that in the former case the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> 
 
 
 
@@ -93,7 +89,11 @@ The difference between **funcall** and an ordinary function call is that in the 
 
 
 
-is obtained by ordinary *evaluation* of a *form*, and in the latter case it is obtained by the special interpretation of the function position that normally occurs. 
+
+
+
+
+is obtained by ordinary <GlossaryTerm styled={true} term={"evaluation"}><i>evaluation</i></GlossaryTerm> of a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>, and in the latter case it is obtained by the special interpretation of the function position that normally occurs. 
 
 
 

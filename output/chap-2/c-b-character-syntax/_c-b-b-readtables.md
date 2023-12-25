@@ -2,11 +2,11 @@
 
 
 
-Syntax information for use by the *Lisp reader* is embodied in an *object* called a *readtable*. Among other things, the *readtable* contains the association between *characters* and *syntax types*. 
+Syntax information for use by the *Lisp reader* is embodied in an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> called a <GlossaryTerm styled={true} term={"readtable"}><i>readtable</i></GlossaryTerm>. Among other things, the <GlossaryTerm styled={true} term={"readtable"}><i>readtable</i></GlossaryTerm> contains the association between <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm> and *syntax types*. 
 
 
 
-Figure 2–1 lists some *defined names* that are applicable to *readtables*. 
+Figure 2–1 lists some *defined names* that are applicable to <GlossaryTerm styled={true} term={"readtable"}><i>readtables</i></GlossaryTerm>. 
 
 
 

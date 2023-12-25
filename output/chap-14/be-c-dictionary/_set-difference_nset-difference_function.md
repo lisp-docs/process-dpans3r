@@ -1,4 +1,4 @@
-**set-difference, nset-difference** *Function* 
+**set-difference, nset-difference** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,11 +6,11 @@
 
 
 
-**set-difference** *list-1 list-2* &amp;key *key test test-not → result-list* 
+<DictionaryLink styled={true} term={"set-difference"}><b>set-difference</b></DictionaryLink> *list-1 list-2* &amp;key *key test test-not → result-list* 
 
 
 
-**nset-difference** *list-1 list-2* &amp;key *key test test-not → result-list* 
+<DictionaryLink styled={true} term={"nset-difference"}><b>nset-difference</b></DictionaryLink> *list-1 list-2* &amp;key *key test test-not → result-list* 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-*test*—a *designator* for a *function* of two *arguments* that returns a *generalized boolean*. *test-not*—a *designator* for a *function* of two *arguments* that returns a *generalized boolean*. 
+*test*—a <GlossaryTerm styled={true} term={"designator"}><i>designator</i></GlossaryTerm> for a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> of two <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm> that returns a *generalized boolean*. *test-not<GlossaryTerm styled={true} term={"t"}><i>—a </i></GlossaryTerm>designator* for a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> of two <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm> that returns a *generalized boolean*. 
 
 
 
@@ -46,11 +46,11 @@
 
 
 
-*key*—a *designator* for a *function* of one argument, or **nil**. 
+<GlossaryTerm styled={true} term={"key"}><i>key</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"designator"}><i>designator</i></GlossaryTerm> for a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> of one argument, or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
-*result-list*—a *list*. 
+*result-list*—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>. 
 
 
 
@@ -58,11 +58,11 @@
 
 
 
-**set-difference** returns a *list* of elements of *list-1* that do not appear in *list-2*. 
+<DictionaryLink styled={true} term={"set-difference"}><b>set-difference</b></DictionaryLink> returns a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of elements of *list-1* that do not appear in *list-2*. 
 
 
 
-**nset-difference** is the destructive version of **set-difference**. It may destroy *list-1*. 
+<DictionaryLink styled={true} term={"nset-difference"}><b>nset-difference</b></DictionaryLink> is the destructive version of <DictionaryLink styled={true} term={"set-difference"}><b>set-difference</b></DictionaryLink>. It may destroy *list-1*. 
 
 
 
@@ -78,7 +78,7 @@ An element of *list-1* appears in the result if and only if it does not match an
 
 
 
-There is no guarantee that the order of elements in the result will reflect the ordering of the arguments in any particular way. The result *list* may share cells with, or be **eq** to, either of *list-1* or *list-2*, if appropriate. 
+There is no guarantee that the order of elements in the result will reflect the ordering of the arguments in any particular way. The result <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> may share cells with, or be <DictionaryLink styled={true} term={"eq"}><b>eq</b></DictionaryLink> to, either of *list-1* or *list-2*, if appropriate. 
 
 
 
@@ -114,7 +114,7 @@ lst2 *→* (("c" . "a") ("e" . "b") ("d" . "a"))
 
 
 
-**nset-difference** may destroy *list-1*. 
+<DictionaryLink styled={true} term={"nset-difference"}><b>nset-difference</b></DictionaryLink> may destroy *list-1*. 
 
 
 
@@ -122,7 +122,7 @@ lst2 *→* (("c" . "a") ("e" . "b") ("d" . "a"))
 
 
 
-Should be prepared to signal an error of *type* **type-error** if *list-1* and *list-2* are not *proper lists*. 
+Should be prepared to signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if *list-1* and *list-2* are not *proper lists*. 
 
 
 

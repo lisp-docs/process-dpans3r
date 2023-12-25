@@ -6,7 +6,7 @@
 
 
 
-**pathname**, **t** 
+<DictionaryLink styled={true} term={"pathname"}><b>pathname</b></DictionaryLink>, <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink> 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-A *pathname* is a structured *object* which represents a *filename*. 
+A <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm> is a structured <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> which represents a <GlossaryTerm styled={true} term={"filename"}><i>filename</i></GlossaryTerm>. 
 
 
 
-There are two kinds of *pathnames*—*physical pathnames* and *logical pathnames*. 
+There are two kinds of <GlossaryTerm styled={true} term={"pathname"}><i>pathnames</i></GlossaryTerm>—*physical pathnames* and *logical pathnames*. 
 
 
 

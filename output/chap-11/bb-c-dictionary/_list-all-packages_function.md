@@ -1,4 +1,4 @@
-**list-all-packages** *Function* 
+**list-all-packages** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**list-all-packages** *hno argumentsi → packages* 
+<DictionaryLink styled={true} term={"list-all-packages"}><b>list-all-packages</b></DictionaryLink> *hno argumentsi → packages* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*packages*—a *list* of *package objects*. 
+<GlossaryTerm styled={true} term={"package"}><i>packages</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of *package objects*. 
 
 
 
@@ -22,7 +22,7 @@
 
 
 
-**list-all-packages** returns a *fresh list* of all *registered packages*. 
+<DictionaryLink styled={true} term={"list-all-packages"}><b>list-all-packages</b></DictionaryLink> returns a *fresh list* of all *registered packages*. 
 
 
 
@@ -38,7 +38,7 @@
 
 
 
-**defpackage**, **delete-package**, **make-package** 
+<DictionaryLink styled={true} term={"defpackage"}><b>defpackage</b></DictionaryLink>, <DictionaryLink styled={true} term={"delete-package"}><b>delete-package</b></DictionaryLink>, <DictionaryLink styled={true} term={"make-package"}><b>make-package</b></DictionaryLink> 
 
 
 

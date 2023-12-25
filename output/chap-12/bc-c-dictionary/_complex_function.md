@@ -1,4 +1,4 @@
-**complex** *Function* 
+**complex** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**complex** *realpart* &amp;optional *imagpart → complex* 
+<DictionaryLink styled={true} term={"complex"}><b>complex</b></DictionaryLink> *realpart* &amp;optional *imagpart → complex* 
 
 
 
@@ -22,7 +22,7 @@
 
 
 
-*complex*—a *rational* or a *complex* . 
+<GlossaryTerm styled={true} term={"complex"}><i>complex</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"rational"}><i>rational</i></GlossaryTerm> or a <GlossaryTerm styled={true} term={"complex"}><i>complex</i></GlossaryTerm> . 
 
 
 
@@ -30,15 +30,15 @@
 
 
 
-**complex** returns a *number* whose real part is *realpart* and whose imaginary part is *imagpart*. 
+<DictionaryLink styled={true} term={"complex"}><b>complex</b></DictionaryLink> returns a <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> whose real part is *realpart* and whose imaginary part is *imagpart*. 
 
 
 
-If *realpart* is a *rational* and *imagpart* is the *rational* number zero, the result of **complex** is *realpart*, a *rational*. Otherwise, the result is a *complex* . 
+If *realpart* is a <GlossaryTerm styled={true} term={"rational"}><i>rational</i></GlossaryTerm> and *imagpart* is the <GlossaryTerm styled={true} term={"rational"}><i>rational</i></GlossaryTerm> number zero, the result of <DictionaryLink styled={true} term={"complex"}><b>complex</b></DictionaryLink> is *realpart*, a <GlossaryTerm styled={true} term={"rational"}><i>rational</i></GlossaryTerm>. Otherwise, the result is a <GlossaryTerm styled={true} term={"complex"}><i>complex</i></GlossaryTerm> . 
 
 
 
-If either *realpart* or *imagpart* is a *float*, the non-*float* is converted to a *float* before the *complex* is created. If *imagpart* is not supplied, the imaginary part is a zero of the same *type* as *realpart*; *i.e.*, (coerce 0 (type-of *realpart*)) is effectively used. 
+If either *realpart* or *imagpart* is a <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm>, the non-<GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm> is converted to a <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm> before the <GlossaryTerm styled={true} term={"complex"}><i>complex</i></GlossaryTerm> is created. If *imagpart* is not supplied, the imaginary part is a zero of the same <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> as *realpart*; *i.e.*, (coerce 0 (type-of *realpart*)) is effectively used. 
 
 
 
@@ -60,7 +60,7 @@ Type upgrading implies a movement upwards in the type hierarchy lattice. In the 
 
 
 
-**realpart**, **imagpart**, Section 2.4.8.11 (Sharpsign C) 
+<DictionaryLink styled={true} term={"realpart"}><b>realpart</b></DictionaryLink>, <DictionaryLink styled={true} term={"imagpart"}><b>imagpart</b></DictionaryLink>, Section 2.4.8.11 (Sharpsign C) 
 
 
 

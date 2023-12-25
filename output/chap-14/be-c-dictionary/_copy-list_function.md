@@ -1,4 +1,4 @@
-**copy-list** *Function* 
+**copy-list** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**copy-list** *list → copy* 
+<DictionaryLink styled={true} term={"copy-list"}><b>copy-list</b></DictionaryLink> *list → copy* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*list*—a *proper list* or a *dotted list*. 
+<GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>—a *proper list* or a *dotted list*. 
 
 
 
-*copy*—a *list*. 
+<GlossaryTerm styled={true} term={"copy"}><i>copy</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>. 
 
 
 
@@ -26,11 +26,11 @@
 
 
 
-Returns a *copy* of *list*. If *list* is a *dotted list*, the resulting *list* will also be a *dotted list*. 
+Returns a <GlossaryTerm styled={true} term={"copy"}><i>copy</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>. If <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> is a *dotted list*, the resulting <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> will also be a *dotted list*. 
 
 
 
-Only the *list structure* of *list* is copied; the *elements* of the resulting list are the *same* as the corresponding *elements* of the given *list*. 
+Only the *list structure* of <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> is copied; the <GlossaryTerm styled={true} term={"element"}><i>elements</i></GlossaryTerm> of the resulting list are the <GlossaryTerm styled={true} term={"same"}><i>same</i></GlossaryTerm> as the corresponding <GlossaryTerm styled={true} term={"element"}><i>elements</i></GlossaryTerm> of the given <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>. 
 
 
 
@@ -56,7 +56,7 @@ clst *→* (1 ("two" 3))
 
 
 
-The consequences are undefined if *list* is a *circular list*. 
+The consequences are undefined if <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> is a *circular list*. 
 
 
 
@@ -64,7 +64,7 @@ The consequences are undefined if *list* is a *circular list*.
 
 
 
-**copy-alist**, **copy-seq**, **copy-tree** 
+<DictionaryLink styled={true} term={"copy-alist"}><b>copy-alist</b></DictionaryLink>, <DictionaryLink styled={true} term={"copy-seq"}><b>copy-seq</b></DictionaryLink>, <DictionaryLink styled={true} term={"copy-tree"}><b>copy-tree</b></DictionaryLink> 
 
 
 
@@ -72,7 +72,7 @@ The consequences are undefined if *list* is a *circular list*.
 
 
 
-The copy created is **equal** to *list*, but not **eq**. 
+The copy created is <DictionaryLink styled={true} term={"equal"}><b>equal</b></DictionaryLink> to <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>, but not <DictionaryLink styled={true} term={"eq"}><b>eq</b></DictionaryLink>. 
 
 
 

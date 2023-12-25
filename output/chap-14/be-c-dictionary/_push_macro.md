@@ -1,4 +1,4 @@
-**push** *Macro* 
+**push** <GlossaryTerm styled={true} term={"macro"}><i>Macro</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**push** *item place → new-place-value* 
+<DictionaryLink styled={true} term={"push"}><b>push</b></DictionaryLink> *item place → new-place-value* 
 
 
 
@@ -14,15 +14,15 @@
 
 
 
-*item*—an *object*. 
+*item*—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
-*place*—a *place*, the *value* of which may be any *object*. 
+<GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm>, the <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of which may be any <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
-*new-place-value*—a *list* (the new *value* of *place*). 
+*new-place-value*—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> (the new <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm>). 
 
 
 
@@ -42,11 +42,11 @@
 
 
 
-**push** prepends *item* to the *list* that is stored in *place*, stores the resulting *list* in *place*, and returns the *list*. 
+<DictionaryLink styled={true} term={"push"}><b>push</b></DictionaryLink> prepends *item* to the <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> that is stored in <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm>, stores the resulting <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> in <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm>, and returns the <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>. 
 
 
 
-For information about the *evaluation* of *subforms* of *place*, see Section 5.1.1.1 (Evaluation of Subforms to Places). 
+For information about the <GlossaryTerm styled={true} term={"evaluation"}><i>evaluation</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"subform"}><i>subforms</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm>, see Section 5.1.1.1 (Evaluation of Subforms to Places). 
 
 
 
@@ -67,7 +67,7 @@ x *→* (A (5 B C) D)
 
 
 
-The contents of *place* are modified. 
+The contents of <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm> are modified. 
 
 
 
@@ -75,7 +75,7 @@ The contents of *place* are modified.
 
 
 
-**pop**, **pushnew**, Section 5.1 (Generalized Reference) 
+<DictionaryLink styled={true} term={"pop"}><b>pop</b></DictionaryLink>, <DictionaryLink styled={true} term={"pushnew"}><b>pushnew</b></DictionaryLink>, Section 5.1 (Generalized Reference) 
 
 
 
@@ -91,4 +91,4 @@ The effect of (push *item place*) is equivalent to
 
 
 
-except that the *subforms* of *place* are evaluated only once, and *item* is evaluated before *place*. 
+except that the <GlossaryTerm styled={true} term={"subform"}><i>subforms</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm> are evaluated only once, and *item* is evaluated before <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm>. 

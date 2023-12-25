@@ -1,4 +1,4 @@
-**reduce** *Function* 
+**reduce** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**reduce** *function sequence* &amp;key *key from-end start end initial-value → result* 
+<DictionaryLink styled={true} term={"reduce"}><b>reduce</b></DictionaryLink> *function sequence* &amp;key *key from-end start end initial-value → result* 
 
 
 
@@ -14,27 +14,27 @@
 
 
 
-*function*—a *designator* for a *function* that might be called with either zero or two *arguments*. *sequence*—a *proper sequence*. 
+<GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"designator"}><i>designator</i></GlossaryTerm> for a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> that might be called with either zero or two <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm>. *sequence*—a *proper sequence*. 
 
 
 
-*key*—a *designator* for a *function* of one argument, or **nil**. 
+<GlossaryTerm styled={true} term={"key"}><i>key</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"designator"}><i>designator</i></GlossaryTerm> for a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> of one argument, or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
-*from-end*—a *generalized boolean*. The default is *false*. 
+*from-end*—a *generalized boolean*. The default is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
-*start*, *end*—*bounding index designators* of *sequence*. The defaults for *start* and *end* are 0 and **nil**, respectively. 
+*start*, *end*—*bounding index designators* of *sequence*. The defaults for *start* and *end* are 0 and <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>, respectively. 
 
 
 
-*initial-value*—an *object*. 
+*initial-value*—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
-*result*—an *object*. 
+*result*—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -42,23 +42,19 @@
 
 
 
-**reduce** uses a binary operation, *function*, to combine the *elements* of *sequence bounded* by *start* and *end*. 
+<DictionaryLink styled={true} term={"reduce"}><b>reduce</b></DictionaryLink> uses a binary operation, <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>, to combine the <GlossaryTerm styled={true} term={"element"}><i>elements</i></GlossaryTerm> of *sequence bounded* by *start* and *end*. 
 
 
 
-The *function* must accept as *arguments* two *elements* of *sequence* or the results from combining those *elements*. The *function* must also be able to accept no arguments. 
+The <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> must accept as <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm> two <GlossaryTerm styled={true} term={"element"}><i>elements</i></GlossaryTerm> of *sequence* or the results from combining those <GlossaryTerm styled={true} term={"element"}><i>elements</i></GlossaryTerm>. The <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> must also be able to accept no arguments. 
 
 
 
-If *key* is supplied, it is used is used to extract the values to reduce. The *key* function is applied exactly once to each element of *sequence* in the order implied by the reduction order but not to 
-
-
+If <GlossaryTerm styled={true} term={"key"}><i>key</i></GlossaryTerm> is supplied, it is used is used to extract the values to reduce. The <GlossaryTerm styled={true} term={"key"}><i>key</i></GlossaryTerm> function is applied exactly once to each element of *sequence* in the order implied by the reduction order but not to 
 
 
 
 
-
- 
 
 
 
@@ -66,19 +62,23 @@ If *key* is supplied, it is used is used to extract the values to reduce. The *k
 
 
 
-the value of *initial-value*, if supplied. The *key* function typically returns part of the *element* of *sequence*. If *key* is not supplied or is **nil**, the *sequence element* itself is used. 
+ 
 
 
 
-The reduction is left-associative, unless *from-end* is *true* in which case it is right-associative. 
+the value of *initial-value*, if supplied. The <GlossaryTerm styled={true} term={"key"}><i>key</i></GlossaryTerm> function typically returns part of the <GlossaryTerm styled={true} term={"element"}><i>element</i></GlossaryTerm> of *sequence*. If <GlossaryTerm styled={true} term={"key"}><i>key</i></GlossaryTerm> is not supplied or is <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>, the *sequence element* itself is used. 
 
 
 
-If *initial-value* is supplied, it is logically placed before the subsequence (or after it if *from-end* is *true*) and included in the reduction operation. 
+The reduction is left-associative, unless *from-end* is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> in which case it is right-associative. 
 
 
 
-In the normal case, the result of **reduce** is the combined result of *function*’s being applied to successive pairs of *elements* of *sequence*. If the subsequence contains exactly one *element* and no *initial-value* is given, then that *element* is returned and *function* is not called. If the subsequence is empty and an *initial-value* is given, then the *initial-value* is returned and *function* is not called. If the subsequence is empty and no *initial-value* is given, then the *function* is called with zero arguments, and **reduce** returns whatever *function* does. This is the only case where the *function* is called with other than two arguments. 
+If *initial-value* is supplied, it is logically placed before the subsequence (or after it if *from-end* is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>) and included in the reduction operation. 
+
+
+
+In the normal case, the result of <DictionaryLink styled={true} term={"reduce"}><b>reduce</b></DictionaryLink> is the combined result of <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>’s being applied to successive pairs of <GlossaryTerm styled={true} term={"element"}><i>elements</i></GlossaryTerm> of *sequence*. If the subsequence contains exactly one <GlossaryTerm styled={true} term={"element"}><i>element</i></GlossaryTerm> and no *initial-value* is given, then that <GlossaryTerm styled={true} term={"element"}><i>element</i></GlossaryTerm> is returned and <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> is not called. If the subsequence is empty and an *initial-value* is given, then the *initial-value* is returned and <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> is not called. If the subsequence is empty and no *initial-value* is given, then the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> is called with zero arguments, and <DictionaryLink styled={true} term={"reduce"}><b>reduce</b></DictionaryLink> returns whatever <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> does. This is the only case where the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> is called with other than two arguments. 
 
 
 
@@ -106,7 +106,7 @@ In the normal case, the result of **reduce** is the combined result of *function
 
 
 
-Should be prepared to signal an error of *type* **type-error** if *sequence* is not a *proper sequence*. 
+Should be prepared to signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if *sequence* is not a *proper sequence*. 
 
 
 

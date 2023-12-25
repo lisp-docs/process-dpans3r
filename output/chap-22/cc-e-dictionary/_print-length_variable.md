@@ -1,4 +1,4 @@
-*∗***print-length***∗ Variable* 
+*∗<DictionaryLink styled={true} term={"print-length"}><b>*print-length*</b></DictionaryLink>∗ Variable* 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-a non-negative *integer* , or **nil**. 
+a non-negative *integer* , or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -14,7 +14,7 @@ a non-negative *integer* , or **nil**.
 
 
 
-**nil**. 
+<DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -22,19 +22,19 @@ a non-negative *integer* , or **nil**.
 
 
 
-**\*print-level\*** controls how many levels deep a nested *object* will print. If it is *false*, then no control is exercised. Otherwise, it is an *integer* indicating the maximum level to be printed. An *object* to be printed is at level 0; its components (as of a *list* or *vector* ) are at level 1; and so on. If an *object* 
+**\*print-level\*** controls how many levels deep a nested <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> will print. If it is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>, then no control is exercised. Otherwise, it is an *integer* indicating the maximum level to be printed. An <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> to be printed is at level 0; its components (as of a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> or <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm> ) are at level 1; and so on. If an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> 
 
 
 
-to be recursively printed has components and is at a level equal to or greater than the *value* of **\*print-level\***, then the *object* is printed as “#”. 
+to be recursively printed has components and is at a level equal to or greater than the <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of **\*print-level\***, then the <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is printed as “#”. 
 
 
 
-**\*print-length\*** controls how many elements at a given level are printed. If it is *false*, there is no limit to the number of components printed. Otherwise, it is an *integer* indicating the maximum number of *elements* of an *object* to be printed. If exceeded, the printer will print “...” in place of the other *elements*. In the case of a *dotted list*, if the *list* contains exactly as many *elements* as the *value* of **\*print-length\***, the terminating *atom* is printed rather than printing “...” 
+<DictionaryLink styled={true} term={"print-length"}><b>\*print-length\*</b></DictionaryLink> controls how many elements at a given level are printed. If it is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>, there is no limit to the number of components printed. Otherwise, it is an *integer* indicating the maximum number of <GlossaryTerm styled={true} term={"element"}><i>elements</i></GlossaryTerm> of an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> to be printed. If exceeded, the printer will print “...” in place of the other <GlossaryTerm styled={true} term={"element"}><i>elements</i></GlossaryTerm>. In the case of a *dotted list*, if the <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> contains exactly as many <GlossaryTerm styled={true} term={"element"}><i>elements</i></GlossaryTerm> as the <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of <DictionaryLink styled={true} term={"print-length"}><b>\*print-length\*</b></DictionaryLink>, the terminating <GlossaryTerm styled={true} term={"atom"}><i>atom</i></GlossaryTerm> is printed rather than printing “...” 
 
 
 
-**\*print-level\*** and **\*print-length\*** affect the printing of an any *object* printed with a list-like syntax. They do not affect the printing of *symbols*, *strings*, and *bit vectors*. 
+**\*print-level\*** and <DictionaryLink styled={true} term={"print-length"}><b>\*print-length\*</b></DictionaryLink> affect the printing of an any <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> printed with a list-like syntax. They do not affect the printing of <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm>, <GlossaryTerm styled={true} term={"string"}><i>strings</i></GlossaryTerm>, and *bit vectors*. 
 
 
 
@@ -94,7 +94,7 @@ to be recursively printed has components and is at a level equal to or greater t
 
 
 
-**write** 
+<DictionaryLink styled={true} term={"write"}><b>write</b></DictionaryLink> 
 
 
 

@@ -1,4 +1,4 @@
-**remf** *Macro* 
+**remf** <GlossaryTerm styled={true} term={"macro"}><i>Macro</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**remf** *place indicator → generalized-boolean* 
+<DictionaryLink styled={true} term={"remf"}><b>remf</b></DictionaryLink> *place indicator → generalized-boolean* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*place*—a *place*. 
+<GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm>. 
 
 
 
-*indicator*—an *object*. 
+<GlossaryTerm styled={true} term={"indicator"}><i>indicator</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -30,15 +30,15 @@
 
 
 
-**remf** removes from the *property list* stored in *place* a *property*<sub>1</sub> with a *property indicator identical* to *indicator*. If there are multiple *properties*<sub>1</sub> with the *identical* key, **remf** only removes the first such *property*. **remf** returns *false* if no such *property* was found, or *true* if a property was found. 
+<DictionaryLink styled={true} term={"remf"}><b>remf</b></DictionaryLink> removes from the *property list* stored in <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm> a <GlossaryTerm styled={true} term={"property"}><i>property</i></GlossaryTerm><sub>1</sub> with a *property indicator identical* to <GlossaryTerm styled={true} term={"indicator"}><i>indicator</i></GlossaryTerm>. If there are multiple *properties*<sub>1</sub> with the <GlossaryTerm styled={true} term={"identical"}><i>identical</i></GlossaryTerm> key, <DictionaryLink styled={true} term={"remf"}><b>remf</b></DictionaryLink> only removes the first such <GlossaryTerm styled={true} term={"property"}><i>property</i></GlossaryTerm>. <DictionaryLink styled={true} term={"remf"}><b>remf</b></DictionaryLink> returns <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm> if no such <GlossaryTerm styled={true} term={"property"}><i>property</i></GlossaryTerm> was found, or <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if a property was found. 
 
 
 
-The *property indicator* and the corresponding *property value* are removed in an undefined order by destructively splicing the property list. **remf** is permitted to either **setf** *place* or to **setf** any part, **car** or **cdr**, of the *list structure* held by that *place*. 
+The *property indicator* and the corresponding *property value* are removed in an undefined order by destructively splicing the property list. <DictionaryLink styled={true} term={"remf"}><b>remf</b></DictionaryLink> is permitted to either <DictionaryLink styled={true} term={"setf"}><b>setf</b></DictionaryLink> <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm> or to <DictionaryLink styled={true} term={"setf"}><b>setf</b></DictionaryLink> any part, <DictionaryLink styled={true} term={"car"}><b>car</b></DictionaryLink> or <DictionaryLink styled={true} term={"cdr"}><b>cdr</b></DictionaryLink>, of the *list structure* held by that <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm>. 
 
 
 
-For information about the *evaluation* of *subforms* of *place*, see Section 5.1.1.1 (Evaluation of Subforms to Places). 
+For information about the <GlossaryTerm styled={true} term={"evaluation"}><i>evaluation</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"subform"}><i>subforms</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm>, see Section 5.1.1.1 (Evaluation of Subforms to Places). 
 
 
 
@@ -67,7 +67,7 @@ For information about the *evaluation* of *subforms* of *place*, see Section 5.1
 
 
 
-The property list stored in *place* is modified. 
+The property list stored in <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm> is modified. 
 
 
 
@@ -75,7 +75,7 @@ The property list stored in *place* is modified.
 
 
 
-**remprop**, **getf** 
+<DictionaryLink styled={true} term={"remprop"}><b>remprop</b></DictionaryLink>, <DictionaryLink styled={true} term={"getf"}><b>getf</b></DictionaryLink> 
 
 
 

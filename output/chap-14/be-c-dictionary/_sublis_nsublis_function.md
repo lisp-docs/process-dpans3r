@@ -1,4 +1,4 @@
-**sublis, nsublis** *Function* 
+**sublis, nsublis** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,11 +6,11 @@
 
 
 
-**sublis** *alist tree* &amp;key *key test test-not → new-tree* 
+<DictionaryLink styled={true} term={"sublis"}><b>sublis</b></DictionaryLink> *alist tree* &amp;key *key test test-not → new-tree* 
 
 
 
-**nsublis** *alist tree* &amp;key *key test test-not → new-tree* 
+<DictionaryLink styled={true} term={"nsublis"}><b>nsublis</b></DictionaryLink> *alist tree* &amp;key *key test test-not → new-tree* 
 
 
 
@@ -18,19 +18,19 @@
 
 
 
-*alist*—an *association list*. 
+<GlossaryTerm styled={true} term={"alist"}><i>alist</i></GlossaryTerm>—an *association list*. 
 
 
 
-*tree*—a *tree*. 
+<GlossaryTerm styled={true} term={"tree"}><i>tree</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"tree"}><i>tree</i></GlossaryTerm>. 
 
 
 
-*test*—a *designator* for a *function* of two *arguments* that returns a *generalized boolean*. *test-not*—a *designator* for a *function* of two *arguments* that returns a *generalized boolean*. *key*—a *designator* for a *function* of one argument, or **nil**. 
+*test*—a <GlossaryTerm styled={true} term={"designator"}><i>designator</i></GlossaryTerm> for a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> of two <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm> that returns a *generalized boolean*. *test-not<GlossaryTerm styled={true} term={"t"}><i>—a </i></GlossaryTerm>designator* for a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> of two <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm> that returns a *generalized boolean*. *key*—a *designator* for a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> of one argument, or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
-*new-tree*—a *tree*. 
+*new-tree*—a <GlossaryTerm styled={true} term={"tree"}><i>tree</i></GlossaryTerm>. 
 
 
 
@@ -54,19 +54,19 @@
 
 
 
-**sublis** makes substitutions for *objects* in *tree* (a structure of *conses*). **nsublis** is like **sublis** but destructively modifies the relevant parts of the *tree*. 
+<DictionaryLink styled={true} term={"sublis"}><b>sublis</b></DictionaryLink> makes substitutions for <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm> in <GlossaryTerm styled={true} term={"tree"}><i>tree</i></GlossaryTerm> (a structure of *conses*). <DictionaryLink styled={true} term={"nsublis"}><b>nsublis</b></DictionaryLink> is like <DictionaryLink styled={true} term={"sublis"}><b>sublis</b></DictionaryLink> but destructively modifies the relevant parts of the <GlossaryTerm styled={true} term={"tree"}><i>tree</i></GlossaryTerm>. 
 
 
 
-**sublis** looks at all subtrees and leaves of *tree*; if a subtree or leaf appears as a key in *alist* (that is, the key and the subtree or leaf *satisfy the test*), it is replaced by the *object* with which that key is associated. This operation is non-destructive. In effect, **sublis** can perform several **subst** operations simultaneously. 
+<DictionaryLink styled={true} term={"sublis"}><b>sublis</b></DictionaryLink> looks at all subtrees and leaves of <GlossaryTerm styled={true} term={"tree"}><i>tree</i></GlossaryTerm>; if a subtree or leaf appears as a key in <GlossaryTerm styled={true} term={"alist"}><i>alist</i></GlossaryTerm> (that is, the key and the subtree or leaf *satisfy the test*), it is replaced by the <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> with which that key is associated. This operation is non-destructive. In effect, <DictionaryLink styled={true} term={"sublis"}><b>sublis</b></DictionaryLink> can perform several <DictionaryLink styled={true} term={"subst"}><b>subst</b></DictionaryLink> operations simultaneously. 
 
 
 
-If **sublis** succeeds, a new copy of *tree* is returned in which each occurrence of such a subtree or leaf is replaced by the *object* with which it is associated. If no changes are made, the original tree is returned. The original *tree* is left unchanged, but the result tree may share cells with it. 
+If <DictionaryLink styled={true} term={"sublis"}><b>sublis</b></DictionaryLink> succeeds, a new copy of <GlossaryTerm styled={true} term={"tree"}><i>tree</i></GlossaryTerm> is returned in which each occurrence of such a subtree or leaf is replaced by the <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> with which it is associated. If no changes are made, the original tree is returned. The original <GlossaryTerm styled={true} term={"tree"}><i>tree</i></GlossaryTerm> is left unchanged, but the result tree may share cells with it. 
 
 
 
-**nsublis** is permitted to modify *tree* but otherwise returns the same values as **sublis**. **Examples:**
+<DictionaryLink styled={true} term={"nsublis"}><b>nsublis</b></DictionaryLink> is permitted to modify <GlossaryTerm styled={true} term={"tree"}><i>tree</i></GlossaryTerm> but otherwise returns the same values as <DictionaryLink styled={true} term={"sublis"}><b>sublis</b></DictionaryLink>. **Examples:**
 ```lisp
 
 (sublis ’((x . 100) (z . zprime)) 
@@ -105,7 +105,7 @@ tree2 *→* ("one" ("one" "two") (("one" "Two" "three")))
 
 
 
-**nsublis** modifies *tree*. 
+<DictionaryLink styled={true} term={"nsublis"}><b>nsublis</b></DictionaryLink> modifies <GlossaryTerm styled={true} term={"tree"}><i>tree</i></GlossaryTerm>. 
 
 
 
@@ -113,7 +113,7 @@ tree2 *→* ("one" ("one" "two") (("one" "Two" "three")))
 
 
 
-**subst**, Section 3.2.1 (Compiler Terminology), Section 3.6 (Traversal Rules and Side Effects) 
+<DictionaryLink styled={true} term={"subst"}><b>subst</b></DictionaryLink>, Section 3.2.1 (Compiler Terminology), Section 3.6 (Traversal Rules and Side Effects) 
 
 
 
@@ -125,7 +125,7 @@ The :test-not parameter is deprecated.
 
 
 
-Because the side-effecting variants (*e.g.*, **nsublis**) potentially change the path that is being traversed, their effects in the presence of shared or circular structure structure may vary in surprising ways when compared to their non-side-effecting alternatives. To see this, consider the following side-effect behavior, which might be exhibited by some implementations: 
+Because the side-effecting variants (*e.g.*, <DictionaryLink styled={true} term={"nsublis"}><b>nsublis</b></DictionaryLink>) potentially change the path that is being traversed, their effects in the presence of shared or circular structure structure may vary in surprising ways when compared to their non-side-effecting alternatives. To see this, consider the following side-effect behavior, which might be exhibited by some implementations: 
 
 
 

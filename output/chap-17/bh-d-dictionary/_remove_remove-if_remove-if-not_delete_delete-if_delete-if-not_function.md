@@ -1,4 +1,4 @@
-**remove, remove-if, remove-if-not, delete, delete-if, delete-if-not** *Function* 
+**remove, remove-if, remove-if-not, delete, delete-if, delete-if-not** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,19 +6,19 @@
 
 
 
-**remove** *item sequence* &amp;key *from-end test test-not start end count key → result-sequence* **remove-if** *test sequence* &amp;key *from-end start end count key → result-sequence* 
+<DictionaryLink styled={true} term={"remove"}><b>remove</b></DictionaryLink> *item sequence* &amp;key *from-end test test-not start end count key → result-sequence* <DictionaryLink styled={true} term={"remove-if"}><b>remove-if</b></DictionaryLink> *test sequence* &amp;key *from-end start end count key → result-sequence* 
 
 
 
-**remove-if-not** *test sequence* &amp;key *from-end start end count key → result-sequence* 
+<DictionaryLink styled={true} term={"remove-if-not"}><b>remove-if-not</b></DictionaryLink> *test sequence* &amp;key *from-end start end count key → result-sequence* 
 
 
 
-**delete** *item sequence* &amp;key *from-end test test-not start end count key → result-sequence* **delete-if** *test sequence* &amp;key *from-end start end count key → result-sequence* 
+<DictionaryLink styled={true} term={"delete"}><b>delete</b></DictionaryLink> *item sequence* &amp;key *from-end test test-not start end count key → result-sequence* <DictionaryLink styled={true} term={"delete-if"}><b>delete-if</b></DictionaryLink> *test sequence* &amp;key *from-end start end count key → result-sequence* 
 
 
 
-**delete-if-not** *test sequence* &amp;key *from-end start end count key → result-sequence* 
+<DictionaryLink styled={true} term={"delete-if-not"}><b>delete-if-not</b></DictionaryLink> *test sequence* &amp;key *from-end start end count key → result-sequence* 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-*item*—an *object*. 
+*item*—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -34,11 +34,11 @@
 
 
 
-*test*—a *designator* for a *function* of one *argument* that returns a *generalized boolean*. *from-end*—a *generalized boolean*. The default is *false*. 
+*test*—a <GlossaryTerm styled={true} term={"designator"}><i>designator</i></GlossaryTerm> for a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> of one <GlossaryTerm styled={true} term={"argument"}><i>argument</i></GlossaryTerm> that returns a *generalized boolean*. *from-end*—a *generalized boolean*. The default is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
-*test*—a *designator* for a *function* of two *arguments* that returns a *generalized boolean*. 
+*test*—a <GlossaryTerm styled={true} term={"designator"}><i>designator</i></GlossaryTerm> for a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> of two <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm> that returns a *generalized boolean*. 
 
 
 
@@ -54,19 +54,19 @@
 
 
 
-*test-not*—a *designator* for a *function* of two *arguments* that returns a *generalized boolean*. 
+*test-not*—a <GlossaryTerm styled={true} term={"designator"}><i>designator</i></GlossaryTerm> for a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> of two <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm> that returns a *generalized boolean*. 
 
 
 
-*start*, *end*—*bounding index designators* of *sequence*. The defaults for *start* and *end* are 0 and **nil**, respectively. 
+*start*, *end*—*bounding index designators* of *sequence*. The defaults for *start* and *end* are 0 and <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>, respectively. 
 
 
 
-*count*—an *integer* or **nil**. The default is **nil**. 
+*count*—an *integer* or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. The default is <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
-*key*—a *designator* for a *function* of one argument, or **nil**. 
+<GlossaryTerm styled={true} term={"key"}><i>key</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"designator"}><i>designator</i></GlossaryTerm> for a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> of one argument, or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -78,23 +78,23 @@
 
 
 
-**remove**, **remove-if**, and **remove-if-not** return a *sequence* from which the elements that *satisfy the test* have been removed. 
+<DictionaryLink styled={true} term={"remove"}><b>remove</b></DictionaryLink>, <DictionaryLink styled={true} term={"remove-if"}><b>remove-if</b></DictionaryLink>, and <DictionaryLink styled={true} term={"remove-if-not"}><b>remove-if-not</b></DictionaryLink> return a *sequence* from which the elements that *satisfy the test* have been removed. 
 
 
 
-**delete**, **delete-if**, and **delete-if-not** are like **remove**, **remove-if**, and **remove-if-not** respectively, but they may modify *sequence*. 
+<DictionaryLink styled={true} term={"delete"}><b>delete</b></DictionaryLink>, <DictionaryLink styled={true} term={"delete-if"}><b>delete-if</b></DictionaryLink>, and <DictionaryLink styled={true} term={"delete-if-not"}><b>delete-if-not</b></DictionaryLink> are like <DictionaryLink styled={true} term={"remove"}><b>remove</b></DictionaryLink>, <DictionaryLink styled={true} term={"remove-if"}><b>remove-if</b></DictionaryLink>, and <DictionaryLink styled={true} term={"remove-if-not"}><b>remove-if-not</b></DictionaryLink> respectively, but they may modify *sequence*. 
 
 
 
-If *sequence* is a *vector* , the result is a *vector* that has the same *actual array element type* as *sequence*. If *sequence* is a *list*, the result is a *list*. 
+If *sequence* is a <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm> , the result is a <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm> that has the same *actual array element type* as *sequence*. If *sequence* is a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>, the result is a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>. 
 
 
 
-Supplying a *from-end* of *true* matters only when the *count* is provided; in that case only the rightmost *count* elements *satisfying the test* are deleted. 
+Supplying a *from-end* of <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> matters only when the *count* is provided; in that case only the rightmost *count* elements *satisfying the test* are deleted. 
 
 
 
-*Count*, if supplied, limits the number of elements removed or deleted; if more than *count* elements *satisfy the test*, then of these elements only the leftmost or rightmost, depending on *from-end*, are deleted or removed, as many as specified by *count*. If *count* is supplied and negative, the behavior is as if zero had been supplied instead. If *count* is **nil**, all matching items are affected. 
+*Count*, if supplied, limits the number of elements removed or deleted; if more than *count* elements *satisfy the test*, then of these elements only the leftmost or rightmost, depending on *from-end*, are deleted or removed, as many as specified by *count*. If *count* is supplied and negative, the behavior is as if zero had been supplied instead. If *count* is <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>, all matching items are affected. 
 
 
 
@@ -102,19 +102,19 @@ For all these functions, elements not removed or deleted occur in the same order
 
 
 
-**remove**, **remove-if**, **remove-if-not** return a *sequence* of the same *type* as *sequence* that has the same elements except that those in the subsequence *bounded* by *start* and *end* and *satisfying the test* have been removed. This is a non-destructive operation. If any elements need to be removed, the result will be a copy. The result of **remove** may share with *sequence*; the result may be *identical* to the input *sequence* if no elements need to be removed. 
+<DictionaryLink styled={true} term={"remove"}><b>remove</b></DictionaryLink>, <DictionaryLink styled={true} term={"remove-if"}><b>remove-if</b></DictionaryLink>, <DictionaryLink styled={true} term={"remove-if-not"}><b>remove-if-not</b></DictionaryLink> return a *sequence* of the same <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> as *sequence* that has the same elements except that those in the subsequence <GlossaryTerm styled={true} term={"bounded"}><i>bounded</i></GlossaryTerm> by *start* and *end* and *satisfying the test* have been removed. This is a non-destructive operation. If any elements need to be removed, the result will be a copy. The result of <DictionaryLink styled={true} term={"remove"}><b>remove</b></DictionaryLink> may share with *sequence*; the result may be <GlossaryTerm styled={true} term={"identical"}><i>identical</i></GlossaryTerm> to the input *sequence* if no elements need to be removed. 
 
 
 
-**delete**, **delete-if**, and **delete-if-not** return a *sequence* of the same *type* as *sequence* that has the same elements except that those in the subsequence *bounded* by *start* and *end* and *satisfying the test* have been deleted. *Sequence* may be destroyed and used to construct the result; however, the result might or might not be *identical* to *sequence*. 
+<DictionaryLink styled={true} term={"delete"}><b>delete</b></DictionaryLink>, <DictionaryLink styled={true} term={"delete-if"}><b>delete-if</b></DictionaryLink>, and <DictionaryLink styled={true} term={"delete-if-not"}><b>delete-if-not</b></DictionaryLink> return a *sequence* of the same <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> as *sequence* that has the same elements except that those in the subsequence <GlossaryTerm styled={true} term={"bounded"}><i>bounded</i></GlossaryTerm> by *start* and *end* and *satisfying the test* have been deleted. *Sequence* may be destroyed and used to construct the result; however, the result might or might not be <GlossaryTerm styled={true} term={"identical"}><i>identical</i></GlossaryTerm> to *sequence*. 
 
 
 
-**delete**, when *sequence* is a *list*, is permitted to **setf** any part, **car** or **cdr**, of the top-level list structure in that *sequence*. When *sequence* is a *vector* , **delete** is permitted to change the dimensions of the *vector* and to slide its elements into new positions without permuting them to produce the resulting *vector* . 
+<DictionaryLink styled={true} term={"delete"}><b>delete</b></DictionaryLink>, when *sequence* is a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>, is permitted to <DictionaryLink styled={true} term={"setf"}><b>setf</b></DictionaryLink> any part, <DictionaryLink styled={true} term={"car"}><b>car</b></DictionaryLink> or <DictionaryLink styled={true} term={"cdr"}><b>cdr</b></DictionaryLink>, of the top-level list structure in that *sequence*. When *sequence* is a <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm> , <DictionaryLink styled={true} term={"delete"}><b>delete</b></DictionaryLink> is permitted to change the dimensions of the <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm> and to slide its elements into new positions without permuting them to produce the resulting <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm> . 
 
 
 
-**delete-if** is constrained to behave exactly as follows: 
+<DictionaryLink styled={true} term={"delete-if"}><b>delete-if</b></DictionaryLink> is constrained to behave exactly as follows: 
 
 
 
@@ -192,7 +192,7 @@ bar *→* ((C)) or ...
 
 
 
-For **delete**, **delete-if**, and **delete-if-not**, *sequence* may be destroyed and used to construct the result. 
+For <DictionaryLink styled={true} term={"delete"}><b>delete</b></DictionaryLink>, <DictionaryLink styled={true} term={"delete-if"}><b>delete-if</b></DictionaryLink>, and <DictionaryLink styled={true} term={"delete-if-not"}><b>delete-if-not</b></DictionaryLink>, *sequence* may be destroyed and used to construct the result. 
 
 
 
@@ -200,7 +200,7 @@ For **delete**, **delete-if**, and **delete-if-not**, *sequence* may be destroye
 
 
 
-Should be prepared to signal an error of *type* **type-error** if *sequence* is not a *proper sequence*. 
+Should be prepared to signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if *sequence* is not a *proper sequence*. 
 
 
 
@@ -216,15 +216,15 @@ Section 3.2.1 (Compiler Terminology), Section 3.6 (Traversal Rules and Side Effe
 
 
 
-If *sequence* is a *vector* , the result might or might not be simple, and might or might not be *identical* to *sequence*. 
+If *sequence* is a <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm> , the result might or might not be simple, and might or might not be <GlossaryTerm styled={true} term={"identical"}><i>identical</i></GlossaryTerm> to *sequence*. 
 
 
 
-The :test-not *argument* is deprecated. 
+The :test-not <GlossaryTerm styled={true} term={"argument"}><i>argument</i></GlossaryTerm> is deprecated. 
 
 
 
-The functions **delete-if-not** and **remove-if-not** are deprecated. 
+The functions <DictionaryLink styled={true} term={"delete-if-not"}><b>delete-if-not</b></DictionaryLink> and <DictionaryLink styled={true} term={"remove-if-not"}><b>remove-if-not</b></DictionaryLink> are deprecated. 
 
 
 

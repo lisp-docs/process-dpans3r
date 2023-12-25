@@ -2,7 +2,7 @@
 
 
 
-An uppercase *character* is one that has a corresponding *lowercase character* that is *different* (and can be obtained using **char-downcase**). 
+An uppercase <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> is one that has a corresponding *lowercase character* that is <GlossaryTerm styled={true} term={"different"}><i>different</i></GlossaryTerm> (and can be obtained using <DictionaryLink styled={true} term={"char-downcase"}><b>char-downcase</b></DictionaryLink>). 
 
 
 

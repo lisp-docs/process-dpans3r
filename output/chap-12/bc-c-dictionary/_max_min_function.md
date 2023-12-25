@@ -1,4 +1,4 @@
-**max, min** *Function* 
+**max, min** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**max** &amp;rest *reals*<sup>+</sup> *→ max-real* 
+<DictionaryLink styled={true} term={"max"}><b>max</b></DictionaryLink> &amp;rest *reals*<sup>+</sup> *→ max-real* 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-**min** &amp;rest *reals*<sup>+</sup> *→ min-real* 
+<DictionaryLink styled={true} term={"min"}><b>min</b></DictionaryLink> &amp;rest *reals*<sup>+</sup> *→ min-real* 
 
 
 
@@ -46,11 +46,11 @@
 
 
 
-**max** returns the *real* that is greatest (closest to positive infinity). **min** returns the *real* that is least (closest to negative infinity). 
+<DictionaryLink styled={true} term={"max"}><b>max</b></DictionaryLink> returns the *real* that is greatest (closest to positive infinity). <DictionaryLink styled={true} term={"min"}><b>min</b></DictionaryLink> returns the *real* that is least (closest to negative infinity). 
 
 
 
-For **max**, the implementation has the choice of returning the largest argument as is or applying the rules of floating-point *contagion*, taking all the arguments into consideration for *contagion* purposes. Also, if one or more of the arguments are **=**, then any one of them may be chosen as the value to return. For example, if the *reals* are a mixture of *rationals* and *floats*, and the largest argument is a *rational*, then the implementation is free to produce either that *rational* or its *float* approximation; if the largest argument is a *float* of a smaller format than the largest format of any *float* argument, then the implementation is free to return the argument in its given format or expanded to the larger format. Similar remarks apply to **min** (replacing “largest argument” by “smallest argument”). 
+For <DictionaryLink styled={true} term={"max"}><b>max</b></DictionaryLink>, the implementation has the choice of returning the largest argument as is or applying the rules of floating-point <GlossaryTerm styled={true} term={"contagion"}><i>contagion</i></GlossaryTerm>, taking all the arguments into consideration for <GlossaryTerm styled={true} term={"contagion"}><i>contagion</i></GlossaryTerm> purposes. Also, if one or more of the arguments are <DictionaryLink styled={true} term={"="}><b>=</b></DictionaryLink>, then any one of them may be chosen as the value to return. For example, if the *reals* are a mixture of <GlossaryTerm styled={true} term={"rational"}><i>rationals</i></GlossaryTerm> and <GlossaryTerm styled={true} term={"float"}><i>floats</i></GlossaryTerm>, and the largest argument is a <GlossaryTerm styled={true} term={"rational"}><i>rational</i></GlossaryTerm>, then the implementation is free to produce either that <GlossaryTerm styled={true} term={"rational"}><i>rational</i></GlossaryTerm> or its <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm> approximation; if the largest argument is a <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm> of a smaller format than the largest format of any <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm> argument, then the implementation is free to return the argument in its given format or expanded to the larger format. Similar remarks apply to <DictionaryLink styled={true} term={"min"}><b>min</b></DictionaryLink> (replacing “largest argument” by “smallest argument”). 
 
 
 
@@ -97,7 +97,7 @@ For **max**, the implementation has the choice of returning the largest argument
 
 
 
-Should signal an error of *type* **type-error** if any *number* is not a *real*. 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if any <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> is not a *real*. 
 
 
 

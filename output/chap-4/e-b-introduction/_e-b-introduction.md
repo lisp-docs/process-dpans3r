@@ -2,39 +2,39 @@
 
 
 
-A *type* is a (possibly infinite) set of *objects*. An *object* can belong to more than one *type*. *Types* are never explicitly represented as *objects* by Common Lisp. Instead, they are referred to indirectly by the use of *type specifiers*, which are *objects* that denote *types*. 
+A <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> is a (possibly infinite) set of <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm>. An <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> can belong to more than one <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm>. <GlossaryTerm styled={true} term={"type"}><i>Types</i></GlossaryTerm> are never explicitly represented as <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm> by Common Lisp. Instead, they are referred to indirectly by the use of *type specifiers*, which are <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm> that denote <GlossaryTerm styled={true} term={"type"}><i>types</i></GlossaryTerm>. 
 
 
 
-New *types* can be defined using **deftype**, **defstruct**, **defclass**, and **define-condition**. 
+New <GlossaryTerm styled={true} term={"type"}><i>types</i></GlossaryTerm> can be defined using <DictionaryLink styled={true} term={"deftype"}><b>deftype</b></DictionaryLink>, <DictionaryLink styled={true} term={"defstruct"}><b>defstruct</b></DictionaryLink>, <DictionaryLink styled={true} term={"defclass"}><b>defclass</b></DictionaryLink>, and <DictionaryLink styled={true} term={"define-condition"}><b>define-condition</b></DictionaryLink>. 
 
 
 
-The *function* **typep**, a set membership test, is used to determine whether a given *object* is of a given *type*. The function **subtypep**, a subset test, is used to determine whether a given *type* is a *subtype* of another given *type*. The function **type-of** returns a particular *type* to which a given 
+The <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> <DictionaryLink styled={true} term={"typep"}><b>typep</b></DictionaryLink>, a set membership test, is used to determine whether a given <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is of a given <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm>. The function <DictionaryLink styled={true} term={"subtypep"}><b>subtypep</b></DictionaryLink>, a subset test, is used to determine whether a given <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> is a <GlossaryTerm styled={true} term={"subtype"}><i>subtype</i></GlossaryTerm> of another given <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm>. The function <DictionaryLink styled={true} term={"type-of"}><b>type-of</b></DictionaryLink> returns a particular <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> to which a given 
 
 
 
-*object* belongs, even though that *object* must belong to one or more other *types* as well. (For example, every *object* is of *type* **t**, but **type-of** always returns a *type specifier* for a *type* more specific than **t**.) 
+<GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> belongs, even though that <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> must belong to one or more other <GlossaryTerm styled={true} term={"type"}><i>types</i></GlossaryTerm> as well. (For example, every <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink>, but <DictionaryLink styled={true} term={"type-of"}><b>type-of</b></DictionaryLink> always returns a *type specifier* for a <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> more specific than <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink>.) 
 
 
 
-*Objects*, not *variables*, have *types*. Normally, any *variable* can have any *object* as its *value*. It is possible to declare that a *variable* takes on only values of a given *type* by making an explicit *type declaration*. *Types* are arranged in a directed acyclic graph, except for the presence of equivalences. 
+<GlossaryTerm styled={true} term={"object"}><i>Objects</i></GlossaryTerm>, not <GlossaryTerm styled={true} term={"variable"}><i>variables</i></GlossaryTerm>, have <GlossaryTerm styled={true} term={"type"}><i>types</i></GlossaryTerm>. Normally, any <GlossaryTerm styled={true} term={"variable"}><i>variable</i></GlossaryTerm> can have any <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> as its <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm>. It is possible to declare that a <GlossaryTerm styled={true} term={"variable"}><i>variable</i></GlossaryTerm> takes on only values of a given <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> by making an explicit *type declaration*. *Types* are arranged in a directed acyclic graph, except for the presence of equivalences. 
 
 
 
-*Declarations* can be made about *types* using **declare**, **proclaim**, **declaim**, or **the**. For more information about *declarations*, see Section 3.3 (Declarations). 
+<GlossaryTerm styled={true} term={"declaration"}><i>Declarations</i></GlossaryTerm> can be made about <GlossaryTerm styled={true} term={"type"}><i>types</i></GlossaryTerm> using <DictionaryLink styled={true} term={"declare"}><b>declare</b></DictionaryLink>, <DictionaryLink styled={true} term={"proclaim"}><b>proclaim</b></DictionaryLink>, <DictionaryLink styled={true} term={"declaim"}><b>declaim</b></DictionaryLink>, or <DictionaryLink styled={true} term={"the"}><b>the</b></DictionaryLink>. For more information about <GlossaryTerm styled={true} term={"declaration"}><i>declarations</i></GlossaryTerm>, see Section 3.3 (Declarations). 
 
 
 
-Among the fundamental *objects* of the object system are *classes*. A *class* determines the structure and behavior of a set of other *objects*, which are called its *instances*. Every *object* is a *direct instance* of a *class*. The *class* of an *object* determines the set of operations that can be performed on the *object*. For more information, see Section 4.3 (Classes). 
+Among the fundamental <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm> of the object system are *classes*. A <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm> determines the structure and behavior of a set of other <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm>, which are called its <GlossaryTerm styled={true} term={"instance"}><i>instances</i></GlossaryTerm>. Every <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is a *direct instance* of a <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm>. The <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm> of an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> determines the set of operations that can be performed on the <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. For more information, see Section 4.3 (Classes). 
 
 
 
-It is possible to write *functions* that have behavior *specialized* to the class of the *objects* which are their *arguments*. For more information, see Section 7.6 (Generic Functions and Methods). 
+It is possible to write <GlossaryTerm styled={true} term={"function"}><i>functions</i></GlossaryTerm> that have behavior <GlossaryTerm styled={true} term={"specialized"}><i>specialized</i></GlossaryTerm> to the class of the <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm> which are their <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm>. For more information, see Section 7.6 (Generic Functions and Methods). 
 
 
 
-The *class* of the *class* of an *object* is called its *metaclass*. For more information about *metaclasses*, see Section 7.4 (Meta-Objects).  
+The <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm> of the <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm> of an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is called its <GlossaryTerm styled={true} term={"metaclass"}><i>metaclass</i></GlossaryTerm>. For more information about *metaclasses*, see Section 7.4 (Meta-Objects).  
 
 
 

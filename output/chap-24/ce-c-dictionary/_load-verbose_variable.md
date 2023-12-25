@@ -1,4 +1,4 @@
-*∗***load-verbose***∗ Variable* 
+*∗<DictionaryLink styled={true} term={"load-verbose"}><b>*load-verbose*</b></DictionaryLink>∗ Variable* 
 
 
 
@@ -14,7 +14,7 @@ a *generalized boolean*.
 
 
 
-The initial *value* of **\*load-print\*** is *false*. The initial *value* of **\*load-verbose\*** is *implementation dependent*. 
+The initial <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of **\*load-print\*** is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. The initial <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of <DictionaryLink styled={true} term={"load-verbose"}><b>\*load-verbose\*</b></DictionaryLink> is *implementation dependent*. 
 
 
 
@@ -22,7 +22,7 @@ The initial *value* of **\*load-print\*** is *false*. The initial *value* of **\
 
 
 
-The *value* of **\*load-print\*** is the default value of the :print *argument* to **load**. The *value* of **\*load-verbose\*** is the default value of the :verbose *argument* to **load**. 
+The <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of **\*load-print\*** is the default value of the :print <GlossaryTerm styled={true} term={"argument"}><i>argument</i></GlossaryTerm> to <DictionaryLink styled={true} term={"load"}><b>load</b></DictionaryLink>. The <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of <DictionaryLink styled={true} term={"load-verbose"}><b>\*load-verbose\*</b></DictionaryLink> is the default value of the :verbose <GlossaryTerm styled={true} term={"argument"}><i>argument</i></GlossaryTerm> to <DictionaryLink styled={true} term={"load"}><b>load</b></DictionaryLink>. 
 
 
 
@@ -30,7 +30,7 @@ The *value* of **\*load-print\*** is the default value of the :print *argument* 
 
 
 
-**load** 
+<DictionaryLink styled={true} term={"load"}><b>load</b></DictionaryLink> 
 
 
 

@@ -1,4 +1,4 @@
-**nil** *Type* 
+**nil** <GlossaryTerm styled={true} term={"type"}><i>Type</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-all *types* 
+all <GlossaryTerm styled={true} term={"type"}><i>types</i></GlossaryTerm> 
 
 
 
@@ -14,7 +14,7 @@ all *types*
 
 
 
-The *type* **nil** contains no *objects* and so is also called the *empty type*. The *type* **nil** is a *subtype* of every *type*. No *object* is of *type* **nil**. 
+The <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> contains no <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm> and so is also called the *empty type*. The <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> is a <GlossaryTerm styled={true} term={"subtype"}><i>subtype</i></GlossaryTerm> of every <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm>. No <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -22,7 +22,7 @@ The *type* **nil** contains no *objects* and so is also called the *empty type*.
 
 
 
-The *type* containing the *object* **nil** is the *type* **null**, not the *type* **nil**. 
+The <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> containing the <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> is the <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"null"}><b>null</b></DictionaryLink>, not the <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 

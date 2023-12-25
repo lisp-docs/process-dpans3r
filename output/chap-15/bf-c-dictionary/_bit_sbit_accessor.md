@@ -1,4 +1,4 @@
-**bit, sbit** *Accessor* 
+**bit, sbit** <GlossaryTerm styled={true} term={"accessor"}><i>Accessor</i></GlossaryTerm> 
 
 
 
@@ -6,19 +6,19 @@
 
 
 
-**bit** *bit-array* &amp;rest *subscripts → bit* 
+<DictionaryLink styled={true} term={"bit"}><b>bit</b></DictionaryLink> *bit-array* &amp;rest *subscripts → bit* 
 
 
 
-**sbit** *bit-array* &amp;rest *subscripts → bit* 
+<DictionaryLink styled={true} term={"sbit"}><b>sbit</b></DictionaryLink> *bit-array* &amp;rest *subscripts → bit* 
 
 
 
-**(setf (bit** *bit-array* &amp;rest *subscripts***)** *new-bit***)** 
+**(setf (bit** *bit-array* &amp;rest *subscripts***)** *new-bit<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> 
 
 
 
-**(setf (sbit** *bit-array* &amp;rest *subscripts***)** *new-bit***)** 
+**(setf (sbit** *bit-array* &amp;rest *subscripts***)** *new-bit<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> 
 
 
 
@@ -26,15 +26,15 @@
 
 
 
-*bit-array*—for **bit**, a *bit array*; for **sbit**, a *simple bit array*. 
+*bit-array*—for <DictionaryLink styled={true} term={"bit"}><b>bit</b></DictionaryLink>, a *bit array*; for <DictionaryLink styled={true} term={"sbit"}><b>sbit</b></DictionaryLink>, a *simple bit array*. 
 
 
 
-*subscripts*—a *list* of *valid array indices* for the *bit-array*. 
+*subscripts*—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of *valid array indices* for the *bit-array*. 
 
 
 
-*bit*—a *bit*. 
+<GlossaryTerm styled={true} term={"bit"}><i>bit</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"bit"}><i>bit</i></GlossaryTerm>. 
 
 
 
@@ -42,11 +42,11 @@
 
 
 
-**bit** and **sbit** *access* the *bit-array element* specified by *subscripts*. 
+<DictionaryLink styled={true} term={"bit"}><b>bit</b></DictionaryLink> and <DictionaryLink styled={true} term={"sbit"}><b>sbit</b></DictionaryLink> <GlossaryTerm styled={true} term={"access"}><i>access</i></GlossaryTerm> the *bit-array element* specified by *subscripts*. 
 
 
 
-These *functions* ignore the *fill pointer* when *accessing elements*. 
+These <GlossaryTerm styled={true} term={"function"}><i>functions</i></GlossaryTerm> ignore the *fill pointer* when *accessing elements*. 
 
 
 
@@ -71,7 +71,7 @@ These *functions* ignore the *fill pointer* when *accessing elements*.
 
 
 
-**aref**, Section 3.2.1 (Compiler Terminology) 
+<DictionaryLink styled={true} term={"aref"}><b>aref</b></DictionaryLink>, Section 3.2.1 (Compiler Terminology) 
 
 
 
@@ -79,11 +79,11 @@ These *functions* ignore the *fill pointer* when *accessing elements*.
 
 
 
-**bit** and **sbit** are like **aref** except that they require *arrays* to be a *bit array* and a *simple bit array*, respectively. 
+<DictionaryLink styled={true} term={"bit"}><b>bit</b></DictionaryLink> and <DictionaryLink styled={true} term={"sbit"}><b>sbit</b></DictionaryLink> are like <DictionaryLink styled={true} term={"aref"}><b>aref</b></DictionaryLink> except that they require <GlossaryTerm styled={true} term={"array"}><i>arrays</i></GlossaryTerm> to be a *bit array* and a *simple bit array*, respectively. 
 
 
 
-**bit** and **sbit**, unlike **char** and **schar**, allow the first argument to be an *array* of any *rank*. 
+<DictionaryLink styled={true} term={"bit"}><b>bit</b></DictionaryLink> and <DictionaryLink styled={true} term={"sbit"}><b>sbit</b></DictionaryLink>, unlike <DictionaryLink styled={true} term={"char"}><b>char</b></DictionaryLink> and <DictionaryLink styled={true} term={"schar"}><b>schar</b></DictionaryLink>, allow the first argument to be an <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm> of any <GlossaryTerm styled={true} term={"rank"}><i>rank</i></GlossaryTerm>. 
 
 
 
@@ -147,11 +147,11 @@ These *functions* ignore the *fill pointer* when *accessing elements*.
 
 
 
-*Opt-arg*—a *bit array*, or **t**, or **nil**. The default is **nil**. 
+*Opt-arg*—a *bit array*, or <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink>, or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. The default is <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
-*Bit-array*, *bit-array1*, *bit-array2*, and *opt-arg* (if an *array*) must all be of the same *rank* and *dimensions*. 
+*Bit-array*, *bit-array1*, *bit-array2*, and *opt-arg* (if an <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm>) must all be of the same <GlossaryTerm styled={true} term={"rank"}><i>rank</i></GlossaryTerm> and <GlossaryTerm styled={true} term={"dimension"}><i>dimensions</i></GlossaryTerm>. 
 
 
 
@@ -163,7 +163,7 @@ These *functions* ignore the *fill pointer* when *accessing elements*.
 
 
 
-These functions perform bit-wise logical operations on *bit-array1* and *bit-array2* and return an *array* of matching *rank* and *dimensions*, such that any given bit of the result is produced by operating on corresponding bits from each of the arguments. 
+These functions perform bit-wise logical operations on *bit-array1* and *bit-array2* and return an <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm> of matching <GlossaryTerm styled={true} term={"rank"}><i>rank</i></GlossaryTerm> and <GlossaryTerm styled={true} term={"dimension"}><i>dimensions</i></GlossaryTerm>, such that any given bit of the result is produced by operating on corresponding bits from each of the arguments. 
 
 
 
@@ -179,15 +179,15 @@ These functions perform bit-wise logical operations on *bit-array1* and *bit-arr
 
 
 
-In the case of **bit-not**, an *array* of *rank* and *dimensions* matching *bit-array* is returned that contains a copy of *bit-array* with all the bits inverted. 
+In the case of **bit-not**, an <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"rank"}><i>rank</i></GlossaryTerm> and <GlossaryTerm styled={true} term={"dimension"}><i>dimensions</i></GlossaryTerm> matching *bit-array* is returned that contains a copy of *bit-array* with all the bits inverted. 
 
 
 
-If *opt-arg* is of type (array bit) the contents of the result are destructively placed into *opt-arg*. If *opt-arg* is the symbol **t**, *bit-array* or *bit-array1* is replaced with the result; if *opt-arg* is **nil** or omitted, a new *array* is created to contain the result. 
+If *opt-arg* is of type (array bit) the contents of the result are destructively placed into *opt-arg*. If *opt-arg* is the symbol <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink>, *bit-array* or *bit-array1* is replaced with the result; if *opt-arg* is <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> or omitted, a new <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm> is created to contain the result. 
 
 
 
-Figure 15–4 indicates the logical operation performed by each of the *functions*. 
+Figure 15–4 indicates the logical operation performed by each of the <GlossaryTerm styled={true} term={"function"}><i>functions</i></GlossaryTerm>. 
 
 
 
@@ -226,7 +226,7 @@ Figure 15–4 indicates the logical operation performed by each of the *function
 
 
 
-**lognot**, **logand** 
+<DictionaryLink styled={true} term={"lognot"}><b>lognot</b></DictionaryLink>, <DictionaryLink styled={true} term={"logand"}><b>logand</b></DictionaryLink> 
 
 
 

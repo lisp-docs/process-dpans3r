@@ -1,4 +1,4 @@
-**dynamic-extent** *Declaration* 
+**dynamic-extent** <GlossaryTerm styled={true} term={"declaration"}><i>Declaration</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-(dynamic-extent [[ *\{var\}*\* | (**function** *fn*)\* ]]) 
+(dynamic-extent [[ *\{var\}*\* | (<DictionaryLink styled={true} term={"function"}><b>function</b></DictionaryLink> *fn*)\* ]]) 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-*declaration* 
+<GlossaryTerm styled={true} term={"declaration"}><i>declaration</i></GlossaryTerm> 
 
 
 
@@ -34,7 +34,7 @@
 
 
 
-*variable*, *function* 
+<GlossaryTerm styled={true} term={"variable"}><i>variable</i></GlossaryTerm>, <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> 
 
 
 
@@ -58,19 +58,19 @@ Evaluation and
 
 
 
-**dynamic-extent** 
+<DictionaryLink styled={true} term={"dynamic-extent"}><b>dynamic-extent</b></DictionaryLink> 
 
 
 
-The compiler is permitted to use this information in any way that is appropriate to the *implementation* and that does not conflict with the semantics of Common Lisp. 
+The compiler is permitted to use this information in any way that is appropriate to the <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm> and that does not conflict with the semantics of Common Lisp. 
 
 
 
-**dynamic-extent** declarations can be *free declarations* or *bound declarations*. 
+<DictionaryLink styled={true} term={"dynamic-extent"}><b>dynamic-extent</b></DictionaryLink> declarations can be *free declarations* or *bound declarations*. 
 
 
 
-The *vars* and *fns* named in a **dynamic-extent** declaration must not refer to *symbol macro* or *macro* bindings. 
+The *vars* and *fns* named in a <DictionaryLink styled={true} term={"dynamic-extent"}><b>dynamic-extent</b></DictionaryLink> declaration must not refer to *symbol macro* or <GlossaryTerm styled={true} term={"macro"}><i>macro</i></GlossaryTerm> bindings. 
 
 
 
@@ -172,7 +172,7 @@ The following are in error, since the value of x is used outside of its *extent*
 
 
 
-**declare** 
+<DictionaryLink styled={true} term={"declare"}><b>declare</b></DictionaryLink> 
 
 
 
@@ -180,7 +180,7 @@ The following are in error, since the value of x is used outside of its *extent*
 
 
 
-The most common optimization is to *stack allocate* the initial value of the *objects* named by the *vars*. 
+The most common optimization is to *stack allocate* the initial value of the <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm> named by the *vars*. 
 
 
 
@@ -200,7 +200,7 @@ It is permissible for an implementation to simply ignore this declaration.
 
 
 
-**type** 
+<DictionaryLink styled={true} term={"type"}><b>type</b></DictionaryLink> 
 
 
 

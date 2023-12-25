@@ -6,7 +6,7 @@
 
 
 
-**floating-point-underflow**, **arithmetic-error**, **error**, **serious-condition**, **condition**, **t** 
+<DictionaryLink styled={true} term={"floating-point-underflow"}><b>floating-point-underflow</b></DictionaryLink>, <DictionaryLink styled={true} term={"arithmetic-error"}><b>arithmetic-error</b></DictionaryLink>, <DictionaryLink styled={true} term={"error"}><b>error</b></DictionaryLink>, <DictionaryLink styled={true} term={"serious-condition"}><b>serious-condition</b></DictionaryLink>, <DictionaryLink styled={true} term={"condition"}><b>condition</b></DictionaryLink>, <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink> 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-The *type* **floating-point-underflow** consists of error conditions that occur because of floating-point underflow. 
+The <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"floating-point-underflow"}><b>floating-point-underflow</b></DictionaryLink> consists of error conditions that occur because of floating-point underflow. 
 
 
 

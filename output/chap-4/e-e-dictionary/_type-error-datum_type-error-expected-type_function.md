@@ -1,4 +1,4 @@
-**type-error-datum, type-error-expected-type** *Function* 
+**type-error-datum, type-error-expected-type** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,11 +6,11 @@
 
 
 
-**type-error-datum** *condition → datum* 
+<DictionaryLink styled={true} term={"type-error-datum"}><b>type-error-datum</b></DictionaryLink> *condition → datum* 
 
 
 
-**type-error-expected-type** *condition → expected-type* 
+<DictionaryLink styled={true} term={"type-error-expected-type"}><b>type-error-expected-type</b></DictionaryLink> *condition → expected-type* 
 
 
 
@@ -18,11 +18,11 @@
 
 
 
-*condition*—a *condition* of *type* **type-error**. 
+<GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink>. 
 
 
 
-*datum*—an *object*. 
+*datum*—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -34,11 +34,11 @@
 
 
 
-**type-error-datum** returns the offending datum in the *situation* represented by the *condition*. 
+<DictionaryLink styled={true} term={"type-error-datum"}><b>type-error-datum</b></DictionaryLink> returns the offending datum in the <GlossaryTerm styled={true} term={"situation"}><i>situation</i></GlossaryTerm> represented by the <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm>. 
 
 
 
-**type-error-expected-type** returns the expected type of the offending datum in the *situation* represented by the *condition*. 
+<DictionaryLink styled={true} term={"type-error-expected-type"}><b>type-error-expected-type</b></DictionaryLink> returns the expected type of the offending datum in the <GlossaryTerm styled={true} term={"situation"}><i>situation</i></GlossaryTerm> represented by the <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm>. 
 
 
 
@@ -65,7 +65,7 @@
 
 
 
-**type-error**, Chapter 9 (Conditions) 
+<DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink>, Chapter 9 (Conditions) 
 
 
 

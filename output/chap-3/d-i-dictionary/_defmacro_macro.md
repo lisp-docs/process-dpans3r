@@ -1,4 +1,4 @@
-**defmacro** *Macro* 
+**defmacro** <GlossaryTerm styled={true} term={"macro"}><i>Macro</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**defmacro** *name lambda-list* [[ *\{declaration\}*\* *| documentation* ]] *\{form\}*\* 
+<DictionaryLink styled={true} term={"defmacro"}><b>defmacro</b></DictionaryLink> *name lambda-list* [[ <GlossaryTerm styled={true} term={"declaration"}><i>\{declaration\}</i></GlossaryTerm>\* *| documentation* ]] <GlossaryTerm styled={true} term={"form"}><i>\{form\}</i></GlossaryTerm>\* 
 
 
 
@@ -18,7 +18,7 @@
 
 
 
-*name*—a *symbol*. 
+<GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>. 
 
 
 
@@ -26,15 +26,15 @@
 
 
 
-*declaration*—a **declare** *expression*; not evaluated. 
+<GlossaryTerm styled={true} term={"declaration"}><i>declaration</i></GlossaryTerm>—a <DictionaryLink styled={true} term={"declare"}><b>declare</b></DictionaryLink> <GlossaryTerm styled={true} term={"expression"}><i>expression</i></GlossaryTerm>; not evaluated. 
 
 
 
-*documentation*—a *string*; not evaluated. 
+*documentation*—a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>; not evaluated. 
 
 
 
-*form*—a *form*.  
+<GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>.  
 
 
 
@@ -42,7 +42,7 @@
 
 
 
-**defmacro** 
+<DictionaryLink styled={true} term={"defmacro"}><b>defmacro</b></DictionaryLink> 
 
 
 
@@ -50,7 +50,7 @@
 
 
 
-Defines *name* as a *macro* by associating a *macro function* with that *name* in the global environment. The *macro function* is defined in the same *lexical environment* in which the **defmacro** *form* appears. 
+Defines <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> as a <GlossaryTerm styled={true} term={"macro"}><i>macro</i></GlossaryTerm> by associating a *macro function* with that <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> in the global environment. The *macro function* is defined in the same *lexical environment* in which the <DictionaryLink styled={true} term={"defmacro"}><b>defmacro</b></DictionaryLink> <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> appears. 
 
 
 
@@ -58,7 +58,7 @@ The parameter variables in *lambda-list* are bound to destructured portions of t
 
 
 
-The expansion function accepts two arguments, a *form* and an *environment*. The expansion function returns a *form*. The body of the expansion function is specified by *forms*. *Forms* are executed in order. The value of the last *form* executed is returned as the expansion of the *macro*. The body *forms* of the expansion function (but not the *lambda-list*) are implicitly enclosed in a *block* whose name is *name*. 
+The expansion function accepts two arguments, a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> and an <GlossaryTerm styled={true} term={"environment"}><i>environment</i></GlossaryTerm>. The expansion function returns a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>. The body of the expansion function is specified by <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm>. <GlossaryTerm styled={true} term={"form"}><i>Forms</i></GlossaryTerm> are executed in order. The value of the last <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> executed is returned as the expansion of the <GlossaryTerm styled={true} term={"macro"}><i>macro</i></GlossaryTerm>. The body <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm> of the expansion function (but not the *lambda-list*) are implicitly enclosed in a <GlossaryTerm styled={true} term={"block"}><i>block</i></GlossaryTerm> whose name is <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm>. 
 
 
 
@@ -66,23 +66,23 @@ The *lambda-list* conforms to the requirements described in Section 3.4.4 (Macro
 
 
 
-*Documentation* is attached as a *documentation string* to *name* (as kind **function**) and to the *macro function*. 
+*Documentation* is attached as a *documentation string* to <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> (as kind <DictionaryLink styled={true} term={"function"}><b>function</b></DictionaryLink>) and to the *macro function*. 
 
 
 
-**defmacro** can be used to redefine a *macro* or to replace a *function* definition with a *macro* definition. 
+<DictionaryLink styled={true} term={"defmacro"}><b>defmacro</b></DictionaryLink> can be used to redefine a <GlossaryTerm styled={true} term={"macro"}><i>macro</i></GlossaryTerm> or to replace a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> definition with a <GlossaryTerm styled={true} term={"macro"}><i>macro</i></GlossaryTerm> definition. 
 
 
 
-Recursive expansion of the *form* returned must terminate, including the expansion of other *macros* which are *subforms* of other *forms* returned. 
+Recursive expansion of the <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> returned must terminate, including the expansion of other <GlossaryTerm styled={true} term={"macro"}><i>macros</i></GlossaryTerm> which are <GlossaryTerm styled={true} term={"subform"}><i>subforms</i></GlossaryTerm> of other <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm> returned. 
 
 
 
-The consequences are undefined if the result of fully macroexpanding a *form* contains any *circular list structure* except in *literal objects*. 
+The consequences are undefined if the result of fully macroexpanding a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> contains any *circular list structure* except in *literal objects*. 
 
 
 
-If a **defmacro** *form* appears as a *top level form*, the *compiler* must store the *macro* definition at compile time, so that occurrences of the macro later on in the file can be expanded correctly. Users must ensure that the body of the *macro* can be evaluated at compile time if it is referenced within the *file* being *compiled*. 
+If a <DictionaryLink styled={true} term={"defmacro"}><b>defmacro</b></DictionaryLink> <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> appears as a *top level form*, the <GlossaryTerm styled={true} term={"compiler"}><i>compiler</i></GlossaryTerm> must store the <GlossaryTerm styled={true} term={"macro"}><i>macro</i></GlossaryTerm> definition at compile time, so that occurrences of the macro later on in the file can be expanded correctly. Users must ensure that the body of the <GlossaryTerm styled={true} term={"macro"}><i>macro</i></GlossaryTerm> can be evaluated at compile time if it is referenced within the <GlossaryTerm styled={true} term={"file"}><i>file</i></GlossaryTerm> being *compiled*. 
 
 
 
@@ -149,11 +149,11 @@ T
 
 
 
-**define-compiler-macro**, **destructuring-bind**, **documentation**, **macroexpand**, 
+<DictionaryLink styled={true} term={"define-compiler-macro"}><b>define-compiler-macro</b></DictionaryLink>, <DictionaryLink styled={true} term={"destructuring-bind"}><b>destructuring-bind</b></DictionaryLink>, **documentation**, <DictionaryLink styled={true} term={"macroexpand"}><b>macroexpand</b></DictionaryLink>, 
 
 
 
-**\*macroexpand-hook\***, **macrolet**, **macro-function**, Section 3.1 (Evaluation), Section 3.2 (Compilation), Section 3.4.11 (Syntactic Interaction of Documentation Strings and Declarations) 
+**\*macroexpand-hook\***, <DictionaryLink styled={true} term={"macrolet"}><b>macrolet</b></DictionaryLink>, <DictionaryLink styled={true} term={"macro-function"}><b>macro-function</b></DictionaryLink>, Section 3.1 (Evaluation), Section 3.2 (Compilation), Section 3.4.11 (Syntactic Interaction of Documentation Strings and Declarations) 
 
 
 

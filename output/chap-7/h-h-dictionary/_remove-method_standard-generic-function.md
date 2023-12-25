@@ -6,7 +6,7 @@
 
 
 
-**remove-method** *generic-function method → generic-function* 
+<DictionaryLink styled={true} term={"remove-method"}><b>remove-method</b></DictionaryLink> *generic-function method → generic-function* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-**remove-method** (*generic-function* **standard-generic-function**) 
+<DictionaryLink styled={true} term={"remove-method"}><b>remove-method</b></DictionaryLink> (*generic-function* <DictionaryLink styled={true} term={"standard-generic-function"}><b>standard-generic-function</b></DictionaryLink>) 
 
 
 
-*method* 
+<GlossaryTerm styled={true} term={"method"}><i>method</i></GlossaryTerm> 
 
 
 
@@ -30,7 +30,7 @@
 
 
 
-*method*—a *method*. 
+<GlossaryTerm styled={true} term={"method"}><i>method</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"method"}><i>method</i></GlossaryTerm>. 
 
 
 
@@ -38,11 +38,11 @@
 
 
 
-The *generic function* **remove-method** removes a *method* from *generic-function* by modifying the *generic-function* (if necessary). 
+The *generic function* <DictionaryLink styled={true} term={"remove-method"}><b>remove-method</b></DictionaryLink> removes a <GlossaryTerm styled={true} term={"method"}><i>method</i></GlossaryTerm> from *generic-function* by modifying the *generic-function* (if necessary). 
 
 
 
-**remove-method** must not signal an error if the *method* is not one of the *methods* on the *generic-function*. 
+<DictionaryLink styled={true} term={"remove-method"}><b>remove-method</b></DictionaryLink> must not signal an error if the <GlossaryTerm styled={true} term={"method"}><i>method</i></GlossaryTerm> is not one of the <GlossaryTerm styled={true} term={"method"}><i>methods</i></GlossaryTerm> on the *generic-function*. 
 
 
 
@@ -50,7 +50,7 @@ The *generic function* **remove-method** removes a *method* from *generic-functi
 
 
 
-**find-method** 
+<DictionaryLink styled={true} term={"find-method"}><b>find-method</b></DictionaryLink> 
 
 
 

@@ -1,4 +1,4 @@
-**rotatef** *Macro* 
+**rotatef** <GlossaryTerm styled={true} term={"macro"}><i>Macro</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**rotatef** *\{place\}*\* *!* **nil** 
+<DictionaryLink styled={true} term={"rotatef"}><b>rotatef</b></DictionaryLink> <GlossaryTerm styled={true} term={"place"}><i>\{place\}</i></GlossaryTerm>\* *!* <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*place*—a *place*. 
+<GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm>. 
 
 
 
@@ -22,19 +22,19 @@
 
 
 
-**rotatef** modifies the values of each *place* by rotating values from one *place* into another. 
+<DictionaryLink styled={true} term={"rotatef"}><b>rotatef</b></DictionaryLink> modifies the values of each <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm> by rotating values from one <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm> into another. 
 
 
 
-If a *place* produces more values than there are store variables, the extra values are ignored. If a *place* produces fewer values than there are store variables, the missing values are set to **nil**. 
+If a <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm> produces more values than there are store variables, the extra values are ignored. If a <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm> produces fewer values than there are store variables, the missing values are set to <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
-In the form (rotatef *place1 place2* ... *placen*), the values in *place1* through *placen* are *read* and *written*. Values 2 through *n* and value 1 are then stored into *place1* through *placen*. It is as if all the places form an end-around shift register that is rotated one place to the left, with the value of *place1* being shifted around the end to *placen*. 
+In the form (rotatef *place1 place2* ... *placen*), the values in *place1* through *placen* are <GlossaryTerm styled={true} term={"read"}><i>read</i></GlossaryTerm> and *written*. Values 2 through *n* and value 1 are then stored into *place1* through *placen*. It is as if all the places form an end-around shift register that is rotated one place to the left, with the value of *place1* being shifted around the end to *placen*. 
 
 
 
-For information about the *evaluation* of *subforms* of *places*, see Section 5.1.1.1 (Evaluation of Subforms to Places). 
+For information about the <GlossaryTerm styled={true} term={"evaluation"}><i>evaluation</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"subform"}><i>subforms</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"place"}><i>places</i></GlossaryTerm>, see Section 5.1.1.1 (Evaluation of Subforms to Places). 
 
 
 
@@ -53,7 +53,7 @@ For information about the *evaluation* of *subforms* of *places*, see Section 5.
 
 
 
-**define-setf-expander**, **defsetf**, **setf**, **shiftf**, **\*macroexpand-hook\***, Section 5.1 (Generalized Reference) 
+<DictionaryLink styled={true} term={"define-setf-expander"}><b>define-setf-expander</b></DictionaryLink>, <DictionaryLink styled={true} term={"defsetf"}><b>defsetf</b></DictionaryLink>, <DictionaryLink styled={true} term={"setf"}><b>setf</b></DictionaryLink>, <DictionaryLink styled={true} term={"shiftf"}><b>shiftf</b></DictionaryLink>, **\*macroexpand-hook\***, Section 5.1 (Generalized Reference) 
 
 
 
@@ -81,7 +81,7 @@ The e↵ect of (rotatef *place1 place2* ... *placen*) is roughly equivalent to
 
 
 
-except that the latter would evaluate any *subforms* of each place twice, whereas **rotatef** evaluates them once. 
+except that the latter would evaluate any <GlossaryTerm styled={true} term={"subform"}><i>subforms</i></GlossaryTerm> of each place twice, whereas <DictionaryLink styled={true} term={"rotatef"}><b>rotatef</b></DictionaryLink> evaluates them once. 
 
 
 

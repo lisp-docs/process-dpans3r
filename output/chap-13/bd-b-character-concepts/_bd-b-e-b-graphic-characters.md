@@ -2,19 +2,19 @@
 
 
 
-*Characters* that are classified as *graphic*, or displayable, are each associated with a glyph, a visual representation of the *character* . 
+<GlossaryTerm styled={true} term={"character"}><i>Characters</i></GlossaryTerm> that are classified as <GlossaryTerm styled={true} term={"graphic"}><i>graphic</i></GlossaryTerm>, or displayable, are each associated with a glyph, a visual representation of the <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> . 
 
 
 
-A *graphic character* is one that has a standard textual representation as a single *glyph*, such as A or \* or =. *Space*, which effectively has a blank *glyph*, is defined to be a *graphic*. 
+A *graphic character* is one that has a standard textual representation as a single <GlossaryTerm styled={true} term={"glyph"}><i>glyph</i></GlossaryTerm>, such as A or \* or =. <GlossaryTerm styled={true} term={"space"}><i>Space</i></GlossaryTerm>, which effectively has a blank <GlossaryTerm styled={true} term={"glyph"}><i>glyph</i></GlossaryTerm>, is defined to be a <GlossaryTerm styled={true} term={"graphic"}><i>graphic</i></GlossaryTerm>. 
 
 
 
-Of the *standard characters*, *newline* is *non-graphic* and all others are *graphic*; see Section 2.1.3 (Standard Characters). 
+Of the *standard characters*, *newline* is <GlossaryTerm styled={true} term={"non-graphic"}><i>non-graphic</i></GlossaryTerm> and all others are <GlossaryTerm styled={true} term={"graphic"}><i>graphic</i></GlossaryTerm>; see Section 2.1.3 (Standard Characters). 
 
 
 
-*Characters* that are not *graphic* are called *non-graphic*. *Non-graphic characters* are sometimes informally called “formatting characters” or “control characters.” 
+<GlossaryTerm styled={true} term={"character"}><i>Characters</i></GlossaryTerm> that are not <GlossaryTerm styled={true} term={"graphic"}><i>graphic</i></GlossaryTerm> are called <GlossaryTerm styled={true} term={"non-graphic"}><i>non-graphic</i></GlossaryTerm>. *Non-graphic characters* are sometimes informally called “formatting characters” or “control characters.” 
 
 
 

@@ -1,4 +1,4 @@
-**numerator, denominator** *Function* 
+**numerator, denominator** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,11 +6,11 @@
 
 
 
-**numerator** *rational → numerator* 
+<DictionaryLink styled={true} term={"numerator"}><b>numerator</b></DictionaryLink> *rational → numerator* 
 
 
 
-**denominator** *rational → denominator* 
+<DictionaryLink styled={true} term={"denominator"}><b>denominator</b></DictionaryLink> *rational → denominator* 
 
 
 
@@ -18,7 +18,7 @@
 
 
 
-*rational*—a *rational*. 
+<GlossaryTerm styled={true} term={"rational"}><i>rational</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"rational"}><i>rational</i></GlossaryTerm>. 
 
 
 
@@ -34,15 +34,15 @@
 
 
 
-**numerator** and **denominator** reduce *rational* to canonical form and compute the numerator or denominator of that number. 
+<DictionaryLink styled={true} term={"numerator"}><b>numerator</b></DictionaryLink> and <DictionaryLink styled={true} term={"denominator"}><b>denominator</b></DictionaryLink> reduce <GlossaryTerm styled={true} term={"rational"}><i>rational</i></GlossaryTerm> to canonical form and compute the numerator or denominator of that number. 
 
 
 
-**numerator** and **denominator** return the numerator or denominator of the canonical form of *rational*. 
+<DictionaryLink styled={true} term={"numerator"}><b>numerator</b></DictionaryLink> and <DictionaryLink styled={true} term={"denominator"}><b>denominator</b></DictionaryLink> return the numerator or denominator of the canonical form of <GlossaryTerm styled={true} term={"rational"}><i>rational</i></GlossaryTerm>. 
 
 
 
-If *rational* is an *integer* , **numerator** returns *rational* and **denominator** returns 1. 
+If <GlossaryTerm styled={true} term={"rational"}><i>rational</i></GlossaryTerm> is an *integer* , <DictionaryLink styled={true} term={"numerator"}><b>numerator</b></DictionaryLink> returns <GlossaryTerm styled={true} term={"rational"}><i>rational</i></GlossaryTerm> and <DictionaryLink styled={true} term={"denominator"}><b>denominator</b></DictionaryLink> returns 1. 
 
 
 
@@ -61,7 +61,7 @@ If *rational* is an *integer* , **numerator** returns *rational* and **denominat
 
 
 
-**/** 
+<DictionaryLink styled={true} term={"/"}><b>/</b></DictionaryLink> 
 
 
 

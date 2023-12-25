@@ -6,7 +6,7 @@
 
 
 
-**list**, **sequence**, **t** 
+<DictionaryLink styled={true} term={"list"}><b>list</b></DictionaryLink>, <DictionaryLink styled={true} term={"sequence"}><b>sequence</b></DictionaryLink>, <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink> 
 
 
 
@@ -14,19 +14,19 @@
 
 
 
-A *list* is a chain of *conses* in which the *car* of each *cons* is an *element* of the *list*, and the *cdr* of each *cons* is either the next link in the chain or a terminating *atom*. 
+A <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> is a chain of *conses* in which the <GlossaryTerm styled={true} term={"car"}><i>car</i></GlossaryTerm> of each <GlossaryTerm styled={true} term={"cons"}><i>cons</i></GlossaryTerm> is an <GlossaryTerm styled={true} term={"element"}><i>element</i></GlossaryTerm> of the <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>, and the <GlossaryTerm styled={true} term={"cdr"}><i>cdr</i></GlossaryTerm> of each <GlossaryTerm styled={true} term={"cons"}><i>cons</i></GlossaryTerm> is either the next link in the chain or a terminating <GlossaryTerm styled={true} term={"atom"}><i>atom</i></GlossaryTerm>. 
 
 
 
-A *proper list* is a chain of *conses* terminated by the *empty list*, (), which is itself a *proper list*. A *dotted list* is a *list* which has a terminating *atom* that is not the *empty list*. A *circular list* is a chain of *conses* that has no termination because some *cons* in the chain is the *cdr* of a later *cons*. 
+A *proper list* is a chain of *conses* terminated by the *empty list*, (), which is itself a *proper list*. A *dotted list* is a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> which has a terminating <GlossaryTerm styled={true} term={"atom"}><i>atom</i></GlossaryTerm> that is not the *empty list*. A *circular list* is a chain of *conses* that has no termination because some <GlossaryTerm styled={true} term={"cons"}><i>cons</i></GlossaryTerm> in the chain is the <GlossaryTerm styled={true} term={"cdr"}><i>cdr</i></GlossaryTerm> of a later <GlossaryTerm styled={true} term={"cons"}><i>cons</i></GlossaryTerm>. 
 
 
 
-*Dotted lists* and *circular lists* are also *lists*, but usually the unqualified term “list” within this specification means *proper list*. Nevertheless, the *type* **list** unambiguously includes *dotted lists* and *circular lists*. 
+*Dotted lists* and *circular lists* are also <GlossaryTerm styled={true} term={"list"}><i>lists</i></GlossaryTerm>, but usually the unqualified term “list” within this specification means *proper list*. Nevertheless, the <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"list"}><b>list</b></DictionaryLink> unambiguously includes *dotted lists* and *circular lists*. 
 
 
 
-For each *element* of a *list* there is a *cons*. The *empty list* has no *elements* and is not a *cons*. The *types* **cons** and **null** form an *exhaustive partition* of the *type* **list**. 
+For each <GlossaryTerm styled={true} term={"element"}><i>element</i></GlossaryTerm> of a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> there is a <GlossaryTerm styled={true} term={"cons"}><i>cons</i></GlossaryTerm>. The *empty list* has no <GlossaryTerm styled={true} term={"element"}><i>elements</i></GlossaryTerm> and is not a <GlossaryTerm styled={true} term={"cons"}><i>cons</i></GlossaryTerm>. The <GlossaryTerm styled={true} term={"type"}><i>types</i></GlossaryTerm> <DictionaryLink styled={true} term={"cons"}><b>cons</b></DictionaryLink> and <DictionaryLink styled={true} term={"null"}><b>null</b></DictionaryLink> form an *exhaustive partition* of the <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"list"}><b>list</b></DictionaryLink>. 
 
 
 

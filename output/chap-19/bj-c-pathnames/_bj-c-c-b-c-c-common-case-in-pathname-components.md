@@ -2,19 +2,19 @@
 
 
 
-For the functions in Figure 19–2, a value of :common for the :case argument that these *functions* should receive and yield *strings* in component values according to the following conventions: 
+For the functions in Figure 19–2, a value of :common for the :case argument that these <GlossaryTerm styled={true} term={"function"}><i>functions</i></GlossaryTerm> should receive and yield <GlossaryTerm styled={true} term={"string"}><i>strings</i></GlossaryTerm> in component values according to the following conventions: 
 
 
 
-*•* All *uppercase* means to use a file system’s customary *case*. 
+*•* All <GlossaryTerm styled={true} term={"uppercase"}><i>uppercase</i></GlossaryTerm> means to use a file system’s customary <GlossaryTerm styled={true} term={"case"}><i>case</i></GlossaryTerm>. 
 
 
 
-*•* All *lowercase* means to use the opposite of the customary *case*. 
+*•* All <GlossaryTerm styled={true} term={"lowercase"}><i>lowercase</i></GlossaryTerm> means to use the opposite of the customary <GlossaryTerm styled={true} term={"case"}><i>case</i></GlossaryTerm>. 
 
 
 
-*•* Mixed *case* represents itself. 
+*•* Mixed <GlossaryTerm styled={true} term={"case"}><i>case</i></GlossaryTerm> represents itself. 
 
 
 

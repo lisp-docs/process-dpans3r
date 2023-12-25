@@ -39,7 +39,7 @@ Each entry in this glossary has the following parts:
 
 
 
-– an optional context, present if this definition is meaningful only in that context. For example, “(of a *symbol*)”. 
+– an optional context, present if this definition is meaningful only in that context. For example, “(of a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>)”. 
 
 
 
@@ -59,7 +59,7 @@ Words in *this font* are words with entries in the glossary. Words in example se
 
 
 
-When an ambiguity arises, the longest matching substring has precedence. For example, “*complex float*” refers to a single glossary entry for “*complex float*” rather than the combined meaning of the glossary terms “*complex*” and “*float*.” 
+When an ambiguity arises, the longest matching substring has precedence. For example, “*complex float*” refers to a single glossary entry for “*complex float*” rather than the combined meaning of the glossary terms “<GlossaryTerm styled={true} term={"complex"}><i>complex</i></GlossaryTerm>” and “<GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm>.” 
 
 
 
@@ -99,7 +99,7 @@ The following are abbreviations used in the glossary:
 
 
 
-**()** [ **nil** ], *n.* an alternative notation for writing the symbol **nil**, used to emphasize the use of *nil* as an *empty list*. 
+**()** [ <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> ], *n.* an alternative notation for writing the symbol <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>, used to emphasize the use of <GlossaryTerm styled={true} term={"nil"}><i>nil</i></GlossaryTerm> as an *empty list*. 
 
 
 

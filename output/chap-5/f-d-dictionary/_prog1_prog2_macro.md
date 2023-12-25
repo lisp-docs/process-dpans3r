@@ -1,4 +1,4 @@
-**prog1, prog2** *Macro* 
+**prog1, prog2** <GlossaryTerm styled={true} term={"macro"}><i>Macro</i></GlossaryTerm> 
 
 
 
@@ -6,11 +6,11 @@
 
 
 
-**prog1** *first-form \{form\}*\* *! result-1* 
+<DictionaryLink styled={true} term={"prog1"}><b>prog1</b></DictionaryLink> *first-form \{form\}*\* *! result-1* 
 
 
 
-**prog2** *first-form second-form \{form\}*\* *! result-2* 
+<DictionaryLink styled={true} term={"prog2"}><b>prog2</b></DictionaryLink> *first-form second-form \{form\}*\* *! result-2* 
 
 
 
@@ -18,19 +18,19 @@
 
 
 
-*first-form*—a *form*; evaluated as described below. 
+*first-form*—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>; evaluated as described below. 
 
 
 
-*second-form*—a *form*; evaluated as described below. 
+*second-form*—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>; evaluated as described below. 
 
 
 
-*forms*—an *implicit progn*; evaluated as described below. 
+<GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm>—an *implicit progn*; evaluated as described below. 
 
 
 
-*result-1*—the *primary value* resulting from the *evaluation* of *first-form*. 
+*result-1*—the *primary value* resulting from the <GlossaryTerm styled={true} term={"evaluation"}><i>evaluation</i></GlossaryTerm> of *first-form*. 
 
 
 
@@ -50,7 +50,7 @@ Data and Control
 
 
 
-*result-2*—the *primary value* resulting from the *evaluation* of *second-form*. 
+*result-2*—the *primary value* resulting from the <GlossaryTerm styled={true} term={"evaluation"}><i>evaluation</i></GlossaryTerm> of *second-form*. 
 
 
 
@@ -58,11 +58,11 @@ Data and Control
 
 
 
-**prog1** *evaluates first-form* and then *forms*, *yielding* as its only *value* the *primary value yielded* by *first-form*. 
+<DictionaryLink styled={true} term={"prog1"}><b>prog1</b></DictionaryLink> *evaluates first-form* and then <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm>, *yielding* as its only <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> the *primary value yielded* by *first-form*. 
 
 
 
-**prog2** *evaluates first-form*, then *second-form*, and then *forms*, *yielding* as its only *value* the *primary value yielded* by *first-form*. 
+<DictionaryLink styled={true} term={"prog2"}><b>prog2</b></DictionaryLink> *evaluates first-form*, then *second-form*, and then <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm>, *yielding* as its only <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> the *primary value yielded* by *first-form*. 
 
 
 
@@ -99,7 +99,7 @@ temp *!* 4
 
 
 
-**multiple-value-prog1**, **progn** 
+<DictionaryLink styled={true} term={"multiple-value-prog1"}><b>multiple-value-prog1</b></DictionaryLink>, <DictionaryLink styled={true} term={"progn"}><b>progn</b></DictionaryLink> 
 
 
 
@@ -107,15 +107,15 @@ temp *!* 4
 
 
 
-**prog1** and **prog2** are typically used to *evaluate* one or more *forms* with side e↵ects and return a *value* that must be computed before some or all of the side e↵ects happen. 
+<DictionaryLink styled={true} term={"prog1"}><b>prog1</b></DictionaryLink> and <DictionaryLink styled={true} term={"prog2"}><b>prog2</b></DictionaryLink> are typically used to <GlossaryTerm styled={true} term={"evaluate"}><i>evaluate</i></GlossaryTerm> one or more <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm> with side e↵ects and return a <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> that must be computed before some or all of the side e↵ects happen. 
 
 
 
-(prog1 *\{form\}*\*) *⌘* (values (multiple-value-prog1 *\{form\}*\*)) 
+(prog1 <GlossaryTerm styled={true} term={"form"}><i>\{form\}</i></GlossaryTerm>\*) *⌘* (values (multiple-value-prog1 <GlossaryTerm styled={true} term={"form"}><i>\{form\}</i></GlossaryTerm>\*)) 
 
 
 
-(prog2 *form1 \{form\}*\*) *⌘* (let () *form1* (prog1 *\{form\}*\*)) 
+(prog2 *form1 \{form\}*\*) *⌘* (let () *form1* (prog1 <GlossaryTerm styled={true} term={"form"}><i>\{form\}</i></GlossaryTerm>\*)) 
 
 
 

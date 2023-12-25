@@ -1,4 +1,4 @@
-**psetq** *Macro* 
+**psetq** <GlossaryTerm styled={true} term={"macro"}><i>Macro</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**psetq** *\{↓pair\}*\* *→* **nil** 
+<DictionaryLink styled={true} term={"psetq"}><b>psetq</b></DictionaryLink> *\{↓pair\}*\* *→* <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> 
 
 
 
@@ -18,7 +18,7 @@
 
 
 
-**psetq**: [ **p—e set kyu-** ] 
+<DictionaryLink styled={true} term={"psetq"}><b>psetq</b></DictionaryLink>: [ **p—e set kyu-** ] 
 
 
 
@@ -26,11 +26,11 @@
 
 
 
-*var*—a *symbol* naming a *variable* other than a *constant variable*. 
+*var*—a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> naming a <GlossaryTerm styled={true} term={"variable"}><i>variable</i></GlossaryTerm> other than a *constant variable*. 
 
 
 
-*form*—a *form*. 
+<GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>. 
 
 
 
@@ -38,15 +38,15 @@
 
 
 
-Assigns values to *variables*. 
+Assigns values to <GlossaryTerm styled={true} term={"variable"}><i>variables</i></GlossaryTerm>. 
 
 
 
-This is just like **setq**, except that the assignments happen “in parallel.” That is, first all of the forms are evaluated, and only then are the variables set to the resulting values. In this way, the assignment to one variable does not affect the value computation of another in the way that would occur with **setq**’s sequential assignment. 
+This is just like <DictionaryLink styled={true} term={"setq"}><b>setq</b></DictionaryLink>, except that the assignments happen “in parallel.” That is, first all of the forms are evaluated, and only then are the variables set to the resulting values. In this way, the assignment to one variable does not affect the value computation of another in the way that would occur with <DictionaryLink styled={true} term={"setq"}><b>setq</b></DictionaryLink>’s sequential assignment. 
 
 
 
-If any *var* refers to a *binding* made by **symbol-macrolet**, then that *var* is treated as if **psetf** (not **psetq**) had been used. 
+If any *var* refers to a <GlossaryTerm styled={true} term={"binding"}><i>binding</i></GlossaryTerm> made by <DictionaryLink styled={true} term={"symbol-macrolet"}><b>symbol-macrolet</b></DictionaryLink>, then that *var* is treated as if <DictionaryLink styled={true} term={"psetf"}><b>psetf</b></DictionaryLink> (not <DictionaryLink styled={true} term={"psetq"}><b>psetq</b></DictionaryLink>) had been used. 
 
 
 
@@ -96,7 +96,7 @@ c *→* 3
 
 
 
-The values of *forms* are assigned to *vars*. 
+The values of <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm> are assigned to *vars*. 
 
 
 
@@ -104,7 +104,7 @@ The values of *forms* are assigned to *vars*.
 
 
 
-**psetf**, **setq** 
+<DictionaryLink styled={true} term={"psetf"}><b>psetf</b></DictionaryLink>, <DictionaryLink styled={true} term={"setq"}><b>setq</b></DictionaryLink> 
 
 
 

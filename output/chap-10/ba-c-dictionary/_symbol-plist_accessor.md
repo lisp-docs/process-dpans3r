@@ -1,4 +1,4 @@
-**symbol-plist** *Accessor* 
+**symbol-plist** <GlossaryTerm styled={true} term={"accessor"}><i>Accessor</i></GlossaryTerm> 
 
 
 
@@ -6,11 +6,11 @@
 
 
 
-**symbol-plist** *symbol → plist* 
+<DictionaryLink styled={true} term={"symbol-plist"}><b>symbol-plist</b></DictionaryLink> *symbol → plist* 
 
 
 
-**(setf (symbol-plist** *symbol***)** *new-plist***)** 
+**(setf (symbol-plist** <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>**)** *new-plist<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> 
 
 
 
@@ -18,11 +18,11 @@
 
 
 
-*symbol*—a *symbol*. 
+<GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>. 
 
 
 
-*plist*, *new-plist*—a *property list*. 
+<GlossaryTerm styled={true} term={"plist"}><i>plist</i></GlossaryTerm>, *new-plist*—a *property list*. 
 
 
 
@@ -30,7 +30,7 @@
 
 
 
-*Accesses* the *property list* of *symbol*. 
+*Accesses* the *property list* of <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>. 
 
 
 
@@ -51,7 +51,7 @@
 
 
 
-Should signal an error of *type* **type-error** if *symbol* is not a *symbol*. 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> is not a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>. 
 
 
 
@@ -59,7 +59,7 @@ Should signal an error of *type* **type-error** if *symbol* is not a *symbol*.
 
 
 
-**get**, **remprop** 
+<DictionaryLink styled={true} term={"get"}><b>get</b></DictionaryLink>, <DictionaryLink styled={true} term={"remprop"}><b>remprop</b></DictionaryLink> 
 
 
 
@@ -67,7 +67,7 @@ Should signal an error of *type* **type-error** if *symbol* is not a *symbol*.
 
 
 
-The use of **setf** should be avoided, since a *symbol*’s *property list* is a global resource that can contain information established and depended upon by unrelated programs in the same *Lisp image*. 
+The use of <DictionaryLink styled={true} term={"setf"}><b>setf</b></DictionaryLink> should be avoided, since a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>’s *property list* is a global resource that can contain information established and depended upon by unrelated programs in the same *Lisp image*. 
 
 
 
@@ -83,7 +83,7 @@ The use of **setf** should be avoided, since a *symbol*’s *property list* is a
 
 
 
-**symbol-value** 
+<DictionaryLink styled={true} term={"symbol-value"}><b>symbol-value</b></DictionaryLink> 
 
 
 

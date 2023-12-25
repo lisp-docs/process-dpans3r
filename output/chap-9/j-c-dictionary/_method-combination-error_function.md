@@ -1,4 +1,4 @@
-**method-combination-error** *Function* 
+**method-combination-error** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**method-combination-error** *format-control* &amp;rest *args → implementation-dependent* 
+<DictionaryLink styled={true} term={"method-combination-error"}><b>method-combination-error</b></DictionaryLink> *format-control* &amp;rest *args → implementation-dependent* 
 
 
 
@@ -26,15 +26,15 @@
 
 
 
-The *function* **method-combination-error** is used to signal an error in method combination. 
+The <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> <DictionaryLink styled={true} term={"method-combination-error"}><b>method-combination-error</b></DictionaryLink> is used to signal an error in method combination. 
 
 
 
-The error message is constructed by using a *format-control* suitable for **format** and any *args* to it. Because an implementation may need to add additional contextual information to the error message, **method-combination-error** should be called only within the dynamic extent of a method combination function. 
+The error message is constructed by using a *format-control* suitable for <DictionaryLink styled={true} term={"format"}><b>format</b></DictionaryLink> and any *args* to it. Because an implementation may need to add additional contextual information to the error message, <DictionaryLink styled={true} term={"method-combination-error"}><b>method-combination-error</b></DictionaryLink> should be called only within the dynamic extent of a method combination function. 
 
 
 
-Whether **method-combination-error** returns to its caller or exits via **throw** is *implementation dependent*. 
+Whether <DictionaryLink styled={true} term={"method-combination-error"}><b>method-combination-error</b></DictionaryLink> returns to its caller or exits via <DictionaryLink styled={true} term={"throw"}><b>throw</b></DictionaryLink> is *implementation dependent*. 
 
 
 
@@ -50,7 +50,7 @@ The debugger might be entered.
 
 
 
-**\*break-on-signals\*** 
+<DictionaryLink styled={true} term={"break-on-signals"}><b>\*break-on-signals\*</b></DictionaryLink> 
 
 
 
@@ -58,7 +58,7 @@ The debugger might be entered.
 
 
 
-**define-method-combination** 
+<DictionaryLink styled={true} term={"define-method-combination"}><b>define-method-combination</b></DictionaryLink> 
 
 
 
@@ -74,7 +74,7 @@ The debugger might be entered.
 
 
 
-**signal** 
+<DictionaryLink styled={true} term={"signal"}><b>signal</b></DictionaryLink> 
 
 
 

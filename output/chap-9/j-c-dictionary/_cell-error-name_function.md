@@ -1,4 +1,4 @@
-**cell-error-name** *Function* 
+**cell-error-name** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**cell-error-name** *condition → name* 
+<DictionaryLink styled={true} term={"cell-error-name"}><b>cell-error-name</b></DictionaryLink> *condition → name* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*condition*—a *condition* of *type* **cell-error**. 
+<GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"cell-error"}><b>cell-error</b></DictionaryLink>. 
 
 
 
-*name*—an *object*. 
+<GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -26,11 +26,11 @@
 
 
 
-Returns the *name* of the offending cell involved in the *situation* represented by *condition*. 
+Returns the <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> of the offending cell involved in the <GlossaryTerm styled={true} term={"situation"}><i>situation</i></GlossaryTerm> represented by <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm>. 
 
 
 
-The nature of the result depends on the specific *type* of *condition*. For example, if the *condition* is of *type* **unbound-variable**, the result is the *name* of the *unbound variable* which was being *accessed*, if the *condition* is of *type* **undefined-function**, this is the *name* of the *undefined function* which was being *accessed*, and if the *condition* is of *type* **unbound-slot**, this is the *name* of the *slot* which was being *accessed*. 
+The nature of the result depends on the specific <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm>. For example, if the <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> is of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"unbound-variable"}><b>unbound-variable</b></DictionaryLink>, the result is the <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> of the *unbound variable* which was being *accessed*, if the <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> is of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"undefined-function"}><b>undefined-function</b></DictionaryLink>, this is the <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> of the *undefined function* which was being *accessed*, and if the <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> is of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"unbound-slot"}><b>unbound-slot</b></DictionaryLink>, this is the <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> of the <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm> which was being *accessed*. 
 
 
 
@@ -38,7 +38,7 @@ The nature of the result depends on the specific *type* of *condition*. For exam
 
 
 
-**cell-error**, **unbound-slot**, **unbound-variable**, **undefined-function**, Section 9.1 (Condition System Concepts) 
+<DictionaryLink styled={true} term={"cell-error"}><b>cell-error</b></DictionaryLink>, <DictionaryLink styled={true} term={"unbound-slot"}><b>unbound-slot</b></DictionaryLink>, <DictionaryLink styled={true} term={"unbound-variable"}><b>unbound-variable</b></DictionaryLink>, <DictionaryLink styled={true} term={"undefined-function"}><b>undefined-function</b></DictionaryLink>, Section 9.1 (Condition System Concepts) 
 
 
 

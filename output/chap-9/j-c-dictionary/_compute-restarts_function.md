@@ -1,4 +1,4 @@
-**compute-restarts** *Function* 
+**compute-restarts** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**compute-restarts** &amp;optional *condition → restarts* 
+<DictionaryLink styled={true} term={"compute-restarts"}><b>compute-restarts</b></DictionaryLink> &amp;optional *condition → restarts* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*condition*—a *condition object*, or **nil**. 
+<GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm>—a *condition object*, or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
-*restarts*—a *list* of *restarts*. 
+<GlossaryTerm styled={true} term={"restart"}><i>restarts</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"restart"}><i>restarts</i></GlossaryTerm>. 
 
 
 
@@ -26,23 +26,23 @@
 
 
 
-**compute-restarts** uses the dynamic state of the program to compute a *list* of the *restarts* which are currently active. 
+<DictionaryLink styled={true} term={"compute-restarts"}><b>compute-restarts</b></DictionaryLink> uses the dynamic state of the program to compute a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of the <GlossaryTerm styled={true} term={"restart"}><i>restarts</i></GlossaryTerm> which are currently active. 
 
 
 
-The resulting *list* is ordered so that the innermost (more-recently established) restarts are nearer the head of the *list*. 
+The resulting <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> is ordered so that the innermost (more-recently established) restarts are nearer the head of the <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>. 
 
 
 
-When *condition* is *non-nil*, only those *restarts* are considered that are either explicitly associated with that *condition*, or not associated with any *condition*; that is, the excluded *restarts* are those that are associated with a non-empty set of *conditions* of which the given *condition* is not an *element*. If *condition* is **nil**, all *restarts* are considered. 
+When <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> is <GlossaryTerm styled={true} term={"non-nil"}><i>non-nil</i></GlossaryTerm>, only those <GlossaryTerm styled={true} term={"restart"}><i>restarts</i></GlossaryTerm> are considered that are either explicitly associated with that <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm>, or not associated with any <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm>; that is, the excluded <GlossaryTerm styled={true} term={"restart"}><i>restarts</i></GlossaryTerm> are those that are associated with a non-empty set of <GlossaryTerm styled={true} term={"condition"}><i>conditions</i></GlossaryTerm> of which the given <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> is not an <GlossaryTerm styled={true} term={"element"}><i>element</i></GlossaryTerm>. If <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> is <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>, all <GlossaryTerm styled={true} term={"restart"}><i>restarts</i></GlossaryTerm> are considered. 
 
 
 
-**compute-restarts** returns all *applicable restarts*, including anonymous ones, even if some of them have the same name as others and would therefore not be found by **find-restart** when given a *symbol* argument. 
+<DictionaryLink styled={true} term={"compute-restarts"}><b>compute-restarts</b></DictionaryLink> returns all *applicable restarts*, including anonymous ones, even if some of them have the same name as others and would therefore not be found by <DictionaryLink styled={true} term={"find-restart"}><b>find-restart</b></DictionaryLink> when given a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> argument. 
 
 
 
-Implementations are permitted, but not required, to return *distinct lists* from repeated calls to **compute-restarts** while in the same dynamic environment. The consequences are undefined if the *list* returned by **compute-restarts** is every modified. 
+Implementations are permitted, but not required, to return *distinct lists* from repeated calls to <DictionaryLink styled={true} term={"compute-restarts"}><b>compute-restarts</b></DictionaryLink> while in the same dynamic environment. The consequences are undefined if the <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> returned by <DictionaryLink styled={true} term={"compute-restarts"}><b>compute-restarts</b></DictionaryLink> is every modified. 
 
 
 
@@ -96,7 +96,7 @@ Existing restarts.
 
 
 
-**find-restart**, **invoke-restart**, **restart-bind** 
+<DictionaryLink styled={true} term={"find-restart"}><b>find-restart</b></DictionaryLink>, <DictionaryLink styled={true} term={"invoke-restart"}><b>invoke-restart</b></DictionaryLink>, <DictionaryLink styled={true} term={"restart-bind"}><b>restart-bind</b></DictionaryLink> 
 
 
 

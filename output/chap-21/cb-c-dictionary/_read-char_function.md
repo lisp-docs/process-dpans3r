@@ -1,4 +1,4 @@
-**read-char** *Function* 
+**read-char** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**read-char** &amp;optional *input-stream eof-error-p eof-value recursive-p → char* 
+<DictionaryLink styled={true} term={"read-char"}><b>read-char</b></DictionaryLink> &amp;optional *input-stream eof-error-p eof-value recursive-p → char* 
 
 
 
@@ -18,19 +18,19 @@
 
 
 
-*eof-error-p*—a *generalized boolean*. The default is *true*. 
+*eof-error-p*—a *generalized boolean*. The default is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>. 
 
 
 
-*eof-value*—an *object*. The default is **nil**. 
+*eof-value*—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. The default is <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
-*recursive-p*—a *generalized boolean*. The default is *false*. 
+*recursive-p*—a *generalized boolean*. The default is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
-*char*—a *character* or the *eof-value*. 
+*char*—a <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> or the *eof-value*. 
 
 
 
@@ -38,19 +38,19 @@
 
 
 
-**read-char** returns the next *character* from *input-stream*. 
+<DictionaryLink styled={true} term={"read-char"}><b>read-char</b></DictionaryLink> returns the next <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> from *input-stream*. 
 
 
 
-When *input-stream* is an *echo stream*, the character is echoed on *input-stream* the first time the character is seen. Characters that are not echoed by **read-char** are those that were put there by **unread-char** and hence are assumed to have been echoed already by a previous call to **read-char**. 
+When *input-stream* is an *echo stream*, the character is echoed on *input-stream* the first time the character is seen. Characters that are not echoed by <DictionaryLink styled={true} term={"read-char"}><b>read-char</b></DictionaryLink> are those that were put there by <DictionaryLink styled={true} term={"unread-char"}><b>unread-char</b></DictionaryLink> and hence are assumed to have been echoed already by a previous call to <DictionaryLink styled={true} term={"read-char"}><b>read-char</b></DictionaryLink>. 
 
 
 
-If *recursive-p* is *true*, this call is expected to be embedded in a higher-level call to **read** or a similar *function* used by the *Lisp reader* . 
+If *recursive-p* is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>, this call is expected to be embedded in a higher-level call to <DictionaryLink styled={true} term={"read"}><b>read</b></DictionaryLink> or a similar <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> used by the *Lisp reader* . 
 
 
 
-If an *end of file*<sub>2</sub> occurs and *eof-error-p* is *false*, *eof-value* is returned. 
+If an *end of file*<sub>2</sub> occurs and *eof-error-p* is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>, *eof-value* is returned. 
 
 
 
@@ -81,7 +81,7 @@ If an *end of file*<sub>2</sub> occurs and *eof-error-p* is *false*, *eof-value*
 
 
 
-**\*standard-input\***, **\*terminal-io\***. 
+**\*standard-input\***, <DictionaryLink styled={true} term={"terminal-io"}><b>\*terminal-io\*</b></DictionaryLink>. 
 
 
 
@@ -89,7 +89,7 @@ If an *end of file*<sub>2</sub> occurs and *eof-error-p* is *false*, *eof-value*
 
 
 
-If an *end of file*<sub>2</sub> occurs before a character can be read, and *eof-error-p* is *true*, an error of *type* **end-of-file** is signaled. 
+If an *end of file*<sub>2</sub> occurs before a character can be read, and *eof-error-p* is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>, an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"end-of-file"}><b>end-of-file</b></DictionaryLink> is signaled. 
 
 
 
@@ -97,7 +97,7 @@ If an *end of file*<sub>2</sub> occurs before a character can be read, and *eof-
 
 
 
-**read-byte**, **read-sequence**, **write-char**, **read** 
+<DictionaryLink styled={true} term={"read-byte"}><b>read-byte</b></DictionaryLink>, <DictionaryLink styled={true} term={"read-sequence"}><b>read-sequence</b></DictionaryLink>, <DictionaryLink styled={true} term={"write-char"}><b>write-char</b></DictionaryLink>, <DictionaryLink styled={true} term={"read"}><b>read</b></DictionaryLink> 
 
 
 
@@ -105,7 +105,7 @@ If an *end of file*<sub>2</sub> occurs before a character can be read, and *eof-
 
 
 
-The corresponding output function is **write-char**. 
+The corresponding output function is <DictionaryLink styled={true} term={"write-char"}><b>write-char</b></DictionaryLink>. 
 
 
 

@@ -1,4 +1,4 @@
-**dotimes** *Macro* 
+**dotimes** <GlossaryTerm styled={true} term={"macro"}><i>Macro</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**dotimes** (*var count-form* [*result-form*]) *\{declaration\}*\* *\{tag | statement\}*\* 
+<DictionaryLink styled={true} term={"dotimes"}><b>dotimes</b></DictionaryLink> (*var count-form* [*result-form*]) <GlossaryTerm styled={true} term={"declaration"}><i>\{declaration\}</i></GlossaryTerm>\* *\{tag | statement\}*\* 
 
 
 
@@ -18,23 +18,23 @@
 
 
 
-*var*—a *symbol*. 
+*var*—a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>. 
 
 
 
-*count-form*—a *form*. 
+*count-form*—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>. 
 
 
 
-*result-form*—a *form*. 
+*result-form*—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>. 
 
 
 
-*declaration*—a **declare** *expression*; not evaluated. 
+<GlossaryTerm styled={true} term={"declaration"}><i>declaration</i></GlossaryTerm>—a <DictionaryLink styled={true} term={"declare"}><b>declare</b></DictionaryLink> <GlossaryTerm styled={true} term={"expression"}><i>expression</i></GlossaryTerm>; not evaluated. 
 
 
 
-*tag*—a *go tag*; not evaluated. 
+<GlossaryTerm styled={true} term={"tag"}><i>tag</i></GlossaryTerm>—a *go tag*; not evaluated. 
 
 
 
@@ -42,7 +42,7 @@
 
 
 
-*results*—if a **return** or **return-from** form is executed, the *values* passed from that *form*; otherwise, the *values* returned by the *result-form* or **nil** if there is no *result-form*. 
+*results*—if a <DictionaryLink styled={true} term={"return"}><b>return</b></DictionaryLink> or <DictionaryLink styled={true} term={"return-from"}><b>return-from</b></DictionaryLink> form is executed, the <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> passed from that <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>; otherwise, the <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> returned by the *result-form* or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> if there is no *result-form*. 
 
 
 
@@ -50,31 +50,31 @@
 
 
 
-**dotimes** iterates over a series of *integers*. 
+<DictionaryLink styled={true} term={"dotimes"}><b>dotimes</b></DictionaryLink> iterates over a series of *integers*. 
 
 
 
-**dotimes** evaluates *count-form*, which should produce an *integer* . If *count-form* is zero or negative, the body is not executed. **dotimes** then executes the body once for each *integer* from 0 up to but not including the value of *count-form*, in the order in which the *tags* and *statements* occur, with *var* 
+<DictionaryLink styled={true} term={"dotimes"}><b>dotimes</b></DictionaryLink> evaluates *count-form*, which should produce an *integer* . If *count-form* is zero or negative, the body is not executed. <DictionaryLink styled={true} term={"dotimes"}><b>dotimes</b></DictionaryLink> then executes the body once for each *integer* from 0 up to but not including the value of *count-form*, in the order in which the <GlossaryTerm styled={true} term={"tag"}><i>tags</i></GlossaryTerm> and *statements* occur, with *var* 
 
 
 
-bound to each *integer* . Then *result-form* is evaluated. At the time *result-form* is processed, *var* is bound to the number of times the body was executed. *Tags* label *statements*. 
+bound to each *integer* . Then *result-form* is evaluated. At the time *result-form* is processed, *var* is bound to the number of times the body was executed. <GlossaryTerm styled={true} term={"tag"}><i>Tags</i></GlossaryTerm> label *statements*. 
 
 
 
-An *implicit block* named **nil** surrounds **dotimes**. **return** may be used to terminate the loop immediately without performing any further iterations, returning zero or more *values*. 
+An *implicit block* named <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> surrounds <DictionaryLink styled={true} term={"dotimes"}><b>dotimes</b></DictionaryLink>. <DictionaryLink styled={true} term={"return"}><b>return</b></DictionaryLink> may be used to terminate the loop immediately without performing any further iterations, returning zero or more <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm>. 
 
 
 
-The body of the loop is an *implicit tagbody*; it may contain tags to serve as the targets of **go** statements. Declarations may appear before the body of the loop. 
+The body of the loop is an *implicit tagbody*; it may contain tags to serve as the targets of <DictionaryLink styled={true} term={"go"}><b>go</b></DictionaryLink> statements. Declarations may appear before the body of the loop. 
 
 
 
-The *scope* of the binding of *var* does not include the *count-form*, but the *result-form* is included. 
+The <GlossaryTerm styled={true} term={"scope"}><i>scope</i></GlossaryTerm> of the binding of *var* does not include the *count-form*, but the *result-form* is included. 
 
 
 
-It is *implementation-dependent* whether **dotimes** *establishes* a new *binding* of *var* on each iteration or whether it *establishes* a binding for *var* once at the beginning and then *assigns* it on any subsequent iterations. 
+It is <GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm> whether <DictionaryLink styled={true} term={"dotimes"}><b>dotimes</b></DictionaryLink> *establishes* a new <GlossaryTerm styled={true} term={"binding"}><i>binding</i></GlossaryTerm> of *var* on each iteration or whether it *establishes* a binding for *var* once at the beginning and then <GlossaryTerm styled={true} term={"assign"}><i>assigns</i></GlossaryTerm> it on any subsequent iterations. 
 
 
 
@@ -130,7 +130,7 @@ a yam, a hat, a canal–Panama!")) *→* T
 
 
 
-**do**, **dolist**, **tagbody** 
+<DictionaryLink styled={true} term={"do"}><b>do</b></DictionaryLink>, <DictionaryLink styled={true} term={"dolist"}><b>dolist</b></DictionaryLink>, <DictionaryLink styled={true} term={"tagbody"}><b>tagbody</b></DictionaryLink> 
 
 
 
@@ -138,7 +138,7 @@ a yam, a hat, a canal–Panama!")) *→* T
 
 
 
-**go** may be used within the body of **dotimes** to transfer control to a statement labeled by a *tag*. 
+<DictionaryLink styled={true} term={"go"}><b>go</b></DictionaryLink> may be used within the body of <DictionaryLink styled={true} term={"dotimes"}><b>dotimes</b></DictionaryLink> to transfer control to a statement labeled by a <GlossaryTerm styled={true} term={"tag"}><i>tag</i></GlossaryTerm>. 
 
 
 
@@ -150,7 +150,7 @@ a yam, a hat, a canal–Panama!")) *→* T
 
 
 
-**dolist** 
+<DictionaryLink styled={true} term={"dolist"}><b>dolist</b></DictionaryLink> 
 
 
 

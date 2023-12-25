@@ -2,11 +2,11 @@
 
 
 
-For each of the “read-modify-write” *operators* in Figure 5–9, and for any additional *macros* defined by the *programmer* using **define-modify-macro**, an exception is made to the normal rule of left-to-right evaluation of arguments. Evaluation of *argument forms* occurs in left-to-right order, with the exception that for the *place argument*, the actual *read* of the “old value” from that *place* happens after all of the *argument form evaluations*, and just before a “new value” is computed and *written* back into the *place*. 
+For each of the “read-modify-write” <GlossaryTerm styled={true} term={"operator"}><i>operators</i></GlossaryTerm> in Figure 5–9, and for any additional <GlossaryTerm styled={true} term={"macro"}><i>macros</i></GlossaryTerm> defined by the <GlossaryTerm styled={true} term={"programmer"}><i>programmer</i></GlossaryTerm> using <DictionaryLink styled={true} term={"define-modify-macro"}><b>define-modify-macro</b></DictionaryLink>, an exception is made to the normal rule of left-to-right evaluation of arguments. Evaluation of *argument forms* occurs in left-to-right order, with the exception that for the *place argument*, the actual <GlossaryTerm styled={true} term={"read"}><i>read</i></GlossaryTerm> of the “old value” from that <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm> happens after all of the *argument form evaluations*, and just before a “new value” is computed and *written* back into the <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm>. 
 
 
 
-Specifically, each of these *operators* can be viewed as involving a *form* with the following general syntax: 
+Specifically, each of these <GlossaryTerm styled={true} term={"operator"}><i>operators</i></GlossaryTerm> can be viewed as involving a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> with the following general syntax: 
 
 
 
@@ -14,23 +14,23 @@ Specifically, each of these *operators* can be viewed as involving a *form* with
 
 
 
-The evaluation of each such *form* proceeds like this: 
+The evaluation of each such <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> proceeds like this: 
 
 
 
-1\. *Evaluate* each of the *preceding-forms*, in left-to-right order. 
+1\. <GlossaryTerm styled={true} term={"evaluate"}><i>Evaluate</i></GlossaryTerm> each of the *preceding-forms*, in left-to-right order. 
 
 
 
-2\. *Evaluate* the *subforms* of the *place*, in the order specified by the second value of the *setf expansion* for that *place*. 
+2\. <GlossaryTerm styled={true} term={"evaluate"}><i>Evaluate</i></GlossaryTerm> the <GlossaryTerm styled={true} term={"subform"}><i>subforms</i></GlossaryTerm> of the <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm>, in the order specified by the second value of the *setf expansion* for that <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm>. 
 
 
 
-3\. *Evaluate* each of the *following-forms*, in left-to-right order. 
+3\. <GlossaryTerm styled={true} term={"evaluate"}><i>Evaluate</i></GlossaryTerm> each of the *following-forms*, in left-to-right order. 
 
 
 
-4\. *Read* the old value from *place*. 
+4\. <GlossaryTerm styled={true} term={"read"}><i>Read</i></GlossaryTerm> the old value from <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm>. 
 
 
 
@@ -38,7 +38,7 @@ The evaluation of each such *form* proceeds like this:
 
 
 
-6\. Store the new value into *place*. 
+6\. Store the new value into <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm>. 
 
 
 

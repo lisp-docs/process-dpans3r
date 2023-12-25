@@ -6,7 +6,7 @@
 
 
 
-If an unsigned decimal integer appears between the # and (, it specifies explicitly the length of the *vector* . The consequences are undefined if the number of *objects* specified before the closing ) exceeds the unsigned decimal integer. If the number of *objects* supplied before the closing ) is less than the unsigned decimal integer but greater than zero, the last *object* is used to fill all remaining elements of the *vector* . The consequences are undefined if the unsigned decimal integer is non-zero and number of *objects* supplied before the closing ) is zero. For example, 
+If an unsigned decimal integer appears between the # and (, it specifies explicitly the length of the <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm> . The consequences are undefined if the number of <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm> specified before the closing ) exceeds the unsigned decimal integer. If the number of <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm> supplied before the closing ) is less than the unsigned decimal integer but greater than zero, the last <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is used to fill all remaining elements of the <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm> . The consequences are undefined if the unsigned decimal integer is non-zero and number of <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm> supplied before the closing ) is zero. For example, 
 
 
 
@@ -30,7 +30,7 @@ If an unsigned decimal integer appears between the # and (, it specifies explici
 
 
 
-all mean the same thing: a *vector* of length 6 with *elements* a, b, and four occurrences of c. Other examples follow: 
+all mean the same thing: a <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm> of length 6 with <GlossaryTerm styled={true} term={"element"}><i>elements</i></GlossaryTerm> a, b, and four occurrences of c. Other examples follow: 
 
 
 
@@ -50,11 +50,11 @@ all mean the same thing: a *vector* of length 6 with *elements* a, b, and four o
 
 
 
-The notation #() denotes an empty *vector* , as does #0(). 
+The notation #() denotes an empty <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm> , as does #0(). 
 
 
 
-For information on how the *Lisp printer* prints *vectors*, see Section 22.1.3.4 (Printing Strings), Section 22.1.3.6 (Printing Bit Vectors), or Section 22.1.3.7 (Printing Other Vectors). 
+For information on how the *Lisp printer* prints <GlossaryTerm styled={true} term={"vector"}><i>vectors</i></GlossaryTerm>, see Section 22.1.3.4 (Printing Strings), Section 22.1.3.6 (Printing Bit Vectors), or Section 22.1.3.7 (Printing Other Vectors). 
 
 
 

@@ -1,4 +1,4 @@
-**unexport** *Function* 
+**unexport** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**unexport** *symbols* &amp;optional *package →* **t** 
+<DictionaryLink styled={true} term={"unexport"}><b>unexport</b></DictionaryLink> <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> &amp;optional *package →* <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink> 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*symbols*—a *designator* for a *list* of *symbols*. 
+<GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"designator"}><i>designator</i></GlossaryTerm> for a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm>. 
 
 
 
-*package*—a *package designator* . The default is the *current package*. 
+<GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>—a *package designator* . The default is the *current package*. 
 
 
 
@@ -26,11 +26,11 @@
 
 
 
-**unexport** reverts external *symbols* in *package* to internal status; it undoes the effect of **export**. 
+<DictionaryLink styled={true} term={"unexport"}><b>unexport</b></DictionaryLink> reverts external <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> in <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> to internal status; it undoes the effect of <DictionaryLink styled={true} term={"export"}><b>export</b></DictionaryLink>. 
 
 
 
-**unexport** works only on *symbols present* in *package*, switching them back to internal status. If **unexport** is given a *symbol* that is already *accessible* as an *internal symbol* in *package*, it does nothing. 
+<DictionaryLink styled={true} term={"unexport"}><b>unexport</b></DictionaryLink> works only on *symbols present* in <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>, switching them back to internal status. If <DictionaryLink styled={true} term={"unexport"}><b>unexport</b></DictionaryLink> is given a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> that is already <GlossaryTerm styled={true} term={"accessible"}><i>accessible</i></GlossaryTerm> as an *internal symbol* in <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>, it does nothing. 
 
 
 
@@ -66,11 +66,11 @@ Current state of the package system.
 
 
 
-If **unexport** is given a *symbol* not *accessible* in *package* at all, an error of *type* **package-error** is signaled. 
+If <DictionaryLink styled={true} term={"unexport"}><b>unexport</b></DictionaryLink> is given a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> not <GlossaryTerm styled={true} term={"accessible"}><i>accessible</i></GlossaryTerm> in <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> at all, an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"package-error"}><b>package-error</b></DictionaryLink> is signaled. 
 
 
 
-The consequences are undefined if *package* is the KEYWORD *package* or the COMMON-LISP *package*. 
+The consequences are undefined if <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> is the KEYWORD <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> or the COMMON-LISP <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>. 
 
 
 
@@ -86,7 +86,7 @@ The consequences are undefined if *package* is the KEYWORD *package* or the COMM
 
 
 
-**export**, Section 11.1 (Package Concepts) 
+<DictionaryLink styled={true} term={"export"}><b>export</b></DictionaryLink>, Section 11.1 (Package Concepts) 
 
 
 

@@ -6,7 +6,7 @@
 
 
 
-**character**, **t** 
+<DictionaryLink styled={true} term={"character"}><b>character</b></DictionaryLink>, <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink> 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-A *character* is an *object* that represents a unitary token in an aggregate quantity of text; see Section 13.1 (Character Concepts). 
+A <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> is an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> that represents a unitary token in an aggregate quantity of text; see Section 13.1 (Character Concepts). 
 
 
 
-The *types* **base-char** and **extended-char** form an *exhaustive partition* of the *type* **character**. 
+The <GlossaryTerm styled={true} term={"type"}><i>types</i></GlossaryTerm> <DictionaryLink styled={true} term={"base-char"}><b>base-char</b></DictionaryLink> and <DictionaryLink styled={true} term={"extended-char"}><b>extended-char</b></DictionaryLink> form an *exhaustive partition* of the <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"character"}><b>character</b></DictionaryLink>. 
 
 
 

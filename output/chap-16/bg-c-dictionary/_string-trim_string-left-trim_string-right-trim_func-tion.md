@@ -6,15 +6,15 @@
 
 
 
-**string-trim** *character-bag string → trimmed-string* 
+<DictionaryLink styled={true} term={"string-trim"}><b>string-trim</b></DictionaryLink> *character-bag string → trimmed-string* 
 
 
 
-**string-left-trim** *character-bag string → trimmed-string* 
+<DictionaryLink styled={true} term={"string-left-trim"}><b>string-left-trim</b></DictionaryLink> *character-bag string → trimmed-string* 
 
 
 
-**string-right-trim** *character-bag string → trimmed-string* 
+<DictionaryLink styled={true} term={"string-right-trim"}><b>string-right-trim</b></DictionaryLink> *character-bag string → trimmed-string* 
 
 
 
@@ -22,15 +22,15 @@
 
 
 
-*character-bag*—a *sequence* containing *characters*. 
+*character-bag*—a *sequence* containing <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm>. 
 
 
 
-*string*—a *string designator* . 
+<GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>—a *string designator* . 
 
 
 
-*trimmed-string*—a *string*. 
+*trimmed-string*—a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>. 
 
 
 
@@ -38,15 +38,15 @@
 
 
 
-**string-trim** returns a substring of *string*, with all characters in *character-bag* stripped off the beginning and end. **string-left-trim** is similar but strips characters off only the beginning; **string-right-trim** strips off only the end. 
+<DictionaryLink styled={true} term={"string-trim"}><b>string-trim</b></DictionaryLink> returns a substring of <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>, with all characters in *character-bag* stripped off the beginning and end. <DictionaryLink styled={true} term={"string-left-trim"}><b>string-left-trim</b></DictionaryLink> is similar but strips characters off only the beginning; <DictionaryLink styled={true} term={"string-right-trim"}><b>string-right-trim</b></DictionaryLink> strips off only the end. 
 
 
 
-If no *characters* need to be trimmed from the *string*, then either *string* itself or a copy of it may be returned, at the discretion of the implementation. 
+If no <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm> need to be trimmed from the <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>, then either <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> itself or a copy of it may be returned, at the discretion of the implementation. 
 
 
 
-All of these *functions* observe the *fill pointer* . 
+All of these <GlossaryTerm styled={true} term={"function"}><i>functions</i></GlossaryTerm> observe the *fill pointer* . 
 
 
 
@@ -72,7 +72,7 @@ All of these *functions* observe the *fill pointer* .
 
 
 
-The *implementation*. 
+The <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm>. 
 
 
 
@@ -84,27 +84,27 @@ The *implementation*.
 
 
 
-**string**= *string1 string2* &amp;key *start1 end1 start2 end2 → generalized-boolean* 
+<DictionaryLink styled={true} term={"string"}><b>string</b></DictionaryLink>= *string1 string2* &amp;key *start1 end1 start2 end2 → generalized-boolean* 
 
 
 
-**string/**= *string1 string2* &amp;key *start1 end1 start2 end2 → mismatch-index* 
+<DictionaryLink styled={true} term={"string"}><b>string/</b></DictionaryLink>= *string1 string2* &amp;key *start1 end1 start2 end2 → mismatch-index* 
 
 
 
-**string**&lt; *string1 string2* &amp;key *start1 end1 start2 end2 → mismatch-index* 
+<DictionaryLink styled={true} term={"string"}><b>string</b></DictionaryLink>&lt; *string1 string2* &amp;key *start1 end1 start2 end2 → mismatch-index* 
 
 
 
-**string**&gt; *string1 string2* &amp;key *start1 end1 start2 end2 → mismatch-index* 
+<DictionaryLink styled={true} term={"string"}><b>string</b></DictionaryLink>&gt; *string1 string2* &amp;key *start1 end1 start2 end2 → mismatch-index* 
 
 
 
-**string**&lt;= *string1 string2* &amp;key *start1 end1 start2 end2 → mismatch-index* 
+<DictionaryLink styled={true} term={"string"}><b>string</b></DictionaryLink>&lt;= *string1 string2* &amp;key *start1 end1 start2 end2 → mismatch-index* 
 
 
 
-**string**&gt;= *string1 string2* &amp;key *start1 end1 start2 end2 → mismatch-index* 
+<DictionaryLink styled={true} term={"string"}><b>string</b></DictionaryLink>&gt;= *string1 string2* &amp;key *start1 end1 start2 end2 → mismatch-index* 
 
 
 
@@ -128,11 +128,11 @@ The *implementation*.
 
 
 
-*start1*, *end1*—*bounding index designators* of *string1*. The defaults for *start* and *end* are 0 and **nil**, respectively. 
+*start1*, *end1*—*bounding index designators* of *string1*. The defaults for *start* and *end* are 0 and <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>, respectively. 
 
 
 
-*start2*, *end2*—*bounding index designators* of *string2*. The defaults for *start* and *end* are 0 and **nil**, respectively. 
+*start2*, *end2*—*bounding index designators* of *string2*. The defaults for *start* and *end* are 0 and <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>, respectively. 
 
 
 
@@ -140,7 +140,7 @@ The *implementation*.
 
 
 
-*mismatch-index*—a *bounding index* of *string1*, or **nil**. 
+*mismatch-index*—a *bounding index* of *string1*, or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -148,7 +148,7 @@ The *implementation*.
 
 
 
-These functions perform lexicographic comparisons on *string1* and *string2*. **string=** and **string-equal** are called equality functions; the others are called inequality functions. The 
+These functions perform lexicographic comparisons on *string1* and *string2*. <DictionaryLink styled={true} term={"string"}><b>string=</b></DictionaryLink> and **string-equal** are called equality functions; the others are called inequality functions. The 
 
 
 
@@ -168,23 +168,23 @@ These functions perform lexicographic comparisons on *string1* and *string2*. **
 
 
 
-comparison operations these *functions* perform are restricted to the subsequence of *string1 bounded* by *start1* and *end1* and to the subsequence of *string2 bounded* by *start2* and *end2*. 
+comparison operations these <GlossaryTerm styled={true} term={"function"}><i>functions</i></GlossaryTerm> perform are restricted to the subsequence of *string1 bounded* by *start1* and *end1* and to the subsequence of *string2 bounded* by *start2* and *end2*. 
 
 
 
-A string *a* is equal to a string *b* if it contains the same number of characters, and the corresponding characters are the *same* under **char=** or **char-equal**, as appropriate. 
+A string *a* is equal to a string *b* if it contains the same number of characters, and the corresponding characters are the <GlossaryTerm styled={true} term={"same"}><i>same</i></GlossaryTerm> under <DictionaryLink styled={true} term={"char="}><b>char=</b></DictionaryLink> or <DictionaryLink styled={true} term={"char-equal"}><b>char-equal</b></DictionaryLink>, as appropriate. 
 
 
 
-A string *a* is less than a string *b* if in the first position in which they differ the character of *a* is less than the corresponding character of *b* according to **char**&lt; or **char-lessp** as appropriate, or if string *a* is a proper prefix of string *b* (of shorter length and matching in all the characters of *a*). 
+A string *a* is less than a string *b* if in the first position in which they differ the character of *a* is less than the corresponding character of *b* according to <DictionaryLink styled={true} term={"char"}><b>char</b></DictionaryLink>&lt; or <DictionaryLink styled={true} term={"char-lessp"}><b>char-lessp</b></DictionaryLink> as appropriate, or if string *a* is a proper prefix of string *b* (of shorter length and matching in all the characters of *a*). 
 
 
 
-The equality functions return a *generalized boolean* that is *true* if the strings are equal, or *false* otherwise. 
+The equality functions return a *generalized boolean* that is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if the strings are equal, or <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm> otherwise. 
 
 
 
-The inequality functions return a *mismatch-index* that is *true* if the strings are not equal, or *false* otherwise. When the *mismatch-index* is *true*, it is an *integer* representing the first character position at which the two substrings differ, as an offset from the beginning of *string1*. 
+The inequality functions return a *mismatch-index* that is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if the strings are not equal, or <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm> otherwise. When the *mismatch-index* is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>, it is an *integer* representing the first character position at which the two substrings differ, as an offset from the beginning of *string1*. 
 
 
 
@@ -192,19 +192,19 @@ The comparison has one of the following results:
 
 
 
-**string=** 
+<DictionaryLink styled={true} term={"string"}><b>string=</b></DictionaryLink> 
 
 
 
-**string=** is *true* if the supplied substrings are of the same length and contain the *same* characters in corresponding positions; otherwise it is *false*. 
+<DictionaryLink styled={true} term={"string"}><b>string=</b></DictionaryLink> is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if the supplied substrings are of the same length and contain the <GlossaryTerm styled={true} term={"same"}><i>same</i></GlossaryTerm> characters in corresponding positions; otherwise it is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
-**string/=** 
+<DictionaryLink styled={true} term={"string"}><b>string/=</b></DictionaryLink> 
 
 
 
-**string/=** is *true* if the supplied substrings are different; otherwise it is *false*. 
+<DictionaryLink styled={true} term={"string"}><b>string/=</b></DictionaryLink> is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if the supplied substrings are different; otherwise it is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
@@ -212,23 +212,23 @@ The comparison has one of the following results:
 
 
 
-**string-equal** is just like **string=** except that differences in case are ignored; two characters are considered to be the same if **char-equal** is *true* of them. 
+**string-equal** is just like <DictionaryLink styled={true} term={"string"}><b>string=</b></DictionaryLink> except that differences in case are ignored; two characters are considered to be the same if <DictionaryLink styled={true} term={"char-equal"}><b>char-equal</b></DictionaryLink> is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> of them. 
 
 
 
-**string**&lt; 
+<DictionaryLink styled={true} term={"string"}><b>string</b></DictionaryLink>&lt; 
 
 
 
-**string**&lt; is *true* if substring1 is less than substring2; otherwise it is *false*. 
+<DictionaryLink styled={true} term={"string"}><b>string</b></DictionaryLink>&lt; is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if substring1 is less than substring2; otherwise it is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
-**string**&gt; 
+<DictionaryLink styled={true} term={"string"}><b>string</b></DictionaryLink>&gt; 
 
 
 
-**string**&gt; is *true* if substring1 is greater than substring2; otherwise it is *false*. 
+<DictionaryLink styled={true} term={"string"}><b>string</b></DictionaryLink>&gt; is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if substring1 is greater than substring2; otherwise it is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
@@ -236,19 +236,15 @@ The comparison has one of the following results:
 
 
 
-**string-lessp** and **string-greaterp** are exactly like **string**&lt; and **string**&gt;, respectively, except that distinctions between uppercase and lowercase letters are ignored. It is as if **char-lessp** were used instead of **char**&lt; for comparing characters. 
+**string-lessp** and **string-greaterp** are exactly like <DictionaryLink styled={true} term={"string"}><b>string</b></DictionaryLink>&lt; and <DictionaryLink styled={true} term={"string"}><b>string</b></DictionaryLink>&gt;, respectively, except that distinctions between uppercase and lowercase letters are ignored. It is as if <DictionaryLink styled={true} term={"char-lessp"}><b>char-lessp</b></DictionaryLink> were used instead of <DictionaryLink styled={true} term={"char"}><b>char</b></DictionaryLink>&lt; for comparing characters. 
 
 
 
-**string**&lt;**=** 
+<DictionaryLink styled={true} term={"string"}><b>string</b></DictionaryLink>&lt;<DictionaryLink styled={true} term={"="}><b>=</b></DictionaryLink> 
 
 
 
-**string**&lt;**=** is *true* if substring1 is less than or equal to substring2; otherwise it is *false*. 
-
-
-
- 
+<DictionaryLink styled={true} term={"string"}><b>string</b></DictionaryLink>&lt;<DictionaryLink styled={true} term={"="}><b>=</b></DictionaryLink> is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if substring1 is less than or equal to substring2; otherwise it is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
@@ -256,15 +252,19 @@ The comparison has one of the following results:
 
 
 
-**string**&gt;**=** 
+ 
 
 
 
-**string**&gt;**=** is *true* if substring1 is greater than or equal to substring2; otherwise it is *false*. **string-not-greaterp**, **string-not-lessp** 
+<DictionaryLink styled={true} term={"string"}><b>string</b></DictionaryLink>&gt;<DictionaryLink styled={true} term={"="}><b>=</b></DictionaryLink> 
 
 
 
-**string-not-greaterp** and **string-not-lessp** are exactly like **string**&lt;**=** and **string**&gt;**=**, respectively, except that distinctions between uppercase and lowercase letters are ignored. It is as if **char-lessp** were used instead of **char**&lt; for comparing characters. 
+<DictionaryLink styled={true} term={"string"}><b>string</b></DictionaryLink>&gt;<DictionaryLink styled={true} term={"="}><b>=</b></DictionaryLink> is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if substring1 is greater than or equal to substring2; otherwise it is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. **string-not-greaterp**, **string-not-lessp** 
+
+
+
+**string-not-greaterp** and **string-not-lessp** are exactly like <DictionaryLink styled={true} term={"string"}><b>string</b></DictionaryLink>&lt;<DictionaryLink styled={true} term={"="}><b>=</b></DictionaryLink> and <DictionaryLink styled={true} term={"string"}><b>string</b></DictionaryLink>&gt;<DictionaryLink styled={true} term={"="}><b>=</b></DictionaryLink>, respectively, except that distinctions between uppercase and lowercase letters are ignored. It is as if <DictionaryLink styled={true} term={"char-lessp"}><b>char-lessp</b></DictionaryLink> were used instead of <DictionaryLink styled={true} term={"char"}><b>char</b></DictionaryLink>&lt; for comparing characters. 
 
 
 
@@ -289,7 +289,7 @@ The comparison has one of the following results:
 
 
 
-**char=** 
+<DictionaryLink styled={true} term={"char="}><b>char=</b></DictionaryLink> 
 
 
 
@@ -297,7 +297,7 @@ The comparison has one of the following results:
 
 
 
-**equal** calls **string=** if applied to two *strings*. 
+<DictionaryLink styled={true} term={"equal"}><b>equal</b></DictionaryLink> calls <DictionaryLink styled={true} term={"string"}><b>string=</b></DictionaryLink> if applied to two <GlossaryTerm styled={true} term={"string"}><i>strings</i></GlossaryTerm>. 
 
 
 

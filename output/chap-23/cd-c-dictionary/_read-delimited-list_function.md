@@ -1,4 +1,4 @@
-**read-delimited-list** *Function* 
+**read-delimited-list** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**read-delimited-list** *char* &amp;optional *input-stream recursive-p → list* 
+<DictionaryLink styled={true} term={"read-delimited-list"}><b>read-delimited-list</b></DictionaryLink> *char* &amp;optional *input-stream recursive-p → list* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*char*—a *character* . 
+*char*—a <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> . 
 
 
 
@@ -22,19 +22,15 @@
 
 
 
-*recursive-p*—a *generalized boolean*. The default is *false*. 
+*recursive-p*—a *generalized boolean*. The default is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
-*list*—a *list* of the *objects* read. 
-
-
+<GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of the <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm> read. 
 
 
 
 
-
- 
 
 
 
@@ -42,7 +38,11 @@
 
 
 
-**read-delimited-list** 
+ 
+
+
+
+<DictionaryLink styled={true} term={"read-delimited-list"}><b>read-delimited-list</b></DictionaryLink> 
 
 
 
@@ -50,23 +50,23 @@
 
 
 
-**read-delimited-list** reads *objects* from *input-stream* until the next character after an *object*’s representation (ignoring *whitespace*<sub>2</sub> characters and comments) is *char*. 
+<DictionaryLink styled={true} term={"read-delimited-list"}><b>read-delimited-list</b></DictionaryLink> reads <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm> from *input-stream* until the next character after an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>’s representation (ignoring <GlossaryTerm styled={true} term={"whitespace"}><i>whitespace</i></GlossaryTerm><sub>2</sub> characters and comments) is *char*. 
 
 
 
-**read-delimited-list** looks ahead at each step for the next non-*whitespace*<sub>2</sub> *character* and peeks at it as if with **peek-char**. If it is *char*, then the *character* is consumed and the *list* of *objects* is returned. If it is a *constituent* or *escape character* , then **read** is used to read an *object*, which is added to the end of the *list*. If it is a *macro character* , its *reader macro function* is called; if the function returns a *value*, that *value* is added to the *list*. The peek-ahead process is then repeated. 
+<DictionaryLink styled={true} term={"read-delimited-list"}><b>read-delimited-list</b></DictionaryLink> looks ahead at each step for the next non-<GlossaryTerm styled={true} term={"whitespace"}><i>whitespace</i></GlossaryTerm><sub>2</sub> <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> and peeks at it as if with <DictionaryLink styled={true} term={"peek-char"}><b>peek-char</b></DictionaryLink>. If it is *char*, then the <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> is consumed and the <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm> is returned. If it is a <GlossaryTerm styled={true} term={"constituent"}><i>constituent</i></GlossaryTerm> or *escape character* , then <DictionaryLink styled={true} term={"read"}><b>read</b></DictionaryLink> is used to read an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>, which is added to the end of the <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>. If it is a *macro character* , its *reader macro function* is called; if the function returns a <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm>, that <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> is added to the <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>. The peek-ahead process is then repeated. 
 
 
 
-If *recursive-p* is *true*, this call is expected to be embedded in a higher-level call to **read** or a similar function. 
+If *recursive-p* is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>, this call is expected to be embedded in a higher-level call to <DictionaryLink styled={true} term={"read"}><b>read</b></DictionaryLink> or a similar function. 
 
 
 
-It is an error to reach end-of-file during the operation of **read-delimited-list**. 
+It is an error to reach end-of-file during the operation of <DictionaryLink styled={true} term={"read-delimited-list"}><b>read-delimited-list</b></DictionaryLink>. 
 
 
 
-The consequences are undefined if *char* has a *syntax type* of *whitespace*<sub>2</sub> in the *current readtable*. **Examples:**
+The consequences are undefined if *char* has a *syntax type* of <GlossaryTerm styled={true} term={"whitespace"}><i>whitespace</i></GlossaryTerm><sub>2</sub> in the *current readtable*. **Examples:**
 ```lisp
 
 (read-delimited-list #\]) 1 2 3 4 5 6 ] 
@@ -97,7 +97,7 @@ This can be done by specifying a macro-character definition for #\&#123; that do
 
 
 
-**\*standard-input\***, **\*readtable\***, **\*terminal-io\***. 
+**\*standard-input\***, <DictionaryLink styled={true} term={"readtable"}><b>\*readtable\*</b></DictionaryLink>, <DictionaryLink styled={true} term={"terminal-io"}><b>\*terminal-io\*</b></DictionaryLink>. 
 
 
 
@@ -105,7 +105,7 @@ This can be done by specifying a macro-character definition for #\&#123; that do
 
 
 
-**read**, **peek-char**, **read-char**, **unread-char**. 
+<DictionaryLink styled={true} term={"read"}><b>read</b></DictionaryLink>, <DictionaryLink styled={true} term={"peek-char"}><b>peek-char</b></DictionaryLink>, <DictionaryLink styled={true} term={"read-char"}><b>read-char</b></DictionaryLink>, <DictionaryLink styled={true} term={"unread-char"}><b>unread-char</b></DictionaryLink>. 
 
 
 
@@ -113,7 +113,7 @@ This can be done by specifying a macro-character definition for #\&#123; that do
 
 
 
-**read-delimited-list** is intended for use in implementing *reader macros*. Usually it is desirable for *char* to be a *terminating macro character* so that it can be used to delimit tokens; however, **read-delimited-list** makes no attempt to alter the syntax specified for *char* by the current readtable. The caller must make any necessary changes to the readtable syntax explicitly. 
+<DictionaryLink styled={true} term={"read-delimited-list"}><b>read-delimited-list</b></DictionaryLink> is intended for use in implementing *reader macros*. Usually it is desirable for *char* to be a *terminating macro character* so that it can be used to delimit tokens; however, <DictionaryLink styled={true} term={"read-delimited-list"}><b>read-delimited-list</b></DictionaryLink> makes no attempt to alter the syntax specified for *char* by the current readtable. The caller must make any necessary changes to the readtable syntax explicitly. 
 
 
 

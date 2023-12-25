@@ -2,7 +2,7 @@
 
 
 
-The next *arg* is printed as a *float* in either fixed-format or exponential notation as appropriate. 
+The next *arg* is printed as a <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm> in either fixed-format or exponential notation as appropriate. 
 
 
 
@@ -38,7 +38,7 @@ In either case, an @ modifier is supplied to the &#126;F or &#126;E directive if
 
 
 
-&#126;G binds **\*print-escape\*** to *false* and **\*print-readably\*** to *false*. 
+&#126;G binds <DictionaryLink styled={true} term={"print-escape"}><b>\*print-escape\*</b></DictionaryLink> to <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm> and <DictionaryLink styled={true} term={"print-readably"}><b>\*print-readably\*</b></DictionaryLink> to <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 

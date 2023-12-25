@@ -1,4 +1,4 @@
-**wild-pathname-p** *Function* 
+**wild-pathname-p** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**wild-pathname-p** *pathname* &amp;optional *field-key → generalized-boolean* 
+<DictionaryLink styled={true} term={"wild-pathname-p"}><b>wild-pathname-p</b></DictionaryLink> <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm> &amp;optional *field-key → generalized-boolean* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*pathname*—a *pathname designator* . 
+<GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm>—a *pathname designator* . 
 
 
 
-*Field-key*—one of :host, :device :directory, :name, :type, :version, or **nil**. 
+*Field-key*—one of :host, :device :directory, :name, :type, :version, or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -30,15 +30,15 @@
 
 
 
-**wild-pathname-p** tests *pathname* for the presence of wildcard components. 
+<DictionaryLink styled={true} term={"wild-pathname-p"}><b>wild-pathname-p</b></DictionaryLink> tests <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm> for the presence of wildcard components. 
 
 
 
-If *pathname* is a *pathname* (as returned by **pathname**) it represents the name used to open the file. This may be, but is not required to be, the actual name of the file. 
+If <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm> is a <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm> (as returned by <DictionaryLink styled={true} term={"pathname"}><b>pathname</b></DictionaryLink>) it represents the name used to open the file. This may be, but is not required to be, the actual name of the file. 
 
 
 
-If *field-key* is not supplied or **nil**, **wild-pathname-p** returns true if *pathname* has any wildcard components, **nil** if *pathname* has none. If *field-key* is *non-nil*, **wild-pathname-p** returns true if the indicated component of *pathname* is a wildcard, **nil** if the component is not a wildcard. 
+If *field-key* is not supplied or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>, <DictionaryLink styled={true} term={"wild-pathname-p"}><b>wild-pathname-p</b></DictionaryLink> returns true if <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm> has any wildcard components, <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> if <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm> has none. If *field-key* is <GlossaryTerm styled={true} term={"non-nil"}><i>non-nil</i></GlossaryTerm>, <DictionaryLink styled={true} term={"wild-pathname-p"}><b>wild-pathname-p</b></DictionaryLink> returns true if the indicated component of <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm> is a wildcard, <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> if the component is not a wildcard. 
 
 
 
@@ -60,7 +60,7 @@ If *field-key* is not supplied or **nil**, **wild-pathname-p** returns true if *
 
 
 
-If *pathname* is not a *pathname*, a *string*, or a *stream associated with a file* an error of *type* **type-error** is signaled. 
+If <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm> is not a <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm>, a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>, or a *stream associated with a file* an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> is signaled. 
 
 
 
@@ -68,7 +68,7 @@ If *pathname* is not a *pathname*, a *string*, or a *stream associated with a fi
 
 
 
-**pathname**, **logical-pathname**, Section 20.1 (File System Concepts), Section 19.1.2 (Pathnames as Filenames) 
+<DictionaryLink styled={true} term={"pathname"}><b>pathname</b></DictionaryLink>, <DictionaryLink styled={true} term={"logical-pathname"}><b>logical-pathname</b></DictionaryLink>, Section 20.1 (File System Concepts), Section 19.1.2 (Pathnames as Filenames) 
 
 
 

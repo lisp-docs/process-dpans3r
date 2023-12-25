@@ -1,4 +1,4 @@
-**assert** *Macro* 
+**assert** <GlossaryTerm styled={true} term={"macro"}><i>Macro</i></GlossaryTerm> 
 
 
 
@@ -6,11 +6,11 @@
 
 
 
-**assert** *test-form* [(*\{place\}*\*) [*datum-form \{argument-form\}*\*]] 
+<DictionaryLink styled={true} term={"assert"}><b>assert</b></DictionaryLink> *test-form* [(<GlossaryTerm styled={true} term={"place"}><i>\{place\}</i></GlossaryTerm>\*) [*datum-form \{argument-form\}*\*]] 
 
 
 
-*→* **nil** 
+*→* <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> 
 
 
 
@@ -18,31 +18,27 @@
 
 
 
-*test-form*—a *form*; always evaluated. 
+*test-form*—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>; always evaluated. 
 
 
 
-*place*—a *place*; evaluated if an error is signaled. 
+<GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm>; evaluated if an error is signaled. 
 
 
 
-*datum-form*—a *form* that evaluates to a *datum*. Evaluated each time an error is to be signaled, or not at all if no error is to be signaled. 
+*datum-form*—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> that evaluates to a *datum*. Evaluated each time an error is to be signaled, or not at all if no error is to be signaled. 
 
 
 
-*argument-form*—a *form* that evaluates to an *argument*. Evaluated each time an error is to be signaled, or not at all if no error is to be signaled. 
+*argument-form*—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> that evaluates to an <GlossaryTerm styled={true} term={"argument"}><i>argument</i></GlossaryTerm>. Evaluated each time an error is to be signaled, or not at all if no error is to be signaled. 
 
 
 
-*datum*, *arguments*—*designators* for a *condition* of default type **error**. (These *designators* are the result of evaluating *datum-form* and each of the *argument-forms*.) 
-
-
+*datum*, <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm>—<GlossaryTerm styled={true} term={"designator"}><i>designators</i></GlossaryTerm> for a <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> of default type <DictionaryLink styled={true} term={"error"}><b>error</b></DictionaryLink>. (These <GlossaryTerm styled={true} term={"designator"}><i>designators</i></GlossaryTerm> are the result of evaluating *datum-form* and each of the *argument-forms*.) 
 
 
 
 
-
- 
 
 
 
@@ -50,7 +46,11 @@
 
 
 
-**assert** 
+ 
+
+
+
+<DictionaryLink styled={true} term={"assert"}><b>assert</b></DictionaryLink> 
 
 
 
@@ -58,11 +58,11 @@
 
 
 
-**assert** assures that *test-form* evaluates to *true*. If *test-form* evaluates to *false*, **assert** signals a *correctable error* (denoted by *datum* and *arguments*). Continuing from this error using the **continue** *restart* makes it possible for the user to alter the values of the *places* before **assert** evaluates *test-form* again. If the value of *test-form* is *non-nil*, **assert** returns **nil**. 
+<DictionaryLink styled={true} term={"assert"}><b>assert</b></DictionaryLink> assures that *test-form* evaluates to <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>. If *test-form* evaluates to <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>, <DictionaryLink styled={true} term={"assert"}><b>assert</b></DictionaryLink> signals a *correctable error* (denoted by *datum* and <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm>). Continuing from this error using the **continue** <GlossaryTerm styled={true} term={"restart"}><i>restart</i></GlossaryTerm> makes it possible for the user to alter the values of the <GlossaryTerm styled={true} term={"place"}><i>places</i></GlossaryTerm> before <DictionaryLink styled={true} term={"assert"}><b>assert</b></DictionaryLink> evaluates *test-form* again. If the value of *test-form* is <GlossaryTerm styled={true} term={"non-nil"}><i>non-nil</i></GlossaryTerm>, <DictionaryLink styled={true} term={"assert"}><b>assert</b></DictionaryLink> returns <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
-The *places* are *generalized references* to data upon which *test-form* depends, whose values can be changed by the user in attempting to correct the error. *Subforms* of each *place* are only evaluated if an error is signaled, and might be re-evaluated if the error is re-signaled (after continuing without actually fixing the problem). The order of evaluation of the *places* is not specified; see Section 5.1.1.1 (Evaluation of Subforms to Places). If a *place form* is supplied that produces more values than there are store variables, the extra values are ignored. If the supplied *form* produces fewer values than there are store variables, the missing values are set to **nil**. 
+The <GlossaryTerm styled={true} term={"place"}><i>places</i></GlossaryTerm> are *generalized references* to data upon which *test-form* depends, whose values can be changed by the user in attempting to correct the error. <GlossaryTerm styled={true} term={"subform"}><i>Subforms</i></GlossaryTerm> of each <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm> are only evaluated if an error is signaled, and might be re-evaluated if the error is re-signaled (after continuing without actually fixing the problem). The order of evaluation of the <GlossaryTerm styled={true} term={"place"}><i>places</i></GlossaryTerm> is not specified; see Section 5.1.1.1 (Evaluation of Subforms to Places). If a *place form* is supplied that produces more values than there are store variables, the extra values are ignored. If the supplied <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> produces fewer values than there are store variables, the missing values are set to <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -113,7 +113,7 @@ The *places* are *generalized references* to data upon which *test-form* depends
 
 
 
-**\*break-on-signals\*** 
+<DictionaryLink styled={true} term={"break-on-signals"}><b>\*break-on-signals\*</b></DictionaryLink> 
 
 
 
@@ -125,7 +125,7 @@ The set of active *condition handlers*.
 
 
 
-**check-type**, **error**, Section 5.1 (Generalized Reference) 
+<DictionaryLink styled={true} term={"check-type"}><b>check-type</b></DictionaryLink>, <DictionaryLink styled={true} term={"error"}><b>error</b></DictionaryLink>, Section 5.1 (Generalized Reference) 
 
 
 
@@ -133,7 +133,7 @@ The set of active *condition handlers*.
 
 
 
-The debugger need not include the *test-form* in the error message, and the *places* should not be included in the message, but they should be made available for the user’s perusal. If the user gives the “continue” command, the values of any of the references can be altered. The details of this depend on the implementation’s style of user interface. 
+The debugger need not include the *test-form* in the error message, and the <GlossaryTerm styled={true} term={"place"}><i>places</i></GlossaryTerm> should not be included in the message, but they should be made available for the user’s perusal. If the user gives the “continue” command, the values of any of the references can be altered. The details of this depend on the implementation’s style of user interface. 
 
 
 

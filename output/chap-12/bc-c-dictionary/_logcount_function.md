@@ -1,4 +1,4 @@
-**logcount** *Function* 
+**logcount** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**logcount** *integer → number-of-on-bits* 
+<DictionaryLink styled={true} term={"logcount"}><b>logcount</b></DictionaryLink> *integer → number-of-on-bits* 
 
 
 
@@ -52,7 +52,7 @@ Computes and returns the number of bits in the two’s-complement binary represe
 
 
 
-Should signal **type-error** if its argument is not an *integer* . 
+Should signal <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if its argument is not an *integer* . 
 
 
 
@@ -60,7 +60,7 @@ Should signal **type-error** if its argument is not an *integer* .
 
 
 
-Even if the *implementation* does not represent *integers* internally in two’s complement binary, **logcount** behaves as if it did. 
+Even if the <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm> does not represent *integers* internally in two’s complement binary, <DictionaryLink styled={true} term={"logcount"}><b>logcount</b></DictionaryLink> behaves as if it did. 
 
 
 

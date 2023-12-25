@@ -6,19 +6,19 @@ A number of the functions in the condition system take arguments which are ident
 
 
 
-*datum* &amp;rest *arguments* 
+*datum* &amp;rest <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm> 
 
 
 
-Taken together, the *datum* and the *arguments* are “*designators* for a *condition* of default type *default-type*.” How the denoted *condition* is computed depends on the type of the *datum*: 
+Taken together, the *datum* and the <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm> are “<GlossaryTerm styled={true} term={"designator"}><i>designators</i></GlossaryTerm> for a <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> of default type *default-type*.” How the denoted <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> is computed depends on the type of the *datum*: 
 
 
 
-*•* If the *datum* is a *symbol* naming a *condition type . . .* 
+*•* If the *datum* is a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> naming a *condition type . . .* 
 
 
 
-The denoted *condition* is the result of 
+The denoted <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> is the result of 
 
 
 
@@ -42,7 +42,7 @@ The denoted *condition* is the result of
 
 
 
-The denoted *condition* is the result of 
+The denoted <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> is the result of 
 
 
 
@@ -54,11 +54,11 @@ The denoted *condition* is the result of
 
 
 
-:format-arguments *arguments*) 
+:format-arguments <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm>) 
 
 
 
-where the *defaulted-type* is a *subtype* of *default-type*. 
+where the *defaulted-type* is a <GlossaryTerm styled={true} term={"subtype"}><i>subtype</i></GlossaryTerm> of *default-type*. 
 
 
 
@@ -66,7 +66,7 @@ where the *defaulted-type* is a *subtype* of *default-type*.
 
 
 
-The denoted *condition* is the *datum* itself. In this case, unless otherwise specified by the description of the *operator* in question, the *arguments* must be *null*; that is, the consequences are undefined if any *arguments* were supplied. 
+The denoted <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> is the *datum* itself. In this case, unless otherwise specified by the description of the <GlossaryTerm styled={true} term={"operator"}><i>operator</i></GlossaryTerm> in question, the <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm> must be <GlossaryTerm styled={true} term={"null"}><i>null</i></GlossaryTerm>; that is, the consequences are undefined if any <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm> were supplied. 
 
 
 

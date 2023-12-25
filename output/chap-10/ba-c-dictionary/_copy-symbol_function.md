@@ -1,4 +1,4 @@
-**copy-symbol** *Function* 
+**copy-symbol** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**copy-symbol** *symbol* &amp;optional *copy-properties → new-symbol* 
+<DictionaryLink styled={true} term={"copy-symbol"}><b>copy-symbol</b></DictionaryLink> <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> &amp;optional *copy-properties → new-symbol* 
 
 
 
@@ -14,15 +14,15 @@
 
 
 
-*symbol*—a *symbol*. 
+<GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>. 
 
 
 
-*copy-properties*—a *generalized boolean*. The default is *false*. 
+*copy-properties*—a *generalized boolean*. The default is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
-*new-symbol*—a *fresh*, *uninterned symbol*. 
+*new-symbol*—a <GlossaryTerm styled={true} term={"fresh"}><i>fresh</i></GlossaryTerm>, *uninterned symbol*. 
 
 
 
@@ -30,11 +30,11 @@
 
 
 
-**copy-symbol** returns a *fresh*, *uninterned symbol*, the *name* of which is **string=** to and possibly the *same* as the *name* of the given *symbol*. 
+<DictionaryLink styled={true} term={"copy-symbol"}><b>copy-symbol</b></DictionaryLink> returns a <GlossaryTerm styled={true} term={"fresh"}><i>fresh</i></GlossaryTerm>, *uninterned symbol*, the <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> of which is <DictionaryLink styled={true} term={"string"}><b>string=</b></DictionaryLink> to and possibly the <GlossaryTerm styled={true} term={"same"}><i>same</i></GlossaryTerm> as the <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> of the given <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>. 
 
 
 
-If *copy-properties* is *false*, the *new-symbol* is neither *bound* nor *fbound* and has a *null property list*. If *copy-properties* is *true*, then the initial *value* of *new-symbol* is the *value* of *symbol*, the initial *function* definition of *new-symbol* is the *functional value* of *symbol*, and the *property list* of *new-symbol* is a *copy*<sub>2</sub> of the *property list* of *symbol*. 
+If *copy-properties* is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>, the *new-symbol* is neither <GlossaryTerm styled={true} term={"bound"}><i>bound</i></GlossaryTerm> nor <GlossaryTerm styled={true} term={"fbound"}><i>fbound</i></GlossaryTerm> and has a *null property list*. If *copy-properties* is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>, then the initial <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of *new-symbol* is the <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>, the initial <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> definition of *new-symbol* is the *functional value* of <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>, and the *property list* of *new-symbol* is a <GlossaryTerm styled={true} term={"copy"}><i>copy</i></GlossaryTerm><sub>2</sub> of the *property list* of <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>. 
 
 
 
@@ -72,7 +72,7 @@ If *copy-properties* is *false*, the *new-symbol* is neither *bound* nor *fbound
 
 
 
-Should signal an error of *type* **type-error** if *symbol* is not a *symbol*. 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> is not a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>. 
 
 
 
@@ -80,7 +80,7 @@ Should signal an error of *type* **type-error** if *symbol* is not a *symbol*.
 
 
 
-**make-symbol** 
+<DictionaryLink styled={true} term={"make-symbol"}><b>make-symbol</b></DictionaryLink> 
 
 
 
@@ -88,7 +88,7 @@ Should signal an error of *type* **type-error** if *symbol* is not a *symbol*.
 
 
 
-Implementors are encouraged not to copy the *string* which is the *symbol*’s *name* unnecessarily. Unless there is a good reason to do so, the normal implementation strategy is for the *new-symbol*’s *name* to be *identical* to the given *symbol*’s *name*. 
+Implementors are encouraged not to copy the <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> which is the <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>’s <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> unnecessarily. Unless there is a good reason to do so, the normal implementation strategy is for the *new-symbol*’s <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> to be <GlossaryTerm styled={true} term={"identical"}><i>identical</i></GlossaryTerm> to the given <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>’s <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm>. 
 
 
 

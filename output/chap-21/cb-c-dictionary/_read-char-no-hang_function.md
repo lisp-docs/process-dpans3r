@@ -1,8 +1,8 @@
-**read-char-no-hang** *Function* **Syntax:** 
+**read-char-no-hang** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> **Syntax:** 
 
 
 
-**read-char-no-hang** &amp;optional *input-stream eof-error-p eof-value recursive-p* 
+<DictionaryLink styled={true} term={"read-char-no-hang"}><b>read-char-no-hang</b></DictionaryLink> &amp;optional *input-stream eof-error-p eof-value recursive-p* 
 
 
 
@@ -18,19 +18,19 @@
 
 
 
-*eof-error-p*—a *generalized boolean*. The default is *true*. 
+*eof-error-p*—a *generalized boolean*. The default is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>. 
 
 
 
-*eof-value*—an *object*. The default is **nil**. 
+*eof-value*—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. The default is <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
-*recursive-p*—a *generalized boolean*. The default is *false*. 
+*recursive-p*—a *generalized boolean*. The default is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
-*char*—a *character* or **nil** or the *eof-value*. 
+*char*—a <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> or the *eof-value*. 
 
 
 
@@ -38,7 +38,7 @@
 
 
 
-**read-char-no-hang** returns a character from *input-stream* if such a character is available. If no character is available, **read-char-no-hang** returns **nil**. 
+<DictionaryLink styled={true} term={"read-char-no-hang"}><b>read-char-no-hang</b></DictionaryLink> returns a character from *input-stream* if such a character is available. If no character is available, <DictionaryLink styled={true} term={"read-char-no-hang"}><b>read-char-no-hang</b></DictionaryLink> returns <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -54,11 +54,11 @@
 
 
 
-If *recursive-p* is *true*, this call is expected to be embedded in a higher-level call to **read** or a similar *function* used by the *Lisp reader* . 
+If *recursive-p* is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>, this call is expected to be embedded in a higher-level call to <DictionaryLink styled={true} term={"read"}><b>read</b></DictionaryLink> or a similar <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> used by the *Lisp reader* . 
 
 
 
-If an *end of file*<sub>2</sub> occurs and *eof-error-p* is *false*, *eof-value* is returned. 
+If an *end of file*<sub>2</sub> occurs and *eof-error-p* is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>, *eof-value* is returned. 
 
 
 
@@ -90,7 +90,7 @@ If an *end of file*<sub>2</sub> occurs and *eof-error-p* is *false*, *eof-value*
 
 
 
-**\*standard-input\***, **\*terminal-io\***. 
+**\*standard-input\***, <DictionaryLink styled={true} term={"terminal-io"}><b>\*terminal-io\*</b></DictionaryLink>. 
 
 
 
@@ -98,11 +98,11 @@ If an *end of file*<sub>2</sub> occurs and *eof-error-p* is *false*, *eof-value*
 
 
 
-If an *end of file*<sub>2</sub> occurs when *eof-error-p* is *true*, an error of *type* **end-of-file** is signaled . **See Also:** 
+If an *end of file*<sub>2</sub> occurs when *eof-error-p* is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>, an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"end-of-file"}><b>end-of-file</b></DictionaryLink> is signaled . **See Also:** 
 
 
 
-**listen** 
+<DictionaryLink styled={true} term={"listen"}><b>listen</b></DictionaryLink> 
 
 
 
@@ -110,7 +110,7 @@ If an *end of file*<sub>2</sub> occurs when *eof-error-p* is *true*, an error of
 
 
 
-**read-char-no-hang** is exactly like **read-char**, except that if it would be necessary to wait in order to get a character (as from a keyboard), **nil** is immediately returned without waiting. 
+<DictionaryLink styled={true} term={"read-char-no-hang"}><b>read-char-no-hang</b></DictionaryLink> is exactly like <DictionaryLink styled={true} term={"read-char"}><b>read-char</b></DictionaryLink>, except that if it would be necessary to wait in order to get a character (as from a keyboard), <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> is immediately returned without waiting. 
 
 
 

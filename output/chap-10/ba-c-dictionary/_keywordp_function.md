@@ -1,4 +1,4 @@
-**keywordp** *Function* 
+**keywordp** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**keywordp** *object → generalized-boolean* 
+<DictionaryLink styled={true} term={"keywordp"}><b>keywordp</b></DictionaryLink> *object → generalized-boolean* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*object*—an *object*. 
+<GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-Returns *true* if *object* is a *keyword* <sub>1</sub>; otherwise, returns *false*. 
+Returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is a <GlossaryTerm styled={true} term={"keyword"}><i>keyword</i></GlossaryTerm> <sub>1</sub>; otherwise, returns <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
@@ -49,7 +49,7 @@ Returns *true* if *object* is a *keyword* <sub>1</sub>; otherwise, returns *fals
 
 
 
-**constantp**, **keyword**, **symbolp**, **symbol-package** 
+<DictionaryLink styled={true} term={"constantp"}><b>constantp</b></DictionaryLink>, <DictionaryLink styled={true} term={"keyword"}><b>keyword</b></DictionaryLink>, <DictionaryLink styled={true} term={"symbolp"}><b>symbolp</b></DictionaryLink>, <DictionaryLink styled={true} term={"symbol-package"}><b>symbol-package</b></DictionaryLink> 
 
 
 

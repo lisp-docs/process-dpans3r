@@ -1,4 +1,4 @@
-**unread-char** *Function* 
+**unread-char** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**unread-char** *character* &amp;optional *input-stream →* **nil** 
+<DictionaryLink styled={true} term={"unread-char"}><b>unread-char</b></DictionaryLink> <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> &amp;optional *input-stream →* <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*character*—a *character* ; must be the last *character* that was read from *input-stream*. *input-stream*—an *input stream designator* . The default is *standard input*. 
+<GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> ; must be the last <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> that was read from *input-stream*. *input-stream*—an *input stream designator* . The default is *standard input*. 
 
 
 
@@ -22,19 +22,19 @@
 
 
 
-**unread-char** places *character* back onto the front of *input-stream* so that it will again be the next character in *input-stream*. 
+<DictionaryLink styled={true} term={"unread-char"}><b>unread-char</b></DictionaryLink> places <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> back onto the front of *input-stream* so that it will again be the next character in *input-stream*. 
 
 
 
-When *input-stream* is an *echo stream*, no attempt is made to undo any echoing of the character that might already have been done on *input-stream*. However, characters placed on *input-stream* by **unread-char** are marked in such a way as to inhibit later re-echo by **read-char**. 
+When *input-stream* is an *echo stream*, no attempt is made to undo any echoing of the character that might already have been done on *input-stream*. However, characters placed on *input-stream* by <DictionaryLink styled={true} term={"unread-char"}><b>unread-char</b></DictionaryLink> are marked in such a way as to inhibit later re-echo by <DictionaryLink styled={true} term={"read-char"}><b>read-char</b></DictionaryLink>. 
 
 
 
-It is an error to invoke **unread-char** twice consecutively on the same *stream* without an intervening call to **read-char** (or some other input operation which implicitly reads characters) on that *stream*. 
+It is an error to invoke <DictionaryLink styled={true} term={"unread-char"}><b>unread-char</b></DictionaryLink> twice consecutively on the same <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm> without an intervening call to <DictionaryLink styled={true} term={"read-char"}><b>read-char</b></DictionaryLink> (or some other input operation which implicitly reads characters) on that <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>. 
 
 
 
-Invoking **peek-char** or **read-char** commits all previous characters. The consequences of invoking **unread-char** on any character preceding that which is returned by **peek-char** (including those passed over by **peek-char** that has a *non-nil peek-type*) are unspecified. In particular, the consequences of invoking **unread-char** after **peek-char** are unspecified. 
+Invoking <DictionaryLink styled={true} term={"peek-char"}><b>peek-char</b></DictionaryLink> or <DictionaryLink styled={true} term={"read-char"}><b>read-char</b></DictionaryLink> commits all previous characters. The consequences of invoking <DictionaryLink styled={true} term={"unread-char"}><b>unread-char</b></DictionaryLink> on any character preceding that which is returned by <DictionaryLink styled={true} term={"peek-char"}><b>peek-char</b></DictionaryLink> (including those passed over by <DictionaryLink styled={true} term={"peek-char"}><b>peek-char</b></DictionaryLink> that has a *non-nil peek-type*) are unspecified. In particular, the consequences of invoking <DictionaryLink styled={true} term={"unread-char"}><b>unread-char</b></DictionaryLink> after <DictionaryLink styled={true} term={"peek-char"}><b>peek-char</b></DictionaryLink> are unspecified. 
 
 
 
@@ -58,7 +58,7 @@ Invoking **peek-char** or **read-char** commits all previous characters. The con
 
 
 
-**\*standard-input\***, **\*terminal-io\***. 
+**\*standard-input\***, <DictionaryLink styled={true} term={"terminal-io"}><b>\*terminal-io\*</b></DictionaryLink>. 
 
 
 
@@ -66,7 +66,7 @@ Invoking **peek-char** or **read-char** commits all previous characters. The con
 
 
 
-**peek-char**, **read-char**, Section 21.1 (Stream Concepts) 
+<DictionaryLink styled={true} term={"peek-char"}><b>peek-char</b></DictionaryLink>, <DictionaryLink styled={true} term={"read-char"}><b>read-char</b></DictionaryLink>, Section 21.1 (Stream Concepts) 
 
 
 
@@ -74,7 +74,7 @@ Invoking **peek-char** or **read-char** commits all previous characters. The con
 
 
 
-**unread-char** is intended to be an efficient mechanism for allowing the *Lisp reader* and other parsers to perform one-character lookahead in *input-stream*. 
+<DictionaryLink styled={true} term={"unread-char"}><b>unread-char</b></DictionaryLink> is intended to be an efficient mechanism for allowing the *Lisp reader* and other parsers to perform one-character lookahead in *input-stream*. 
 
 
 

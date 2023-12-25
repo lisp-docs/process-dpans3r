@@ -1,4 +1,4 @@
-**sinh, cosh, tanh, asinh, acosh, atanh** *Function* 
+**sinh, cosh, tanh, asinh, acosh, atanh** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,27 +6,27 @@
 
 
 
-**sinh** *number → result* 
+<DictionaryLink styled={true} term={"sinh"}><b>sinh</b></DictionaryLink> *number → result* 
 
 
 
-**cosh** *number → result* 
+<DictionaryLink styled={true} term={"cosh"}><b>cosh</b></DictionaryLink> *number → result* 
 
 
 
-**tanh** *number → result* 
+<DictionaryLink styled={true} term={"tanh"}><b>tanh</b></DictionaryLink> *number → result* 
 
 
 
-**asinh** *number → result* 
+<DictionaryLink styled={true} term={"asinh"}><b>asinh</b></DictionaryLink> *number → result* 
 
 
 
-**acosh** *number → result* 
+<DictionaryLink styled={true} term={"acosh"}><b>acosh</b></DictionaryLink> *number → result* 
 
 
 
-**atanh** *number → result* 
+<DictionaryLink styled={true} term={"atanh"}><b>atanh</b></DictionaryLink> *number → result* 
 
 
 
@@ -34,11 +34,11 @@
 
 
 
-*number*—a *number* . 
+<GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> . 
 
 
 
-*result*—a *number* . 
+*result*—a <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> . 
 
 
 
@@ -151,7 +151,7 @@ The branch cut for the inverse hyperbolic tangent function is in two pieces: one
 
 
 
-Should signal an error of *type* **type-error** if *number* is not a *number* . Might signal **arithmetic-error**. 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> is not a <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> . Might signal <DictionaryLink styled={true} term={"arithmetic-error"}><b>arithmetic-error</b></DictionaryLink>. 
 
 
 
@@ -159,7 +159,7 @@ Should signal an error of *type* **type-error** if *number* is not a *number* . 
 
 
 
-**log**, **sqrt**, Section 12.1.3.3 (Rule of Float Substitutability) 
+<DictionaryLink styled={true} term={"log"}><b>log</b></DictionaryLink>, <DictionaryLink styled={true} term={"sqrt"}><b>sqrt</b></DictionaryLink>, Section 12.1.3.3 (Rule of Float Substitutability) 
 
 
 
@@ -167,7 +167,7 @@ Should signal an error of *type* **type-error** if *number* is not a *number* . 
 
 
 
-The result of **acosh** may be a *complex* even if *number* is not a *complex* ; this occurs when *number* is less than one. Also, the result of **atanh** may be a *complex* even if *number* is not a *complex* ; this occurs when the absolute value of *number* is greater than one. 
+The result of <DictionaryLink styled={true} term={"acosh"}><b>acosh</b></DictionaryLink> may be a <GlossaryTerm styled={true} term={"complex"}><i>complex</i></GlossaryTerm> even if <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> is not a <GlossaryTerm styled={true} term={"complex"}><i>complex</i></GlossaryTerm> ; this occurs when <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> is less than one. Also, the result of <DictionaryLink styled={true} term={"atanh"}><b>atanh</b></DictionaryLink> may be a <GlossaryTerm styled={true} term={"complex"}><i>complex</i></GlossaryTerm> even if <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> is not a <GlossaryTerm styled={true} term={"complex"}><i>complex</i></GlossaryTerm> ; this occurs when the absolute value of <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> is greater than one. 
 
 
 
@@ -203,11 +203,11 @@ The branch cut formulae are mathematically correct, assuming completely accurate
 
 
 
-*number*—a *number* . 
+<GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> . 
 
 
 
-*product*—a *number* . 
+*product*—a <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> . 
 
 
 
@@ -215,7 +215,7 @@ The branch cut formulae are mathematically correct, assuming completely accurate
 
 
 
-Returns the product of *numbers*, performing any necessary type conversions in the process. If no *numbers* are supplied, 1 is returned. 
+Returns the product of <GlossaryTerm styled={true} term={"number"}><i>numbers</i></GlossaryTerm>, performing any necessary type conversions in the process. If no <GlossaryTerm styled={true} term={"number"}><i>numbers</i></GlossaryTerm> are supplied, 1 is returned. 
 
 
 
@@ -231,7 +231,7 @@ Returns the product of *numbers*, performing any necessary type conversions in t
 
 
 
-Might signal **type-error** if some *argument* is not a *number* . Might signal **arithmetic-error**. 
+Might signal <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if some <GlossaryTerm styled={true} term={"argument"}><i>argument</i></GlossaryTerm> is not a <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> . Might signal <DictionaryLink styled={true} term={"arithmetic-error"}><b>arithmetic-error</b></DictionaryLink>. 
 
 
 

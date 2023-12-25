@@ -1,4 +1,4 @@
-**svref** *Accessor* 
+**svref** <GlossaryTerm styled={true} term={"accessor"}><i>Accessor</i></GlossaryTerm> 
 
 
 
@@ -6,11 +6,11 @@
 
 
 
-**svref** *simple-vector index → element* 
+<DictionaryLink styled={true} term={"svref"}><b>svref</b></DictionaryLink> *simple-vector index → element* 
 
 
 
-**(setf (svref** *simple-vector index***)** *new-element***)** 
+**(setf (svref** *simple-vector index***)** *new-element<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> 
 
 
 
@@ -38,7 +38,7 @@
 
 
 
-*element*, *new-element*—an *object* (whose *type* is a *subtype* of the *array element type* of the *simple-vector*). 
+<GlossaryTerm styled={true} term={"element"}><i>element</i></GlossaryTerm>, *new-element*—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> (whose <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> is a <GlossaryTerm styled={true} term={"subtype"}><i>subtype</i></GlossaryTerm> of the *array element type* of the *simple-vector*). 
 
 
 
@@ -46,7 +46,7 @@
 
 
 
-*Accesses* the *element* of *simple-vector* specified by *index*. 
+*Accesses* the <GlossaryTerm styled={true} term={"element"}><i>element</i></GlossaryTerm> of *simple-vector* specified by *index*. 
 
 
 
@@ -64,7 +64,7 @@ v *→* #(1 NEWCOMER SIRENS)
 
 
 
-**aref**, **sbit**, **schar**, **vector**, Section 3.2.1 (Compiler Terminology) 
+<DictionaryLink styled={true} term={"aref"}><b>aref</b></DictionaryLink>, <DictionaryLink styled={true} term={"sbit"}><b>sbit</b></DictionaryLink>, <DictionaryLink styled={true} term={"schar"}><b>schar</b></DictionaryLink>, <DictionaryLink styled={true} term={"vector"}><b>vector</b></DictionaryLink>, Section 3.2.1 (Compiler Terminology) 
 
 
 
@@ -72,7 +72,7 @@ v *→* #(1 NEWCOMER SIRENS)
 
 
 
-**svref** is identical to **aref** except that it requires its first argument to be a *simple vector* . (svref *v i*) *≡* (aref (the simple-vector *v*) *i*) 
+<DictionaryLink styled={true} term={"svref"}><b>svref</b></DictionaryLink> is identical to <DictionaryLink styled={true} term={"aref"}><b>aref</b></DictionaryLink> except that it requires its first argument to be a *simple vector* . (svref *v i*) *≡* (aref (the simple-vector *v*) *i*) 
 
 
 

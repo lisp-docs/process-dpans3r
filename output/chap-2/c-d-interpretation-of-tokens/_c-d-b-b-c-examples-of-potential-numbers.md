@@ -2,7 +2,7 @@
 
 
 
-As examples, the *tokens* in Figure 2–10 are *potential numbers*, but they are not actually numbers, and so are reserved *tokens*; a *conforming implementation* is permitted, but not required, to define their meaning. 
+As examples, the <GlossaryTerm styled={true} term={"token"}><i>tokens</i></GlossaryTerm> in Figure 2–10 are *potential numbers*, but they are not actually numbers, and so are reserved <GlossaryTerm styled={true} term={"token"}><i>tokens</i></GlossaryTerm>; a *conforming implementation* is permitted, but not required, to define their meaning. 
 
 
 
@@ -14,7 +14,7 @@ As examples, the *tokens* in Figure 2–10 are *potential numbers*, but they are
 
 
 
-The *tokens* in Figure 2–11 are not *potential numbers*; they are always treated as *symbols*: 
+The <GlossaryTerm styled={true} term={"token"}><i>tokens</i></GlossaryTerm> in Figure 2–11 are not *potential numbers*; they are always treated as <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm>: 
 
 
 
@@ -30,7 +30,7 @@ The *tokens* in Figure 2–11 are not *potential numbers*; they are always treat
 
 
 
-The *tokens* in Figure 2–12 are *potential numbers* if the *current input base* is 16, but they are always treated as *symbols* if the *current input base* is 10. 
+The <GlossaryTerm styled={true} term={"token"}><i>tokens</i></GlossaryTerm> in Figure 2–12 are *potential numbers* if the *current input base* is 16, but they are always treated as <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> if the *current input base* is 10. 
 
 
 

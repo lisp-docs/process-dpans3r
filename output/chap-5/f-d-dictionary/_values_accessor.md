@@ -1,4 +1,4 @@
-**values** *Accessor* 
+**values** <GlossaryTerm styled={true} term={"accessor"}><i>Accessor</i></GlossaryTerm> 
 
 
 
@@ -6,11 +6,11 @@
 
 
 
-**values** &amp;rest *object ! \{object\}*\* 
+<DictionaryLink styled={true} term={"values"}><b>values</b></DictionaryLink> &amp;rest *object ! \{object\}*\* 
 
 
 
-**(setf (values** &amp;rest *place***)** *new-values***)** 
+**(setf (values** &amp;rest <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm>**)** *new-values***)** 
 
 
 
@@ -18,15 +18,15 @@
 
 
 
-*object*—an *object*. 
+<GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
-*place*—a *place*. 
+<GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm>. 
 
 
 
-*new-value*—an *object*. 
+*new-value*—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -34,11 +34,11 @@
 
 
 
-**values** returns the *objects* as *multiple values*<sub>2</sub>. 
+<DictionaryLink styled={true} term={"values"}><b>values</b></DictionaryLink> returns the <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm> as *multiple values*<sub>2</sub>. 
 
 
 
-**setf** of **values** is used to store the *multiple values*<sub>2</sub> *new-values* into the *places*. See Section 5.1.2.3 (VALUES Forms as Places). 
+<DictionaryLink styled={true} term={"setf"}><b>setf</b></DictionaryLink> of <DictionaryLink styled={true} term={"values"}><b>values</b></DictionaryLink> is used to store the *multiple values*<sub>2</sub> *new-values* into the <GlossaryTerm styled={true} term={"place"}><i>places</i></GlossaryTerm>. See Section 5.1.2.3 (VALUES Forms as Places). 
 
 
 
@@ -71,7 +71,7 @@ This works because **values** returns exactly one value for each of *args*; as f
 
 
 
-**values-list**, **multiple-value-bind**, **multiple-values-limit**, Section 3.1 (Evaluation) 
+<DictionaryLink styled={true} term={"values-list"}><b>values-list</b></DictionaryLink>, <DictionaryLink styled={true} term={"multiple-value-bind"}><b>multiple-value-bind</b></DictionaryLink>, <DictionaryLink styled={true} term={"multiple-values-limit"}><b>multiple-values-limit</b></DictionaryLink>, Section 3.1 (Evaluation) 
 
 
 
@@ -79,7 +79,7 @@ This works because **values** returns exactly one value for each of *args*; as f
 
 
 
-Since **values** is a *function*, not a *macro* or *special form*, it receives as *arguments* only the *primary values* of its *argument forms*. 
+Since <DictionaryLink styled={true} term={"values"}><b>values</b></DictionaryLink> is a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>, not a <GlossaryTerm styled={true} term={"macro"}><i>macro</i></GlossaryTerm> or *special form*, it receives as <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm> only the *primary values* of its *argument forms*. 
 
 
 

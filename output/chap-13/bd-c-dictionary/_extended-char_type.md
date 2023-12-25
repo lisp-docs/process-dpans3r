@@ -1,4 +1,4 @@
-**extended-char** *Type* 
+**extended-char** <GlossaryTerm styled={true} term={"type"}><i>Type</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**extended-char**, **character**, **t** 
+<DictionaryLink styled={true} term={"extended-char"}><b>extended-char</b></DictionaryLink>, <DictionaryLink styled={true} term={"character"}><b>character</b></DictionaryLink>, <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink> 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-The *type* **extended-char** is equivalent to the *type* (and character (not base-char)). 
+The <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"extended-char"}><b>extended-char</b></DictionaryLink> is equivalent to the <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> (and character (not base-char)). 
 
 
 
@@ -22,7 +22,7 @@ The *type* **extended-char** is equivalent to the *type* (and character (not bas
 
 
 
-The *type* **extended-char** might have no *elements*<sub>4</sub> in *implementations* in which all *characters* are of *type* **base-char**. 
+The <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"extended-char"}><b>extended-char</b></DictionaryLink> might have no <GlossaryTerm styled={true} term={"element"}><i>elements</i></GlossaryTerm><sub>4</sub> in <GlossaryTerm styled={true} term={"implementation"}><i>implementations</i></GlossaryTerm> in which all <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm> are of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"base-char"}><b>base-char</b></DictionaryLink>. 
 
 
 
@@ -50,51 +50,51 @@ The *type* **extended-char** might have no *elements*<sub>4</sub> in *implementa
 
 
 
-**char**= &amp;rest *characters*<sup>+</sup> *→ generalized-boolean* 
+<DictionaryLink styled={true} term={"char"}><b>char</b></DictionaryLink>= &amp;rest <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm><sup>+</sup> *→ generalized-boolean* 
 
 
 
-**char***/* = &amp;rest *characters*<sup>+</sup> *→ generalized-boolean* 
+<DictionaryLink styled={true} term={"char"}><b>char*</b></DictionaryLink>/* = &amp;rest <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm><sup>+</sup> *→ generalized-boolean* 
 
 
 
-**char**&lt; &amp;rest *characters*<sup>+</sup> *→ generalized-boolean* 
+<DictionaryLink styled={true} term={"char"}><b>char</b></DictionaryLink>&lt; &amp;rest <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm><sup>+</sup> *→ generalized-boolean* 
 
 
 
-**char**&gt; &amp;rest *characters*<sup>+</sup> *→ generalized-boolean* 
+<DictionaryLink styled={true} term={"char"}><b>char</b></DictionaryLink>&gt; &amp;rest <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm><sup>+</sup> *→ generalized-boolean* 
 
 
 
-**char**&lt;= &amp;rest *characters*<sup>+</sup> *→ generalized-boolean* 
+<DictionaryLink styled={true} term={"char"}><b>char</b></DictionaryLink>&lt;= &amp;rest <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm><sup>+</sup> *→ generalized-boolean* 
 
 
 
-**char**&gt;= &amp;rest *characters*<sup>+</sup> *→ generalized-boolean* 
+<DictionaryLink styled={true} term={"char"}><b>char</b></DictionaryLink>&gt;= &amp;rest <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm><sup>+</sup> *→ generalized-boolean* 
 
 
 
-**char-equal** &amp;rest *characters*<sup>+</sup> *→ generalized-boolean* 
+<DictionaryLink styled={true} term={"char-equal"}><b>char-equal</b></DictionaryLink> &amp;rest <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm><sup>+</sup> *→ generalized-boolean* 
 
 
 
-**char-not-equal** &amp;rest *characters*<sup>+</sup> *→ generalized-boolean* 
+<DictionaryLink styled={true} term={"char-not-equal"}><b>char-not-equal</b></DictionaryLink> &amp;rest <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm><sup>+</sup> *→ generalized-boolean* 
 
 
 
-**char-lessp** &amp;rest *characters*<sup>+</sup> *→ generalized-boolean* 
+<DictionaryLink styled={true} term={"char-lessp"}><b>char-lessp</b></DictionaryLink> &amp;rest <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm><sup>+</sup> *→ generalized-boolean* 
 
 
 
-**char-greaterp** &amp;rest *characters*<sup>+</sup> *→ generalized-boolean* 
+<DictionaryLink styled={true} term={"char-greaterp"}><b>char-greaterp</b></DictionaryLink> &amp;rest <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm><sup>+</sup> *→ generalized-boolean* 
 
 
 
-**char-not-greaterp** &amp;rest *characters*<sup>+</sup> *→ generalized-boolean* 
+<DictionaryLink styled={true} term={"char-not-greaterp"}><b>char-not-greaterp</b></DictionaryLink> &amp;rest <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm><sup>+</sup> *→ generalized-boolean* 
 
 
 
-**char-not-lessp** &amp;rest *characters*<sup>+</sup> *→ generalized-boolean* 
+<DictionaryLink styled={true} term={"char-not-lessp"}><b>char-not-lessp</b></DictionaryLink> &amp;rest <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm><sup>+</sup> *→ generalized-boolean* 
 
 
 
@@ -102,7 +102,7 @@ The *type* **extended-char** might have no *elements*<sub>4</sub> in *implementa
 
 
 
-*character*—a *character* . 
+<GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> . 
 
 
 
@@ -114,31 +114,31 @@ The *type* **extended-char** might have no *elements*<sub>4</sub> in *implementa
 
 
 
-These predicates compare *characters*. 
+These predicates compare <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm>. 
 
 
 
-**char=** returns *true* if all *characters* are the *same*; otherwise, it returns *false*. If two *characters* differ in any *implementation-defined attributes*, then they are not **char=**. 
+<DictionaryLink styled={true} term={"char="}><b>char=</b></DictionaryLink> returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if all <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm> are the <GlossaryTerm styled={true} term={"same"}><i>same</i></GlossaryTerm>; otherwise, it returns <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. If two <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm> differ in any *implementation-defined attributes*, then they are not <DictionaryLink styled={true} term={"char="}><b>char=</b></DictionaryLink>. 
 
 
 
-**char/=** returns *true* if all *characters* are different; otherwise, it returns *false*. 
+<DictionaryLink styled={true} term={"char/="}><b>char/=</b></DictionaryLink> returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if all <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm> are different; otherwise, it returns <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
-**char**&lt; returns *true* if the *characters* are monotonically increasing; otherwise, it returns *false*. If two *characters* have *identical implementation-defined attributes*, then their ordering by **char**&lt; is consistent with the numerical ordering by the predicate &lt; on their *codes*. 
+<DictionaryLink styled={true} term={"char"}><b>char</b></DictionaryLink>&lt; returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if the <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm> are monotonically increasing; otherwise, it returns <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. If two <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm> have *identical implementation-defined attributes*, then their ordering by <DictionaryLink styled={true} term={"char"}><b>char</b></DictionaryLink>&lt; is consistent with the numerical ordering by the predicate &lt; on their <GlossaryTerm styled={true} term={"code"}><i>codes</i></GlossaryTerm>. 
 
 
 
-**char**&gt; returns *true* if the *characters* are monotonically decreasing; otherwise, it returns *false*. If two *characters* have *identical implementation-defined attributes*, then their ordering by **char**&gt; is consistent with the numerical ordering by the predicate &gt; on their *codes*. 
+<DictionaryLink styled={true} term={"char"}><b>char</b></DictionaryLink>&gt; returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if the <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm> are monotonically decreasing; otherwise, it returns <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. If two <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm> have *identical implementation-defined attributes*, then their ordering by <DictionaryLink styled={true} term={"char"}><b>char</b></DictionaryLink>&gt; is consistent with the numerical ordering by the predicate &gt; on their <GlossaryTerm styled={true} term={"code"}><i>codes</i></GlossaryTerm>. 
 
 
 
-**char**&lt;**=** returns *true* if the *characters* are monotonically nondecreasing; otherwise, it returns *false*. If two *characters* have *identical implementation-defined attributes*, then their ordering by **char**&lt;**=** is consistent with the numerical ordering by the predicate &lt;= on their *codes*. 
+<DictionaryLink styled={true} term={"char"}><b>char</b></DictionaryLink>&lt;<DictionaryLink styled={true} term={"="}><b>=</b></DictionaryLink> returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if the <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm> are monotonically nondecreasing; otherwise, it returns <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. If two <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm> have *identical implementation-defined attributes*, then their ordering by <DictionaryLink styled={true} term={"char"}><b>char</b></DictionaryLink>&lt;<DictionaryLink styled={true} term={"="}><b>=</b></DictionaryLink> is consistent with the numerical ordering by the predicate &lt;= on their <GlossaryTerm styled={true} term={"code"}><i>codes</i></GlossaryTerm>. 
 
 
 
-**char**&gt;**=** returns *true* if the *characters* are monotonically nonincreasing; otherwise, it returns *false*. 
+<DictionaryLink styled={true} term={"char"}><b>char</b></DictionaryLink>&gt;<DictionaryLink styled={true} term={"="}><b>=</b></DictionaryLink> returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if the <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm> are monotonically nonincreasing; otherwise, it returns <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
@@ -154,11 +154,11 @@ These predicates compare *characters*.
 
 
 
-If two *characters* have *identical implementation-defined attributes*, then their ordering by **char**&gt;**=** is consistent with the numerical ordering by the predicate &gt;= on their *codes*. 
+If two <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm> have *identical implementation-defined attributes*, then their ordering by <DictionaryLink styled={true} term={"char"}><b>char</b></DictionaryLink>&gt;<DictionaryLink styled={true} term={"="}><b>=</b></DictionaryLink> is consistent with the numerical ordering by the predicate &gt;= on their <GlossaryTerm styled={true} term={"code"}><i>codes</i></GlossaryTerm>. 
 
 
 
-**char-equal**, **char-not-equal**, **char-lessp**, **char-greaterp**, **char-not-greaterp**, and **char-not-lessp** are similar to **char=**, **char/=**, **char**&lt;, **char**&gt;, **char**&lt;**=**, **char**&gt;**=**, respectively, except that they ignore differences in *case* and might have an *implementation-defined* behavior for *non-simple characters*. For example, an *implementation* might define that **char-equal**, *etc.* ignore certain *implementation-defined attributes*. The effect, if any, of each *implementation-defined attribute* upon these functions must be specified as part of the definition of that *attribute*. 
+<DictionaryLink styled={true} term={"char-equal"}><b>char-equal</b></DictionaryLink>, <DictionaryLink styled={true} term={"char-not-equal"}><b>char-not-equal</b></DictionaryLink>, <DictionaryLink styled={true} term={"char-lessp"}><b>char-lessp</b></DictionaryLink>, <DictionaryLink styled={true} term={"char-greaterp"}><b>char-greaterp</b></DictionaryLink>, <DictionaryLink styled={true} term={"char-not-greaterp"}><b>char-not-greaterp</b></DictionaryLink>, and <DictionaryLink styled={true} term={"char-not-lessp"}><b>char-not-lessp</b></DictionaryLink> are similar to <DictionaryLink styled={true} term={"char="}><b>char=</b></DictionaryLink>, <DictionaryLink styled={true} term={"char/="}><b>char/=</b></DictionaryLink>, <DictionaryLink styled={true} term={"char"}><b>char</b></DictionaryLink>&lt;, <DictionaryLink styled={true} term={"char"}><b>char</b></DictionaryLink>&gt;, <DictionaryLink styled={true} term={"char"}><b>char</b></DictionaryLink>&lt;<DictionaryLink styled={true} term={"="}><b>=</b></DictionaryLink>, <DictionaryLink styled={true} term={"char"}><b>char</b></DictionaryLink>&gt;<DictionaryLink styled={true} term={"="}><b>=</b></DictionaryLink>, respectively, except that they ignore differences in <GlossaryTerm styled={true} term={"case"}><i>case</i></GlossaryTerm> and might have an <GlossaryTerm styled={true} term={"implementation-defined"}><i>implementation-defined</i></GlossaryTerm> behavior for *non-simple characters*. For example, an <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm> might define that <DictionaryLink styled={true} term={"char-equal"}><b>char-equal</b></DictionaryLink>, *etc.* ignore certain *implementation-defined attributes*. The effect, if any, of each *implementation-defined attribute* upon these functions must be specified as part of the definition of that <GlossaryTerm styled={true} term={"attribute"}><i>attribute</i></GlossaryTerm>. 
 
 
 
@@ -216,7 +216,7 @@ If two *characters* have *identical implementation-defined attributes*, then the
 
 
 
-Should signal an error of *type* **program-error** if at least one *character* is not supplied. 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"program-error"}><b>program-error</b></DictionaryLink> if at least one <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> is not supplied. 
 
 
 
@@ -232,12 +232,12 @@ Section 2.1 (Character Syntax), Section 13.1.10 (Documentation of Implementation
 
 
 
-If characters differ in their *code attribute* or any *implementation-defined attribute*, they are considered to be different by **char=**. 
+If characters differ in their *code attribute* or any *implementation-defined attribute*, they are considered to be different by <DictionaryLink styled={true} term={"char="}><b>char=</b></DictionaryLink>. 
 
 
 
-There is no requirement that (eq c1 c2) be true merely because (char= c1 c2) is *true*. While **eq** can distinguish two *characters* that **char=** does not, it is distinguishing them not as *characters*, but in some sense on the basis of a lower level implementation characteristic. If (eq c1 c2) is *true*, then (char= c1 c2) is also true. **eql** and **equal** compare *characters* in the same way that **char=** does. 
+There is no requirement that (eq c1 c2) be true merely because (char= c1 c2) is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>. While <DictionaryLink styled={true} term={"eq"}><b>eq</b></DictionaryLink> can distinguish two <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm> that <DictionaryLink styled={true} term={"char="}><b>char=</b></DictionaryLink> does not, it is distinguishing them not as <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm>, but in some sense on the basis of a lower level implementation characteristic. If (eq c1 c2) is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>, then (char= c1 c2) is also true. <DictionaryLink styled={true} term={"eql"}><b>eql</b></DictionaryLink> and <DictionaryLink styled={true} term={"equal"}><b>equal</b></DictionaryLink> compare <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm> in the same way that <DictionaryLink styled={true} term={"char="}><b>char=</b></DictionaryLink> does. 
 
 
 
-The manner in which *case* is used by **char-equal**, **char-not-equal**, **char-lessp**, **char-greaterp**, **char-not-greaterp**, and **char-not-lessp** implies an ordering for *standard characters* such that A=a, B=b, and so on, up to Z=z, and furthermore either 9<a <="" div="" or="" z<0.=""></a>
+The manner in which <GlossaryTerm styled={true} term={"case"}><i>case</i></GlossaryTerm> is used by <DictionaryLink styled={true} term={"char-equal"}><b>char-equal</b></DictionaryLink>, <DictionaryLink styled={true} term={"char-not-equal"}><b>char-not-equal</b></DictionaryLink>, <DictionaryLink styled={true} term={"char-lessp"}><b>char-lessp</b></DictionaryLink>, <DictionaryLink styled={true} term={"char-greaterp"}><b>char-greaterp</b></DictionaryLink>, <DictionaryLink styled={true} term={"char-not-greaterp"}><b>char-not-greaterp</b></DictionaryLink>, and <DictionaryLink styled={true} term={"char-not-lessp"}><b>char-not-lessp</b></DictionaryLink> implies an ordering for *standard characters* such that A=a, B=b, and so on, up to Z=z, and furthermore either 9<a <="" div="" or="" z<0.=""></a>

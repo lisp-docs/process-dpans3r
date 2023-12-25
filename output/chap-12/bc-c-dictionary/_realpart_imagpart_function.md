@@ -1,4 +1,4 @@
-**realpart, imagpart** *Function* 
+**realpart, imagpart** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,11 +6,11 @@
 
 
 
-**realpart** *number → real* 
+<DictionaryLink styled={true} term={"realpart"}><b>realpart</b></DictionaryLink> *number → real* 
 
 
 
-**imagpart** *number → real* 
+<DictionaryLink styled={true} term={"imagpart"}><b>imagpart</b></DictionaryLink> *number → real* 
 
 
 
@@ -18,7 +18,7 @@
 
 
 
-*number*—a *number* . 
+<GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> . 
 
 
 
@@ -30,7 +30,7 @@
 
 
 
-**realpart** and **imagpart** return the real and imaginary parts of *number* respectively. If *number* is *real*, then **realpart** returns *number* and **imagpart** returns (\* 0 *number*), which has the effect that the imaginary part of a *rational* is 0 and that of a *float* is a floating-point zero of the same format. 
+<DictionaryLink styled={true} term={"realpart"}><b>realpart</b></DictionaryLink> and <DictionaryLink styled={true} term={"imagpart"}><b>imagpart</b></DictionaryLink> return the real and imaginary parts of <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> respectively. If <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> is *real*, then <DictionaryLink styled={true} term={"realpart"}><b>realpart</b></DictionaryLink> returns <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> and <DictionaryLink styled={true} term={"imagpart"}><b>imagpart</b></DictionaryLink> returns (\* 0 <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm>), which has the effect that the imaginary part of a <GlossaryTerm styled={true} term={"rational"}><i>rational</i></GlossaryTerm> is 0 and that of a <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm> is a floating-point zero of the same format. 
 
 
 
@@ -47,7 +47,7 @@
 
 
 
-Should signal an error of *type* **type-error** if *number* is not a *number* . 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> is not a <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> . 
 
 
 
@@ -55,7 +55,7 @@ Should signal an error of *type* **type-error** if *number* is not a *number* .
 
 
 
-**complex** 
+<DictionaryLink styled={true} term={"complex"}><b>complex</b></DictionaryLink> 
 
 
 

@@ -2,7 +2,7 @@
 
 
 
-*Tilde* immediately followed by a *newline* ignores the *newline* and any following non-newline *whitespace*<sub>1</sub> characters. With a :, the *newline* is ignored, but any following *whitespace*<sub>1</sub> is left in place. With an @, the *newline* is left in place, but any following *whitespace*<sub>1</sub> is ignored. For example: 
+*Tilde* immediately followed by a <GlossaryTerm styled={true} term={"newline"}><i>newline</i></GlossaryTerm> ignores the <GlossaryTerm styled={true} term={"newline"}><i>newline</i></GlossaryTerm> and any following non-newline <GlossaryTerm styled={true} term={"whitespace"}><i>whitespace</i></GlossaryTerm><sub>1</sub> characters. With a :, the <GlossaryTerm styled={true} term={"newline"}><i>newline</i></GlossaryTerm> is ignored, but any following <GlossaryTerm styled={true} term={"whitespace"}><i>whitespace</i></GlossaryTerm><sub>1</sub> is left in place. With an @, the <GlossaryTerm styled={true} term={"newline"}><i>newline</i></GlossaryTerm> is left in place, but any following <GlossaryTerm styled={true} term={"whitespace"}><i>whitespace</i></GlossaryTerm><sub>1</sub> is ignored. For example: 
 
 
 

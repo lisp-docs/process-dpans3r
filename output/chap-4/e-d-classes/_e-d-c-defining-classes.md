@@ -2,51 +2,51 @@
 
 
 
-The macro **defclass** is used to define a new named *class*. 
+The macro <DictionaryLink styled={true} term={"defclass"}><b>defclass</b></DictionaryLink> is used to define a new named <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm>. 
 
 
 
-The definition of a *class* includes: 
+The definition of a <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm> includes: 
 
 
 
-*•* The *name* of the new *class*. For newly-defined *classes* this *name* is a *proper name*. *•* The list of the direct *superclasses* of the new *class*. 
+*•* The <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> of the new <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm>. For newly-defined *classes* this <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> is a *proper name*. *•* The list of the direct *superclasses* of the new <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm>. 
 
 
 
-*•* A set of *slot specifiers*. Each *slot specifier* includes the *name* of the *slot* and zero or more *slot* options. A *slot* option pertains only to a single *slot*. If a *class* definition contains two *slot specifiers* with the same *name*, an error is signaled. 
+*•* A set of *slot specifiers*. Each *slot specifier* includes the <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> of the <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm> and zero or more <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm> options. A <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm> option pertains only to a single <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm>. If a <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm> definition contains two *slot specifiers* with the same <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm>, an error is signaled. 
 
 
 
-*•* A set of *class* options. Each *class* option pertains to the *class* as a whole. 
+*•* A set of <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm> options. Each <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm> option pertains to the <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm> as a whole. 
 
 
 
-The *slot* options and *class* options of the **defclass** form provide mechanisms for the following: *•* Supplying a default initial value *form* for a given *slot*. 
+The <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm> options and <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm> options of the <DictionaryLink styled={true} term={"defclass"}><b>defclass</b></DictionaryLink> form provide mechanisms for the following: *•* Supplying a default initial value <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> for a given <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm>. 
 
 
 
-*•* Requesting that *methods* for *generic functions* be automatically generated for reading or writing *slots*. 
+*•* Requesting that <GlossaryTerm styled={true} term={"method"}><i>methods</i></GlossaryTerm> for *generic functions* be automatically generated for reading or writing <GlossaryTerm styled={true} term={"slot"}><i>slots</i></GlossaryTerm>. 
 
 
 
-*•* Controlling whether a given *slot* is shared by all *instances* of the *class* or whether each *instance* of the *class* has its own *slot*. 
+*•* Controlling whether a given <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm> is shared by all <GlossaryTerm styled={true} term={"instance"}><i>instances</i></GlossaryTerm> of the <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm> or whether each <GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm> of the <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm> has its own <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm>. 
 
 
 
-*•* Supplying a set of initialization arguments and initialization argument defaults to be used in *instance* creation. 
+*•* Supplying a set of initialization arguments and initialization argument defaults to be used in <GlossaryTerm styled={true} term={"instance"}><i>instance</i></GlossaryTerm> creation. 
 
 
 
-*•* Indicating that the *metaclass* is to be other than the default. The :metaclass option is reserved for future use; an implementation can be extended to make use of the :metaclass option. 
+*•* Indicating that the <GlossaryTerm styled={true} term={"metaclass"}><i>metaclass</i></GlossaryTerm> is to be other than the default. The :metaclass option is reserved for future use; an implementation can be extended to make use of the :metaclass option. 
 
 
 
-*•* Indicating the expected *type* for the value stored in the *slot*. 
+*•* Indicating the expected <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> for the value stored in the <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm>. 
 
 
 
-*•* Indicating the *documentation string* for the *slot*.  
+*•* Indicating the *documentation string* for the <GlossaryTerm styled={true} term={"slot"}><i>slot</i></GlossaryTerm>.  
 
 
 

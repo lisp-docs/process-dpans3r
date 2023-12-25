@@ -1,4 +1,4 @@
-**with-input-from-string** *Macro* 
+**with-input-from-string** <GlossaryTerm styled={true} term={"macro"}><i>Macro</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**with-input-from-string** (*var string* &amp;key *index start end*) *\{declaration\}*\* *\{form\}*\* 
+<DictionaryLink styled={true} term={"with-input-from-string"}><b>with-input-from-string</b></DictionaryLink> (*var string* &amp;key *index start end*) *\{declaration\}*\* <GlossaryTerm styled={true} term={"form"}><i>\{form\}</i></GlossaryTerm>\* 
 
 
 
@@ -22,27 +22,27 @@
 
 
 
-*string*—a *form*; evaluated to produce a *string*. 
+<GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>; evaluated to produce a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>. 
 
 
 
-*index*—a *place*. 
+*index*—a <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm>. 
 
 
 
-*start*, *end*—*bounding index designators* of *string*. The defaults for *start* and *end* are 0 and **nil**, respectively. 
+*start*, *end*—*bounding index designators* of <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>. The defaults for *start* and *end* are 0 and <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>, respectively. 
 
 
 
-*declaration*—a **declare** *expression*; not evaluated. 
+<GlossaryTerm styled={true} term={"declaration"}><i>declaration</i></GlossaryTerm>—a <DictionaryLink styled={true} term={"declare"}><b>declare</b></DictionaryLink> <GlossaryTerm styled={true} term={"expression"}><i>expression</i></GlossaryTerm>; not evaluated. 
 
 
 
-*forms*—an *implicit progn*. 
+<GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm>—an *implicit progn*. 
 
 
 
-*result*—the *values* returned by the *forms*. 
+*result*—the <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> returned by the <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm>. 
 
 
 
@@ -50,7 +50,7 @@
 
 
 
-Creates an *input string stream*, provides an opportunity to perform operations on the *stream* (returning zero or more *values*), and then closes the *string stream*. 
+Creates an *input string stream*, provides an opportunity to perform operations on the <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm> (returning zero or more <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm>), and then closes the *string stream*. 
 
 
 
@@ -66,23 +66,23 @@ Creates an *input string stream*, provides an opportunity to perform operations 
 
 
 
-*String* is evaluated first, and *var* is bound to a character *input string stream* that supplies *characters* from the subsequence of the resulting *string bounded* by *start* and *end*. The body is executed as an *implicit progn*. 
+<GlossaryTerm styled={true} term={"string"}><i>String</i></GlossaryTerm> is evaluated first, and *var* is bound to a character *input string stream* that supplies <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm> from the subsequence of the resulting *string bounded* by *start* and *end*. The body is executed as an *implicit progn*. 
 
 
 
-The *input string stream* is automatically closed on exit from **with-input-from-string**, no matter whether the exit is normal or abnormal. The *input string stream* to which the *variable var* is *bound* has *dynamic extent*; its *extent* ends when the *form* is exited. 
+The *input string stream* is automatically closed on exit from <DictionaryLink styled={true} term={"with-input-from-string"}><b>with-input-from-string</b></DictionaryLink>, no matter whether the exit is normal or abnormal. The *input string stream* to which the *variable var* is <GlossaryTerm styled={true} term={"bound"}><i>bound</i></GlossaryTerm> has *dynamic extent*; its <GlossaryTerm styled={true} term={"extent"}><i>extent</i></GlossaryTerm> ends when the <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> is exited. 
 
 
 
-The *index* is a pointer within the *string* to be advanced. If **with-input-from-string** is exited normally, then *index* will have as its *value* the index into the *string* indicating the first character not read which is (length *string*) if all characters were used. The place specified by *index* is not updated as reading progresses, but only at the end of the operation. 
+The *index* is a pointer within the <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> to be advanced. If <DictionaryLink styled={true} term={"with-input-from-string"}><b>with-input-from-string</b></DictionaryLink> is exited normally, then *index* will have as its <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> the index into the <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> indicating the first character not read which is (length <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>) if all characters were used. The place specified by *index* is not updated as reading progresses, but only at the end of the operation. 
 
 
 
-*start* and *index* may both specify the same variable, which is a pointer within the *string* to be advanced, perhaps repeatedly by some containing loop. 
+*start* and *index* may both specify the same variable, which is a pointer within the <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> to be advanced, perhaps repeatedly by some containing loop. 
 
 
 
-The consequences are undefined if an attempt is made to *assign* the *variable var*. 
+The consequences are undefined if an attempt is made to <GlossaryTerm styled={true} term={"assign"}><i>assign</i></GlossaryTerm> the *variable var*. 
 
 
 
@@ -103,7 +103,7 @@ The variable j is set to 15.
 
 
 
-The *value* of the *place* named by *index*, if any, is modified. 
+The <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of the <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm> named by *index*, if any, is modified. 
 
 
 
@@ -111,7 +111,7 @@ The *value* of the *place* named by *index*, if any, is modified.
 
 
 
-**make-string-input-stream**, Section 3.6 (Traversal Rules and Side Effects) 
+<DictionaryLink styled={true} term={"make-string-input-stream"}><b>make-string-input-stream</b></DictionaryLink>, Section 3.6 (Traversal Rules and Side Effects) 
 
 
 

@@ -2,7 +2,7 @@
 
 
 
-The *characters* with *case* are a subset of the *alphabetic*<sub>1</sub> *characters*. A *character* with *case* has the property of being either *uppercase* or *lowercase*. Every *character* with *case* is in one-to-one correspondence with some other *character* with the opposite *case*. 
+The <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm> with <GlossaryTerm styled={true} term={"case"}><i>case</i></GlossaryTerm> are a subset of the <GlossaryTerm styled={true} term={"alphabetic"}><i>alphabetic</i></GlossaryTerm><sub>1</sub> <GlossaryTerm styled={true} term={"character"}><i>characters</i></GlossaryTerm>. A <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> with <GlossaryTerm styled={true} term={"case"}><i>case</i></GlossaryTerm> has the property of being either <GlossaryTerm styled={true} term={"uppercase"}><i>uppercase</i></GlossaryTerm> or <GlossaryTerm styled={true} term={"lowercase"}><i>lowercase</i></GlossaryTerm>. Every <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> with <GlossaryTerm styled={true} term={"case"}><i>case</i></GlossaryTerm> is in one-to-one correspondence with some other <GlossaryTerm styled={true} term={"character"}><i>character</i></GlossaryTerm> with the opposite <GlossaryTerm styled={true} term={"case"}><i>case</i></GlossaryTerm>. 
 
 
 

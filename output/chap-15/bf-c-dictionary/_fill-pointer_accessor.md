@@ -1,4 +1,4 @@
-**fill-pointer** *Accessor* 
+**fill-pointer** <GlossaryTerm styled={true} term={"accessor"}><i>Accessor</i></GlossaryTerm> 
 
 
 
@@ -6,11 +6,11 @@
 
 
 
-**fill-pointer** *vector → fill-pointer* 
+<DictionaryLink styled={true} term={"fill-pointer"}><b>fill-pointer</b></DictionaryLink> *vector → fill-pointer* 
 
 
 
-**(setf (fill-pointer** *vector***)** *new-fill-pointer***)** 
+**(setf (fill-pointer** <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm>**)** *new-fill-pointer***)** 
 
 
 
@@ -18,11 +18,11 @@
 
 
 
-*vector*—a *vector* with a *fill pointer* . 
+<GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm> with a *fill pointer* . 
 
 
 
-*fill-pointer*, *new-fill-pointer*—a *valid fill pointer* for the *vector*. 
+*fill-pointer*, *new-fill-pointer*—a *valid fill pointer* for the <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm>. 
 
 
 
@@ -30,7 +30,7 @@
 
 
 
-*Accesses* the *fill pointer* of *vector*. 
+*Accesses* the *fill pointer* of <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm>. 
 
 
 
@@ -52,7 +52,7 @@ a *→* #(0 1 4 9 NIL NIL NIL NIL)
 
 
 
-Should signal an error of *type* **type-error** if *vector* is not a *vector* with a *fill pointer* . 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm> is not a <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm> with a *fill pointer* . 
 
 
 
@@ -68,7 +68,7 @@ Should signal an error of *type* **type-error** if *vector* is not a *vector* wi
 
 
 
-**make-array**, **length** 
+<DictionaryLink styled={true} term={"make-array"}><b>make-array</b></DictionaryLink>, <DictionaryLink styled={true} term={"length"}><b>length</b></DictionaryLink> 
 
 
 
@@ -76,7 +76,7 @@ Should signal an error of *type* **type-error** if *vector* is not a *vector* wi
 
 
 
-There is no *operator* that will remove a *vector* ’s *fill pointer* . 
+There is no <GlossaryTerm styled={true} term={"operator"}><i>operator</i></GlossaryTerm> that will remove a <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm> ’s *fill pointer* . 
 
 
 

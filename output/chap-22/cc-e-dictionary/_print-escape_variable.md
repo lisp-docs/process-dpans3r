@@ -1,4 +1,4 @@
-*∗***print-escape***∗ Variable* 
+*∗<DictionaryLink styled={true} term={"print-escape"}><b>*print-escape*</b></DictionaryLink>∗ Variable* 
 
 
 
@@ -14,7 +14,7 @@ a *generalized boolean*.
 
 
 
-*true*. 
+<GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>. 
 
 
 
@@ -22,15 +22,15 @@ a *generalized boolean*.
 
 
 
-If *false*, escape characters and *package prefixes* are not output when an expression is printed. 
+If <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>, escape characters and *package prefixes* are not output when an expression is printed. 
 
 
 
-If *true*, an attempt is made to print an *expression* in such a way that it can be read again to produce an **equal** *expression*. (This is only a guideline; not a requirement. See **\*print-readably\***.) 
+If <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>, an attempt is made to print an <GlossaryTerm styled={true} term={"expression"}><i>expression</i></GlossaryTerm> in such a way that it can be read again to produce an <DictionaryLink styled={true} term={"equal"}><b>equal</b></DictionaryLink> <GlossaryTerm styled={true} term={"expression"}><i>expression</i></GlossaryTerm>. (This is only a guideline; not a requirement. See <DictionaryLink styled={true} term={"print-readably"}><b>\*print-readably\*</b></DictionaryLink>.) 
 
 
 
-For more specific details of how the *value* of **\*print-escape\*** affects the printing of certain *types*, see Section 22.1.3 (Default Print-Object Methods). 
+For more specific details of how the <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of <DictionaryLink styled={true} term={"print-escape"}><b>\*print-escape\*</b></DictionaryLink> affects the printing of certain <GlossaryTerm styled={true} term={"type"}><i>types</i></GlossaryTerm>, see Section 22.1.3 (Default Print-Object Methods). 
 
 
 
@@ -52,7 +52,7 @@ For more specific details of how the *value* of **\*print-escape\*** affects the
 
 
 
-**princ**, **prin1**, **format** 
+<DictionaryLink styled={true} term={"princ"}><b>princ</b></DictionaryLink>, <DictionaryLink styled={true} term={"prin1"}><b>prin1</b></DictionaryLink>, <DictionaryLink styled={true} term={"format"}><b>format</b></DictionaryLink> 
 
 
 
@@ -60,7 +60,7 @@ For more specific details of how the *value* of **\*print-escape\*** affects the
 
 
 
-**write**, **readtable-case** 
+<DictionaryLink styled={true} term={"write"}><b>write</b></DictionaryLink>, <DictionaryLink styled={true} term={"readtable-case"}><b>readtable-case</b></DictionaryLink> 
 
 
 
@@ -68,4 +68,4 @@ For more specific details of how the *value* of **\*print-escape\*** affects the
 
 
 
-**princ** effectively binds **\*print-escape\*** to *false*. **prin1** effectively binds **\*print-escape\*** to *true*. 
+<DictionaryLink styled={true} term={"princ"}><b>princ</b></DictionaryLink> effectively binds <DictionaryLink styled={true} term={"print-escape"}><b>\*print-escape\*</b></DictionaryLink> to <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. <DictionaryLink styled={true} term={"prin1"}><b>prin1</b></DictionaryLink> effectively binds <DictionaryLink styled={true} term={"print-escape"}><b>\*print-escape\*</b></DictionaryLink> to <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>. 

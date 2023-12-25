@@ -1,4 +1,4 @@
-**shadowing-import** *Function* 
+**shadowing-import** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**shadowing-import** *symbols* &amp;optional *package →* **t** 
+<DictionaryLink styled={true} term={"shadowing-import"}><b>shadowing-import</b></DictionaryLink> <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> &amp;optional *package →* <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink> 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*symbols*—a *designator* for a *list* of *symbols*. 
+<GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"designator"}><i>designator</i></GlossaryTerm> for a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm>. 
 
 
 
-*package* —a *package designator* . The default is the *current package*. 
+<GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> —a *package designator* . The default is the *current package*. 
 
 
 
@@ -26,19 +26,15 @@
 
 
 
-**shadowing-import** is like **import**, but it does not signal an error even if the importation of a *symbol* would shadow some *symbol* already *accessible* in *package*. 
+<DictionaryLink styled={true} term={"shadowing-import"}><b>shadowing-import</b></DictionaryLink> is like <DictionaryLink styled={true} term={"import"}><b>import</b></DictionaryLink>, but it does not signal an error even if the importation of a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> would shadow some <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> already <GlossaryTerm styled={true} term={"accessible"}><i>accessible</i></GlossaryTerm> in <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>. 
 
 
 
-**shadowing-import** inserts each of *symbols* into *package* as an internal symbol, regardless of whether another *symbol* of the same name is shadowed by this action. If a different *symbol* of the same name is already *present* in *package*, that *symbol* is first *uninterned* from *package*. The new *symbol* is added to *package*’s shadowing-symbols list. 
-
-
+<DictionaryLink styled={true} term={"shadowing-import"}><b>shadowing-import</b></DictionaryLink> inserts each of <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> into <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> as an internal symbol, regardless of whether another <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> of the same name is shadowed by this action. If a different <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> of the same name is already <GlossaryTerm styled={true} term={"present"}><i>present</i></GlossaryTerm> in <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>, that <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> is first <GlossaryTerm styled={true} term={"uninterned"}><i>uninterned</i></GlossaryTerm> from <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>. The new <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> is added to <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>’s shadowing-symbols list. 
 
 
 
 
-
- 
 
 
 
@@ -46,7 +42,11 @@
 
 
 
-**shadowing-import** does name-conflict checking to the extent that it checks whether a distinct existing *symbol* with the same name is *accessible*; if so, it is shadowed by the new *symbol*, which implies that it must be uninterned if it was *present* in *package*. 
+ 
+
+
+
+<DictionaryLink styled={true} term={"shadowing-import"}><b>shadowing-import</b></DictionaryLink> does name-conflict checking to the extent that it checks whether a distinct existing <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> with the same name is <GlossaryTerm styled={true} term={"accessible"}><i>accessible</i></GlossaryTerm>; if so, it is shadowed by the new <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>, which implies that it must be uninterned if it was <GlossaryTerm styled={true} term={"present"}><i>present</i></GlossaryTerm> in <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>. 
 
 
 
@@ -65,11 +65,11 @@
 
 
 
-**shadowing-import** changes the state of the package system in such a way that the consistency rules do not hold across the change. 
+<DictionaryLink styled={true} term={"shadowing-import"}><b>shadowing-import</b></DictionaryLink> changes the state of the package system in such a way that the consistency rules do not hold across the change. 
 
 
 
-*package*’s shadowing-symbols list is modified. 
+<GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>’s shadowing-symbols list is modified. 
 
 
 
@@ -85,7 +85,7 @@ Current state of the package system.
 
 
 
-**import**, **unintern**, **package-shadowing-symbols** 
+<DictionaryLink styled={true} term={"import"}><b>import</b></DictionaryLink>, <DictionaryLink styled={true} term={"unintern"}><b>unintern</b></DictionaryLink>, <DictionaryLink styled={true} term={"package-shadowing-symbols"}><b>package-shadowing-symbols</b></DictionaryLink> 
 
 
 

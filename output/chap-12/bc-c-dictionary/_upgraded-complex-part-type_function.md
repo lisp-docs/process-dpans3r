@@ -1,4 +1,4 @@
-**upgraded-complex-part-type** *Function* 
+**upgraded-complex-part-type** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**upgraded-complex-part-type** *typespec* &amp;optional *environment → upgraded-typespec* 
+<DictionaryLink styled={true} term={"upgraded-complex-part-type"}><b>upgraded-complex-part-type</b></DictionaryLink> *typespec* &amp;optional *environment → upgraded-typespec* 
 
 
 
@@ -18,7 +18,7 @@
 
 
 
-*environment*—an *environment object*. The default is **nil**, denoting the *null lexical environment* and the and current *global environment*. 
+<GlossaryTerm styled={true} term={"environment"}><i>environment</i></GlossaryTerm>—an *environment object*. The default is <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>, denoting the *null lexical environment* and the and current *global environment*. 
 
 
 
@@ -30,15 +30,15 @@
 
 
 
-**upgraded-complex-part-type** returns the part type of the most specialized *complex* number representation that can hold parts of *type typespec*. 
+<DictionaryLink styled={true} term={"upgraded-complex-part-type"}><b>upgraded-complex-part-type</b></DictionaryLink> returns the part type of the most specialized <GlossaryTerm styled={true} term={"complex"}><i>complex</i></GlossaryTerm> number representation that can hold parts of *type typespec*. 
 
 
 
-The *typespec* is a *subtype* of (and possibly *type equivalent* to) the *upgraded-typespec*. 
+The *typespec* is a <GlossaryTerm styled={true} term={"subtype"}><i>subtype</i></GlossaryTerm> of (and possibly *type equivalent* to) the *upgraded-typespec*. 
 
 
 
-The purpose of **upgraded-complex-part-type** is to reveal how an implementation does its *upgrading*. 
+The purpose of <DictionaryLink styled={true} term={"upgraded-complex-part-type"}><b>upgraded-complex-part-type</b></DictionaryLink> is to reveal how an implementation does its *upgrading*. 
 
 
 
@@ -46,7 +46,7 @@ The purpose of **upgraded-complex-part-type** is to reveal how an implementation
 
 
 
-**complex** (*function* and *type*) 
+<DictionaryLink styled={true} term={"complex"}><b>complex</b></DictionaryLink> (<GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> and <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm>) 
 
 
 

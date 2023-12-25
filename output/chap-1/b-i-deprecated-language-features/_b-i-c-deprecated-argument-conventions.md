@@ -2,11 +2,11 @@
 
 
 
-The ability to pass a numeric *argument* to **gensym** has been deprecated. 
+The ability to pass a numeric <GlossaryTerm styled={true} term={"argument"}><i>argument</i></GlossaryTerm> to <DictionaryLink styled={true} term={"gensym"}><b>gensym</b></DictionaryLink> has been deprecated. 
 
 
 
-The :test-not *argument* to the *functions* in Figure 1–3 are deprecated. 
+The :test-not <GlossaryTerm styled={true} term={"argument"}><i>argument</i></GlossaryTerm> to the <GlossaryTerm styled={true} term={"function"}><i>functions</i></GlossaryTerm> in Figure 1–3 are deprecated. 
 
 
 
@@ -22,7 +22,7 @@ The :test-not *argument* to the *functions* in Figure 1–3 are deprecated.
 
 
 
-The use of the situation names **compile**, **load**, and **eval** in **eval-when** is deprecated. 
+The use of the situation names <DictionaryLink styled={true} term={"compile"}><b>compile</b></DictionaryLink>, <DictionaryLink styled={true} term={"load"}><b>load</b></DictionaryLink>, and <DictionaryLink styled={true} term={"eval"}><b>eval</b></DictionaryLink> in <DictionaryLink styled={true} term={"eval-when"}><b>eval-when</b></DictionaryLink> is deprecated. 
 
 
 

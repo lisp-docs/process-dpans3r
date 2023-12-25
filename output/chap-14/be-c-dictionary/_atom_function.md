@@ -1,4 +1,4 @@
-**atom** *Function* 
+**atom** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**atom** *object → generalized-boolean* 
+<DictionaryLink styled={true} term={"atom"}><b>atom</b></DictionaryLink> *object → generalized-boolean* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*object*—an *object*. 
+<GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-Returns *true* if *object* is of *type* **atom**; otherwise, returns *false*. 
+Returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"atom"}><b>atom</b></DictionaryLink>; otherwise, returns <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
@@ -47,11 +47,11 @@ Returns *true* if *object* is of *type* **atom**; otherwise, returns *false*.
 
 
 
-(atom *object*) *≡* (typep *object* ’atom) *≡* (not (consp *object*)) 
+(atom <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>) *≡* (typep <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> ’atom) *≡* (not (consp <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>)) 
 
 
 
-*≡* (not (typep *object* ’cons)) *≡* (typep *object* ’(not cons)) 
+*≡* (not (typep <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> ’cons)) *≡* (typep <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> ’(not cons)) 
 
 
 

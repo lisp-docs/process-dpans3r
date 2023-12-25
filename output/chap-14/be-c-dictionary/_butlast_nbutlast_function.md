@@ -1,4 +1,4 @@
-**butlast, nbutlast** *Function* 
+**butlast, nbutlast** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,11 +6,11 @@
 
 
 
-**butlast** *list* &amp;optional *n → result-list* 
+<DictionaryLink styled={true} term={"butlast"}><b>butlast</b></DictionaryLink> <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> &amp;optional *n → result-list* 
 
 
 
-**nbutlast** *list* &amp;optional *n → result-list* 
+<DictionaryLink styled={true} term={"nbutlast"}><b>nbutlast</b></DictionaryLink> <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> &amp;optional *n → result-list* 
 
 
 
@@ -18,7 +18,7 @@
 
 
 
-*list*—a *list*, which might be a *dotted list* but must not be a *circular list*. 
+<GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>, which might be a *dotted list* but must not be a *circular list*. 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-*result-list*—a *list*. 
+*result-list*—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>. 
 
 
 
@@ -34,11 +34,11 @@
 
 
 
-**butlast** returns a copy of *list* from which the last *n* conses have been omitted. If *n* is not supplied, its value is 1. If there are fewer than *n* conses in *list*, **nil** is returned and, in the case of **nbutlast**, *list* is not modified. 
+<DictionaryLink styled={true} term={"butlast"}><b>butlast</b></DictionaryLink> returns a copy of <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> from which the last *n* conses have been omitted. If *n* is not supplied, its value is 1. If there are fewer than *n* conses in <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>, <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> is returned and, in the case of <DictionaryLink styled={true} term={"nbutlast"}><b>nbutlast</b></DictionaryLink>, <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> is not modified. 
 
 
 
-**nbutlast** is like **butlast**, but **nbutlast** may modify *list*. It changes the *cdr* of the *cons n*+1 from the end of the *list* to **nil**. 
+<DictionaryLink styled={true} term={"nbutlast"}><b>nbutlast</b></DictionaryLink> is like <DictionaryLink styled={true} term={"butlast"}><b>butlast</b></DictionaryLink>, but <DictionaryLink styled={true} term={"nbutlast"}><b>nbutlast</b></DictionaryLink> may modify <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>. It changes the <GlossaryTerm styled={true} term={"cdr"}><i>cdr</i></GlossaryTerm> of the *cons n*+1 from the end of the <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> to <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -72,7 +72,7 @@ foo *→* (A B C)
 
 
 
-Should signal an error of *type* **type-error** if *list* is not a *proper list* or a *dotted list*. Should signal an error of *type* **type-error** if *n* is not a non-negative *integer* . 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> is not a *proper list* or a *dotted list*. Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if *n* is not a non-negative *integer* . 
 
 
 
@@ -80,7 +80,7 @@ Should signal an error of *type* **type-error** if *list* is not a *proper list*
 
 
 
-(butlast *list n*) *≡* (ldiff *list* (last *list n*)) 
+(butlast *list n*) *≡* (ldiff <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> (last *list n*)) 
 
 
 

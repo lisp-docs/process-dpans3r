@@ -1,4 +1,4 @@
-**array-rank** *Function* 
+**array-rank** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**array-rank** *array → rank* 
+<DictionaryLink styled={true} term={"array-rank"}><b>array-rank</b></DictionaryLink> *array → rank* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*array*—an *array*. 
+<GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm>. 
 
 
 
-*rank*—a non-negative *integer* . 
+<GlossaryTerm styled={true} term={"rank"}><i>rank</i></GlossaryTerm>—a non-negative *integer* . 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-Returns the number of *dimensions* of *array*. 
+Returns the number of <GlossaryTerm styled={true} term={"dimension"}><i>dimensions</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm>. 
 
 
 
@@ -43,7 +43,7 @@ Returns the number of *dimensions* of *array*.
 
 
 
-Should signal an error of *type* **type-error** if its argument is not an *array*. 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if its argument is not an <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm>. 
 
 
 
@@ -51,7 +51,7 @@ Should signal an error of *type* **type-error** if its argument is not an *array
 
 
 
-**array-rank-limit**, **make-array** 
+<DictionaryLink styled={true} term={"array-rank-limit"}><b>array-rank-limit</b></DictionaryLink>, <DictionaryLink styled={true} term={"make-array"}><b>make-array</b></DictionaryLink> 
 
 
 

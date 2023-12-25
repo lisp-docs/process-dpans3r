@@ -1,4 +1,4 @@
-**vector-push, vector-push-extend** *Function* 
+**vector-push, vector-push-extend** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,11 +6,11 @@
 
 
 
-**vector-push** *new-element vector → new-index-p* 
+<DictionaryLink styled={true} term={"vector-push"}><b>vector-push</b></DictionaryLink> *new-element vector → new-index-p* 
 
 
 
-**vector-push-extend** *new-element vector* &amp;optional *extension → new-index* 
+<DictionaryLink styled={true} term={"vector-push-extend"}><b>vector-push-extend</b></DictionaryLink> *new-element vector* &amp;optional *extension → new-index* 
 
 
 
@@ -18,23 +18,23 @@
 
 
 
-*new-element*—an *object*. 
+*new-element*—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
-*vector*—a *vector* with a *fill pointer* . 
+<GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm> with a *fill pointer* . 
 
 
 
-*extension*—a positive *integer* . The default is *implementation-dependent*. 
+<GlossaryTerm styled={true} term={"extension"}><i>extension</i></GlossaryTerm>—a positive *integer* . The default is <GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm>. 
 
 
 
-*new-index-p*—a *valid array index* for *vector*, or **nil**. 
+*new-index-p*—a *valid array index* for <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm>, or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
-*new-index*—a *valid array index* for *vector*. 
+*new-index*—a *valid array index* for <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm>. 
 
 
 
@@ -42,15 +42,15 @@
 
 
 
-**vector-push** and **vector-push-extend** store *new-element* in *vector*. **vector-push** attempts to store *new-element* in the element of *vector* designated by the *fill pointer* , and to increase the *fill pointer* by one. If the (&gt;= (fill-pointer *vector*) (array-dimension *vector* 0)), neither *vector* nor its *fill pointer* are affected. Otherwise, the store and increment take place and **vector-push** returns the former value of the *fill pointer* which is one less than the one it leaves in *vector*. 
+<DictionaryLink styled={true} term={"vector-push"}><b>vector-push</b></DictionaryLink> and <DictionaryLink styled={true} term={"vector-push-extend"}><b>vector-push-extend</b></DictionaryLink> store *new-element* in <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm>. <DictionaryLink styled={true} term={"vector-push"}><b>vector-push</b></DictionaryLink> attempts to store *new-element* in the element of <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm> designated by the *fill pointer* , and to increase the *fill pointer* by one. If the (&gt;= (fill-pointer <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm>) (array-dimension <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm> 0)), neither <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm> nor its *fill pointer* are affected. Otherwise, the store and increment take place and <DictionaryLink styled={true} term={"vector-push"}><b>vector-push</b></DictionaryLink> returns the former value of the *fill pointer* which is one less than the one it leaves in <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm>. 
 
 
 
-**vector-push-extend** is just like **vector-push** except that if the *fill pointer* gets too large, *vector* is extended using **adjust-array** so that it can contain more elements. *Extension* is the minimum number of elements to be added to *vector* if it must be extended. 
+<DictionaryLink styled={true} term={"vector-push-extend"}><b>vector-push-extend</b></DictionaryLink> is just like <DictionaryLink styled={true} term={"vector-push"}><b>vector-push</b></DictionaryLink> except that if the *fill pointer* gets too large, <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm> is extended using <DictionaryLink styled={true} term={"adjust-array"}><b>adjust-array</b></DictionaryLink> so that it can contain more elements. <GlossaryTerm styled={true} term={"extension"}><i>Extension</i></GlossaryTerm> is the minimum number of elements to be added to <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm> if it must be extended. 
 
 
 
-**vector-push** and **vector-push-extend** return the index of *new-element* in *vector*. If (&gt;= (fill-pointer *vector*) (array-dimension *vector* 0)), **vector-push** returns **nil**. 
+<DictionaryLink styled={true} term={"vector-push"}><b>vector-push</b></DictionaryLink> and <DictionaryLink styled={true} term={"vector-push-extend"}><b>vector-push-extend</b></DictionaryLink> return the index of *new-element* in <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm>. If (&gt;= (fill-pointer <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm>) (array-dimension <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm> 0)), <DictionaryLink styled={true} term={"vector-push"}><b>vector-push</b></DictionaryLink> returns <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -87,7 +87,7 @@ The value of the *fill pointer* .
 
 
 
-How *vector* was created. 
+How <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm> was created. 
 
 
 
@@ -95,11 +95,11 @@ How *vector* was created.
 
 
 
-An error of *type* **error** is signaled by **vector-push-extend** if it tries to extend *vector* and *vector* is not *actually adjustable*. 
+An error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"error"}><b>error</b></DictionaryLink> is signaled by <DictionaryLink styled={true} term={"vector-push-extend"}><b>vector-push-extend</b></DictionaryLink> if it tries to extend <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm> and <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm> is not *actually adjustable*. 
 
 
 
-An error of *type* **error** is signaled if *vector* does not have a *fill pointer* . 
+An error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"error"}><b>error</b></DictionaryLink> is signaled if <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm> does not have a *fill pointer* . 
 
 
 
@@ -107,7 +107,7 @@ An error of *type* **error** is signaled if *vector* does not have a *fill point
 
 
 
-**adjustable-array-p**, **fill-pointer**, **vector-pop** 
+**adjustable-array-p**, <DictionaryLink styled={true} term={"fill-pointer"}><b>fill-pointer</b></DictionaryLink>, <DictionaryLink styled={true} term={"vector-pop"}><b>vector-pop</b></DictionaryLink> 
 
 
 

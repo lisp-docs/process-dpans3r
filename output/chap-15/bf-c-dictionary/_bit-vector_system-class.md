@@ -6,7 +6,7 @@
 
 
 
-**bit-vector**, **vector**, **array**, **sequence**, **t** 
+<DictionaryLink styled={true} term={"bit-vector"}><b>bit-vector</b></DictionaryLink>, <DictionaryLink styled={true} term={"vector"}><b>vector</b></DictionaryLink>, <DictionaryLink styled={true} term={"array"}><b>array</b></DictionaryLink>, <DictionaryLink styled={true} term={"sequence"}><b>sequence</b></DictionaryLink>, <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink> 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-A *bit vector* is a *vector* the *element type* of which is *bit*. 
+A *bit vector* is a <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm> the *element type* of which is <GlossaryTerm styled={true} term={"bit"}><i>bit</i></GlossaryTerm>. 
 
 
 
-The *type* **bit-vector** is a *subtype* of *type* **vector**, for **bit-vector** means (vector bit). 
+The <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"bit-vector"}><b>bit-vector</b></DictionaryLink> is a <GlossaryTerm styled={true} term={"subtype"}><i>subtype</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"vector"}><b>vector</b></DictionaryLink>, for <DictionaryLink styled={true} term={"bit-vector"}><b>bit-vector</b></DictionaryLink> means (vector bit). 
 
 
 
@@ -42,7 +42,7 @@ Abbreviating.
 
 
 
-*size*—a non-negative *fixnum*, or the *symbol* **\***. 
+*size*—a non-negative <GlossaryTerm styled={true} term={"fixnum"}><i>fixnum</i></GlossaryTerm>, or the <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> **\***. 
 
 
 
@@ -50,7 +50,7 @@ Abbreviating.
 
 
 
-This denotes the same *type* as the *type* (array bit (*size*)); that is, the set of *bit vectors* of size *size*. 
+This denotes the same <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> as the <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> (array bit (*size*)); that is, the set of *bit vectors* of size *size*. 
 
 
 

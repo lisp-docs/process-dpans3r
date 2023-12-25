@@ -1,4 +1,4 @@
-**provide, require** *Function* 
+**provide, require** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,11 +6,11 @@
 
 
 
-**provide** *module-name → implementation-dependent* 
+<DictionaryLink styled={true} term={"provide"}><b>provide</b></DictionaryLink> *module-name → implementation-dependent* 
 
 
 
-**require** *module-name* &amp;optional *pathname-list → implementation-dependent* 
+<DictionaryLink styled={true} term={"require"}><b>require</b></DictionaryLink> *module-name* &amp;optional *pathname-list → implementation-dependent* 
 
 
 
@@ -22,7 +22,7 @@
 
 
 
-*pathname-list*—**nil**, or a *designator* for a *non-empty list* of *pathname designators*. The default is **nil**. 
+*pathname-list*—<DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>, or a <GlossaryTerm styled={true} term={"designator"}><i>designator</i></GlossaryTerm> for a *non-empty list* of *pathname designators*. The default is <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -30,19 +30,19 @@
 
 
 
-**provide** adds the *module-name* to the *list* held by **\*modules\***, if such a name is not already present. 
+<DictionaryLink styled={true} term={"provide"}><b>provide</b></DictionaryLink> adds the *module-name* to the <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> held by <DictionaryLink styled={true} term={"modules"}><b>\*modules\*</b></DictionaryLink>, if such a name is not already present. 
 
 
 
-**require** tests for the presence of the *module-name* in the *list* held by **\*modules\***. If it is present, **require** immediately returns. Otherwise, an attempt is made to load an appropriate set of *files* as follows: The *pathname-list* argument, if *non-nil*, specifies a list of *pathnames* to be loaded in order, 
+<DictionaryLink styled={true} term={"require"}><b>require</b></DictionaryLink> tests for the presence of the *module-name* in the <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> held by <DictionaryLink styled={true} term={"modules"}><b>\*modules\*</b></DictionaryLink>. If it is present, <DictionaryLink styled={true} term={"require"}><b>require</b></DictionaryLink> immediately returns. Otherwise, an attempt is made to load an appropriate set of <GlossaryTerm styled={true} term={"file"}><i>files</i></GlossaryTerm> as follows: The *pathname-list* argument, if <GlossaryTerm styled={true} term={"non-nil"}><i>non-nil</i></GlossaryTerm>, specifies a list of <GlossaryTerm styled={true} term={"pathname"}><i>pathnames</i></GlossaryTerm> to be loaded in order, 
 
 
 
-from left to right. If the *pathname-list* is **nil**, an *implementation-dependent* mechanism will be invoked in an attempt to load the module named *module-name*; if no such module can be loaded, an error of *type* **error** is signaled. 
+from left to right. If the *pathname-list* is <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>, an <GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm> mechanism will be invoked in an attempt to load the module named *module-name*; if no such module can be loaded, an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"error"}><b>error</b></DictionaryLink> is signaled. 
 
 
 
-Both functions use **string=** to test for the presence of a *module-name*. 
+Both functions use <DictionaryLink styled={true} term={"string"}><b>string=</b></DictionaryLink> to test for the presence of a *module-name*. 
 
 
 
@@ -72,7 +72,7 @@ System
 
 
 
-**provide** modifies **\*modules\***. 
+<DictionaryLink styled={true} term={"provide"}><b>provide</b></DictionaryLink> modifies <DictionaryLink styled={true} term={"modules"}><b>\*modules\*</b></DictionaryLink>. 
 
 
 
@@ -80,7 +80,7 @@ System
 
 
 
-The specific action taken by **require** is affected by calls to **provide** (or, in general, any changes to the *value* of **\*modules\***). 
+The specific action taken by <DictionaryLink styled={true} term={"require"}><b>require</b></DictionaryLink> is affected by calls to <DictionaryLink styled={true} term={"provide"}><b>provide</b></DictionaryLink> (or, in general, any changes to the <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of <DictionaryLink styled={true} term={"modules"}><b>\*modules\*</b></DictionaryLink>). 
 
 
 
@@ -88,15 +88,15 @@ The specific action taken by **require** is affected by calls to **provide** (or
 
 
 
-Should signal an error of *type* **type-error** if *module-name* is not a *string designator* . 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if *module-name* is not a *string designator* . 
 
 
 
-If **require** fails to perform the requested operation due to a problem while interacting with the *file system*, an error of *type* **file-error** is signaled. 
+If <DictionaryLink styled={true} term={"require"}><b>require</b></DictionaryLink> fails to perform the requested operation due to a problem while interacting with the *file system*, an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"file-error"}><b>file-error</b></DictionaryLink> is signaled. 
 
 
 
-An error of *type* **file-error** might be signaled if any *pathname* in *pathname-list* is a *designator* for a *wild pathname*. 
+An error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"file-error"}><b>file-error</b></DictionaryLink> might be signaled if any <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm> in *pathname-list* is a <GlossaryTerm styled={true} term={"designator"}><i>designator</i></GlossaryTerm> for a *wild pathname*. 
 
 
 
@@ -104,7 +104,7 @@ An error of *type* **file-error** might be signaled if any *pathname* in *pathna
 
 
 
-**\*modules\***, Section 19.1.2 (Pathnames as Filenames) 
+<DictionaryLink styled={true} term={"modules"}><b>\*modules\*</b></DictionaryLink>, Section 19.1.2 (Pathnames as Filenames) 
 
 
 
@@ -112,11 +112,11 @@ An error of *type* **file-error** might be signaled if any *pathname* in *pathna
 
 
 
-The functions **provide** and **require** are deprecated. 
+The functions <DictionaryLink styled={true} term={"provide"}><b>provide</b></DictionaryLink> and <DictionaryLink styled={true} term={"require"}><b>require</b></DictionaryLink> are deprecated. 
 
 
 
-If a module consists of a single *package*, it is customary for the package and module names to be the same. 
+If a module consists of a single <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>, it is customary for the package and module names to be the same. 
 
 
 

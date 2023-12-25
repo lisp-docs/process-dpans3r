@@ -2,7 +2,7 @@
 
 
 
-A **the** *form* can be used as a *place*, in which case the declaration is transferred to the *newvalue* form, and the resulting **setf** is analyzed. For example, 
+A <DictionaryLink styled={true} term={"the"}><b>the</b></DictionaryLink> <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> can be used as a <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm>, in which case the declaration is transferred to the *newvalue* form, and the resulting <DictionaryLink styled={true} term={"setf"}><b>setf</b></DictionaryLink> is analyzed. For example, 
 
 
 

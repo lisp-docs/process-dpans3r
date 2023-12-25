@@ -1,4 +1,4 @@
-**short-float, single-float, double-float, long-float** *Type* 
+**short-float, single-float, double-float, long-float** <GlossaryTerm styled={true} term={"type"}><i>Type</i></GlossaryTerm> 
 
 
 
@@ -6,19 +6,19 @@
 
 
 
-**short-float**: **short-float**, **float**, **real**, **number**, **t** 
+<DictionaryLink styled={true} term={"short-float"}><b>short-float</b></DictionaryLink>: <DictionaryLink styled={true} term={"short-float"}><b>short-float</b></DictionaryLink>, <DictionaryLink styled={true} term={"float"}><b>float</b></DictionaryLink>, <DictionaryLink styled={true} term={"real"}><b>real</b></DictionaryLink>, <DictionaryLink styled={true} term={"number"}><b>number</b></DictionaryLink>, <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink> 
 
 
 
-**single-float**: **single-float**, **float**, **real**, **number**, **t** 
+<DictionaryLink styled={true} term={"single-float"}><b>single-float</b></DictionaryLink>: <DictionaryLink styled={true} term={"single-float"}><b>single-float</b></DictionaryLink>, <DictionaryLink styled={true} term={"float"}><b>float</b></DictionaryLink>, <DictionaryLink styled={true} term={"real"}><b>real</b></DictionaryLink>, <DictionaryLink styled={true} term={"number"}><b>number</b></DictionaryLink>, <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink> 
 
 
 
-**double-float**: **double-float**, **float**, **real**, **number**, **t** 
+<DictionaryLink styled={true} term={"double-float"}><b>double-float</b></DictionaryLink>: <DictionaryLink styled={true} term={"double-float"}><b>double-float</b></DictionaryLink>, <DictionaryLink styled={true} term={"float"}><b>float</b></DictionaryLink>, <DictionaryLink styled={true} term={"real"}><b>real</b></DictionaryLink>, <DictionaryLink styled={true} term={"number"}><b>number</b></DictionaryLink>, <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink> 
 
 
 
-**long-float**: **long-float**, **float**, **real**, **number**, **t** 
+<DictionaryLink styled={true} term={"long-float"}><b>long-float</b></DictionaryLink>: <DictionaryLink styled={true} term={"long-float"}><b>long-float</b></DictionaryLink>, <DictionaryLink styled={true} term={"float"}><b>float</b></DictionaryLink>, <DictionaryLink styled={true} term={"real"}><b>real</b></DictionaryLink>, <DictionaryLink styled={true} term={"number"}><b>number</b></DictionaryLink>, <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink> 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-For the four defined *subtypes* of *type* **float**, it is true that intermediate between the *type* **short-float** and the *type* **long-float** are the *type* **single-float** and the *type* **double-float**. The precise definition of these categories is *implementation-defined*. The precision (measured in “bits”, computed as *p* log<sub>2</sub>*b*) and the exponent size (also measured in “bits,” computed as log<sub>2</sub>(*n* + 1), where *n* is the maximum exponent value) is recommended to be at least as great as the values in Figure 12–12. Each of the defined *subtypes* of *type* **float** might or might not have a minus zero. 
+For the four defined <GlossaryTerm styled={true} term={"subtype"}><i>subtypes</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"float"}><b>float</b></DictionaryLink>, it is true that intermediate between the <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"short-float"}><b>short-float</b></DictionaryLink> and the <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"long-float"}><b>long-float</b></DictionaryLink> are the <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"single-float"}><b>single-float</b></DictionaryLink> and the <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"double-float"}><b>double-float</b></DictionaryLink>. The precise definition of these categories is <GlossaryTerm styled={true} term={"implementation-defined"}><i>implementation-defined</i></GlossaryTerm>. The precision (measured in “bits”, computed as *p* log<sub>2</sub>*b*) and the exponent size (also measured in “bits,” computed as log<sub>2</sub>(*n* + 1), where *n* is the maximum exponent value) is recommended to be at least as great as the values in Figure 12–12. Each of the defined <GlossaryTerm styled={true} term={"subtype"}><i>subtypes</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"float"}><b>float</b></DictionaryLink> might or might not have a minus zero. 
 
 
 
@@ -44,11 +44,11 @@ For the four defined *subtypes* of *type* **float**, it is true that intermediat
 
 
 
-There can be fewer than four internal representations for *floats*. If there are fewer distinct representations, the following rules apply: 
+There can be fewer than four internal representations for <GlossaryTerm styled={true} term={"float"}><i>floats</i></GlossaryTerm>. If there are fewer distinct representations, the following rules apply: 
 
 
 
-– If there is only one, it is the *type* **single-float**. In this representation, an *object* is simultaneously of *types* **single-float**, **double-float**, **short-float**, and **long-float**. 
+– If there is only one, it is the <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"single-float"}><b>single-float</b></DictionaryLink>. In this representation, an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is simultaneously of <GlossaryTerm styled={true} term={"type"}><i>types</i></GlossaryTerm> <DictionaryLink styled={true} term={"single-float"}><b>single-float</b></DictionaryLink>, <DictionaryLink styled={true} term={"double-float"}><b>double-float</b></DictionaryLink>, <DictionaryLink styled={true} term={"short-float"}><b>short-float</b></DictionaryLink>, and <DictionaryLink styled={true} term={"long-float"}><b>long-float</b></DictionaryLink>. 
 
 
 
@@ -68,11 +68,11 @@ There can be fewer than four internal representations for *floats*. If there are
 
 
 
-*•* Two *types* are provided: **single-float** and **short-float**. An *object* is simultaneously of *types* **single-float**, **double-float**, and **long-float**. 
+*•* Two <GlossaryTerm styled={true} term={"type"}><i>types</i></GlossaryTerm> are provided: <DictionaryLink styled={true} term={"single-float"}><b>single-float</b></DictionaryLink> and <DictionaryLink styled={true} term={"short-float"}><b>short-float</b></DictionaryLink>. An <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is simultaneously of <GlossaryTerm styled={true} term={"type"}><i>types</i></GlossaryTerm> <DictionaryLink styled={true} term={"single-float"}><b>single-float</b></DictionaryLink>, <DictionaryLink styled={true} term={"double-float"}><b>double-float</b></DictionaryLink>, and <DictionaryLink styled={true} term={"long-float"}><b>long-float</b></DictionaryLink>. 
 
 
 
-*•* Two *types* are provided: **single-float** and **double-float**. An *object* is simultaneously of *types* **single-float** and **short-float**, or **double-float** and **long-float**. 
+*•* Two <GlossaryTerm styled={true} term={"type"}><i>types</i></GlossaryTerm> are provided: <DictionaryLink styled={true} term={"single-float"}><b>single-float</b></DictionaryLink> and <DictionaryLink styled={true} term={"double-float"}><b>double-float</b></DictionaryLink>. An <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is simultaneously of <GlossaryTerm styled={true} term={"type"}><i>types</i></GlossaryTerm> <DictionaryLink styled={true} term={"single-float"}><b>single-float</b></DictionaryLink> and <DictionaryLink styled={true} term={"short-float"}><b>short-float</b></DictionaryLink>, or <DictionaryLink styled={true} term={"double-float"}><b>double-float</b></DictionaryLink> and <DictionaryLink styled={true} term={"long-float"}><b>long-float</b></DictionaryLink>. 
 
 
 
@@ -80,11 +80,11 @@ There can be fewer than four internal representations for *floats*. If there are
 
 
 
-*•* Three *types* are provided: **short-float**, **single-float**, and **double-float**. An *object* can simultaneously be of *type* **double-float** and **long-float**. 
+*•* Three <GlossaryTerm styled={true} term={"type"}><i>types</i></GlossaryTerm> are provided: <DictionaryLink styled={true} term={"short-float"}><b>short-float</b></DictionaryLink>, <DictionaryLink styled={true} term={"single-float"}><b>single-float</b></DictionaryLink>, and <DictionaryLink styled={true} term={"double-float"}><b>double-float</b></DictionaryLink>. An <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> can simultaneously be of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"double-float"}><b>double-float</b></DictionaryLink> and <DictionaryLink styled={true} term={"long-float"}><b>long-float</b></DictionaryLink>. 
 
 
 
-*•* Three *types* are provided: **single-float**, **double-float**, and **long-float**. An *object* can simultaneously be of *types* **single-float** and **short-float**. 
+*•* Three <GlossaryTerm styled={true} term={"type"}><i>types</i></GlossaryTerm> are provided: <DictionaryLink styled={true} term={"single-float"}><b>single-float</b></DictionaryLink>, <DictionaryLink styled={true} term={"double-float"}><b>double-float</b></DictionaryLink>, and <DictionaryLink styled={true} term={"long-float"}><b>long-float</b></DictionaryLink>. An <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> can simultaneously be of <GlossaryTerm styled={true} term={"type"}><i>types</i></GlossaryTerm> <DictionaryLink styled={true} term={"single-float"}><b>single-float</b></DictionaryLink> and <DictionaryLink styled={true} term={"short-float"}><b>short-float</b></DictionaryLink>. 
 
 
 
@@ -120,19 +120,19 @@ Abbreviating.
 
 
 
-*short-lower-limit*, *short-upper-limit*—*interval designators* for *type* **short-float**. The defaults for each of *lower-limit* and *upper-limit* is the *symbol* **\***. 
+*short-lower-limit*, *short-upper-limit*—*interval designators* for <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"short-float"}><b>short-float</b></DictionaryLink>. The defaults for each of *lower-limit* and *upper-limit* is the <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> **\***. 
 
 
 
-*single-lower-limit*, *single-upper-limit*—*interval designators* for *type* **single-float**. The defaults for each of *lower-limit* and *upper-limit* is the *symbol* **\***. 
+*single-lower-limit*, *single-upper-limit*—*interval designators* for <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"single-float"}><b>single-float</b></DictionaryLink>. The defaults for each of *lower-limit* and *upper-limit* is the <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> **\***. 
 
 
 
-*double-lower-limit*, *double-upper-limit*—*interval designators* for *type* **double-float**. The defaults for each of *lower-limit* and *upper-limit* is the *symbol* **\***. 
+*double-lower-limit*, *double-upper-limit*—*interval designators* for <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"double-float"}><b>double-float</b></DictionaryLink>. The defaults for each of *lower-limit* and *upper-limit* is the <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> **\***. 
 
 
 
-*long-lower-limit*, *long-upper-limit*—*interval designators* for *type* **long-float**. The defaults for each of *lower-limit* and *upper-limit* is the *symbol* **\***. 
+*long-lower-limit*, *long-upper-limit*—*interval designators* for <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"long-float"}><b>long-float</b></DictionaryLink>. The defaults for each of *lower-limit* and *upper-limit* is the <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> **\***. 
 
 
 
@@ -140,7 +140,7 @@ Abbreviating.
 
 
 
-Each of these denotes the set of *floats* of the indicated *type* that are on the interval specified by the *interval designators*. 
+Each of these denotes the set of <GlossaryTerm styled={true} term={"float"}><i>floats</i></GlossaryTerm> of the indicated <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> that are on the interval specified by the *interval designators*. 
 
 
 

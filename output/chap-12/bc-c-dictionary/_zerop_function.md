@@ -1,4 +1,4 @@
-**zerop** *Function* 
+**zerop** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**zerop** *number → generalized-boolean* 
+<DictionaryLink styled={true} term={"zerop"}><b>zerop</b></DictionaryLink> *number → generalized-boolean* 
 
 
 
@@ -22,7 +22,7 @@
 
 
 
-*number*—a *number* . 
+<GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> . 
 
 
 
@@ -34,11 +34,11 @@
 
 
 
-Returns *true* if *number* is zero (*integer* , *float*, or *complex* ); otherwise, returns *false*. 
+Returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> is zero (*integer* , <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm>, or <GlossaryTerm styled={true} term={"complex"}><i>complex</i></GlossaryTerm> ); otherwise, returns <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
-Regardless of whether an *implementation* provides distinct representations for positive and negative floating-point zeros, (zerop -0.0) always returns *true*. 
+Regardless of whether an <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm> provides distinct representations for positive and negative floating-point zeros, (zerop -0.0) always returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>. 
 
 
 
@@ -56,7 +56,7 @@ Regardless of whether an *implementation* provides distinct representations for 
 
 
 
-Should signal an error of *type* **type-error** if *number* is not a *number* . 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> is not a <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> . 
 
 
 
@@ -64,7 +64,7 @@ Should signal an error of *type* **type-error** if *number* is not a *number* .
 
 
 
-(zerop *number*) *≡* (= *number* 0) 
+(zerop <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm>) *≡* (= <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> 0) 
 
 
 

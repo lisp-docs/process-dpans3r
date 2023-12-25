@@ -1,4 +1,4 @@
-*∗***read-default-float-format***∗ Variable* 
+*∗<DictionaryLink styled={true} term={"read-default-float-format"}><b>*read-default-float-format*</b></DictionaryLink>∗ Variable* 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-one of the *atomic type specifiers* **short-float**, **single-float**, **double-float**, or **long-float**, or else some other *type specifier* defined by the *implementation* to be acceptable. 
+one of the *atomic type specifiers* <DictionaryLink styled={true} term={"short-float"}><b>short-float</b></DictionaryLink>, <DictionaryLink styled={true} term={"single-float"}><b>single-float</b></DictionaryLink>, <DictionaryLink styled={true} term={"double-float"}><b>double-float</b></DictionaryLink>, or <DictionaryLink styled={true} term={"long-float"}><b>long-float</b></DictionaryLink>, or else some other *type specifier* defined by the <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm> to be acceptable. 
 
 
 
@@ -26,7 +26,7 @@ one of the *atomic type specifiers* **short-float**, **single-float**, **double-
 
 
 
-The *symbol* **single-float**. 
+The <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> <DictionaryLink styled={true} term={"single-float"}><b>single-float</b></DictionaryLink>. 
 
 
 
@@ -38,7 +38,7 @@ Controls the floating-point format that is to be used when reading a floating-po
 
 
 
-The printer uses **\*read-default-float-format\*** to guide the choice of *exponent markers* when printing floating-point numbers. 
+The printer uses <DictionaryLink styled={true} term={"read-default-float-format"}><b>\*read-default-float-format\*</b></DictionaryLink> to guide the choice of *exponent markers* when printing floating-point numbers. 
 
 
 
@@ -64,7 +64,7 @@ a *generalized boolean*.
 
 
 
-*true*. 
+<GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>. 
 
 
 
@@ -72,7 +72,7 @@ a *generalized boolean*.
 
 
 
-If it is *true*, the #. *reader macro* has its normal effect. Otherwise, that *reader macro* signals an error of *type* **reader-error**. 
+If it is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>, the #. *reader macro* has its normal effect. Otherwise, that *reader macro* signals an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"reader-error"}><b>reader-error</b></DictionaryLink>. 
 
 
 
@@ -80,7 +80,7 @@ If it is *true*, the #. *reader macro* has its normal effect. Otherwise, that *r
 
 
 
-**\*print-readably\*** 
+<DictionaryLink styled={true} term={"print-readably"}><b>\*print-readably\*</b></DictionaryLink> 
 
 
 
@@ -88,7 +88,7 @@ If it is *true*, the #. *reader macro* has its normal effect. Otherwise, that *r
 
 
 
-If **\*read-eval\*** is *false* and **\*print-readably\*** is *true*, any *method* for **print-object** that would output a reference to the #. *reader macro* either outputs something different or signals an error of *type* **print-not-readable**. 
+If **\*read-eval\*** is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm> and <DictionaryLink styled={true} term={"print-readably"}><b>\*print-readably\*</b></DictionaryLink> is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>, any <GlossaryTerm styled={true} term={"method"}><i>method</i></GlossaryTerm> for <DictionaryLink styled={true} term={"print-object"}><b>print-object</b></DictionaryLink> that would output a reference to the #. *reader macro* either outputs something different or signals an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"print-not-readable"}><b>print-not-readable</b></DictionaryLink>. 
 
 
 

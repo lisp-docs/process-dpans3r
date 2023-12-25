@@ -6,7 +6,7 @@
 
 
 
-**allocate-instance** *class* &amp;rest *initargs* &amp;key &amp;allow-other-keys *→ new-instance* 
+<DictionaryLink styled={true} term={"allocate-instance"}><b>allocate-instance</b></DictionaryLink> <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm> &amp;rest *initargs* &amp;key &amp;allow-other-keys *→ new-instance* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-**allocate-instance** (*class* **standard-class**) &amp;rest *initargs* 
+<DictionaryLink styled={true} term={"allocate-instance"}><b>allocate-instance</b></DictionaryLink> (<GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm> <DictionaryLink styled={true} term={"standard-class"}><b>standard-class</b></DictionaryLink>) &amp;rest *initargs* 
 
 
 
-**allocate-instance** (*class* **structure-class**) &amp;rest *initargs* 
+<DictionaryLink styled={true} term={"allocate-instance"}><b>allocate-instance</b></DictionaryLink> (<GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm> <DictionaryLink styled={true} term={"structure-class"}><b>structure-class</b></DictionaryLink>) &amp;rest *initargs* 
 
 
 
@@ -26,11 +26,11 @@
 
 
 
-*class*—a *class*. 
+<GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm>. 
 
 
 
-*initargs*—a *list* of *keyword/value pairs* (initialization argument *names* and *values*). *new-instance*—an *object* whose *class* is *class*. 
+*initargs*—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of *keyword/value pairs* (initialization argument <GlossaryTerm styled={true} term={"name"}><i>names</i></GlossaryTerm> and <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm>). *new-instance*—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> whose <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm> is <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm>. 
 
 
 
@@ -50,15 +50,15 @@
 
 
 
-The generic function **allocate-instance** creates and returns a new instance of the *class*, without initializing it. When the *class* is a *standard class*, this means that the *slots* are *unbound*; when the *class* is a *structure class*, this means the *slots*’ *values* are unspecified. 
+The generic function <DictionaryLink styled={true} term={"allocate-instance"}><b>allocate-instance</b></DictionaryLink> creates and returns a new instance of the <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm>, without initializing it. When the <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm> is a *standard class*, this means that the <GlossaryTerm styled={true} term={"slot"}><i>slots</i></GlossaryTerm> are <GlossaryTerm styled={true} term={"unbound"}><i>unbound</i></GlossaryTerm>; when the <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm> is a *structure class*, this means the <GlossaryTerm styled={true} term={"slot"}><i>slots</i></GlossaryTerm>’ <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> are unspecified. 
 
 
 
-The caller of **allocate-instance** is expected to have already checked the initialization arguments. 
+The caller of <DictionaryLink styled={true} term={"allocate-instance"}><b>allocate-instance</b></DictionaryLink> is expected to have already checked the initialization arguments. 
 
 
 
-The *generic function* **allocate-instance** is called by **make-instance**, as described in Section 7.1 (Object Creation and Initialization). 
+The *generic function* <DictionaryLink styled={true} term={"allocate-instance"}><b>allocate-instance</b></DictionaryLink> is called by <DictionaryLink styled={true} term={"make-instance"}><b>make-instance</b></DictionaryLink>, as described in Section 7.1 (Object Creation and Initialization). 
 
 
 
@@ -66,7 +66,7 @@ The *generic function* **allocate-instance** is called by **make-instance**, as 
 
 
 
-**defclass**, **make-instance**, **class-of**, Section 7.1 (Object Creation and Initialization) 
+<DictionaryLink styled={true} term={"defclass"}><b>defclass</b></DictionaryLink>, <DictionaryLink styled={true} term={"make-instance"}><b>make-instance</b></DictionaryLink>, <DictionaryLink styled={true} term={"class-of"}><b>class-of</b></DictionaryLink>, Section 7.1 (Object Creation and Initialization) 
 
 
 
@@ -74,7 +74,7 @@ The *generic function* **allocate-instance** is called by **make-instance**, as 
 
 
 
-The consequences of adding *methods* to **allocate-instance** is unspecified. This capability might be added by the *Metaobject Protocol*. 
+The consequences of adding <GlossaryTerm styled={true} term={"method"}><i>methods</i></GlossaryTerm> to <DictionaryLink styled={true} term={"allocate-instance"}><b>allocate-instance</b></DictionaryLink> is unspecified. This capability might be added by the *Metaobject Protocol*. 
 
 
 

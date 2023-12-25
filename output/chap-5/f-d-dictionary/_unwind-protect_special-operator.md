@@ -6,7 +6,7 @@
 
 
 
-**unwind-protect** *protected-form \{cleanup-form\}*\* *→ \{result\}*\* 
+<DictionaryLink styled={true} term={"unwind-protect"}><b>unwind-protect</b></DictionaryLink> *protected-form \{cleanup-form\}*\* *→ \{result\}*\* 
 
 
 
@@ -14,15 +14,15 @@
 
 
 
-*protected-form*—a *form*. 
+*protected-form*—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>. 
 
 
 
-*cleanup-form*—a *form*. 
+*cleanup-form*—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>. 
 
 
 
-*results*—the *values* of the *protected-form*. 
+*results*—the <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> of the *protected-form*. 
 
 
 
@@ -30,19 +30,19 @@
 
 
 
-**unwind-protect** evaluates *protected-form* and guarantees that *cleanup-forms* are executed before **unwind-protect** exits, whether it terminates normally or is aborted by a control transfer of some kind. **unwind-protect** is intended to be used to make sure that certain side effects take place after the evaluation of *protected-form*. 
+<DictionaryLink styled={true} term={"unwind-protect"}><b>unwind-protect</b></DictionaryLink> evaluates *protected-form* and guarantees that *cleanup-forms* are executed before <DictionaryLink styled={true} term={"unwind-protect"}><b>unwind-protect</b></DictionaryLink> exits, whether it terminates normally or is aborted by a control transfer of some kind. <DictionaryLink styled={true} term={"unwind-protect"}><b>unwind-protect</b></DictionaryLink> is intended to be used to make sure that certain side effects take place after the evaluation of *protected-form*. 
 
 
 
-If a *non-local exit* occurs during execution of *cleanup-forms*, no special action is taken. The *cleanup-forms* of **unwind-protect** are not protected by that **unwind-protect**. 
+If a *non-local exit* occurs during execution of *cleanup-forms*, no special action is taken. The *cleanup-forms* of <DictionaryLink styled={true} term={"unwind-protect"}><b>unwind-protect</b></DictionaryLink> are not protected by that <DictionaryLink styled={true} term={"unwind-protect"}><b>unwind-protect</b></DictionaryLink>. 
 
 
 
-**unwind-protect** protects against all attempts to exit from *protected-form*, including **go**, **handler-case**, **ignore-errors**, **restart-case**, **return-from**, **throw**, and **with-simple-restart**. 
+<DictionaryLink styled={true} term={"unwind-protect"}><b>unwind-protect</b></DictionaryLink> protects against all attempts to exit from *protected-form*, including <DictionaryLink styled={true} term={"go"}><b>go</b></DictionaryLink>, <DictionaryLink styled={true} term={"handler-case"}><b>handler-case</b></DictionaryLink>, <DictionaryLink styled={true} term={"ignore-errors"}><b>ignore-errors</b></DictionaryLink>, <DictionaryLink styled={true} term={"restart-case"}><b>restart-case</b></DictionaryLink>, <DictionaryLink styled={true} term={"return-from"}><b>return-from</b></DictionaryLink>, <DictionaryLink styled={true} term={"throw"}><b>throw</b></DictionaryLink>, and <DictionaryLink styled={true} term={"with-simple-restart"}><b>with-simple-restart</b></DictionaryLink>. 
 
 
 
-Undoing of *handler* and *restart bindings* during an exit happens in parallel with the undoing of the bindings of *dynamic variables* and **catch** tags, in the reverse order in which they were established. The effect of this is that *cleanup-form* sees the same *handler* and *restart bindings*, as well as *dynamic variable bindings* and **catch** tags, as were visible when the **unwind-protect** was entered. 
+Undoing of <GlossaryTerm styled={true} term={"handler"}><i>handler</i></GlossaryTerm> and *restart bindings* during an exit happens in parallel with the undoing of the bindings of *dynamic variables* and <DictionaryLink styled={true} term={"catch"}><b>catch</b></DictionaryLink> tags, in the reverse order in which they were established. The effect of this is that *cleanup-form* sees the same <GlossaryTerm styled={true} term={"handler"}><i>handler</i></GlossaryTerm> and *restart bindings*, as well as *dynamic variable bindings* and <DictionaryLink styled={true} term={"catch"}><b>catch</b></DictionaryLink> tags, as were visible when the <DictionaryLink styled={true} term={"unwind-protect"}><b>unwind-protect</b></DictionaryLink> was entered. 
 
 
 
@@ -154,4 +154,4 @@ Data and Control
 
 
 
-**catch**, **go**, **handler-case**, **restart-case**, **return**, **return-from**, **throw**, Section 3.1 (Evaluation) 
+<DictionaryLink styled={true} term={"catch"}><b>catch</b></DictionaryLink>, <DictionaryLink styled={true} term={"go"}><b>go</b></DictionaryLink>, <DictionaryLink styled={true} term={"handler-case"}><b>handler-case</b></DictionaryLink>, <DictionaryLink styled={true} term={"restart-case"}><b>restart-case</b></DictionaryLink>, <DictionaryLink styled={true} term={"return"}><b>return</b></DictionaryLink>, <DictionaryLink styled={true} term={"return-from"}><b>return-from</b></DictionaryLink>, <DictionaryLink styled={true} term={"throw"}><b>throw</b></DictionaryLink>, Section 3.1 (Evaluation) 

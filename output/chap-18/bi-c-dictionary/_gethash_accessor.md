@@ -1,4 +1,4 @@
-**gethash** *Accessor* 
+**gethash** <GlossaryTerm styled={true} term={"accessor"}><i>Accessor</i></GlossaryTerm> 
 
 
 
@@ -6,11 +6,11 @@
 
 
 
-**gethash** *key hash-table* &amp;optional *default → value, present-p* 
+<DictionaryLink styled={true} term={"gethash"}><b>gethash</b></DictionaryLink> *key hash-table* &amp;optional *default → value, present-p* 
 
 
 
-**(setf (gethash** *key hash-table* &amp;optional *default***)** *new-value***)** 
+**(setf (gethash** *key hash-table* &amp;optional *default<DictionaryLink styled={true} term={"t"}><b>*)</b></DictionaryLink> *new-value***)** 
 
 
 
@@ -18,7 +18,7 @@
 
 
 
-*key*—an *object*. 
+<GlossaryTerm styled={true} term={"key"}><i>key</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -26,11 +26,11 @@
 
 
 
-*default*—an *object*. The default is **nil**. 
+*default*—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. The default is <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
-*value*—an *object*. 
+<GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -42,15 +42,15 @@
 
 
 
-*Value* is the *object* in *hash-table* whose *key* is the *same* as *key* under the *hash-table*’s equivalence test. If there is no such entry, *value* is the *default*. 
+<GlossaryTerm styled={true} term={"value"}><i>Value</i></GlossaryTerm> is the <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> in *hash-table* whose <GlossaryTerm styled={true} term={"key"}><i>key</i></GlossaryTerm> is the <GlossaryTerm styled={true} term={"same"}><i>same</i></GlossaryTerm> as <GlossaryTerm styled={true} term={"key"}><i>key</i></GlossaryTerm> under the *hash-table*’s equivalence test. If there is no such entry, <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> is the *default*. 
 
 
 
-*Present-p* is *true* if an entry is found; otherwise, it is *false*. 
+*Present-p* is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if an entry is found; otherwise, it is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
-**setf** may be used with **gethash** to modify the *value* associated with a given *key*, or to add a new entry. When a **gethash** *form* is used as a **setf** *place*, any *default* which is supplied is evaluated according to normal left-to-right evaluation rules, but its *value* is ignored. 
+<DictionaryLink styled={true} term={"setf"}><b>setf</b></DictionaryLink> may be used with <DictionaryLink styled={true} term={"gethash"}><b>gethash</b></DictionaryLink> to modify the <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> associated with a given <GlossaryTerm styled={true} term={"key"}><i>key</i></GlossaryTerm>, or to add a new entry. When a <DictionaryLink styled={true} term={"gethash"}><b>gethash</b></DictionaryLink> <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> is used as a <DictionaryLink styled={true} term={"setf"}><b>setf</b></DictionaryLink> <GlossaryTerm styled={true} term={"place"}><i>place</i></GlossaryTerm>, any *default* which is supplied is evaluated according to normal left-to-right evaluation rules, but its <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> is ignored. 
 
 
 
@@ -85,7 +85,7 @@
 
 
 
-**remhash** 
+<DictionaryLink styled={true} term={"remhash"}><b>remhash</b></DictionaryLink> 
 
 
 

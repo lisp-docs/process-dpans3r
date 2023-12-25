@@ -2,7 +2,7 @@
 
 
 
-Figure 9–1 lists the *standardized condition types*. Additional *condition types* can be defined by using **define-condition**. 
+Figure 9–1 lists the *standardized condition types*. Additional *condition types* can be defined by using <DictionaryLink styled={true} term={"define-condition"}><b>define-condition</b></DictionaryLink>. 
 
 
 
@@ -18,7 +18,7 @@ Figure 9–1 lists the *standardized condition types*. Additional *condition typ
 
 
 
-All *condition* types are *subtypes* of *type* **condition**. That is, 
+All <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> types are <GlossaryTerm styled={true} term={"subtype"}><i>subtypes</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"condition"}><b>condition</b></DictionaryLink>. That is, 
 
 
 
@@ -26,19 +26,19 @@ All *condition* types are *subtypes* of *type* **condition**. That is,
 
 
 
-if and only if *c* is a *condition*. 
+if and only if *c* is a <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm>. 
 
 
 
-*Implementations* must define all specified *subtype* relationships. Except where noted, all *subtype* relationships indicated in this document are not mutually exclusive. A *condition* inherits the structure of its *supertypes*. 
+<GlossaryTerm styled={true} term={"implementation"}><i>Implementations</i></GlossaryTerm> must define all specified <GlossaryTerm styled={true} term={"subtype"}><i>subtype</i></GlossaryTerm> relationships. Except where noted, all <GlossaryTerm styled={true} term={"subtype"}><i>subtype</i></GlossaryTerm> relationships indicated in this document are not mutually exclusive. A <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> inherits the structure of its <GlossaryTerm styled={true} term={"supertype"}><i>supertypes</i></GlossaryTerm>. 
 
 
 
-The metaclass of the *class* **condition** is not specified. *Names* of *condition types* may be used to specify *supertype* relationships in **define-condition**, but the consequences are not specified if an attempt is made to use a *condition type* as a *superclass* in a **defclass** *form*. 
+The metaclass of the <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm> <DictionaryLink styled={true} term={"condition"}><b>condition</b></DictionaryLink> is not specified. <GlossaryTerm styled={true} term={"name"}><i>Names</i></GlossaryTerm> of *condition types* may be used to specify <GlossaryTerm styled={true} term={"supertype"}><i>supertype</i></GlossaryTerm> relationships in <DictionaryLink styled={true} term={"define-condition"}><b>define-condition</b></DictionaryLink>, but the consequences are not specified if an attempt is made to use a *condition type* as a <GlossaryTerm styled={true} term={"superclass"}><i>superclass</i></GlossaryTerm> in a <DictionaryLink styled={true} term={"defclass"}><b>defclass</b></DictionaryLink> <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>. 
 
 
 
-Figure 9–2 shows *operators* that define *condition types* and creating *conditions*. 
+Figure 9–2 shows <GlossaryTerm styled={true} term={"operator"}><i>operators</i></GlossaryTerm> that define *condition types* and creating <GlossaryTerm styled={true} term={"condition"}><i>conditions</i></GlossaryTerm>. 
 
 
 
@@ -66,7 +66,7 @@ Figure 9–2 shows *operators* that define *condition types* and creating *condi
 
 
 
-Figure 9–3 shows *operators* that *read* the *value* of *condition slots*. 
+Figure 9–3 shows <GlossaryTerm styled={true} term={"operator"}><i>operators</i></GlossaryTerm> that <GlossaryTerm styled={true} term={"read"}><i>read</i></GlossaryTerm> the <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of *condition slots*. 
 
 
 

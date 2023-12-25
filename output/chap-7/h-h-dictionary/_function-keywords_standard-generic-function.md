@@ -6,7 +6,7 @@
 
 
 
-**function-keywords** *method → keys, allow-other-keys-p* 
+<DictionaryLink styled={true} term={"function-keywords"}><b>function-keywords</b></DictionaryLink> *method → keys, allow-other-keys-p* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-**function-keywords** (*method* **standard-method**) 
+<DictionaryLink styled={true} term={"function-keywords"}><b>function-keywords</b></DictionaryLink> (<GlossaryTerm styled={true} term={"method"}><i>method</i></GlossaryTerm> <DictionaryLink styled={true} term={"standard-method"}><b>standard-method</b></DictionaryLink>) 
 
 
 
@@ -22,11 +22,11 @@
 
 
 
-*method*—a *method*. 
+<GlossaryTerm styled={true} term={"method"}><i>method</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"method"}><i>method</i></GlossaryTerm>. 
 
 
 
-*keys*—a *list*. 
+<GlossaryTerm styled={true} term={"key"}><i>keys</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>. 
 
 
 
@@ -38,11 +38,11 @@
 
 
 
-Returns the keyword parameter specifiers for a *method*. 
+Returns the keyword parameter specifiers for a <GlossaryTerm styled={true} term={"method"}><i>method</i></GlossaryTerm>. 
 
 
 
-Two values are returned: a *list* of the explicitly named keywords and a *generalized boolean* that states whether **&amp;allow-other-keys** had been specified in the *method* definition. 
+Two values are returned: a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of the explicitly named keywords and a *generalized boolean* that states whether **&amp;allow-other-keys** had been specified in the <GlossaryTerm styled={true} term={"method"}><i>method</i></GlossaryTerm> definition. 
 
 
 
@@ -72,7 +72,7 @@ Two values are returned: a *list* of the explicitly named keywords and a *genera
 
 
 
-**defmethod** 
+<DictionaryLink styled={true} term={"defmethod"}><b>defmethod</b></DictionaryLink> 
 
 
 
@@ -92,7 +92,7 @@ Two values are returned: a *list* of the explicitly named keywords and a *genera
 
 
 
-**defmethod** 
+<DictionaryLink styled={true} term={"defmethod"}><b>defmethod</b></DictionaryLink> 
 
 
 

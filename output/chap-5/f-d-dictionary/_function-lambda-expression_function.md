@@ -1,4 +1,4 @@
-**function-lambda-expression** *Function* 
+**function-lambda-expression** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**function-lambda-expression** *function* 
+<DictionaryLink styled={true} term={"function-lambda-expression"}><b>function-lambda-expression</b></DictionaryLink> <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> 
 
 
 
@@ -18,11 +18,11 @@
 
 
 
-*function*—a *function*. 
+<GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>. 
 
 
 
-*lambda-expression*—a *lambda expression* or **nil**. 
+*lambda-expression*—a *lambda expression* or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -30,7 +30,7 @@
 
 
 
-*name*—an *object*. 
+<GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -38,19 +38,19 @@
 
 
 
-Returns information about *function* as follows: 
+Returns information about <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> as follows: 
 
 
 
-The *primary value*, *lambda-expression*, is *function*’s defining *lambda expression*, or **nil** if the information is not available. The *lambda expression* may have been pre-processed in some ways, but it should remain a suitable argument to **compile** or **function**. Any *implementation* may legitimately return **nil** as the *lambda-expression* of any *function*. 
+The *primary value*, *lambda-expression*, is <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>’s defining *lambda expression*, or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> if the information is not available. The *lambda expression* may have been pre-processed in some ways, but it should remain a suitable argument to <DictionaryLink styled={true} term={"compile"}><b>compile</b></DictionaryLink> or <DictionaryLink styled={true} term={"function"}><b>function</b></DictionaryLink>. Any <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm> may legitimately return <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> as the *lambda-expression* of any <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>. 
 
 
 
-The *secondary value*, *closure-p*, is **nil** if *function*’s definition was enclosed in the *null lexical environment* or something *non-nil* if *function*’s definition might have been enclosed in some *non-null lexical environment*. Any *implementation* may legitimately return *true* as the *closure-p* of any *function*. 
+The *secondary value*, *closure-p*, is <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> if <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>’s definition was enclosed in the *null lexical environment* or something <GlossaryTerm styled={true} term={"non-nil"}><i>non-nil</i></GlossaryTerm> if <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>’s definition might have been enclosed in some *non-null lexical environment*. Any <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm> may legitimately return <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> as the *closure-p* of any <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>. 
 
 
 
-The *tertiary value*, *name*, is the “name” of *function*. The name is intended for debugging only and is not necessarily one that would be valid for use as a name in **defun** or **function**, for example. By convention, **nil** is used to mean that *function* has no name. Any *implementation* may legitimately return **nil** as the *name* of any *function*. 
+The *tertiary value*, *name*, is the “name” of <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>. The name is intended for debugging only and is not necessarily one that would be valid for use as a name in <DictionaryLink styled={true} term={"defun"}><b>defun</b></DictionaryLink> or <DictionaryLink styled={true} term={"function"}><b>function</b></DictionaryLink>, for example. By convention, <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> is used to mean that <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> has no name. Any <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm> may legitimately return <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> as the <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> of any <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm>. 
 
 
 
@@ -101,7 +101,7 @@ The following examples illustrate some possible return values, but are not inten
 
 
 
-Although *implementations* are free to return “**nil**, *true*, **nil**” in all cases, they are encouraged to return a *lambda expression* as the *primary value* in the case where the argument was created by a call to **compile** or **eval** (as opposed to being created by *loading* a *compiled file*). 
+Although <GlossaryTerm styled={true} term={"implementation"}><i>implementations</i></GlossaryTerm> are free to return “<DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>, <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>, <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>” in all cases, they are encouraged to return a *lambda expression* as the *primary value* in the case where the argument was created by a call to <DictionaryLink styled={true} term={"compile"}><b>compile</b></DictionaryLink> or <DictionaryLink styled={true} term={"eval"}><b>eval</b></DictionaryLink> (as opposed to being created by *loading* a *compiled file*). 
 
 
 

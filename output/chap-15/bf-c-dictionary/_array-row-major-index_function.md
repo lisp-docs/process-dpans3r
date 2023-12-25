@@ -1,4 +1,4 @@
-**array-row-major-index** *Function* 
+**array-row-major-index** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**array-row-major-index** *array* &amp;rest *subscripts → index* 
+<DictionaryLink styled={true} term={"array-row-major-index"}><b>array-row-major-index</b></DictionaryLink> <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm> &amp;rest *subscripts → index* 
 
 
 
@@ -14,15 +14,15 @@
 
 
 
-*array*—an *array*. 
+<GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm>. 
 
 
 
-*subscripts*—a *list* of *valid array indices* for the *array*. 
+*subscripts*—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of *valid array indices* for the <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm>. 
 
 
 
-*index*—a *valid array row-major index* for the *array*. 
+*index*—a *valid array row-major index* for the <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm>. 
 
 
 
@@ -42,11 +42,11 @@
 
 
 
-Computes the position according to the row-major ordering of *array* for the element that is specified by *subscripts*, and returns the offset of the element in the computed position from the beginning of *array*. 
+Computes the position according to the row-major ordering of <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm> for the element that is specified by *subscripts*, and returns the offset of the element in the computed position from the beginning of <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm>. 
 
 
 
-For a one-dimensional *array*, the result of **array-row-major-index** equals *subscript*. **array-row-major-index** ignores *fill pointers*. 
+For a one-dimensional <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm>, the result of <DictionaryLink styled={true} term={"array-row-major-index"}><b>array-row-major-index</b></DictionaryLink> equals *subscript*. <DictionaryLink styled={true} term={"array-row-major-index"}><b>array-row-major-index</b></DictionaryLink> ignores *fill pointers*. 
 
 
 
@@ -67,7 +67,7 @@ For a one-dimensional *array*, the result of **array-row-major-index** equals *s
 
 
 
-A possible definition of **array-row-major-index**, with no error-checking, is 
+A possible definition of <DictionaryLink styled={true} term={"array-row-major-index"}><b>array-row-major-index</b></DictionaryLink>, with no error-checking, is 
 
 
 

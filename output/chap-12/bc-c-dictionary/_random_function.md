@@ -1,4 +1,4 @@
-**random** *Function* 
+**random** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**random** *limit* &amp;optional *random-state → random-number* 
+<DictionaryLink styled={true} term={"random"}><b>random</b></DictionaryLink> *limit* &amp;optional *random-state → random-number* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*limit*—a positive *integer* , or a positive *float*. 
+*limit*—a positive *integer* , or a positive <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm>. 
 
 
 
@@ -22,7 +22,7 @@
 
 
 
-*random-number*—a non-negative *number* less than *limit* and of the same *type* as *limit*. 
+*random-number*—a non-negative <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> less than *limit* and of the same <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> as *limit*. 
 
 
 
@@ -30,7 +30,7 @@
 
 
 
-Returns a pseudo-random number that is a non-negative *number* less than *limit* and of the same *type* as *limit*. 
+Returns a pseudo-random number that is a non-negative <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> less than *limit* and of the same <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> as *limit*. 
 
 
 
@@ -63,7 +63,7 @@ The *random-state* is modified.
 
 
 
-Should signal an error of *type* **type-error** if *limit* is not a positive *integer* or a positive *real*. 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if *limit* is not a positive *integer* or a positive *real*. 
 
 
 
@@ -71,7 +71,7 @@ Should signal an error of *type* **type-error** if *limit* is not a positive *in
 
 
 
-**make-random-state**, **\*random-state\*** 
+<DictionaryLink styled={true} term={"make-random-state"}><b>make-random-state</b></DictionaryLink>, <DictionaryLink styled={true} term={"random-state"}><b>\*random-state\*</b></DictionaryLink> 
 
 
 

@@ -1,4 +1,4 @@
-**nthcdr** *Function* 
+**nthcdr** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**nthcdr** *n list → tail* 
+<DictionaryLink styled={true} term={"nthcdr"}><b>nthcdr</b></DictionaryLink> *n list → tail* 
 
 
 
@@ -18,11 +18,11 @@
 
 
 
-*list*—a *list*, which might be a *dotted list* or a *circular list*. 
+<GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>, which might be a *dotted list* or a *circular list*. 
 
 
 
-*tail*—an *object*. 
+<GlossaryTerm styled={true} term={"tail"}><i>tail</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -30,7 +30,7 @@
 
 
 
-Returns the *tail* of *list* that would be obtained by calling **cdr** *n* times in succession. 
+Returns the <GlossaryTerm styled={true} term={"tail"}><i>tail</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> that would be obtained by calling <DictionaryLink styled={true} term={"cdr"}><b>cdr</b></DictionaryLink> *n* times in succession. 
 
 
 
@@ -60,11 +60,11 @@ Error: Attempted to take CDR of 1.
 
 
 
-Should signal an error of *type* **type-error** if *n* is not a non-negative *integer* . 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if *n* is not a non-negative *integer* . 
 
 
 
-For *n* being an integer greater than 1, the error checking done by (nthcdr *n list*) is the same as for (nthcdr (- *n* 1) (cdr *list*)); see the *function* **cdr**. 
+For *n* being an integer greater than 1, the error checking done by (nthcdr *n list*) is the same as for (nthcdr (- *n* 1) (cdr <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>)); see the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> <DictionaryLink styled={true} term={"cdr"}><b>cdr</b></DictionaryLink>. 
 
 
 
@@ -72,7 +72,7 @@ For *n* being an integer greater than 1, the error checking done by (nthcdr *n l
 
 
 
-**cdr**, **nth**, **rest** 
+<DictionaryLink styled={true} term={"cdr"}><b>cdr</b></DictionaryLink>, <DictionaryLink styled={true} term={"nth"}><b>nth</b></DictionaryLink>, <DictionaryLink styled={true} term={"rest"}><b>rest</b></DictionaryLink> 
 
 
 

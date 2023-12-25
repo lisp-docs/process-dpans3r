@@ -1,4 +1,4 @@
-**machine-type** *Function* 
+**machine-type** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**machine-type** *hno argumentsi → description* 
+<DictionaryLink styled={true} term={"machine-type"}><b>machine-type</b></DictionaryLink> *hno argumentsi → description* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*description*—a *string* or **nil**. 
+*description*—a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -22,7 +22,7 @@
 
 
 
-Returns a *string* that identifies the generic name of the computer hardware on which Common Lisp is running. 
+Returns a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm> that identifies the generic name of the computer hardware on which Common Lisp is running. 
 
 
 
@@ -46,7 +46,7 @@ The machine type. The implementation.
 
 
 
-**machine-version** 
+<DictionaryLink styled={true} term={"machine-version"}><b>machine-version</b></DictionaryLink> 
 
 
 

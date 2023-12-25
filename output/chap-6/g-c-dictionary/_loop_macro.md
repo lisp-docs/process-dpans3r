@@ -1,4 +1,4 @@
-**loop** *Macro* 
+**loop** <GlossaryTerm styled={true} term={"macro"}><i>Macro</i></GlossaryTerm> 
 
 
 
@@ -6,23 +6,23 @@
 
 
 
-The “simple” **loop** *form*: 
+The “simple” <DictionaryLink styled={true} term={"loop"}><b>loop</b></DictionaryLink> <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>: 
 
 
 
-**loop** *\{compound-form\}*\* *→ \{result\}*\* 
+<DictionaryLink styled={true} term={"loop"}><b>loop</b></DictionaryLink> *\{compound-form\}*\* *→ \{result\}*\* 
 
 
 
-The “extended” **loop** *form*: 
+The “extended” <DictionaryLink styled={true} term={"loop"}><b>loop</b></DictionaryLink> <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>: 
 
 
 
-**loop** [*↓name-clause*] *\{↓variable-clause\}*\* *\{↓main-clause\}*\* *→ \{result\}*\* 
+<DictionaryLink styled={true} term={"loop"}><b>loop</b></DictionaryLink> [*↓name-clause*] *\{↓variable-clause\}*\* *\{↓main-clause\}*\* *→ \{result\}*\* 
 
 
 
-*name-clause::*=named *name* 
+*name-clause::*=named <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> 
 
 
 
@@ -38,7 +38,7 @@ The “extended” **loop** *form*:
 
 
 
-*unconditional::*=*\{*do *|* doing*\} \{compound-form\}*<sup>+</sup>*|* return *\{form |* it*\}* 
+*unconditional::*=*\{*do *|* doing*\} \{compound-form\}*<sup>+</sup>*|* return *\{form |* it<GlossaryTerm styled={true} term={"t"}><i>\}</i></GlossaryTerm> 
 
 
 
@@ -46,7 +46,7 @@ The “extended” **loop** *form*:
 
 
 
-*list-accumulation::*=*\{*collect *|* collecting *|* append *|* appending *|* nconc *|* nconcing*\} \{form |* it*\}* [into *simple-var*] 
+*list-accumulation::*=*\{*collect *|* collecting *|* append *|* appending *|* nconc *|* nconcing*\} \{form |* it<GlossaryTerm styled={true} term={"t"}><i>\}</i></GlossaryTerm> [into *simple-var*] 
 
 
 
@@ -62,7 +62,7 @@ The “extended” **loop** *form*:
 
 
 
-**loop** 
+<DictionaryLink styled={true} term={"loop"}><b>loop</b></DictionaryLink> 
 
 
 
@@ -70,7 +70,7 @@ The “extended” **loop** *form*:
 
 
 
-maximize *|* maximizing *|* minimize *|* minimizing*\} \{form |* it*\}* 
+maximize *|* maximizing *|* minimize *|* minimizing*\} \{form |* it<GlossaryTerm styled={true} term={"t"}><i>\}</i></GlossaryTerm> 
 
 
 
@@ -126,7 +126,7 @@ maximize *|* maximizing *|* minimize *|* minimizing*\} \{form |* it*\}*
 
 
 
-*for-as-across::*=*var* [*type-spec*] across *vector* 
+*for-as-across::*=*var* [*type-spec*] across <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm> 
 
 
 
@@ -162,7 +162,7 @@ maximize *|* maximizing *|* minimize *|* minimizing*\} \{form |* it*\}*
 
 
 
-**loop** 
+<DictionaryLink styled={true} term={"loop"}><b>loop</b></DictionaryLink> 
 
 
 
@@ -190,7 +190,7 @@ external-symbol *|* external-symbols*\}*
 
 
 
-*simple-type-spec::*=**fixnum** *|* **float** *|* **t** *|* **nil** 
+*simple-type-spec::*=<DictionaryLink styled={true} term={"fixnum"}><b>fixnum</b></DictionaryLink> *|* <DictionaryLink styled={true} term={"float"}><b>float</b></DictionaryLink> *|* <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink> *|* <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> 
 
 
 
@@ -218,7 +218,7 @@ external-symbol *|* external-symbols*\}*
 
 
 
-*d-var-spec::*=*simple-var |* **nil** *|* (*↓d-var-spec* . *↓d-var-spec*) 
+*d-var-spec::*=*simple-var |* <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> *|* (*↓d-var-spec* . *↓d-var-spec*) 
 
 
 
@@ -230,31 +230,31 @@ external-symbol *|* external-symbols*\}*
 
 
 
-*name*—a *symbol*. 
+<GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>. 
 
 
 
-*simple-var*—a *symbol* (a *variable* name). 
+*simple-var*—a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> (a <GlossaryTerm styled={true} term={"variable"}><i>variable</i></GlossaryTerm> name). 
 
 
 
-*form*, *form1*, *form2*, *form3*—a *form*. 
+<GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>, *form1*, *form2*, *form3*—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>. 
 
 
 
-*step-fun*—a *form* that evaluates to a *function* of one *argument*. 
+*step-fun*—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> that evaluates to a <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> of one <GlossaryTerm styled={true} term={"argument"}><i>argument</i></GlossaryTerm>. 
 
 
 
-*vector*—a *form* that evaluates to a *vector* . 
+<GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> that evaluates to a <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm> . 
 
 
 
-*hash-table*—a *form* that evaluates to a *hash table*. 
+*hash-table*—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> that evaluates to a *hash table*. 
 
 
 
-*package*—a *form* that evaluates to a *package designator* . 
+<GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> that evaluates to a *package designator* . 
 
 
 
@@ -262,7 +262,7 @@ external-symbol *|* external-symbols*\}*
 
 
 
-*result*—an *object*. 
+*result*—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -278,7 +278,7 @@ external-symbol *|* external-symbols*\}*
 
 
 
-**loop** 
+<DictionaryLink styled={true} term={"loop"}><b>loop</b></DictionaryLink> 
 
 
 
@@ -332,7 +332,7 @@ For details, see Section 6.1 (The LOOP Facility).
 
 
 
-**do**, **dolist**, **dotimes**, **return**, **go**, **throw**, Section 6.1.1.7 (Destructuring) 
+<DictionaryLink styled={true} term={"do"}><b>do</b></DictionaryLink>, <DictionaryLink styled={true} term={"dolist"}><b>dolist</b></DictionaryLink>, <DictionaryLink styled={true} term={"dotimes"}><b>dotimes</b></DictionaryLink>, <DictionaryLink styled={true} term={"return"}><b>return</b></DictionaryLink>, <DictionaryLink styled={true} term={"go"}><b>go</b></DictionaryLink>, <DictionaryLink styled={true} term={"throw"}><b>throw</b></DictionaryLink>, Section 6.1.1.7 (Destructuring) 
 
 
 
@@ -352,7 +352,7 @@ For details, see Section 6.1 (The LOOP Facility).
 
 
 
-Except that **loop-finish** cannot be used within a simple **loop** *form*, a simple **loop** *form* is related to an extended **loop** *form* in the following way: 
+Except that <DictionaryLink styled={true} term={"loop-finish"}><b>loop-finish</b></DictionaryLink> cannot be used within a simple <DictionaryLink styled={true} term={"loop"}><b>loop</b></DictionaryLink> <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm>, a simple <DictionaryLink styled={true} term={"loop"}><b>loop</b></DictionaryLink> <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> is related to an extended <DictionaryLink styled={true} term={"loop"}><b>loop</b></DictionaryLink> <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> in the following way: 
 
 
 

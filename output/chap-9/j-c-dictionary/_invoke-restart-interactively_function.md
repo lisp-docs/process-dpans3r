@@ -1,4 +1,4 @@
-**invoke-restart-interactively** *Function* 
+**invoke-restart-interactively** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**invoke-restart-interactively** *restart → \{result\}*\* 
+<DictionaryLink styled={true} term={"invoke-restart-interactively"}><b>invoke-restart-interactively</b></DictionaryLink> *restart → \{result\}*\* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*restart*—a *restart designator* . 
+<GlossaryTerm styled={true} term={"restart"}><i>restart</i></GlossaryTerm>—a *restart designator* . 
 
 
 
-*results*—the *values* returned by the *function* associated with *restart*, if that *function* returns. 
+*results*—the <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> returned by the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> associated with <GlossaryTerm styled={true} term={"restart"}><i>restart</i></GlossaryTerm>, if that <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> returns. 
 
 
 
@@ -26,19 +26,19 @@
 
 
 
-**invoke-restart-interactively** calls the *function* associated with *restart*, prompting for any necessary arguments. If *restart* is a name, it must be valid in the current *dynamic environment*. 
+<DictionaryLink styled={true} term={"invoke-restart-interactively"}><b>invoke-restart-interactively</b></DictionaryLink> calls the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> associated with <GlossaryTerm styled={true} term={"restart"}><i>restart</i></GlossaryTerm>, prompting for any necessary arguments. If <GlossaryTerm styled={true} term={"restart"}><i>restart</i></GlossaryTerm> is a name, it must be valid in the current *dynamic environment*. 
 
 
 
-**invoke-restart-interactively** prompts for arguments by executing the code provided in the :interactive keyword to **restart-case** or :interactive-function keyword to **restart-bind**. 
+<DictionaryLink styled={true} term={"invoke-restart-interactively"}><b>invoke-restart-interactively</b></DictionaryLink> prompts for arguments by executing the code provided in the :interactive keyword to <DictionaryLink styled={true} term={"restart-case"}><b>restart-case</b></DictionaryLink> or :interactive-function keyword to <DictionaryLink styled={true} term={"restart-bind"}><b>restart-bind</b></DictionaryLink>. 
 
 
 
-If no such options have been supplied in the corresponding **restart-bind** or **restart-case**, then the consequences are undefined if the *restart* takes required arguments. If the arguments are optional, an argument list of **nil** is used. 
+If no such options have been supplied in the corresponding <DictionaryLink styled={true} term={"restart-bind"}><b>restart-bind</b></DictionaryLink> or <DictionaryLink styled={true} term={"restart-case"}><b>restart-case</b></DictionaryLink>, then the consequences are undefined if the <GlossaryTerm styled={true} term={"restart"}><i>restart</i></GlossaryTerm> takes required arguments. If the arguments are optional, an argument list of <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> is used. 
 
 
 
-Once the arguments have been determined, **invoke-restart-interactively** executes the following: (apply #’invoke-restart *restart arguments*) 
+Once the arguments have been determined, <DictionaryLink styled={true} term={"invoke-restart-interactively"}><b>invoke-restart-interactively</b></DictionaryLink> executes the following: (apply #’invoke-restart *restart arguments*) 
 
 
 
@@ -72,7 +72,7 @@ A non-local transfer of control might be done by the restart.
 
 
 
-**\*query-io\***, active *restarts* 
+**\*query-io\***, active <GlossaryTerm styled={true} term={"restart"}><i>restarts</i></GlossaryTerm> 
 
 
 
@@ -92,7 +92,7 @@ A non-local transfer of control might be done by the restart.
 
 
 
-If *restart* is not valid, an error of *type* **control-error** is signaled. 
+If <GlossaryTerm styled={true} term={"restart"}><i>restart</i></GlossaryTerm> is not valid, an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"control-error"}><b>control-error</b></DictionaryLink> is signaled. 
 
 
 
@@ -100,7 +100,7 @@ If *restart* is not valid, an error of *type* **control-error** is signaled.
 
 
 
-**find-restart**, **invoke-restart**, **restart-case**, **restart-bind** 
+<DictionaryLink styled={true} term={"find-restart"}><b>find-restart</b></DictionaryLink>, <DictionaryLink styled={true} term={"invoke-restart"}><b>invoke-restart</b></DictionaryLink>, <DictionaryLink styled={true} term={"restart-case"}><b>restart-case</b></DictionaryLink>, <DictionaryLink styled={true} term={"restart-bind"}><b>restart-bind</b></DictionaryLink> 
 
 
 
@@ -108,7 +108,7 @@ If *restart* is not valid, an error of *type* **control-error** is signaled.
 
 
 
-**invoke-restart-interactively** is used internally by the debugger and may also be useful in implementing other portable, interactive debugging tools. 
+<DictionaryLink styled={true} term={"invoke-restart-interactively"}><b>invoke-restart-interactively</b></DictionaryLink> is used internally by the debugger and may also be useful in implementing other portable, interactive debugging tools. 
 
 
 

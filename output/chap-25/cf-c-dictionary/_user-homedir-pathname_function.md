@@ -1,4 +1,4 @@
-**user-homedir-pathname** *Function* 
+**user-homedir-pathname** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**user-homedir-pathname** &amp;optional *host → pathname* 
+<DictionaryLink styled={true} term={"user-homedir-pathname"}><b>user-homedir-pathname</b></DictionaryLink> &amp;optional *host → pathname* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*host*—a *string*, a *list* of *strings*, or :unspecific. 
+*host*—a <GlossaryTerm styled={true} term={"string"}><i>string</i></GlossaryTerm>, a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"string"}><i>strings</i></GlossaryTerm>, or :unspecific. 
 
 
 
-*pathname*—a *pathname*, or **nil**. 
+<GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm>, or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -26,19 +26,19 @@
 
 
 
-**user-homedir-pathname** determines the *pathname* that corresponds to the user’s home directory on *host*. If *host* is not supplied, its value is *implementation-dependent*. For a description of :unspecific, see Section 19.2.1 (Pathname Components). 
+<DictionaryLink styled={true} term={"user-homedir-pathname"}><b>user-homedir-pathname</b></DictionaryLink> determines the <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm> that corresponds to the user’s home directory on *host*. If *host* is not supplied, its value is <GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm>. For a description of :unspecific, see Section 19.2.1 (Pathname Components). 
 
 
 
-The definition of home directory is *implementation-dependent*, but defined in Common Lisp to mean the directory where the user keeps personal files such as initialization files and mail. 
+The definition of home directory is <GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm>, but defined in Common Lisp to mean the directory where the user keeps personal files such as initialization files and mail. 
 
 
 
-**user-homedir-pathname** returns a *pathname* without any name, type, or version component (those components are all **nil**) for the user’s home directory on *host*. 
+<DictionaryLink styled={true} term={"user-homedir-pathname"}><b>user-homedir-pathname</b></DictionaryLink> returns a <GlossaryTerm styled={true} term={"pathname"}><i>pathname</i></GlossaryTerm> without any name, type, or version component (those components are all <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>) for the user’s home directory on *host*. 
 
 
 
-If it is impossible to determine the user’s home directory on *host*, then **nil** is returned. **user-homedir-pathname** never returns **nil** if *host* is not supplied. 
+If it is impossible to determine the user’s home directory on *host*, then <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> is returned. <DictionaryLink styled={true} term={"user-homedir-pathname"}><b>user-homedir-pathname</b></DictionaryLink> never returns <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> if *host* is not supplied. 
 
 
 
@@ -52,7 +52,7 @@ If it is impossible to determine the user’s home directory on *host*, then **n
 
 
 
-The host computer’s file system, and the *implementation*. 
+The host computer’s file system, and the <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm>. 
 
 
 

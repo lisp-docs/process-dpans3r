@@ -1,4 +1,4 @@
-**abs** *Function* 
+**abs** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**abs** *number → absolute-value* 
+<DictionaryLink styled={true} term={"abs"}><b>abs</b></DictionaryLink> *number → absolute-value* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*number*—a *number* . 
+<GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> . 
 
 
 
@@ -26,15 +26,15 @@
 
 
 
-**abs** returns the absolute value of *number*. 
+<DictionaryLink styled={true} term={"abs"}><b>abs</b></DictionaryLink> returns the absolute value of <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm>. 
 
 
 
-If *number* is a *real*, the result is of the same *type* as *number*. 
+If <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> is a *real*, the result is of the same <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> as <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm>. 
 
 
 
-If *number* is a *complex* , the result is a positive *real* with the same magnitude as *number*. The result can be a *float* even if *number*’s components are *rationals* and an exact rational result would have been possible. Thus the result of (abs #c(3 4)) can be either 5 or 5.0, depending on the implementation. 
+If <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> is a <GlossaryTerm styled={true} term={"complex"}><i>complex</i></GlossaryTerm> , the result is a positive *real* with the same magnitude as <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm>. The result can be a <GlossaryTerm styled={true} term={"float"}><i>float</i></GlossaryTerm> even if <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm>’s components are <GlossaryTerm styled={true} term={"rational"}><i>rationals</i></GlossaryTerm> and an exact rational result would have been possible. Thus the result of (abs #c(3 4)) can be either 5 or 5.0, depending on the implementation. 
 
 
 
@@ -65,11 +65,11 @@ Section 12.1.3.3 (Rule of Float Substitutability)
 
 
 
-If *number* is a *complex* , the result is equivalent to the following: 
+If <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm> is a <GlossaryTerm styled={true} term={"complex"}><i>complex</i></GlossaryTerm> , the result is equivalent to the following: 
 
 
 
-(sqrt (+ (expt (realpart *number*) 2) (expt (imagpart *number*) 2))) 
+(sqrt (+ (expt (realpart <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm>) 2) (expt (imagpart <GlossaryTerm styled={true} term={"number"}><i>number</i></GlossaryTerm>) 2))) 
 
 
 

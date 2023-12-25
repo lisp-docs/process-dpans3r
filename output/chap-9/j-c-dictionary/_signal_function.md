@@ -1,4 +1,4 @@
-**signal** *Function* 
+**signal** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**signal** *datum* &amp;rest *arguments →* **nil** 
+<DictionaryLink styled={true} term={"signal"}><b>signal</b></DictionaryLink> *datum* &amp;rest *arguments →* <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*datum*, *arguments*—*designators* for a *condition* of default type **simple-condition**. 
+*datum*, <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm>—<GlossaryTerm styled={true} term={"designator"}><i>designators</i></GlossaryTerm> for a <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> of default type <DictionaryLink styled={true} term={"simple-condition"}><b>simple-condition</b></DictionaryLink>. 
 
 
 
@@ -22,7 +22,7 @@
 
 
 
-*Signals* the *condition* denoted by the given *datum* and *arguments*. If the *condition* is not handled, **signal** returns **nil**. 
+<GlossaryTerm styled={true} term={"signal"}><i>Signals</i></GlossaryTerm> the <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> denoted by the given *datum* and <GlossaryTerm styled={true} term={"argument"}><i>arguments</i></GlossaryTerm>. If the <GlossaryTerm styled={true} term={"condition"}><i>condition</i></GlossaryTerm> is not handled, <DictionaryLink styled={true} term={"signal"}><b>signal</b></DictionaryLink> returns <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -62,7 +62,7 @@ Back to Lisp Toplevel
 
 
 
-The debugger might be entered due to **\*break-on-signals\***. 
+The debugger might be entered due to <DictionaryLink styled={true} term={"break-on-signals"}><b>\*break-on-signals\*</b></DictionaryLink>. 
 
 
 
@@ -90,7 +90,7 @@ Existing handler bindings.
 
 
 
-**\*break-on-signals\*** 
+<DictionaryLink styled={true} term={"break-on-signals"}><b>\*break-on-signals\*</b></DictionaryLink> 
 
 
 
@@ -98,7 +98,7 @@ Existing handler bindings.
 
 
 
-**\*break-on-signals\***, **error**, **simple-condition**, Section 9.1.4 (Signaling and Handling Conditions) 
+<DictionaryLink styled={true} term={"break-on-signals"}><b>\*break-on-signals\*</b></DictionaryLink>, <DictionaryLink styled={true} term={"error"}><b>error</b></DictionaryLink>, <DictionaryLink styled={true} term={"simple-condition"}><b>simple-condition</b></DictionaryLink>, Section 9.1.4 (Signaling and Handling Conditions) 
 
 
 
@@ -106,7 +106,7 @@ Existing handler bindings.
 
 
 
-If (typep *datum* \*break-on-signals\*) *yields true*, the debugger is entered prior to beginning the signaling process. The **continue** *restart* can be used to continue with the signaling process. This is also true for all other *functions* and *macros* that should, might, or must *signal conditions*. 
+If (typep *datum* \*break-on-signals\*) *yields true*, the debugger is entered prior to beginning the signaling process. The **continue** <GlossaryTerm styled={true} term={"restart"}><i>restart</i></GlossaryTerm> can be used to continue with the signaling process. This is also true for all other <GlossaryTerm styled={true} term={"function"}><i>functions</i></GlossaryTerm> and <GlossaryTerm styled={true} term={"macro"}><i>macros</i></GlossaryTerm> that should, might, or must *signal conditions*. 
 
 
 

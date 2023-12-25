@@ -1,4 +1,4 @@
-**unsigned-byte** *Type* 
+**unsigned-byte** <GlossaryTerm styled={true} term={"type"}><i>Type</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**unsigned-byte**, **signed-byte**, **integer**, **rational**, **real**, **number**, **t** 
+<DictionaryLink styled={true} term={"unsigned-byte"}><b>unsigned-byte</b></DictionaryLink>, <DictionaryLink styled={true} term={"signed-byte"}><b>signed-byte</b></DictionaryLink>, <DictionaryLink styled={true} term={"integer"}><b>integer</b></DictionaryLink>, <DictionaryLink styled={true} term={"rational"}><b>rational</b></DictionaryLink>, <DictionaryLink styled={true} term={"real"}><b>real</b></DictionaryLink>, <DictionaryLink styled={true} term={"number"}><b>number</b></DictionaryLink>, <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink> 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-The atomic *type specifier* **unsigned-byte** denotes the same type as is denoted by the *type specifier* (integer 0 \*). 
+The atomic *type specifier* <DictionaryLink styled={true} term={"unsigned-byte"}><b>unsigned-byte</b></DictionaryLink> denotes the same type as is denoted by the *type specifier* (integer 0 \*). 
 
 
 
@@ -54,7 +54,7 @@ This denotes the set of non-negative <i>integers</i> that can be represented in 
 
 
 
-The *type* (unsigned-byte 1) is also called **bit**. 
+The <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> (unsigned-byte 1) is also called <DictionaryLink styled={true} term={"bit"}><b>bit</b></DictionaryLink>. 
 
 
 
@@ -70,7 +70,7 @@ The *type* (unsigned-byte 1) is also called **bit**.
 
 
 
-**mod** *Type Specifier* 
+<DictionaryLink styled={true} term={"mod"}><b>mod</b></DictionaryLink> *Type Specifier* 
 
 
 
@@ -110,7 +110,7 @@ The argument is required, and cannot be **\***.
 
 
 
-The symbol **mod** is not valid as a *type specifier* . 
+The symbol <DictionaryLink styled={true} term={"mod"}><b>mod</b></DictionaryLink> is not valid as a *type specifier* . 
 
 
 

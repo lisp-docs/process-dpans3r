@@ -1,4 +1,4 @@
-**symbol-package** *Function* 
+**symbol-package** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**symbol-package** *symbol → contents* 
+<DictionaryLink styled={true} term={"symbol-package"}><b>symbol-package</b></DictionaryLink> *symbol → contents* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*symbol*—a *symbol*. 
+<GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>. 
 
 
 
-*contents*—a *package object* or **nil**. 
+*contents*—a *package object* or <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-Returns the *home package* of *symbol*. 
+Returns the *home package* of <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>. 
 
 
 
@@ -62,7 +62,7 @@ Returns the *home package* of *symbol*.
 
 
 
-**import**, **intern**, **unintern** 
+<DictionaryLink styled={true} term={"import"}><b>import</b></DictionaryLink>, <DictionaryLink styled={true} term={"intern"}><b>intern</b></DictionaryLink>, <DictionaryLink styled={true} term={"unintern"}><b>unintern</b></DictionaryLink> 
 
 
 
@@ -70,7 +70,7 @@ Returns the *home package* of *symbol*.
 
 
 
-Should signal an error of *type* **type-error** if *symbol* is not a *symbol*. 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> is not a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>. 
 
 
 
@@ -90,7 +90,7 @@ Should signal an error of *type* **type-error** if *symbol* is not a *symbol*.
 
 
 
-**intern** 
+<DictionaryLink styled={true} term={"intern"}><b>intern</b></DictionaryLink> 
 
 
 

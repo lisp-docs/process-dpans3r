@@ -1,4 +1,4 @@
-**print-unreadable-object** *Macro* 
+**print-unreadable-object** <GlossaryTerm styled={true} term={"macro"}><i>Macro</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**print-unreadable-object** (*object stream* &amp;key *type identity*) *\{form\}*\* *→* **nil** 
+<DictionaryLink styled={true} term={"print-unreadable-object"}><b>print-unreadable-object</b></DictionaryLink> (*object stream* &amp;key *type identity*) *\{form\}*\* *→* <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> 
 
 
 
@@ -14,15 +14,15 @@
 
 
 
-*object*—an *object*; evaluated. 
+<GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>; evaluated. 
 
 
 
-*stream*—a *stream designator* ; evaluated. 
+<GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>—a *stream designator* ; evaluated. 
 
 
 
-*type*—a *generalized boolean*; evaluated. 
+<GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm>—a *generalized boolean*; evaluated. 
 
 
 
@@ -42,7 +42,7 @@
 
 
 
-*forms*—an *implicit progn*. 
+<GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm>—an *implicit progn*. 
 
 
 
@@ -50,11 +50,11 @@
 
 
 
-Outputs a printed representation of *object* on *stream*, beginning with “#&lt;” and ending with “&gt;”. Everything output to *stream* by the body *forms* is enclosed in the the angle brackets. If *type* is *true*, the output from *forms* is preceded by a brief description of the *object*’s *type* and a space character. If *identity* is *true*, the output from *forms* is followed by a space character and a representation of the *object*’s identity, typically a storage address. 
+Outputs a printed representation of <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> on <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>, beginning with “#&lt;” and ending with “&gt;”. Everything output to <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm> by the body <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm> is enclosed in the the angle brackets. If <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>, the output from <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm> is preceded by a brief description of the <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>’s <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> and a space character. If *identity* is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>, the output from <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm> is followed by a space character and a representation of the <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>’s identity, typically a storage address. 
 
 
 
-If either *type* or *identity* is not supplied, its value is *false*. It is valid to omit the body *forms*. If *type* and *identity* are both true and there are no body *forms*, only one space character separates the type and the identity. 
+If either <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> or *identity* is not supplied, its value is <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. It is valid to omit the body <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm>. If <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> and *identity* are both true and there are no body <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm>, only one space character separates the type and the identity. 
 
 
 
@@ -74,7 +74,7 @@ If either *type* or *identity* is not supplied, its value is *false*. It is vali
 
 
 
-If **\*print-readably\*** is *true*, **print-unreadable-object** signals an error of *type* **print-not-readable** without printing anything. 
+If <DictionaryLink styled={true} term={"print-readably"}><b>\*print-readably\*</b></DictionaryLink> is <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>, <DictionaryLink styled={true} term={"print-unreadable-object"}><b>print-unreadable-object</b></DictionaryLink> signals an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"print-not-readable"}><b>print-not-readable</b></DictionaryLink> without printing anything. 
 
 
 

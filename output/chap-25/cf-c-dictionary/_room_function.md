@@ -1,4 +1,4 @@
-**room** *Function* 
+**room** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**room** &amp;optional *x → implementation-dependent* 
+<DictionaryLink styled={true} term={"room"}><b>room</b></DictionaryLink> &amp;optional *x → implementation-dependent* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*x*—one of **t**, **nil**, or :default. 
+*x*—one of <DictionaryLink styled={true} term={"t"}><b>t</b></DictionaryLink>, <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>, or :default. 
 
 
 
@@ -22,7 +22,7 @@
 
 
 
-**room** prints, to *standard output*, information about the state of internal storage and its management. This might include descriptions of the amount of memory in use and the degree of memory compaction, possibly broken down by internal data type if that is appropriate. The nature and format of the printed information is *implementation-dependent*. The intent is to provide information that a *programmer* might use to tune a *program* for a particular *implementation*. 
+<DictionaryLink styled={true} term={"room"}><b>room</b></DictionaryLink> prints, to *standard output*, information about the state of internal storage and its management. This might include descriptions of the amount of memory in use and the degree of memory compaction, possibly broken down by internal data type if that is appropriate. The nature and format of the printed information is <GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm>. The intent is to provide information that a <GlossaryTerm styled={true} term={"programmer"}><i>programmer</i></GlossaryTerm> might use to tune a <GlossaryTerm styled={true} term={"program"}><i>program</i></GlossaryTerm> for a particular <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm>. 
 
 
 

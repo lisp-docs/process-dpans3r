@@ -2,11 +2,11 @@
 
 
 
-Since the exact manner in which the *Lisp reader* will parse an *expression* involving the *backquote reader macro* is not specified, an *implementation* is free to choose any representation that preserves the semantics described. 
+Since the exact manner in which the *Lisp reader* will parse an <GlossaryTerm styled={true} term={"expression"}><i>expression</i></GlossaryTerm> involving the *backquote reader macro* is not specified, an <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm> is free to choose any representation that preserves the semantics described. 
 
 
 
-Often an *implementation* will choose a representation that facilitates pretty printing of the expression, so that (pprint ‘(a ,b)) will display ‘(a ,b) and not, for example, (list ’a b). However, this is not a requirement. 
+Often an <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm> will choose a representation that facilitates pretty printing of the expression, so that (pprint ‘(a ,b)) will display ‘(a ,b) and not, for example, (list ’a b). However, this is not a requirement. 
 
 
 

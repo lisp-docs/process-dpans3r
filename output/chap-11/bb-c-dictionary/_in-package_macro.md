@@ -1,4 +1,4 @@
-**in-package** *Macro* 
+**in-package** <GlossaryTerm styled={true} term={"macro"}><i>Macro</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**in-package** *name → package* 
+<DictionaryLink styled={true} term={"in-package"}><b>in-package</b></DictionaryLink> *name → package* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*name*—a *string designator* ; not evaluated. 
+<GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm>—a *string designator* ; not evaluated. 
 
 
 
-*package*—the *package* named by *name*. 
+<GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm>—the <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> named by <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm>. 
 
 
 
@@ -26,11 +26,11 @@
 
 
 
-Causes the the *package* named by *name* to become the *current package*—that is, the *value* of **\*package\***. If no such *package* already exists, an error of *type* **package-error** is signaled. 
+Causes the the <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> named by <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> to become the *current package*—that is, the <GlossaryTerm styled={true} term={"value"}><i>value</i></GlossaryTerm> of <DictionaryLink styled={true} term={"package"}><b>\*package\*</b></DictionaryLink>. If no such <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> already exists, an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"package-error"}><b>package-error</b></DictionaryLink> is signaled. 
 
 
 
-Everything **in-package** does is also performed at compile time if the call appears as a *top level form*. 
+Everything <DictionaryLink styled={true} term={"in-package"}><b>in-package</b></DictionaryLink> does is also performed at compile time if the call appears as a *top level form*. 
 
 
 
@@ -38,7 +38,7 @@ Everything **in-package** does is also performed at compile time if the call app
 
 
 
-The *variable* **\*package\*** is assigned. If the **in-package** *form* is a *top level form*, this assignment also occurs at compile time. 
+The <GlossaryTerm styled={true} term={"variable"}><i>variable</i></GlossaryTerm> <DictionaryLink styled={true} term={"package"}><b>\*package\*</b></DictionaryLink> is assigned. If the <DictionaryLink styled={true} term={"in-package"}><b>in-package</b></DictionaryLink> <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> is a *top level form*, this assignment also occurs at compile time. 
 
 
 
@@ -46,7 +46,7 @@ The *variable* **\*package\*** is assigned. If the **in-package** *form* is a *t
 
 
 
-An error of *type* **package-error** is signaled if the specified *package* does not exist. 
+An error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"package-error"}><b>package-error</b></DictionaryLink> is signaled if the specified <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> does not exist. 
 
 
 
@@ -54,7 +54,7 @@ An error of *type* **package-error** is signaled if the specified *package* does
 
 
 
-**\*package\*** 
+<DictionaryLink styled={true} term={"package"}><b>\*package\*</b></DictionaryLink> 
 
 
 

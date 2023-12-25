@@ -1,4 +1,4 @@
-**streamp** *Function* 
+**streamp** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**streamp** *object → generalized-boolean* 
+<DictionaryLink styled={true} term={"streamp"}><b>streamp</b></DictionaryLink> *object → generalized-boolean* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*object*—an *object*. 
+<GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -26,11 +26,11 @@
 
 
 
-Returns *true* if *object* is of *type* **stream**; otherwise, returns *false*. 
+Returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"stream"}><b>stream</b></DictionaryLink>; otherwise, returns <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
-**streamp** is unaffected by whether *object*, if it is a *stream*, is *open* or closed. 
+<DictionaryLink styled={true} term={"streamp"}><b>streamp</b></DictionaryLink> is unaffected by whether <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>, if it is a <GlossaryTerm styled={true} term={"stream"}><i>stream</i></GlossaryTerm>, is <GlossaryTerm styled={true} term={"open"}><i>open</i></GlossaryTerm> or closed. 
 
 
 
@@ -45,7 +45,7 @@ Returns *true* if *object* is of *type* **stream**; otherwise, returns *false*.
 
 
 
-(streamp *object*) *≡* (typep *object* ’stream) 
+(streamp <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>) *≡* (typep <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> ’stream) 
 
 
 

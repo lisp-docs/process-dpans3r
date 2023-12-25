@@ -1,4 +1,4 @@
-*∗***random-state***∗ Variable* 
+*∗<DictionaryLink styled={true} term={"*random-state*"}><b>*random-state*</b></DictionaryLink>∗ Variable* 
 
 
 
@@ -14,7 +14,7 @@ a *random state*.
 
 
 
-*implementation-dependent*. 
+<GlossaryTerm styled={true} term={"implementation-dependent"}><i>implementation-dependent</i></GlossaryTerm>. 
 
 
 
@@ -22,7 +22,7 @@ a *random state*.
 
 
 
-The *current random state*, which is used, for example, by the *function* **random** when a *random state* is not explicitly supplied. 
+The *current random state*, which is used, for example, by the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> <DictionaryLink styled={true} term={"random"}><b>random</b></DictionaryLink> when a *random state* is not explicitly supplied. 
 
 
 
@@ -61,11 +61,11 @@ The *current random state*, which is used, for example, by the *function* **rand
 
 
 
-The *implementation*. 
+The <GlossaryTerm styled={true} term={"implementation"}><i>implementation</i></GlossaryTerm>. 
 
 
 
-**random**. 
+<DictionaryLink styled={true} term={"random"}><b>random</b></DictionaryLink>. 
 
 
 
@@ -73,7 +73,7 @@ The *implementation*.
 
 
 
-**make-random-state**, **random**, **random-state** 
+<DictionaryLink styled={true} term={"make-random-state"}><b>make-random-state</b></DictionaryLink>, <DictionaryLink styled={true} term={"random"}><b>random</b></DictionaryLink>, <DictionaryLink styled={true} term={"random-state"}><b>random-state</b></DictionaryLink> 
 
 
 
@@ -81,7 +81,7 @@ The *implementation*.
 
 
 
-*Binding* **\*random-state\*** to a different *random state object* correctly saves and restores the old *random state object*. 
+<GlossaryTerm styled={true} term={"binding"}><i>Binding</i></GlossaryTerm> <DictionaryLink styled={true} term={"random-state"}><b>\*random-state\*</b></DictionaryLink> to a different *random state object* correctly saves and restores the old *random state object*. 
 
 
 

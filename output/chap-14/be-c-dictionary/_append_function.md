@@ -1,4 +1,4 @@
-**append** *Function* 
+**append** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**append** &amp;rest *lists → result* 
+<DictionaryLink styled={true} term={"append"}><b>append</b></DictionaryLink> &amp;rest *lists → result* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*list*—each must be a *proper list* except the last, which may be any *object*. 
+<GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm>—each must be a *proper list* except the last, which may be any <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -30,7 +30,7 @@
 
 
 
-*result*—an *object*. This will be a *list* unless the last *list* was not a *list* and all preceding *lists* were *null*. 
+*result*—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. This will be a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> unless the last <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> was not a <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> and all preceding <GlossaryTerm styled={true} term={"list"}><i>lists</i></GlossaryTerm> were <GlossaryTerm styled={true} term={"null"}><i>null</i></GlossaryTerm>. 
 
 
 
@@ -38,7 +38,7 @@
 
 
 
-**append** returns a new *list* that is the concatenation of the copies. *lists* are left unchanged; the *list structure* of each of *lists* except the last is copied. The last argument is not copied; it becomes the *cdr* of the final *dotted pair* of the concatenation of the preceding *lists*, or is returned directly if there are no preceding *non-empty lists*. 
+<DictionaryLink styled={true} term={"append"}><b>append</b></DictionaryLink> returns a new <GlossaryTerm styled={true} term={"list"}><i>list</i></GlossaryTerm> that is the concatenation of the copies. <GlossaryTerm styled={true} term={"list"}><i>lists</i></GlossaryTerm> are left unchanged; the *list structure* of each of <GlossaryTerm styled={true} term={"list"}><i>lists</i></GlossaryTerm> except the last is copied. The last argument is not copied; it becomes the <GlossaryTerm styled={true} term={"cdr"}><i>cdr</i></GlossaryTerm> of the final *dotted pair* of the concatenation of the preceding <GlossaryTerm styled={true} term={"list"}><i>lists</i></GlossaryTerm>, or is returned directly if there are no preceding *non-empty lists*. 
 
 
 
@@ -58,7 +58,7 @@ lst *→* (A B C)
 
 
 
-**nconc**, **concatenate** 
+<DictionaryLink styled={true} term={"nconc"}><b>nconc</b></DictionaryLink>, <DictionaryLink styled={true} term={"concatenate"}><b>concatenate</b></DictionaryLink> 
 
 
 

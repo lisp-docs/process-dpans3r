@@ -1,4 +1,4 @@
-**fboundp** *Function* 
+**fboundp** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**fboundp** *name → generalized-boolean* 
+<DictionaryLink styled={true} term={"fboundp"}><b>fboundp</b></DictionaryLink> *name → generalized-boolean* 
 
 
 
@@ -22,7 +22,7 @@
 
 
 
-*name*—a *function name*. 
+<GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm>—a *function name*. 
 
 
 
@@ -34,7 +34,7 @@
 
 
 
-Returns *true* if *name* is *fbound*; otherwise, returns *false*. 
+Returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> is <GlossaryTerm styled={true} term={"fbound"}><i>fbound</i></GlossaryTerm>; otherwise, returns <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
@@ -65,7 +65,7 @@ Returns *true* if *name* is *fbound*; otherwise, returns *false*.
 
 
 
-Should signal an error of *type* **type-error** if *name* is not a *function name*. 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> is not a *function name*. 
 
 
 
@@ -73,7 +73,7 @@ Should signal an error of *type* **type-error** if *name* is not a *function nam
 
 
 
-**symbol-function**, **fmakunbound**, **fdefinition** 
+<DictionaryLink styled={true} term={"symbol-function"}><b>symbol-function</b></DictionaryLink>, <DictionaryLink styled={true} term={"fmakunbound"}><b>fmakunbound</b></DictionaryLink>, <DictionaryLink styled={true} term={"fdefinition"}><b>fdefinition</b></DictionaryLink> 
 
 
 
@@ -93,11 +93,11 @@ Should signal an error of *type* **type-error** if *name* is not a *function nam
 
 
 
-It is permissible to call **symbol-function** on any *symbol* that is *fbound*. 
+It is permissible to call <DictionaryLink styled={true} term={"symbol-function"}><b>symbol-function</b></DictionaryLink> on any <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> that is <GlossaryTerm styled={true} term={"fbound"}><i>fbound</i></GlossaryTerm>. 
 
 
 
-**fboundp** is sometimes used to “guard” an access to the *function cell*, as in: (if (fboundp x) (symbol-function x)) 
+<DictionaryLink styled={true} term={"fboundp"}><b>fboundp</b></DictionaryLink> is sometimes used to “guard” an access to the *function cell*, as in: (if (fboundp x) (symbol-function x)) 
 
 
 

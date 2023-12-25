@@ -1,4 +1,4 @@
-**array-has-fill-pointer-p** *Function* 
+**array-has-fill-pointer-p** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**array-has-fill-pointer-p** *array → generalized-boolean* 
+<DictionaryLink styled={true} term={"array-has-fill-pointer-p"}><b>array-has-fill-pointer-p</b></DictionaryLink> *array → generalized-boolean* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*array*—an *array*. 
+<GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm>. 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-Returns *true* if *array* has a *fill pointer* ; otherwise returns *false*. 
+Returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm> has a *fill pointer* ; otherwise returns <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. 
 
 
 
@@ -48,7 +48,7 @@ Returns *true* if *array* has a *fill pointer* ; otherwise returns *false*.
 
 
 
-Should signal an error of *type* **type-error** if its argument is not an *array*. 
+Should signal an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> if its argument is not an <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm>. 
 
 
 
@@ -56,7 +56,7 @@ Should signal an error of *type* **type-error** if its argument is not an *array
 
 
 
-**make-array**, **fill-pointer** 
+<DictionaryLink styled={true} term={"make-array"}><b>make-array</b></DictionaryLink>, <DictionaryLink styled={true} term={"fill-pointer"}><b>fill-pointer</b></DictionaryLink> 
 
 
 
@@ -64,7 +64,7 @@ Should signal an error of *type* **type-error** if its argument is not an *array
 
 
 
-Since *arrays* of *rank* other than one cannot have a *fill pointer* , **array-has-fill-pointer-p** always returns **nil** when its argument is such an array. 
+Since <GlossaryTerm styled={true} term={"array"}><i>arrays</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"rank"}><i>rank</i></GlossaryTerm> other than one cannot have a *fill pointer* , <DictionaryLink styled={true} term={"array-has-fill-pointer-p"}><b>array-has-fill-pointer-p</b></DictionaryLink> always returns <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> when its argument is such an array. 
 
 
 

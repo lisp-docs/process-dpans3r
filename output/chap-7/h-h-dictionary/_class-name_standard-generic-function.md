@@ -6,7 +6,7 @@
 
 
 
-**class-name** *class ! name* 
+<DictionaryLink styled={true} term={"class-name"}><b>class-name</b></DictionaryLink> *class ! name* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-**class-name** (*class* **class**) 
+<DictionaryLink styled={true} term={"class-name"}><b>class-name</b></DictionaryLink> (<GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm> <DictionaryLink styled={true} term={"class"}><b>class</b></DictionaryLink>) 
 
 
 
@@ -22,11 +22,11 @@
 
 
 
-*class*—a *class object*. 
+<GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm>—a *class object*. 
 
 
 
-*name*—a *symbol*. 
+<GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>. 
 
 
 
@@ -34,7 +34,7 @@
 
 
 
-Returns the *name* of the given *class*. 
+Returns the <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> of the given <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm>. 
 
 
 
@@ -42,7 +42,7 @@ Returns the *name* of the given *class*.
 
 
 
-**find-class**, Section 4.3 (Classes) 
+<DictionaryLink styled={true} term={"find-class"}><b>find-class</b></DictionaryLink>, Section 4.3 (Classes) 
 
 
 
@@ -50,11 +50,11 @@ Returns the *name* of the given *class*.
 
 
 
-If *S* is a *symbol* such that *S* =(class-name *C*) and *C* =(find-class *S*), then *S* is the proper name of *C*. For further discussion, see Section 4.3 (Classes). 
+If *S* is a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> such that *S* =(class-name *C*) and *C* =(find-class *S*), then *S* is the proper name of *C*. For further discussion, see Section 4.3 (Classes). 
 
 
 
-The name of an anonymous *class* is **nil**. 
+The name of an anonymous <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm> is <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>. 
 
 
 
@@ -86,7 +86,7 @@ The name of an anonymous *class* is **nil**.
 
 
 
-**(setf class-name)** *new-value* (*class* **class**) 
+**(setf class-name)** *new-value* (<GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm> <DictionaryLink styled={true} term={"class"}><b>class</b></DictionaryLink>) 
 
 
 
@@ -94,11 +94,11 @@ The name of an anonymous *class* is **nil**.
 
 
 
-*new-value*—a *symbol*. 
+*new-value*—a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>. 
 
 
 
-*class*—a *class*. 
+<GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm>. 
 
 
 
@@ -106,7 +106,7 @@ The name of an anonymous *class* is **nil**.
 
 
 
-The generic function (setf class-name) sets the name of a *class* object. 
+The generic function (setf class-name) sets the name of a <GlossaryTerm styled={true} term={"class"}><i>class</i></GlossaryTerm> object. 
 
 
 
@@ -114,7 +114,7 @@ The generic function (setf class-name) sets the name of a *class* object.
 
 
 
-**find-class**, *proper name*, Section 4.3 (Classes) 
+<DictionaryLink styled={true} term={"find-class"}><b>find-class</b></DictionaryLink>, *proper name*, Section 4.3 (Classes) 
 
 
 

@@ -1,4 +1,4 @@
-**vector-pop** *Function* 
+**vector-pop** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**vector-pop** *vector → element* 
+<DictionaryLink styled={true} term={"vector-pop"}><b>vector-pop</b></DictionaryLink> *vector → element* 
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-*vector*—a *vector* with a *fill pointer* . 
+<GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm>—a <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm> with a *fill pointer* . 
 
 
 
-*element*—an *object*. 
+<GlossaryTerm styled={true} term={"element"}><i>element</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -26,7 +26,7 @@
 
 
 
-Decreases the *fill pointer* of *vector* by one, and retrieves the *element* of *vector* that is designated by the new *fill pointer* . 
+Decreases the *fill pointer* of <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm> by one, and retrieves the <GlossaryTerm styled={true} term={"element"}><i>element</i></GlossaryTerm> of <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm> that is designated by the new *fill pointer* . 
 
 
 
@@ -75,11 +75,11 @@ The value of the *fill pointer* .
 
 
 
-An error of *type* **type-error** is signaled if *vector* does not have a *fill pointer* . 
+An error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"type-error"}><b>type-error</b></DictionaryLink> is signaled if <GlossaryTerm styled={true} term={"vector"}><i>vector</i></GlossaryTerm> does not have a *fill pointer* . 
 
 
 
-If the *fill pointer* is zero, **vector-pop** signals an error of *type* **error**. 
+If the *fill pointer* is zero, <DictionaryLink styled={true} term={"vector-pop"}><b>vector-pop</b></DictionaryLink> signals an error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"error"}><b>error</b></DictionaryLink>. 
 
 
 
@@ -87,7 +87,7 @@ If the *fill pointer* is zero, **vector-pop** signals an error of *type* **error
 
 
 
-**vector-push**, **vector-push-extend**, **fill-pointer** 
+<DictionaryLink styled={true} term={"vector-push"}><b>vector-push</b></DictionaryLink>, <DictionaryLink styled={true} term={"vector-push-extend"}><b>vector-push-extend</b></DictionaryLink>, <DictionaryLink styled={true} term={"fill-pointer"}><b>fill-pointer</b></DictionaryLink> 
 
 
 

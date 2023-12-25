@@ -6,7 +6,7 @@
 
 
 
-**quote** *object → object* 
+<DictionaryLink styled={true} term={"quote"}><b>quote</b></DictionaryLink> *object → object* 
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-*object*—an *object*; not evaluated. 
+<GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>; not evaluated. 
 
 
 
@@ -22,7 +22,7 @@
 
 
 
-The **quote** *special operator* just returns *object*. 
+The <DictionaryLink styled={true} term={"quote"}><b>quote</b></DictionaryLink> *special operator* just returns <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
@@ -65,11 +65,11 @@ Section 3.1 (Evaluation), Section 2.4.3 (Single-Quote), Section 3.2.1 (Compiler 
 
 
 
-The textual notation ’*object* is equivalent to (quote *object*); see Section 3.2.1 (Compiler Terminology). 
+The textual notation ’<GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is equivalent to (quote <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>); see Section 3.2.1 (Compiler Terminology). 
 
 
 
-Some *objects*, called *self-evaluating objects*, do not require quotation by **quote**. However, *symbols* and *lists* are used to represent parts of programs, and so would not be useable as constant data in a program without **quote**. Since **quote** suppresses the *evaluation* of these *objects*, they become data rather than program. 
+Some <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm>, called *self-evaluating objects*, do not require quotation by <DictionaryLink styled={true} term={"quote"}><b>quote</b></DictionaryLink>. However, <GlossaryTerm styled={true} term={"symbol"}><i>symbols</i></GlossaryTerm> and <GlossaryTerm styled={true} term={"list"}><i>lists</i></GlossaryTerm> are used to represent parts of programs, and so would not be useable as constant data in a program without <DictionaryLink styled={true} term={"quote"}><b>quote</b></DictionaryLink>. Since <DictionaryLink styled={true} term={"quote"}><b>quote</b></DictionaryLink> suppresses the <GlossaryTerm styled={true} term={"evaluation"}><i>evaluation</i></GlossaryTerm> of these <GlossaryTerm styled={true} term={"object"}><i>objects</i></GlossaryTerm>, they become data rather than program. 
 
 
 

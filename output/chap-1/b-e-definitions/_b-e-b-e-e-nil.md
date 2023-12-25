@@ -2,11 +2,11 @@
 
 
 
-**nil** has a variety of meanings. It is a *symbol* in the COMMON-LISP *package* with the *name* "NIL", it is *boolean* (and *generalized boolean*) *false*, it is the *empty list*, and it is the *name* of the *empty type* (a *subtype* of all *types*). 
+<DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> has a variety of meanings. It is a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> in the COMMON-LISP <GlossaryTerm styled={true} term={"package"}><i>package</i></GlossaryTerm> with the <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> "NIL", it is <GlossaryTerm styled={true} term={"boolean"}><i>boolean</i></GlossaryTerm> (and *generalized boolean*) *false*, it is the *empty list*, and it is the <GlossaryTerm styled={true} term={"name"}><i>name</i></GlossaryTerm> of the *empty type* (a <GlossaryTerm styled={true} term={"subtype"}><i>subtype</i></GlossaryTerm> of all <GlossaryTerm styled={true} term={"type"}><i>types</i></GlossaryTerm>). 
 
 
 
-Within Common Lisp, **nil** can be notated interchangeably as either NIL or (). By convention, the choice of notation offers a hint as to which of its many roles it is playing.  
+Within Common Lisp, <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> can be notated interchangeably as either NIL or (). By convention, the choice of notation offers a hint as to which of its many roles it is playing.  
 
 
 
@@ -18,7 +18,7 @@ Within Common Lisp, **nil** can be notated interchangeably as either NIL or (). 
 
 | :- |
 
-|<p>Yes nil use as a *boolean*. </p><p>Yes ’nil use as a *symbol*. </p><p>Yes ’() use as an *empty list* </p><p>No nil use as a *symbol* or *boolean*. No () use as an *empty list*.</p>|
+|<p>Yes nil use as a <GlossaryTerm styled={true} term={"boolean"}><i>boolean</i></GlossaryTerm>. </p><p>Yes ’nil use as a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm>. </p><p>Yes ’() use as an *empty list* </p><p>No nil use as a <GlossaryTerm styled={true} term={"symbol"}><i>symbol</i></GlossaryTerm> or <GlossaryTerm styled={true} term={"boolean"}><i>boolean</i></GlossaryTerm>. No () use as an *empty list*.</p>|
 
 
 
@@ -28,7 +28,7 @@ Within Common Lisp, **nil** can be notated interchangeably as either NIL or (). 
 
 
 
-Within this document only, **nil** is also sometimes notated as *false* to emphasize its role as a *boolean*. For example: 
+Within this document only, <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> is also sometimes notated as <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm> to emphasize its role as a <GlossaryTerm styled={true} term={"boolean"}><i>boolean</i></GlossaryTerm>. For example: 
 
 
 
@@ -64,11 +64,11 @@ Within this document only, **nil** is also sometimes notated as *false* to empha
 
 
 
-A *function* is sometimes said to “be *false*” or “be *true*” in some circumstance. Since no *function* object can be the same as **nil** and all *function objects* represent *true* when viewed as *booleans*, it would be meaningless to say that the *function* was literally *false* and uninteresting to say that it was literally *true*. Instead, these phrases are just traditional alternative ways of saying that the 
+A <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> is sometimes said to “be <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>” or “be <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>” in some circumstance. Since no <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> object can be the same as <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink> and all *function objects* represent <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> when viewed as <GlossaryTerm styled={true} term={"boolean"}><i>booleans</i></GlossaryTerm>, it would be meaningless to say that the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> was literally <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm> and uninteresting to say that it was literally <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>. Instead, these phrases are just traditional alternative ways of saying that the 
 
 
 
-*function* “returns *false*” or “returns *true*,” respectively. 
+<GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> “returns <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>” or “returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm>,” respectively. 
 
 
 

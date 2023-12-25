@@ -1,4 +1,4 @@
-**typep** *Function* 
+**typep** <GlossaryTerm styled={true} term={"function"}><i>Function</i></GlossaryTerm> 
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-**typep** *object type-specifier* &amp;optional *environment → generalized-boolean* 
+<DictionaryLink styled={true} term={"typep"}><b>typep</b></DictionaryLink> *object type-specifier* &amp;optional *environment → generalized-boolean* 
 
 
 
@@ -14,15 +14,15 @@
 
 
 
-*object*—an *object*. 
+<GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>—an <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
-*type-specifier*—any *type specifier* except **values**, or a *type specifier* list whose first element is either **function** or **values**. 
+*type-specifier*—any *type specifier* except <DictionaryLink styled={true} term={"values"}><b>values</b></DictionaryLink>, or a *type specifier* list whose first element is either <DictionaryLink styled={true} term={"function"}><b>function</b></DictionaryLink> or <DictionaryLink styled={true} term={"values"}><b>values</b></DictionaryLink>. 
 
 
 
-*environment*—an *environment object*. The default is **nil**, denoting the *null lexical environment* and the and current *global environment*. 
+<GlossaryTerm styled={true} term={"environment"}><i>environment</i></GlossaryTerm>—an *environment object*. The default is <DictionaryLink styled={true} term={"nil"}><b>nil</b></DictionaryLink>, denoting the *null lexical environment* and the and current *global environment*. 
 
 
 
@@ -34,15 +34,15 @@
 
 
 
-Returns *true* if *object* is of the *type* specified by *type-specifier*; otherwise, returns *false*. A *type-specifier* of the form (satisfies fn) is handled by applying the function fn to *object*. 
+Returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is of the <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> specified by *type-specifier*; otherwise, returns <GlossaryTerm styled={true} term={"false"}><i>false</i></GlossaryTerm>. A *type-specifier* of the form (satisfies fn) is handled by applying the function fn to <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm>. 
 
 
 
-(typep *object* ’(array *type-specifier*)), where *type-specifier* is not \*, returns *true* if and only if *object* is an *array* that could be the result of supplying *type-specifier* as the :element-type argument to **make-array**. (array \*) refers to all *arrays* regardless of element type, while (array *type-specifier*) refers only to those *arrays* that can result from giving *type-specifier* as the :element-type argument to **make-array**. A similar interpretation applies to (simple-array *type-specifier*) and (vector *type-specifier*). See Section 15.1.2.1 (Array Upgrading). 
+(typep <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> ’(array *type-specifier*)), where *type-specifier* is not \*, returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> if and only if <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> is an <GlossaryTerm styled={true} term={"array"}><i>array</i></GlossaryTerm> that could be the result of supplying *type-specifier* as the :element-type argument to <DictionaryLink styled={true} term={"make-array"}><b>make-array</b></DictionaryLink>. (array \*) refers to all <GlossaryTerm styled={true} term={"array"}><i>arrays</i></GlossaryTerm> regardless of element type, while (array *type-specifier*) refers only to those <GlossaryTerm styled={true} term={"array"}><i>arrays</i></GlossaryTerm> that can result from giving *type-specifier* as the :element-type argument to <DictionaryLink styled={true} term={"make-array"}><b>make-array</b></DictionaryLink>. A similar interpretation applies to (simple-array *type-specifier*) and (vector *type-specifier*). See Section 15.1.2.1 (Array Upgrading). 
 
 
 
-(typep *object* ’(complex *type-specifier*)) returns *true* for all *complex* numbers that can result from giving *numbers* of type *type-specifier* to the *function* **complex**, plus all other *complex* numbers of the same specialized representation. Both the real and the imaginary parts of any such *complex* number must satisfy:  
+(typep <GlossaryTerm styled={true} term={"object"}><i>object</i></GlossaryTerm> ’(complex *type-specifier*)) returns <GlossaryTerm styled={true} term={"true"}><i>true</i></GlossaryTerm> for all <GlossaryTerm styled={true} term={"complex"}><i>complex</i></GlossaryTerm> numbers that can result from giving <GlossaryTerm styled={true} term={"number"}><i>numbers</i></GlossaryTerm> of type *type-specifier* to the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> <DictionaryLink styled={true} term={"complex"}><b>complex</b></DictionaryLink>, plus all other <GlossaryTerm styled={true} term={"complex"}><i>complex</i></GlossaryTerm> numbers of the same specialized representation. Both the real and the imaginary parts of any such <GlossaryTerm styled={true} term={"complex"}><i>complex</i></GlossaryTerm> number must satisfy:  
 
 
 
@@ -50,7 +50,7 @@ Returns *true* if *object* is of the *type* specified by *type-specifier*; other
 
 
 
-**typep** 
+<DictionaryLink styled={true} term={"typep"}><b>typep</b></DictionaryLink> 
 
 
 
@@ -62,7 +62,7 @@ Returns *true* if *object* is of the *type* specified by *type-specifier*; other
 
 
 
-See the *function* **upgraded-complex-part-type**. 
+See the <GlossaryTerm styled={true} term={"function"}><i>function</i></GlossaryTerm> <DictionaryLink styled={true} term={"upgraded-complex-part-type"}><b>upgraded-complex-part-type</b></DictionaryLink>. 
 
 
 
@@ -92,7 +92,7 @@ denote the same *type*. Notice that
 
 
 
-An error of *type* **error** is signaled if *type-specifier* is values, or a *type specifier* list whose first element is either **function** or **values**. 
+An error of <GlossaryTerm styled={true} term={"type"}><i>type</i></GlossaryTerm> <DictionaryLink styled={true} term={"error"}><b>error</b></DictionaryLink> is signaled if *type-specifier* is values, or a *type specifier* list whose first element is either <DictionaryLink styled={true} term={"function"}><b>function</b></DictionaryLink> or <DictionaryLink styled={true} term={"values"}><b>values</b></DictionaryLink>. 
 
 
 
@@ -104,7 +104,7 @@ The consequences are undefined if the *type-specifier* is not a *type specifier*
 
 
 
-**type-of**, **upgraded-array-element-type**, **upgraded-complex-part-type**, Section 4.2.3 (Type Specifiers) 
+<DictionaryLink styled={true} term={"type-of"}><b>type-of</b></DictionaryLink>, <DictionaryLink styled={true} term={"upgraded-array-element-type"}><b>upgraded-array-element-type</b></DictionaryLink>, <DictionaryLink styled={true} term={"upgraded-complex-part-type"}><b>upgraded-complex-part-type</b></DictionaryLink>, Section 4.2.3 (Type Specifiers) 
 
 
 
@@ -112,7 +112,7 @@ The consequences are undefined if the *type-specifier* is not a *type specifier*
 
 
 
-*Implementations* are encouraged to recognize and optimize the case of (typep *x* (the class *y*)), since it does not involve any need for expansion of **deftype** information at runtime.  
+<GlossaryTerm styled={true} term={"implementation"}><i>Implementations</i></GlossaryTerm> are encouraged to recognize and optimize the case of (typep *x* (the class *y*)), since it does not involve any need for expansion of <DictionaryLink styled={true} term={"deftype"}><b>deftype</b></DictionaryLink> information at runtime.  
 
 
 

@@ -6,7 +6,7 @@
 
 
 
-**locally** *\{declaration\}*\* *\{form\}*\* *! \{result\}*\* 
+<DictionaryLink styled={true} term={"locally"}><b>locally</b></DictionaryLink> <GlossaryTerm styled={true} term={"declaration"}><i>\{declaration\}</i></GlossaryTerm>\* <GlossaryTerm styled={true} term={"form"}><i>\{form\}</i></GlossaryTerm>\* *! \{result\}*\* 
 
 
 
@@ -14,15 +14,15 @@
 
 
 
-*Declaration*—a **declare** *expression*; not evaluated. 
+<GlossaryTerm styled={true} term={"declaration"}><i>Declaration</i></GlossaryTerm>—a <DictionaryLink styled={true} term={"declare"}><b>declare</b></DictionaryLink> <GlossaryTerm styled={true} term={"expression"}><i>expression</i></GlossaryTerm>; not evaluated. 
 
 
 
-*forms*—an *implicit progn*. 
+<GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm>—an *implicit progn*. 
 
 
 
-*results*—the *values* of the *forms*. 
+*results*—the <GlossaryTerm styled={true} term={"value"}><i>values</i></GlossaryTerm> of the <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm>. 
 
 
 
@@ -30,7 +30,7 @@
 
 
 
-Sequentially evaluates a body of *forms* in a *lexical environment* where the given *declarations* have e↵ect. 
+Sequentially evaluates a body of <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm> in a *lexical environment* where the given <GlossaryTerm styled={true} term={"declaration"}><i>declarations</i></GlossaryTerm> have e↵ect. 
 
 
 
@@ -72,7 +72,7 @@ Sequentially evaluates a body of *forms* in a *lexical environment* where the gi
 
 
 
-**declare** 
+<DictionaryLink styled={true} term={"declare"}><b>declare</b></DictionaryLink> 
 
 
 
@@ -80,19 +80,15 @@ Sequentially evaluates a body of *forms* in a *lexical environment* where the gi
 
 
 
-The **special** declaration may be used with **locally** to a↵ect references to, rather than *bindings* of, *variables*. 
+The <DictionaryLink styled={true} term={"special"}><b>special</b></DictionaryLink> declaration may be used with <DictionaryLink styled={true} term={"locally"}><b>locally</b></DictionaryLink> to a↵ect references to, rather than <GlossaryTerm styled={true} term={"binding"}><i>bindings</i></GlossaryTerm> of, <GlossaryTerm styled={true} term={"variable"}><i>variables</i></GlossaryTerm>. 
 
 
 
-If a **locally** *form* is a *top level form*, the body *forms* are also processed as *top level forms*. See Section 3.2.3 (File Compilation). 
-
-
+If a <DictionaryLink styled={true} term={"locally"}><b>locally</b></DictionaryLink> <GlossaryTerm styled={true} term={"form"}><i>form</i></GlossaryTerm> is a *top level form*, the body <GlossaryTerm styled={true} term={"form"}><i>forms</i></GlossaryTerm> are also processed as *top level forms*. See Section 3.2.3 (File Compilation). 
 
 
 
 
-
- 
 
 
 
@@ -100,7 +96,11 @@ If a **locally** *form* is a *top level form*, the body *forms* are also process
 
 
 
-**the** 
+ 
+
+
+
+<DictionaryLink styled={true} term={"the"}><b>the</b></DictionaryLink> 
 
 
 

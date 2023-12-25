@@ -3,7 +3,7 @@ from pprint import pprint
 
 # emacs --batch MY_FILE --eval '(indent-region (point-min) (point-max))' -f 'save-buffer'
 # emacs --batch output/chap-5/f-d-dictionary/_progn.md --eval '(indent-region 506 704)' -f 'save-buffer'
-EMACS_COMMAND = "emacs --batch {} --eval '(indent-region {} {})' -f 'save-buffer'"
+EMACS_COMMAND = "emacs --batch {} --eval '(progn (slime-mode) (indent-region {} {}))' -f 'save-buffer'"
 REGEX_MATCH_UNTIL = r"(?:(?!X)[\w\W\s\S\d\D.])*"
 LOOK_AHEAD_REGEX = '(?:(?!{})[^\n])*'
 UNTIL_NEW_LINE_REGEX = LOOK_AHEAD_REGEX.format("\n")

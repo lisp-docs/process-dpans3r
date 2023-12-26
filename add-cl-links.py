@@ -157,7 +157,9 @@ def replace_glossary_links_permissive(file_text):
         in_right_place = not in_title and not inside_table
 
         (is_valid_entry, term) = is_in_glossary_permissive(match, glossary_json)
-        if in_right_place and is_small and not already_has_cllinks and is_valid_entry:
+        in_setf_line = is_in_setf_line(match, file_text)
+
+        if in_right_place and is_small and not already_has_cllinks and is_valid_entry and not in_setf_line:
             # print(item)
             extra_asterisk = "*" if len(item) > 0 and item[-1] == "\\" else ""
             pre = match.group("pre")

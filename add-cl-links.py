@@ -1,5 +1,6 @@
 # Needs python >= 3.9 
 import os, re, sys, functools, json
+from pprint import pprint
 
 MD_DIR = "./output/"
 REGEX_MATCH_UNTIL = r"(?:(?!X)[\w\W\s\S\d\D.])*"
@@ -14,8 +15,8 @@ DICTIONARY_ITEM_NAME_PERMISSIVE = LOOK_AHEAD_REGEX_MATCH_OPEN.format("\\*\\*", "
 GLOSSARY_ITEM_NAME_PERMISSIVE = LOOK_AHEAD_REGEX_MATCH_OPEN.format("\\*", "[^\n]")
 DICTIONARY_ITEM_REGEX = f'(?P<pre>[^\\\\])(\\*\\*)(?P<item>{DICTIONARY_ITEM_NAME}[^\\\\])(?P<post>\\*\\*)'
 GLOSSARY_ITEM_REGEX = f'(?P<pre>[^\\*\\\\])(\\*)(?P<item>{GLOSSARY_ITEM_NAME}[^\\*\\\\])(?P<post>\\*)'
-DICTIONARY_ITEM_REGEX_PERMISSIVE = f'(?P<pre>[^\\\\])(\\*\\*)(?P<item>{DICTIONARY_ITEM_NAME}[^\\\\])(?P<post>\\*\\*)'
-GLOSSARY_ITEM_REGEX_PERMISSIVE = f'(?P<pre>[^\\*\\\\])(\\*)(?P<item>{GLOSSARY_ITEM_NAME}[^\\*\\\\])(?P<post>\\*)'
+DICTIONARY_ITEM_REGEX_PERMISSIVE = f'(?P<pre>[^\\\\])(\\*\\*)(?P<item>{DICTIONARY_ITEM_NAME_PERMISSIVE}[^\\\\])(?P<post>\\*\\*)'
+GLOSSARY_ITEM_REGEX_PERMISSIVE = f'(?P<pre>[^\\*\\\\])(\\*)(?P<item>{GLOSSARY_ITEM_NAME_PERMISSIVE}[^\\*\\\\])(?P<post>\\*)'
 TITLE_LINES_REGEX = r'\n#(?:(?!\n)[^\n])*'
 dictionary_json_path = "./glossary_output/dictionary.json"
 glossary_json_path = "./glossary_output/glossary.json"
@@ -133,7 +134,7 @@ def is_in_glossary(match, glossary):
 
 def replace_glossary_links(file_text):
     processed_text = replace_glossary_links_strict(file_text)
-    processed_text = replace_glossary_links_permissive(processed_text)
+    # processed_text = replace_glossary_links_permissive(processed_text)
     return processed_text
 
 def replace_glossary_links_permissive(file_text):
@@ -190,7 +191,9 @@ def replace_glossary_links_strict(file_text):
         in_right_place = not in_title and not inside_table
 
         (is_valid_entry, term) = is_in_glossary(match, glossary_json)
-        if in_right_place and is_small and not already_has_cllinks and is_valid_entry:
+        in_setf_line = is_in_setf_line(match, file_text)
+
+        if in_right_place and is_small and not already_has_cllinks and is_valid_entry and not in_setf_line:
             # print(item)
             extra_asterisk = "*" if len(item) > 0 and item[-1] == "\\" else ""
             pre = match.group("pre")
@@ -206,7 +209,7 @@ def replace_glossary_links_strict(file_text):
 
 def replace_dictionary_links(file_text):
     processed_text = replace_dictionary_links_strict(file_text)
-    processed_text = replace_dictionary_links_permissive(processed_text)
+    # processed_text = replace_dictionary_links_permissive(processed_text)
     return processed_text
 
 def replace_dictionary_links_permissive(file_text):
@@ -230,7 +233,12 @@ def replace_dictionary_links_permissive(file_text):
         in_right_place = not in_title and not inside_table
         is_dictionary_entry = item in dictionary_json
         if in_right_place and is_small and not already_has_cllinks and is_dictionary_entry:
-            # print(item)
+            if "*)" in match.group(0) or "*)*" in file_text or "symbol indicator" in file_text:
+                print(match.group(0))
+                print(item)
+                print(dictionary_json[item])
+                # pprint(file_text)
+                import pdb; pdb.set_trace()
             term = item
             extra_asterisk = "*" if len(item) > 0 and item[-1] == "\\" else ""
             pre = match.group("pre")
@@ -243,6 +251,18 @@ def replace_dictionary_links_permissive(file_text):
     text_array.append(file_text[start_index:])
     processed_text = "".join(text_array)
     return processed_text
+
+def is_in_setf_line(match, file_text):
+    new_line_indices = [i for i, ltr in enumerate(file_text) if ltr == "\n"]
+    (new_line_index, end_line_index) = (0, len(file_text))
+    for i in new_line_indices:
+        if match.start() > i:
+            new_line_index = i
+        if match.end() < i and end_line_index < i:
+            end_line_index = i
+    match_line = file_text[new_line_index:end_line_index]
+    in_setf_line = "(setf" in match_line
+    return in_setf_line
 
 def replace_dictionary_links_strict(file_text):
     dictionary_items = re.finditer(DICTIONARY_ITEM_REGEX, file_text)
@@ -265,16 +285,29 @@ def replace_dictionary_links_strict(file_text):
         in_right_place = not in_title and not inside_table
         is_dictionary_entry = item in dictionary_json
         # if "do\*" in match.group(0):
-        word_match = re.search(r'([\w\-]+)', match.group(0))
+        word_match = re.search(r'([\w\-]+)', match.group("item"))
         if word_match and not is_dictionary_entry:
-            is_word_match_dictionary_entry = word_match.group(0) in dictionary_json
+            word_item = word_match.group(0)
+            # is_word_match_dictionary_entry = word_item in dictionary_json and len(word_item) >= len(item)-4
+            is_word_match_dictionary_entry = word_item in dictionary_json
         else:
             is_word_match_dictionary_entry = False
             # import pdb; pdb.set_trace()
         is_valid_entry = is_dictionary_entry or is_word_match_dictionary_entry
-        if in_right_place and is_small and not already_has_cllinks and is_valid_entry:
-            # print(item)
+        
+        in_setf_line = is_in_setf_line(match, file_text)
+
+        if in_right_place and is_small and not already_has_cllinks and is_valid_entry and not in_setf_line:
             term = item if is_dictionary_entry else word_match.group(0)
+            if "*)" in match.group(0) or "(setf (macro-function" in file_text:
+                # or "*)" in match_line
+                print(f'match: {match.group(0)}')
+                print(f'item: {item}')
+                print(f'term: {term}')
+                print(f'dictionary_json[term]: {dictionary_json[term]}')
+                # pprint(file_text)
+                import pdb; pdb.set_trace()
+            # print(item)
             extra_asterisk = "*" if len(item) > 0 and item[-1] == "\\" else ""
             pre = match.group("pre")
             post = match.group("post")

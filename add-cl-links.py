@@ -134,7 +134,7 @@ def is_in_glossary(match, glossary):
 
 def replace_glossary_links(file_text):
     processed_text = replace_glossary_links_strict(file_text)
-    # processed_text = replace_glossary_links_permissive(processed_text)
+    processed_text = replace_glossary_links_permissive(processed_text)
     return processed_text
 
 def replace_glossary_links_permissive(file_text):
@@ -209,7 +209,7 @@ def replace_glossary_links_strict(file_text):
 
 def replace_dictionary_links(file_text):
     processed_text = replace_dictionary_links_strict(file_text)
-    # processed_text = replace_dictionary_links_permissive(processed_text)
+    processed_text = replace_dictionary_links_permissive(processed_text)
     return processed_text
 
 def replace_dictionary_links_permissive(file_text):
@@ -232,22 +232,29 @@ def replace_dictionary_links_permissive(file_text):
         is_small = len(item) <= 32 and len(item) > 0
         in_right_place = not in_title and not inside_table
         is_dictionary_entry = item in dictionary_json
-        if in_right_place and is_small and not already_has_cllinks and is_dictionary_entry:
-            if "*)" in match.group(0) or "*)*" in file_text or "symbol indicator" in file_text:
-                print(match.group(0))
-                print(item)
-                print(dictionary_json[item])
-                # pprint(file_text)
-                import pdb; pdb.set_trace()
+        in_setf_line = is_in_setf_line(match, file_text)
+        pre = match.group("pre")
+        post = match.group("post")
+
+        if not is_dictionary_entry:
+            # TODO this does not seem to have added any entries...
+            items = item.split(", ")
+            all_match = all([curr_item in dictionary_json for curr_item in items])
+            if all_match:
+                is_dictionary_entry = True
+                get_link_string = lambda item: '<DictionaryLink styled={true} term={"' + item + '"}' + f'><b>{item}</b></DictionaryLink>'
+                cl_link = pre + ", ".join([get_link_string(curr_item) for curr_item in items])
+        else:
             term = item
             extra_asterisk = "*" if len(item) > 0 and item[-1] == "\\" else ""
-            pre = match.group("pre")
-            post = match.group("post")
             cl_link = pre + '<DictionaryLink styled={true} term={"' + term + '"}><b>'  + item + extra_asterisk + '</b></DictionaryLink>' 
             # + post
+
+        if in_right_place and is_small and not already_has_cllinks and is_dictionary_entry and not in_setf_line:
             text_array.append(file_text[start_index:match.start()])
             text_array.append(cl_link)
             start_index = match.end()
+    
     text_array.append(file_text[start_index:])
     processed_text = "".join(text_array)
     return processed_text

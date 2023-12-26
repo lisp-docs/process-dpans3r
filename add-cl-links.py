@@ -10,8 +10,12 @@ START_CODE_BLOCK = f"```lisp{UNTIL_NEW_LINE_REGEX}"
 END_CODE_BLOCK = "```"
 DICTIONARY_ITEM_NAME = LOOK_AHEAD_REGEX_MATCH_OPEN.format("\\*\\*", "\\S")
 GLOSSARY_ITEM_NAME = LOOK_AHEAD_REGEX_MATCH_OPEN.format("\\*", "\\S")
+DICTIONARY_ITEM_NAME_PERMISSIVE = LOOK_AHEAD_REGEX_MATCH_OPEN.format("\\*\\*", "[^\n]")
+GLOSSARY_ITEM_NAME_PERMISSIVE = LOOK_AHEAD_REGEX_MATCH_OPEN.format("\\*", "[^\n]")
 DICTIONARY_ITEM_REGEX = f'(?P<pre>[^\\\\])(\\*\\*)(?P<item>{DICTIONARY_ITEM_NAME}[^\\\\])(?P<post>\\*\\*)'
 GLOSSARY_ITEM_REGEX = f'(?P<pre>[^\\*\\\\])(\\*)(?P<item>{GLOSSARY_ITEM_NAME}[^\\*\\\\])(?P<post>\\*)'
+DICTIONARY_ITEM_REGEX_PERMISSIVE = f'(?P<pre>[^\\\\])(\\*\\*)(?P<item>{DICTIONARY_ITEM_NAME}[^\\\\])(?P<post>\\*\\*)'
+GLOSSARY_ITEM_REGEX_PERMISSIVE = f'(?P<pre>[^\\*\\\\])(\\*)(?P<item>{GLOSSARY_ITEM_NAME}[^\\*\\\\])(?P<post>\\*)'
 TITLE_LINES_REGEX = r'\n#(?:(?!\n)[^\n])*'
 dictionary_json_path = "./glossary_output/dictionary.json"
 glossary_json_path = "./glossary_output/glossary.json"
@@ -75,6 +79,21 @@ def add_cl_links(file_text):
     curr_text = replace_glossary_links(curr_text)
     return curr_text
 
+def is_in_glossary_permissive(match, glossary):
+    item = match.group("item")
+    # word_match = re.match(r'([\(\)\{\}\[\]]*([\w\- ]+)[\(\)\{\}\[\]]*)', match.group(0))
+    if len(item) > 0 and item[0].lower() in glossary:
+        glossary_letter = glossary[item[0].lower()]
+        if item.lower() in glossary_letter:
+            is_glossary_entry = True
+            term = item.lower()
+            return (is_glossary_entry, term)
+        elif len(item) > 1 and item[-1].lower() == "s" and item[:-1].lower() in glossary_letter:
+            term = item[:-1].lower()
+            is_glossary_entry = True
+            return (is_glossary_entry, term)
+    return (False, None)
+
 def is_in_glossary(match, glossary):
     item = match.group("item")
     if len(item) > 0 and item[0].lower() in glossary:
@@ -113,6 +132,45 @@ def is_in_glossary(match, glossary):
     return (False, None)
 
 def replace_glossary_links(file_text):
+    processed_text = replace_glossary_links_strict(file_text)
+    processed_text = replace_glossary_links_permissive(processed_text)
+    return processed_text
+
+def replace_glossary_links_permissive(file_text):
+    glossary_items = re.finditer(GLOSSARY_ITEM_REGEX_PERMISSIVE, file_text)
+    title_lines_matches_iter = re.finditer(TITLE_LINES_REGEX, file_text)
+    title_lines_matches = [m for m in title_lines_matches_iter]
+    all_items = [m for m in glossary_items]
+    text_array = []
+    start_index = 0
+    for match in all_items:
+        if len(title_lines_matches) > 0:
+            in_titles = [match.start() > title.start() and match.start() < title.end() for title in title_lines_matches]
+            in_title = functools.reduce(lambda x,y: x or y, in_titles)
+        else:
+            in_title = False
+        item = match.group("item")
+        already_has_cllinks = "ClLinks".lower() in match.group(0).lower()
+        inside_table = "|" in match.group(0)
+        is_small = len(item) <= 32 and len(item) > 0
+        in_right_place = not in_title and not inside_table
+
+        (is_valid_entry, term) = is_in_glossary_permissive(match, glossary_json)
+        if in_right_place and is_small and not already_has_cllinks and is_valid_entry:
+            # print(item)
+            extra_asterisk = "*" if len(item) > 0 and item[-1] == "\\" else ""
+            pre = match.group("pre")
+            post = match.group("post")
+            cl_link = pre + '<GlossaryTerm styled={true} term={"' + term + '"}><i>'  + item + extra_asterisk + '</i></GlossaryTerm>' 
+            # + post
+            text_array.append(file_text[start_index:match.start()])
+            text_array.append(cl_link)
+            start_index = match.end()
+    text_array.append(file_text[start_index:])
+    processed_text = "".join(text_array)
+    return processed_text
+
+def replace_glossary_links_strict(file_text):
     glossary_items = re.finditer(GLOSSARY_ITEM_REGEX, file_text)
     title_lines_matches_iter = re.finditer(TITLE_LINES_REGEX, file_text)
     title_lines_matches = [m for m in title_lines_matches_iter]
@@ -147,6 +205,46 @@ def replace_glossary_links(file_text):
     return processed_text
 
 def replace_dictionary_links(file_text):
+    processed_text = replace_dictionary_links_strict(file_text)
+    processed_text = replace_dictionary_links_permissive(processed_text)
+    return processed_text
+
+def replace_dictionary_links_permissive(file_text):
+    dictionary_items = re.finditer(DICTIONARY_ITEM_REGEX_PERMISSIVE, file_text)
+    title_lines_matches_iter = re.finditer(TITLE_LINES_REGEX, file_text)
+    title_lines_matches = [m for m in title_lines_matches_iter]
+    all_items = [m for m in dictionary_items]
+    text_array = []
+    start_index = 0
+    
+    for match in all_items:
+        if len(title_lines_matches) > 0:
+            in_titles = [match.start() > title.start() and match.start() < title.end() for title in title_lines_matches]
+            in_title = functools.reduce(lambda x,y: x or y, in_titles)
+        else:
+            in_title = False
+        item = match.group("item")
+        already_has_cllinks = "ClLinks".lower() in match.group(0).lower()
+        inside_table = "|" in match.group(0)
+        is_small = len(item) <= 32 and len(item) > 0
+        in_right_place = not in_title and not inside_table
+        is_dictionary_entry = item in dictionary_json
+        if in_right_place and is_small and not already_has_cllinks and is_dictionary_entry:
+            # print(item)
+            term = item
+            extra_asterisk = "*" if len(item) > 0 and item[-1] == "\\" else ""
+            pre = match.group("pre")
+            post = match.group("post")
+            cl_link = pre + '<DictionaryLink styled={true} term={"' + term + '"}><b>'  + item + extra_asterisk + '</b></DictionaryLink>' 
+            # + post
+            text_array.append(file_text[start_index:match.start()])
+            text_array.append(cl_link)
+            start_index = match.end()
+    text_array.append(file_text[start_index:])
+    processed_text = "".join(text_array)
+    return processed_text
+
+def replace_dictionary_links_strict(file_text):
     dictionary_items = re.finditer(DICTIONARY_ITEM_REGEX, file_text)
     title_lines_matches_iter = re.finditer(TITLE_LINES_REGEX, file_text)
     title_lines_matches = [m for m in title_lines_matches_iter]

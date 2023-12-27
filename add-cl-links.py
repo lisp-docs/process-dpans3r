@@ -17,6 +17,8 @@ DICTIONARY_ITEM_REGEX = f'(?P<pre>[^\\\\])(\\*\\*)(?P<item>{DICTIONARY_ITEM_NAME
 GLOSSARY_ITEM_REGEX = f'(?P<pre>[^\\*\\\\])(\\*)(?P<item>{GLOSSARY_ITEM_NAME}[^\\*\\\\])(?P<post>\\*)'
 DICTIONARY_ITEM_REGEX_PERMISSIVE = f'(?P<pre>[^\\\\])(\\*\\*)(?P<item>{DICTIONARY_ITEM_NAME_PERMISSIVE}[^\\\\])(?P<post>\\*\\*)'
 GLOSSARY_ITEM_REGEX_PERMISSIVE = f'(?P<pre>[^\\*\\\\])(\\*)(?P<item>{GLOSSARY_ITEM_NAME_PERMISSIVE}[^\\*\\\\])(?P<post>\\*)'
+CLLINK_DICTIONARY_ITEM_REGEX = r'(<ClLinks(?P<item>\s+term=\{"[\w\d$%&#\\\*\{\}\-]+"\}><b>[\w\d$%&#\\\*\{\}-]+</b></)ClLinks>)'
+CLLINK_GLOSSARY_ITEM_REGEX = r'(<ClLinks(?P<item>\s+term=\{"[\w\d$%&#\\\*\{\}\-]+"\}><i>[\w\d$%&#\\\*\{\}-]+</i></)ClLinks>)'
 TITLE_LINES_REGEX = r'\n#(?:(?!\n)[^\n])*'
 dictionary_json_path = "./glossary_output/dictionary.json"
 glossary_json_path = "./glossary_output/glossary.json"
@@ -135,6 +137,7 @@ def is_in_glossary(match, glossary):
 def replace_glossary_links(file_text):
     processed_text = replace_glossary_links_strict(file_text)
     processed_text = replace_glossary_links_permissive(processed_text)
+    processed_text = replace_glossary_links_cllinks(processed_text)
     return processed_text
 
 def replace_glossary_links_permissive(file_text):
@@ -212,6 +215,30 @@ def replace_glossary_links_strict(file_text):
 def replace_dictionary_links(file_text):
     processed_text = replace_dictionary_links_strict(file_text)
     processed_text = replace_dictionary_links_permissive(processed_text)
+    processed_text = replace_dictionary_links_cllinks(processed_text)
+    return processed_text
+
+def replace_dictionary_links_cllinks(file_text):
+    return replace_cl_link(file_text, CLLINK_DICTIONARY_ITEM_REGEX, '<DictionaryLink{}DictionaryLink>')
+
+def replace_glossary_links_cllinks(file_text):
+    return replace_cl_link(file_text, CLLINK_GLOSSARY_ITEM_REGEX, '<GlossaryTerm{}GlossaryTerm>')
+
+def replace_cl_link(file_text, cl_link_regex, replacement_format_string):
+    dictionary_items = re.finditer(cl_link_regex, file_text)
+    all_items = [m for m in dictionary_items]
+    text_array = []
+    start_index = 0
+    
+    for match in all_items:
+        item = match.group("item")
+        cl_link = replacement_format_string.format(item)
+        # + post
+        text_array.append(file_text[start_index:match.start()])
+        text_array.append(cl_link)
+        start_index = match.end()
+    text_array.append(file_text[start_index:])
+    processed_text = "".join(text_array)
     return processed_text
 
 def replace_dictionary_links_permissive(file_text):

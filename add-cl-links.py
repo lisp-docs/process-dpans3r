@@ -17,8 +17,8 @@ DICTIONARY_ITEM_REGEX = f'(?P<pre>[^\\\\])(\\*\\*)(?P<item>{DICTIONARY_ITEM_NAME
 GLOSSARY_ITEM_REGEX = f'(?P<pre>[^\\*\\\\])(\\*)(?P<item>{GLOSSARY_ITEM_NAME}[^\\*\\\\])(?P<post>\\*)'
 DICTIONARY_ITEM_REGEX_PERMISSIVE = f'(?P<pre>[^\\\\])(\\*\\*)(?P<item>{DICTIONARY_ITEM_NAME_PERMISSIVE}[^\\\\])(?P<post>\\*\\*)'
 GLOSSARY_ITEM_REGEX_PERMISSIVE = f'(?P<pre>[^\\*\\\\])(\\*)(?P<item>{GLOSSARY_ITEM_NAME_PERMISSIVE}[^\\*\\\\])(?P<post>\\*)'
-CLLINK_DICTIONARY_ITEM_REGEX = r'(<ClLinks(?P<item>\s+term=\{"[\w\d$%&#\\\*\{\}\-]+"\}><b>[\w\d$%&#\\\*\{\}-]+</b></)ClLinks>)'
-CLLINK_GLOSSARY_ITEM_REGEX = r'(<ClLinks(?P<item>\s+term=\{"[\w\d$%&#\\\*\{\}\-]+"\}><i>[\w\d$%&#\\\*\{\}-]+</i></)ClLinks>)'
+CLLINK_DICTIONARY_ITEM_REGEX = r'(<ClLinks( styled=\{\w*\}\s*)?(?P<item>\s+term=\{"[⟨⟩`~:;?/,\.\w\d!@$#$%^&*\(\)_=+\\\*\{\}\-]+"\}><b>[⟨⟩`~:;?/,\.\w\d!@$#$%^&*\(\)_=+\\\*\{\}\- ]+</b></)ClLinks>)'
+CLLINK_GLOSSARY_ITEM_REGEX = r'(<ClLinks( styled=\{\w*\}\s*)?(?P<item>\s+term=\{"[⟨⟩`~:;?/,\.\w\d!@$#$%^&*\(\)_=+\\\*\{\}\-]+"\}><i>[⟨⟩`~:;?/,\.\w\d!@$#$%^&*\(\)_=+\\\*\{\}\- ]+</i></)ClLinks>)'
 TITLE_LINES_REGEX = r'\n#(?:(?!\n)[^\n])*'
 dictionary_json_path = "./glossary_output/dictionary.json"
 glossary_json_path = "./glossary_output/glossary.json"
